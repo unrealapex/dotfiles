@@ -8,7 +8,10 @@ grep -qsF "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" 
 grep -qsF .cfg ~/.gitignore || echo ".cfg" >> ~/.gitignore
 
 git clone --bare https://www.github.com/UnrealApex/dotfiles.git $HOME/.cfg
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+function config {
+   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+}
 
 mkdir -p .config-backup
 config checkout
@@ -34,7 +37,6 @@ echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
 
 sudo apt-get install build-essential
 
-cd ~
 # install from brewfile
 brew bundle install
 
