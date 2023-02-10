@@ -21,6 +21,7 @@ if [ $? = 0 ]; then
     echo "Moving dotfiles preventing checkout to ~/.config-backup...";
   config checkout 2>&1 | grep -E "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
 fi;
+echo "Checking out .cfg..."
 config checkout
 config config --local status.showUntrackedFiles no
 
