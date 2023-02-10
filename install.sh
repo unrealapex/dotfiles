@@ -51,9 +51,9 @@ fi
 # set up git commit information
 echo "Setting up Git..."
 echo "Setting commit information..."
-echo "Enter the email address you want to use for commits: "
+echo -n "Enter the email address you want to use for commits: "
 read commitemail
-echo "Enter the name you want to use for commits: "
+echo -n "Enter the name you want to use for commits: "
 read commitname
 
 > .gitconfig-local
