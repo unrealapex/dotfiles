@@ -1,4 +1,5 @@
 #!/bin/sh
+# TODO: Add yes no prompts for dangerous operations
 cd ~
 # add config alias to bashrc if it is not already present
 grep -qsF "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" ~/.bashrc || echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> ~/.bashrc
