@@ -59,10 +59,9 @@ read commitemail
 echo -n "Enter the name you want to use for commits: "
 read commitname
 
-> .gitconfig-local
-echo "[user]" >> .gitconfig_local
-eval "echo \"  name = ${commitname}\" >> .gitconfig_local"
-eval "echo \"  email = ${commitemail}\" >> .gitconfig_local"
+echo "[user]" > ~/.gitconfig_local
+eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
+eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 
 
 # anaconda
