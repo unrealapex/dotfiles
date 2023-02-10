@@ -34,6 +34,7 @@ echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
 
 sudo apt-get install build-essential
 
+cd ~
 # install from brewfile
 brew bundle install
 
@@ -43,7 +44,7 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
   # make sure font directory exists
   mkdir -p /usr/share/fonts/truetype/
   cd /usr/share/fonts/truetype
-  sudo curl -fLos "JetBrains Mono Nerd Font Complete Regular.ttf" \
+  sudo curl -fLo "JetBrains Mono Nerd Font Complete Regular.ttf" \
   https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
   echo "Nerd Font installed"
   cd ~
@@ -59,7 +60,8 @@ read commitemail
 echo -n "Enter the name you want to use for commits: "
 read commitname
 
-echo "[user]" > ~/.gitconfig_local
+> ~/.gitconfig_local
+echo "[user]" >> ~/.gitconfig_local
 eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 
