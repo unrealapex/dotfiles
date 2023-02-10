@@ -48,6 +48,19 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
     echo "Nerd Font already installed, skipping..."
 fi
 
+# set up git commit information
+echo "Setting up Git..."
+echo "Setting commit information..."
+echo "Enter the email address you want to use for commits: "
+read commitemail
+echo "Enter the name you want to use for commits: "
+read commitname
+
+> .gitconfig-local
+echo "[user]" >> .gitconfig_local
+eval "echo \"  name = ${commitname}\" >> .gitconfig_local"
+eval "echo \"  email = ${commitemail}\" >> .gitconfig_local"
+
 
 # anaconda
 # source <(curl -s https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh)

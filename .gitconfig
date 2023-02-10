@@ -1,0 +1,9 @@
+[user]
+  # These values are set in ~/.gitconfig_local
+[include]
+  path = ~/.gitconfig_local
+[credential]
+ credentialStore = cache
+ helper = store
+[core]
+ editor = nvim
