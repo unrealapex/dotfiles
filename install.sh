@@ -6,7 +6,7 @@ grep -qsF "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" 
 # add .cfg folder to gitignore if it is not already present
 grep -qsF .cfg ~/.gitignore || echo ".cfg" >> ~/.gitignore
 
-git clone --bare https://www.github.com/UnrealApex/dotfiles-test.git $HOME/.cfg
+git clone --bare https://www.github.com/UnrealApex/dotfiles.git $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 mkdir -p .config-backup
