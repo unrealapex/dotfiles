@@ -1,4 +1,5 @@
 #!/bin/sh
+# TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 cd ~
 # add config alias to bashrc if it is not already present
