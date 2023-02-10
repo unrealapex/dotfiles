@@ -1,0 +1,56 @@
+#!/bin/sh
+cd ~
+# add config alias to bashrc if it is not already present
+grep -qsF "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" ~/.bashrc || echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> ~/.bashrc
+# add .cfg folder to gitignore if it is not already present
+grep -qsF .cfg ~/.gitignore || echo ".cfg" >> ~/.gitignore
+
+git clone --bare https://www.github.com/UnrealApex/dotfiles-test.git $HOME/.cfg
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+mkdir -p .config-backup
+config checkout
+if [ $? = 0 ]; then
+  echo "Checked out config...";
+  else
+    echo "Moving dotfiles preventing checkout to ~/.config-backup...";
+  config checkout 2>&1 | grep -E "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+fi;
+config checkout
+config config --local status.showUntrackedFiles no
+
+
+# homebrew
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# add homebrew to path
+echo "Adding Homebrew to path..."
+test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
+
+sudo apt-get install build-essential
+
+# install from brewfile
+brew bundle install
+
+# set up jetbrains mono nerd font
+if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
+  echo "Installing nerd font..."
+  # make sure font directory exists
+  mkdir -p /usr/share/fonts/truetype/
+  cd /usr/share/fonts/truetype
+  sudo curl -fLo "JetBrains Mono Nerd Font Complete Regular.ttf" \
+  https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
+  cd ~
+  else
+    echo "Nerd Font already installed, skipping..."
+fi
+
+
+# anaconda
+# source <(curl -s https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh)
+
+printf "\n\nDotfiles installed!\n\n"
+# TODO: add ascii art
