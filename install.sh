@@ -9,7 +9,7 @@ grep -qsF .cfg ~/.gitignore || echo ".cfg" >> ~/.gitignore
 
 git clone --bare https://www.github.com/UnrealApex/dotfiles.git $HOME/.cfg
 
-function config {
+config() {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 
