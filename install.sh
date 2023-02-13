@@ -46,6 +46,7 @@ case "${SHELL}" in
     ;;
 esac
 
+# FIXME: add to path correctly
 # add homebrew to path
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $shell_profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
