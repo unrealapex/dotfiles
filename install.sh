@@ -29,7 +29,6 @@ config config --local status.showUntrackedFiles no
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# FIXME: add to path correctly
 # add homebrew to path
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
