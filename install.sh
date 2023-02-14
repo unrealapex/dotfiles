@@ -29,26 +29,9 @@ config config --local status.showUntrackedFiles no
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-case "${SHELL}" in
-  */bash*)
-    if [[ -r "${HOME}/.bash_profile" ]]
-    then
-      shell_profile="${HOME}/.bash_profile"
-    else
-      shell_profile="${HOME}/.profile"
-    fi
-    ;;
-  */zsh*)
-    shell_profile="${HOME}/.zprofile"
-    ;;
-  *)
-    shell_profile="${HOME}/.profile"
-    ;;
-esac
-
 # FIXME: add to path correctly
 # add homebrew to path
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $shell_profile
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 sudo apt-get install build-essential
