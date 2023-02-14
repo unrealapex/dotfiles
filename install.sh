@@ -31,7 +31,7 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 
 # FIXME: add to path correctly
 # add homebrew to path
-(echo; echo "eval \"$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\"") >> ~/.profile
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 sudo apt-get install build-essential
