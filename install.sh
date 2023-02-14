@@ -47,7 +47,7 @@ case "${SHELL}" in
 esac
 
 # add homebrew to path
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $shell_profile
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ${shell_profile}
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 sudo apt-get install build-essential
