@@ -9,7 +9,7 @@ grep -qsF .cfg ~/.gitignore || echo ".cfg" >> ~/.gitignore
 
 git clone --bare https://www.github.com/UnrealApex/dotfiles.git $HOME/.cfg
 
-function config {
+config() {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 
@@ -29,6 +29,7 @@ config config --local status.showUntrackedFiles no
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# FIXME: add to path correctly
 # add homebrew to path
 (echo; echo "eval \"$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\"") >> ~/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
