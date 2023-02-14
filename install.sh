@@ -21,7 +21,7 @@ if [ $? = 0 ]; then
     echo "Moving dotfiles preventing checkout to ~/.config-backup...";
   config checkout 2>&1 | grep -E "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
 fi;
-echo "Checking out .cfg..."
+echo "Checking out dotfiles..."
 config checkout
 config config --local status.showUntrackedFiles no
 
@@ -30,6 +30,7 @@ config config --local status.showUntrackedFiles no
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # add homebrew to path
+echo "Adding Homebrew to path..."
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> "${HOME}"/.profile
 # FIXME: figure out why this is not evaluating properly
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
