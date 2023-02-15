@@ -1,6 +1,10 @@
 #!/bin/sh
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
+
+sudo apt update
+# install requirements
+sudo apt install build-essential procps file git
 cd ~
 # add config alias to bashrc if it is not already present
 grep -qsF "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" ~/.bashrc || echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> ~/.bashrc
@@ -34,9 +38,6 @@ echo "Adding Homebrew to path..."
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> "${HOME}"/.profile
 # FIXME: figure out why this is not evaluating properly
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-sudo apt update
-sudo apt-get install build-essential
 
 # install from brewfile
 brew bundle install
