@@ -3,7 +3,6 @@
 # TODO: Add yes no prompts for dangerous operations
 
 sudo apt update
-yes | sudo apt upgrade
 # install requirements
 yes | sudo apt install build-essential procps file git
 cd ~
