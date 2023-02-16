@@ -11,9 +11,20 @@ git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 stow */
 
-ln -fs .bashrc ~/.bashrc
-ln -fs Brewfile ~/Brewfile
-ln -fs .gitconfig ~/.gitconfig
+mkdir ~/.config-backup
+
+# if files exist, move them to a backup directory
+mv -f ~/.bashrc ~/.config-backup/.bashrc
+mv -f ~/Brewfile ~/.config-backup/Brewfile
+mv -f ~/.gitconfig ~/.config-backup/.gitconfig
+mv -f ~/.vimrc ~/.config-backup/.vimrc
+mv -f ~/remote_use.vim ~/.config-backup/remove_use.vim
+mv -f ~/.config/nvim ~/.config-backup/nvim
+
+# create symlinks
+ln -s .bashrc ~/.bashrc
+ln -s Brewfile ~/Brewfile
+ln -s .gitconfig ~/.gitconfig
 
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
