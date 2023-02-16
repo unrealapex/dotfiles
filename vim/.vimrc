@@ -7,15 +7,11 @@ set autoread
 set background=dark
 " more powerful backspacing
 set backspace=indent,eol,start
-" store all backup files in one directory
-set backupdir=expand('~/.vim/swap//')
 " enter the current millennium
 set nocompatible
 set completeopt=menu,menuone,noselect
 " enable cursor line
 set cursorline
-" store all swap files in one directory
-set dir=expand('~/.vim/swap//')
 " disable annoying error bell
 set noerrorbells
 set expandtab
@@ -58,10 +54,6 @@ set tabstop=2
 set termguicolors
 " show file in titlebar
 set title
-set undodir=expand('~/.vim/undo//')
-" persistent undo tree
-set undofile
-set undolevels=500
 " set updatetime to 200 milliseconds
 set updatetime=200
 set novisualbell
