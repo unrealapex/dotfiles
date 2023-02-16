@@ -11,9 +11,9 @@ git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 stow */
 
-ln -s .bashrc ~/.bashrc
-ln -s Brewfile ~/Brewfile
-ln -s .gitconfig ~/.gitconfig
+ln -fs .bashrc ~/.bashrc
+ln -fs Brewfile ~/Brewfile
+ln -fs .gitconfig ~/.gitconfig
 
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
