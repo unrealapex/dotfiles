@@ -3,8 +3,9 @@
 # TODO: Add yes no prompts for dangerous operations
 
 sudo apt update
+yes | sudo apt upgrade
 # install requirements
-sudo apt install build-essential procps file git
+yes | sudo apt install build-essential procps file git
 cd ~
 # add config alias to bashrc if it is not already present
 grep -qsF "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" ~/.bashrc || echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> ~/.bashrc
