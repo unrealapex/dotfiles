@@ -14,9 +14,9 @@ stow */
 mkdir -p .dotfiles-backup
 # TODO: remove files already present
 
-mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc
-mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile
-mv -f ~/.gitconfig ~/.dotfiles-backup/.gitconfig
+mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc 2>/dev/null
+mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
+mv -f ~/.gitconfig ~/.dotfiles-backup/.gitconfig 2>/dev/null
 
 # create symlinks
 ln -s .bashrc ~/.bashrc
