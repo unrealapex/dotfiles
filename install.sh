@@ -11,16 +11,11 @@ git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 stow */
 
-mkdir ~/.config-backup
+# TODO: implement this better
+mv -f .bashrc ~/.bashrc
+mv -f Brewfile ~/Brewfile
+mv -f .gitconfig ~/.gitconfig
 
-# TODO: use better logic for this
-# if files exist, move them to a backup directory
-mv -f ~/.bashrc ~/.config-backup/.bashrc
-mv -f ~/Brewfile ~/.config-backup/Brewfile
-mv -f ~/.gitconfig ~/.config-backup/.gitconfig
-mv -f ~/.vimrc ~/.config-backup/.vimrc
-mv -f ~/remote_use.vim ~/.config-backup/remove_use.vim
-mv -f ~/.config/nvim ~/.config-backup/nvim
 
 # create symlinks
 ln -s .bashrc ~/.bashrc
