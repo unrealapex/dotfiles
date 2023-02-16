@@ -13,6 +13,7 @@ stow */
 
 mkdir ~/.config-backup
 
+# TODO: use better logic for this
 # if files exist, move them to a backup directory
 mv -f ~/.bashrc ~/.config-backup/.bashrc
 mv -f ~/Brewfile ~/.config-backup/Brewfile
