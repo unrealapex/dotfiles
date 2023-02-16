@@ -11,10 +11,7 @@ git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 stow */
 
-# TODO: implement this better
-mv -f .bashrc ~/.bashrc
-mv -f Brewfile ~/Brewfile
-mv -f .gitconfig ~/.gitconfig
+# TODO: remove files already present
 
 
 # create symlinks
