@@ -4,31 +4,16 @@
 
 sudo apt update
 # install requirements
-yes | sudo apt install build-essential procps file git
+yes | sudo apt install build-essential procps file git stow
 cd ~
-# add config alias to bashrc if it is not already present
-grep -qsF "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" ~/.bashrc || echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> ~/.bashrc
-# add .cfg folder to gitignore if it is not already present
-grep -qsF .cfg ~/.gitignore || echo ".cfg" >> ~/.gitignore
 
-git clone --bare https://www.github.com/UnrealApex/dotfiles.git $HOME/.cfg
+git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
+cd $HOME/.dotfiles
+stow */
 
-config() {
-   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
-}
-
-mkdir -p .config-backup
-config checkout
-if [ $? = 0 ]; then
-  echo "Checked out config...";
-  else
-    echo "Moving dotfiles preventing checkout to ~/.config-backup...";
-  config checkout 2>&1 | grep -E "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
-fi;
-echo "Checking out dotfiles..."
-config checkout
-config config --local status.showUntrackedFiles no
-
+ln -s .bashrc ~/.bashrc
+ln -s Brewfile ~/Brewfile
+ln -s .gitconfig ~/.gitconfig
 
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
