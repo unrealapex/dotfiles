@@ -13,7 +13,7 @@ mkdir -p .dotfiles-backup
 
 mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc 2>/dev/null
 mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
-mv -f ~/.gitignore ~/.dotfiles-backup/.gitignore 2>/dev/null
+mv -f ~/.gitconfig ~/.dotfiles-backup/.gitconfig 2>/dev/null
 stow */
 
 # TODO: remove files already present
@@ -21,7 +21,7 @@ stow */
 # create symlinks
 ln -s .bashrc ~/.bashrc
 ln -s Brewfile ~/Brewfile
-# ln -s .gitconfig ~/.gitconfig
+ln -s .gitconfig ~/.gitconfig
 
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
