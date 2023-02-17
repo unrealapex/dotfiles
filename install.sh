@@ -9,7 +9,7 @@ cd ~
 
 git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
-mkdir -p .dotfiles-backup
+mkdir -p ~/.dotfiles-backup
 
 mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc 2>/dev/null
 mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
