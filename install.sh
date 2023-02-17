@@ -16,8 +16,7 @@ mkdir -p .dotfiles-backup
 
 mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc 2>/dev/null
 mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
-mv -f ~/.gitconfig ~/.dotfiles-backup/.gitconfig 2>/dev/null
-
+rm -f ~/.gitconfig
 # create symlinks
 ln -s .bashrc ~/.bashrc
 ln -s Brewfile ~/Brewfile
