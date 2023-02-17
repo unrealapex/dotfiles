@@ -1,7 +1,30 @@
 -- plugins
 return {
   -- better file explorer
-  'justinmk/vim-dirvish',
+  {
+    'justinmk/vim-dirvish',
+    lazy = true,
+    keys = '-',
+    cmd = 'Dirvish',
+    init = function()
+      if vim.fn.argc() == 1 and vim.fn.isdirectory(vim.fn.argv(0)) then
+        require("lazy").load({plugins = {"vim-dirvish"}})
+      end
+      -- load dirvish when a directory is opened
+      vim.api.nvim_create_autocmd("BufNew", {
+        callback = function()
+          if require("lazy.core.config").plugins["vim-dirvish"]._.loaded then
+            return true
+          end
+
+          if vim.fn.isdirectory(vim.fn.expand("<afile>")) == 1 then
+            require("lazy").load({plugins = {"vim-dirvish"}})
+            return true
+          end
+        end,
+      })
+    end
+  },
   -- unix helpers
   {
     'tpope/vim-eunuch',
