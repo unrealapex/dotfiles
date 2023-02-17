@@ -21,7 +21,6 @@ stow */
 # create symlinks
 ln -s .bashrc ~/.bashrc
 ln -s Brewfile ~/Brewfile
-ln -s .gitconfig ~/.gitconfig
 
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -57,8 +56,8 @@ read commitemail
 echo -n "Enter the name you want to use for commits: "
 read commitname
 
-> ~/.gitconfig_local
-echo "[user]" >> ~/.gitconfig_local
+> ~/.config/.gitconfig_local
+echo "[user]" >> ~/.config/.gitconfig_local
 eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 
