@@ -11,10 +11,9 @@ git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 mkdir -p .dotfiles-backup
 
-
 mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc 2>/dev/null
 mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
-mv -f ~/.gitignore ~/.dotfiles-backup/.gitignore 2>/dev/null
+rm -f ~/.gitignore 
 stow */
 
 # TODO: remove files already present
