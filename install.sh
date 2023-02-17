@@ -9,14 +9,16 @@ cd ~
 
 git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
-stow */
-
 mkdir -p .dotfiles-backup
-# TODO: remove files already present
+
 
 mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc 2>/dev/null
 mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
-rm -f ~/.gitconfig
+mv -f ~/.gitignore ~/.dotfiles-backup/.gitignore 2>/dev/null
+stow */
+
+# TODO: remove files already present
+
 # create symlinks
 ln -s .bashrc ~/.bashrc
 ln -s Brewfile ~/Brewfile
