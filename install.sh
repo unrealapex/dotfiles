@@ -27,7 +27,7 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 
 # add homebrew to path
 echo "Adding Homebrew to path..."
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> "${HOME}"/.bash_profile
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> "${HOME}"/.bashrc
 # FIXME: figure out why this is not evaluating properly
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
