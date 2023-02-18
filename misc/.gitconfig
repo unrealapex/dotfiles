@@ -1,7 +1,7 @@
 [user]
-  # These values are set in ~/.config/.gitconfig_local
+  # These values are set in ~/.gitconfig_local
 [include]
-  path = ~/.config/.gitconfig_local
+  path = ~/.gitconfig_local
 [credential]
  credentialStore = cache
  helper = store
