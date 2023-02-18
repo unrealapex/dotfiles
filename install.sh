@@ -62,4 +62,6 @@ echo "Created file ~/.config/.gitconfig_local with commit information"
 # source <(curl -s https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh)
 
 printf "\n\nDotfiles installed!\n\n"
-# TODO: add ascii art
+
+# show system information once finished
+neofetch
