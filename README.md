@@ -1,6 +1,6 @@
 # dotfiles
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/UnrealApex/dotfiles/master/install.sh)
+source <(curl -s https://raw.githubusercontent.com/UnrealApex/dotfiles/master/install.sh)
 ```
 
 ### About
