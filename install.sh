@@ -27,7 +27,7 @@ grep -qsF 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' ~/.bashrc || 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install from brewfile
-brew bundle install
+brew bundle install --file=~/Brewfile
 
 # set up jetbrains mono nerd font
 if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
