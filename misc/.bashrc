@@ -137,3 +137,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 alias config='/usr/bin/git --git-dir=/home/aaron/.cfg/ --work-tree=/home/aaron'
+
+# make sure homebrew is in path
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
