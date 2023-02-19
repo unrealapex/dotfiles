@@ -57,7 +57,11 @@ lynx \
     --nonumbers  \
     --dump https://www.anaconda.com/products/distribution |
     grep -m1 -F 'Linux-x86_64.sh' |
-    xargs wget -O - | bash 
+    xargs wget -O anaconda-installer.sh
+# execute like this to prevent errors since script is interactive
+chmod +x anaconda-installer.sh
+./anaconda-installer.sh
+rm anaconda-installer.sh
 # don't activate base environment by default 
 conda config --set auto_activate_base False
 
