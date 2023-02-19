@@ -7,3 +7,5 @@
  helper = store
 [core]
  editor = nvim
+[pull]
+ rebase = false
