@@ -47,6 +47,18 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
     echo "Nerd Font already installed, skipping..."
 fi
 
+# anaconda
+echo "Installing Anaconda..."
+echo "You will need to accept its licence agreement to install it"
+
+# download install script from anaconda website and run it
+lynx \
+    --listonly \
+    --nonumbers  \
+    --dump https://www.anaconda.com/products/distribution |
+    grep -m1 -F 'Linux-x86_64.sh' |
+    xargs wget -O - | bash 
+
 # set up Git commit information
 echo "Setting Git commit information..."
 echo -n "Enter the email address you want to use for commits: "
@@ -60,17 +72,6 @@ eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.config/.gitconfig_local with commit information"
 
-# anaconda
-echo "Installing Anaconda..."
-echo "You will need to accept its licence agreement to install it"
-
-# download install script from anaconda website and run it
-lynx \
-    --listonly \
-    --nonumbers  \
-    --dump https://www.anaconda.com/products/distribution |
-    grep -m1 -F 'Linux-x86_64.sh' |
-    xargs wget -O - | bash 
 
 printf "\n\nDotfiles installed!\n\n"
 
