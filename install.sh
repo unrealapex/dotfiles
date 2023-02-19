@@ -4,7 +4,7 @@
 
 sudo apt update
 # install requirements
-yes | sudo apt install build-essential procps file git stow
+yes | sudo apt install build-essential lynx procps file git stow
 cd ~
 
 git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
@@ -59,7 +59,16 @@ eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.config/.gitconfig_local with commit information"
 
 # anaconda
-# source <(curl -s https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh)
+echo "Installing Anaconda..."
+echo "You will need to accept its licence agreement to install it"
+
+# download install script from anaconda website and run it
+lynx \
+    --listonly \
+    --nonumbers  \
+    --dump https://www.anaconda.com/products/distribution |
+    grep -m1 -F 'Linux-x86_64.sh' |
+    xargs wget -O - | bash 
 
 printf "\n\nDotfiles installed!\n\n"
 
