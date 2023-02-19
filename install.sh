@@ -58,6 +58,8 @@ lynx \
     --dump https://www.anaconda.com/products/distribution |
     grep -m1 -F 'Linux-x86_64.sh' |
     xargs wget -O - | bash 
+# don't activate base environment by default 
+conda config --set auto_activate_base False
 
 # set up Git commit information
 echo "Setting Git commit information..."
