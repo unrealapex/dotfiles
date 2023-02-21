@@ -1,5 +1,9 @@
 " my vimrc for remote use(no plugins)
+" download and save to ~/.vimrc
+" cd && { curl -o .vimrc https://raw.githubusercontent.com/UnrealApex/dotfiles/master/vim/remote_use.vim ; cd -; }
+" no download
 " vim -Nu <(curl https://raw.githubusercontent.com/UnrealApex/dotfiles/master/vim/remote_use.vim)
+
 
 
 colorscheme elflord
