@@ -62,6 +62,8 @@ set wildmode=longest:full,full
 " don't wrap lines
 set nowrap
 
+highlight clear SignColumn
+
 " keybindings
 
 " change map leader to space
