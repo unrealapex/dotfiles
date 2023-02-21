@@ -166,7 +166,7 @@ vim.cmd [[
 -- Check if we need to reload the file when it changed
 vim.api.nvim_create_autocmd({ "FocusGained", "CursorHold", "TermClose", "TermLeave" }, {
   pattern = "*",
-  group = "auto_read",
+  group = vim.api.nvim_create_augroup("auto_read", { clear = true }),
   callback = function()
     if fn.getcmdwintype() == "" then
       vim.cmd("checktime")
@@ -189,7 +189,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
-  group = augroup("highlight_yank"),
+  group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
   callback = function()
     vim.highlight.on_yank()
   end,
@@ -197,7 +197,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- wrap and check for spell in text filetypes
 vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("wrap_spell"),
+  group = vim.api.nvim_create_augroup("wrap_spell", { clear = true }),
   pattern = { "gitcommit", "markdown" },
   callback = function()
     vim.opt_local.wrap = true
