@@ -116,11 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# alias btm='btm.exe'
-alias node='node.exe'
-alias java='java.exe'
-alias javac='javac.exe'
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/aaron/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -135,8 +130,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-alias config='/usr/bin/git --git-dir=/home/aaron/.cfg/ --work-tree=/home/aaron'
 
 # make sure homebrew is in path
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
