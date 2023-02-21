@@ -324,6 +324,10 @@ nnoremap <leader>ff :Files<CR>
 " open FZF ripgrep search when ctrl + t is pressed
 nnoremap <leader>fg :Rg<CR>
 
+
+nnoremap <leader>z :Goyo<CR>
+
+
 " disable coc warning
 let g:coc_disable_startup_warning = 1
 
