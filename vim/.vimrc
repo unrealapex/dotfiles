@@ -318,7 +318,7 @@ nnoremap ]d <Plug>(coc-diagnostic-next)<CR>
 " FZF configurations
 
 " open FZF file search when ctrl + p is pressed
-nnoremap <leader>ff :FZF<CR>
+nnoremap <leader>ff :Files<CR>
 " open FZF ripgrep search when ctrl + t is pressed
 nnoremap <leader>fg :Rg<CR>
 
