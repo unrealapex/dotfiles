@@ -7,14 +7,14 @@ vim.opt.background = 'dark'
 -- more powerful backspacing
 vim.opt.backspace = 'indent,eol,start'
 -- store all backup files in one directory
-vim.opt.backupdir = vim.fn.expand('~/.vim/swap//')
+vim.opt.backupdir = vim.fn.stdpath('state') .. '/backup'
 -- enter the current millennium
 vim.opt.compatible = false
 vim.opt.completeopt = 'menu,menuone,noselect'
 -- enable cursor line
 vim.opt.cursorline = true
 -- store all swap files in one directory
-vim.opt.directory = vim.fn.expand('~/.vim/swap//')
+vim.opt.directory = vim.fn.stdpath('state') .. '/swap'
 -- disable annoying error bell
 vim.opt.errorbells = false
 vim.opt.expandtab = true
@@ -60,7 +60,7 @@ vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 -- show file in titlebar
 vim.opt.title = true
-vim.opt.undodir = vim.fn.expand('~/.vim/undo//')
+vim.opt.undodir = vim.fn.stdpath('state') .. '/undo'
 -- persistent undo tree
 vim.opt.undofile = true
 vim.opt.undolevels = 500
@@ -76,17 +76,9 @@ vim.opt.wrap = false
 -- syntax highlighting
 vim.cmd [[syntax on]]
 
-
 -- make sure undo and swap file directories exist
-if vim.fn.isdirectory('~/.vim/swap') == 0 and vim.fn.isdirectory('~/.vim/undo') == 0 then
-  vim.fn.mkdir(vim.fn.expand('~/.vim/swap'), 'p')
-  vim.fn.mkdir(vim.fn.expand('~/.vim/undo'), 'p')
-elseif vim.fn.isdirectory('~/.vim/swap') == 1 and vim.fn.isdirectory('~/.vim/undo') == 0 then
-  vim.fn.mkdir(vim.fn.expand('~/.vim/undo'), 'p')
-elseif vim.fn.isdirectory('~/.vim/swap') == 0 and vim.fn.isdirectory('~/.vim/undo') == 1 then
-  vim.fn.mkdir(vim.fn.expand('~/.vim/swap'), 'p')
-else
-end
+vim.fn.mkdir(vim.fn.stdpath('state') .. '/undo', 'p')
+vim.fn.mkdir(vim.fn.stdpath('state') .. '/swap', 'p')
 
 -- make gutter match background color
 vim.cmd [[highlight clear SignColumn]]
