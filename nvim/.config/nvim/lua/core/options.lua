@@ -209,11 +209,11 @@ function prose()
     vim.opt_local.wrap = true
 
     -- normal and visual mode mappings
-    vim.keymap.set({'n', 'v'}, 'j', 'gj')
-    vim.keymap.set({'n', 'v'}, 'k', 'gk')
-    vim.keymap.set({'n', 'v'}, '0', 'g0')
-    vim.keymap.set({'n', 'v'}, '$', 'g$')
-    vim.keymap.set({'n', 'v'}, '^', 'g^')
+    vim.keymap.set({ 'n', 'v' }, 'j', 'gj')
+    vim.keymap.set({ 'n', 'v' }, 'k', 'gk')
+    vim.keymap.set({ 'n', 'v' }, '0', 'g0')
+    vim.keymap.set({ 'n', 'v' }, '$', 'g$')
+    vim.keymap.set({ 'n', 'v' }, '^', 'g^')
 
     prosed = true
     if vim.fn.exists(':ZenMode') == 2 then
@@ -227,11 +227,11 @@ function prose()
     vim.opt_local.wrap = false
 
     -- reset normal and visual mode mappings
-    vim.keymap.del({'n', 'v'}, 'j')
-    vim.keymap.del({'n', 'v'}, 'k')
-    vim.keymap.del({'n', 'v'}, '0')
-    vim.keymap.del({'n', 'v'}, '$')
-    vim.keymap.del({'n', 'v'}, '^')
+    vim.keymap.del({ 'n', 'v' }, 'j')
+    vim.keymap.del({ 'n', 'v' }, 'k')
+    vim.keymap.del({ 'n', 'v' }, '0')
+    vim.keymap.del({ 'n', 'v' }, '$')
+    vim.keymap.del({ 'n', 'v' }, '^')
     prosed = false
     if vim.fn.exists(':ZenMode') == 2 then
       vim.cmd [[ZenMode]]
@@ -262,7 +262,6 @@ if vim.fn.has('unix') == 1 then
   -- $KEYMAPS
   vim.env.KEYMAPS = vim.fn.stdpath('config') .. "/lua/core/keymaps.lua"
 elseif vim.fn.has('win32') == 1 then
-
   -- $OPTIONS
   vim.env.OPTIONS = vim.fn.stdpath('config') .. "\\lua\\core\\options.lua"
 

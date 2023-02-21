@@ -8,7 +8,7 @@ return {
     cmd = 'Dirvish',
     init = function()
       if vim.fn.argc() == 1 and vim.fn.isdirectory(vim.fn.argv(0)) then
-        require("lazy").load({plugins = {"vim-dirvish"}})
+        require("lazy").load({ plugins = { "vim-dirvish" } })
       end
       -- load dirvish when a directory is opened
       vim.api.nvim_create_autocmd("BufNew", {
@@ -18,7 +18,7 @@ return {
           end
 
           if vim.fn.isdirectory(vim.fn.expand("<afile>")) == 1 then
-            require("lazy").load({plugins = {"vim-dirvish"}})
+            require("lazy").load({ plugins = { "vim-dirvish" } })
             return true
           end
         end,
@@ -52,7 +52,7 @@ return {
   {
     'tpope/vim-rsi',
     lazy = true,
-    event = {'InsertEnter', 'CmdlineEnter'}
+    event = { 'InsertEnter', 'CmdlineEnter' }
   },
   {
     'echasnovski/mini.move',
@@ -230,7 +230,7 @@ return {
         enable = true,
         mode = 'cursor',
       })
-      vim.cmd[[TSContextEnable]]
+      vim.cmd [[TSContextEnable]]
     end,
     dependencies = 'nvim-treesitter/nvim-treesitter'
   },
