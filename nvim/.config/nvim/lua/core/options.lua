@@ -18,7 +18,7 @@ vim.opt.dir = vim.fn.expand('~/.vim/swap//')
 -- disable annoying error bell
 vim.opt.errorbells = false
 vim.opt.expandtab = true
-vim.opt.fo = "jcroqlnt"
+vim.opt.formatoptions = "jcroqlnt"
 -- enable folding
 vim.opt.foldenable = false
 vim.opt.foldmethod = 'indent'
