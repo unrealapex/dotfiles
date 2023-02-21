@@ -324,6 +324,9 @@ nnoremap <leader>ff :Files<CR>
 " open FZF ripgrep search when ctrl + t is pressed
 nnoremap <leader>fg :Rg<CR>
 
+" disable coc warning
+let g:coc_disable_startup_warning = 1
+
 " startify configurations
 
 " custom startify headers
