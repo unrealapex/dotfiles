@@ -168,7 +168,7 @@ vim.api.nvim_create_autocmd({ "FocusGained", "CursorHold", "TermClose", "TermLea
   pattern = "*",
   group = vim.api.nvim_create_augroup("auto_read", { clear = true }),
   callback = function()
-    if fn.getcmdwintype() == "" then
+    if vim.fn.getcmdwintype() == "" then
       vim.cmd("checktime")
     end
   end,
