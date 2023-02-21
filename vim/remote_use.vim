@@ -1,5 +1,5 @@
 " my vimrc for remote use(no plugins)
-" vim -Nu <(curl https://raw.githubusercontent.com/UnrealApex/dotfiles/master/remote_use.vim)
+" vim -Nu <(curl https://raw.githubusercontent.com/UnrealApex/dotfiles/master/vim/remote_use.vim)
 
 
 colorscheme elflord
