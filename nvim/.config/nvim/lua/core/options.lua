@@ -56,6 +56,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.smartcase = true
 -- set tabs to two spaces
 vim.opt.tabstop = 2
+-- true color support
 vim.opt.termguicolors = true
 -- show file in titlebar
 vim.opt.title = true
