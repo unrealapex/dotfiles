@@ -160,6 +160,44 @@ vim.cmd [[
   ]]
 
 
+-- Check if we need to reload the file when it changed
+vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
+  group = augroup("checktime"),
+  command = "checktime",
+})
+
+-- create directories when needed, when saving a file
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = vim.api.nvim_create_augroup("auto_create_dir", { clear = true }),
+  callback = function(event)
+    local file = vim.loop.fs_realpath(event.match) or event.match
+
+    vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
+    local backup = vim.fn.fnamemodify(file, ":p:~:h")
+    backup = backup:gsub("[/\\]", "%%")
+    vim.go.backupext = backup
+  end,
+})
+
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = augroup("highlight_yank"),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
+-- wrap and check for spell in text filetypes
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("wrap_spell"),
+  pattern = { "gitcommit", "markdown" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
+  end,
+})
+
+
 prosed = false
 function prose()
   -- make sure zen-mode.nvim is installed
