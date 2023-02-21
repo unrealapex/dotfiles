@@ -22,8 +22,8 @@ vim.opt.formatoptions = "jcroqlnt"
 -- enable folding
 vim.opt.foldenable = false
 vim.opt.foldmethod = 'indent'
-opt.grepformat = "%f:%l:%c:%m"
-opt.grepprg = "rg --vimgrep"
+vim.opt.grepformat = "%f:%l:%c:%m"
+vim.opt.grepprg = "rg --vimgrep"
 -- allow hidden buffers
 vim.opt.hidden = true
 vim.opt.history = 500
