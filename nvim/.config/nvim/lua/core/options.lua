@@ -14,7 +14,7 @@ vim.opt.completeopt = 'menu,menuone,noselect'
 -- enable cursor line
 vim.opt.cursorline = true
 -- store all swap files in one directory
-vim.opt.dir = vim.fn.expand('~/.vim/swap//')
+vim.opt.directory = vim.fn.expand('~/.vim/swap//')
 -- disable annoying error bell
 vim.opt.errorbells = false
 vim.opt.expandtab = true
