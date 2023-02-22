@@ -130,6 +130,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# make sure homebrew is in path
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
