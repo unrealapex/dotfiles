@@ -7,7 +7,7 @@ yes | sudo apt upgrade
 yes | sudo apt autoremove
 # install requirements
 yes | sudo apt install build-essential lynx procps file git stow
-cd ~
+cd
 
 git clone https://www.github.com/UnrealApex/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
@@ -67,8 +67,6 @@ lynx \
 chmod +x anaconda-installer.sh
 ./anaconda-installer.sh
 rm anaconda-installer.sh
-# don't activate base environment by default 
-conda config --set auto_activate_base False
 
 # set up Git commit information
 echo "Setting Git commit information..."
