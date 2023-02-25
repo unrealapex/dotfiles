@@ -83,6 +83,8 @@ eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.gitconfig_local with commit information"
 
+# authenticate to GitHub
+gh auth login --web
 
 printf "\n\nDotfiles installed!\n\n"
 
