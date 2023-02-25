@@ -93,7 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias open="xdg-open"
-alias please='/usr/bin/sudo $(history -p !!)'
+alias pls=sudo
 alias uwu='echo uwu'
 
 
