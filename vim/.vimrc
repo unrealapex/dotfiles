@@ -178,7 +178,7 @@ Plug 'romainl/vim-cool'
 Plug 'junegunn/gv.vim'
 Plug 'wellle/context.vim'
 " status bar
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 " Fugitive.vim(git superpowers)
 Plug 'tpope/vim-fugitive'
 " Vim Surround
