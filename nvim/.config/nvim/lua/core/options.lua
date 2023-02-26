@@ -31,6 +31,7 @@ vim.opt.history = 500
 vim.opt.ignorecase = true
 -- incremental search
 vim.opt.incsearch = true
+vim.opt.laststatus = 2
 vim.opt.list = true
 vim.opt.listchars = ''
 vim.opt.magic = true
