@@ -177,7 +177,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'romainl/vim-cool'
 Plug 'junegunn/gv.vim'
 Plug 'wellle/context.vim'
-" Lightline (status bar)
+" status bar
 Plug 'itchyny/lightline.vim'
 " Fugitive.vim(git superpowers)
 Plug 'tpope/vim-fugitive'
