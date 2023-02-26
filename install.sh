@@ -18,7 +18,6 @@ mv -f ~/.tmux.conf ~/.dotfiles-backup/.tmux.conf 2>/dev/null
 mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
 mv -f ~/.gitconfig ~/.dotfiles-backup/.gitconfig 2>/dev/null
 mv -f ~/.vimrc ~/.dotfiles-backup/.vimrc 2>/dev/null
-mv -f ~/remote_use.vim ~/.dotfiles-backup/remote_use.vim 2>/dev/null
 mf -f ~/.config/nvim ~/.dotfiles-backup/nvim 2>/dev/null
 
 # setting up symlinks
