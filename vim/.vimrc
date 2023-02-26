@@ -26,6 +26,7 @@ set history=500
 set ignorecase
 " incremental search
 set incsearch
+set laststatus=2
 set list
 set listchars=
 set magic
