@@ -172,14 +172,14 @@ Plug 'tpope/vim-eunuch', {'on': [
 \  ]
 \ }
 Plug 'tpope/vim-unimpaired'
-" Use vim gitgutter instead of gitsigns for git gutter indicators
+" show git changes in gutter
 Plug 'airblade/vim-gitgutter'
 Plug 'romainl/vim-cool'
 Plug 'junegunn/gv.vim'
 Plug 'wellle/context.vim'
 " status bar
 Plug 'vim-airline/vim-airline'
-" Fugitive.vim(git superpowers)
+" git integration
 Plug 'tpope/vim-fugitive'
 " Vim Surround
 Plug 'tpope/vim-surround'
@@ -189,20 +189,18 @@ Plug 'tpope/vim-commentary'
 Plug 'yggdroot/indentline'
 " Goyo
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
-" Rainbow Parentheses
+" colored parantheses
 Plug 'junegunn/rainbow_parentheses.vim'
-" Conquerer of Completion(code completion)
+" code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'honza/vim-snippets'
-" Repeat.vim
 Plug 'tpope/vim-repeat'
-" fzf(fuzzy finder)
+" fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Vim Sneak(better horizontal movement)
+" better movement
 Plug 'justinmk/vim-sneak'
-" Emmet
 Plug 'mattn/emmet-vim', {'for': ['html', 'css']}
-" Vim dev icons
+" icons
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
