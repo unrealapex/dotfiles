@@ -28,8 +28,18 @@ That being said, suggestions are definitely open! This config will only work on 
 
 
 ### Usage
-My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. I prefer to manage my packages using Homebrew because certain packages in the APT repositories are outdated. They can be installed with this one liner:
+My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. I prefer to manage my packages using Homebrew because certain packages in the APT repositories are outdated.
+
+### Install
+My dotfiles can be installed with this one liner:
 
 ```sh
 source <(curl -s https://raw.githubusercontent.com/UnrealApex/dotfiles/master/install.sh)
+```
+You could also run the install script manually:
+```sh
+git clone https://github.com/UnrealApex/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+chmod +x install.sh
+./install.sh
 ```
