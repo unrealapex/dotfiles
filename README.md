@@ -1,11 +1,35 @@
 # dotfiles
-```sh
-source <(curl -s https://raw.githubusercontent.com/UnrealApex/dotfiles/master/install.sh)
+
+<!-- todo: insert image of rice here -->
+```
+asciinema      > terminal recording
+fzf            > fuzzy finder 
+gh             > github cli
+glow           > markdown parser
+htop           > process viewer
+hyperfine      > performance testing
+lua            > lua language
+lynx           > text based browser
+neofetch       > show system information
+neovim         > text editor
+node           > nodejs
+openjdk        > java language
+ripgrep        > better grep
+shellcheck     > shell script linter
+stow           > symlink farm manager
+tmux           > terminal multiplexer
 ```
 
 ### About
 Like most dotfiles, the files in this repository include the configurations that make my system fit my needs.
 
 You're free to clone my config but it is generally [frowned upon](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/#dotfiles-are-not-meant-to-be-forked) because dotfiles tend be something really personal. Rather, if you are interested in using my config, I suggest copying whatever you like and putting it in your own config.
-That being said, suggestions are definitely open! This config will only work on Debian based systems. It will not run without Curl and a stable internet connection. Additional dependencies are installed if not found. 
+That being said, suggestions are definitely open! This config will only work on Debian based systems. It will not run without Curl and a stable internet connection. Additional dependencies are installed if not found.
 
+
+### Usage
+My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. I prefer to manage my packages using Homebrew because certain packages in the APT repositories are outdated. They can be installed with this one liner:
+
+```sh
+source <(curl -s https://raw.githubusercontent.com/UnrealApex/dotfiles/master/install.sh)
+```
