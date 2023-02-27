@@ -41,5 +41,5 @@ You could also run the install script manually:
 git clone https://github.com/UnrealApex/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 chmod +x install.sh
-./install.sh
+source install.sh
 ```
