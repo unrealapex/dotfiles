@@ -5,9 +5,6 @@ vim.keymap.set('i', '<C-BS>', '<C-W>')
 -- unindent in insert mode
 vim.keymap.set('i', '<S-Tab>', '<C-d>')
 
--- saner CTRL-L
-vim.keymap.set('n', '<C-l>', ':nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>', { silent = true })
-
 -- change directory
 vim.keymap.set('n', '<leader>cd', function()
   vim.cmd(':cd ' .. vim.fn.expand("%:p:h"))
