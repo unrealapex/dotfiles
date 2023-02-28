@@ -124,7 +124,7 @@ return {
   {
     'lukas-reineke/indent-blankline.nvim',
     lazy = true,
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = { 'BufReadPost', 'BufNewFile' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
       require("indent_blankline").setup({
@@ -144,7 +144,7 @@ return {
   {
     'junegunn/rainbow_parentheses.vim',
     lazy = true,
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = { 'BufReadPost', 'BufNewFile' },
     config = function()
       vim.cmd [[RainbowParentheses]]
     end
@@ -183,7 +183,7 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     lazy = true,
-    event = { 'VeryLazy' },
+    event = { 'BufReadPost', 'BufNewFile' },
     cmd = {
       'TSBufDisable',
       'TSBufEnable',
