@@ -207,9 +207,35 @@ return {
       -- treesitter stuff
       local configs = require("nvim-treesitter.configs")
       configs.setup {
-        ensure_installed = "all",
-        sync_install = false,
-        ignore_install = { "" }, -- List of parsers to ignore installing
+        ensure_installed = {
+          "bash",
+          "c",
+          "cpp",
+          "css",
+          "diff",
+          "gitattributes",
+          "gitcommit",
+          "gitignore",
+          "git_rebase",
+          "help",
+          "html",
+          "java",
+          "javascript",
+          "json",
+          "lua",
+          "markdown",
+          "markdown_inline",
+          "python",
+          "query",
+          "r",
+          "regex",
+          "sql",
+          "tsx",
+          "typescript",
+          "vim",
+          "yaml",
+        },
+        auto_install = true,
         highlight = {
           enable = true, -- false will disable the whole extension
           disable = { "" }, -- list of language that will be disabled
