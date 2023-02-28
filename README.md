@@ -30,6 +30,43 @@ That being said, suggestions are definitely open! This config will only work on 
 ### Usage
 My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. I prefer to manage my packages using Homebrew because certain packages in the APT repositories are outdated.
 
+### File Structure
+
+```
+.
+|-- README.md
+|-- install.sh
+|-- misc
+|   |-- .bashrc
+|   |-- .gitconfig
+|   |-- .tmux.conf
+|   |-- .vimrc
+|   `-- Brewfile
+`-- nvim
+    `-- .config
+        `-- nvim
+            |-- .gitignore
+            |-- .luarc.json
+            |-- README.md
+            |-- coc-settings.json
+            |-- init.lua
+            `-- lua
+                |-- core
+                |   |-- autocmds.lua
+                |   |-- keymaps.lua
+                |   |-- lazy.lua
+                |   |-- options.lua
+                |   `-- plugins.lua
+                `-- plugins
+                    |-- alpha.lua
+                    |-- coc.lua
+                    |-- gitsigns.lua
+                    |-- lualine.lua
+                    `-- telescope.lua
+
+7 directories, 22 files
+```
+
 ### Install
 My dotfiles can be installed with this one liner:
 
