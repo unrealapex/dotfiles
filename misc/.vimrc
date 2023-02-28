@@ -92,6 +92,15 @@ nnoremap <Leader>q :bd<CR>
 nnoremap <leader>cd :cd %:p:h <Bar> echo getcwd()<CR>
 
 
+nnoremap Y y$
+nnoremap <C-L> <Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>
+inoremap <C-U> <C-G>u<C-U>
+inoremap <C-W> <C-G>u<C-W>
+xnoremap * y/\V<C-R>"<CR>
+xnoremap # y?\V<C-R>"<CR>
+nnoremap & :&&<CR>
+
+
 " efficient editing in insert mode
 " map ctrl + backspace to delete the previous word in insert mode
 imap <C-BS> <C-W>
