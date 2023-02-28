@@ -49,25 +49,3 @@ augroup show_whitespace
 augroup END
 ]]
 
-
-vim.api.nvim_create_autocmd({ 'BufReadPre', 'FileReadPre' }, {
-  group = vim.api.nvim_create_augroup("large_file_detection", { clear = true }),
-  callback = function()
-    if vim.fn.getfsize(vim.fn.expand('%')) > (512 * 1024) then
-      vim.notify(
-        'Large file detected, disabling certain features for performance reasons',
-        vim.log.levels.WARNING
-      )
-      if vim.fn.exists(':TSBufDisable') then
-        vim.cmd [[TSBufDisable highlight]]
-        vim.cmd [[TSBufDisable autotag]]
-      end
-      vim.opt.foldmethod = 'manual'
-      vim.cmd [[syntax clear]]
-      vim.cmd [[syntax off]]
-      vim.cmd [[filetype off]]
-      vim.opt.undofile = false
-      vim.opt.swapfile = false
-    end
-  end
-})
