@@ -3,7 +3,6 @@ return {
   -- better file explorer
   {
     'justinmk/vim-dirvish',
-    lazy = true,
     keys = '-',
     cmd = 'Dirvish',
     init = function()
@@ -28,7 +27,6 @@ return {
   -- unix helpers
   {
     'tpope/vim-eunuch',
-    lazy = true,
     cmd = {
       'Remove',
       'Unlink',
@@ -51,7 +49,6 @@ return {
   },
   {
     'tpope/vim-rsi',
-    lazy = true,
     event = { 'InsertEnter', 'CmdlineEnter' }
   },
   {
@@ -77,7 +74,6 @@ return {
   -- better git integration
   {
     'lewis6991/gitsigns.nvim',
-    lazy = true,
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       require('plugins.gitsigns')
@@ -86,7 +82,6 @@ return {
   -- status bar
   {
     'nvim-lualine/lualine.nvim',
-    lazy = true,
     event = 'VeryLazy',
     config = function()
       require('plugins.lualine')
@@ -96,7 +91,6 @@ return {
   -- conveniently run git commands from vim
   {
     'tpope/vim-fugitive',
-    lazy = true,
     cmd = { 'G' }
   },
   {
@@ -106,13 +100,11 @@ return {
   -- TODO: integrate repeat with other plugins
   {
     'tpope/vim-repeat',
-    lazy = true,
     event = 'VeryLazy'
   },
   -- git commit browser
   {
     'junegunn/gv.vim',
-    lazy = true,
     cmd = { 'GV' },
     dependencies = { 'tpope/vim-fugitive' }
   },
@@ -126,7 +118,6 @@ return {
   -- indent guides
   {
     'lukas-reineke/indent-blankline.nvim',
-    lazy = true,
     event = { 'BufReadPost', 'BufNewFile' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
@@ -139,14 +130,12 @@ return {
   -- zen mode
   {
     'folke/zen-mode.nvim',
-    lazy = true,
     cmd = { 'ZenMode' },
     config = true,
   },
   -- parentheses colorizer
   {
     'junegunn/rainbow_parentheses.vim',
-    lazy = true,
     event = { 'BufReadPost', 'BufNewFile' },
     config = function()
       vim.cmd [[RainbowParentheses]]
@@ -173,7 +162,6 @@ return {
   {
     'neoclide/coc.nvim',
     branch = 'release',
-    lazy = true,
     event = { 'VeryLazy' },
     dependencies = {
       'honza/vim-snippets',
@@ -188,7 +176,6 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    lazy = true,
     event = { 'BufReadPost', 'BufNewFile' },
     cmd = {
       'TSBufDisable',
@@ -291,7 +278,6 @@ return {
   -- start screen
   {
     'goolord/alpha-nvim',
-    lazy = true,
     event = 'VimEnter',
     config = function()
       require('plugins.alpha')
@@ -301,7 +287,6 @@ return {
   -- fuzzy finder
   {
     'nvim-telescope/telescope.nvim',
-    lazy = true,
     cmd = { 'Telescope' },
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -333,7 +318,6 @@ return {
 
   {
     'wellle/targets.vim',
-    lazy = true,
     event = 'VeryLazy'
   },
   -- icons
@@ -344,6 +328,7 @@ return {
   -- colorscheme
   {
     "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
       vim.cmd [[colorscheme tokyonight]]
@@ -352,7 +337,6 @@ return {
   -- markdown preview
   {
     'ellisonleao/glow.nvim',
-    lazy = true,
     ft = 'markdown'
   }
 }
