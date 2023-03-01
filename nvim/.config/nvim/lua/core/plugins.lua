@@ -196,6 +196,11 @@ return {
       'TSUpdate',
       'TSUpdateSync',
     },
+   init = function()
+      if vim.fn.argc() >= 1 then
+        require("lazy").load({ plugins = { "nvim-treesitter" } })
+      end
+    end,
     config = function()
       -- treesitter stuff
       local configs = require("nvim-treesitter.configs")
