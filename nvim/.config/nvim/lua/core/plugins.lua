@@ -6,7 +6,7 @@ return {
     keys = '-',
     cmd = 'Dirvish',
     init = function()
-      if vim.fn.argc() == 1 and vim.fn.isdirectory(vim.fn.argv(0)) then
+      if vim.fn.argc() == 1 and vim.fn.isdirectory(vim.fn.argv(0)) == 1 then
         require("lazy").load({ plugins = { "vim-dirvish" } })
       end
       -- load dirvish when a directory is opened
