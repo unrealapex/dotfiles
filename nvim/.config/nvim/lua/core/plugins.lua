@@ -86,6 +86,8 @@ return {
   -- status bar
   {
     'nvim-lualine/lualine.nvim',
+    lazy = true,
+    event = 'VeryLazy',
     config = function()
       require('plugins.lualine')
     end,
