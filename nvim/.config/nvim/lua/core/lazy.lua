@@ -14,6 +14,7 @@ vim.opt.runtimepath:prepend(lazypath)
 
 -- load lazy
 require("lazy").setup("core.plugins", {
+  defaults = { lazy = true },
   performance = {
     rtp = {
       disabled_plugins = {
