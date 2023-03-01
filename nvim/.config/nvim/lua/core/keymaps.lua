@@ -113,7 +113,7 @@ vim.keymap.set('n', '<leader>fg', function()
 end
 )
 
-
+-- zen mode
 vim.keymap.set('n', '<leader>z', function()
   require("zen-mode").toggle()
 end)
