@@ -88,7 +88,8 @@ return {
     'nvim-lualine/lualine.nvim',
     config = function()
       require('plugins.lualine')
-    end
+    end,
+    dependencies = 'nvim-tree/nvim-web-devicons'
   },
   -- conveniently run git commands from vim
   {
@@ -172,7 +173,10 @@ return {
     branch = 'release',
     lazy = true,
     event = { 'VeryLazy' },
-    dependencies = 'honza/vim-snippets',
+    dependencies = {
+      'honza/vim-snippets',
+      'nvim-tree/nvim-web-devicons'
+    },
     build = 'python -m pip install --user --upgrade pynvim',
     config = function()
       require('plugins.coc')
@@ -285,9 +289,12 @@ return {
   -- start screen
   {
     'goolord/alpha-nvim',
+    lazy = true,
+    event = 'VimEnter',
     config = function()
       require('plugins.alpha')
-    end
+    end,
+    dependencies = 'nvim-tree/nvim-web-devicons'
   },
   -- fuzzy finder
   {
@@ -297,6 +304,7 @@ return {
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
       {
         -- increase telescope search speed
         'nvim-telescope/telescope-fzf-native.nvim',
@@ -327,7 +335,10 @@ return {
     event = 'VeryLazy'
   },
   -- icons
-  'nvim-tree/nvim-web-devicons',
+  {
+    'nvim-tree/nvim-web-devicons',
+    lazy = true
+  },
   -- colorscheme
   {
     "folke/tokyonight.nvim",
