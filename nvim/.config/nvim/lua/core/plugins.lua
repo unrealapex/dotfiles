@@ -231,7 +231,7 @@ return {
       'TSUpdate',
       'TSUpdateSync',
     },
-   init = function()
+    init = function()
       if vim.fn.argc() >= 1 then
         require("lazy").load({ plugins = { "nvim-treesitter" } })
       end
@@ -347,9 +347,9 @@ return {
   {
     'ggandor/leap.nvim',
     keys = {
-      { "s", mode = { "n", "x", "o" }},
-      { "S", mode = { "n", "x", "o" }},
-      { "gs", mode = { "n", "x", "o" }},
+      { "s",  mode = { "n", "x", "o" } },
+      { "S",  mode = { "n", "x", "o" } },
+      { "gs", mode = { "n", "x", "o" } },
     },
     config = function()
       require('leap').set_default_keymaps()
