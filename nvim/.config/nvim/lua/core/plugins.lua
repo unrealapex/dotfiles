@@ -105,7 +105,6 @@ return {
       'Git',
       'Ggrep',
       'Glgrep',
-      '0Git',
       'Gclog',
       'Gllog',
       'Gcd',
