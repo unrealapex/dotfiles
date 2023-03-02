@@ -196,7 +196,7 @@ return {
   {
     'neoclide/coc.nvim',
     branch = 'release',
-    event = { 'VeryLazy' },
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       'honza/vim-snippets',
       'nvim-tree/nvim-web-devicons'
