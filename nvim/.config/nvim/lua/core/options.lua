@@ -85,7 +85,6 @@ vim.fn.mkdir(vim.fn.stdpath('state') .. '/swap', 'p')
 vim.cmd [[highlight clear SignColumn]]
 
 
-
 --globals
 
 -- enable filetype.lua
