@@ -100,7 +100,33 @@ return {
   -- conveniently run git commands from vim
   {
     'tpope/vim-fugitive',
-    cmd = { 'G' }
+    cmd = {
+      'G',
+      'Git',
+      'Ggrep',
+      'Glgrep',
+      '0Git',
+      'Gclog',
+      'Gllog',
+      'Gcd',
+      'Glcd',
+      'Gedit',
+      'Gvsplit',
+      'Gtabedit',
+      'Gpedit',
+      'Gdrop',
+      'Gread',
+      'Gwrite',
+      'Gwq',
+      'Gdiffsplit',
+      'Ghdiffsplit',
+      'GMove',
+      'GRename',
+      'GDelete',
+      'GRemove',
+      'GUnlink',
+      'GBrowse'
+    }
   },
   {
     'tpope/vim-surround',
