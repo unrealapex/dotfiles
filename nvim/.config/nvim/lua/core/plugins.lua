@@ -6,7 +6,7 @@ return {
     keys = '-',
     cmd = 'Dirvish',
     init = function()
-      -- make sure file arguments supplied are directories
+      -- check if file arguments supplied are directories
       local file_args_are_dir = false
       for k, v in pairs(vim.fn.argv()) do
         if vim.fn.isdirectory(v) == 1 then
