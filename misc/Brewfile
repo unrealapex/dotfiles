@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 brew "asciinema"
+brew "bat"
 brew "fzf"
 brew "gh"
 brew "git-delta"
