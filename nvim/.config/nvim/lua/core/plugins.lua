@@ -7,15 +7,13 @@ return {
     cmd = 'Dirvish',
     init = function()
       -- check if file arguments supplied are directories
-      local file_args_are_dir = false
+      local argv_contains_dir = false
       for k, v in pairs(vim.fn.argv()) do
         if vim.fn.isdirectory(v) == 1 then
-          file_args_are_dir = true
-        else
-          file_args_are_dir = false
+          argv_contains_dir = true
         end
       end
-      if vim.fn.argc() >= 1 and file_args_are_dir then
+      if vim.fn.argc() >= 1 and argv_contains_dir then
         require("lazy").load({ plugins = { "vim-dirvish" } })
       end
       -- load dirvish when a directory is opened
