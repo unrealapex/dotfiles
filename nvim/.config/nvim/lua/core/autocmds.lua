@@ -48,4 +48,3 @@ augroup show_whitespace
   autocmd Modechanged [vV\x16]*:* :set listchars-=space:·
 augroup END
 ]]
-
