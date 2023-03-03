@@ -77,10 +77,6 @@ vim.opt.wrap = false
 -- syntax highlighting
 vim.cmd [[syntax on]]
 
--- make sure undo and swap file directories exist
-vim.fn.mkdir(vim.fn.stdpath('state') .. '/undo', 'p')
-vim.fn.mkdir(vim.fn.stdpath('state') .. '/swap', 'p')
-
 -- make gutter match background color
 vim.cmd [[highlight clear SignColumn]]
 
