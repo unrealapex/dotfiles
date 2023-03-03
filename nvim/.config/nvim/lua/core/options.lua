@@ -110,6 +110,7 @@ vim.g['rainbow#pairs'] = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
 
 
 prosed = false
+-- make writing in neovim more pleasant
 function prose()
   -- make sure zen-mode.nvim is installed
   -- toggle prose mode
