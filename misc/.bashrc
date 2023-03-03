@@ -135,3 +135,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# make sure anaconda is in path
+export PATH="/home/aaron/anaconda3/bin:$PATH"
