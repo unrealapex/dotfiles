@@ -109,8 +109,6 @@ vim.g.indent_blankline_filetype_exclude = {
 vim.g['rainbow#pairs'] = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
 
 
-
-
 prosed = false
 function prose()
   -- make sure zen-mode.nvim is installed
