@@ -3,6 +3,8 @@
 <!-- todo: insert image of rice here -->
 ```
 asciinema      > terminal recording
+bat            > a cat(1) clone with wings
+delta          > better git syntax highlighting
 fzf            > fuzzy finder 
 gh             > github cli
 glow           > markdown parser
