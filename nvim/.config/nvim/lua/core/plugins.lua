@@ -8,7 +8,7 @@ return {
     init = function()
       -- check if file arguments supplied are directories
       local argv_contains_dir = false
-      for k, v in pairs(vim.fn.argv()) do
+      for v in pairs(vim.fn.argv()) do
         if vim.fn.isdirectory(v) == 1 then
           argv_contains_dir = true
         end
