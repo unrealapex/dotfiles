@@ -81,6 +81,7 @@ return {
   -- better git integration
   {
     'lewis6991/gitsigns.nvim',
+    cond = vim.fn.executable('git') == 1,
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       require('plugins.gitsigns')
@@ -98,6 +99,7 @@ return {
   -- conveniently run git commands from vim
   {
     'tpope/vim-fugitive',
+    cond = vim.fn.executable('git') == 1,
     cmd = {
       'G',
       'Git',
@@ -137,6 +139,7 @@ return {
   -- git commit browser
   {
     'junegunn/gv.vim',
+    cond = vim.fn.executable('git') == 1,
     cmd = { 'GV' },
     dependencies = { 'tpope/vim-fugitive' }
   },
@@ -195,11 +198,15 @@ return {
     'neoclide/coc.nvim',
     branch = 'release',
     event = { 'BufReadPre', 'BufNewFile' },
+    cond = vim.fn.executable('node') == 1,
     dependencies = {
-      'honza/vim-snippets',
+      {
+        'honza/vim-snippets',
+        cond = vim.fn.executable('python') == 1,
+        build = 'python -m pip install --user --upgrade pynvim',
+      },
       'nvim-tree/nvim-web-devicons'
     },
-    build = 'python -m pip install --user --upgrade pynvim',
     config = function()
       require('plugins.coc')
     end
@@ -209,6 +216,7 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     event = { 'BufReadPost', 'BufNewFile' },
+    cond = (vim.fn.executable('git') == 1 or (vim.fn.executable('curl') == 1 and vim.fn.executable('tar') == 1)),
     cmd = {
       'TSBufDisable',
       'TSBufEnable',
@@ -374,6 +382,7 @@ return {
   -- markdown preview
   {
     'ellisonleao/glow.nvim',
+    cond = vim.fn.executable('glow') == 1,
     ft = 'markdown'
   }
 }
