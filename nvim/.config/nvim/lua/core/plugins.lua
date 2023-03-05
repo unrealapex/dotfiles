@@ -1,5 +1,54 @@
 -- plugins
 return {
+  {
+    'folke/noice.nvim',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
+      {
+        "rcarriga/nvim-notify",
+        keys = {
+          {
+            "<leader>un",
+            function()
+              require("notify").dismiss({ silent = true, pending = true })
+            end,
+            desc = "Delete all Notifications",
+          },
+        },
+        opts = {
+          timeout = 5000,
+          max_height = function()
+            return math.floor(vim.o.lines * 0.75)
+          end,
+          max_width = function()
+            return math.floor(vim.o.columns * 0.75)
+          end,
+        },
+      }
+    },
+    event = 'VeryLazy',
+    config = function()
+      require('noice').setup({
+        lsp = {
+          override = {
+            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+            ["vim.lsp.util.stylize_markdown"] = true,
+          },
+        },
+        presets = {
+          bottom_search = true,
+          command_palette = true,
+          long_message_to_split = true,
+        },
+
+        notify = {
+          enabled = false,
+        },
+      })
+    end
+  },
   -- better file explorer
   {
     'justinmk/vim-dirvish',
