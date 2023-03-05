@@ -13,7 +13,7 @@ end
 )
 
 -- vanilla buffer switcher
-vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
+-- vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
 
 
 -- TODO: write this in lua
@@ -112,6 +112,10 @@ vim.keymap.set('n', '<leader>fg', function()
   require('telescope.builtin').live_grep()
 end
 )
+
+vim.keymap.set('n', '<leader>fb', function()
+  require('telescope.builtin').buffers()
+end)
 
 -- zen mode
 vim.keymap.set('n', '<leader>z', function()
