@@ -117,6 +117,10 @@ vim.keymap.set('n', '<leader>fb', function()
   require('telescope.builtin').buffers()
 end)
 
+vim.keymap.set('n', '<leader>fh', function()
+  require('telescope.builtin').help_tags()
+end)
+
 -- zen mode
 vim.keymap.set('n', '<leader>z', function()
   require("zen-mode").toggle()
