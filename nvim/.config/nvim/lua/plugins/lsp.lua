@@ -73,16 +73,16 @@ require('mason-lspconfig').setup_handlers({
 
 
 -- disable neovim lsp's inline diagnostics(use lspsaga's popup diagnostics instead)
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = false
   }
 )
 
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
+  local hl = 'DiagnosticSign' .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
@@ -92,62 +92,62 @@ end
 require('lspsaga').setup()
 
 -- Show cursor diagnostics automatically in popup window
--- vim.cmd("autocmd CursorHold * silent Lspsaga show_cursor_diagnostics")
+-- vim.cmd('autocmd CursorHold * silent Lspsaga show_cursor_diagnostics')
 
 -- Lsp finder find the symbol definition implement reference
 -- when you use action in finder like open vsplit then you can
 -- use <C-t> to jump back
-vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+vim.keymap.set('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', { silent = true })
 
 -- Code action
-vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+vim.keymap.set({'n','v'}, '<leader>ca', '<cmd>Lspsaga code_action<CR>')
 
 -- Rename
-vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
+vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', { silent = true })
 
 -- Rename all occurrences of the hovered word for the selected files
-vim.keymap.set("n", "<leader>Rn", "<cmd>Lspsaga rename ++project<CR>")
+vim.keymap.set('n', '<leader>Rn', '<cmd>Lspsaga rename ++project<CR>')
 
 -- Go to definition
-vim.keymap.set("n","gd", "<cmd>Lspsaga goto_definition<CR>")
+vim.keymap.set('n','gd', '<cmd>Lspsaga goto_definition<CR>')
 
 -- Definition peek
-vim.keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+vim.keymap.set('n', 'gD', '<cmd>Lspsaga peek_definition<CR>', { silent = true })
 
 -- Go to type definition
-vim.keymap.set("n","gt", "<cmd>Lspsaga goto_type_definition<CR>")
+vim.keymap.set('n','gt', '<cmd>Lspsaga goto_type_definition<CR>')
 
 -- Peek type definition
 -- You can edit the file containing the type definition in the floating window
--- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
+-- It also supports open/vsplit/etc operations, do refer to 'definition_action_keys'
 -- It also supports tagstack
 -- Use <C-t> to jump back
-vim.keymap.set("n", "gT", "<cmd>Lspsaga peek_type_definition<CR>")
+vim.keymap.set('n', 'gT', '<cmd>Lspsaga peek_type_definition<CR>')
 
 
 -- Show line diagnostics
-vim.keymap.set("n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+vim.keymap.set('n', '<leader>e', '<cmd>Lspsaga show_line_diagnostics<CR>', { silent = true })
 
 -- Show cursor diagnostic
-vim.keymap.set("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+vim.keymap.set('n', '<leader>sc', '<cmd>Lspsaga show_cursor_diagnostics<CR>', { silent = true })
 
 -- Diagnsotic jump can use `<c-o>` to jump back
-vim.keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
-vim.keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+vim.keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', { silent = true })
+vim.keymap.set('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', { silent = true })
 
 -- Only jump to error
-vim.keymap.set("n", "[E", function()
-  require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
+vim.keymap.set('n', '[E', function()
+  require('lspsaga.diagnostic').goto_prev({ severity = vim.diagnostic.severity.ERROR })
 end, { silent = true })
-vim.keymap.set("n", "]E", function()
-  require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
+vim.keymap.set('n', ']E', function()
+  require('lspsaga.diagnostic').goto_next({ severity = vim.diagnostic.severity.ERROR })
 end, { silent = true })
 
 -- Outline
-vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { silent = true })
+vim.keymap.set('n', '<leader>o', '<cmd>Lspsaga outline<CR>', { silent = true })
 
 -- Hover Doc
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
-vim.keymap.set("n", "gh", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
+vim.keymap.set('n', 'gh', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
 -- Floating terminal
-vim.keymap.set({"n", "t"}, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
+vim.keymap.set({'n', 't'}, '<A-d>', '<cmd>Lspsaga term_toggle<CR>')
