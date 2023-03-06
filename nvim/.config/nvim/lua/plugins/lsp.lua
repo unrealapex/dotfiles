@@ -57,7 +57,7 @@ local lsp_attach = function(client, bufnr)
   -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set({ 'n', 'x'}, '<space>cf', function()
-  vim.lsp.buf.format({ async = true })
+    vim.lsp.buf.format({ async = true })
   end, bufopts)
 end
 
@@ -100,7 +100,7 @@ require('lspsaga').setup()
 vim.keymap.set('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', { silent = true })
 
 -- Code action
-vim.keymap.set({'n','v'}, '<leader>ca', '<cmd>Lspsaga code_action<CR>')
+vim.keymap.set({'n', 'v'}, '<leader>ca', '<cmd>Lspsaga code_action<CR>')
 
 -- Rename
 vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', { silent = true })
@@ -109,7 +109,7 @@ vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', { silent = true })
 vim.keymap.set('n', '<leader>Rn', '<cmd>Lspsaga rename ++project<CR>')
 
 -- Go to definition
-vim.keymap.set('n','gd', '<cmd>Lspsaga goto_definition<CR>')
+vim.keymap.set('n', 'gd', '<cmd>Lspsaga goto_definition<CR>')
 
 -- Definition peek
 vim.keymap.set('n', 'gD', '<cmd>Lspsaga peek_definition<CR>', { silent = true })
