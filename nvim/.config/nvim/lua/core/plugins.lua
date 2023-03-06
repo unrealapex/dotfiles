@@ -238,23 +238,95 @@ return {
       "g#",
     }
   },
-  -- completion + lsp
+
+  -- lsp and completion stuff
   {
-    'neoclide/coc.nvim',
-    branch = 'release',
+    'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
-    cond = vim.fn.executable('node') == 1,
+    config = function()
+      require('plugins.lsp')
+    end
+  },
+
+  {
+    'williamboman/mason.nvim',
+    cmd = { 'Mason' },
+    config = true,
     dependencies = {
       {
-        'honza/vim-snippets',
-        cond = vim.fn.executable('python') == 1,
-        build = 'python -m pip install --user --upgrade pynvim',
-      },
-      'nvim-tree/nvim-web-devicons'
-    },
+        'williamboman/mason-lspconfig.nvim',
+        dependencies = 'neovim/nvim-lspconfig',
+        config = function()
+          require("mason-lspconfig").setup({
+            automatic_installation = true,
+          })
+        end
+      }
+    }
+  },
+
+  {
+    'glepnir/lspsaga.nvim',
+    event = { 'BufReadPost', 'BufNewFile' },
+    dependencies = 'nvim-tree/nvim-web-devicons'
+  },
+
+  {
+    'hrsh7th/nvim-cmp',
     config = function()
-      require('plugins.coc')
-    end
+      require('plugins.cmp')
+    end,
+    dependencies = 'nvim-tree/nvim-web-devicons'
+  },
+
+  {
+    'hrsh7th/cmp-nvim-lsp',
+    event = { 'BufReadPre', 'BufNewFile' },
+  },
+
+  {
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    event = { 'BufReadPre', 'BufNewFile' },
+  },
+
+  {
+    'hrsh7th/cmp-cmdline',
+    event = 'CmdlineEnter',
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'hrsh7th/cmp-nvim-lua',
+    ft = 'lua',
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'hrsh7th/cmp-calc',
+    event = { 'InsertEnter' },
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'hrsh7th/cmp-emoji',
+    keys = { ':', mode = 'i' },
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'saadparwaiz1/cmp_luasnip',
+    event = 'InsertEnter',
+    dependencies = {
+      'L3MON4D3/LuaSnip',
+      'rafamadriz/friendly-snippets',
+    }
+  },
+
+  {
+    'folke/trouble.nvim',
+    event = { 'BufReadPost', 'BufNewFile' },
+    config = true,
+    dependencies = 'nvim-tree/nvim-web-devicons'
   },
   -- improved syntax highlighting
   {
@@ -411,10 +483,7 @@ return {
     event = 'VeryLazy'
   },
   -- icons
-  {
-    'nvim-tree/nvim-web-devicons',
-    lazy = true
-  },
+  'nvim-tree/nvim-web-devicons',
   -- colorscheme
   {
     "folke/tokyonight.nvim",
