@@ -325,7 +325,7 @@ return {
 
   {
     'folke/trouble.nvim',
-    event = { 'BufReadPost', 'BufNewFile' },
+    cmd = 'Trouble',
     config = true,
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
