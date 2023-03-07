@@ -72,7 +72,7 @@ require('mason-lspconfig').setup_handlers({
 })
 
 
--- disable neovim lsp's inline diagnostics(use lspsaga's popup diagnostics instead)
+-- disable neovim lsp's inline diagnostics and use lspsaga's diagnostics ui instead
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = false
