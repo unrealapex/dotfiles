@@ -280,16 +280,14 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
   
-  -- NOTE: maybe load cmp sources on InsertEnter instead of Buffer events 
-
   {
     'hrsh7th/cmp-nvim-lsp',
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = 'InsertEnter',
   },
 
   {
     'hrsh7th/cmp-nvim-lsp-signature-help',
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = 'InsertEnter',
   },
 
   {
