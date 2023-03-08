@@ -250,7 +250,13 @@ return {
 
   {
     'williamboman/mason.nvim',
-    cmd = { 'Mason' },
+    cmd = {
+      'Mason',
+      'MasonInstall',
+      'MasonUninstall',
+      'MasonUninstallAll',
+      'MasonLog'
+    },
     config = true,
     dependencies = {
       {
