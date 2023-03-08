@@ -305,6 +305,12 @@ return {
   },
 
   {
+    'hrsh7th/cmp-path',
+    event = {'CmdlineEnter', 'InsertEnter'},
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
     'hrsh7th/cmp-calc',
     event = { 'InsertEnter' },
     dependencies = 'hrsh7th/nvim-cmp'
