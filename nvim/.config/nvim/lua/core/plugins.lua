@@ -279,7 +279,7 @@ return {
     end,
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
-  
+
   {
     'hrsh7th/cmp-nvim-lsp',
     event = 'InsertEnter',
