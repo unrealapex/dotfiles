@@ -86,8 +86,6 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
--- TODO: move this to its own module
-
 -- lspsaga
 require('lspsaga').setup({
    lightbulb = {
