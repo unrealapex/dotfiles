@@ -152,6 +152,5 @@ vim.keymap.set('n', '<leader>o', '<cmd>Lspsaga outline<CR>', { silent = true })
 
 -- Hover Doc
 vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
-vim.keymap.set('n', 'gh', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
 -- Floating terminal
 vim.keymap.set({'n', 't'}, '<A-d>', '<cmd>Lspsaga term_toggle<CR>')
