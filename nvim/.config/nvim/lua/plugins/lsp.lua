@@ -2,17 +2,17 @@ require('mason').setup()
 
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'vimls',
     'bashls',
-    'pyright',
     'clangd',
-    'jdtls',
-    'lua_ls',
-    'jsonls',
-    'sqlls',
-    'html',
-    'tsserver',
     'cssls',
+    'html',
+    'jdtls',
+    'jsonls',
+    'lua_ls',
+    'pyright',
+    'sqlls',
+    'tsserver',
+    'vimls'
   }
 })
 
