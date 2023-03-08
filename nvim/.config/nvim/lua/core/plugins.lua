@@ -283,13 +283,12 @@ return {
     config = function()
       require('plugins.cmp')
     end,
-    dependencies = 'nvim-tree/nvim-web-devicons'
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+      'hrsh7th/cmp-nvim-lsp',
+    }
   },
 
-  {
-    'hrsh7th/cmp-nvim-lsp',
-    event = 'InsertEnter',
-  },
 
   {
     'hrsh7th/cmp-nvim-lsp-signature-help',
