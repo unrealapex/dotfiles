@@ -89,7 +89,11 @@ end
 -- TODO: move this to its own module
 
 -- lspsaga
-require('lspsaga').setup()
+require('lspsaga').setup({
+   lightbulb = {
+    sign = false
+  }
+})
 
 -- Show cursor diagnostics automatically in popup window
 -- vim.cmd('autocmd CursorHold * silent Lspsaga show_cursor_diagnostics')
