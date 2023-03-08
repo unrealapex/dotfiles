@@ -330,6 +330,11 @@ return {
   },
 
   {
+    'mfussenegger/nvim-jdtls',
+    ft = 'java'
+  },
+
+  {
     'folke/trouble.nvim',
     cmd = 'Trouble',
     config = true,
