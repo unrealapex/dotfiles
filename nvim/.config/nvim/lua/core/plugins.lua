@@ -285,6 +285,7 @@ return {
     end,
     dependencies = {
       'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
       'saadparwaiz1/cmp_luasnip',
       'nvim-tree/nvim-web-devicons'
     }
@@ -305,12 +306,6 @@ return {
   {
     'hrsh7th/cmp-nvim-lua',
     ft = 'lua',
-    dependencies = 'hrsh7th/nvim-cmp'
-  },
-
-  {
-    'hrsh7th/cmp-path',
-    event = {'CmdlineEnter', 'InsertEnter'},
     dependencies = 'hrsh7th/nvim-cmp'
   },
 
