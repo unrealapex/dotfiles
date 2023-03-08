@@ -2,9 +2,7 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
-sudo apt update
-yes | sudo apt upgrade
-yes | sudo apt autoremove
+sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove
 # install requirements
 yes | sudo apt install build-essential lynx procps file git stow
 cd
