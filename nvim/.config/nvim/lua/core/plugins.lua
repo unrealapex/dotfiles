@@ -284,8 +284,9 @@ return {
       require('plugins.cmp')
     end,
     dependencies = {
-      'nvim-tree/nvim-web-devicons',
       'hrsh7th/cmp-nvim-lsp',
+      'saadparwaiz1/cmp_luasnip',
+      'nvim-tree/nvim-web-devicons'
     }
   },
 
@@ -326,11 +327,18 @@ return {
   },
 
   {
-    'saadparwaiz1/cmp_luasnip',
+    'L3MON4D3/LuaSnip',
     event = 'InsertEnter',
+    config = function()
+      require('luasnip')
+    end,
     dependencies = {
-      'L3MON4D3/LuaSnip',
-      'rafamadriz/friendly-snippets',
+      {
+        'rafamadriz/friendly-snippets',
+        config = function()
+          require('luasnip/loaders/from_vscode').lazy_load()
+        end
+      },
     }
   },
 

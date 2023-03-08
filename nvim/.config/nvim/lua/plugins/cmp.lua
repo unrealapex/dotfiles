@@ -1,9 +1,5 @@
--- TODO: make sure plugins are lazy loaded correctly
 require('cmp')
-require('luasnip')
 
-
-require('luasnip/loaders/from_vscode').lazy_load()
 -- Setup nvim-cmp.
 local cmp = require('cmp')
 
