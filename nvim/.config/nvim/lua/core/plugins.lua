@@ -33,8 +33,8 @@ return {
       require('noice').setup({
         lsp = {
           override = {
-            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-            ["vim.lsp.util.stylize_markdown"] = true,
+                ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+                ["vim.lsp.util.stylize_markdown"] = true,
           },
         },
         presets = {
@@ -413,7 +413,7 @@ return {
         },
         auto_install = true,
         highlight = {
-          enable = true, -- false will disable the whole extension
+          enable = true,                    -- false will disable the whole extension
           disable = function(lang, buf)
             local max_filesize = 100 * 1024 -- 100 KB
             local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
