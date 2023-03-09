@@ -1,6 +1,0 @@
-{
-  "codeLens.enable": true,
-  "codeLens.position": "eol",
-  "coc.source.emoji.filetypes": null,
-  "Lua.telemetry.enable": false
-}

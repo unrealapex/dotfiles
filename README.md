@@ -50,7 +50,6 @@ My dotfiles are managed using Git and GNU Stow. I use Git to manage version hist
             |-- .gitignore
             |-- .luarc.json
             |-- README.md
-            |-- coc-settings.json
             |-- init.lua
             `-- lua
                 |-- core
@@ -61,8 +60,9 @@ My dotfiles are managed using Git and GNU Stow. I use Git to manage version hist
                 |   `-- plugins.lua
                 `-- plugins
                     |-- alpha.lua
-                    |-- coc.lua
+                    |-- cmp.lua
                     |-- gitsigns.lua
+                    |-- lsp.lua
                     |-- lualine.lua
                     `-- telescope.lua
 

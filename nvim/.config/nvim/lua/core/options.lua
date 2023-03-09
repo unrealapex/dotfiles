@@ -109,7 +109,7 @@ vim.g.indent_blankline_filetype_exclude = {
 vim.g['rainbow#pairs'] = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
 
 
-prosed = false
+local prosed = false
 -- make writing in neovim more pleasant
 function prose()
   -- make sure zen-mode.nvim is installed
