@@ -56,7 +56,7 @@ local lsp_attach = function(client, bufnr)
   -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set({ 'n', 'x'}, '<space>cf', function()
+  vim.keymap.set({ 'n', 'x' }, '<space>cf', function()
     vim.lsp.buf.format({ async = true })
   end, bufopts)
 end
@@ -88,7 +88,7 @@ end
 
 -- lspsaga
 require('lspsaga').setup({
-   lightbulb = {
+  lightbulb = {
     sign = false
   }
 })
@@ -102,7 +102,7 @@ require('lspsaga').setup({
 vim.keymap.set('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', { silent = true })
 
 -- Code action
-vim.keymap.set({'n', 'v'}, '<leader>ca', '<cmd>Lspsaga code_action<CR>')
+vim.keymap.set({ 'n', 'v' }, '<leader>ca', '<cmd>Lspsaga code_action<CR>')
 
 -- Rename
 vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>', { silent = true })
@@ -117,7 +117,7 @@ vim.keymap.set('n', 'gd', '<cmd>Lspsaga goto_definition<CR>')
 vim.keymap.set('n', 'gD', '<cmd>Lspsaga peek_definition<CR>', { silent = true })
 
 -- Go to type definition
-vim.keymap.set('n','gt', '<cmd>Lspsaga goto_type_definition<CR>')
+vim.keymap.set('n', 'gt', '<cmd>Lspsaga goto_type_definition<CR>')
 
 -- Peek type definition
 -- You can edit the file containing the type definition in the floating window
@@ -151,4 +151,4 @@ vim.keymap.set('n', '<leader>o', '<cmd>Lspsaga outline<CR>', { silent = true })
 -- Hover Doc
 vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
 -- Floating terminal
-vim.keymap.set({'n', 't'}, '<A-d>', '<cmd>Lspsaga term_toggle<CR>')
+vim.keymap.set({ 'n', 't' }, '<A-d>', '<cmd>Lspsaga term_toggle<CR>')
