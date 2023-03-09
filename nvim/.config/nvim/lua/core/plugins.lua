@@ -33,8 +33,8 @@ return {
       require('noice').setup({
         lsp = {
           override = {
-            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-            ["vim.lsp.util.stylize_markdown"] = true,
+                ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+                ["vim.lsp.util.stylize_markdown"] = true,
           },
         },
         presets = {
@@ -238,23 +238,115 @@ return {
       "g#",
     }
   },
-  -- completion + lsp
+
+  -- lsp and completion stuff
   {
-    'neoclide/coc.nvim',
-    branch = 'release',
+    'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
-    cond = vim.fn.executable('node') == 1,
+    config = function()
+      require('plugins.lsp')
+    end
+  },
+
+  {
+    'williamboman/mason.nvim',
+    cmd = {
+      'Mason',
+      'MasonInstall',
+      'MasonUninstall',
+      'MasonUninstallAll',
+      'MasonLog'
+    },
+    config = true,
     dependencies = {
       {
-        'honza/vim-snippets',
-        cond = vim.fn.executable('python') == 1,
-        build = 'python -m pip install --user --upgrade pynvim',
-      },
-      'nvim-tree/nvim-web-devicons'
-    },
+        'williamboman/mason-lspconfig.nvim',
+        dependencies = 'neovim/nvim-lspconfig',
+        config = function()
+          require("mason-lspconfig").setup({
+            automatic_installation = true,
+          })
+        end
+      }
+    }
+  },
+
+  {
+    'glepnir/lspsaga.nvim',
+    event = { 'BufReadPost', 'BufNewFile' },
+    cmd = 'Lspsaga',
+    dependencies = 'nvim-tree/nvim-web-devicons'
+  },
+
+  {
+    'hrsh7th/nvim-cmp',
     config = function()
-      require('plugins.coc')
-    end
+      require('plugins.cmp')
+    end,
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'saadparwaiz1/cmp_luasnip',
+      'nvim-tree/nvim-web-devicons'
+    }
+  },
+
+
+  {
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    event = 'InsertEnter',
+  },
+
+  {
+    'hrsh7th/cmp-cmdline',
+    event = 'CmdlineEnter',
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'hrsh7th/cmp-nvim-lua',
+    ft = 'lua',
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'hrsh7th/cmp-calc',
+    event = { 'InsertEnter' },
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'hrsh7th/cmp-emoji',
+    keys = { ':', mode = 'i' },
+    dependencies = 'hrsh7th/nvim-cmp'
+  },
+
+  {
+    'L3MON4D3/LuaSnip',
+    event = 'InsertEnter',
+    config = function()
+      require('luasnip')
+    end,
+    dependencies = {
+      {
+        'rafamadriz/friendly-snippets',
+        config = function()
+          require('luasnip/loaders/from_vscode').lazy_load()
+        end
+      },
+    }
+  },
+
+  {
+    'mfussenegger/nvim-jdtls',
+    ft = 'java'
+  },
+
+  {
+    'folke/trouble.nvim',
+    cmd = 'Trouble',
+    config = true,
+    dependencies = 'nvim-tree/nvim-web-devicons'
   },
   -- improved syntax highlighting
   {
@@ -321,7 +413,7 @@ return {
         },
         auto_install = true,
         highlight = {
-          enable = true, -- false will disable the whole extension
+          enable = true,                    -- false will disable the whole extension
           disable = function(lang, buf)
             local max_filesize = 100 * 1024 -- 100 KB
             local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
@@ -411,10 +503,7 @@ return {
     event = 'VeryLazy'
   },
   -- icons
-  {
-    'nvim-tree/nvim-web-devicons',
-    lazy = true
-  },
+  'nvim-tree/nvim-web-devicons',
   -- colorscheme
   {
     "folke/tokyonight.nvim",
