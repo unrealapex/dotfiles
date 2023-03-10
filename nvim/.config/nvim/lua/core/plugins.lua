@@ -460,7 +460,14 @@ return {
   -- start screen
   {
     'goolord/alpha-nvim',
-    event = 'VimEnter',
+    cmd = 'Alpha',
+    init = function()
+      if vim.fn.argc() == 0 then
+        vim.cmd[[
+        autocmd UIEnter * :Alpha
+        ]]
+      end
+    end,
     config = function()
       require('plugins.alpha')
     end,
