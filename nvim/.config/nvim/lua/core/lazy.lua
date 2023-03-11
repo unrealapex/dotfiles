@@ -48,9 +48,6 @@ require("lazy").setup("core.plugins", {
   },
   install = {
     colorscheme = { "tokyonight-night", "habamax" },
-  },
-  ui = {
-    border = 'single'
   }
 })
 
