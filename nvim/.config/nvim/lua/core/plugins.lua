@@ -495,6 +495,9 @@ return {
         'nvim-telescope/telescope-fzf-native.nvim',
         cond = vim.fn.executable('make') == 1,
         build = 'make',
+        config = function()
+          require('telescope').load_extension('fzf')
+        end
       }
     },
     config = function()
