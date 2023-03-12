@@ -113,7 +113,7 @@ vim.keymap.set('n', '<leader>fg', function()
 end
 )
 
-vim.keymap.set('n', '<leader>fb', function()
+vim.keymap.set('n', '<leader><leader>', function()
   require('telescope.builtin').buffers()
 end)
 
