@@ -9,14 +9,13 @@ cd
 
 git clone https://www.github.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
 cd "$HOME"/.dotfiles
-mkdir -p ~/.dotfiles-backup
 
-mv -f ~/.bashrc ~/.dotfiles-backup/.bashrc 2>/dev/null
-mv -f ~/.tmux.conf ~/.dotfiles-backup/.tmux.conf 2>/dev/null
-mv -f ~/Brewfile ~/.dotfiles-backup/Brewfile 2>/dev/null
-mv -f ~/.gitconfig ~/.dotfiles-backup/.gitconfig 2>/dev/null
-mv -f ~/.vimrc ~/.dotfiles-backup/.vimrc 2>/dev/null
-mf -f ~/.config/nvim ~/.dotfiles-backup/nvim 2>/dev/null
+mv -f ~/.bashrc ~/.bashrc.bak 2>/dev/null
+mv -f ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
+mv -f ~/Brewfile ~/Brewfile.bak 2>/dev/null
+mv -f ~/.gitconfig ~/.gitconfig.bak 2>/dev/null
+mv -f ~/.vimrc ~/.vimrc.bak 2>/dev/null
+mf -f ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
 
 # setting up symlinks
 echo "Creating symlinks..."
