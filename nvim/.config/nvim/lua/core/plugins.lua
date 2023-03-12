@@ -493,6 +493,7 @@ return {
       {
         -- increase telescope search speed
         'nvim-telescope/telescope-fzf-native.nvim',
+        cond = vim.fn.executable('make') == 1,
         build = 'make',
       }
     },
