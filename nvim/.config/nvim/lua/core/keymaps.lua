@@ -125,6 +125,10 @@ vim.keymap.set('n', '<leader>fd', function()
   require('telescope.builtin').diagnostics()
 end)
 
+vim.keymap.set('n', '<leader>fo', function()
+  require('telescope.builtin').oldfiles()
+end)
+
 -- zen mode
 vim.keymap.set('n', '<leader>z', function()
   require("zen-mode").toggle()
