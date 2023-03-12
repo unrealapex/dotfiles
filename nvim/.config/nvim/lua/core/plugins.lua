@@ -51,7 +51,7 @@ return {
     keys = '-',
     cmd = 'Dirvish',
     init = function()
-      -- check if file arguments supplied are directories
+      -- check if a file argument supplied is a directory
       local argv_contains_dir = false
       for k, v in pairs(vim.fn.argv()) do
         if vim.fn.isdirectory(v) == 1 then
