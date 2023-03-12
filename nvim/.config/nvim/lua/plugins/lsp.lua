@@ -152,3 +152,6 @@ vim.keymap.set('n', '<leader>o', '<cmd>Lspsaga outline<CR>', { silent = true })
 vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', { silent = true })
 -- Floating terminal
 vim.keymap.set({ 'n', 't' }, '<A-d>', '<cmd>Lspsaga term_toggle<CR>')
+
+-- Open Trouble
+vim.keymap.set('n', '<leader>q', '<cmd>Trouble<CR>')
