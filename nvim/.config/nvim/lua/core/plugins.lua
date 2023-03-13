@@ -479,7 +479,7 @@ return {
   {
     'tpope/vim-sleuth',
     event = { 'BufReadPre', 'BufNewFile' },
-  }
+  },
   -- icons
   'nvim-tree/nvim-web-devicons',
   -- colorscheme
