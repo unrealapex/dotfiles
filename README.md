@@ -33,40 +33,43 @@ That being said, suggestions are definitely open! This config will only work on 
 My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. I prefer to manage my packages using Homebrew because certain packages in the APT repositories are outdated.
 
 ### 📂 File Structure
-
+<!-- tree -a -I .git -->
 ```
 .
-|-- README.md
-|-- install.sh
-|-- misc
-|   |-- .bashrc
-|   |-- .gitconfig
-|   |-- .tmux.conf
-|   |-- .vimrc
-|   `-- Brewfile
-`-- nvim
-    `-- .config
-        `-- nvim
-            |-- .gitignore
-            |-- .luarc.json
-            |-- README.md
-            |-- init.lua
-            `-- lua
-                |-- core
-                |   |-- autocmds.lua
-                |   |-- keymaps.lua
-                |   |-- lazy.lua
-                |   |-- options.lua
-                |   `-- plugins.lua
-                `-- plugins
-                    |-- alpha.lua
-                    |-- cmp.lua
-                    |-- gitsigns.lua
-                    |-- lsp.lua
-                    |-- lualine.lua
-                    `-- telescope.lua
+├── install.sh
+├── misc
+│   ├── .bashrc
+│   ├── Brewfile
+│   ├── .gitconfig
+│   ├── .tmux.conf
+│   └── .vimrc
+├── nvim
+│   └── .config
+│       └── nvim
+│           ├── after
+│           │   └── ftplugin
+│           │       └── java.lua
+│           ├── .gitignore
+│           ├── init.lua
+│           ├── lua
+│           │   ├── core
+│           │   │   ├── autocmds.lua
+│           │   │   ├── keymaps.lua
+│           │   │   ├── lazy.lua
+│           │   │   ├── options.lua
+│           │   │   └── plugins.lua
+│           │   └── plugins
+│           │       ├── alpha.lua
+│           │       ├── cmp.lua
+│           │       ├── gitsigns.lua
+│           │       ├── lsp.lua
+│           │       ├── lualine.lua
+│           │       ├── telescope.lua
+│           │       └── treesitter.lua
+│           └── .luarc.json
+└── README.md
 
-7 directories, 22 files
+9 directories, 23 files
 ```
 
 ### 💿 Install
