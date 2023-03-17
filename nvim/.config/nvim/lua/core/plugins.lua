@@ -29,21 +29,19 @@ return {
       }
     },
     event = 'VeryLazy',
-    config = function()
-      require('noice').setup({
-        lsp = {
-          override = {
-                ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-                ["vim.lsp.util.stylize_markdown"] = true,
-          },
-        },
-        presets = {
-          bottom_search = true,
-          command_palette = true,
-          long_message_to_split = true,
+    opts = {
+      lsp = {
+        override = {
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
         }
-      })
-    end
+      },
+      presets = {
+        bottom_search = true,
+        command_palette = true,
+        long_message_to_split = true,
+      }
+    }
   },
   -- better file explorer
   {
@@ -200,12 +198,10 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     event = { 'BufReadPost', 'BufNewFile' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    config = function()
-      require("indent_blankline").setup({
-        show_current_context = true,
-        show_current_context_start = true,
-      })
-    end
+    opts = {
+      show_current_context = true,
+      show_current_context_start = true,
+    }
   },
   -- zen mode
   {
@@ -262,11 +258,9 @@ return {
       {
         'williamboman/mason-lspconfig.nvim',
         dependencies = 'neovim/nvim-lspconfig',
-        config = function()
-          require("mason-lspconfig").setup({
-            automatic_installation = true,
-          })
-        end
+        opts = {
+          automatic_installation = true,
+        }
       }
     }
   },
