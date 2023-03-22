@@ -48,6 +48,11 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
     echo "Nerd Font already installed, skipping..."
 fi
 
+# google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+&& sudo apt -y install ./google-chrome*.deb \
+&& sudo apt-get -y install -f
+
 # anaconda
 echo "Installing Anaconda..."
 echo "You will need to accept its licence agreement to install it"
