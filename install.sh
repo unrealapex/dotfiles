@@ -34,6 +34,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # install from brewfile
 brew bundle install --file=~/Brewfile
 
+# don't install things specific to Linux setup if running on WSL
 if [[ ! $(grep -s Microsoft /proc/version) ]]; then
 
   # set up jetbrains mono nerd font
