@@ -45,7 +45,7 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
     sudo curl -fLo "JetBrains Mono Nerd Font Complete Regular.ttf" \
     https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
     echo "Nerd Font installed"
-    cd ~
+    cd
     else
       echo "Nerd Font already installed, skipping..."
   fi
