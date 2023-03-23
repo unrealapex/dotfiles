@@ -22,6 +22,7 @@ require('lualine').setup {
     lualine_b = { 'branch', 'diff', 'diagnostics' },
     lualine_c = { 'filename' },
     lualine_x = {
+    -- TODO: use a highlight color here instead of hardcoding it
       {
         require("noice").api.statusline.mode.get,
         cond = require("noice").api.statusline.mode.has,
