@@ -34,25 +34,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # install from brewfile
 brew bundle install --file=~/Brewfile
 
-# set up jetbrains mono nerd font
-if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
-  echo "Installing nerd font..."
-  # make sure font directory exists
-  mkdir -p /usr/share/fonts/truetype/
-  cd /usr/share/fonts/truetype
-  sudo curl -fLo "JetBrains Mono Nerd Font Complete Regular.ttf" \
-  https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
-  echo "Nerd Font installed"
-  cd ~
-  else
-    echo "Nerd Font already installed, skipping..."
-fi
-
-# google chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-&& sudo apt -y --fix-missing install ./google-chrome*.deb \
-&& sudo apt-get -y install -f && rm google-chrome*.deb
-
 # anaconda
 echo "Installing Anaconda..."
 echo "You will need to accept its licence agreement to install it"
