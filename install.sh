@@ -55,6 +55,12 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
   && sudo apt -y --fix-missing install ./google-chrome*.deb \
   && sudo apt-get -y install -f && rm google-chrome*.deb
+
+  # zoom
+  echo "Installing Zoom..."
+  echo "You will need to download the file manually"
+  google-chrome https://zoom.us/download?os=linux
+  sudo apt install ./~/Downloads/zoom_amd64.deb
 fi
 
 # anaconda
