@@ -65,7 +65,7 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   echo "Installing Zoom..."
   echo "You will need to download the file manually"
   google-chrome https://zoom.us/download?os=linux
-  cd /home/Downloads/
+  cd ~/Downloads/
   sudo apt install -y ./zoom_amd64.deb
   cd -
 fi
