@@ -351,6 +351,12 @@ return {
     config = true,
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
+
+  {
+    'folke/todo-comments.nvim',
+    event = { 'BufReadPost', 'BufNewFile' },
+    config = true
+  },
   -- improved syntax highlighting
   {
     'nvim-treesitter/nvim-treesitter',

@@ -56,6 +56,10 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   && sudo apt -y --fix-missing install ./google-chrome*.deb \
   && sudo apt-get -y install -f && rm google-chrome*.deb
 
+  curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+  sudo apt install spotify-client
+  
   # zoom
   echo "Installing Zoom..."
   echo "You will need to download the file manually"
@@ -86,8 +90,7 @@ read commitemail
 echo -n "Enter the name you want to use for commits: "
 read commitname
 
-> ~/.gitconfig_local
-echo "[user]" >> ~/.gitconfig_local
+echo "[user]" > ~/.gitconfig_local
 eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.gitconfig_local with commit information"
