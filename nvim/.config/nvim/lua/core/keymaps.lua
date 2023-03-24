@@ -1,12 +1,12 @@
 -- keymaps
 
 -- delete previous word in insert mode
-vim.keymap.set('i', '<C-BS>', '<C-W>')
+vim.keymap.set("i", "<C-BS>", "<C-W>")
 -- unindent in insert mode
-vim.keymap.set('i', '<S-Tab>', '<C-d>')
+vim.keymap.set("i", "<S-Tab>", "<C-d>")
 
 -- change directory
-vim.keymap.set('n', '<leader>cd', function()
+vim.keymap.set('n', "<leader>cd", function()
   vim.cmd(':cd ' .. vim.fn.expand("%:p:h"))
   print(vim.fn.getcwd())
 end
@@ -63,37 +63,37 @@ vnoremap <C-r> <Esc>:%s/<c-r>=GetVisual()<cr>//g<left><left>
 
 -- buffer stuff
 -- create a new buffer
-vim.keymap.set('n', '<leader>n', ':enew<CR>')
+vim.keymap.set("n", "<leader>n", ":enew<CR>")
 -- delete a buffer
-vim.keymap.set('n', '<leader>q', ':bd<CR>')
+vim.keymap.set("n", "<leader>q", ":bd<CR>")
 
 -- switch tabs quickly
-vim.keymap.set('n', '<leader>1', '1gt<CR>')
-vim.keymap.set('n', '<leader>2', '2gt<CR>')
-vim.keymap.set('n', '<leader>3', '3gt<CR>')
-vim.keymap.set('n', '<leader>4', '4gt<CR>')
-vim.keymap.set('n', '<leader>5', '5gt<CR>')
-vim.keymap.set('n', '<leader>6', '6gt<CR>')
-vim.keymap.set('n', '<leader>7', '7gt<CR>')
-vim.keymap.set('n', '<leader>8', '8gt<CR>')
-vim.keymap.set('n', '<leader>9', '9gt<CR>')
+vim.keymap.set("n", "<leader>1", "1gt<CR>")
+vim.keymap.set("n", '<leader>2', "2gt<CR>")
+vim.keymap.set("n", "<leader>3", "3gt<CR>")
+vim.keymap.set("n", '<leader>4', "4gt<CR>")
+vim.keymap.set("n", "<leader>5", "5gt<CR>")
+vim.keymap.set("n", "<leader>6", "6gt<CR>")
+vim.keymap.set("n", "<leader>7", "7gt<CR>")
+vim.keymap.set("n", "<leader>8", "8gt<CR>")
+vim.keymap.set("n", "<leader>9", "9gt<CR>")
 -- open a tab
-vim.keymap.set('n', '<Leader>t', ':tabnew<CR>')
+vim.keymap.set("n", "<Leader>t", ":tabnew<CR>")
 -- close a tab
-vim.keymap.set('n', '<Leader>x', ':tabclose<CR>')
+vim.keymap.set("n", "<Leader>x", ":tabclose<CR>")
 
 -- Resize splits with ctrl + arrows
-vim.keymap.set('n', '<C-Up>', ':resize +2<CR>')
-vim.keymap.set('n', '<C-Down>', ':resize -2<CR>')
-vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>')
-vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>')
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
+vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
 -- easier copying and pasteing into clipboard
-vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
-vim.keymap.set({ 'n', 'v' }, '<leader>d', '"+d')
-vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p')
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
+vim.keymap.set({ "n", "v" }, "<leader>d", '"+d')
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
 vim.keymap.set({ 'n', 'v' }, '<leader>P', '"+P')
 
 -- don't lose selection when shifting text
-vim.keymap.set('x', '<', '<gv')
-vim.keymap.set('x', '>', '>gv')
+vim.keymap.set("x", "<", "<gv")
+vim.keymap.set("x", ">", ">gv")

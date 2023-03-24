@@ -1,6 +1,6 @@
 -- Gitsigns mappings
 
-require('gitsigns').setup({
+require("gitsigns").setup({
   signs = {
     add = {
       hl = "GitSignsAdd",
@@ -43,48 +43,48 @@ require('gitsigns').setup({
   },
   on_attach = function(bufnr)
     -- hunk navigation
-    vim.keymap.set('n', ']c', function()
-      if vim.wo.diff then return ']c' end
+    vim.keymap.set("n", "]c", function()
+      if vim.wo.diff then return "]c" end
       vim.schedule(function() package.loaded.gitsigns.next_hunk() end)
-      return '<Ignore>'
+      return "<Ignore>"
     end, { expr = true })
 
-    vim.keymap.set('n', '[c', function()
-      if vim.wo.diff then return '[c' end
+    vim.keymap.set("n", "[c", function()
+      if vim.wo.diff then return "[c" end
       vim.schedule(function() package.loaded.gitsigns.prev_hunk() end)
-      return '<Ignore>'
+      return "<Ignore>"
     end, { expr = true })
 
     -- stage hunk
-    vim.keymap.set({ 'n', 'v' }, '<leader>hs', ':Gitsigns stage_hunk<CR>')
+    vim.keymap.set({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>")
     -- reset hunk
-    vim.keymap.set({ 'n', 'v' }, '<leader>hr', ':Gitsigns reset_hunk<CR>')
+    vim.keymap.set({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<CR>")
     -- stage buffer
-    vim.keymap.set('n', '<leader>hS', package.loaded.gitsigns.stage_buffer)
+    vim.keymap.set("n", "<leader>hS", package.loaded.gitsigns.stage_buffer)
     -- undo stage hunk
-    vim.keymap.set('n', '<leader>hu', package.loaded.gitsigns.undo_stage_hunk)
+    vim.keymap.set("n", "<leader>hu", package.loaded.gitsigns.undo_stage_hunk)
     -- reset buffer
-    vim.keymap.set('n', '<leader>hR', package.loaded.gitsigns.reset_buffer)
+    vim.keymap.set("n", "<leader>hR", package.loaded.gitsigns.reset_buffer)
     -- preview
-    vim.keymap.set('n', '<leader>hp', package.loaded.gitsigns.preview_hunk)
+    vim.keymap.set("n", "<leader>hp", package.loaded.gitsigns.preview_hunk)
     -- line blame
-    vim.keymap.set('n', '<leader>hb', function() package.loaded.gitsigns.blame_line { full = true } end)
+    vim.keymap.set("n", "<leader>hb", function() package.loaded.gitsigns.blame_line { full = true } end)
     -- current line blame
-    vim.keymap.set('n', '<leader>tb', package.loaded.gitsigns.toggle_current_line_blame)
+    vim.keymap.set("n", "<leader>tb", package.loaded.gitsigns.toggle_current_line_blame)
     -- diff
-    vim.keymap.set('n', '<leader>hd', package.loaded.gitsigns.diffthis)
-    vim.keymap.set('n', '<leader>hD', function() package.loaded.gitsigns.diffthis('~') end)
+    vim.keymap.set("n", "<leader>hd", package.loaded.gitsigns.diffthis)
+    vim.keymap.set("n", "<leader>hD", function() package.loaded.gitsigns.diffthis("~") end)
     -- show deleted lines
-    vim.keymap.set('n', '<leader>td', package.loaded.gitsigns.toggle_deleted)
+    vim.keymap.set("n", "<leader>td", package.loaded.gitsigns.toggle_deleted)
 
     -- in hunk text object
-    vim.keymap.set({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+    vim.keymap.set({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
   end,
   attach_to_untracked = true,
   current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
     virt_text = true,
-    virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+    virt_text_pos = "eol", -- "eol" | "overlay" | "right_align"
     delay = 1000,
     ignore_whitespace = false,
   },
