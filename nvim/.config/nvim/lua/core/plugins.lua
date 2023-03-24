@@ -206,6 +206,9 @@ return {
   -- zen mode
   {
     'folke/zen-mode.nvim',
+    keys = {
+      {'<leader>z', function() require('zen-mode').toggle() end}
+    },
     cmd = { 'ZenMode' },
     config = true,
   },
@@ -354,6 +357,11 @@ return {
 
   {
     'folke/todo-comments.nvim',
+    keys = {
+      {']t', function() require('todo-comments').jump_next() end},
+      {'[t', function() require('todo-comments').jump_prev() end},
+
+    },
     event = { 'BufReadPost', 'BufNewFile' },
     config = true
   },
@@ -444,6 +452,14 @@ return {
   -- fuzzy finder
   {
     'nvim-telescope/telescope.nvim',
+    keys = {
+      {'<leader>ff', function() require('telescope.builtin').find_files() end},
+      {'<leader>fg', function() require('telescope.builtin').live_grep() end},
+      {'<leader><leader>', function() require('telescope.builtin').buffers() end},
+      {'<leader>fh', function() require('telescope.builtin').help_tags() end},
+      {'<leader>fd', function() require('telescope.builtin').diagnostics() end},
+      {'<leader>fo', function() require('telescope.builtin').oldfiles() end},
+    },
     cmd = { 'Telescope' },
     dependencies = {
       'nvim-lua/plenary.nvim',
