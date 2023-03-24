@@ -1,8 +1,8 @@
 -- options
-require('core.options')
+require("core.options")
 -- autocommands
-require('core.autocmds')
+require("core.autocmds")
 -- plugins
-require('core.lazy')
+require("core.lazy")
 -- keymaps
-require('core.keymaps')
+require("core.keymaps")

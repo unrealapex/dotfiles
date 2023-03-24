@@ -1,11 +1,11 @@
 -- plugins
 return {
   {
-    'folke/noice.nvim',
+    "folke/noice.nvim",
     dependencies = {
-      'MunifTanjim/nui.nvim',
-      'nvim-treesitter/nvim-treesitter',
-      'nvim-tree/nvim-web-devicons',
+      "MunifTanjim/nui.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
       {
         "rcarriga/nvim-notify",
         keys = {
@@ -28,7 +28,7 @@ return {
         },
       }
     },
-    event = 'VeryLazy',
+    event = "VeryLazy",
     opts = {
       lsp = {
         override = {
@@ -45,9 +45,9 @@ return {
   },
   -- better file explorer
   {
-    'justinmk/vim-dirvish',
-    keys = '-',
-    cmd = 'Dirvish',
+    "justinmk/vim-dirvish",
+    keys = "-",
+    cmd = "Dirvish",
     init = function()
       -- check if a file argument supplied is a directory
       local argv_contains_dir = false
@@ -76,128 +76,128 @@ return {
   },
   -- unix helpers
   {
-    'tpope/vim-eunuch',
+    "tpope/vim-eunuch",
     cmd = {
-      'Remove',
-      'Unlink',
-      'Delete',
-      'Copy',
-      'Duplicate',
-      'Move',
-      'Rename',
-      'Chmod',
-      'Mkdir',
-      'Cfind',
-      'Lfind',
-      'Clocate',
-      'Llocate',
-      'SudoEdit',
-      'SudoWrite',
-      'Wall',
-      'W',
+      "Remove",
+      "Unlink",
+      "Delete",
+      "Copy",
+      "Duplicate",
+      "Move",
+      "Rename",
+      "Chmod",
+      "Mkdir",
+      "Cfind",
+      "Lfind",
+      "Clocate",
+      "Llocate",
+      "SudoEdit",
+      "SudoWrite",
+      "Wall",
+      "W",
     }
   },
   {
-    'tpope/vim-rsi',
-    event = { 'InsertEnter', 'CmdlineEnter' }
+    "tpope/vim-rsi",
+    event = { "InsertEnter", "CmdlineEnter" }
   },
   {
-    'echasnovski/mini.move',
+    "echasnovski/mini.move",
     keys = {
-      '<A-h>',
-      '<A-j>',
-      '<A-k>',
-      '<A-l>',
-      { '<A-h>', mode = 'v' },
-      { '<A-j>', mode = 'v' },
-      { '<A-k>', mode = 'v' },
-      { '<A-l>', mode = 'v' }
+      "<A-h>",
+      "<A-j>",
+      "<A-k>",
+      "<A-l>",
+      { "<A-h>", mode = "v" },
+      { "<A-j>", mode = "v" },
+      { "<A-k>", mode = "v" },
+      { "<A-l>", mode = "v" }
     },
     config = function()
-      require('mini.move').setup()
+      require("mini.move").setup()
     end
   },
   {
-    'tpope/vim-unimpaired',
-    keys = { '[', ']' }
+    "tpope/vim-unimpaired",
+    keys = { "[", "]" }
   },
   -- better git integration
   {
-    'lewis6991/gitsigns.nvim',
-    cond = vim.fn.executable('git') == 1,
-    event = { 'BufReadPre', 'BufNewFile' },
+    "lewis6991/gitsigns.nvim",
+    cond = vim.fn.executable("git") == 1,
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require('plugins.gitsigns')
+      require("plugins.gitsigns")
     end
   },
   -- status bar
   {
-    'nvim-lualine/lualine.nvim',
-    event = 'VeryLazy',
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
     config = function()
-      require('plugins.lualine')
+      require("plugins.lualine")
     end,
-    dependencies = 'nvim-tree/nvim-web-devicons'
+    dependencies = "nvim-tree/nvim-web-devicons"
   },
   -- conveniently run git commands from vim
   {
-    'tpope/vim-fugitive',
-    cond = vim.fn.executable('git') == 1,
+    "tpope/vim-fugitive",
+    cond = vim.fn.executable("git") == 1,
     cmd = {
-      'G',
-      'Git',
-      'Ggrep',
-      'Glgrep',
-      'Gclog',
-      'Gllog',
-      'Gcd',
-      'Glcd',
-      'Gedit',
-      'Gvsplit',
-      'Gtabedit',
-      'Gpedit',
-      'Gdrop',
-      'Gread',
-      'Gwrite',
-      'Gwq',
-      'Gdiffsplit',
-      'Ghdiffsplit',
-      'GMove',
-      'GRename',
-      'GDelete',
-      'GRemove',
-      'GUnlink',
-      'GBrowse'
+      "G",
+      "Git",
+     "Ggrep",
+      "Glgrep",
+      "Gclog",
+      "Gllog",
+      "Gcd",
+      "Glcd",
+      "Gedit",
+      "Gvsplit",
+      "Gtabedit",
+      "Gpedit",
+      "Gdrop",
+      "Gread",
+      "Gwrite",
+      "Gwq",
+      "Gdiffsplit",
+      "Ghdiffsplit",
+      "GMove",
+      "GRename",
+      "GDelete",
+      "GRemove",
+      "GUnlink",
+      "GBrowse"
     }
   },
   {
-    'tpope/vim-surround',
-    keys = { "ds", "cs", "ys", { "S", mode = 'v' }, { "gS", mode = 'v' } }
+    "tpope/vim-surround",
+    keys = { "ds", "cs", "ys", { "S", mode = "v" }, { "gS", mode = "v" } }
   },
   -- TODO: integrate repeat with other plugins
   {
-    'tpope/vim-repeat',
-    event = 'VeryLazy'
+    "tpope/vim-repeat",
+    event = "VeryLazy"
   },
   -- git commit browser
   {
-    'junegunn/gv.vim',
-    cond = vim.fn.executable('git') == 1,
-    cmd = { 'GV' },
-    dependencies = { 'tpope/vim-fugitive' }
+    "junegunn/gv.vim",
+    cond = vim.fn.executable("git") == 1,
+    cmd = { "GV" },
+    dependencies = { "tpope/vim-fugitive" }
   },
   -- commenter
   {
-    'numToStr/Comment.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    keys = { "gc", "gb", { "gc", mode = 'v' }, { "gb", mode = 'v' } },
+    "numToStr/Comment.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    keys = { "gc", "gb", { "gc", mode = "v" }, { "gb", mode = "v" } },
     config = true,
   },
   -- indent guides
   {
-    'lukas-reineke/indent-blankline.nvim',
-    event = { 'BufReadPost', 'BufNewFile' },
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    "lukas-reineke/indent-blankline.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
       show_current_context = true,
       show_current_context_start = true,
@@ -205,24 +205,24 @@ return {
   },
   -- zen mode
   {
-    'folke/zen-mode.nvim',
+    "folke/zen-mode.nvim",
     keys = {
-      {'<leader>z', function() require('zen-mode').toggle() end}
+      {"<leader>z", function() require("zen-mode").toggle() end}
     },
-    cmd = { 'ZenMode' },
+    cmd = { "ZenMode" },
     config = true,
   },
   -- parentheses colorizer
   {
-    'junegunn/rainbow_parentheses.vim',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "junegunn/rainbow_parentheses.vim",
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       vim.cmd [[RainbowParentheses]]
     end
   },
   -- turn off search highlighting automatically
   {
-    'romainl/vim-cool',
+    "romainl/vim-cool",
     -- load vim-cool when doing a search
     keys = {
       "/",
@@ -231,8 +231,8 @@ return {
       "N",
       "*",
       "#",
-      { "*", mode = 'v' },
-      { "#", mode = 'v' },
+      { "*", mode = "v" },
+      { "#", mode = "v" },
       "g*",
       "g#",
     }
@@ -240,27 +240,27 @@ return {
 
   -- lsp and completion stuff
   {
-    'neovim/nvim-lspconfig',
-    event = { 'BufReadPre', 'BufNewFile' },
+    "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require('plugins.lsp')
+      require("plugins.lsp")
     end
   },
 
   {
-    'williamboman/mason.nvim',
+    "williamboman/mason.nvim",
     cmd = {
-      'Mason',
-      'MasonInstall',
-      'MasonUninstall',
-      'MasonUninstallAll',
-      'MasonLog'
+      "Mason",
+      "MasonInstall",
+      "MasonUninstall",
+      "MasonUninstallAll",
+      "MasonLog"
     },
     config = true,
     dependencies = {
       {
-        'williamboman/mason-lspconfig.nvim',
-        dependencies = 'neovim/nvim-lspconfig',
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = "neovim/nvim-lspconfig",
         opts = {
           automatic_installation = true,
         }
@@ -269,68 +269,68 @@ return {
   },
 
   {
-    'glepnir/lspsaga.nvim',
-    event = { 'BufReadPost', 'BufNewFile' },
-    cmd = 'Lspsaga',
-    dependencies = 'nvim-tree/nvim-web-devicons'
+    "glepnir/lspsaga.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = "Lspsaga",
+    dependencies = "nvim-tree/nvim-web-devicons"
   },
 
   {
-    'hrsh7th/nvim-cmp',
+    "hrsh7th/nvim-cmp",
     config = function()
-      require('plugins.cmp')
+      require("plugins.cmp")
     end,
     dependencies = {
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'saadparwaiz1/cmp_luasnip',
-      'nvim-tree/nvim-web-devicons'
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "saadparwaiz1/cmp_luasnip",
+      "nvim-tree/nvim-web-devicons"
     }
   },
 
   {
-    'hrsh7th/cmp-cmdline',
-    event = 'CmdlineEnter',
-    dependencies = 'hrsh7th/nvim-cmp'
+    "hrsh7th/cmp-cmdline",
+    event = "CmdlineEnter",
+    dependencies = "hrsh7th/nvim-cmp"
   },
 
   {
-    'hrsh7th/cmp-nvim-lua',
-    ft = 'lua',
-    dependencies = 'hrsh7th/nvim-cmp'
+    "hrsh7th/cmp-nvim-lua",
+    ft = "lua",
+    dependencies = "hrsh7th/nvim-cmp"
   },
 
   {
-    'hrsh7th/cmp-calc',
-    event = { 'InsertEnter' },
-    dependencies = 'hrsh7th/nvim-cmp'
+    "hrsh7th/cmp-calc",
+    event = { "InsertEnter" },
+    dependencies = "hrsh7th/nvim-cmp"
   },
 
   {
-    'hrsh7th/cmp-emoji',
-    keys = { ':', mode = 'i' },
-    dependencies = 'hrsh7th/nvim-cmp'
+    "hrsh7th/cmp-emoji",
+    keys = { ":", mode = "i" },
+    dependencies = "hrsh7th/nvim-cmp"
   },
 
   {
-    'L3MON4D3/LuaSnip',
-    event = 'InsertEnter',
+    "L3MON4D3/LuaSnip",
+    event = "InsertEnter",
     config = function()
-      require('luasnip')
+      require("luasnip")
     end,
     dependencies = {
       {
-        'rafamadriz/friendly-snippets',
+        "rafamadriz/friendly-snippets",
         config = function()
-          require('luasnip/loaders/from_vscode').lazy_load()
+          require("luasnip/loaders/from_vscode").lazy_load()
         end
       },
     }
   },
 
   {
-    'folke/neodev.nvim',
-    ft = 'lua',
+    "folke/neodev.nvim",
+    ft = "lua",
     config = function()
       require("neodev").setup()
       vim.lsp.start({
@@ -344,51 +344,51 @@ return {
   },
 
   {
-    'mfussenegger/nvim-jdtls',
-    ft = 'java'
+    "mfussenegger/nvim-jdtls",
+    ft = "java"
   },
 
   {
-    'folke/trouble.nvim',
-    cmd = 'Trouble',
+    "folke/trouble.nvim",
+    cmd = "Trouble",
     config = true,
-    dependencies = 'nvim-tree/nvim-web-devicons'
+    dependencies = "nvim-tree/nvim-web-devicons"
   },
 
   {
-    'folke/todo-comments.nvim',
+    "folke/todo-comments.nvim",
     keys = {
-      {']t', function() require('todo-comments').jump_next() end},
-      {'[t', function() require('todo-comments').jump_prev() end},
+      {"]t", function() require("todo-comments").jump_next() end},
+      {"[t", function() require("todo-comments").jump_prev() end},
 
     },
-    event = { 'BufReadPost', 'BufNewFile' },
+    event = { "BufReadPost", "BufNewFile" },
     config = true
   },
   -- improved syntax highlighting
   {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    event = { 'BufReadPost', 'BufNewFile' },
-    cond = (vim.fn.executable('git') == 1 or (vim.fn.executable('curl') == 1 and vim.fn.executable('tar') == 1)),
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
+    cond = (vim.fn.executable("git") == 1 or (vim.fn.executable("curl") == 1 and vim.fn.executable("tar") == 1)),
     cmd = {
-      'TSBufDisable',
-      'TSBufEnable',
-      'TSBufToggle',
-      'TSConfigInfo',
-      'TSDisable',
-      'TSEditQuery',
-      'TSEditQueryUserAfter',
-      'TSEnable',
-      'TSInstall',
-      'TSInstallFromGrammar',
-      'TSInstallInfo',
-      'TSInstallSync',
-      'TSModuleInfo',
-      'TSToggle',
-      'TSUninstall',
-      'TSUpdate',
-      'TSUpdateSync',
+      "TSBufDisable",
+      "TSBufEnable",
+      "TSBufToggle",
+      "TSConfigInfo",
+      "TSDisable",
+      "TSEditQuery",
+      "TSEditQueryUserAfter",
+      "TSEnable",
+      "TSInstall",
+      "TSInstallFromGrammar",
+      "TSInstallInfo",
+      "TSInstallSync",
+      "TSModuleInfo",
+      "TSToggle",
+      "TSUninstall",
+      "TSUpdate",
+      "TSUpdateSync",
     },
     init = function()
       if vim.fn.argc() >= 1 then
@@ -396,27 +396,27 @@ return {
       end
     end,
     config = function()
-      require('plugins.treesitter')
+      require("plugins.treesitter")
     end
   },
 
   {
-    'nvim-treesitter/nvim-treesitter-context',
-    event = { 'BufReadPre', 'BufNewFile' },
+    "nvim-treesitter/nvim-treesitter-context",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require('treesitter-context').setup({
+      require("treesitter-context").setup({
         enable = true,
-        mode = 'cursor',
+        mode = "cursor",
       })
       vim.cmd [[TSContextEnable]]
     end,
-    dependencies = 'nvim-treesitter/nvim-treesitter'
+    dependencies = "nvim-treesitter/nvim-treesitter"
   },
 
   {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    event = { 'BufReadPre', 'BufNewFile' },
-    dependencies = 'nvim-treesitter/nvim-treesitter'
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = "nvim-treesitter/nvim-treesitter"
   },
 
   -- automatically close pairs
@@ -424,19 +424,19 @@ return {
     "windwp/nvim-autopairs",
     -- load when starting bracket delimiter is pressed
     keys = {
-      { '(', mode = 'i' },
-      { '{', mode = 'i' },
-      { '[', mode = 'i' },
-      { '"', mode = 'i' },
-      { "'", mode = 'i' }
+      { "(", mode = "i" },
+      { "{", mode = "i" },
+      { "[", mode = "i" },
+      { '"', mode = "i" },
+      { "'", mode = "i" }
     },
     config = true,
   },
 
   -- start screen
   {
-    'goolord/alpha-nvim',
-    cmd = 'Alpha',
+    "goolord/alpha-nvim",
+    cmd = "Alpha",
     init = function()
       if vim.fn.argc() == 0 then
         vim.cmd[[
@@ -445,33 +445,33 @@ return {
       end
     end,
     config = function()
-      require('plugins.alpha')
+      require("plugins.alpha")
     end,
-    dependencies = 'nvim-tree/nvim-web-devicons'
+    dependencies = "nvim-tree/nvim-web-devicons"
   },
   -- fuzzy finder
   {
-    'nvim-telescope/telescope.nvim',
+    "nvim-telescope/telescope.nvim",
     keys = {
-      {'<leader>ff', function() require('telescope.builtin').find_files() end},
-      {'<leader>fg', function() require('telescope.builtin').live_grep() end},
-      {'<leader><leader>', function() require('telescope.builtin').buffers() end},
-      {'<leader>fh', function() require('telescope.builtin').help_tags() end},
-      {'<leader>fd', function() require('telescope.builtin').diagnostics() end},
-      {'<leader>fo', function() require('telescope.builtin').oldfiles() end},
+      {"<leader>ff", function() require("telescope.builtin").find_files() end},
+      {"<leader>fg", function() require("telescope.builtin").live_grep() end},
+      {"<leader><leader>", function() require("telescope.builtin").buffers() end},
+      {"<leader>fh", function() require("telescope.builtin").help_tags() end},
+      {"<leader>fd", function() require("telescope.builtin").diagnostics() end},
+      {"<leader>fo", function() require("telescope.builtin").oldfiles() end},
     },
-    cmd = { 'Telescope' },
+    cmd = { "Telescope" },
     dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-treesitter/nvim-treesitter',
-      'nvim-tree/nvim-web-devicons',
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
       {
         -- increase telescope search speed
-        'nvim-telescope/telescope-fzf-native.nvim',
-        cond = vim.fn.executable('make') == 1,
-        build = 'make',
+        "nvim-telescope/telescope-fzf-native.nvim",
+        cond = vim.fn.executable("make") == 1,
+        build = "make",
         config = function()
-          require('telescope').load_extension('fzf')
+          require("telescope").load_extension("fzf")
         end
       }
     },
@@ -482,28 +482,28 @@ return {
 
   -- improved movement
   {
-    'ggandor/leap.nvim',
+    "ggandor/leap.nvim",
     keys = {
       { "s",  mode = { "n", "x", "o" } },
       { "S",  mode = { "n", "x", "o" } },
       { "gs", mode = { "n", "x", "o" } },
     },
     config = function()
-      require('leap').set_default_keymaps()
+      require("leap").set_default_keymaps()
     end
   },
 
   {
-    'wellle/targets.vim',
-    event = 'VeryLazy'
+    "wellle/targets.vim",
+    event = "VeryLazy"
   },
 
   {
-    'tpope/vim-sleuth',
-    event = { 'BufReadPre', 'BufNewFile' },
+    "tpope/vim-sleuth",
+    event = { "BufReadPre", "BufNewFile" },
   },
   -- icons
-  'nvim-tree/nvim-web-devicons',
+  "nvim-tree/nvim-web-devicons",
   -- colorscheme
   {
     "folke/tokyonight.nvim",
@@ -515,8 +515,8 @@ return {
   },
   -- markdown preview
   {
-    'ellisonleao/glow.nvim',
-    cond = vim.fn.executable('glow') == 1,
-    ft = 'markdown'
+    "ellisonleao/glow.nvim",
+    cond = vim.fn.executable("glow") == 1,
+    ft = "markdown"
   }
 }

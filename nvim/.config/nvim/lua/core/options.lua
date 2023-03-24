@@ -3,25 +3,25 @@ vim.opt.autoindent = true
 -- reread file if it has been modified outside of Vim
 vim.opt.autoread = true
 -- set window background to dark
-vim.opt.background = 'dark'
+vim.opt.background = "dark"
 -- more powerful backspacing
-vim.opt.backspace = 'indent,eol,start'
+vim.opt.backspace = "indent,eol,start"
 -- store all backup files in one directory
-vim.opt.backupdir = vim.fn.stdpath('state') .. '/backup'
+vim.opt.backupdir = vim.fn.stdpath("state") .. "/backup"
 -- enter the current millennium
 vim.opt.compatible = false
-vim.opt.completeopt = 'menu,menuone,noselect'
+vim.opt.completeopt = "menu,menuone,noselect"
 -- enable cursor line
 vim.opt.cursorline = true
 -- store all swap files in one directory
-vim.opt.directory = vim.fn.stdpath('state') .. '/swap'
+vim.opt.directory = vim.fn.stdpath("state") .. "/swap"
 -- disable annoying error bell
 vim.opt.errorbells = false
 vim.opt.expandtab = true
 vim.opt.formatoptions = "jcroqlnt"
 -- enable folding
 vim.opt.foldenable = false
-vim.opt.foldmethod = 'indent'
+vim.opt.foldmethod = "indent"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.opt.grepprg = "rg --vimgrep"
 -- allow hidden buffers
@@ -33,13 +33,13 @@ vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.laststatus = 2
 vim.opt.list = true
-vim.opt.listchars = ''
+vim.opt.listchars = ""
 vim.opt.magic = true
 -- show line numbers
 vim.opt.number = true
 -- basic completion
-vim.opt.omnifunc = 'syntaxcomplete#Complete'
-vim.opt.path:append('.,**')
+vim.opt.omnifunc = "syntaxcomplete#Complete"
+vim.opt.path:append(".,**")
 vim.opt.pumheight = 15
 -- show relative line numbers
 vim.opt.relativenumber = true
@@ -53,7 +53,7 @@ vim.opt.shiftround = true
 vim.opt.showmode = false
 -- show typed command in status bar
 vim.opt.showcmd = true
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
 -- set tabs to two spaces
 vim.opt.tabstop = 2
@@ -61,7 +61,7 @@ vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 -- show file in titlebar
 vim.opt.title = true
-vim.opt.undodir = vim.fn.stdpath('state') .. '/undo'
+vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
 -- persistent undo tree
 vim.opt.undofile = true
 vim.opt.undolevels = 500
@@ -69,8 +69,8 @@ vim.opt.undolevels = 500
 vim.opt.updatetime = 200
 vim.opt.visualbell = false
 vim.opt.wildmenu = true
-vim.opt.wildmode = 'longest:full,full'
-vim.opt.winbar = '%=%m %f'
+vim.opt.wildmode = "longest:full,full"
+vim.opt.winbar = "%=%m %f"
 -- don't wrap lines
 vim.opt.wrap = false
 
@@ -88,25 +88,25 @@ vim.g.do_filetype_lua = 1
 vim.g.did_load_filetypes = 0
 
 -- set the mapleader to space
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- declare before indent-blankline is loaded
 vim.g.indent_blankline_filetype_exclude = {
-  'help',
-  'startify',
-  'dashboard',
-  'packer',
-  'neogitstatus',
-  'NvimTree',
-  'Trouble',
-  'WhichKey',
-  'lsp-installer',
-  'mason',
-  'text',
-  'sh'
+  "help",
+  "startify",
+  "dashboard",
+  "packer",
+  "neogitstatus",
+  "NvimTree",
+  "Trouble",
+  "WhichKey",
+  "lsp-installer",
+  "mason",
+  "text",
+  "sh"
 }
 
-vim.g['rainbow#pairs'] = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
+vim.g["rainbow#pairs"] = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
 
 
 local prosed = false
@@ -117,21 +117,21 @@ function prose()
   if not prosed then
     -- enable spellcheck and line wrapping
     vim.opt_local.spell = true
-    vim.opt_local.spelllang = 'en_us'
+    vim.opt_local.spelllang = "en_us"
     vim.opt_local.wrap = true
 
     -- normal and visual mode mappings
-    vim.keymap.set({ 'n', 'v' }, 'j', 'gj')
-    vim.keymap.set({ 'n', 'v' }, 'k', 'gk')
-    vim.keymap.set({ 'n', 'v' }, '0', 'g0')
-    vim.keymap.set({ 'n', 'v' }, '$', 'g$')
-    vim.keymap.set({ 'n', 'v' }, '^', 'g^')
+    vim.keymap.set({ "n", "v" }, "j", "gj")
+    vim.keymap.set({ "n", "v" }, "k", "gk")
+    vim.keymap.set({ "n", "v" }, "0", "g0")
+    vim.keymap.set({ "n", "v" }, "$", "g$")
+    vim.keymap.set({ "n", "v" }, "^", "g^")
 
     prosed = true
-    if vim.fn.exists(':ZenMode') == 2 then
+    if vim.fn.exists(":ZenMode") == 2 then
       vim.cmd [[ZenMode]]
     end
-    vim.notify('Prose Mode Enabled')
+    vim.notify("Prose Mode Enabled")
   else
     -- disable spellcheck and line wrapping
     vim.opt_local.spell = false
@@ -139,57 +139,57 @@ function prose()
     vim.opt_local.wrap = false
 
     -- reset normal and visual mode mappings
-    vim.keymap.del({ 'n', 'v' }, 'j')
-    vim.keymap.del({ 'n', 'v' }, 'k')
-    vim.keymap.del({ 'n', 'v' }, '0')
-    vim.keymap.del({ 'n', 'v' }, '$')
-    vim.keymap.del({ 'n', 'v' }, '^')
+    vim.keymap.del({ "n", "v" }, "j")
+    vim.keymap.del({ "n", "v" }, "k")
+    vim.keymap.del({ "n", "v" }, "0")
+    vim.keymap.del({ "n", "v" }, "$")
+    vim.keymap.del({ "n", "v" }, "^")
     prosed = false
-    if vim.fn.exists(':ZenMode') == 2 then
+    if vim.fn.exists(":ZenMode") == 2 then
       vim.cmd [[ZenMode]]
     end
-    vim.notify('Prose Mode Disabled')
+    vim.notify("Prose Mode Disabled")
   end
 end
 
-vim.api.nvim_create_user_command('Prose', prose, {})
+vim.api.nvim_create_user_command("Prose", prose, {})
 
 
 -- environment variables
 
 -- $CONFIG
-vim.env.CONFIG = vim.fn.stdpath('config')
+vim.env.CONFIG = vim.fn.stdpath("config")
 
 -- handle os file path variations
-if vim.fn.has('unix') == 1 then
+if vim.fn.has("unix") == 1 then
   -- $OPTIONS
-  vim.env.OPTIONS = vim.fn.stdpath('config') .. "/lua/core/options.lua"
+  vim.env.OPTIONS = vim.fn.stdpath("config") .. "/lua/core/options.lua"
 
   -- $LAZY
-  vim.env.LAZY = vim.fn.stdpath('config') .. "/lua/core/lazy.lua"
+  vim.env.LAZY = vim.fn.stdpath("config") .. "/lua/core/lazy.lua"
 
   -- $PLUGINS
-  vim.env.PLUGINS = vim.fn.stdpath('config') .. "/lua/core/plugins.lua"
+  vim.env.PLUGINS = vim.fn.stdpath("config") .. "/lua/core/plugins.lua"
 
   -- $KEYMAPS
-  vim.env.KEYMAPS = vim.fn.stdpath('config') .. "/lua/core/keymaps.lua"
+  vim.env.KEYMAPS = vim.fn.stdpath("config") .. "/lua/core/keymaps.lua"
 
   -- $AUTOCMDS
-  vim.env.AUTOCMDS = vim.fn.stdpath('config') .. "/lua/core/autocmds.lua"
-elseif vim.fn.has('win32') == 1 then
+  vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/core/autocmds.lua"
+elseif vim.fn.has("win32") == 1 then
   -- $OPTIONS
-  vim.env.OPTIONS = vim.fn.stdpath('config') .. "\\lua\\core\\options.lua"
+  vim.env.OPTIONS = vim.fn.stdpath("config") .. "\\lua\\core\\options.lua"
 
   -- $LAZY
-  vim.env.LAZY = vim.fn.stdpath('config') .. "\\lua\\core\\lazy.lua"
+  vim.env.LAZY = vim.fn.stdpath("config") .. "\\lua\\core\\lazy.lua"
 
   -- $PLUGINS
-  vim.env.PLUGINS = vim.fn.stdpath('config') .. "\\lua\\core\\plugins.lua"
+  vim.env.PLUGINS = vim.fn.stdpath("config") .. "\\lua\\core\\plugins.lua"
 
   -- $KEYMAPS
-  vim.env.KEYMAPS = vim.fn.stdpath('config') .. "\\lua\\core\\keymaps.lua"
+  vim.env.KEYMAPS = vim.fn.stdpath("config") .. "\\lua\\core\\keymaps.lua"
 
   -- $AUTOCMDS
-  vim.env.AUTOCMDS = vim.fn.stdpath('config') .. "\\lua\\core\\autocmds.lua"
+  vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "\\lua\\core\\autocmds.lua"
 else
 end

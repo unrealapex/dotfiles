@@ -1,60 +1,60 @@
-require('telescope').setup {
+require("telescope").setup {
   defaults = {
     mappings = {
       i = {
-        ["<C-[>"] = require('telescope.actions').close,
-        ["<Down>"] = require('telescope.actions').move_selection_next,
-        ["<Up>"] = require('telescope.actions').move_selection_previous,
+        ["<C-[>"] = require("telescope.actions").close,
+        ["<Down>"] = require("telescope.actions").move_selection_next,
+        ["<Up>"] = require("telescope.actions").move_selection_previous,
 
-        ["<CR>"] = require('telescope.actions').select_default,
-        ["<C-x>"] = require('telescope.actions').select_horizontal,
-        ["<C-v>"] = require('telescope.actions').select_vertical,
-        ["<C-t>"] = require('telescope.actions').select_tab,
+        ["<CR>"] = require("telescope.actions").select_default,
+        ["<C-x>"] = require("telescope.actions").select_horizontal,
+        ["<C-v>"] = require("telescope.actions").select_vertical,
+        ["<C-t>"] = require("telescope.actions").select_tab,
 
-        ["<C-u>"] = require('telescope.actions').preview_scrolling_up,
-        ["<C-d>"] = require('telescope.actions').preview_scrolling_down,
+        ["<C-u>"] = require("telescope.actions").preview_scrolling_up,
+        ["<C-d>"] = require("telescope.actions").preview_scrolling_down,
 
-        ["<PageUp>"] = require('telescope.actions').results_scrolling_up,
-        ["<PageDown>"] = require('telescope.actions').results_scrolling_down,
+        ["<PageUp>"] = require("telescope.actions").results_scrolling_up,
+        ["<PageDown>"] = require("telescope.actions").results_scrolling_down,
 
-        ["<Tab>"] = require('telescope.actions').toggle_selection + require('telescope.actions').move_selection_worse,
-        ["<S-Tab>"] = require('telescope.actions').toggle_selection + require('telescope.actions').move_selection_better,
-        ["<C-q>"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
-        ["<M-q>"] = require('telescope.actions').send_selected_to_qflist + require('telescope.actions').open_qflist,
-        ["<C-l>"] = require('telescope.actions').complete_tag,
-        ["<C-_>"] = require('telescope.actions').which_key, -- keys from pressing <C-/>
+        ["<Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_worse,
+        ["<S-Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_better,
+        ["<C-q>"] = require("telescope.actions").send_to_qflist + require("telescope.actions").open_qflist,
+        ["<M-q>"] = require("telescope.actions").send_selected_to_qflist + require("telescope.actions").open_qflist,
+        ["<C-l>"] = require("telescope.actions").complete_tag,
+        ["<C-_>"] = require("telescope.actions").which_key, -- keys from pressing <C-/>
       },
 
       n = {
-        ["<esc>"] = require('telescope.actions').close,
-        ["<CR>"] = require('telescope.actions').select_default,
-        ["<C-x>"] = require('telescope.actions').select_horizontal,
-        ["<C-v>"] = require('telescope.actions').select_vertical,
-        ["<C-t>"] = require('telescope.actions').select_tab,
+        ["<esc>"] = require("telescope.actions").close,
+        ["<CR>"] = require("telescope.actions").select_default,
+        ["<C-x>"] = require("telescope.actions").select_horizontal,
+        ["<C-v>"] = require("telescope.actions").select_vertical,
+        ["<C-t>"] = require("telescope.actions").select_tab,
 
-        ["<Tab>"] = require('telescope.actions').toggle_selection + require('telescope.actions').move_selection_worse,
-        ["<S-Tab>"] = require('telescope.actions').toggle_selection + require('telescope.actions').move_selection_better,
-        ["<C-q>"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
-        ["<M-q>"] = require('telescope.actions').send_selected_to_qflist + require('telescope.actions').open_qflist,
+        ["<Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_worse,
+        ["<S-Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_better,
+        ["<C-q>"] = require("telescope.actions").send_to_qflist + require("telescope.actions").open_qflist,
+        ["<M-q>"] = require("telescope.actions").send_selected_to_qflist + require("telescope.actions").open_qflist,
 
-        ["j"] = require('telescope.actions').move_selection_next,
-        ["k"] = require('telescope.actions').move_selection_previous,
-        ["H"] = require('telescope.actions').move_to_top,
-        ["M"] = require('telescope.actions').move_to_middle,
-        ["L"] = require('telescope.actions').move_to_bottom,
+        ["j"] = require("telescope.actions").move_selection_next,
+        ["k"] = require("telescope.actions").move_selection_previous,
+        ["H"] = require("telescope.actions").move_to_top,
+        ["M"] = require("telescope.actions").move_to_middle,
+        ["L"] = require("telescope.actions").move_to_bottom,
 
-        ["<Down>"] = require('telescope.actions').move_selection_next,
-        ["<Up>"] = require('telescope.actions').move_selection_previous,
-        ["gg"] = require('telescope.actions').move_to_top,
-        ["G"] = require('telescope.actions').move_to_bottom,
+        ["<Down>"] = require("telescope.actions").move_selection_next,
+        ["<Up>"] = require("telescope.actions").move_selection_previous,
+        ["gg"] = require("telescope.actions").move_to_top,
+        ["G"] = require("telescope.actions").move_to_bottom,
 
-        ["<C-u>"] = require('telescope.actions').preview_scrolling_up,
-        ["<C-d>"] = require('telescope.actions').preview_scrolling_down,
+        ["<C-u>"] = require("telescope.actions").preview_scrolling_up,
+        ["<C-d>"] = require("telescope.actions").preview_scrolling_down,
 
-        ["<PageUp>"] = require('telescope.actions').results_scrolling_up,
-        ["<PageDown>"] = require('telescope.actions').results_scrolling_down,
+        ["<PageUp>"] = require("telescope.actions").results_scrolling_up,
+        ["<PageDown>"] = require("telescope.actions").results_scrolling_down,
 
-        ["?"] = require('telescope.actions').which_key,
+        ["?"] = require("telescope.actions").which_key,
       },
     },
   },
