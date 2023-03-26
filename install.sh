@@ -40,6 +40,7 @@ brew install glow
 brew install hyperfine
 brew install lua
 brew install neovim
+brew install node
 brew install openjdk
 
 # don't install things specific to Linux setup if running on WSL
