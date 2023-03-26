@@ -79,7 +79,7 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   sudo apt install -y ./steam.deb
   rm steam.deb
   
-  sudo apt install obs-studio
+  sudo apt install -y obs-studio
 fi
 
 # anaconda
