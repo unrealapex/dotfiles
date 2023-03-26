@@ -77,6 +77,7 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   google-chrome https://zoom.us/download?os=linux
   cd ~/Downloads/
   sudo apt install -y ./zoom_amd64.deb
+  rm zoom_amd64.deb
   cd -
   
   curl -Lo discord.deb https://discord.com/api/download?platform=linux
