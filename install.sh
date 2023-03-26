@@ -34,6 +34,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install some packages from Homebrew
 brew install asciinema
+brew install cmatrix
 brew install gh
 brew install git-delta
 brew install glow
