@@ -33,13 +33,13 @@ grep -qsF 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' ~/.profile ||
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install some packages from Homebrew
-brew asciinema
-brew gh
-brew git-delta
-brew glow
-brew lua
-brew neovim
-brew openjdk
+brew install asciinema
+brew install gh
+brew install git-delta
+brew install glow
+brew install lua
+brew install neovim
+brew install openjdk
 
 # don't install things specific to Linux setup if running on WSL
 if [[ ! $(grep -s Microsoft /proc/version) ]]; then
