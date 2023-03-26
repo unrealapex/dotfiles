@@ -12,7 +12,6 @@ cd "$HOME"/.dotfiles
 
 mv -f ~/.bashrc ~/.bashrc.bak 2>/dev/null
 mv -f ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
-mv -f ~/Brewfile ~/Brewfile.bak 2>/dev/null
 mv -f ~/.gitconfig ~/.gitconfig.bak 2>/dev/null
 mv -f ~/.vimrc ~/.vimrc.bak 2>/dev/null
 mf -f ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
@@ -31,8 +30,14 @@ echo "Adding Homebrew to path..."
 grep -qsF 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' ~/.profile || (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# install from brewfile
-brew bundle install --file=~/Brewfile
+# install some packages from Homebrew
+brew asciinema
+brew gh
+brew git-delta
+brew glow
+brew lua
+brew neovim
+brew openjdk
 
 # don't install things specific to Linux setup if running on WSL
 if [[ ! $(grep -s Microsoft /proc/version) ]]; then
