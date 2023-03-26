@@ -10,7 +10,7 @@ git clone https://www.github.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
 cd "$HOME"/.dotfiles
 
 # install packages
-sudo apt install -y $(cat misc/packages)
+sudo apt install -y $(cat packages)
 
 mv -f ~/.bashrc ~/.bashrc.bak 2>/dev/null
 mv -f ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
