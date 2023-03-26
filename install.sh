@@ -71,15 +71,6 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
   sudo apt install -y spotify-client
   
-  # zoom
-  echo "Installing Zoom..."
-  echo "You will need to download the file manually"
-  google-chrome https://zoom.us/download?os=linux
-  cd ~/Downloads/
-  sudo apt install -y ./zoom_amd64.deb
-  rm zoom_amd64.deb
-  cd -
-  
   curl -Lo discord.deb https://discord.com/api/download?platform=linux
   sudo apt install -y ./discord.deb
   rm discord.deb
