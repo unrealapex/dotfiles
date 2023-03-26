@@ -44,7 +44,7 @@ brew install neovim
 brew install node
 brew install openjdk
 
-# don't install things specific to Linux setup if running on WSL
+# don't install things specific to Linux GUI setup if running on WSL
 if [[ ! $(grep -s Microsoft /proc/version) ]]; then
 
   # set up jetbrains mono nerd font
