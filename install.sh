@@ -37,6 +37,7 @@ brew install asciinema
 brew install gh
 brew install git-delta
 brew install glow
+brew install hyperfine
 brew install lua
 brew install neovim
 brew install openjdk
