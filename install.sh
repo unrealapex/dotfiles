@@ -3,12 +3,14 @@
 # TODO: Add yes no prompts for dangerous operations
 
 sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove
-# install packages
-sudo apt install -y $(cat misc/packages)
+
 cd
 
 git clone https://www.github.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
 cd "$HOME"/.dotfiles
+
+# install packages
+sudo apt install -y $(cat misc/packages)
 
 mv -f ~/.bashrc ~/.bashrc.bak 2>/dev/null
 mv -f ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
