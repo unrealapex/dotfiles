@@ -3,8 +3,8 @@
 # TODO: Add yes no prompts for dangerous operations
 
 sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove
-# install requirements
-yes | sudo apt install build-essential lynx procps file git stow wget
+# install packages
+sudo apt install -y $(cat misc/packages)
 cd
 
 git clone https://www.github.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
