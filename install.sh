@@ -79,6 +79,10 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   sudo apt install -y ./zoom_amd64.deb
   cd -
   
+  curl -Lo discord.deb https://discord.com/api/download?platform=linux
+  sudo apt install -y ./discord.deb
+  rm discord.deb
+  
   sudo apt install obs-studio
 fi
 
