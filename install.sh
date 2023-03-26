@@ -2,7 +2,7 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
-sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 cd
 
