@@ -78,6 +78,8 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   cd ~/Downloads/
   sudo apt install -y ./zoom_amd64.deb
   cd -
+  
+  sudo apt install obs-studio
 fi
 
 # anaconda
