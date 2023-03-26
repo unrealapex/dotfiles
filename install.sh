@@ -84,6 +84,10 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   sudo apt install -y ./discord.deb
   rm discord.deb
   
+  curl -LO https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
+  sudo apt install -y ./steam.deb
+  rm steam.deb
+  
   sudo apt install obs-studio
 fi
 
