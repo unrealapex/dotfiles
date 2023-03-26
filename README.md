@@ -30,7 +30,7 @@ That being said, suggestions are definitely open! This config will only work on 
 
 
 ### 👨‍💻 Usage
-My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. I prefer to manage my packages using Homebrew because certain packages in the APT repositories are outdated. This GitHub repository has multiple branches, each for a separate *Nix system. Each branches README has the appropriate one liner to install that branch's config. This branch is for Linux(Debian) and Windows Subsystem for Linux.
+My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. Most of my packages are installed using Apt, but for certain ones that are not up to date in Ubuntu and Debian repositories or more tedious to install, I use Homebrew. This GitHub repository has multiple branches, each for a separate *Nix system. Each branches README has the appropriate one liner to install that branch's config. This branch is for Linux(Debian) and Windows Subsystem for Linux.
 
 ### 📂 File Structure
 <!-- tree -a -I .git -->
