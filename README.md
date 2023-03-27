@@ -30,47 +30,7 @@ That being said, suggestions are definitely open! This config will only work on 
 
 
 ### 👨‍💻 Usage
-My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. I prefer to manage my packages using Homebrew because certain packages in the APT repositories are outdated. This GitHub repository has multiple branches, each for a separate *Nix system. Each branches README has the appropriate one liner to install that branch's config. This branch is for Linux(Debian) and Windows Subsystem for Linux.
-
-### 📂 File Structure
-<!-- tree -a -I .git -->
-```
-.
-├── install.sh
-├── misc
-│   ├── .bashrc
-│   ├── Brewfile
-│   ├── .gitconfig
-│   ├── .tmux.conf
-│   └── .vimrc
-├── nvim
-│   └── .config
-│       └── nvim
-│           ├── after
-│           │   └── ftplugin
-│           │       └── java.lua
-│           ├── .gitignore
-│           ├── init.lua
-│           ├── lua
-│           │   ├── core
-│           │   │   ├── autocmds.lua
-│           │   │   ├── keymaps.lua
-│           │   │   ├── lazy.lua
-│           │   │   ├── options.lua
-│           │   │   └── plugins.lua
-│           │   └── plugins
-│           │       ├── alpha.lua
-│           │       ├── cmp.lua
-│           │       ├── gitsigns.lua
-│           │       ├── lsp.lua
-│           │       ├── lualine.lua
-│           │       ├── telescope.lua
-│           │       └── treesitter.lua
-│           └── .luarc.json
-└── README.md
-
-9 directories, 23 files
-```
+My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. Most of my packages are installed using Apt, but for certain ones that are not up to date in Ubuntu and Debian repositories or more tedious to install, I use Homebrew. This GitHub repository has multiple branches, each for a separate *Nix system. Each branches README has the appropriate one liner to install that branch's config. This branch is for Linux(Debian) and Windows Subsystem for Linux.
 
 ### 💿 Install
 My dotfiles can be installed with this one liner:

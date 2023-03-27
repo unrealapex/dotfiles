@@ -2,7 +2,7 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
-sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 cd
 
@@ -10,7 +10,7 @@ git clone https://www.github.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
 cd "$HOME"/.dotfiles
 
 # install packages
-sudo apt install -y $(cat misc/packages)
+sudo apt install -y $(cat packages)
 
 mv -f ~/.bashrc ~/.bashrc.bak 2>/dev/null
 mv -f ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
@@ -71,13 +71,15 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
   sudo apt install -y spotify-client
   
-  # zoom
-  echo "Installing Zoom..."
-  echo "You will need to download the file manually"
-  google-chrome https://zoom.us/download?os=linux
-  cd ~/Downloads/
-  sudo apt install -y ./zoom_amd64.deb
-  cd -
+  curl -Lo discord.deb https://discord.com/api/download?platform=linux
+  sudo apt install -y ./discord.deb
+  rm discord.deb
+  
+  curl -LO https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
+  sudo apt install -y ./steam.deb
+  rm steam.deb
+  
+  sudo apt install -y obs-studio
 fi
 
 # anaconda
