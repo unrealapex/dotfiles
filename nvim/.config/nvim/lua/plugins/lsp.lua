@@ -130,9 +130,6 @@ vim.keymap.set("n", "gT", "<cmd>Lspsaga peek_type_definition<CR>")
 -- Show line diagnostics
 vim.keymap.set("n", "<leader>e", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
 
--- Show cursor diagnostic
-vim.keymap.set("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
-
 -- Diagnsotic jump can use `<c-o>` to jump back
 vim.keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
 vim.keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
