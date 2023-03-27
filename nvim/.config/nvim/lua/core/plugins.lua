@@ -270,7 +270,7 @@ return {
 
   {
     "glepnir/lspsaga.nvim",
-    event = { "BufReadPost", "BufNewFile" },
+    event = 'LspAttach',
     cmd = "Lspsaga",
     dependencies = "nvim-tree/nvim-web-devicons"
   },
