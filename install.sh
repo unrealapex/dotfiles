@@ -81,6 +81,13 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   rm steam.deb
   
   sudo apt install -y obs-studio
+  
+  # game mode
+  sudo apt install -y meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev libinih-dev
+  git clone https://github.com/FeralInteractive/gamemode.git
+  cd gamemode
+  git checkout 1.7 # omit to build the master branch
+  ./bootstrap.sh
 fi
 
 # anaconda
