@@ -278,7 +278,7 @@ return {
       { "gD",         "<cmd>Lspsaga peek_definition<CR>" },
       { "gt",         "<cmd>Lspsaga goto_type_definition<CR>" },
       { "gT",         "<cmd>Lspsaga peek_type_definition<CR>" },
-      { "<leader>e",  "<cmd>Lspsaga show_line_diagnostics<CR>" },
+      { "gl",  "<cmd>Lspsaga show_line_diagnostics<CR>" },
       { "[d",         "<cmd>Lspsaga diagnostic_jump_prev<CR>" },
       { "]d",         "<cmd>Lspsaga diagnostic_jump_next<CR>" },
       { "[E",         function() require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR }) end },
