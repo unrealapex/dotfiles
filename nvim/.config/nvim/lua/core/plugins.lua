@@ -297,9 +297,7 @@ return {
       {"]E", function() require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR }) end },
       {"<leader>o", "<cmd>Lspsaga outline<CR>"},
       {"K", "<cmd>Lspsaga hover_doc<CR>" },
-      {"<A-d>", mode = {"n", "v"}, "<cmd>Lspsaga term_toggle<CR>"},
-      -- TODO: move this to Trouble spec
-      {"<leader>q", "<cmd>Trouble<CR>"},
+      {"<A-d>", mode = {"n", "v"}, "<cmd>Lspsaga term_toggle<CR>"}
     }
   },
 
@@ -380,7 +378,10 @@ return {
     "folke/trouble.nvim",
     cmd = "Trouble",
     config = true,
-    dependencies = "nvim-tree/nvim-web-devicons"
+    dependencies = "nvim-tree/nvim-web-devicons",
+    keys = {
+      {"<leader>q", "<cmd>Trouble<CR>"},
+    }
   },
 
   -- improved syntax highlighting
