@@ -97,10 +97,7 @@ return {
       "W",
     }
   },
-  {
-    "tpope/vim-rsi",
-    event = { "InsertEnter", "CmdlineEnter" }
-  },
+  { "tpope/vim-rsi", event = { "InsertEnter", "CmdlineEnter" } },
   {
     "echasnovski/mini.move",
     keys = {
@@ -117,10 +114,7 @@ return {
       require("mini.move").setup()
     end
   },
-  {
-    "tpope/vim-unimpaired",
-    keys = { "[", "]" }
-  },
+  { "tpope/vim-unimpaired", keys = { "[", "]" } },
   -- better git integration
   {
     "lewis6991/gitsigns.nvim",
@@ -146,7 +140,7 @@ return {
     cmd = {
       "G",
       "Git",
-     "Ggrep",
+      "Ggrep",
       "Glgrep",
       "Gclog",
       "Gllog",
@@ -175,10 +169,7 @@ return {
     keys = { "ds", "cs", "ys", { "S", mode = "v" }, { "gS", mode = "v" } }
   },
   -- TODO: integrate repeat with other plugins
-  {
-    "tpope/vim-repeat",
-    event = "VeryLazy"
-  },
+  { "tpope/vim-repeat", event = "VeryLazy" },
   -- git commit browser
   {
     "junegunn/gv.vim",
@@ -207,7 +198,7 @@ return {
   {
     "folke/zen-mode.nvim",
     keys = {
-      {"<leader>z", function() require("zen-mode").toggle() end}
+      { "<leader>z", function() require("zen-mode").toggle() end }
     },
     cmd = { "ZenMode" },
     config = true,
@@ -237,7 +228,6 @@ return {
       "g#",
     }
   },
-
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
@@ -246,7 +236,6 @@ return {
       require("plugins.lsp")
     end
   },
-
   {
     "williamboman/mason.nvim",
     cmd = {
@@ -267,7 +256,6 @@ return {
       }
     }
   },
-
   {
     "glepnir/lspsaga.nvim",
     event = 'LspAttach',
@@ -275,9 +263,31 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
       "nvim-treesitter/nvim-treesitter"
+    },
+    opts = {
+      lightbulb = {
+        sign = false
+      }
+    },
+    keys = {
+      { "gh",         "<cmd>Lspsaga lsp_finder<CR>" },
+      { "<leader>ca", mode = { "n", "v" },                                                                                 "<cmd>Lspsaga code_action<CR>" },
+      { "<leader>rn", "<cmd>Lspsaga rename<CR>" },
+      { "<leader>Rn", "<cmd>Lspsaga rename ++project<CR>" },
+      { "gd",         "<cmd>Lspsaga goto_definition<CR>" },
+      { "gD",         "<cmd>Lspsaga peek_definition<CR>" },
+      { "gt",         "<cmd>Lspsaga goto_type_definition<CR>" },
+      { "gT",         "<cmd>Lspsaga peek_type_definition<CR>" },
+      { "gl",  "<cmd>Lspsaga show_line_diagnostics<CR>" },
+      { "[d",         "<cmd>Lspsaga diagnostic_jump_prev<CR>" },
+      { "]d",         "<cmd>Lspsaga diagnostic_jump_next<CR>" },
+      { "[E",         function() require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR }) end },
+      { "]E",         function() require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR }) end },
+      { "<leader>o",  "<cmd>Lspsaga outline<CR>" },
+      { "K",          "<cmd>Lspsaga hover_doc<CR>" },
+      { "<A-d>",      mode = { "n", "v" },                                                                                 "<cmd>Lspsaga term_toggle<CR>" }
     }
   },
-
   {
     "hrsh7th/nvim-cmp",
     config = function()
@@ -290,31 +300,26 @@ return {
       "nvim-tree/nvim-web-devicons"
     }
   },
-
   {
     "hrsh7th/cmp-cmdline",
     event = "CmdlineEnter",
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "hrsh7th/cmp-nvim-lua",
     ft = "lua",
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "hrsh7th/cmp-calc",
     event = { "InsertEnter" },
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "hrsh7th/cmp-emoji",
     keys = { ":", mode = "i" },
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "L3MON4D3/LuaSnip",
     event = "InsertEnter",
@@ -330,7 +335,6 @@ return {
       },
     }
   },
-
   {
     "folke/neodev.nvim",
     ft = "lua",
@@ -345,28 +349,15 @@ return {
       })
     end
   },
-
-  {
-    "mfussenegger/nvim-jdtls",
-    ft = "java"
-  },
-
+  { "mfussenegger/nvim-jdtls", ft = "java" },
   {
     "folke/trouble.nvim",
     cmd = "Trouble",
     config = true,
-    dependencies = "nvim-tree/nvim-web-devicons"
-  },
-
-  {
-    "folke/todo-comments.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
     keys = {
-      {"]t", function() require("todo-comments").jump_next() end},
-      {"[t", function() require("todo-comments").jump_prev() end},
-
-    },
-    event = { "BufReadPost", "BufNewFile" },
-    config = true
+      { "<leader>q", "<cmd>Trouble<CR>" },
+    }
   },
   -- improved syntax highlighting
   {
@@ -402,7 +393,6 @@ return {
       require("plugins.treesitter")
     end
   },
-
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = { "BufReadPre", "BufNewFile" },
@@ -415,13 +405,11 @@ return {
     end,
     dependencies = "nvim-treesitter/nvim-treesitter"
   },
-
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = "nvim-treesitter/nvim-treesitter"
   },
-
   -- automatically close pairs
   {
     "windwp/nvim-autopairs",
@@ -435,14 +423,13 @@ return {
     },
     config = true,
   },
-
   -- start screen
   {
     "goolord/alpha-nvim",
     cmd = "Alpha",
     init = function()
       if vim.fn.argc() == 0 then
-        vim.cmd[[
+        vim.cmd [[
         autocmd UIEnter * :Alpha
         ]]
       end
@@ -456,12 +443,12 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     keys = {
-      {"<leader>ff", function() require("telescope.builtin").find_files() end},
-      {"<leader>fg", function() require("telescope.builtin").live_grep() end},
-      {"<leader><leader>", function() require("telescope.builtin").buffers() end},
-      {"<leader>fh", function() require("telescope.builtin").help_tags() end},
-      {"<leader>fd", function() require("telescope.builtin").diagnostics() end},
-      {"<leader>fo", function() require("telescope.builtin").oldfiles() end},
+      { "<leader>ff",       function() require("telescope.builtin").find_files() end },
+      { "<leader>fg",       function() require("telescope.builtin").live_grep() end },
+      { "<leader><leader>", function() require("telescope.builtin").buffers() end },
+      { "<leader>fh",       function() require("telescope.builtin").help_tags() end },
+      { "<leader>fd",       function() require("telescope.builtin").diagnostics() end },
+      { "<leader>fo",       function() require("telescope.builtin").oldfiles() end },
     },
     cmd = { "Telescope" },
     dependencies = {
@@ -479,10 +466,10 @@ return {
       }
     },
     config = function()
+      ---@diagnostic disable-next-line: different-requires
       require("plugins.telescope")
     end
   },
-
   -- improved movement
   {
     "ggandor/leap.nvim",
@@ -495,12 +482,10 @@ return {
       require("leap").set_default_keymaps()
     end
   },
-
   {
     "wellle/targets.vim",
     event = "VeryLazy"
   },
-
   {
     "tpope/vim-sleuth",
     event = { "BufReadPre", "BufNewFile" },
