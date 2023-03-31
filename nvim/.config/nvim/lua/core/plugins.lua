@@ -275,6 +275,31 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons",
       "nvim-treesitter/nvim-treesitter"
+    },
+    opts = {
+      lightbulb = {
+        sign = false
+      }
+    },
+    keys = {
+      {"gh", "<cmd>Lspsaga lsp_finder<CR>"},
+      {"<leader>ca", mode = {"n", "v"}, "<cmd>Lspsaga code_action<CR>"},
+      {"<leader>rn", "<cmd>Lspsaga rename<CR>"},
+      {"<leader>Rn", "<cmd>Lspsaga rename ++project<CR>"},
+      {"gd", "<cmd>Lspsaga goto_definition<CR>"},
+      {"gD", "<cmd>Lspsaga peek_definition<CR>"},
+      {"gt", "<cmd>Lspsaga goto_type_definition<CR>"},
+      {"gT", "<cmd>Lspsaga peek_type_definition<CR>"},
+      {"<leader>e", "<cmd>Lspsaga show_line_diagnostics<CR>"},
+      {"[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>"},
+      {"]d", "<cmd>Lspsaga diagnostic_jump_next<CR>"},
+      {"[E", function() require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR }) end },
+      {"]E", function() require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR }) end },
+      {"<leader>o", "<cmd>Lspsaga outline<CR>"},
+      {"K", "<cmd>Lspsaga hover_doc<CR>" },
+      {"<A-d>", mode = {"n", "v"}, "<cmd>Lspsaga term_toggle<CR>"},
+      -- TODO: move this to Trouble spec
+      {"<leader>q", "<cmd>Trouble<CR>"},
     }
   },
 
