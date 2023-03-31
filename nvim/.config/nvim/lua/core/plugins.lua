@@ -164,6 +164,7 @@ return {
       "GBrowse"
     }
   },
+  -- NOTE: maybe use mini.surround's mappings instead of vim-surround's
   {
     "tpope/vim-surround",
     keys = { "ds", "cs", "ys", { "sa", "<Plug>VSurround", mode = "v" }, { "gS", mode = "v" } },
