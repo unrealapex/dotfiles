@@ -4,7 +4,8 @@
         "unused-local"
     ],
     "Lua.diagnostics.globals": [
-        "vim"
+        "vim",
+        "prose"
     ],
     "Lua.workspace.checkThirdParty": false
 }
