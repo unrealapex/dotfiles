@@ -495,6 +495,7 @@ return {
       }
     },
     config = function()
+      ---@diagnostic disable-next-line: different-requires
       require("plugins.telescope")
     end
   },
