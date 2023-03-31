@@ -358,16 +358,6 @@ return {
     dependencies = "nvim-tree/nvim-web-devicons"
   },
 
-  {
-    "folke/todo-comments.nvim",
-    keys = {
-      {"]t", function() require("todo-comments").jump_next() end},
-      {"[t", function() require("todo-comments").jump_prev() end},
-
-    },
-    event = { "BufReadPost", "BufNewFile" },
-    config = true
-  },
   -- improved syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
