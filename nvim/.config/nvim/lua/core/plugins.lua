@@ -97,10 +97,7 @@ return {
       "W",
     }
   },
-  {
-    "tpope/vim-rsi",
-    event = { "InsertEnter", "CmdlineEnter" }
-  },
+  { "tpope/vim-rsi", event = { "InsertEnter", "CmdlineEnter" } },
   {
     "echasnovski/mini.move",
     keys = {
@@ -117,10 +114,7 @@ return {
       require("mini.move").setup()
     end
   },
-  {
-    "tpope/vim-unimpaired",
-    keys = { "[", "]" }
-  },
+  { "tpope/vim-unimpaired", keys = { "[", "]" } },
   -- better git integration
   {
     "lewis6991/gitsigns.nvim",
@@ -175,10 +169,7 @@ return {
     keys = { "ds", "cs", "ys", { "S", mode = "v" }, { "gS", mode = "v" } }
   },
   -- TODO: integrate repeat with other plugins
-  {
-    "tpope/vim-repeat",
-    event = "VeryLazy"
-  },
+  { "tpope/vim-repeat", event = "VeryLazy" },
   -- git commit browser
   {
     "junegunn/gv.vim",
@@ -358,10 +349,7 @@ return {
       })
     end
   },
-  {
-    "mfussenegger/nvim-jdtls",
-    ft = "java"
-  },
+  { "mfussenegger/nvim-jdtls", ft = "java" },
   {
     "folke/trouble.nvim",
     cmd = "Trouble",
