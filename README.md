@@ -38,10 +38,3 @@ My dotfiles can be installed with this one liner:
 ```sh
 source <(curl -s https://raw.githubusercontent.com/UnrealApex/dotfiles/master/install.sh)
 ```
-You could also run the install script manually:
-```sh
-git clone https://github.com/UnrealApex/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-chmod +x install.sh
-source install.sh
-```
