@@ -55,8 +55,6 @@ vim.opt.showmode = false
 vim.opt.showcmd = true
 vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
--- put new windows below the current
-vim.opt.splitbelow = true
 -- put new windows right of the current
 vim.opt.splitright = true
 -- set tabs to two spaces
