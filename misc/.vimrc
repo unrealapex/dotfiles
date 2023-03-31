@@ -207,7 +207,7 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " better movement
-Plug 'justinmk/vim-sneak'
+Plug 'easymotion/vim-easymotion'
 Plug 'mattn/emmet-vim', {'for': ['html', 'css']}
 " icons
 Plug 'ryanoasis/vim-devicons'
@@ -216,8 +216,7 @@ call plug#end()
 " enable IndentLine
 let g:indentLine_enabled = 1
 
-" enable sneak label mode
-let g:sneak#label = 1
+nmap s <Plug>(easymotion-s2)
 
 " enable RainbowParentheses
 augroup rainbow_parens
