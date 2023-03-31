@@ -166,7 +166,11 @@ return {
   },
   {
     "tpope/vim-surround",
-    keys = { "ds", "cs", "ys", { "S", mode = "v" }, { "gS", mode = "v" } }
+    keys = { "ds", "cs", "ys", { "sa", "<Plug>VSurround", mode = "v" }, { "gS", mode = "v" } },
+    config = function()
+      -- remove vim-surround's visual mode mapping for S and use sa instead
+      vim.keymap.del("x", "S")
+    end
   },
   -- TODO: integrate repeat with other plugins
   { "tpope/vim-repeat", event = "VeryLazy" },
