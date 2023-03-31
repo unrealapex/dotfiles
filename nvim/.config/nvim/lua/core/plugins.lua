@@ -237,7 +237,6 @@ return {
       "g#",
     }
   },
-
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
@@ -246,7 +245,6 @@ return {
       require("plugins.lsp")
     end
   },
-
   {
     "williamboman/mason.nvim",
     cmd = {
@@ -267,7 +265,6 @@ return {
       }
     }
   },
-
   {
     "glepnir/lspsaga.nvim",
     event = 'LspAttach',
@@ -300,7 +297,6 @@ return {
       { "<A-d>",      mode = { "n", "v" },                                                                                 "<cmd>Lspsaga term_toggle<CR>" }
     }
   },
-
   {
     "hrsh7th/nvim-cmp",
     config = function()
@@ -313,31 +309,26 @@ return {
       "nvim-tree/nvim-web-devicons"
     }
   },
-
   {
     "hrsh7th/cmp-cmdline",
     event = "CmdlineEnter",
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "hrsh7th/cmp-nvim-lua",
     ft = "lua",
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "hrsh7th/cmp-calc",
     event = { "InsertEnter" },
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "hrsh7th/cmp-emoji",
     keys = { ":", mode = "i" },
     dependencies = "hrsh7th/nvim-cmp"
   },
-
   {
     "L3MON4D3/LuaSnip",
     event = "InsertEnter",
@@ -353,7 +344,6 @@ return {
       },
     }
   },
-
   {
     "folke/neodev.nvim",
     ft = "lua",
@@ -368,12 +358,10 @@ return {
       })
     end
   },
-
   {
     "mfussenegger/nvim-jdtls",
     ft = "java"
   },
-
   {
     "folke/trouble.nvim",
     cmd = "Trouble",
@@ -383,7 +371,6 @@ return {
       { "<leader>q", "<cmd>Trouble<CR>" },
     }
   },
-
   -- improved syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
@@ -418,7 +405,6 @@ return {
       require("plugins.treesitter")
     end
   },
-
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = { "BufReadPre", "BufNewFile" },
@@ -431,13 +417,11 @@ return {
     end,
     dependencies = "nvim-treesitter/nvim-treesitter"
   },
-
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = "nvim-treesitter/nvim-treesitter"
   },
-
   -- automatically close pairs
   {
     "windwp/nvim-autopairs",
@@ -451,7 +435,6 @@ return {
     },
     config = true,
   },
-
   -- start screen
   {
     "goolord/alpha-nvim",
@@ -499,7 +482,6 @@ return {
       require("plugins.telescope")
     end
   },
-
   -- improved movement
   {
     "ggandor/leap.nvim",
@@ -512,12 +494,10 @@ return {
       require("leap").set_default_keymaps()
     end
   },
-
   {
     "wellle/targets.vim",
     event = "VeryLazy"
   },
-
   {
     "tpope/vim-sleuth",
     event = { "BufReadPre", "BufNewFile" },
