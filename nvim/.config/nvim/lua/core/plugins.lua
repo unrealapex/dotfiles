@@ -146,7 +146,7 @@ return {
     cmd = {
       "G",
       "Git",
-     "Ggrep",
+      "Ggrep",
       "Glgrep",
       "Gclog",
       "Gllog",
@@ -207,7 +207,7 @@ return {
   {
     "folke/zen-mode.nvim",
     keys = {
-      {"<leader>z", function() require("zen-mode").toggle() end}
+      { "<leader>z", function() require("zen-mode").toggle() end }
     },
     cmd = { "ZenMode" },
     config = true,
@@ -282,22 +282,22 @@ return {
       }
     },
     keys = {
-      {"gh", "<cmd>Lspsaga lsp_finder<CR>"},
-      {"<leader>ca", mode = {"n", "v"}, "<cmd>Lspsaga code_action<CR>"},
-      {"<leader>rn", "<cmd>Lspsaga rename<CR>"},
-      {"<leader>Rn", "<cmd>Lspsaga rename ++project<CR>"},
-      {"gd", "<cmd>Lspsaga goto_definition<CR>"},
-      {"gD", "<cmd>Lspsaga peek_definition<CR>"},
-      {"gt", "<cmd>Lspsaga goto_type_definition<CR>"},
-      {"gT", "<cmd>Lspsaga peek_type_definition<CR>"},
-      {"<leader>e", "<cmd>Lspsaga show_line_diagnostics<CR>"},
-      {"[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>"},
-      {"]d", "<cmd>Lspsaga diagnostic_jump_next<CR>"},
-      {"[E", function() require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR }) end },
-      {"]E", function() require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR }) end },
-      {"<leader>o", "<cmd>Lspsaga outline<CR>"},
-      {"K", "<cmd>Lspsaga hover_doc<CR>" },
-      {"<A-d>", mode = {"n", "v"}, "<cmd>Lspsaga term_toggle<CR>"}
+      { "gh",         "<cmd>Lspsaga lsp_finder<CR>" },
+      { "<leader>ca", mode = { "n", "v" },                                                                                 "<cmd>Lspsaga code_action<CR>" },
+      { "<leader>rn", "<cmd>Lspsaga rename<CR>" },
+      { "<leader>Rn", "<cmd>Lspsaga rename ++project<CR>" },
+      { "gd",         "<cmd>Lspsaga goto_definition<CR>" },
+      { "gD",         "<cmd>Lspsaga peek_definition<CR>" },
+      { "gt",         "<cmd>Lspsaga goto_type_definition<CR>" },
+      { "gT",         "<cmd>Lspsaga peek_type_definition<CR>" },
+      { "<leader>e",  "<cmd>Lspsaga show_line_diagnostics<CR>" },
+      { "[d",         "<cmd>Lspsaga diagnostic_jump_prev<CR>" },
+      { "]d",         "<cmd>Lspsaga diagnostic_jump_next<CR>" },
+      { "[E",         function() require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR }) end },
+      { "]E",         function() require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR }) end },
+      { "<leader>o",  "<cmd>Lspsaga outline<CR>" },
+      { "K",          "<cmd>Lspsaga hover_doc<CR>" },
+      { "<A-d>",      mode = { "n", "v" },                                                                                 "<cmd>Lspsaga term_toggle<CR>" }
     }
   },
 
@@ -380,7 +380,7 @@ return {
     config = true,
     dependencies = "nvim-tree/nvim-web-devicons",
     keys = {
-      {"<leader>q", "<cmd>Trouble<CR>"},
+      { "<leader>q", "<cmd>Trouble<CR>" },
     }
   },
 
@@ -458,7 +458,7 @@ return {
     cmd = "Alpha",
     init = function()
       if vim.fn.argc() == 0 then
-        vim.cmd[[
+        vim.cmd [[
         autocmd UIEnter * :Alpha
         ]]
       end
@@ -472,12 +472,12 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     keys = {
-      {"<leader>ff", function() require("telescope.builtin").find_files() end},
-      {"<leader>fg", function() require("telescope.builtin").live_grep() end},
-      {"<leader><leader>", function() require("telescope.builtin").buffers() end},
-      {"<leader>fh", function() require("telescope.builtin").help_tags() end},
-      {"<leader>fd", function() require("telescope.builtin").diagnostics() end},
-      {"<leader>fo", function() require("telescope.builtin").oldfiles() end},
+      { "<leader>ff",       function() require("telescope.builtin").find_files() end },
+      { "<leader>fg",       function() require("telescope.builtin").live_grep() end },
+      { "<leader><leader>", function() require("telescope.builtin").buffers() end },
+      { "<leader>fh",       function() require("telescope.builtin").help_tags() end },
+      { "<leader>fd",       function() require("telescope.builtin").diagnostics() end },
+      { "<leader>fo",       function() require("telescope.builtin").oldfiles() end },
     },
     cmd = { "Telescope" },
     dependencies = {
