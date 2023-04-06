@@ -7,7 +7,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 cd
 
 git clone https://www.github.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
-cd "$HOME"/.dotfiles
+cd "$HOME"/.dotfiles || exit
 
 # install packages
 sudo apt install -y $(cat packages)
