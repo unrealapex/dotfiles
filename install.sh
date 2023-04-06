@@ -12,11 +12,27 @@ cd "$HOME"/.dotfiles || exit
 # install packages
 sudo apt install -y "$(cat packages)"
 
-mv --force ~/.bashrc ~/.bashrc.bak 2>/dev/null
-mv --force ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
-mv --force ~/.gitconfig ~/.gitconfig.bak 2>/dev/null
-mv --force ~/.vimrc ~/.vimrc.bak 2>/dev/null
-mf --force ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
+# TODO: display different message depending on whether a file or directory is
+# given
+backup() {
+  if [ -f $1 ]
+  then
+    mv --force $1 $1.bak 2>/dev/null
+  # handle directories
+  elif [ -d $1 ]
+  then
+    mv --force --resursive $1 $1.bak 2>/dev/null
+  else
+    echo "Unable to backup conflicting file/directory"
+  fi
+  echo "Conflicting file/directory found, moving it to $1.bak"
+}
+
+backup ~/.bashrc
+backup ~/.tmux.conf
+backup ~/.gitconfig
+backup ~/.vimrc
+backup ~/.config/nvim
 
 # setting up symlinks
 echo "Creating symlinks..."
