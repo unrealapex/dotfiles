@@ -64,7 +64,7 @@ brew install openjdk
 # don't install things specific to Linux GUI setup if running on WSL
 if [[ ! $(grep --no-messages Microsoft /proc/version) ]]; then
 
-  # set up jetbrains mono nerd font
+  # install jetbrains mono nerd font
   if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
     echo "Installing nerd font..."
     # make sure font directory exists
