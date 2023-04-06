@@ -52,16 +52,7 @@ grep --quiet --no-messages --fixed-strings 'eval "$(/home/linuxbrew/.linuxbrew/b
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install some packages from Homebrew
-brew install asciinema
-brew install cmatrix
-brew install gh
-brew install git-delta
-brew install glow
-brew install hyperfine
-brew install lua
-brew install neovim
-brew install node
-brew install openjdk
+brew install asciinema cmatrix gh git-delta glow hyperfine lua neovim node openjdk
 
 # don't install things specific to Linux GUI setup if running on WSL
 if [[ ! $(grep --no-messages Microsoft /proc/version) ]]; then
