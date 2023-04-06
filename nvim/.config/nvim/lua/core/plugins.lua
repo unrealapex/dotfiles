@@ -172,7 +172,6 @@ return {
       vim.keymap.del("x", "S")
     end
   },
-  -- TODO: integrate repeat with other plugins
   { "tpope/vim-repeat", event = "VeryLazy" },
   -- git commit browser
   {
