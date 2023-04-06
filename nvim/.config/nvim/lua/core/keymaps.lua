@@ -78,9 +78,9 @@ vim.keymap.set("n", "<leader>7", "7gt<CR>")
 vim.keymap.set("n", "<leader>8", "8gt<CR>")
 vim.keymap.set("n", "<leader>9", "9gt<CR>")
 -- open a tab
-vim.keymap.set("n", "<Leader>t", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>t", ":tabnew<CR>")
 -- close a tab
-vim.keymap.set("n", "<Leader>x", ":tabclose<CR>")
+vim.keymap.set("n", "<leader>x", ":tabclose<CR>")
 
 -- Resize splits with ctrl + arrows
 vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
