@@ -93,7 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias open="xdg-open"
-alias pls=sudo
+alias please="sudo !!"
 alias uwu='echo uwu'
 
 
