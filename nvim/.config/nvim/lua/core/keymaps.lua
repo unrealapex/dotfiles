@@ -77,6 +77,7 @@ vim.keymap.set("n", "<leader>6", "6gt<CR>")
 vim.keymap.set("n", "<leader>7", "7gt<CR>")
 vim.keymap.set("n", "<leader>8", "8gt<CR>")
 vim.keymap.set("n", "<leader>9", "9gt<CR>")
+
 -- open a tab
 vim.keymap.set("n", "<leader>t", ":tabnew<CR>")
 -- close a tab
