@@ -44,6 +44,8 @@ stow */
 # homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl --fail --silent --show-error --location https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# TODO: commit ~/.profile
+
 # add homebrew to path
 echo "Adding Homebrew to path..."
 grep --quiet --no-messages --fixed-strings 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' ~/.profile || (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile
