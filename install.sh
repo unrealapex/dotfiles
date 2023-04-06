@@ -12,11 +12,11 @@ cd "$HOME"/.dotfiles || exit
 # install packages
 sudo apt install -y "$(cat packages)"
 
-mv -f ~/.bashrc ~/.bashrc.bak 2>/dev/null
-mv -f ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
-mv -f ~/.gitconfig ~/.gitconfig.bak 2>/dev/null
-mv -f ~/.vimrc ~/.vimrc.bak 2>/dev/null
-mf -f ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
+mv --force ~/.bashrc ~/.bashrc.bak 2>/dev/null
+mv --force ~/.tmux.conf ~/.tmux.conf.bak 2>/dev/null
+mv --force ~/.gitconfig ~/.gitconfig.bak 2>/dev/null
+mv --force ~/.vimrc ~/.vimrc.bak 2>/dev/null
+mf --force ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
 
 # setting up symlinks
 echo "Creating symlinks..."
@@ -25,11 +25,11 @@ stow */
 # TODO: remove files already present
 
 # homebrew
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl --fail --silent --show-error --location https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # add homebrew to path
 echo "Adding Homebrew to path..."
-grep -qsF 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' ~/.profile || (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile
+grep --quiet --no-messages --fixed-strings 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' ~/.profile || (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install some packages from Homebrew
@@ -45,15 +45,15 @@ brew install node
 brew install openjdk
 
 # don't install things specific to Linux GUI setup if running on WSL
-if [[ ! $(grep -s Microsoft /proc/version) ]]; then
+if [[ ! $(grep --no-messages Microsoft /proc/version) ]]; then
 
   # set up jetbrains mono nerd font
   if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
     echo "Installing nerd font..."
     # make sure font directory exists
-    mkdir -p /usr/share/fonts/truetype/
+    mkdir --parents /usr/share/fonts/truetype/
     cd /usr/share/fonts/truetype
-    sudo curl -fLo "JetBrains Mono Nerd Font Complete Regular.ttf" \
+    sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.ttf" \
     https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
     fc-cache -fv
     echo "Nerd Font installed"
@@ -63,15 +63,15 @@ if [[ ! $(grep -s Microsoft /proc/version) ]]; then
   fi
   
   # spotify
-  curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+  curl --silent --show-error https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
   echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
   sudo apt install -y spotify-client
   
-  curl -Lo discord.deb https://discord.com/api/download?platform=linux
+  curl --location --output discord.deb https://discord.com/api/download?platform=linux
   sudo apt install -y ./discord.deb
   rm discord.deb
   
-  curl -LO https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
+  curl --location --remote-name https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
   sudo apt install -y ./steam.deb
   rm steam.deb
   
@@ -94,8 +94,8 @@ lynx \
     --listonly \
     --nonumbers  \
     --dump https://www.anaconda.com/products/distribution |
-    grep -m1 -F 'Linux-x86_64.sh' |
-    xargs wget -O anaconda-installer.sh
+    grep -m1 --fixed-strings 'Linux-x86_64.sh' |
+    xargs wget --output-document anaconda-installer.sh
 # execute like this to prevent errors since script is interactive
 chmod +x anaconda-installer.sh
 ./anaconda-installer.sh
