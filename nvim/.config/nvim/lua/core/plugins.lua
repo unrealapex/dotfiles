@@ -274,7 +274,7 @@ return {
     },
     keys = {
       { "gh",         "<cmd>Lspsaga lsp_finder<CR>" },
-      { "<leader>ca", mode = { "n", "v" },                                                                                 "<cmd>Lspsaga code_action<CR>" },
+      { "<leader>ca", mode = { "n", "v" }, "<cmd>Lspsaga code_action<CR>" },
       { "<leader>rn", "<cmd>Lspsaga rename<CR>" },
       { "<leader>Rn", "<cmd>Lspsaga rename ++project<CR>" },
       { "gd",         "<cmd>Lspsaga goto_definition<CR>" },
