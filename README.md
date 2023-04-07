@@ -36,5 +36,5 @@ My dotfiles are managed using Git and GNU Stow. I use Git to manage version hist
 My dotfiles can be installed with this one liner:
 
 ```sh
-source <(curl -s https://raw.githubusercontent.com/UnrealApex/dotfiles/master/install.sh)
+source <(curl -s https://gitlab.com/UnrealApex/dotfiles/-/raw/master/install.sh)
 ```
