@@ -12,20 +12,20 @@ cd "$HOME"/.dotfiles || exit
 # install packages
 sudo apt install -y "$(cat packages)"
 
-# TODO: display different message depending on whether a file or directory is
-# given
 backup() {
   if [ -f $1 ]
   then
+    echo "Conflicting file found, moving it to $1.bak"
     mv --force $1 $1.bak 2>/dev/null
+
   # handle directories
   elif [ -d $1 ]
   then
     mv --force --resursive $1 $1.bak 2>/dev/null
+    echo "Conflicting directory found, moving it to $1.bak"
   else
     echo "Unable to backup conflicting file/directory"
   fi
-  echo "Conflicting file/directory found, moving it to $1.bak"
 }
 
 backup ~/.bashrc
