@@ -6,8 +6,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 cd
 
-# TODO: change this to GitLab repo?
-git clone https://www.github.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
+git clone https://www.gitlab.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
 cd "$HOME"/.dotfiles || exit
 
 # install packages
