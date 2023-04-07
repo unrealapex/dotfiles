@@ -24,7 +24,7 @@ backup() {
     mv --force --resursive $1 $1.bak 2>/dev/null
     echo "Conflicting directory found, moving it to $1.bak"
   else
-    echo "Unable to backup conflicting file/directory"
+    echo "Unable to backup conflicting file/directory $1"
   fi
 }
 
