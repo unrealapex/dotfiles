@@ -1,5 +1,6 @@
 bat
 build-essential
+cbonsai
 ffmpeg
 file
 fzf
