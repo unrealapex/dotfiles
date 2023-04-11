@@ -12,7 +12,7 @@ configs.setup {
     "gitcommit",
     "gitignore",
     "git_rebase",
-    "help",
+    "vimdoc",
     "html",
     "java",
     "javascript",
