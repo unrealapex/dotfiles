@@ -49,9 +49,9 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 # use alt+space to start rofi
-bindsym Mod1+space exec "rofi -modi drun,run -show drun"
+bindsym Mod1+space exec --no-startup-id "rofi -modi drun,run -show drun"
 # alt+tab
-bindsym Mod1+tab exec "rofi -show window"
+bindsym Mod1+tab exec --no-startup-id "rofi -show window"
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
