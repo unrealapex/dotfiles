@@ -7,7 +7,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 cd
 
 sudo apt install -y git && git clone https://www.gitlab.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
-cd "$HOME"/.dotfiles || exit
+cd "$HOME"/.dotfiles || echo "Unable to enter dotfiles directory, please check what is wrong"; exit
 
 # install packages
 sudo apt install -y "$(cat packages)"
