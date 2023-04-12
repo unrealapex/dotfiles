@@ -1,6 +1,8 @@
 bat
 build-essential
 cbonsai
+default-jdk
+default-jre
 feh
 ffmpeg
 file
