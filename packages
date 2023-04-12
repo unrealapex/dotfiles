@@ -18,6 +18,7 @@ procps
 ripgrep
 rofi
 shellcheck
+software-properties-common
 stow
 tmux
 wget
