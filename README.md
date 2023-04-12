@@ -13,7 +13,7 @@ feh            > image viewer, wallpaper setting
 ffmpeg         > video manipulation
 fzf            > fuzzy finder 
 gh             > github cli
-gamemode       > disable cpu governers 
+gamemode       > optimize gaming performance
 glow           > markdown parser
 htop           > process viewer
 hyperfine      > performance testing
