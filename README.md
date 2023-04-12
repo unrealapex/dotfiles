@@ -1,3 +1,5 @@
+### This repository is now on GitLab: https://gitlab.com/UnrealApex/dotfiles
+
 # dotfiles
 
 <!-- todo: insert image of rice here -->
