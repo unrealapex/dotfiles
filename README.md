@@ -2,24 +2,38 @@
 
 <!-- todo: insert image of rice here -->
 ```
+anaconda       > python distribution
 asciinema      > terminal recording
 bat            > a cat(1) clone with wings
+default-jdk    > java development kit
+default-jre    > java runtime environment
 delta          > better git syntax highlighting
+discord        > instant messaging 
+feh            > image viewer, wallpaper setting
+ffmpeg         > video manipulation
 fzf            > fuzzy finder 
 gh             > github cli
+gamemode       > disable cpu governers 
 glow           > markdown parser
 htop           > process viewer
 hyperfine      > performance testing
+i3             > window manager
+imagemagick    > image related operations
 lua            > lua language
 lynx           > text based browser
 neofetch       > show system information
 neovim         > text editor
 node           > nodejs
-openjdk        > java language
+notify-send    > send desktop notifications
+obs-studio     > screencast recorder
 ripgrep        > better grep
+rofi           > application launcher
 shellcheck     > shell script linter
+spotify        > music player
+steam          > games library
 stow           > symlink farm manager
 tmux           > terminal multiplexer
+wget           > get resources from the internet
 ```
 
 ### ✨ About ✨
@@ -30,7 +44,7 @@ That being said, suggestions are definitely open! This config will only work on 
 
 
 ### 👨‍💻 Usage
-My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. Most of my packages are installed using Apt, but for certain ones that are not up to date in Ubuntu and Debian repositories or more tedious to install, I use Homebrew. This GitHub repository has multiple branches, each for a separate *Nix system. Each branches README has the appropriate one liner to install that branch's config. This branch is for Linux(Debian) and Windows Subsystem for Linux.
+My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. Most of my packages are installed using Apt, but for certain ones that are not up to date in Ubuntu and Debian repositories or more tedious to install, I use Homebrew. This GitHub repository has multiple branches, each for a separate *Nix system. Each branches README has the appropriate one liner to install that branch's config. This branch is for Debian.
 
 ### 💿 Install
 My dotfiles can be installed with this one liner:
