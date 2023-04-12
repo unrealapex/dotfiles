@@ -51,39 +51,46 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # install some packages from Homebrew
 brew install asciinema cmatrix gh git-delta glow hyperfine lua neovim node openjdk
 
-echo "Installing nerd font..."
-# make sure font directory exists
-mkdir --parents /usr/share/fonts/truetype/
-cd /usr/share/fonts/truetype
-sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.ttf" \
-https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
-fc-cache -fv
-echo "Nerd Font installed"
-cd
-else
-  echo "Nerd Font already installed, skipping..."
+# don't install things specific to Linux GUI setup if running on WSL
+if [[ ! $(grep --no-messages Microsoft /proc/version) ]]; then
 
-# spotify
-curl --silent --show-error https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt install -y spotify-client
-
-curl --location --output discord.deb https://discord.com/api/download?platform=linux
-sudo apt install -y ./discord.deb
-rm discord.deb
-
-curl --location --remote-name https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
-sudo apt install -y ./steam.deb
-rm steam.deb
-
-sudo apt install -y obs-studio
-
-# game mode
-sudo apt install -y meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev libinih-dev
-git clone https://github.com/FeralInteractive/gamemode.git
-cd gamemode
-git checkout 1.7 # omit to build the master branch
-./bootstrap.sh
+  # install jetbrains mono nerd font
+  if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
+    echo "Installing nerd font..."
+    # make sure font directory exists
+    mkdir --parents /usr/share/fonts/truetype/
+    cd /usr/share/fonts/truetype
+    sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.ttf" \
+    https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
+    fc-cache -fv
+    echo "Nerd Font installed"
+    cd
+    else
+      echo "Nerd Font already installed, skipping..."
+  fi
+  
+  # spotify
+  curl --silent --show-error https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+  echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+  sudo apt install -y spotify-client
+  
+  curl --location --output discord.deb https://discord.com/api/download?platform=linux
+  sudo apt install -y ./discord.deb
+  rm discord.deb
+  
+  curl --location --remote-name https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
+  sudo apt install -y ./steam.deb
+  rm steam.deb
+  
+  sudo apt install -y obs-studio
+  
+  # game mode
+  sudo apt install -y meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev libinih-dev
+  git clone https://github.com/FeralInteractive/gamemode.git
+  cd gamemode
+  git checkout 1.7 # omit to build the master branch
+  ./bootstrap.sh
+fi
 
 # anaconda
 echo "Installing Anaconda..."
