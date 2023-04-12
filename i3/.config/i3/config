@@ -183,5 +183,8 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+# start polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # set desktop wallpaper
 exec --no-startup-id feh --bg-scale ~/.dotfiles/sakura.jpg
