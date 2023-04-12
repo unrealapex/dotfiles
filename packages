@@ -12,6 +12,7 @@ neofetch
 notify-send
 procps
 ripgrep
+rofi
 shellcheck
 stow
 tmux
