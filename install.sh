@@ -33,6 +33,7 @@ backup ~/.tmux.conf
 backup ~/.gitconfig
 backup ~/.vimrc
 backup ~/.config/nvim
+backup ~/.config/i3
 
 # setting up symlinks
 echo "Creating symlinks..."
