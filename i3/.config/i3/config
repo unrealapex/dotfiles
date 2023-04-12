@@ -183,3 +183,5 @@ bar {
         status_command i3status
 }
 
+# set desktop wallpaper
+exec --no-startup-id feh --bg-scale ~/.dotfiles/sakura.jpg
