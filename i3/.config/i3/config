@@ -193,3 +193,8 @@ exec --no-startup-id "picom --daemon"
 
 # start flameshot
 exec --no-startup-id flameshot
+
+# TODO: configure i3lock
+# TODO: configure i3status
+# TODO: configure i3gaps
+# TODO: dunst
