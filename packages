@@ -8,6 +8,7 @@ default-jre
 feh
 ffmpeg
 file
+flameshot
 fzf
 git
 htop
