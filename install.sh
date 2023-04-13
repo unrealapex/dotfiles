@@ -9,6 +9,9 @@ cd
 sudo apt install -y git && git clone https://www.gitlab.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
 cd "$HOME"/.dotfiles || echo "Unable to enter dotfiles directory, please check what is wrong"; exit
 
+# 32 bit support
+sudo dpkg --add-architecture i386 && sudo apt update
+
 # install packages
 sudo apt install -y "$(cat packages)"
 
