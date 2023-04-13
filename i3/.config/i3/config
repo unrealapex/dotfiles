@@ -187,5 +187,9 @@ bindsym Print exec "flameshot gui"
 # set desktop wallpaper
 exec --no-startup-id feh --bg-scale ~/.dotfiles/sakura.jpg
 
+# TODO: copy picom config from  /etc/xdg/picom.conf to ~/.config/picom/picom.conf
+# start picom daemon
+exec --no-startup-id "picom --daemon"
+
 # start flameshot
 exec --no-startup-id flameshot
