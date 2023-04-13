@@ -183,7 +183,7 @@ bar {
 # screenshotting
 bindsym Print exec "flameshot gui"
 
-
+# startup stuff
 # set desktop wallpaper
 exec --no-startup-id feh --bg-scale ~/.dotfiles/sakura.jpg
 
