@@ -180,5 +180,12 @@ bar {
         status_command i3status
 }
 
+# screenshotting
+bindsym Print exec "flameshot gui"
+
+
 # set desktop wallpaper
 exec --no-startup-id feh --bg-scale ~/.dotfiles/sakura.jpg
+
+# start flameshot
+exec --no-startup-id flameshot
