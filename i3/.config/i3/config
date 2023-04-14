@@ -195,7 +195,6 @@ exec --no-startup-id flameshot
 
 # automatically lock computer ater then minutes of being idle
 exec --no-startup-id xautolock -corners -000 -time 10 -locker 'i3lock -i ~/.dotfiles/sakura.png' &
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # TODO: configure i3status
 # TODO: configure i3gaps
