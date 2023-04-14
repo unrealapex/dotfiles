@@ -184,7 +184,7 @@ bar {
 bindsym Print exec "flameshot gui"
 
 # lock screen
-bindsym Break exec "i3lock -euc 000000"
+bindsym Break exec "i3lock -c 000000"
 
 # startup stuff
 # set desktop wallpaper
