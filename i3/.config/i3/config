@@ -183,12 +183,18 @@ bar {
 # screenshotting
 bindsym Print exec "flameshot gui"
 
+# lock screen
+bindsym Break exec "i3lock -euc 000000"
+
 # startup stuff
 # set desktop wallpaper
 exec_always feh --bg-scale ~/.dotfiles/sakura.png
 
 # start flameshot
 exec --no-startup-id flameshot
+
+# automatically lock computer ater then minutes of being idle
+exec --no-startup-id xautolock -corners -000 -time 10 -locker 'i3lock -c 000000' &
 
 # TODO: configure i3lock
 # TODO: configure i3status
