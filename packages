@@ -30,3 +30,5 @@ stow
 tmux
 wget
 wine
+xautolock
+xss-lock
