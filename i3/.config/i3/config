@@ -184,6 +184,7 @@ bar {
 bindsym Print exec "flameshot gui"
 
 # lock screen
+# TODO: Verify that this works
 bindsym Break exec "i3lock -i ~/.dotfiles/sakura.png"
 
 # startup stuff
