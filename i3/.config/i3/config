@@ -194,7 +194,7 @@ exec_always feh --bg-scale ~/.dotfiles/sakura.png
 # start flameshot
 exec --no-startup-id flameshot
 
-# automatically lock computer ater ten minutes of being idle
+# automatically lock computer after ten minutes of being idle
 exec --no-startup-id xautolock -corners -000 -time 10 -locker 'i3lock -i ~/.dotfiles/sakura.png' &
 
 # TODO: configure i3status
