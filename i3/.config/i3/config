@@ -185,7 +185,7 @@ bindsym Print exec "flameshot gui"
 
 # startup stuff
 # set desktop wallpaper
-exec_always feh --bg-scale ~/.dotfiles/sakura.jpg
+exec_always feh --bg-scale ~/.dotfiles/sakura.png
 
 # start flameshot
 exec --no-startup-id flameshot
