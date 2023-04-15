@@ -31,4 +31,5 @@ tmux
 wget
 wine
 xautolock
+xclip
 xss-lock
