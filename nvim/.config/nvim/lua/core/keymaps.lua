@@ -64,8 +64,6 @@ vnoremap <C-r> <Esc>:%s/<c-r>=GetVisual()<cr>//g<left><left>
 -- buffer stuff
 -- create a new buffer
 vim.keymap.set("n", "<leader>n", ":enew<CR>")
--- delete a buffer
-vim.keymap.set("n", "<leader>q", ":bd<CR>")
 
 -- switch tabs quickly
 vim.keymap.set("n", "<leader>1", "1gt<CR>")
