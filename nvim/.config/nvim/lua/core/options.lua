@@ -8,6 +8,8 @@ vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 -- store all backup files in one directory
 vim.opt.backupdir = vim.fn.stdpath("state") .. "/backup"
+-- sync with system clipboard
+vim.opt.clipboard = "unnamedplus"
 -- enter the current millennium
 vim.opt.compatible = false
 vim.opt.completeopt = "menu,menuone,noselect"
