@@ -190,6 +190,7 @@ bindsym Print exec "flameshot gui"
 
 # lock screen
 bindsym Break exec ~/.config/i3/lock.sh
+bindsym Mod1+l exec ~/.config/i3/lock.sh
 
 # startup stuff
 # set desktop wallpaper
