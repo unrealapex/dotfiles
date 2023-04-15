@@ -4,5 +4,5 @@ desktop=/tmp/lockscreen.png
 import -window root $desktop
 # pixelate image
 convert -scale 10% -scale 1000% $desktop $desktop
-# set image as lockscreen
+# lock computer and set pixelated image as lockscreen
 i3lock -i $desktop
