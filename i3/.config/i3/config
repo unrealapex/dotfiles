@@ -54,7 +54,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # use alt+space to start rofi
 bindsym Mod1+space exec --no-startup-id "rofi -modi drun,run -show drun"
 # alt+tab
-bindsym Mod1+tab exec --no-startup-id "rofi -show window"
+bindsym Mod1+Tab workspace back_and_forth
+# meta+tab to show a list of windows
+bindsym Mod4+Tab exec --no-startup-id "rofi -show window"
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -187,7 +189,7 @@ bar {
 bindsym Print exec "flameshot gui"
 
 # lock screen
-bindsym Break exec "i3lock -i ~/.dotfiles/sakura.png"
+bindsym Break exec ~/.config/i3/lock.sh
 
 # startup stuff
 # set desktop wallpaper
@@ -196,9 +198,8 @@ exec_always feh --bg-scale ~/.dotfiles/sakura.png
 # start flameshot
 exec --no-startup-id flameshot
 
-# automatically lock computer ater then minutes of being idle
-exec --no-startup-id xautolock -corners -000 -time 10 -locker 'i3lock -i ~/.dotfiles/sakura.png' &
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# automatically lock computer after ten minutes of being idle
+exec --no-startup-id xautolock -time 1 -locker ~/.config/i3/lock.sh &
 
 # TODO: configure i3status
 # TODO: configure i3gaps
