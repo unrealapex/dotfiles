@@ -199,7 +199,7 @@ exec_always feh --bg-scale ~/.dotfiles/sakura.png
 exec --no-startup-id flameshot
 
 # automatically lock computer after ten minutes of being idle
-exec --no-startup-id xautolock -time 1 -locker ~/.config/i3/lock.sh &
+exec --no-startup-id xautolock -time 10 -locker ~/.config/i3/lock.sh &
 
 # TODO: configure i3status
 # TODO: configure i3gaps
