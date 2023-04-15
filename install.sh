@@ -83,8 +83,6 @@ curl --location --remote-name https://cdn.cloudflare.steamstatic.com/client/inst
 sudo apt install -y ./steam.deb
 rm steam.deb
 
-sudo apt install -y obs-studio
-
 # game mode
 sudo apt install -y meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev libinih-dev
 git clone https://github.com/FeralInteractive/gamemode.git
