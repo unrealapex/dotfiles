@@ -508,6 +508,7 @@ return {
   {
     "ellisonleao/glow.nvim",
     cond = vim.fn.executable("glow") == 1,
-    ft = "markdown"
+    ft = "markdown",
+    config = true
   }
 }
