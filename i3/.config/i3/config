@@ -197,7 +197,7 @@ bindsym Mod1+l exec ~/.config/i3/lock.sh
 exec_always feh --bg-scale ~/.dotfiles/sakura.png
 
 # start flameshot
-exec --no-startup-id flameshot
+exec --no-startup-id flameshot &
 
 # automatically lock computer after ten minutes of being idle
 exec --no-startup-id xautolock -time 10 -locker ~/.config/i3/lock.sh &
