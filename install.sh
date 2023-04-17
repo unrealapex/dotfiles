@@ -81,6 +81,7 @@ curl --location --output discord.deb https://discord.com/api/download?platform=l
 sudo apt install -y ./discord.deb
 rm discord.deb
 
+# TODO: add from Debian's non-free repository
 # steam
 curl --location --remote-name https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
 sudo apt install -y ./steam.deb
