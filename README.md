@@ -11,14 +11,19 @@ delta          > better git syntax highlighting
 discord        > instant messaging 
 feh            > image viewer, wallpaper setting
 ffmpeg         > video manipulation
+flameshot      > screenshot tool
 fzf            > fuzzy finder 
 gh             > github cli
 gamemode       > optimize gaming performance
+gimp           > image manipulation
 glow           > markdown parser
 htop           > process viewer
 hyperfine      > performance testing
 i3             > window manager
 imagemagick    > image related operations
+kdenlive       > video editor
+krita          > raster graphics editor
+libreoffice    > office software suite
 lua            > lua language
 lynx           > text based browser
 neofetch       > show system information
@@ -26,6 +31,7 @@ neovim         > text editor
 node           > nodejs
 notify-send    > send desktop notifications
 obs-studio     > screencast recorder
+picom          > compositor
 ripgrep        > better grep
 rofi           > application launcher
 shellcheck     > shell script linter
@@ -33,6 +39,7 @@ spotify        > music player
 steam          > games library
 stow           > symlink farm manager
 tmux           > terminal multiplexer
+wine           > windows compatibility layer
 wget           > get resources from the internet
 ```
 
