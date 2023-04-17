@@ -76,10 +76,12 @@ curl --silent --show-error https://download.spotify.com/debian/pubkey_7A3A762FAF
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt install -y spotify-client
 
+# discord
 curl --location --output discord.deb https://discord.com/api/download?platform=linux
 sudo apt install -y ./discord.deb
 rm discord.deb
 
+# steam
 curl --location --remote-name https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
 sudo apt install -y ./steam.deb
 rm steam.deb
@@ -121,5 +123,5 @@ echo "Created file ~/.gitconfig_local with commit information"
 
 printf "\n\nDotfiles installed!\n\n"
 
-# show system information once finished
+# show system information once finished installing
 neofetch
