@@ -13,7 +13,6 @@ feh            > image viewer, wallpaper setting
 ffmpeg         > video manipulation
 flameshot      > screenshot tool
 fzf            > fuzzy finder 
-gh             > github cli
 gamemode       > optimize gaming performance
 gimp           > image manipulation
 glow           > markdown parser
