@@ -13,12 +13,12 @@ feh            > image viewer, wallpaper setting
 ffmpeg         > video manipulation
 flameshot      > screenshot tool
 fzf            > fuzzy finder 
-gamemode       > optimize gaming performance
-gimp           > image manipulation
+gamemode       > gaming optimizations 
+gimp           > image manipulation software
 glow           > markdown parser
 htop           > process viewer
 hyperfine      > performance testing
-i3             > window manager
+i3             > tiling window manager
 imagemagick    > software suite for images
 kdenlive       > video editor
 krita          > raster graphics editor
