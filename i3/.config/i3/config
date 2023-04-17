@@ -196,6 +196,10 @@ bindsym Mod1+l exec ~/.config/i3/lock.sh
 # set desktop wallpaper
 exec_always feh --bg-scale ~/.dotfiles/sakura.png
 
+# TODO: copy picom config from  /etc/xdg/picom.conf to ~/.config/picom/picom.conf
+# start picom daemon
+exec --no-startup-id "picom --daemon"
+
 # start flameshot
 exec --no-startup-id flameshot &
 
