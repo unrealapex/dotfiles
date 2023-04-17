@@ -20,7 +20,7 @@ glow           > markdown parser
 htop           > process viewer
 hyperfine      > performance testing
 i3             > window manager
-imagemagick    > image related operations
+imagemagick    > software suite for images
 kdenlive       > video editor
 krita          > raster graphics editor
 libreoffice    > office software suite
