@@ -54,7 +54,7 @@ grep --quiet --no-messages --fixed-strings 'eval "$(/home/linuxbrew/.linuxbrew/b
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install some packages from Homebrew
-brew install gh git-delta glow hyperfine lua neovim node
+brew install git-delta glow hyperfine lua neovim node
 
 # install jetbrains mono nerd font
 if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
@@ -118,9 +118,6 @@ echo "[user]" > ~/.gitconfig_local
 eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.gitconfig_local with commit information"
-
-# authenticate to GitHub
-gh auth login --web
 
 printf "\n\nDotfiles installed!\n\n"
 
