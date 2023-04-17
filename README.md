@@ -44,7 +44,7 @@ That being said, suggestions are definitely open! This config will only work on 
 
 
 ### 👨‍💻 Usage
-My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink everything to the directories my dotfiles need to be in. Most of my packages are installed using Apt, but for certain ones that are not up to date in Ubuntu and Debian repositories or more tedious to install, I use Homebrew. This GitHub repository has multiple branches, each for a separate *Nix system. Each branches README has the appropriate one liner to install that branch's config. This branch is for Debian.
+My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink the folders in this repository to their locations on system. Most of my packages are installed using Apt, but I also use Homebrew for certain packages not availible in the Debian package repositories, are easier to install via Homebrew, or if I need the latest version of said package.
 
 ### 💿 Install
 My dotfiles can be installed with this one liner:
