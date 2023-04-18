@@ -9,6 +9,7 @@ cd
 sudo apt install -y git && git clone https://www.gitlab.com/UnrealApex/dotfiles.git "$HOME"/.dotfiles
 cd "$HOME"/.dotfiles || echo "Unable to enter dotfiles directory, please check what is wrong"; exit
 
+# NOTE: perhaps use the testing version instead of stable? 
 echo "deb http://deb.debian.org/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
 # debian backports
 echo "deb http://deb.debian.org/debian bullseye-backports main" >> /etc/apt/sources.list
