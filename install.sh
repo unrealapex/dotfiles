@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
