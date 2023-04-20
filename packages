@@ -5,7 +5,6 @@ cmatrix
 discord
 feh
 ffmpeg
-file
 flameshot
 fzf
 gimp
@@ -15,10 +14,10 @@ glow
 htop
 hyperfine
 imagemagick
-i3
+i3-wm
 kdenlive
 krita
-libreoffice
+libreoffice-fresh
 lua
 lynx
 neofetch
@@ -27,7 +26,6 @@ nodejs
 notify-send
 obs-studio
 picom
-procps
 ripgrep
 rofi
 shellcheck
@@ -35,7 +33,7 @@ spotify-launcher
 stow
 tmux
 wget
-wine
+wine-stable
 xautolock
 xclip
 xss-lock
