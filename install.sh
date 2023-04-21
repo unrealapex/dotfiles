@@ -7,7 +7,7 @@ pacman -Syu --noconfirm
 cd
 
 git clone https://www.gitlab.com/UnrealApex/dotfiles.git -b arch "$HOME"/.dotfiles
-cd "$HOME"/.dotfiles || echo "Unable to enter dotfiles directory, please check what is wrong"; exit
+cd "$HOME"/.dotfiles
 
 
 # install packages
