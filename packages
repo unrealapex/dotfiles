@@ -5,8 +5,10 @@ cmatrix
 discord
 feh
 ffmpeg
+firefox
 flameshot
 fzf
+gdm
 gimp
 git
 git-delta
@@ -16,6 +18,7 @@ hyperfine
 imagemagick
 i3-wm
 kdenlive
+kitty
 krita
 libreoffice-fresh
 lua
@@ -37,4 +40,5 @@ wget
 wine-stable
 xautolock
 xclip
+xorg
 xss-lock
