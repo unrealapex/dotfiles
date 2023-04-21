@@ -6,8 +6,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 cd
 
-sudo apt install -y git && git clone https://www.gitlab.com/UnrealApex/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles || echo "Unable to enter dotfiles directory, please check what is wrong"; exit 1
+git clone https://www.gitlab.com/UnrealApex/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
 
 # NOTE: perhaps use the testing version instead of stable? 
 sudo echo "deb http://deb.debian.org/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
