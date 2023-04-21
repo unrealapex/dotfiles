@@ -26,6 +26,7 @@ nodejs
 notify-send
 obs-studio
 picom
+procps
 ripgrep
 rofi
 shellcheck
