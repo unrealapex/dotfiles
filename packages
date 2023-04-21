@@ -37,7 +37,7 @@ spotify-launcher
 stow
 tmux
 wget
-wine-stable
+wine
 xautolock
 xclip
 xorg
