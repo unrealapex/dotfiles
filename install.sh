@@ -44,6 +44,7 @@ backup ~/.vimrc
 backup ~/.config/nvim
 backup ~/.config/i3
 backup ~/.config/picom
+backup ~/.config/flameshot
 
 # setting up symlinks
 echo "Creating symlinks..."
