@@ -7,14 +7,17 @@ default-jdk
 feh
 ffmpeg
 file
+firefox
 flameshot
 fzf
+gdm
 gimp
 git
 htop
 imagemagick
 i3
 kdenlive
+kitty
 krita
 libreoffice
 lynx
@@ -34,4 +37,5 @@ wget
 wine
 xautolock
 xclip
+xorg
 xss-lock
