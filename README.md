@@ -14,6 +14,7 @@ ffmpeg         > video manipulation
 flameshot      > screenshot tool
 fzf            > fuzzy finder 
 gamemode       > gaming optimizations 
+gdm            > display manager
 gimp           > image manipulation software
 glow           > markdown parser
 htop           > process viewer
@@ -37,6 +38,7 @@ shellcheck     > shell script linter
 spotify        > music player
 steam          > games library
 stow           > symlink farm manager
+tor            > spooky dark web things
 tmux           > terminal multiplexer
 wine           > windows compatibility layer
 wget           > get resources from the internet
