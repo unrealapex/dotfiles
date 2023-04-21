@@ -2,7 +2,7 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
-pacman -SsRyu --noconfirm
+pacman -Syu --noconfirm
 
 cd
 
