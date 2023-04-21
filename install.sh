@@ -2,7 +2,7 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
-pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm
 
 cd
 
@@ -11,7 +11,7 @@ cd "$HOME"/.dotfiles
 
 
 # install packages
-pacman -S --noconfirm "$(cat packages)"
+sudo pacman -S --noconfirm "$(cat packages)"
 
 backup() {
   if [ -f $1 ]
@@ -64,7 +64,7 @@ fi
 # rm steam.deb
 
 # game mode
-pacman -S --noconfirm meson systemd dbus libinih
+sudo pacman -S --noconfirm meson systemd dbus libinih
 git clone https://github.com/FeralInteractive/gamemode.git
 cd gamemode
 git checkout 1.7 # omit to build the master branch
