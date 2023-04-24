@@ -97,6 +97,11 @@ eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.gitconfig_local with commit information"
 
+# services
+# start lightdm on boot
+sudo systemctl enable lightdm.service
+
+
 printf "\n\nDotfiles installed!\n\n"
 
 # show system information once finished installing
