@@ -14,7 +14,6 @@ ffmpeg         > video manipulation
 flameshot      > screenshot tool
 fzf            > fuzzy finder 
 gamemode       > gaming optimizations 
-gdm            > display manager
 gimp           > image manipulation software
 glow           > markdown parser
 htop           > process viewer
@@ -24,6 +23,7 @@ imagemagick    > software suite for images
 kdenlive       > video editor
 krita          > raster graphics editor
 libreoffice    > office software suite
+lightdm        > display manager
 lua            > lua language
 lynx           > text based browser
 neofetch       > show system information
