@@ -8,7 +8,6 @@ ffmpeg
 firefox
 flameshot
 fzf
-gdm
 gimp
 git
 git-delta
@@ -21,6 +20,8 @@ kdenlive
 kitty
 krita
 libreoffice-fresh
+lightdm
+lightdm-gtk-greeter
 lua
 lynx
 neofetch
