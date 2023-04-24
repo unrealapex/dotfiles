@@ -55,13 +55,7 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
     echo "Nerd Font already installed, skipping..."
 fi
 
-# FIXME: Enable the multilib repository and install the steam package. 
-# TODO: add from Debian's non-free repository
-# steam
-# curl --location --remote-name https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
-# sudo apt install -y ./steam.deb
-# rm steam.deb
-
+# TODO: add multilib repository for steam
 # game mode
 sudo pacman -S --noconfirm meson systemd dbus libinih
 git clone https://github.com/FeralInteractive/gamemode.git
