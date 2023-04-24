@@ -56,12 +56,6 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
 fi
 
 # TODO: add multilib repository for steam
-# game mode
-sudo pacman -S --noconfirm meson systemd dbus libinih
-git clone https://github.com/FeralInteractive/gamemode.git
-cd gamemode
-git checkout 1.7 # omit to build the master branch
-./bootstrap.sh
 
 # anaconda
 echo "Installing Anaconda..."
