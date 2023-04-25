@@ -61,3 +61,4 @@ My dotfiles can be installed with this one liner:
 ```sh
 sudo pacman -S curl git && source <(curl -s https://gitlab.com/unrealapex/dotfiles/-/raw/arch/install.sh)
 ```
+**Make sure you do not run this as root.**
