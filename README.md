@@ -9,6 +9,7 @@ default-jdk    > java development kit
 default-jre    > java runtime environment
 delta          > better git syntax highlighting
 discord        > instant messaging 
+dunst          > notification daemon
 feh            > image viewer, wallpaper setting
 ffmpeg         > video manipulation
 flameshot      > screenshot tool
@@ -22,6 +23,7 @@ i3             > tiling window manager
 imagemagick    > software suite for images
 kdenlive       > video editor
 krita          > raster graphics editor
+libnotify    > send desktop notifications
 libreoffice    > office software suite
 lightdm        > display manager
 lua            > lua language
@@ -29,7 +31,6 @@ lynx           > text based browser
 neofetch       > show system information
 neovim         > text editor
 node           > nodejs
-notify-send    > send desktop notifications
 obs-studio     > screencast recorder
 picom          > compositor
 ripgrep        > better grep
