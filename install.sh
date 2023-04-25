@@ -37,6 +37,7 @@ backup ~/.config/i3
 backup ~/.config/picom
 backup ~/.config/kitty
 backup ~/.config/dunst
+backup ~/.config/flameshot
 
 # setting up symlinks
 echo "Creating symlinks..."
