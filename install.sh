@@ -10,7 +10,7 @@ git clone https://www.gitlab.com/unrealapex/dotfiles.git -b arch "$HOME"/.dotfil
 
 
 # install packages
-sudo pacman -S --noconfirm "$(cat packages)"
+sudo pacman -S --noconfirm --needed - < packages
 
 backup() {
   if [ -f $1 ]
