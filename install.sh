@@ -8,12 +8,6 @@ cd
 
 git clone https://www.gitlab.com/UnrealApex/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
 
-# FIXME: figure out why script crashes terminal emulator
-# NOTE: perhaps use the testing version instead of stable? 
-sudo echo "deb http://deb.debian.org/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
-# debian backports
-sudo echo "deb http://deb.debian.org/debian bullseye-backports main" >> /etc/apt/sources.list
-
 # enable Multi-Arch
 sudo dpkg --add-architecture i386
 sudo apt update
