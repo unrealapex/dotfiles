@@ -36,6 +36,7 @@ backup ~/.config/nvim
 backup ~/.config/i3
 backup ~/.config/picom
 backup ~/.config/kitty
+backup ~/.config/dunst
 
 # setting up symlinks
 echo "Creating symlinks..."
