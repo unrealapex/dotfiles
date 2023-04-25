@@ -6,7 +6,7 @@ sudo pacman -Syu --noconfirm
 
 cd
 
-git clone https://www.gitlab.com/unrealapex/dotfiles.git -b arch "$HOME"/.dotfiles && cd "$HOME"/.dotfiles
+git clone https://www.gitlab.com/unrealapex/dotfiles.git -b arch "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || exit 1
 
 
 # install packages
