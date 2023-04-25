@@ -2,6 +2,7 @@ asciinema
 bat
 cmatrix
 discord
+dunst
 feh
 ffmpeg
 firefox
@@ -18,6 +19,7 @@ i3
 kdenlive
 kitty
 krita
+libnotify
 libreoffice-fresh
 lightdm
 lightdm-gtk-greeter
@@ -26,7 +28,6 @@ lynx
 neofetch
 neovim
 nodejs
-notify-send
 obs-studio
 picom
 procps
