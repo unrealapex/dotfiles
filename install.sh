@@ -99,10 +99,10 @@ lynx \
     --nonumbers  \
     --dump https://www.anaconda.com/products/distribution |
     grep -m1 --fixed-strings 'Linux-x86_64.sh' |
-    xargs wget --output-document anaconda-installer.sh
+    xargs wget --output-document anaconda-installer.sh && \
 # execute like this to prevent errors since script is interactive
-chmod +x anaconda-installer.sh
-./anaconda-installer.sh
+chmod +x anaconda-installer.sh && \
+./anaconda-installer.sh && \
 rm anaconda-installer.sh
 
 # set up Git commit information
