@@ -87,12 +87,6 @@ vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
--- easier copying and pasteing into clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
-vim.keymap.set({ "n", "v" }, "<leader>d", '"+d')
-vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
-vim.keymap.set({ 'n', 'v' }, '<leader>P', '"+P')
-
 -- don't lose selection when shifting text
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
