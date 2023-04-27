@@ -93,7 +93,7 @@ alias la='exa -a'
 alias l='exa'
 
 alias open='xdg-open'
-alias please='sudo !!'
+alias pls='sudo !!'
 alias uwu='echo uwu'
 
 
