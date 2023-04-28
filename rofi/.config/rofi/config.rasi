@@ -1,0 +1,5 @@
+configuration {
+  show-icons: true;
+  display-drun: " ";
+}
+@theme "arthur"

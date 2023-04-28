@@ -2,7 +2,5 @@
 desktop=/tmp/lockscreen.png
 # take a screenshot of the desktop
 import -window root $desktop
-# pixelate image
-convert -scale 10% -scale 1000% $desktop $desktop
-# lock computer and set pixelated image as lockscreen
-i3lock -i $desktop
+# blur image and lock computer with blurred image as lockscreen background
+convert $desktop -blur 0x8 $desktop && i3lock -i $desktop || i3lock

@@ -200,6 +200,9 @@ exec_always feh --bg-scale ~/.dotfiles/sakura.png
 # start picom daemon
 exec --no-startup-id "picom --daemon"
 
+# start notifications daemon
+exec --no-startup-id "dunst &"
+
 # start flameshot
 exec --no-startup-id flameshot &
 
