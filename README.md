@@ -23,7 +23,7 @@ i3             > tiling window manager
 imagemagick    > software suite for images
 kdenlive       > video editor
 krita          > raster graphics editor
-libnotify    > send desktop notifications
+libnotify      > send desktop notifications
 libreoffice    > office software suite
 lightdm        > display manager
 lua            > lua language
