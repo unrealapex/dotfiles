@@ -2,18 +2,14 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+sudo pacman -Syu --noconfirm
 
 cd
 
-git clone https://www.gitlab.com/UnrealApex/dotfiles.git ~/.dotfiles && cd ~/.dotfiles
-
-# enable Multi-Arch
-sudo dpkg --add-architecture i386
-sudo apt update
+git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || exit 1
 
 # install packages
-sudo apt install -y "$(cat packages)"
+sudo pacman -S --noconfirm --needed - < packages
 
 backup() {
   if [ -f $1 ]
@@ -35,33 +31,22 @@ backup ~/.bashrc
 backup ~/.tmux.conf
 backup ~/.gitconfig
 backup ~/.vimrc
-backup ~/.config/nvim/
-backup ~/.config/i3/
-backup ~/.config/picom/
-backup ~/.config/flameshot/
+backup ~/.config/nvim
+backup ~/.config/i3
+backup ~/.config/picom
+backup ~/.config/kitty
+backup ~/.config/dunst
+backup ~/.config/flameshot
 
 # setting up symlinks
 echo "Creating symlinks..."
 stow */
 
-# homebrew
-NONINTERACTIVE=1 /bin/bash -c "$(curl --fail --silent --show-error --location https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# TODO: commit ~/.profile
-
-# add homebrew to path
-echo "Adding Homebrew to path..."
-grep --quiet --no-messages --fixed-strings 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' ~/.profile || (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# install some packages from Homebrew
-brew install git-delta glow hyperfine lua neovim node
-
 # install jetbrains mono nerd font
 if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
   echo "Installing nerd font..."
   # make sure font directory exists
-  mkdir --parents /usr/share/fonts/truetype/
+  sudo mkdir --parents /usr/share/fonts/truetype/
   cd /usr/share/fonts/truetype
   sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.ttf" \
   https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf
@@ -72,22 +57,7 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
     echo "Nerd Font already installed, skipping..."
 fi
 
-# spotify
-curl --silent --show-error https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt install -y spotify-client
-
-# discord
-curl --location --output discord.deb https://discord.com/api/download?platform=linux
-sudo apt install -y ./discord.deb
-rm discord.deb
-
-# game mode
-sudo apt install -y meson libsystemd-dev pkg-config ninja-build git libdbus-1-dev libinih-dev
-git clone https://github.com/FeralInteractive/gamemode.git
-cd gamemode
-git checkout 1.7 # omit to build the master branch
-./bootstrap.sh
+# TODO: add multilib repository for steam
 
 # anaconda
 echo "Installing Anaconda..."
@@ -116,6 +86,11 @@ echo "[user]" > ~/.gitconfig_local
 eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
 eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.gitconfig_local with commit information"
+
+# services
+# start lightdm on boot
+sudo systemctl enable lightdm.service
+
 
 printf "\n\nDotfiles installed!\n\n"
 
