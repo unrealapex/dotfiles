@@ -5,8 +5,6 @@
 anaconda       > python distribution
 asciinema      > terminal recording
 bat            > a cat(1) clone with wings
-default-jdk    > java development kit
-default-jre    > java runtime environment
 delta          > better git syntax highlighting
 discord        > instant messaging 
 dunst          > notification daemon
@@ -43,6 +41,7 @@ tor            > spooky dark web things
 tmux           > terminal multiplexer
 wine           > windows compatibility layer
 wget           > get resources from the internet
+xorg           > x window system
 ```
 
 ### ✨ About ✨
