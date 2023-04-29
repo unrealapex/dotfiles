@@ -4,6 +4,9 @@ configuration {
   show-icons: true;
   display-drun: " ";
 }
+entry {
+  placeholder: "Start typing...";
+}
 
 * {
   padding: 4;
