@@ -186,8 +186,8 @@ bar {
 }
 
 # gaps
-gaps inner 10
-gaps outer 5
+gaps inner 7
+gaps outer 2
 
 # screenshotting
 bindsym Print exec "flameshot gui"
