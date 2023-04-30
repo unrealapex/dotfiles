@@ -218,6 +218,5 @@ exec --no-startup-id flameshot &
 exec --no-startup-id xautolock -time 10 -locker ~/.config/i3/lock.sh &
 
 # TODO: configure i3status
-# TODO: configure i3gaps
 # TODO: dunst
 
