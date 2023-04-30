@@ -49,5 +49,5 @@ memory {
 }
 
 tztime local {
-        format = "%m/%d/%Y %H:%M:%S"
+        format = "%m/%d/%Y %I:%M:%S %p"
 }
