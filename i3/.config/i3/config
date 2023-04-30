@@ -185,6 +185,10 @@ bar {
         status_command i3status
 }
 
+# gaps
+gaps inner 10
+gaps outer 5
+
 # screenshotting
 bindsym Print exec "flameshot gui"
 
