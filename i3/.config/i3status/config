@@ -31,7 +31,7 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+        format = "BATTERY %percentage %remaining"
 }
 
 disk "/" {
@@ -39,11 +39,11 @@ disk "/" {
 }
 
 load {
-        format = "%1min"
+        format = "CPU %1min"
 }
 
 memory {
-        format = "%used | %available"
+        format = "RAM %used of %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
