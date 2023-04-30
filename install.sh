@@ -11,6 +11,14 @@ git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$H
 # install packages
 sudo pacman -S --noconfirm --needed - < packages
 
+# yay
+mkdir --parents ~/Downloads/git
+cd ~/Downloads/git
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+yes | makepkg -si
+
+
 backup() {
   if [ -f $1 ]
   then
