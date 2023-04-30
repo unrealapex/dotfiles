@@ -189,6 +189,10 @@ bar {
 gaps inner 7
 gaps outer 2
 
+# disable i3 titlebars
+default_border pixel
+default_floating_border pixel
+
 # screenshotting
 bindsym Print exec "flameshot gui"
 
@@ -216,3 +220,4 @@ exec --no-startup-id xautolock -time 10 -locker ~/.config/i3/lock.sh &
 # TODO: configure i3status
 # TODO: configure i3gaps
 # TODO: dunst
+
