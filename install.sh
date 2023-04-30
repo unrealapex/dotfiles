@@ -84,6 +84,8 @@ chmod +x anaconda-installer.sh && \
 ./anaconda-installer.sh && \
 rm anaconda-installer.sh
 
+conda config --set auto_activate_base false
+
 # set up Git commit information
 echo "Setting Git commit information..."
 echo -n "Enter the email address you want to use for commits: "
