@@ -48,7 +48,7 @@ tor            > spooky dark web things
 tmux           > terminal multiplexer
 wine           > windows compatibility layer
 wget           > get resources from the internet
-xorg           > x window system
+xorg           > x window system display server
 ```
 
 ### ✨ About ✨
