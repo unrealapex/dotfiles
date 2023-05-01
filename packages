@@ -31,6 +31,7 @@ lynx
 neofetch
 neovim
 nodejs
+noto-fonts-emoji
 npm
 ntp
 obs-studio
@@ -38,6 +39,7 @@ picom
 procps
 ripgrep
 rofi
+rofi-emoji
 shellcheck
 spotify-launcher
 stow
@@ -47,4 +49,5 @@ wget
 xautolock
 xclip
 xorg
+xdotool
 xss-lock

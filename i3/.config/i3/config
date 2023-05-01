@@ -188,6 +188,9 @@ bindsym Print exec "flameshot gui"
 bindsym Break exec ~/.config/i3/lock.sh
 bindsym Mod1+l exec ~/.config/i3/lock.sh
 
+# emoji picker
+bindsym $mod+period exec "rofi -modi emoji -show emoji"
+
 # startup stuff
 # set desktop wallpaper
 exec_always feh --bg-scale ~/.dotfiles/sakura.png
