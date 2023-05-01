@@ -14,6 +14,7 @@ gimp
 git
 git-delta
 glow
+gnu-free-fonts
 htop
 hyperfine
 imagemagick
@@ -31,6 +32,7 @@ lynx
 neofetch
 neovim
 nodejs
+noto-fonts
 noto-fonts-emoji
 npm
 ntp
