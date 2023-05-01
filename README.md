@@ -52,7 +52,7 @@ That being said, suggestions are definitely open! This config will only work on 
 
 
 ### 👨‍💻 Usage
-My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink the folders in this repository to their locations on system. Most of my packages are installed using Pacman.
+My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink the folders in this repository to their locations on system. My packages are installed using Pacman.
 
 ### 💿 Install
 My dotfiles can be installed with this one liner:
