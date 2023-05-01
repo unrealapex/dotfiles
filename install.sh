@@ -82,8 +82,7 @@ lynx \
 # execute like this to prevent errors since script is interactive
 chmod +x anaconda-installer.sh && \
 ./anaconda-installer.sh && \
-rm anaconda-installer.sh
-
+rm anaconda-installer.sh && \
 conda config --set auto_activate_base false
 
 # set up Git commit information
