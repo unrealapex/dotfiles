@@ -93,7 +93,7 @@ alias la='exa -a'
 alias l='exa'
 
 alias open='xdg-open'
-alias pls='sudo !!'
+alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 
 
