@@ -121,6 +121,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export EDITOR=/usr/bin/nvim
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/aaron/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
