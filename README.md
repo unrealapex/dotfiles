@@ -27,7 +27,6 @@ krita          > raster graphics editor
 lf             > file manager
 libnotify      > send desktop notifications
 libreoffice    > office software suite
-lightdm        > display manager
 lua            > lua language
 lynx           > text based browser
 neofetch       > fetch system information
