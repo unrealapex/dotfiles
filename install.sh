@@ -83,6 +83,11 @@ chmod +x anaconda-installer.sh && \
 rm anaconda-installer.sh && \
 conda config --set auto_activate_base false
 
+# install betterfox fastfox and smoothfox
+curl -o user.js https://raw.githubusercontent.com/yokoffing/Betterfox/master/Fastfox.js && \
+curl https://raw.githubusercontent.com/yokoffing/Betterfox/master/Smoothfox.js >> user.js  && \
+mv user.js ~/.mozilla/firefox/user.js
+
 # set up Git commit information
 echo "Setting Git commit information..."
 echo -n "Enter the email address you want to use for commits: "
