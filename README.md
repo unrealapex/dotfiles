@@ -6,7 +6,6 @@ anaconda       > python distribution
 asciinema      > terminal recording
 bash-completion> better completion
 bat            > a cat(1) clone with wings
-brave          > browser
 delta          > better git syntax highlighting
 discord        > instant messaging 
 dunst          > notification daemon
