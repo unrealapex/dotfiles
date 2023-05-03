@@ -18,8 +18,6 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 yes | makepkg -si
 
-yay -S --noconfirm brave-bin
-
 backup() {
   if [ -f $1 ]
   then
