@@ -121,8 +121,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR=/usr/bin/nvim
-export BROWSER=/usr/bin/brave
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
