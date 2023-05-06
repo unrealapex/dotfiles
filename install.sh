@@ -83,7 +83,7 @@ chmod +x anaconda-installer.sh && \
 rm anaconda-installer.sh && \
 conda config --set auto_activate_base false
 
-# install betterfox fastfox and smoothfox
+# install betterfox's fastfox and smoothfox user.js and merge it into one file
 curl -o user.js https://raw.githubusercontent.com/yokoffing/Betterfox/master/Fastfox.js && \
 curl https://raw.githubusercontent.com/yokoffing/Betterfox/master/Smoothfox.js >> user.js  && \
 # ensure profiles directory is created
