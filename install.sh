@@ -44,6 +44,8 @@ backup ~/.config/picom
 backup ~/.config/kitty
 backup ~/.config/dunst
 backup ~/.config/flameshot
+backup ~/.config/fontconfig/conf.d/01-emoji.conf
+
 
 # setting up symlinks
 echo "Creating symlinks..."
