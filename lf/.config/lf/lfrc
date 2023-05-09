@@ -1,1 +1,6 @@
+set shellopts '-eu'
+set ifs "\n"
 set icons
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set scrolloff 10
+set autoquit true
