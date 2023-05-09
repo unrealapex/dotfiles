@@ -45,6 +45,7 @@ backup ~/.config/kitty
 backup ~/.config/dunst
 backup ~/.config/flameshot
 backup ~/.config/fontconfig/conf.d/01-emoji.conf
+backup ~/.config/lf
 
 
 # setting up symlinks
