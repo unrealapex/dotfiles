@@ -2,6 +2,13 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
+# make sure script is not run as the root user
+if [[ "$(id -u)" -eq 0 ]] 
+then
+  printf "%s\n" "please do not run this script as root" >&2  
+  exit 1
+fi
+
 sudo pacman -Syu --noconfirm
 
 cd
