@@ -109,6 +109,7 @@ eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
 echo "Created file ~/.gitconfig_local with commit information"
 
 # services
+sudo systemctl enable mpd.service
 
 printf "\n\nDotfiles installed!\n\n"
 
