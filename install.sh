@@ -38,14 +38,14 @@ backup ~/.bashrc
 backup ~/.tmux.conf
 backup ~/.gitconfig
 backup ~/.vimrc
-backup ~/.config/nvim
-backup ~/.config/i3
-backup ~/.config/picom
-backup ~/.config/kitty
-backup ~/.config/dunst
-backup ~/.config/flameshot
+backup ~/.config/nvim/
+backup ~/.config/i3/
+backup ~/.config/picom/
+backup ~/.config/kitty/
+backup ~/.config/dunst/
+backup ~/.config/flameshot/
 backup ~/.config/fontconfig/conf.d/01-emoji.conf
-backup ~/.config/lf
+backup ~/.config/lf/
 
 
 # setting up symlinks
