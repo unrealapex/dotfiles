@@ -13,7 +13,7 @@ sudo pacman -Syu --noconfirm
 
 cd
 
-git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || exit 1
+git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || echo "could not clone dotfiles repository" && exit 1
 
 # install packages
 sudo pacman -S --noconfirm --needed - < packages
