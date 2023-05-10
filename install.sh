@@ -2,11 +2,18 @@
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
+# make sure script is not run as the root user
+if [[ "$(id -u)" -eq 0 ]] 
+then
+  printf "%s\n" "please do not run this script as root" >&2  
+  exit 1
+fi
+
 sudo pacman -Syu --noconfirm
 
 cd
 
-git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || exit 1
+git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || echo "could not clone dotfiles repository" && exit 1
 
 # install packages
 sudo pacman -S --noconfirm --needed - < packages
