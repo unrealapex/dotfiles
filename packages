@@ -4,7 +4,6 @@ bat
 cmatrix
 exa
 discord
-dmenu
 dunst
 feh
 ffmpeg
@@ -44,6 +43,8 @@ obs-studio
 picom
 procps
 ripgrep
+rofi
+rofi-emoji
 shellcheck
 spotify-launcher
 stow

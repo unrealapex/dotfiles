@@ -37,6 +37,7 @@ obs-studio     > screencast recorder
 picom          > compositor
 qalculate      > calculator
 ripgrep        > better grep
+rofi           > application launcher, emoji picker
 shellcheck     > shell script linter
 spotify        > music player
 steam          > games library
