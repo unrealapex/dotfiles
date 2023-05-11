@@ -56,7 +56,7 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 # alt+tab
 bindsym Mod1+Tab workspace back_and_forth
 # meta+tab to show a list of windows
-bindsym Mod4+Tab exec --no-startup-id "rofi -show window"
+bindsym $mod+Tab exec --no-startup-id "rofi -show window"
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
