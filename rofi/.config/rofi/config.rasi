@@ -9,5 +9,5 @@ entry {
 }
 
 * {
-  padding: 4;
+  padding: 3;
 }
