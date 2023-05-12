@@ -50,14 +50,7 @@ xorg           > x window system display server
 ```
 
 ### ✨ About ✨
-Like most dotfiles, the files in this repository include the configurations that make my system fit my needs.
-
-You're free to clone my config but it is generally [frowned upon](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/#dotfiles-are-not-meant-to-be-forked) because dotfiles tend be something really personal. Rather, if you are interested in using my config, I suggest copying whatever you like and putting it in your own config.
-That being said, suggestions are definitely open! This config will only work on Arch based distributions.
-
-
-### 👨‍💻 Usage
-My dotfiles are managed using Git and GNU Stow. I use Git to manage version history and Stow to symlink the folders in this repository to their locations on system. My packages are installed using Pacman.
+My dotfiles for Arch Linux, managed using Git and GNU Stow.
 
 ### 💿 Install
 My dotfiles can be installed with this one liner:
