@@ -15,6 +15,11 @@ cd
 
 git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || echo "could not clone dotfiles repository" && exit 1
 
+# enable multilib
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+
+sudo pacman -Syu --noconfirm
+
 # install packages
 sudo pacman -S --noconfirm --needed - < packages
 
