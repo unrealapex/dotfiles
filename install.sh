@@ -80,8 +80,6 @@ if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.t
     echo "Nerd Font already installed, skipping..."
 fi
 
-# TODO: add multilib repository for steam
-
 # anaconda
 echo "Installing Anaconda..."
 echo "You will need to accept its licence agreement to install it"
