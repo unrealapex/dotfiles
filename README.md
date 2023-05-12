@@ -2,7 +2,7 @@
 
 <!-- todo: insert image of rice here -->
 ```
-anaconda       > python distribution
+anaconda       > python
 asciinema      > terminal recording
 bash-completion> better completion
 bat            > a cat(1) clone with wings
@@ -10,7 +10,7 @@ delta          > better git syntax highlighting
 discord        > instant messaging 
 dunst          > notification daemon
 exa            > a modern replacement for ls
-feh            > image viewer, wallpaper setting
+feh            > image viewer, wallpaper setter
 firefox        > browser
 ffmpeg         > video manipulation
 flameshot      > screenshot tool
@@ -20,7 +20,7 @@ gimp           > image manipulation software
 glow           > markdown parser
 htop           > process viewer
 hyperfine      > performance testing
-i3             > tiling window manager
+i3             > (tiling) window manager
 imagemagick    > software suite for images
 kdenlive       > video editor
 krita          > raster graphics editor
