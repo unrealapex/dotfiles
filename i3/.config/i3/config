@@ -198,7 +198,6 @@ bindsym $mod+period exec "rofi -modi emoji -show emoji"
 # set desktop wallpaper
 exec_always feh --bg-scale ~/.dotfiles/sakura.png
 
-# TODO: copy picom config from  /etc/xdg/picom.conf to ~/.config/picom/picom.conf
 # start picom daemon
 exec --no-startup-id "picom --daemon"
 
