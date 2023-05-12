@@ -15,20 +15,21 @@ cd
 
 git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles && cd "$HOME"/.dotfiles || echo "could not clone dotfiles repository" && exit 1
 
-# enable multilib
-sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-
-sudo pacman -Syu --noconfirm
-
-# install packages
-sudo pacman -S --noconfirm --needed - < packages
-
 # yay
 mkdir --parents ~/Downloads/git
 cd ~/Downloads/git
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 yes | makepkg -si
+
+# enable multilib
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+
+sudo pacman -Syu --noconfirm
+
+# install packages
+yay -S --noconfirm --needed - < packages
+
 
 backup() {
   if [ -f $1 ]
