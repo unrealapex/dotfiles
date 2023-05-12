@@ -47,10 +47,6 @@ backup() {
   fi
 }
 
-backup ~/.bashrc
-backup ~/.tmux.conf
-backup ~/.gitconfig
-backup ~/.vimrc
 backup ~/.config/nvim/
 backup ~/.config/i3/
 backup ~/.config/picom/
@@ -59,7 +55,10 @@ backup ~/.config/dunst/
 backup ~/.config/flameshot/
 backup ~/.config/fontconfig/conf.d/01-emoji.conf
 backup ~/.config/lf/
-
+backup ~/.bashrc
+backup ~/.tmux.conf
+backup ~/.gitconfig
+backup ~/.vimrc
 
 # setting up symlinks
 echo "Creating symlinks..."
