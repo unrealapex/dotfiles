@@ -48,7 +48,7 @@ backup() {
 }
 
 backup ~/.config/nvim/
-backup ~/.config/i3/
+backup ~/.config/bspwm/
 backup ~/.config/picom/
 backup ~/.config/kitty/
 backup ~/.config/dunst/
