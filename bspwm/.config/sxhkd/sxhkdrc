@@ -121,3 +121,6 @@ super + {Left,Down,Up,Right}
 
 Print
 	flameshot gui
+
+super + @period
+	rofi -modi emoji -show emoji
