@@ -55,6 +55,7 @@ backup ~/.config/dunst/
 backup ~/.config/flameshot/
 backup ~/.config/fontconfig/conf.d/01-emoji.conf
 backup ~/.config/lf/
+backup ~/.config/polybar/
 backup ~/.bashrc
 backup ~/.tmux.conf
 backup ~/.gitconfig
