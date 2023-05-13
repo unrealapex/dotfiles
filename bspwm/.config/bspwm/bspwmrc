@@ -19,4 +19,6 @@ bspc rule -a Screenkey manage=off
 
 feh --bg-scale ~/.dotfiles/sakura.png
 
+picom --daemon
+
 polybar &
