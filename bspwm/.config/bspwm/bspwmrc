@@ -23,6 +23,8 @@ bspc rule -a Spotify desktop='^10'
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "betterlockscreen --lock" &
 
+nm-applet &
+
 feh --bg-scale ~/.dotfiles/sakura.png
 
 picom --daemon
