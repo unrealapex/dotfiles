@@ -56,6 +56,7 @@ backup ~/.config/flameshot/
 backup ~/.config/fontconfig/conf.d/01-emoji.conf
 backup ~/.config/lf/
 backup ~/.config/polybar/
+backup ~/.config/betterlockscreen/
 backup ~/.bashrc
 backup ~/.tmux.conf
 backup ~/.gitconfig
@@ -106,6 +107,10 @@ firefox -headless &
 wait 
 # move user.js to default firefox profile
 mv user.js "$(find ~/.mozilla/firefox/ -type d -name "*.default-release")"
+
+
+# cache lockscreen image
+betterlockscreen --update ~/.dotfiles/sakura.png
 
 # set up Git commit information
 echo "Setting Git commit information..."
