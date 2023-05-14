@@ -124,3 +124,6 @@ Print
 
 super + @period
 	rofi -modi emoji -show emoji
+
+super + shift + x
+	betterlockscreen --lock
