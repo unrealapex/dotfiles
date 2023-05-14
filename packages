@@ -1,6 +1,8 @@
 asciinema
 bash-completion
 bat
+betterlockscreen-git
+bspwm
 cmatrix
 exa
 discord
@@ -18,7 +20,6 @@ gnu-free-fonts
 htop
 hyperfine
 imagemagick
-i3
 jdk-openjdk
 kdenlive
 kitty
@@ -34,6 +35,7 @@ mpd
 mpv
 neofetch
 neovim
+network-manager-applet
 nodejs
 noto-fonts
 noto-fonts-emoji
@@ -41,6 +43,7 @@ npm
 ntp
 obs-studio
 picom
+polybar
 procps
 ripgrep
 rofi
@@ -48,6 +51,7 @@ rofi-emoji
 shellcheck
 spotify-launcher
 steam
+sxhkd
 stow
 tor
 tmux
