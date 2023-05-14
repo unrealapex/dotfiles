@@ -6,6 +6,8 @@ anaconda       > python
 asciinema      > terminal recording
 bash-completion> better completion
 bat            > a cat(1) clone with wings
+betterlockscreen> lockscreen
+bspwm          > (tiling) window manager
 delta          > better git syntax highlighting
 discord        > instant messaging 
 dunst          > notification daemon
@@ -20,7 +22,6 @@ gimp           > image manipulation software
 glow           > markdown parser
 htop           > process viewer
 hyperfine      > performance testing
-i3             > (tiling) window manager
 imagemagick    > software suite for images
 kdenlive       > video editor
 krita          > raster graphics editor
@@ -35,6 +36,7 @@ node           > nodejs
 npt            > time syncrhonization
 obs-studio     > screencast recorder
 picom          > compositor
+polybar        > bar
 qalculate      > calculator
 ripgrep        > better grep
 rofi           > application launcher, emoji picker
@@ -42,6 +44,7 @@ shellcheck     > shell script linter
 spotify        > music player
 steam          > games library
 stow           > symlink farm manager
+sxhkd          > hotkey setting
 tor            > spooky dark web things
 tmux           > terminal multiplexer
 wine           > windows compatibility layer
