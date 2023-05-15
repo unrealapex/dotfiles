@@ -7,6 +7,18 @@ entry {
   placeholder: "Search...";
 }
 
+#window {
+  padding: 6.4px;
+}
+
+#window, element {
+ border-radius: 10px;
+}
+
+element {
+  padding: 6.4px;
+}
+
 /*
 vim: ft=css
 */
