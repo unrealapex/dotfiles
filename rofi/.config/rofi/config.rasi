@@ -12,3 +12,5 @@ entry {
 * {
   padding: 3;
 }
+
+/* vim: ft=css
