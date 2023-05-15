@@ -1,5 +1,3 @@
-@theme "arthur"
-
 configuration {
   show-icons: true;
   display-drun: " ";
