@@ -119,10 +119,16 @@ read commitemail
 echo -n "Enter the name you want to use for commits: "
 read commitname
 
-echo "[user]" > ~/.gitconfig_local
-eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
-eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
-echo "Created file ~/.gitconfig_local with commit information"
+
+if [ ! -z commitemail] && [ ! -z commitname]
+then
+  echo "[user]" > ~/.gitconfig_local
+  eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
+  eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
+  echo "Created file ~/.gitconfig_local with commit information"
+else
+  echo "Git commit credentials not provided, skipped"
+fi
 
 # services
 sudo systemctl enable mpd.service
