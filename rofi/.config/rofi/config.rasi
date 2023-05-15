@@ -7,4 +7,6 @@ entry {
   placeholder: "Search...";
 }
 
-/* vim: ft=css
+/*
+vim: ft=css
+*/
