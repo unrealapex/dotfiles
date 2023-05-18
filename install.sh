@@ -31,6 +31,7 @@ sudo pacman -Syu --noconfirm
 yay -S --noconfirm --needed - < packages
 
 
+# TODO: check if the recursive flag is needed(fix the typo if it is)
 backup() {
   if [ -f $1 ]
   then
