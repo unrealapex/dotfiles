@@ -31,7 +31,6 @@ sudo pacman -Syu --noconfirm
 yay -S --noconfirm --needed - < packages
 
 
-# TODO: check if the recursive flag is needed(fix the typo if it is)
 backup() {
   if [ -f $1 ]
   then
@@ -41,7 +40,7 @@ backup() {
   # handle directories
   elif [ -d $1 ]
   then
-    mv --force --resursive $1 $1.bak 2>/dev/null
+    mv --force --recursive $1 $1.bak 2>/dev/null
     echo "Conflicting directory found, moving it to $1.bak"
   else
     :
