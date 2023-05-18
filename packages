@@ -63,6 +63,7 @@ wget
 xautolock
 xclip
 xdg-user-dirs
+xdg-utils
 xdotool
 xorg
 xorg-xinit
