@@ -25,6 +25,8 @@ kdenlive
 kitty
 krita
 lf
+lib32-mesa
+lib32-vulkan-icd-loader
 libnotify
 libqalculate
 libreoffice-fresh
@@ -59,6 +61,7 @@ tmux
 tor
 tree
 ttf-ms-win11-auto
+vulkan-icd-loader
 wget
 xautolock
 xclip
