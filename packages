@@ -5,6 +5,7 @@ betterlockscreen-git
 bspwm
 cmatrix
 discord
+dkms
 dunst
 exa
 feh
@@ -30,6 +31,7 @@ lib32-vulkan-icd-loader
 libnotify
 libqalculate
 libreoffice-fresh
+linux-headers
 lua
 lynx
 mesa
