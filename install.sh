@@ -66,6 +66,9 @@ backup ~/.vimrc
 echo "Creating symlinks..."
 stow */
 
+# create default user directories
+xdg-user-dirs-update
+
 # install jetbrains mono nerd font
 if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
   echo "Installing nerd font..."
