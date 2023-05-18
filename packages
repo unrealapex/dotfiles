@@ -62,6 +62,7 @@ ttf-ms-win11-auto
 wget
 xautolock
 xclip
+xf86-input-libinput
 xdg-user-dirs
 xdg-utils
 xdotool
