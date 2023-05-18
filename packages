@@ -18,6 +18,12 @@ git
 git-delta
 glow
 gnu-free-fonts
+gstreamer-vaapi
+gst-libav
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
 htop
 hyperfine
 imagemagick
