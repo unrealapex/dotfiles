@@ -61,6 +61,7 @@ ttf-ms-win11-auto
 wget
 xautolock
 xclip
+xdg-user-dirs
 xdotool
 xorg
 xorg-xinit
