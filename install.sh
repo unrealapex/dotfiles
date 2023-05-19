@@ -64,6 +64,10 @@ stow */
 # create default user directories
 xdg-user-dirs-update
 
+# install neovim plugins
+# TODO: check if Mason language servers get installed too
+nvim --headless "+Lazy! sync" +qa
+
 # install jetbrains mono nerd font
 if [ ! -f "/usr/share/fonts/truetype/JetBrains Mono Nerd Font Complete Regular.ttf" ]; then
   echo "Installing nerd font..."
