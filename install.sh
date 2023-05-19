@@ -31,36 +31,27 @@ sudo pacman -Syu --noconfirm
 yay -S --noconfirm --needed - < packages
 
 
-backup() {
-  if [ -f $1 ]
-  then
-    echo "Conflicting file found, moving it to $1.bak"
-    mv --force $1 $1.bak 2>/dev/null
+backup_paths=(
+  ~/.config/nvim
+  ~/.config/bspwm
+  ~/.config/picom
+  ~/.config/kitty
+  ~/.config/dunst
+  ~/.config/flameshot
+  ~/.config/fontconfig/conf.d/01-emoji.conf
+  ~/.config/lf
+  ~/.config/polybar
+  ~/.config/betterlockscreen
+  ~/.bashrc
+  ~/.tmux.conf
+  ~/.gitconfig
+  ~/.vimrc
+)
 
-  # handle directories
-  elif [ -d $1 ]
-  then
-    mv --force --recursive $1 $1.bak 2>/dev/null
-    echo "Conflicting directory found, moving it to $1.bak"
-  else
-    :
-  fi
-}
-
-backup ~/.config/nvim/
-backup ~/.config/bspwm/
-backup ~/.config/picom/
-backup ~/.config/kitty/
-backup ~/.config/dunst/
-backup ~/.config/flameshot/
-backup ~/.config/fontconfig/conf.d/01-emoji.conf
-backup ~/.config/lf/
-backup ~/.config/polybar/
-backup ~/.config/betterlockscreen/
-backup ~/.bashrc
-backup ~/.tmux.conf
-backup ~/.gitconfig
-backup ~/.vimrc
+for path in ${backup_paths[@]}
+do
+  mv --force $path $path.bak 2>/dev/null
+done
 
 # setting up symlinks
 echo "Creating symlinks..."
