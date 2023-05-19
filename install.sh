@@ -43,9 +43,12 @@ backup_paths=(
   ~/.config/polybar
   ~/.config/betterlockscreen
   ~/.bashrc
+  ~/.bash_profile
   ~/.tmux.conf
   ~/.gitconfig
   ~/.vimrc
+  ~/.xinitrc
+  ~/.gitconfig_local
 )
 
 for path in ${backup_paths[@]}
