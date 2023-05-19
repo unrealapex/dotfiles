@@ -32,23 +32,23 @@ yay -S --noconfirm --needed - < packages
 
 
 backup_paths=(
-  ~/.config/nvim
+  ~/.bash_profile
+  ~/.bashrc
+  ~/.config/betterlockscreen
   ~/.config/bspwm
-  ~/.config/picom
-  ~/.config/kitty
   ~/.config/dunst
   ~/.config/flameshot
   ~/.config/fontconfig/conf.d/01-emoji.conf
+  ~/.config/kitty
   ~/.config/lf
+  ~/.config/nvim
+  ~/.config/picom
   ~/.config/polybar
-  ~/.config/betterlockscreen
-  ~/.bashrc
-  ~/.bash_profile
-  ~/.tmux.conf
   ~/.gitconfig
+  ~/.gitconfig_local
+  ~/.tmux.conf
   ~/.vimrc
   ~/.xinitrc
-  ~/.gitconfig_local
 )
 
 for path in ${backup_paths[@]}
