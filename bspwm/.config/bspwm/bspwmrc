@@ -28,4 +28,6 @@ feh --bg-scale ~/.dotfiles/sakura.png
 
 picom --daemon
 
+# terminate instances of polybar that are already running
+polybar-msg cmd quit
 polybar &
