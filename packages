@@ -1,3 +1,4 @@
+alsa-utils
 asciinema
 bash-completion
 bat
@@ -23,6 +24,7 @@ gst-libav
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
+gst-plugin-pipewire
 gst-plugins-ugly
 htop
 hyperfine
@@ -33,6 +35,8 @@ kitty
 krita
 lf
 lib32-mesa
+lib32-pipewire
+lib32-pipewire-jack
 lib32-vulkan-icd-loader
 libnotify
 libqalculate
@@ -57,6 +61,11 @@ npm
 ntp
 obs-studio
 picom
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
 polybar
 procps
 ripgrep
@@ -73,6 +82,7 @@ tree
 ttf-ms-win11-auto
 vulkan-icd-loader
 wget
+wireplumber
 xautolock
 xclip
 xf86-input-libinput
