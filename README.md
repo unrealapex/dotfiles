@@ -59,7 +59,6 @@ My dotfiles for Arch Linux, managed using Git and GNU Stow.
 My dotfiles can be installed with this one liner:
 
 ```sh
-sudo pacman -S curl git && source <(curl -s https://gitlab.com/unrealapex/dotfiles/-/raw/master/install.sh)
+source <(curl -s https://gitlab.com/unrealapex/dotfiles/-/raw/master/install.sh)
 ```
-**Make sure you do not run this as root.**
 
