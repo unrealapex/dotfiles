@@ -52,7 +52,7 @@ backup_paths=(
   ~/.xinitrc
 )
 
-for path in ${backup_paths[@]}
+for path in "${backup_paths[@]}"
 do
   mv --force $path $path.bak 2>/dev/null
 done
@@ -122,7 +122,7 @@ echo -n "Enter the name you want to use for commits: "
 read commitname
 
 
-if [ ! -z commitemail] && [ ! -z commitname]
+if [ ! -z "$commitemail" ] && [ ! -z "$commitname" ]
 then
   echo "[user]" > ~/.gitconfig_local
   eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
