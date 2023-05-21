@@ -40,6 +40,8 @@ libreoffice-fresh
 linux-headers
 lua
 lynx
+man-db
+man-pages
 mesa
 mpd
 mpv
