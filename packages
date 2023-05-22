@@ -18,12 +18,12 @@ git
 git-delta
 glow
 gnu-free-fonts
-gstreamer-vaapi
 gst-libav
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
+gstreamer-vaapi
 htop
 hyperfine
 imagemagick
@@ -77,10 +77,10 @@ vulkan-icd-loader
 wget
 xautolock
 xclip
-xf86-input-libinput
 xdg-user-dirs
 xdg-utils
 xdotool
+xf86-input-libinput
 xorg
 xorg-xinit
 xss-lock
