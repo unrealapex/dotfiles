@@ -1,5 +1,4 @@
 asciinema
-bash-completion
 bat
 betterlockscreen-git
 bspwm
@@ -84,3 +83,6 @@ xf86-input-libinput
 xorg
 xorg-xinit
 xss-lock
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting

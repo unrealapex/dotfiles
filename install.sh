@@ -33,8 +33,6 @@ yay -S --noconfirm --needed - < packages
 
 
 backup_paths=(
-  ~/.bash_profile
-  ~/.bashrc
   ~/.config/betterlockscreen
   ~/.config/bspwm
   ~/.config/dunst
@@ -50,6 +48,9 @@ backup_paths=(
   ~/.tmux.conf
   ~/.vimrc
   ~/.xinitrc
+  ~/.zprofile
+  ~/.zshenv
+  ~/.zshrc
 )
 
 for path in "${backup_paths[@]}"
@@ -63,6 +64,24 @@ stow */
 
 # create default user directories
 xdg-user-dirs-update
+
+# set default shell as zsh
+chsh -s /bin/zsh
+
+# on-demand rehash for new executables
+sudo mkdir --parents /etc/pacman.d/hooks/
+sudo mkdir /var/cache/zsh
+# create hook file
+echo "[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Path
+Target = usr/bin/*
+[Action]
+Depends = zsh
+When = PostTransaction
+Exec = /usr/bin/install -Dm644 /dev/null /var/cache/zsh/pacman" | sudo tee /etc/pacman.d/hooks/zsh.hook
 
 # install neovim plugins
 # TODO: check if Mason language servers get installed too
