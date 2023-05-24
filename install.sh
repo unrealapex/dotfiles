@@ -42,7 +42,7 @@ backup_paths=(
   ~/.config/lf
   ~/.config/nvim
   ~/.config/picom
-  ~/.config/pipewire/
+  ~/.config/pipewire
   ~/.config/polybar
   ~/.gitconfig
   ~/.gitconfig_local
