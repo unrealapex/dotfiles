@@ -30,6 +30,7 @@ promptinit
 add-zsh-hook -Uz precmd rehash_precmd
 
 zstyle ':completion:*' menu select
+zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
