@@ -12,6 +12,11 @@ setopt correctall
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt extended_glob
+# NOTE: setting this makes some stuff work weirdly, for example outputting
+# hidden directories when unintended
+# e.x.
+# stow */
+# stows dotfiles's .git repository(unwanted)
 setopt globdots
 
 bindkey -e
