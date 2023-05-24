@@ -158,6 +158,8 @@ fi
 
 # services
 sudo systemctl enable mpd.service
+systemctl --user disable --now pulseaudio.socket pulseaudio.service
+systemctl --user enable --now pipewire.socket pipewire-pulse.socket wireplumber.service
 
 printf "\n\nDotfiles installed!\n\n"
 
