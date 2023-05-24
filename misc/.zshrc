@@ -17,7 +17,7 @@ setopt extended_glob
 # e.x.
 # stow */
 # stows dotfiles's .git repository(unwanted)
-setopt globdots
+# setopt globdots
 
 bindkey -e
 bindkey '^[[Z' reverse-menu-complete
