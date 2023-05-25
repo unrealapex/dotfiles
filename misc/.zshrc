@@ -12,12 +12,6 @@ setopt correctall
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt extended_glob
-# NOTE: setting this makes some stuff work weirdly, for example outputting
-# hidden directories when unintended
-# e.x.
-# stow */
-# stows dotfiles's .git repository(unwanted)
-# setopt globdots
 
 bindkey -e
 bindkey '^[[Z' reverse-menu-complete
@@ -32,6 +26,8 @@ add-zsh-hook -Uz precmd rehash_precmd
 zstyle ':completion:*' menu select
 zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+# show hidden files in completion menu
+_comp_options+=(globdots)
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
