@@ -38,6 +38,10 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
+# disable highlighting of pasted text
+zle_highlight+=(paste:none)
+
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
