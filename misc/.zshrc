@@ -20,7 +20,12 @@ setopt extended_glob
 
 bindkey -e
 bindkey '^[[Z' reverse-menu-complete
-
+# [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5C' forward-word
+# [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[1;5D' backward-word
+# [Ctrl-Backspace] - delete whole forward-word
+bindkey '^H' backward-kill-word
 autoload -Uz compinit promptinit
 compinit
 promptinit
