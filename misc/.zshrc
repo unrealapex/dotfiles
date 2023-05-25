@@ -1,3 +1,8 @@
+#
+# ~/.zshrc
+#
+
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -28,6 +33,10 @@ zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 # show hidden files in completion menu
 _comp_options+=(globdots)
+
+# disable highlighting of pasted text
+zle_highlight+=(paste:none)
+
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

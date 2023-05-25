@@ -1,4 +1,7 @@
+#
 # ~/.zshenv
+#
+
 
 export EDITOR=/usr/bin/nvim
 export TERMINAL="kitty"
