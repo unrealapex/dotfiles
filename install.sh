@@ -44,6 +44,7 @@ backup_paths=(
   ~/.config/picom
   ~/.config/pipewire
   ~/.config/polybar
+  ~/.config/zsh
   ~/.gitconfig
   ~/.gitconfig_local
   ~/.tmux.conf
