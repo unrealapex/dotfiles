@@ -24,6 +24,8 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 yes | makepkg -si
 
+cd ~/.dotfiles
+
 # enable multilib
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
