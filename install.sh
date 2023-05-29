@@ -15,7 +15,7 @@ sudo pacman -S git --noconfirm
 cd
 
 git clone https://gitlab.com/unrealapex/dotfiles.git "$HOME"/.dotfiles
-cd "$HOME"/.dotfiles || echo "could not clone dotfiles repository" && exit 1
+cd "$HOME"/.dotfiles || exit 1
 
 # yay
 mkdir --parents ~/Downloads/git
