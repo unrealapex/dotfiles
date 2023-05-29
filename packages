@@ -10,7 +10,6 @@ dunst
 exa
 feh
 ffmpeg
-firefox
 flameshot
 fzf
 gimp
@@ -18,6 +17,7 @@ git
 git-delta
 glow
 gnu-free-fonts
+google-chrome
 gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
