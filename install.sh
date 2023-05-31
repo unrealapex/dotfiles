@@ -48,6 +48,10 @@ backup_paths=(
   ~/.config/pipewire
   ~/.config/polybar
   ~/.config/zsh
+  ~/.bash_history
+  ~/.bash_logout
+  ~/.bash_profile
+  ~/.bashrc
   ~/.gitconfig
   ~/.gitconfig_local
   ~/.tmux.conf
