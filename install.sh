@@ -28,7 +28,6 @@ cd ~/.dotfiles
 
 # enable multilib
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-
 sudo pacman -Syu --noconfirm
 
 # install packages
