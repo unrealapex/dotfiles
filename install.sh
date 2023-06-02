@@ -77,8 +77,7 @@ xdg-user-dirs-update
 chsh -s /bin/zsh
 
 # on-demand rehash for new executables
-sudo mkdir --parents /etc/pacman.d/hooks/
-sudo mkdir /var/cache/zsh
+sudo mkdir --parents /etc/pacman.d/hooks/ /var/cache/zsh
 # create hook file
 echo "[Trigger]
 Operation = Install
