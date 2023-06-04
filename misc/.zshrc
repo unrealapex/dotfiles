@@ -14,6 +14,10 @@ antigen bundle history-substring-search
 antigen bundle safe-paste
 antigen bundle sudo
 
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+
 antigen apply
 
 
