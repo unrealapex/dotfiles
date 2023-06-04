@@ -2,6 +2,20 @@
 # ~/.zshrc
 #
 
+# bootstrap antigen
+[ -d ~/antigen ] || git clone https://github.com/zsh-users/antigen.git ~/antigen
+
+source ~/antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+antigen bundle colored-man-pages
+antigen bundle history-substring-search
+antigen bundle safe-paste
+antigen bundle sudo
+
+antigen apply
+
 
 # If not running interactively, don't do anything
 case $- in
