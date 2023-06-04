@@ -28,7 +28,6 @@ cd ~/.dotfiles
 
 # enable multilib
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-
 sudo pacman -Syu --noconfirm
 
 # install packages
@@ -78,8 +77,7 @@ xdg-user-dirs-update
 chsh -s /bin/zsh
 
 # on-demand rehash for new executables
-sudo mkdir --parents /etc/pacman.d/hooks/
-sudo mkdir /var/cache/zsh
+sudo mkdir --parents /etc/pacman.d/hooks/ /var/cache/zsh
 # create hook file
 echo "[Trigger]
 Operation = Install
@@ -105,6 +103,7 @@ cd /usr/share/fonts/truetype
 sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.ttf" \
   https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFont-Regular.ttf?raw=true
 
+# FIXME: this doesn't work as intended
 # download fontawesome font
 # TODO: don't hardcode url to latest release  
 sudo curl --fail --location --output fontawesome.zip https://use.fontawesome.com/releases/v6.4.0/fontawesome-free-6.4.0-desktop.zip
