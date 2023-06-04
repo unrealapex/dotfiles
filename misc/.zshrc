@@ -3,7 +3,7 @@
 #
 
 # bootstrap antigen
-[ -d ~/antigen ] || git clone https://github.com/zsh-users/antigen.git ~/antigen
+[ -d ~/antigen ] || git clone --filter=blob:none https://github.com/zsh-users/antigen.git ~/antigen
 
 source ~/antigen/antigen.zsh
 
