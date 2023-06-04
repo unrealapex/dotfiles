@@ -30,13 +30,13 @@ esac
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=2000
-setopt nonomatch
-setopt correctall
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt extended_glob
 setopt auto_cd
 setopt auto_pushd
+setopt correctall
+setopt extended_glob
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt nonomatch
 setopt pushd_ignore_dups
 setopt pushdminus
 
