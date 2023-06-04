@@ -10,7 +10,6 @@ source ~/antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 antigen bundle colored-man-pages
-antigen bundle command-not-found
 antigen bundle history-substring-search
 antigen bundle safe-paste
 antigen bundle sudo
