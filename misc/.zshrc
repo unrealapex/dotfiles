@@ -83,8 +83,8 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -ap zsh/mapfile mapfile
 
-# TODO: make arrow foreground green, red if the last command failed
-PROMPT="%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f"$'\n'"➜ "
+PROMPT="%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f"$'\n'"%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+
 
 typeset -U path PATH
 path=(~/.local/bin $path)
