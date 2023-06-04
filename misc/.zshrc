@@ -3,7 +3,7 @@
 #
 
 # bootstrap antigen
-[ -d ~/antigen ] || git clone https://github.com/zsh-users/antigen.git ~/antigen
+[ -d ~/antigen ] || git clone --filter=blob:none https://github.com/zsh-users/antigen.git ~/antigen
 
 source ~/antigen/antigen.zsh
 
@@ -13,6 +13,10 @@ antigen bundle colored-man-pages
 antigen bundle history-substring-search
 antigen bundle safe-paste
 antigen bundle sudo
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-history-substring-search
 
 antigen apply
 
