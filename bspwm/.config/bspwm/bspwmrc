@@ -32,5 +32,6 @@ feh --bg-scale ~/.dotfiles/sakura.png
 picom --daemon
 
 # terminate instances of polybar that are already running
-polybar-msg cmd quit
+killall polybar
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar &
