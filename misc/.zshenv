@@ -9,4 +9,4 @@ export TERMINAL_PROG="kitty"
 export BROWSER=/usr/bin/firefox
 
 # TODO: add Anaconda to path
-export PATH="~/anaconda3/bin:$PATH"
+path+=("~/anaconda3/bin:$PATH")
