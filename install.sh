@@ -57,6 +57,7 @@ backup_paths=(
   ~/.vimrc
   ~/.xinitrc
   ~/.zprofile
+  ~/.zsh_plugins.txt
   ~/.zshenv
   ~/.zshrc
 )

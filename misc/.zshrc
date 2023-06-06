@@ -2,23 +2,15 @@
 # ~/.zshrc
 #
 
-# bootstrap antigen
-[ -d ~/antigen ] || git clone --filter=blob:none https://github.com/zsh-users/antigen.git ~/antigen
+# bootstrap antidote
+[ -d ~/.antidote ] || git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote
 
-source ~/antigen/antigen.zsh
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-antigen bundle colored-man-pages
-antigen bundle history-substring-search
-antigen bundle safe-paste
-antigen bundle sudo
+# source antidote
+source ~/.antidote/antidote.zsh
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-history-substring-search
-
-antigen apply
+# initialize plugins statically with ~/.zsh_plugins.txt
+antidote load
 
 
 # If not running interactively, don't do anything
