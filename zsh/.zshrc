@@ -78,7 +78,7 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -ap zsh/mapfile mapfile
 
-PROMPT="$  "
+PROMPT="$ "
 RPROMPT="%~"
 
 typeset -U path PATH
