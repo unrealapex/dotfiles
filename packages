@@ -42,7 +42,6 @@ lib32-pipewire
 lib32-pipewire-jack
 lib32-vulkan-icd-loader
 libnotify
-libqalculate
 libreoffice-fresh
 linux-headers
 lua
@@ -96,6 +95,7 @@ xdg-utils
 xdotool
 xf86-input-libinput
 xorg
+xorg-xcalc
 xorg-xinit
 xss-lock
 zoom
