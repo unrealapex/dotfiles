@@ -21,6 +21,9 @@ gimp
 git
 git-delta
 glow
+gnome-calculator
+gnome-clocks
+gnome-font-viewer
 gnu-free-fonts
 google-chrome
 gst-libav
@@ -96,7 +99,6 @@ xdg-utils
 xdotool
 xf86-input-libinput
 xorg
-xorg-xcalc
 xorg-xinit
 xss-lock
 zoom
