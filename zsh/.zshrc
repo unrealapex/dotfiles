@@ -78,8 +78,7 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -ap zsh/mapfile mapfile
 
-PROMPT="$ "
-RPROMPT="%~"
+PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f $ '
 
 typeset -U path PATH
 path=(~/.local/bin $path)
