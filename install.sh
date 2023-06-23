@@ -140,6 +140,7 @@ rm anaconda-installer.sh && \
 conda config --set auto_activate_base false
 
 # cache lockscreen image
+# FIXME: this has to be perfomred after initial setup
 betterlockscreen --update ~/.dotfiles/sakura.png
 
 # set up Git commit information
@@ -161,6 +162,7 @@ else
 fi
 
 # services
+# TODO: perhaps move this to a script of its own
 sudo systemctl enable mpd.service
 # NOTE: it's not a good idea to attempt to disable these services right after a fresh install
 # (pulseaudio is not enabled yet)
