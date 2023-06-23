@@ -14,7 +14,7 @@ sudo pacman -S git --noconfirm
 
 cd
 
-git clone https://gitlab.com/unrealapex/dotfiles.git ~/.dotfiles
+[ -d ~/.dotfiles ] || git clone https://gitlab.com/unrealapex/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles || exit 1
 
 # yay
