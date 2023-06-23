@@ -67,3 +67,10 @@ My dotfiles can be installed with this one liner:
 source <(curl -s https://gitlab.com/unrealapex/dotfiles/-/raw/master/install.sh)
 ```
 
+It is also possible to manually try my configuration:
+
+```sh
+git clone https://gitlab.com/unrealapex/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+stow */
+```
