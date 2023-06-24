@@ -101,6 +101,5 @@ xf86-input-libinput
 xorg
 xorg-xinit
 xss-lock
-yad
 zoom
 zsh
