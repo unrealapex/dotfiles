@@ -113,12 +113,12 @@ sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.
 # FIXME: this doesn't work as intended
 # download fontawesome font
 # TODO: don't hardcode url to latest release  
-sudo curl --fail --location --output fontawesome.zip https://use.fontawesome.com/releases/v6.4.0/fontawesome-free-6.4.0-desktop.zip
-unzip fontawesome.zip
-cd fontawesome-*-desktop/otfs
-sudo mkdir --parents /usr/share/fonts/fontawesome/
-sudo cp * /usr/share/fonts/fontawesome/
-rm fontawesome.zip
+# sudo curl --fail --location --output fontawesome.zip https://use.fontawesome.com/releases/v6.4.0/fontawesome-free-6.4.0-desktop.zip
+# unzip fontawesome.zip
+# cd fontawesome-*-desktop/otfs
+# sudo mkdir --parents /usr/share/fonts/fontawesome/
+# sudo cp * /usr/share/fonts/fontawesome/
+# rm fontawesome.zip
 
 sudo fc-cache -fv
 
@@ -141,7 +141,7 @@ conda config --set auto_activate_base false
 
 # cache lockscreen image
 # FIXME: this has to be perfomred after initial setup
-betterlockscreen --update ~/.dotfiles/sakura.png
+# betterlockscreen --update ~/.dotfiles/sakura.png
 
 # set up Git commit information
 echo "Setting Git commit information..."
