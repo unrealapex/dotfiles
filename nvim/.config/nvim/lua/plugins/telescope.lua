@@ -57,6 +57,7 @@ require("telescope").setup {
         ["?"] = require("telescope.actions").which_key,
       },
     },
+    file_ignore_patterns = { ".git/*" }
   },
   pickers = {
     -- Default configuration for builtin pickers goes here:
@@ -66,6 +67,9 @@ require("telescope").setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
+    find_files = {
+      hidden = true
+    }
   },
   extensions = {
     fzf = {
