@@ -101,15 +101,6 @@ Exec = /usr/bin/install -Dm644 /dev/null /var/cache/zsh/pacman" | sudo tee /etc/
 # TODO: check if Mason language servers get installed too
 nvim --headless "+Lazy! sync" +qa
 
-# install icon fonts
-echo "Installing fonts..."
-sudo mkdir --parents /usr/share/fonts/truetype/
-cd /usr/share/fonts/truetype
-
-# download nerd font
-sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.ttf" \
-  https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFont-Regular.ttf?raw=true
-
 # FIXME: this doesn't work as intended
 # download fontawesome font
 # TODO: don't hardcode url to latest release  
@@ -119,8 +110,6 @@ sudo curl --fail --location --output "JetBrains Mono Nerd Font Complete Regular.
 # sudo mkdir --parents /usr/share/fonts/fontawesome/
 # sudo cp * /usr/share/fonts/fontawesome/
 # rm fontawesome.zip
-
-sudo fc-cache -fv
 
 # anaconda
 echo "Installing Anaconda..."
