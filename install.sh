@@ -33,8 +33,6 @@ sudo pacman -Syu --noconfirm
 # install packages
 yay -S --noconfirm --needed - < packages
 
-#!/bin/bash
-
 # Detect CPU vendor and model
 vendor=$(grep vendor_id /proc/cpuinfo | awk '{print $3}' | head -n 1)
 model=$(grep "model name" /proc/cpuinfo | awk -F": " '{print $2}' | head -n 1)
