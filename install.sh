@@ -33,6 +33,38 @@ sudo pacman -Syu --noconfirm
 # install packages
 yay -S --noconfirm --needed - < packages
 
+#!/bin/bash
+
+# Detect CPU vendor and model
+vendor=$(grep vendor_id /proc/cpuinfo | awk '{print $3}' | head -n 1)
+model=$(grep "model name" /proc/cpuinfo | awk -F": " '{print $2}' | head -n 1)
+
+# install microcode
+# Check if the CPU is Intel or AMD
+if [[ $vendor == "GenuineIntel" ]]; then
+   echo "Detected CPU: Intel $model"
+   
+   # Install the Intel microcode package
+   sudo pacman -Syu intel-ucode
+   
+   # Activate the microcode update
+   sudo grub-mkconfig -o /boot/grub/grub.cfg
+   
+elif [[ $vendor == "AuthenticAMD" ]]; then
+   echo "Detected CPU: AMD $model"
+   
+   # Install the AMD microcode package
+   sudo pacman -Syu amd-ucode
+   
+   # Activate the microcode update
+   sudo grub-mkconfig -o /boot/grub/grub.cfg
+   
+else
+   echo "Unsupported CPU: $vendor $model"
+fi
+
+echo "Microcode package installed and activated successfully!"
+
 
 backup_paths=(
   ~/.config/betterlockscreen
