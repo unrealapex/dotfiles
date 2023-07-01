@@ -8,6 +8,7 @@ bluez-utils
 bspwm
 cbonsai
 cheese
+cmake
 cmatrix
 discord
 dkms
@@ -59,6 +60,7 @@ mpv
 neofetch
 neovim
 network-manager-applet
+ninja
 nm-connection-editor
 nodejs
 noto-fonts
