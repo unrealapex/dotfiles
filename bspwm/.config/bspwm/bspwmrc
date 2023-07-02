@@ -25,7 +25,7 @@ bspc rule -a '*:*:Picture in picture' state=floating
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "betterlockscreen --lock" &
 
-nm-applet &
+nm-applet --no-agent &
 
 feh --bg-scale ~/.dotfiles/sakura.png
 
