@@ -131,16 +131,6 @@ Exec = /usr/bin/install -Dm644 /dev/null /var/cache/zsh/pacman" | sudo tee /etc/
 # TODO: check if Mason language servers get installed too
 nvim --headless "+Lazy! sync" +qa
 
-# FIXME: this doesn't work as intended
-# download fontawesome font
-# TODO: don't hardcode url to latest release  
-# sudo curl --fail --location --output fontawesome.zip https://use.fontawesome.com/releases/v6.4.0/fontawesome-free-6.4.0-desktop.zip
-# unzip fontawesome.zip
-# cd fontawesome-*-desktop/otfs
-# sudo mkdir --parents /usr/share/fonts/fontawesome/
-# sudo cp * /usr/share/fonts/fontawesome/
-# rm fontawesome.zip
-
 # anaconda
 echo "Installing Anaconda..."
 echo "You will need to accept its licence agreement to install it"
