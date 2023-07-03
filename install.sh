@@ -43,7 +43,7 @@ if [[ $vendor == "GenuineIntel" ]]; then
    echo "Detected CPU: Intel $model"
    
    # Install the Intel microcode package
-   sudo pacman -Syu intel-ucode
+   sudo pacman -Syu --noconfirm --needed intel-ucode
    
    # Activate the microcode update
    sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -52,7 +52,7 @@ elif [[ $vendor == "AuthenticAMD" ]]; then
    echo "Detected CPU: AMD $model"
    
    # Install the AMD microcode package
-   sudo pacman -Syu amd-ucode
+   sudo pacman -Syu --noconfirm --needed amd-ucode
    
    # Activate the microcode update
    sudo grub-mkconfig -o /boot/grub/grub.cfg
