@@ -177,7 +177,7 @@ sudo systemctl enable mpd.service
 # (pulseaudio is not enabled yet)
 systemctl --user disable --now pulseaudio.socket pulseaudio.service
 systemctl --user enable --now pipewire.socket pipewire-pulse.socket wireplumber.service
-sudo systemctl enable bluetooth.service
+# sudo systemctl enable bluetooth.service
 
 
 printf "\n\nDotfiles installed!\n\n"
