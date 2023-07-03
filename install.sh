@@ -175,8 +175,8 @@ fi
 sudo systemctl enable mpd.service
 # NOTE: it's not a good idea to attempt to disable these services right after a fresh install
 # (pulseaudio is not enabled yet)
-systemctl --user disable --now pulseaudio.socket pulseaudio.service
-systemctl --user enable --now pipewire.socket pipewire-pulse.socket wireplumber.service
+sudo systemctl --user disable --now pulseaudio.socket pulseaudio.service
+sudo systemctl --user enable --now pipewire.socket pipewire-pulse.socket wireplumber.service
 # sudo systemctl enable bluetooth.service
 
 
