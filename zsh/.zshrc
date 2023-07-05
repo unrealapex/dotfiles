@@ -100,9 +100,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='exa -alF'
-alias la='exa -a'
-alias l='exa'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 alias open='xdg-open'
 alias pls='sudo $(history -p !!)'
