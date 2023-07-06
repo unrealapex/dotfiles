@@ -171,13 +171,10 @@ else
 fi
 
 # services
-# TODO: perhaps move this to a script of its own
-sudo systemctl enable mpd.service
-# NOTE: it's not a good idea to attempt to disable these services right after a fresh install
-# (pulseaudio is not enabled yet)
-sudo systemctl --user disable --now pulseaudio.socket pulseaudio.service
-sudo systemctl --user enable --now pipewire.socket pipewire-pulse.socket wireplumber.service
-# sudo systemctl enable bluetooth.service
+systemctl enable mpd.service
+systemctl --user disable pulseaudio.socket pulseaudio.service
+systemctl --user enable pipewire.socket pipewire-pulse.socket wireplumber.service
+systemctl enable bluetooth.service
 
 
 printf "\n\nDotfiles installed!\n\n"
