@@ -122,10 +122,10 @@ When = PostTransaction
 Exec = /usr/bin/install -Dm644 /dev/null /var/cache/zsh/pacman" | sudo tee /etc/pacman.d/hooks/zsh.hook
 
 # TODO: do this after initial install
-# modprobe btusb
+modprobe btusb
 
 # make sure bluetooth stuff start up after a restart
-# sudo sed -i "s/AutoEnable=false/AutoEnable=true/" /etc/bluetooth/main.conf
+sudo sed -i "s/AutoEnable=false/AutoEnable=true/" /etc/bluetooth/main.conf
 
 # install neovim plugins
 # TODO: check if Mason language servers get installed too
