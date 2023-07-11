@@ -34,6 +34,7 @@ gst-plugins-good
 gst-plugins-ugly
 gstreamer-vaapi
 htop
+hwinfo
 hyperfine
 imagemagick
 jdk-openjdk
