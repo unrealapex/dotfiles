@@ -2,7 +2,6 @@
 
 <!-- todo: insert image of rice here -->
 ```
-os: arch
 wm: bspwm
 bar: polybar
 launcher: rofi
