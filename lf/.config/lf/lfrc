@@ -6,5 +6,3 @@ set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set ignorecase true
 set scrolloff 10
 set autoquit true
-set cleaner "~/.config/lf/scripts/cleaner.sh"
-set previewer "~/.config/lf/scripts/scope.sh"
