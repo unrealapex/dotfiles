@@ -7,8 +7,7 @@
 export EDITOR=/usr/bin/nvim
 export TERMINAL="kitty"
 export TERMINAL_PROG="kitty"
-# TODO: check if the executable is google-chrome or google-chrome-stable
-export BROWSER=/usr/bin/google-chrome
+export BROWSER=/usr/bin/google-chrome-stable
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
