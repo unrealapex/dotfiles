@@ -14,17 +14,17 @@ notification daemon: dunst
 colorscheme: tokyonight
 ```
 
-### ✨ About ✨
-My dotfiles for Arch Linux, managed using Git and GNU Stow.
+### ✨ about ✨
+my dotfiles for arch linux, managed using git and gnu stow.
 
-### 💿 Install
-My dotfiles can be installed with this one liner:
+### 💿 install
+my dotfiles can be installed with this one liner:
 
 ```sh
 source <(curl -s https://gitlab.com/unrealapex/dotfiles/-/raw/master/install.sh)
 ```
 
-It is also possible to manually try my configuration:
+it is also possible to manually try my configuration:
 
 ```sh
 git clone https://gitlab.com/unrealapex/dotfiles.git ~/.dotfiles
