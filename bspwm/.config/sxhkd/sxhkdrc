@@ -125,5 +125,6 @@ Print
 super + @period
 	rofi -modi emoji -show emoji
 
+# TODO: add Pause as a keymap
 super + shift + x
 	betterlockscreen --lock
