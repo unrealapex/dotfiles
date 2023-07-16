@@ -497,11 +497,24 @@ return {
   "nvim-tree/nvim-web-devicons",
   -- colorscheme
   {
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
+    opts = {
+      integrations = {
+        leap = true,
+        lsp_saga = true,
+        mason = true,
+        mini = true,
+        noice = true,
+        notify = true,
+        treesitter_context = true,
+        lsp_trouble = true
+      }
+    },
     config = function()
-      vim.cmd [[colorscheme tokyonight-night]]
+      vim.cmd [[colorscheme catppuccin-mocha]]
     end
   },
   -- markdown preview
