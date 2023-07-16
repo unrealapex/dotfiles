@@ -10,7 +10,7 @@ shell: zsh
 editor: nvim
 font: jetbrains mono
 notification daemon: dunst
-colorscheme: tokyonight
+colorscheme: catppuccin
 ```
 
 ### ✨ about ✨
