@@ -72,6 +72,7 @@ backup_paths=(
   ~/.config/fontconfig/conf.d/01-emoji.conf
   ~/.config/kitty
   ~/.config/lf
+  ~/.config/neofetch
   ~/.config/nvim
   ~/.config/picom
   ~/.config/pipewire
