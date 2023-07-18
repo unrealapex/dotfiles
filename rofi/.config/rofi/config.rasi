@@ -9,6 +9,8 @@ entry {
 }
 
 #window {
+  width: 40%;
+  height: 60%;
   padding: 6.4px;
 }
 
