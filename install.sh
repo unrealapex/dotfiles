@@ -70,6 +70,7 @@ backup_paths=(
   ~/.config/dunst
   ~/.config/flameshot
   ~/.config/fontconfig/conf.d/01-emoji.conf
+  ~/.config/gtk-3.0
   ~/.config/kitty
   ~/.config/lf
   ~/.config/neofetch
@@ -84,6 +85,7 @@ backup_paths=(
   ~/.bashrc
   ~/.gitconfig
   ~/.gitconfig_local
+  ~/.icons
   ~/.tmux.conf
   ~/.vimrc
   ~/.xinitrc
