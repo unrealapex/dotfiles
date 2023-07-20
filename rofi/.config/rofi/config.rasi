@@ -1,4 +1,5 @@
 * {
+    // TODO: replace these colors with catppuccin theme
     foreground:  #ffeedd;
     backlight:   #ccffeedd;
     background-color:  transparent;
