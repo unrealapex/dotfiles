@@ -1,3 +1,10 @@
+configuration {
+  show-icons: false;
+  disable-history: false;
+  click-to-exit: true;
+  location: 0;
+}
+
 @import "colors.rasi"
 
 * {
