@@ -173,3 +173,5 @@ error-message {
     border: 2px;
     padding: 1em;
 }
+
+/* vim: ft=sass
