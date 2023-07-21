@@ -44,7 +44,7 @@ inputbar {
     background-color: @surface0;
     border: 2px 2px 2px 2px;
     border-radius:  15px 15px 0px 0px;
-    border-color: @overlay2;
+    border-color: @overlay1;
     font: "Source Code Pro 18";
 }
 entry,prompt,case-indicator {
@@ -57,7 +57,7 @@ prompt {
 listview {
     padding: 8px;
     border-radius: 0px 0px 15px 15px;
-    border-color: @overlay2;
+    border-color: @overlay1;
     border: 0px 2px 2px 2px;
     background-color: @base;
     dynamic: false;
