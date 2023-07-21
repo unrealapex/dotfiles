@@ -550,6 +550,7 @@ return {
     ft = {"css", "html", "javascript", "sass"},
     config = function()
       require("colorizer").setup({
+        -- make sure that nvim-colorizer only attaches to these file types
         'css';
         'html';
         'javascript';
