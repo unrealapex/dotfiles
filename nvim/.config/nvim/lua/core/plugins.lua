@@ -547,15 +547,15 @@ return {
   },
   {
     "norcalli/nvim-colorizer.lua",
+    event = { "BufReadPost", "BufNewFile" },
     ft = {"css", "javascript", "html", "sass"},
-    opts = {
-      'css';
-      'javascript';
-      'html';
-      'sass';
-    },
     config = {
-      vim.cmd[[ColorizerAttachToBuffer]]
+      require("colorizer").setup({
+        'css';
+        'javascript';
+        'html';
+        'sass';
+      })
     }
   }
 }
