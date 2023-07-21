@@ -99,7 +99,7 @@ element selected active {
     foreground: @base;
 }
 element selected urgent {
-    background-color: maroon;
+    background-color: @maroon;
     foreground: @base;
 }
 element normal normal {
