@@ -29,7 +29,7 @@ mainbox {
     children: [ inputbar, message, listview ];
 }
 message {
-    border-color: red;
+    border-color: @red;
     border:  0px 2px 2px 2px;
     padding: 5;
     background-color: @overlay2;
@@ -67,8 +67,8 @@ element {
     padding: 3px;
     vertical-align: 0.5;
     border-radius: 4px;
-    background-color: red;
-    color: red;
+    background-color: @red;
+    color: @red;
     font:inherit;
 }
 element-text {
@@ -123,14 +123,14 @@ button {
     border-radius: 4px 0px 0px 4px;
     background-color: @surface0;
     border-color: @red;
-    color: red;
+    color: @red;
     horizontal-align: 0.5;
 }
 button selected normal {
     color: @base;
     border: 2px 0px 2px 2px;
-    background-color: red;
-    border-color: red;
+    background-color: @red;
+    border-color: @red;
 }
 error-message {
     expand: true;
