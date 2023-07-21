@@ -544,5 +544,18 @@ return {
     cond = vim.fn.executable("glow") == 1,
     ft = "markdown",
     config = true
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
+    ft = {"css", "javascript", "html", "sass"},
+    opts = {
+      'css';
+      'javascript';
+      'html';
+      'sass';
+    },
+    config = {
+      vim.cmd[[ColorizerAttachToBuffer]]
+    }
   }
 }
