@@ -8,7 +8,6 @@ configuration {
 @import "colors.rasi"
 
 * {
-    // fix element background
     font: "Source Code Pro 10";
 }
 window {
@@ -76,7 +75,8 @@ element-text {
     text-color:       inherit;
 }
 element selected.normal {
-    background-color: @blue;
+    background-color: @pink;
+    text-color: @base;
 }
 element normal active {
     foreground: @blue;
@@ -85,6 +85,8 @@ element normal urgent {
     foreground: @maroon;
 }
 element alternate normal {
+    text-color: @text;
+    background-color: @surface2;
 }
 element alternate active {
     foreground: @red;
@@ -101,6 +103,8 @@ element selected urgent {
     foreground: @base;
 }
 element normal normal {
+    text-color: @text;
+    background-color: @surface2;
 
 }
 vertb {
