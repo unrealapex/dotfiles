@@ -34,3 +34,5 @@ picom --daemon
 # terminate instances of polybar that are already running
 killall -q polybar
 polybar &
+
+greenclip daemon

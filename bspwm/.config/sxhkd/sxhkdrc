@@ -128,3 +128,6 @@ super + @period
 # TODO: add Pause as a keymap
 super + shift + x
 	betterlockscreen --lock
+
+super + v
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
