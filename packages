@@ -17,6 +17,7 @@ dkms
 dunst
 feh
 ffmpeg
+firefox
 flameshot
 fzf
 gimp
@@ -27,7 +28,6 @@ gnome-calculator
 gnome-clocks
 gnome-font-viewer
 gnu-free-fonts
-google-chrome
 gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
