@@ -1,3 +1,5 @@
+set previewer ~/.config/lf/scope
+set cleaner ~/.config/lf/cleaner
 set shellopts '-eu'
 set ifs "\n"
 set icons
