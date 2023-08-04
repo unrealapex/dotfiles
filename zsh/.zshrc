@@ -40,6 +40,9 @@ bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 # [Ctrl-Backspace] - delete whole forward-word
 bindkey '^H' backward-kill-word
+# history substring search bindings
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 autoload -Uz compinit promptinit
 compinit
 promptinit
