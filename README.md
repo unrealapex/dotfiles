@@ -1,6 +1,6 @@
 # dotfiles
 
-<!-- todo: insert image of rice here -->
+![screenshot of arch linux rice](rice.png)
 ```
 wm: bspwm
 bar: polybar
