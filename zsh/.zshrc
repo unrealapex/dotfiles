@@ -14,10 +14,7 @@ antidote load
 
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+[[ $- != *i* ]] && return
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
