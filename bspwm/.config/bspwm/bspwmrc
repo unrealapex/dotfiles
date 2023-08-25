@@ -38,3 +38,5 @@ polybar &
 flameshot &
 
 greenclip daemon
+
+discord --start-minimized
