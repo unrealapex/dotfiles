@@ -193,6 +193,7 @@ systemctl --user enable pipewire.socket pipewire-pulse.socket wireplumber.servic
 systemctl enable bluetooth.service
 systemctl enable betterlockscreen@$USER
 
+cd
 
 printf "\n\nDotfiles installed!\n\n"
 
