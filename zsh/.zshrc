@@ -107,6 +107,7 @@ alias l='ls -CF'
 alias open='xdg-open'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
+alias icat='kitty +kitten icat'
 
 
 alias -- -='cd -'
