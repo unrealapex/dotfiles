@@ -131,3 +131,11 @@ super + shift + x
 
 super + v
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' ; sleep 0.001; xdotool type $(xclip -o -selection clipboard)
+
+# Media shortcuts
+
+XF86AudioMute
+ amixer -q -D pulse sset Master toggle &
+
+XF86Audio{Lower,Raise}Volume
+ amixer -q -D pulse sset Master 5%{-,+} unmute &
