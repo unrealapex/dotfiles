@@ -57,7 +57,3 @@ fi
 # change default cursor to a pointer
 xsetroot -cursor_name left_ptr
 
-# exec openbox-session
-# export XDG_SESSION_TYPE=x11
-# export GDK_BACKEND=x11
-# exec gnome-session
