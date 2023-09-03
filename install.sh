@@ -68,6 +68,7 @@ fi
 echo "Microcode package installed and activated successfully!"
 
 
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 backup_paths=(
   ~/.config/betterlockscreen
   ~/.config/bspwm
