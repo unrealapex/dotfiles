@@ -20,6 +20,7 @@ ffmpeg
 firefox
 flameshot
 fzf
+gamemode
 gimp
 git
 git-delta
@@ -40,12 +41,14 @@ hwinfo
 hyperfine
 ibus-mozc
 imagemagick
+irqbalance
 jdk-openjdk
 kdenlive
 keepassxc
 kitty
 krita
 lf
+lib32-gamemode
 lib32-mesa
 lib32-pipewire
 lib32-pipewire-jack
