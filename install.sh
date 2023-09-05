@@ -206,6 +206,8 @@ systemctl enable bluetooth.service
 systemctl enable --now irqbalance.service
 systemctl enable betterlockscreen@$USER
 
+gpasswd -a $USER plugdev
+
 cd
 
 printf "\n\nDotfiles installed!\n\n"
