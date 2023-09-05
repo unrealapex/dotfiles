@@ -128,6 +128,7 @@ obs-studio
 obsidian
 ocl-icd
 openal
+openrazer-daemon
 pavucontrol
 picom-git
 pipewire
@@ -136,6 +137,7 @@ pipewire-audio
 pipewire-jack
 pipewire-pulse
 polybar
+polychromatic
 procps
 ripgrep
 rofi
