@@ -176,6 +176,9 @@ wait
 mv user.js "$(find ~/.mozilla/firefox/ -type d -name "*.default-release")"
 
 
+# set custom icon for kitty
+sed -e 's|Icon=.*|Icon=~/.dotfiles/kitty/.config/kitty/kitty.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
+
 # cache lockscreen image
 # FIXME: this has to be perfomred after initial setup
 # betterlockscreen --update ~/.dotfiles/sakura.png
