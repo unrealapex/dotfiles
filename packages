@@ -2,7 +2,6 @@ alsa-utils
 asciinema
 bash-completion
 bat
-betterlockscreen-git
 bibata-cursor-theme-bin
 blueman
 bluez
@@ -17,7 +16,6 @@ dkms
 feh
 ffmpeg
 firefox
-flameshot
 fzf
 gimp
 git
@@ -64,7 +62,6 @@ mpv
 neofetch
 neovim
 ninja
-nm-connection-editor
 nodejs
 noto-fonts
 noto-fonts-cjk
@@ -74,7 +71,6 @@ ntp
 nyancat
 obs-studio
 obsidian
-pavucontrol
 pipewire
 pipewire-alsa
 pipewire-audio
