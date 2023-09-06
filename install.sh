@@ -194,7 +194,6 @@ systemctl enable mpd.service
 systemctl --user disable pulseaudio.socket pulseaudio.service
 systemctl --user enable pipewire.socket pipewire-pulse.socket wireplumber.service
 systemctl enable bluetooth.service
-systemctl enable betterlockscreen@$USER
 
 cd
 
