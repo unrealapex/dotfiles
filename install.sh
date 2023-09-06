@@ -29,7 +29,7 @@ cd ~/.dotfiles
 # enable multilib
 sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 # enable parallel downloads
-sudo sed -i '/#ParallelDownloads = 5/s/^#//g' /etc/pacman.conf
+sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 20/g' /etc/pacman.conf
 # enable colorful pacman output
 sudo sed -i '/# Color/s/^#//g' /etc/pacman.conf
 sudo pacman -Syu --noconfirm
