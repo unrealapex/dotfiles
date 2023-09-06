@@ -219,7 +219,5 @@ gpasswd -a "$USER" sys
 
 cd
 
-printf "\n\nDotfiles installed!\n\n"
+cowsay "Dotfiles installed! Don't forgot to reboot afterwards\!"
 
-# show system information once finished installing
-neofetch
