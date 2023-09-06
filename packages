@@ -1,8 +1,10 @@
 alsa-lib
 alsa-plugins
 alsa-utils
+ascii-rain-git
 asciinema
 bash-completion
+bash-pipes
 bat
 betterlockscreen-git
 bibata-cursor-theme-bin
@@ -14,6 +16,7 @@ cbonsai
 cheese
 cmake
 cmatrix
+cowsay
 cups
 cups-pdf
 discord
@@ -30,6 +33,7 @@ foomatic-db-gutenprint-ppds
 foomatic-db-nonfree 
 foomatic-db-nonfree-ppds
 foomatic-db-ppds
+fortune-mod
 fzf
 gamemode
 giflib
@@ -153,6 +157,7 @@ rofi
 rofi-emoji
 rofi-greenclip
 shellcheck
+sl
 spotify-launcher
 sqlite
 steam
