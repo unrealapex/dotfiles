@@ -213,6 +213,7 @@ systemctl enable --now irqbalance.service
 systemctl enable betterlockscreen@$USER
 systemctl enable cups.socket
 
+# groups
 gpasswd -a $USER plugdev
 gpasswd -a "$USER" sys
 
