@@ -14,6 +14,8 @@ cbonsai
 cheese
 cmake
 cmatrix
+cups
+cups-pdf
 discord
 dkms
 dunst
@@ -22,6 +24,12 @@ feh
 ffmpeg
 firefox
 flameshot
+foomatic-db
+foomatic-db-engine
+foomatic-db-gutenprint-ppds
+foomatic-db-nonfree 
+foomatic-db-nonfree-ppds
+foomatic-db-ppds
 fzf
 gamemode
 giflib
@@ -43,6 +51,7 @@ gst-plugins-good
 gst-plugins-ugly
 gstreamer-vaapi
 gtk3
+gutenprint
 htop
 hwinfo
 hyperfine
@@ -149,6 +158,7 @@ sqlite
 steam
 stow
 sxhkd
+system-config-printer
 tlp
 tmux
 torbrowser-launcher

@@ -211,8 +211,10 @@ systemctl mask systemd-rfkill.socket
 systemctl enable bluetooth.service
 systemctl enable --now irqbalance.service
 systemctl enable betterlockscreen@$USER
+systemctl enable cups.socket
 
 gpasswd -a $USER plugdev
+gpasswd -a "$USER" sys
 
 cd
 
