@@ -12,6 +12,7 @@ export BROWSER=/usr/bin/firefox
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
+export GLFW_IM_MODULE=ibus
 
 # TODO: add Anaconda to path
 path=("/home/aaron/anaconda3/bin" $path)
