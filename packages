@@ -177,6 +177,7 @@ xdg-utils
 xdotool
 xf86-input-libinput
 xorg
+xorg-twm 
 xorg-xinit
 zoom
 zsh
