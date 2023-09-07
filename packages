@@ -166,6 +166,7 @@ unzip
 v4l-utils
 vkd3d
 vulkan-icd-loader
+webp-pixbuf-loader
 wget
 wine-mono
 wine-staging
