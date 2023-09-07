@@ -217,6 +217,11 @@ systemctl enable cups.socket
 gpasswd -a $USER plugdev
 gpasswd -a "$USER" sys
 
+# gnome configuration
+gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+gsettings set org.gnome.shell disable-user-extensions false
+# FIXME: bind alt+tab to switch windows using gsettings
+
 cd
 
 cowsay "Dotfiles installed! Don't forgot to reboot afterwards\!"
