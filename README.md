@@ -2,14 +2,11 @@
 
 ![screenshot of arch linux rice](rice.png)
 ```
-wm: bspwm
-bar: polybar
-launcher: rofi
+de: bspwm
 terminal: kitty
 shell: zsh
 editor: nvim
-font: jetbrains mono
-notification daemon: dunst
+font: hack
 colorscheme: catppuccin mocha
 ```
 
