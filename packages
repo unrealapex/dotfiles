@@ -12,7 +12,6 @@ bluez
 bluez-utils
 catppuccin-gtk-theme-mocha
 cbonsai
-cheese
 cmake
 cmatrix
 cowsay
@@ -39,9 +38,7 @@ gimp
 git
 git-delta
 glow
-gnome-calculator
-gnome-clocks
-gnome-font-viewer
+gnome
 gnome-shell-extension-dash-to-dock
 gnome-tweaks
 gnu-free-fonts
