@@ -40,9 +40,14 @@ bindkey '^H' backward-kill-word
 # history substring search bindings
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey "^X^E" edit-command-line
+
 autoload -Uz compinit promptinit
 compinit
 promptinit
+
+autoload edit-command-line
+zle -N edit-command-line
 
 
 add-zsh-hook -Uz precmd rehash_precmd
