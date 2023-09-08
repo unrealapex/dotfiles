@@ -115,6 +115,7 @@ vim.g["rainbow#pairs"] = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
 
 local prosed = false
 -- make writing in neovim more pleasant
+---@diagnostic disable-next-line: lowercase-global
 function prose()
   -- make sure zen-mode.nvim is installed
   -- toggle prose mode
