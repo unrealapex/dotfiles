@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# my dotfiles installer for arch linux
+
 # TODO: Add color support
 # TODO: Add yes no prompts for dangerous operations
 
