@@ -352,6 +352,31 @@ return {
         })
     end
   },
+  {
+    "stevearc/conform.nvim",
+    event = "LspAttach",
+    opts = {
+      formatters_by_ft = {
+        -- FIXME: make sure that formatters uses spaces instead of tabs for formatting
+        lua = { "stylua" },
+        javascript = { "prettier_d", "prettier" },
+        typescript = { "prettier_d", "prettier" },
+        html = { "prettier_d", "prettier" },
+        css = { "prettier_d", "prettier" },
+        markdown = { "prettier_d", "prettier" },
+        python = {
+          formatters = { "isort", "black" },
+          run_all_formatters = true,
+        },
+        sh = {"shfmt"},
+        json = {"jq"},
+        java = {"google-java-format"},
+        c = {"clang-format"},
+        cs = {"clang-format"},
+        cpp = {"clang-format"}
+      }
+    }
+  },
   { "mfussenegger/nvim-jdtls", ft = "java" },
   {
     "folke/trouble.nvim",

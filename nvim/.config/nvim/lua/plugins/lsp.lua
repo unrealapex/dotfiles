@@ -16,6 +16,16 @@ require("mason-lspconfig").setup({
   }
 })
 
+-- FIXME: ensure these formatters are installed
+  --  black
+  --  clang-format 
+  --  google-java-format
+  --  isort
+  --  jq
+  --  prettier
+  --  prettierd
+  --  shfmt
+  --  stylua
 
 -- Setup lspconfig.
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -57,7 +67,7 @@ local lsp_attach = function(client, bufnr)
   -- vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
   vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
   vim.keymap.set({ "n", "x" }, "<space>cf", function()
-    vim.lsp.buf.format({ async = true })
+    require("conform").format()
   end, bufopts)
 end
 
