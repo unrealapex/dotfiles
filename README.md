@@ -2,7 +2,7 @@
 
 ![screenshot of arch linux rice](rice.png)
 ```
-de: bspwm
+de: gnome
 terminal: kitty
 shell: zsh
 editor: nvim
