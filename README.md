@@ -19,7 +19,7 @@ my dotfiles can be installed with this one liner:
 ```sh
 source <(curl -s https://gitlab.com/unrealapex/dotfiles/-/raw/master/install.sh)
 ```
-if you wish to try out my configuration without the specific os modifications the install script makes, it is possible to just stow desired configuration folders:
+if you wish to try out my configuration without running the arch install script, it is possible to just stow desired configuration folders:
 
 ```sh
 git clone https://gitlab.com/unrealapex/dotfiles.git ~/.dotfiles
