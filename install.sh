@@ -210,10 +210,14 @@ systemctl mask systemd-rfkill.socket
 systemctl enable bluetooth.service
 systemctl enable --now irqbalance.service
 systemctl enable cups.socket
+systemctl enable libvirtd
 
 # groups
 gpasswd -a $USER plugdev
 gpasswd -a "$USER" sys
+gpasswd -a "$USER" libvirt
+
+# TODO: make sure you have virtualization enabled in bios!
 
 # gnome configuration
 gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
