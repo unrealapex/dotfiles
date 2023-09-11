@@ -11,6 +11,7 @@ blueman
 bluez
 bluez-utils
 brave-bin
+bridge-utils
 catppuccin-gtk-theme-mocha
 cbonsai
 cmake
@@ -20,6 +21,7 @@ cups
 cups-pdf
 discord
 dkms
+dnsmasq
 faudio
 feh
 ffmpeg
@@ -137,6 +139,7 @@ obs-studio
 obsidian
 ocl-icd
 openal
+openbsd-netcat
 opencl-icd-loader
 openrazer-daemon
 pavucontrol
@@ -147,6 +150,7 @@ pipewire-jack
 pipewire-pulse
 polychromatic
 procps
+qemu
 ripgrep
 shellcheck
 sl
@@ -166,6 +170,9 @@ ttf-jetbrains-mono-nerd
 ttf-ms-win11-auto
 unzip
 v4l-utils
+vde2
+virt-manager
+virt-viewer
 vkd3d
 vulkan-icd-loader
 webp-pixbuf-loader
