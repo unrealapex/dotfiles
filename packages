@@ -10,6 +10,7 @@ bibata-cursor-theme-bin
 blueman
 bluez
 bluez-utils
+brave-bin
 catppuccin-gtk-theme-mocha
 cbonsai
 cmake
@@ -22,7 +23,6 @@ dkms
 faudio
 feh
 ffmpeg
-firefox
 flameshot
 foomatic-db
 foomatic-db-engine
