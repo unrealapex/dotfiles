@@ -41,8 +41,6 @@ bindkey '^H' backward-kill-word
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey "^X^E" edit-command-line
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
 
 autoload -Uz compinit promptinit
 compinit
