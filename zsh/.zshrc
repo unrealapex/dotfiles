@@ -117,6 +117,7 @@ alias uwu='echo uwu'
 alias icat='kitty +kitten icat'
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
+alias crankshaft='gamemoderun Downloads/crankshaft.AppImage &;disown'
 
 
 alias -- -='cd -'
