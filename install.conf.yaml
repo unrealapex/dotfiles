@@ -1,0 +1,31 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.icons: icons
+    ~/.xinitrc: xinitrc
+    ~/.zprofile: zprofile
+    ~/.zsh_plugins.txt: .zsh_plugins.txt
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.config:
+      glob: true
+      path: config/*
+      
+
+- create:
+    - ~/projects
+    - ~/Downloads/git
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [chsh -s $(which zsh), Making zsh the default shell]
+  - [xdg-user-dirs-update, Creating default user directories]
+  - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
