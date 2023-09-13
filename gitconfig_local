@@ -1,9 +1,0 @@
-# .gitconfig_local
-# this file is read by .gitconfig
-# uncomment the three lines below and add your git credentials
-
-# [user]
-#   name = yourname
-#   email = youremail@example.com
-
-# vim: set filetype=gitignore
