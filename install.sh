@@ -181,24 +181,6 @@ sed -e 's|Icon=.*|Icon=/home/aaron/.dotfiles/kitty/.config/kitty/kitty-icon.png|
 # FIXME: this has to be perfomred after initial setup
 # betterlockscreen --update ~/.dotfiles/sakura.png
 
-# set up Git commit information
-echo "Setting Git commit information..."
-echo -n "Enter the email address you want to use for commits: "
-read commitemail
-echo -n "Enter the name you want to use for commits: "
-read commitname
-
-
-if [ ! -z "$commitemail" ] && [ ! -z "$commitname" ]
-then
-  echo "[user]" > ~/.gitconfig_local
-  eval "echo \"  name = ${commitname}\" >> ~/.gitconfig_local"
-  eval "echo \"  email = ${commitemail}\" >> ~/.gitconfig_local"
-  echo "Created file ~/.gitconfig_local with commit information"
-else
-  echo "Git commit credentials not provided, skipped"
-fi
-
 # services
 systemctl enable gdm.service
 systemctl enable mpd.service
