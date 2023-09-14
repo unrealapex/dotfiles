@@ -167,6 +167,8 @@ sed -e 's|Icon=.*|Icon=/home/aaron/.dotfiles/kitty/.config/kitty/kitty-icon.png|
 # FIXME: this has to be perfomred after initial setup
 # betterlockscreen --update ~/.dotfiles/sakura.png
 
+cp ~/.dotfiles/.gitconfig_local ~
+
 # services
 systemctl enable gdm.service
 systemctl enable mpd.service
