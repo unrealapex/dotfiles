@@ -6,9 +6,9 @@
 # TODO: Add yes no prompts for dangerous operations
 
 # make sure script is not run as the root user
-if [[ "$(id -u)" -eq 0 ]] 
+if [[ "$(id -u)" -eq 0 ]]
 then
-  printf "%s\n" "please do not run this script as root" >&2  
+  printf "%s\n" "please do not run this script as root" >&2
   exit 1
 fi
 
@@ -36,7 +36,7 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 20/g' /etc/pacman.conf
 # enable colorful pacman output
 sudo sed -i '/# Color/s/^#//g' /etc/pacman.conf
 
-# allocate more cpu cores to make 
+# allocate more cpu cores to make
 avail_cores=$(($(nproc) + 1))
 sudo sed -i "s/# MAKEFLAGS=\"-j4\"/MAKEFLAGS=\"-j"$avail_cores"\"/g" /etc/makepkg.conf
 
@@ -53,22 +53,22 @@ model=$(grep "model name" /proc/cpuinfo | awk -F": " '{print $2}' | head -n 1)
 # Check if the CPU is Intel or AMD
 if [[ $vendor == "GenuineIntel" ]]; then
    echo "Detected CPU: Intel $model"
-   
+
    # Install the Intel microcode package
    sudo pacman -Syu --noconfirm --needed intel-ucode
-   
+
    # Activate the microcode update
    sudo grub-mkconfig -o /boot/grub/grub.cfg
-   
+
 elif [[ $vendor == "AuthenticAMD" ]]; then
    echo "Detected CPU: AMD $model"
-   
+
    # Install the AMD microcode package
    sudo pacman -Syu --noconfirm --needed amd-ucode
-   
+
    # Activate the microcode update
    sudo grub-mkconfig -o /boot/grub/grub.cfg
-   
+
 else
    echo "Unsupported CPU: $vendor $model"
 fi
@@ -159,20 +159,6 @@ nvim --headless "+Lazy! sync" +qa
 # anaconda
 echo "Installing Anaconda..."
 echo "You will need to accept its licence agreement to install it"
-
-# download install script from anaconda website and run it
-lynx \
-    --listonly \
-    --nonumbers  \
-    --dump https://www.anaconda.com/products/distribution |
-    grep -m1 --fixed-strings 'Linux-x86_64.sh' |
-    xargs wget --output-document anaconda-installer.sh && \
-# execute like this to prevent errors since script is interactive
-chmod +x anaconda-installer.sh && \
-./anaconda-installer.sh && \
-rm anaconda-installer.sh && \
-conda config --set auto_activate_base false
-
 
 # set custom icon for kitty
 sed -e 's|Icon=.*|Icon=/home/aaron/.dotfiles/kitty/.config/kitty/kitty-icon.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop

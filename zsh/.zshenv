@@ -14,7 +14,4 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export GLFW_IM_MODULE=ibus
 
-# TODO: add Anaconda to path
-path=("/home/aaron/anaconda3/bin" $path)
-
 export PATH
