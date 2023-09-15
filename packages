@@ -29,7 +29,7 @@ flameshot
 foomatic-db
 foomatic-db-engine
 foomatic-db-gutenprint-ppds
-foomatic-db-nonfree 
+foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 foomatic-db-ppds
 fortune-mod
@@ -138,6 +138,7 @@ nyancat
 obs-studio
 obsidian
 ocl-icd
+ookla-speedtest-bin
 openal
 openbsd-netcat
 opencl-icd-loader
@@ -186,7 +187,7 @@ xdg-utils
 xdotool
 xf86-input-libinput
 xorg
-xorg-twm 
+xorg-twm
 xorg-xinit
 zoom
 zsh
