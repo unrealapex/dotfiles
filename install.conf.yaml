@@ -26,6 +26,16 @@
     - ~/Downloads/git
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+- shell:
+    # scripts in scripts/ are for arch specific setup
+  - [bash scripts/pacman.sh, Installing packages]
+  - [bash scripts/microcode.sh, Installing appropriate microcode]
+  - [bash scripts/zsh-rehash.sh, Setting up Zsh command rehashing]
+  - [bash scripts/no-mouse-accel.sh, Disabling mouse acceleration]
+  - [bash scripts/bluetooh.sh, Enabling bluetooth]
+  - [bash scripts/services.sh, Enabling services]
+  - [bash scripts/groups.sh, Adding current user to needed groups]
+  - [bash scripts/gsettings.sh, Configuring GNOME settings]
   - [chsh -s $(which zsh), Making zsh the default shell]
   - [xdg-user-dirs-update, Creating default user directories]
   - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
