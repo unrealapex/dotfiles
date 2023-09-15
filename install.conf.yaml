@@ -28,7 +28,11 @@
   - [git submodule update --init --recursive, Installing submodules]
 - shell:
     # scripts in scripts/ are for arch specific setup
-  - [bash scripts/pacman.sh, Installing packages]
+  - 
+    command: bash scripts/pacman.sh
+    description: Installing packages
+    stdout: true
+    stderr: true
   - [bash scripts/microcode.sh, Installing appropriate microcode]
   - [bash scripts/zsh-rehash.sh, Setting up Zsh command rehashing]
   - [bash scripts/no-mouse-accel.sh, Disabling mouse acceleration]
