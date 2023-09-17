@@ -14,7 +14,6 @@ gsettings set org.gnome.desktop.input-sources show-all-sources true
 gsettings set org.gnome.desktop.wm.keybindings switch-applications []
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backwards []
 gsettings set org.gnome.desktop.wm.keybindings switch-windows ['<Alt>Tab']
-gsettings set org.gnome.desktop.wm.keybindings switch-windows ['<Alt>Tab']
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backwards ['<Shift><Alt>Tab']
 gsettings set org.gnome.desktop.wm.keybindings show-desktop ['<Super>d']
 
