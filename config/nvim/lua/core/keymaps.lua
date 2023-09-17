@@ -15,6 +15,10 @@ end
 -- vanilla buffer switcher
 -- vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
 
+-- formatting
+vim.keymap.set({ "n", "x" }, "<space>cf", function()
+  require("conform").format()
+end, bufopts)
 
 -- TODO: write this in lua
 -- find and replace on current selection
