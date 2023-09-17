@@ -324,6 +324,12 @@ return {
     dependencies = "hrsh7th/nvim-cmp"
   },
   {
+    "f3fora/cmp-spell",
+    event = { "InsertEnter" },
+    ft = { "markdown", "text", "html", "tex" },
+    dependencies = "hrsh7th/nvim-cmp"
+  },
+  {
     "L3MON4D3/LuaSnip",
     event = "InsertEnter",
     config = function()
