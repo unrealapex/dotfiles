@@ -6,3 +6,11 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Catppuccin-Mocha-Standard-M
 gsettings set org.gnome.desktop.interface clock-format '12h'
 gsettings set org.gnome.desktop.interface cursor-size 24
 gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic'
+
+gsettings set org.gnome.desktop.wm.keybindings switch-applications []
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backwards []
+gsettings set org.gnome.desktop.wm.keybindings switch-windows ['<Alt>Tab']
+gsettings set org.gnome.desktop.wm.keybindings switch-windows ['<Alt>Tab']
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backwards ['<Shift><Alt>Tab']
+gsettings set org.gnome.desktop.wm.keybindings show-desktop ['<Super>d']
+
