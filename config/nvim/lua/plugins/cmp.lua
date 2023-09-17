@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 require("cmp")
 
 -- Setup nvim-cmp.
