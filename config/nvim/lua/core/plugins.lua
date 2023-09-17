@@ -354,7 +354,6 @@ return {
   },
   {
     "stevearc/conform.nvim",
-    event = "LspAttach",
     opts = {
       formatters_by_ft = {
         -- FIXME: make sure that formatters uses spaces instead of tabs for formatting
