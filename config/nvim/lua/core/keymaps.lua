@@ -16,7 +16,7 @@ end
 -- vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
 
 -- formatting
-vim.keymap.set({ "n", "x" }, "<space>cf", function()
+vim.keymap.set({ "n" }, "<space>cf", function()
   require("conform").format()
 end, bufopts)
 
