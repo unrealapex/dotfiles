@@ -6,7 +6,7 @@
 export EDITOR=/usr/bin/nvim
 export TERMINAL="kitty"
 export TERMINAL_PROG="kitty"
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/brave
 
 # set ibus as input method framework
 export GTK_IM_MODULE=ibus
