@@ -1,3 +1,5 @@
+### This repository is now on GitLab: https://gitlab.com/UnrealApex/dotfiles
+
 # dotfiles
 
 ![screenshot of arch linux rice](rice.png)
