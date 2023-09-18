@@ -16,6 +16,7 @@
     ~/.zsh_plugins.txt: .zsh_plugins.txt
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.alsoftrc: alsoftrc
     ~/.config:
       glob: true
       path: config/*
