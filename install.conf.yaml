@@ -13,7 +13,7 @@
     ~/.icons: icons
     ~/.xinitrc: xinitrc
     ~/.zprofile: zprofile
-    ~/.zsh_plugins.txt: .zsh_plugins.txt
+    ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.alsoftrc: alsoftrc
