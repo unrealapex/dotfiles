@@ -6,7 +6,7 @@ de: gnome
 terminal: kitty
 shell: zsh
 editor: nvim
-font: hack
+font: san francisco mono
 colorscheme: catppuccin mocha
 ```
 
