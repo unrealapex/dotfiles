@@ -129,3 +129,9 @@ super + @period
 super + shift + x
 	betterlockscreen --lock
 
+XF86Audio{Raise,Lower}Volume
+  # TODO: make sure that volume is unmuted before increasing it
+  pactl set-sink-volume @DEFAULT_SINK@ {+10%,-10%}
+
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
