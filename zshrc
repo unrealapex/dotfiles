@@ -116,6 +116,8 @@ alias icat='kitty +kitten icat'
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias crankshaft='gamemoderun Downloads/crankshaft.AppImage &;disown'
+# chill study music with lofi girl
+alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
 
 
 alias -- -='cd -'
