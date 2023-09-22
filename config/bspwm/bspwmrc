@@ -39,4 +39,4 @@ killall -q polybar
 polybar &
 flameshot &
 
-discord --start-minimized
+discord --start-minimized --tray
