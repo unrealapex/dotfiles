@@ -7,6 +7,7 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Catppuccin-Mocha-Standard-M
 gsettings set org.gnome.desktop.interface clock-format '12h'
 gsettings set org.gnome.desktop.interface cursor-size 24
 gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic'
+gsettings set org.gnome.mutter check-alive-timeout 60000
 
 # gsettings set org.gnome.desktop.input-sources sources [('xkb', 'us'), ('ibus', 'mozc-on')]
 # gsettings set org.gnome.desktop.input-sources show-all-sources true
