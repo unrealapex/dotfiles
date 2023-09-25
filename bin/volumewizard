@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+# TODO: show a dunst notification with the volume
+main() {
+    case "$1" in
+      up)
+        # make sure volume is unmuted first or it will not change
+        pactl set-sink-mute @DEFAULT_SINK@ false
+        pactl set-sink-volume @DEFAULT_SINK@ +10%
+         ;;
+      down)
+        # make sure volume is unmuted first or it will not change
+        pactl set-sink-mute @DEFAULT_SINK@ false
+        pactl set-sink-volume @DEFAULT_SINK@ -10%
+         ;;
+      mute)
+          pactl set-sink-mute @DEFAULT_SINK@ toggle
+          ;;
+     *)
+         printf "volume <command>\n"
+         printf "          up \n"
+         printf "         down\n"
+    esac
+}
+
+main "$@"

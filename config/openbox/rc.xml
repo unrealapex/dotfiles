@@ -333,7 +333,55 @@
     </action>
   </keybind>
 
-    <!-- TODO: add more keybinds from sxhkdrc (media controls)-->
+  <keybind key="W-shift-x">
+    <action name="Execute">
+      <command>betterlockscreen --lock</command>
+    </action>
+  </keybind>
+
+  <keybind key="XF86AudioRaiseVolume">
+    <action name="Execute">
+      <command>volumewizard up</command>
+    </action>
+  </keybind>
+
+  <keybind key="XF86AudioLowerVolume">
+    <action name="Execute">
+      <command>volumewizard down</command>
+    </action>
+  </keybind>
+
+  <keybind key="XF86AudioMute">
+    <action name="Execute">
+      <command>volumewizard mute</command>
+    </action>
+  </keybind>
+
+  <keybind key="XF86MonBrightnessUp">
+    <action name="Execute">
+      <command>brightnessctl set +15%</command>
+    </action>
+  </keybind>
+
+  <keybind key="XF86MonBrightnessDown">
+    <action name="Execute">
+      <command>brightnessctl set 15%-</command>
+    </action>
+  </keybind>
+
+    <!-- TODO: figure out why this isn't working -->
+    <keybind key="XF86AudioMicMute">
+      <action name="Execute">
+        <command>pactl set-source-mute toggle</command>
+      </action>
+    </keybind>
+
+  <keybind key="XF86Search">
+    <action name="Execute">
+      <command>rofi -show drun</command>
+    </action>
+  </keybind>
+
 </keyboard>
 
 <mouse>
