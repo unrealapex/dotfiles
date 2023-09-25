@@ -16,6 +16,7 @@ main() {
          ;;
       mute)
           pactl set-sink-mute @DEFAULT_SINK@ toggle
+        notify-send "Muted volume"
           ;;
      *)
          printf "volume <command>\n"
