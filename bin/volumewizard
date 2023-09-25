@@ -8,17 +8,17 @@ main() {
         # make sure volume is unmuted first or it will not change
         pactl set-sink-mute @DEFAULT_SINK@ false
         pactl set-sink-volume @DEFAULT_SINK@ +2%
-        notify-send -r 9993 "Increased volume"
+        # notify-send -r 9993 "Increased volume"
          ;;
       down)
         # make sure volume is unmuted first or it will not change
         pactl set-sink-mute @DEFAULT_SINK@ false
         pactl set-sink-volume @DEFAULT_SINK@ -2%
-        notify-send -r 9993 "Decreased volume"
+        # notify-send -r 9993 "Decreased volume"
          ;;
       mute)
           pactl set-sink-mute @DEFAULT_SINK@ toggle
-        notify-send "Muted volume"
+        # notify-send "Muted volume"
           ;;
      *)
          printf "volume <command>\n"
