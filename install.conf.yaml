@@ -23,7 +23,9 @@
     ~/.local/bin:
       glob: true
       path: bin/*
-
+    ~/.themes:
+      glob: true
+      path: themes/*
 
 - create:
     - ~/projects
