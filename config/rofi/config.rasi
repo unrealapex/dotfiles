@@ -43,7 +43,7 @@ message {
 }
 
 inputbar {
-  color: @pink;
+  color: @mauve;
   padding: 11px;
   background-color: @surface0;
   border: 2px 2px 2px 2px;
@@ -88,7 +88,7 @@ element-text {
 }
 
 element selected.normal {
-  background-color: @pink;
+  background-color: @mauve;
   text-color: @base;
 }
 
@@ -166,7 +166,7 @@ button selected normal {
 
 error-message {
   expand: true;
-  background-color: @pink;
+  background-color: @mauve;
   border-color: @red;
   border: 2px;
   padding: 1em;

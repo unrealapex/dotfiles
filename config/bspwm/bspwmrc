@@ -34,7 +34,7 @@ xautolock -time 10 -locker "betterlockscreen --lock" &
 
 nm-applet --no-agent &
 
-feh --bg-scale ~/.dotfiles/alley.jpg
+feh --bg-fill ~/.dotfiles/fold.webp
 
 picom --daemon
 
