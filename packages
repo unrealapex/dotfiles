@@ -129,6 +129,7 @@ lynx
 man-db
 man-pages
 mangohud
+menumaker
 mesa
 mesa-utils
 mpd
@@ -148,6 +149,7 @@ noto-fonts-emoji
 npm
 ntp
 nyancat
+obconf
 obs-studio
 obsidian
 ocl-icd
