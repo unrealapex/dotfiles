@@ -156,14 +156,13 @@ launcher_item_app = google-chrome.desktop
 
 #-------------------------------------
 # Clock
-time1_format = %H:%M
-time2_format = %A %d %B
+time1_format = %m/%d/%Y - %I:%M %p
 time1_timezone =
 time2_timezone =
 clock_font_color = #ffffff 100
 clock_padding = 2 0
 clock_background_id = 0
-clock_tooltip =
+clock_tooltip = %A, %B %d
 clock_tooltip_timezone =
 clock_lclick_command =
 clock_rclick_command = orage
