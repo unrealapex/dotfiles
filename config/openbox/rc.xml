@@ -320,6 +320,9 @@
         <command>kitty</command>
       </action>
     </keybind>
+    <keybind key="W-F11">
+      <action name="Reconfigure"/>
+    </keybind>
     <keybind key="Print">
       <action name="Execute">
         <command>flameshot gui</command>
