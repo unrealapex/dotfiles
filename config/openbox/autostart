@@ -28,6 +28,7 @@ feh --bg-fill ~/.dotfiles/fold.webp
 
 picom --daemon
 
+tint2 &
 # terminate instances of polybar that are already running
 killall -q polybar
 polybar &
