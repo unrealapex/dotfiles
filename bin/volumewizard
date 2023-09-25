@@ -7,12 +7,12 @@ main() {
       up)
         # make sure volume is unmuted first or it will not change
         pactl set-sink-mute @DEFAULT_SINK@ false
-        pactl set-sink-volume @DEFAULT_SINK@ +10%
+        pactl set-sink-volume @DEFAULT_SINK@ +2%
          ;;
       down)
         # make sure volume is unmuted first or it will not change
         pactl set-sink-mute @DEFAULT_SINK@ false
-        pactl set-sink-volume @DEFAULT_SINK@ -10%
+        pactl set-sink-volume @DEFAULT_SINK@ -2%
          ;;
       mute)
           pactl set-sink-mute @DEFAULT_SINK@ toggle
