@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+    <menu id="root-menu" label="OpenBox 3">
+        <menu id="1" label="Development">
+            <item label="CMake"> <action name="Execute">
+                <execute>cmake-gui</execute>
+            </action> </item>
+            <item label="CMake curses GUI (ccmake)"> <action name="Execute">
+                <execute>xterm -e ccmake</execute>
+            </action> </item>
+            <item label="Electron 25"> <action name="Execute">
+                <execute>electron25</execute>
+            </action> </item>
+            <item label="Grapejuice"> <action name="Execute">
+                <execute>grapejuice-gui</execute>
+            </action> </item>
+            <item label="IDLE (Python IDE)"> <action name="Execute">
+                <execute>idle</execute>
+            </action> </item>
+            <item label="Python"> <action name="Execute">
+                <execute>xterm -e python</execute>
+            </action> </item>
+            <item label="Roblox Studio"> <action name="Execute">
+                <execute>grapejuice studio</execute>
+            </action> </item>
+            <item label="Visual Studio Code"> <action name="Execute">
+                <execute>code</execute>
+            </action> </item>
+        </menu>
+        <menu id="2" label="Editors">
+            <item label="AA Fire"> <action name="Execute">
+                <execute>xterm -e aafire -driver slang</execute>
+            </action> </item>
+            <item label="Neovim"> <action name="Execute">
+                <execute>xterm -e nvim</execute>
+            </action> </item>
+            <item label="Text Editor"> <action name="Execute">
+                <execute>gnome-text-editor</execute>
+            </action> </item>
+            <item label="Vi"> <action name="Execute">
+                <execute>xterm -e vi</execute>
+            </action> </item>
+            <item label="Vim"> <action name="Execute">
+                <execute>xterm -e vim</execute>
+            </action> </item>
+        </menu>
+        <menu id="8" label="Education">
+            <item label="Anki"> <action name="Execute">
+                <execute>anki</execute>
+            </action> </item>
+        </menu>
+        <menu id="18" label="Games">
+            <menu id="9" label="Adventure">
+                <item label="Sclient"> <action name="Execute">
+                    <execute>sclient</execute>
+                </action> </item>
+            </menu>
+            <menu id="17" label="Amusement">
+                <item label="Rain"> <action name="Execute">
+                    <execute>xterm -e rain</execute>
+                </action> </item>
+            </menu>
+            <menu id="10" label="Arcade">
+                <item label="PacMan"> <action name="Execute">
+                    <execute>pacman</execute>
+                </action> </item>
+            </menu>
+            <item label="Crankshaft(Krunker)"> <action name="Execute">
+                <execute>env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/4</execute>
+            </action> </item>
+            <item label="Genshin Impact"> <action name="Execute">
+                <execute>env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/5</execute>
+            </action> </item>
+            <item label="Krunker"> <action name="Execute">
+                <execute>env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/2</execute>
+            </action> </item>
+            <item label="Lutris"> <action name="Execute">
+                <execute>lutris</execute>
+            </action> </item>
+            <item label="osu!lazer"> <action name="Execute">
+                <execute>osu-lazer</execute>
+            </action> </item>
+            <item label="Portal 2"> <action name="Execute">
+                <execute>steam steam://rungameid/620</execute>
+            </action> </item>
+            <item label="Proton Experimental"> <action name="Execute">
+                <execute>steam steam://rungameid/1493710</execute>
+            </action> </item>
+            <item label="Roblox App"> <action name="Execute">
+                <execute>grapejuice app</execute>
+            </action> </item>
+            <item label="Steam Linux Runtime - Sniper"> <action name="Execute">
+                <execute>steam steam://rungameid/1628350</execute>
+            </action> </item>
+            <item label="Team Fortress 2"> <action name="Execute">
+                <execute>steam steam://rungameid/440</execute>
+            </action> </item>
+        </menu>
+        <menu id="6" label="Graphics">
+            <item label="Document Scanner"> <action name="Execute">
+                <execute>simple-scan</execute>
+            </action> </item>
+            <item label="Flameshot"> <action name="Execute">
+                <execute>flameshot</execute>
+            </action> </item>
+            <item label="FontForge"> <action name="Execute">
+                <execute>fontforge</execute>
+            </action> </item>
+            <item label="GNU Image Manipulation Program"> <action name="Execute">
+                <execute>gimp-2.10</execute>
+            </action> </item>
+            <item label="Image Viewer"> <action name="Execute">
+                <execute>eog</execute>
+            </action> </item>
+            <item label="Krita KDE Bitmap Graphics Editor"> <action name="Execute">
+                <execute>krita</execute>
+            </action> </item>
+            <item label="LibreOffice Draw"> <action name="Execute">
+                <execute>libreoffice --draw</execute>
+            </action> </item>
+            <item label="Photos"> <action name="Execute">
+                <execute>gnome-photos</execute>
+            </action> </item>
+            <item label="scanimage"> <action name="Execute">
+                <execute>xterm -e scanimage</execute>
+            </action> </item>
+            <item label="The GIMP"> <action name="Execute">
+                <execute>gimp</execute>
+            </action> </item>
+            <item label="XDvi"> <action name="Execute">
+                <execute>xdvi</execute>
+            </action> </item>
+            <item label="XGlyph"> <action name="Execute">
+                <execute>xglyph</execute>
+            </action> </item>
+        </menu>
+        <menu id="7" label="Multimedia">
+            <item label="ALSA mixer"> <action name="Execute">
+                <execute>xterm -e alsamixer</execute>
+            </action> </item>
+            <item label="Cheese"> <action name="Execute">
+                <execute>cheese</execute>
+            </action> </item>
+            <item label="Kdenlive"> <action name="Execute">
+                <execute>kdenlive</execute>
+            </action> </item>
+            <item label="mpv Media Player"> <action name="Execute">
+                <execute>mpv --player-operation-mode=pseudo-gui</execute>
+            </action> </item>
+            <item label="Music"> <action name="Execute">
+                <execute>gnome-music</execute>
+            </action> </item>
+            <item label="OBS Studio"> <action name="Execute">
+                <execute>obs</execute>
+            </action> </item>
+            <item label="PulseAudio Volume Control"> <action name="Execute">
+                <execute>pavucontrol</execute>
+            </action> </item>
+            <item label="Qt V4L2 test Utility"> <action name="Execute">
+                <execute>qv4l2</execute>
+            </action> </item>
+            <item label="Qt V4L2 video capture utility"> <action name="Execute">
+                <execute>qvidcap</execute>
+            </action> </item>
+            <item label="Spotify (Launcher)"> <action name="Execute">
+                <execute>spotify-launcher</execute>
+            </action> </item>
+            <item label="Videos"> <action name="Execute">
+                <execute>totem</execute>
+            </action> </item>
+        </menu>
+        <menu id="5" label="Network">
+            <item label="Avahi SSH Server Browser"> <action name="Execute">
+                <execute>bssh</execute>
+            </action> </item>
+            <item label="Avahi VNC Server Browser"> <action name="Execute">
+                <execute>bvnc</execute>
+            </action> </item>
+            <item label="Brave"> <action name="Execute">
+                <execute>brave</execute>
+            </action> </item>
+            <item label="Connections"> <action name="Execute">
+                <execute>gnome-connections</execute>
+            </action> </item>
+            <item label="Discord"> <action name="Execute">
+                <execute>discord</execute>
+            </action> </item>
+            <item label="FireFox"> <action name="Execute">
+                <execute>firefox</execute>
+            </action> </item>
+            <item label="GeForce NOW"> <action name="Execute">
+                <execute>/opt/geforcenow-electron/geforcenow-electron</execute>
+            </action> </item>
+            <item label="Google Chrome"> <action name="Execute">
+                <execute>google-chrome-stable</execute>
+            </action> </item>
+            <item label="Lynx"> <action name="Execute">
+                <execute>xterm -e lynx</execute>
+            </action> </item>
+            <item label="Remote Viewer"> <action name="Execute">
+                <execute>remote-viewer</execute>
+            </action> </item>
+            <item label="Steam (Runtime)"> <action name="Execute">
+                <execute>steam-runtime</execute>
+            </action> </item>
+            <item label="TkVNC"> <action name="Execute">
+                <execute>xterm -e tkvnc</execute>
+            </action> </item>
+            <item label="Tor Browser"> <action name="Execute">
+                <execute>torbrowser-launcher</execute>
+            </action> </item>
+            <item label="Tor Browser Launcher Settings"> <action name="Execute">
+                <execute>torbrowser-launcher --settings</execute>
+            </action> </item>
+            <item label="Web"> <action name="Execute">
+                <execute>epiphany</execute>
+            </action> </item>
+            <item label="Zoom"> <action name="Execute">
+                <execute>zoom</execute>
+            </action> </item>
+        </menu>
+        <menu id="3" label="Office">
+            <item label="Calendar"> <action name="Execute">
+                <execute>gnome-calendar</execute>
+            </action> </item>
+            <item label="Contacts"> <action name="Execute">
+                <execute>gnome-contacts</execute>
+            </action> </item>
+            <item label="Document Viewer"> <action name="Execute">
+                <execute>evince</execute>
+            </action> </item>
+            <item label="LibreOffice Calc"> <action name="Execute">
+                <execute>libreoffice --calc</execute>
+            </action> </item>
+            <item label="LibreOffice Impress"> <action name="Execute">
+                <execute>libreoffice</execute>
+            </action> </item>
+            <item label="LibreOffice Impress"> <action name="Execute">
+                <execute>libreoffice --impress</execute>
+            </action> </item>
+            <item label="LibreOffice Math"> <action name="Execute">
+                <execute>libreoffice --math</execute>
+            </action> </item>
+            <item label="LibreOffice Writer"> <action name="Execute">
+                <execute>libreoffice --writer</execute>
+            </action> </item>
+            <item label="Obsidian"> <action name="Execute">
+                <execute>obsidian</execute>
+            </action> </item>
+        </menu>
+        <menu id="19" label="Shells">
+            <item label="Console"> <action name="Execute">
+                <execute>kgx</execute>
+            </action> </item>
+            <item label="Files"> <action name="Execute">
+                <execute>nautilus</execute>
+            </action> </item>
+            <item label="GIT"> <action name="Execute">
+                <execute>xterm -e git</execute>
+            </action> </item>
+            <item label="kitty"> <action name="Execute">
+                <execute>kitty</execute>
+            </action> </item>
+            <item label="lf"> <action name="Execute">
+                <execute>xterm -e lf</execute>
+            </action> </item>
+            <item label="UXTerm"> <action name="Execute">
+                <execute>uxterm</execute>
+            </action> </item>
+            <item label="Xterm"> <action name="Execute">
+                <execute>xterm</execute>
+            </action> </item>
+        </menu>
+        <menu id="37" label="System">
+            <menu id="36" label="Settings">
+                <menu id="21" label="GNOME">
+                    <item label="Advanced Network Configuration"> <action name="Execute">
+                        <execute>nm-connection-editor</execute>
+                    </action> </item>
+                    <item label="Bluetooth Manager"> <action name="Execute">
+                        <execute>blueman-manager</execute>
+                    </action> </item>
+                    <item label="Settings"> <action name="Execute">
+                        <execute>gnome-control-center</execute>
+                    </action> </item>
+                    <item label="Themix/Oomox theme designer"> <action name="Execute">
+                        <execute>oomox-gui</execute>
+                    </action> </item>
+                </menu>
+                <menu id="35" label="Xfce">
+                    <item label="Bluetooth Adapters"> <action name="Execute">
+                        <execute>blueman-adapters</execute>
+                    </action> </item>
+                </menu>
+                <item label="CoreCtrl"> <action name="Execute">
+                    <execute>corectrl</execute>
+                </action> </item>
+                <item label="Customize Look and Feel"> <action name="Execute">
+                    <execute>lxappearance</execute>
+                </action> </item>
+                <item label="IBus Preferences"> <action name="Execute">
+                    <execute>ibus-setup</execute>
+                </action> </item>
+                <item label="Manage Printing"> <action name="Execute">
+                    <execute>xdg-open http://localhost:631/</execute>
+                </action> </item>
+                <item label="Polychromatic"> <action name="Execute">
+                    <execute>polychromatic-controller</execute>
+                </action> </item>
+                <item label="Print Settings"> <action name="Execute">
+                    <execute>system-config-printer</execute>
+                </action> </item>
+                <item label="Radeon Profile"> <action name="Execute">
+                    <execute>radeon-profile</execute>
+                </action> </item>
+                <item label="Rygel Preferences"> <action name="Execute">
+                    <execute>rygel-preferences</execute>
+                </action> </item>
+                <item label="Tint2 Settings"> <action name="Execute">
+                    <execute>tint2conf</execute>
+                </action> </item>
+            </menu>
+            <item label="Avahi Zeroconf Browser"> <action name="Execute">
+                <execute>avahi-discover</execute>
+            </action> </item>
+            <item label="Color Profile Viewer"> <action name="Execute">
+                <execute>gcm-viewer</execute>
+            </action> </item>
+            <item label="dconf Editor"> <action name="Execute">
+                <execute>dconf-editor</execute>
+            </action> </item>
+            <item label="Disk Usage Analyzer"> <action name="Execute">
+                <execute>baobab</execute>
+            </action> </item>
+            <item label="GDM flexiserver"> <action name="Execute">
+                <execute>gdmflexiserver</execute>
+            </action> </item>
+            <item label="GDM flexiserver in Xnest"> <action name="Execute">
+                <execute>gdmflexiserver -n</execute>
+            </action> </item>
+            <item label="GNOME System Monitor"> <action name="Execute">
+                <execute>gnome-system-monitor</execute>
+            </action> </item>
+            <item label="Hardware Locality lstopo"> <action name="Execute">
+                <execute>lstopo</execute>
+            </action> </item>
+            <item label="Htop"> <action name="Execute">
+                <execute>xterm -e htop</execute>
+            </action> </item>
+            <item label="KeePassXC"> <action name="Execute">
+                <execute>keepassxc</execute>
+            </action> </item>
+            <item label="Logs"> <action name="Execute">
+                <execute>gnome-logs</execute>
+            </action> </item>
+            <item label="OpenJDK Java 21 Console"> <action name="Execute">
+                <execute>jconsole</execute>
+            </action> </item>
+            <item label="OpenJDK Java 21 Shell"> <action name="Execute">
+                <execute>xterm -e jshell</execute>
+            </action> </item>
+            <item label="Parental Controls"> <action name="Execute">
+                <execute>malcontent-control</execute>
+            </action> </item>
+            <item label="Pstree"> <action name="Execute">
+                <execute>xterm -e pstree.x11</execute>
+            </action> </item>
+            <item label="pstree"> <action name="Execute">
+                <execute>xterm -e pstree</execute>
+            </action> </item>
+            <item label="pstree"> <action name="Execute">
+                <execute>xterm -e /usr/bin/pstree.x11</execute>
+            </action> </item>
+            <item label="Software"> <action name="Execute">
+                <execute>gnome-software</execute>
+            </action> </item>
+            <item label="TeXconfig"> <action name="Execute">
+                <execute>xterm -e texconfig</execute>
+            </action> </item>
+            <item label="Tint2"> <action name="Execute">
+                <execute>tint2</execute>
+            </action> </item>
+            <item label="Top"> <action name="Execute">
+                <execute>xterm -e top</execute>
+            </action> </item>
+            <item label="Virtual Machine Manager"> <action name="Execute">
+                <execute>virt-manager</execute>
+            </action> </item>
+            <item label="Xkill"> <action name="Execute">
+                <execute>xkill</execute>
+            </action> </item>
+            <item label="Xrefresh"> <action name="Execute">
+                <execute>xrefresh</execute>
+            </action> </item>
+        </menu>
+        <menu id="38" label="Utilities">
+            <item label="Bc"> <action name="Execute">
+                <execute>xterm -e bc</execute>
+            </action> </item>
+            <item label="Calculator"> <action name="Execute">
+                <execute>gnome-calculator</execute>
+            </action> </item>
+            <item label="Characters"> <action name="Execute">
+                <execute>gnome-characters</execute>
+            </action> </item>
+            <item label="Clocks"> <action name="Execute">
+                <execute>gnome-clocks</execute>
+            </action> </item>
+            <item label="Console Matrix (Text)"> <action name="Execute">
+                <execute>xterm -e cmatrix</execute>
+            </action> </item>
+            <item label="Console Matrix (Virtual Console)"> <action name="Execute">
+                <execute>xterm -e cmatrix -l</execute>
+            </action> </item>
+            <item label="Console Matrix (X11)"> <action name="Execute">
+                <execute>cmatrix -x</execute>
+            </action> </item>
+            <item label="Dc"> <action name="Execute">
+                <execute>xterm -e dc</execute>
+            </action> </item>
+            <item label="Disks"> <action name="Execute">
+                <execute>gnome-disks</execute>
+            </action> </item>
+            <item label="Endeavour"> <action name="Execute">
+                <execute>endeavour</execute>
+            </action> </item>
+            <item label="Extensions"> <action name="Execute">
+                <execute>gnome-extensions-app --gapplication-service</execute>
+            </action> </item>
+            <item label="Fonts"> <action name="Execute">
+                <execute>gnome-font-viewer</execute>
+            </action> </item>
+            <item label="Help"> <action name="Execute">
+                <execute>yelp</execute>
+            </action> </item>
+            <item label="Info"> <action name="Execute">
+                <execute>xterm -e info</execute>
+            </action> </item>
+            <item label="Maps"> <action name="Execute">
+                <execute>gapplication launch org.gnome.Maps</execute>
+            </action> </item>
+            <item label="picom"> <action name="Execute">
+                <execute>picom</execute>
+            </action> </item>
+            <item label="TeXdoctk"> <action name="Execute">
+                <execute>texdoctk</execute>
+            </action> </item>
+            <item label="Tour"> <action name="Execute">
+                <execute>gnome-tour</execute>
+            </action> </item>
+            <item label="Tweaks"> <action name="Execute">
+                <execute>gnome-tweaks</execute>
+            </action> </item>
+            <item label="Weather"> <action name="Execute">
+                <execute>gapplication launch org.gnome.Weather</execute>
+            </action> </item>
+            <item label="Winetricks"> <action name="Execute">
+                <execute>winetricks --gui</execute>
+            </action> </item>
+            <item label="Xev"> <action name="Execute">
+                <execute>xterm -e xev</execute>
+            </action> </item>
+            <item label="Xsetroot"> <action name="Execute">
+                <execute>xsetroot</execute>
+            </action> </item>
+        </menu>
+        <separator/>
+        <menu id="40" label="OpenBox">
+            <menu id="client-list-menu"/>
+            <item label="Reconfigure"> <action name="Reconfigure"/> </item>
+            <separator/>
+            <item label="Exit"> <action name="Exit"/> </item>
+        </menu>
+    </menu>
+</openbox_menu>

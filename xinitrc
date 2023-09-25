@@ -57,4 +57,4 @@ fi
 # change default cursor to a pointer
 xsetroot -cursor_name left_ptr
 
-bspwm
+openbox-session
