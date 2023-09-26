@@ -364,7 +364,6 @@
       </action>
     </keybind>
 
-    <!-- TODO: make sure that this is the right key -->
     <keybind key="XF86AudioPlay">
       <action name="Execute">
         <command>playerctl play-pause</command>
