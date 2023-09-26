@@ -56,5 +56,6 @@ fi
 
 # change default cursor to a pointer
 xsetroot -cursor_name left_ptr
+xrdb "$HOME"/.Xresources
 
 openbox-session
