@@ -328,7 +328,7 @@
         <command>flameshot gui</command>
       </action>
     </keybind>
-    <keybind key="W-space">
+    <keybind key="A-space">
       <action name="Execute">
         <command>rofi -show drun</command>
       </action>
