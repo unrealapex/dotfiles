@@ -58,11 +58,11 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
-      <size>8</size>
+      <size>10</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
@@ -363,25 +363,21 @@
         <command>volumewizard mute</command>
       </action>
     </keybind>
-
     <keybind key="XF86AudioPlay">
       <action name="Execute">
         <command>playerctl play-pause</command>
       </action>
     </keybind>
-
     <keybind key="XF86AudioNext">
       <action name="Execute">
         <command>playerctl next</command>
       </action>
     </keybind>
-
     <keybind key="XF86AudioPrev">
       <action name="Execute">
         <command>playerctl previous</command>
       </action>
     </keybind>
-
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
         <command>brightnessctl set +15%</command>
@@ -403,7 +399,6 @@
         <command>rofi -show drun</command>
       </action>
     </keybind>
-
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
