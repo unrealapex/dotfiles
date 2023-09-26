@@ -36,4 +36,6 @@ killall -q polybar
 polybar &
 flameshot &
 
+ibus-daemon -rxR &
+
 discord --start-minimized --tray
