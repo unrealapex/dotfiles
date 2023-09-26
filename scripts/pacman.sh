@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo pacman -Syu --noconfirm
-sudo pacman -S git --noconfirm
+sudo pacman -S git --noconfirm --needed
 
 # yay
 mkdir --parents ~/Downloads/git
