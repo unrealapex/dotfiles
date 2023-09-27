@@ -1,6 +1,6 @@
 #!/bin/bash
 
-systemctl enable ly.service
+systemctl enable gdm.service
 systemctl enable mpd.service
 systemctl --user disable pulseaudio.socket pulseaudio.service
 systemctl --user enable pipewire.socket pipewire-pulse.socket wireplumber.service
