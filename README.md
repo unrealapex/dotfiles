@@ -7,7 +7,7 @@ bar: polybar
 launcher: rofi
 terminal: kitty
 shell: zsh
-editor: nvim
+editor: neovim
 font: san francisco mono
 notification daemon: dunst
 colorscheme: catppuccin mocha
