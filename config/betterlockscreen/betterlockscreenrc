@@ -13,29 +13,29 @@ wallpaper_cmd="feh --bg-fill"
 quiet=false
 
 # default theme
-loginbox=00000066
-loginshadow=00000000
+loginbox=11111b66
+loginshadow=11111bff
 locktext="Type password to unlock..."
 font="sans-serif"
 ringcolor=ffffffff
-insidecolor=00000000
-separatorcolor=00000000
+insidecolor=11111bff
+separatorcolor=11111bff
 ringvercolor=ffffffff
-insidevercolor=00000000
+insidevercolor=11111bff
 ringwrongcolor=ffffffff
-insidewrongcolor=d23c3dff
+insidewrongcolor=f38ba8ff
 timecolor=ffffffff
 time_format="%l:%M:%S"
 greetercolor=ffffffff
 layoutcolor=ffffffff
-keyhlcolor=d23c3dff
-bshlcolor=d23c3dff
+keyhlcolor=cba6f7ff
+bshlcolor=cba6f7ff
 veriftext="Verifying..."
 verifcolor=ffffffff
 wrongtext="Failure!"
-wrongcolor=d23c3dff
-modifcolor=d23c3dff
-bgcolor=000000ff
+wrongcolor=f38ba8ff
+modifcolor=f38ba8ff
+bgcolor=11111bff
 
 
 #
