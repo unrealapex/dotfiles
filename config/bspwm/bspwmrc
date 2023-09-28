@@ -27,6 +27,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Spotify desktop='^10'
 bspc rule -a KeePassXC desktop='^9'
 bspc rule -a zoom state=floating center=on follow=on border=off
+bspc rule -a hl2_linux state=fullscreen
 bspc rule -a '*:*:Picture in picture' state=floating
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
