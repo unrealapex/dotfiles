@@ -1,5 +1,5 @@
 configuration {
-  show-icons: false;
+  show-icons: true;
   disable-history: false;
   click-to-exit: true;
   location: 0;
