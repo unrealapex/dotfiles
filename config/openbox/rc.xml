@@ -662,11 +662,13 @@
       <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
+          <wrap>no</wrap>
         </action>
       </mousebind>
       <mousebind button="Down" action="Click">
         <action name="GoToDesktop">
           <to>next</to>
+          <wrap>no</wrap>
         </action>
       </mousebind>
       <mousebind button="A-Up" action="Click">
