@@ -173,7 +173,7 @@ launcher_item_app = /usr/share/applications/org.keepassxc.KeePassXC.desktop
 
 #-------------------------------------
 # Clock
-time1_format = %m/%d/%Y - %I:%M %p
+time1_format = %m/%d/%Y - %-I:%M %p
 time2_format =
 time1_timezone =
 time2_timezone =
