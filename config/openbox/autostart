@@ -32,10 +32,12 @@ picom --daemon
 
 playerctld daemon &
 
+conky &
+
 tint2 &
 # terminate instances of polybar that are already running
-killall -q polybar
-polybar &
+# killall -q polybar
+# polybar &
 flameshot &
 
 ibus-daemon -rxR &
