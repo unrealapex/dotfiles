@@ -15,6 +15,7 @@ brave-bin
 bridge-utils
 bspwm
 catppuccin-gtk-theme-mocha
+cbatticon
 cbonsai
 cheese
 cmake
@@ -213,7 +214,7 @@ xf86-input-libinput
 xorg
 xorg-twm
 xorg-xinit
-yt-dlp
 xss-lock
+yt-dlp
 zoom
 zsh

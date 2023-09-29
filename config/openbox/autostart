@@ -24,6 +24,7 @@ xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "betterlockscreen --lock" &
 
 nm-applet --no-agent &
+cbatticon &
 
 feh --bg-fill ~/.dotfiles/fold.webp
 
