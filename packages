@@ -160,6 +160,7 @@ openal
 openbsd-netcat
 opencl-icd-loader
 openrazer-daemon
+pamixer
 pastel
 pavucontrol
 pfetch
@@ -214,6 +215,7 @@ xdotool
 xf86-input-libinput
 xorg
 xorg-twm
+xorg-xclock
 xorg-xinit
 xss-lock
 yt-dlp
