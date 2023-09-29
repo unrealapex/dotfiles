@@ -3,7 +3,6 @@ set cleaner ~/.config/lf/cleaner
 set shellopts '-eu'
 set ifs "\n"
 set icons
-set hidden true
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set ignorecase true
 set scrolloff 10
