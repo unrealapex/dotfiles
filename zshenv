@@ -16,4 +16,6 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export GLFW_IM_MODULE=ibus
 
+export SDL_VIDEO_X11_DGAMOUSE=0
+
 export PATH
