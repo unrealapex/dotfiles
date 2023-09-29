@@ -162,6 +162,7 @@ opencl-icd-loader
 openrazer-daemon
 pastel
 pavucontrol
+pfetch
 picom-git
 pipewire
 pipewire-alsa
