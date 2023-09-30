@@ -7,6 +7,7 @@ send_notification() {
   volume=$(pamixer --get-volume)
   # curl $(playerctl metadata | grep artUrl | awk '{ print $3 }') > /tmp/album_art.jpeg
 
+  # TODO: add volume indicator images to make notifications look nicer
   dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "foo" "Volume: ${volume}%" -t 2000
 }
 
