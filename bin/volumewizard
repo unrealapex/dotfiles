@@ -1,30 +1,33 @@
 #!/bin/bash
 
+# Increment, decrement, or mute the volume and send a notification
+# of the current volume level.
 
-# TODO: show a dunst notification with the volume
-main() {
-    case "$1" in
-      up)
-        # make sure volume is unmuted first or it will not change
-        pactl set-sink-mute @DEFAULT_SINK@ false
-        pactl set-sink-volume @DEFAULT_SINK@ +2%
-        # notify-send -r 9993 "Increased volume"
-         ;;
-      down)
-        # make sure volume is unmuted first or it will not change
-        pactl set-sink-mute @DEFAULT_SINK@ false
-        pactl set-sink-volume @DEFAULT_SINK@ -2%
-        # notify-send -r 9993 "Decreased volume"
-         ;;
-      mute)
-          pactl set-sink-mute @DEFAULT_SINK@ toggle
-        # notify-send "Muted volume"
-          ;;
-     *)
-         printf "volume <command>\n"
-         printf "          up \n"
-         printf "         down\n"
-    esac
+send_notification() {
+  volume=$(pamixer --get-volume)
+  # curl $(playerctl metadata | grep artUrl | awk '{ print $3 }') > /tmp/album_art.jpeg
+
+  dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "foo" "Volume: ${volume}%" -t 2000
 }
 
-main "$@"
+case $1 in
+up)
+  # Set the volume on (if it was muted)
+  pamixer -u
+  pamixer -i 2 --allow-boost
+  send_notification "$1"
+  ;;
+down)
+  pamixer -u
+  pamixer -d 2 --allow-boost
+  send_notification "$1"
+  ;;
+mute)
+  pamixer -t
+  if eval "$(pamixer --get-mute)"; then
+    dunstify -a "changevolume" -t 2000 -r 9993 -u low -i "volume-mute" "Muted"
+  else
+    send_notification up
+  fi
+  ;;
+esac
