@@ -38,7 +38,7 @@ tint2 &
 # terminate instances of polybar that are already running
 # killall -q polybar
 # polybar &
-flameshot &
+# flameshot &
 
 ibus-daemon -rxR &
 
