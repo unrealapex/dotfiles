@@ -12,7 +12,6 @@
     ~/.gitconfig: gitconfig
     ~/.icons: icons
     ~/.xinitrc: xinitrc
-    ~/.Xresources: Xresources
     ~/.zprofile: zprofile
     ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshenv: zshenv
