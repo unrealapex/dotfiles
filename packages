@@ -33,6 +33,7 @@ ffmpeg
 figlet
 firefox
 flameshot
+font-manager
 foomatic-db
 foomatic-db-engine
 foomatic-db-gutenprint-ppds
@@ -60,6 +61,7 @@ gst-plugins-ugly
 gstreamer-vaapi
 gtk3
 gutenprint
+guvcview
 htop
 hwinfo
 hyperfine
@@ -173,6 +175,7 @@ rofi
 rofi-emoji
 shellcheck
 sl
+speedcrunch
 spotify-launcher
 sqlite
 steam
