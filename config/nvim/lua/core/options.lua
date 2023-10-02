@@ -94,21 +94,6 @@ vim.g.did_load_filetypes = 0
 -- set the mapleader to space
 vim.g.mapleader = " "
 
--- declare before indent-blankline is loaded
-vim.g.indent_blankline_filetype_exclude = {
-  "help",
-  "startify",
-  "dashboard",
-  "packer",
-  "neogitstatus",
-  "NvimTree",
-  "Trouble",
-  "WhichKey",
-  "lsp-installer",
-  "mason",
-  "text",
-  "sh"
-}
 
 vim.g["rainbow#pairs"] = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
 
