@@ -190,11 +190,38 @@ return {
   -- indent guides
   {
     "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
       show_current_context = true,
       show_current_context_start = true,
+      exclude = {
+        filetypes = {
+          "''",
+          "TelescopePrompt",
+          "TelescopeResults",
+          "checkhealth",
+          "gitcommit",
+          "help",
+          "lspinfo",
+          "man",
+          "packer",
+          "NvimTree",
+          "Trouble",
+          "WhichKey",
+          "dashboard",
+          "help",
+          "lsp-installer",
+          "mason",
+          "neogitstatus",
+          "packer",
+          "sh",
+          "startify",
+          "text",
+        }
+      }
+
     }
   },
   -- zen mode
