@@ -17,5 +17,6 @@ export XMODIFIERS=@im=ibus
 export GLFW_IM_MODULE=ibus
 
 export SDL_VIDEO_X11_DGAMOUSE=0
+export UBUNTU_MENUPROXY=''
 
 export PATH
