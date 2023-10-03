@@ -29,6 +29,7 @@ dnsmasq
 dunst
 faudio
 feh
+fff
 ffmpeg
 figlet
 firefox
@@ -201,6 +202,7 @@ virt-manager
 virt-viewer
 vkd3d
 vulkan-icd-loader
+w3m
 webp-pixbuf-loader
 wget
 wine-mono
