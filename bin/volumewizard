@@ -1,14 +1,9 @@
 #!/bin/bash
 
-# Increment, decrement, or mute the volume and send a notification
-# of the current volume level.
-
 send_notification() {
   volume=$(pamixer --get-volume)
   # curl $(playerctl metadata | grep artUrl | awk '{ print $3 }') > /tmp/album_art.jpeg
-
-  # TODO: add volume indicator images to make notifications look nicer
-  dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "foo" "Volume: ${volume}%" -t 2000
+  dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-$1.svg "Volume: ${volume}%" -t 2000
 }
 
 case $1 in
@@ -26,7 +21,7 @@ down)
 mute)
   pamixer -t
   if eval "$(pamixer --get-mute)"; then
-    dunstify -a "changevolume" -t 2000 -r 9993 -u low -i "volume-mute" "Muted"
+    dunstify -a "changevolume" -t 2000 -r 9993 -u low -i ~/.icons/icons/volume/volume-mute.svg "Muted"
   else
     send_notification up
   fi

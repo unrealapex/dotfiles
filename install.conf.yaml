@@ -10,7 +10,7 @@
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
-    ~/.icons: icons
+    ~/.local/share/icons: icons
     ~/.xinitrc: xinitrc
     ~/.zprofile: zprofile
     ~/.zsh_plugins.txt: zsh_plugins.txt
