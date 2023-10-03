@@ -2,7 +2,6 @@
 
 send_notification() {
   volume=$(pamixer --get-volume)
-  # curl $(playerctl metadata | grep artUrl | awk '{ print $3 }') > /tmp/album_art.jpeg
 
   if  (( volume <= 10 ))
   then
