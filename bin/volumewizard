@@ -3,7 +3,23 @@
 send_notification() {
   volume=$(pamixer --get-volume)
   # curl $(playerctl metadata | grep artUrl | awk '{ print $3 }') > /tmp/album_art.jpeg
-  dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-$1.svg "Volume: ${volume}%" -t 2000
+
+  if  (( volume <= 10 ))
+  then
+    dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-low.svg "Volume: ${volume}%" -t 2000
+  elif (( volume >= 10 && volume <= 20 ))
+  then
+    dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-medium.svg "Volume: ${volume}%" -t 2000
+  elif (( volume >= 60))
+  then
+    dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-dangerous.svg "Volume: ${volume}%" -t 2000
+  else
+    dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-high.svg "Volume: ${volume}%" -t 2000
+  fi
+
+
+
+  # dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-$1.svg "Volume: ${volume}%" -t 2000
 }
 
 case $1 in
