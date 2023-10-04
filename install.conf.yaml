@@ -52,4 +52,4 @@
   - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
   - [cp --no-clobber gitconfig_local ~/.gitconfig_local, Creating local gitconfig]
     # TODO: see if you can set this to $USER, not sure if variables will expand
-  - [sed -e 's|Icon=.*|Icon=/home/aaron/.dotfiles/config/kitty/kitty-icon.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop, Setting custom icon for Kitty]
+  - [sed -e 's|Icon=.*|Icon=/home/aaron/.dotfiles/config/kitty/kitty.app.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop, Setting custom icon for Kitty]
