@@ -7,7 +7,7 @@ send_notification() {
                 dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-low.svg "Volume: ${volume}%" -t 2000
         elif ((volume >= 10 && volume <= 20)); then
                 dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-medium.svg "Volume: ${volume}%" -t 2000
-        elif ((volume >= 60)); then
+        elif ((volume >= 90)); then
                 dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-dangerous.svg "Volume: ${volume}%" -t 2000
         else
                 dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-high.svg "Volume: ${volume}%" -t 2000
