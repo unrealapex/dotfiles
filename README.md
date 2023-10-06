@@ -8,7 +8,7 @@ launcher: rofi
 terminal: kitty
 shell: zsh
 editor: neovim
-font: san francisco mono
+font: san francisco
 notification daemon: dunst
 colorscheme: catppuccin mocha
 ```
