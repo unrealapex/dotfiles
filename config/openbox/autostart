@@ -32,7 +32,7 @@ picom --daemon
 
 playerctld daemon &
 
-conky &
+# conky &
 
 tint2 &
 # terminate instances of polybar that are already running
