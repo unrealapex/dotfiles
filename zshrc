@@ -114,6 +114,8 @@ alias open='xdg-open > /dev/null 2>&1'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 alias icat='kitty +kitten icat'
+alias connect="kitty +kitten ssh"
+alias theme="kitty +kitten themes --reload-in=all"
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias crankshaft='gamemoderun ~/Downloads/crankshaft.AppImage &;disown'
