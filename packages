@@ -154,6 +154,7 @@ obconf
 obs-studio
 obsidian
 ocl-icd
+ocrmypdf
 ookla-speedtest-bin
 openal
 openbsd-netcat
@@ -187,6 +188,9 @@ steam
 stow
 sxhkd
 system-config-printer
+tesseract
+tesseract-data-eng
+tesseract-data-jpn
 texlive
 tlp
 tmux
