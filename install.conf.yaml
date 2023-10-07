@@ -17,6 +17,7 @@
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.alsoftrc: alsoftrc
+    ~/.drirc: drirc
     ~/.config:
       glob: true
       path: config/*
