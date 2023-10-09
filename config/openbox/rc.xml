@@ -264,6 +264,33 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
+    <!-- Keybindings for window snapping -->
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="Raise"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <x>0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="Raise"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <x>50%</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Unmaximize"/>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="Maximize"/>
+    </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
