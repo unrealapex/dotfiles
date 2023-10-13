@@ -31,6 +31,8 @@
 - create:
     - ~/projects
     - ~/Downloads/git
+    - ~/Pictures/Webcam/
+    - ~/Pictures/Screenshots/
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 - shell:
