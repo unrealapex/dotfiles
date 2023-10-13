@@ -26,6 +26,7 @@ xautolock -time 10 -locker "idle-lock" &
 nm-applet --no-agent &
 cbatticon &
 
+# TODO: use a different wallpaper
 feh --bg-fill ~/.dotfiles/fold.webp
 
 picom --daemon
