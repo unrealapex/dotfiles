@@ -118,6 +118,7 @@ alias connect="kitty +kitten ssh"
 alias theme="kitty +kitten themes --reload-in=all"
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
+alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 alias crankshaft='gamemoderun ~/Downloads/crankshaft.AppImage &;disown'
 # chill study music with lofi girl
 alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
