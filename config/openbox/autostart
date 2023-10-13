@@ -21,7 +21,7 @@
 autorandr --change
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
-xautolock -time 10 -locker "betterlockscreen --lock" &
+xautolock -time 10 -locker "idle-lock" &
 
 nm-applet --no-agent &
 cbatticon &
