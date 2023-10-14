@@ -25,13 +25,13 @@ profile_path=/home/aaron
 #video name
 video_name=my_video.mkv
 #video path
-video_path=/home/aaron
+video_path=/home/aaron/Videos/Webcam/
 #video sufix flag
 video_sufix=1
 #photo name
 photo_name=my_photo.jpg
 #photo path
-photo_path=/home/aaron
+photo_path=/home/aaron/Pictures/Webcam/
 #photo sufix flag
 photo_sufix=1
 #fps numerator (def. 1)
