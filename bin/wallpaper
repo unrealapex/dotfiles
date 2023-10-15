@@ -1,0 +1,4 @@
+#!/bin/bash
+feh --bg-scale "$1"
+betterlockscreen --update "$1"
+notify-send --icon "$1" "Wallpaper updated"
