@@ -1,0 +1,24 @@
+#!/bin/bash
+
+image_path=/tmp/screenshot.png
+cp $image_path $image_path.old
+
+case $1 in
+selection)
+        maim --select --quality 10 $image_path
+        ;;
+full)
+        maim --quality 10 $image_path
+        ;;
+*)
+        notify-send "Screenshot: unknown argument given"
+        ;;
+esac
+
+# TODO: notify-send action that shows image on right click(with kitty icat)
+
+# prevent notification and clipboard copying if a screenshot hasn't been taken
+if ! cmp -s "$image_path" "$image_path.old"; then
+        xclip -selection clipboard -t image/png -i $image_path
+        notify-send --icon $image_path "Screenshot taken"
+fi

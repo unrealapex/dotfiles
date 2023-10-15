@@ -350,7 +350,13 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>flameshot gui</command>
+        <command>screenshot selection</command>
+      </action>
+    </keybind>
+
+    <keybind key="S-Print">
+      <action name="Execute">
+        <command>screenshot full</command>
       </action>
     </keybind>
     <keybind key="A-space">
