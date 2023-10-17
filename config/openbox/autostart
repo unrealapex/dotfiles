@@ -20,6 +20,7 @@
 # monitor magic
 autorandr --change
 betterlockscreen --update ~/.dotfiles/fold.webp &
+feh --bg-fill ~/.dotfiles/street.png
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
