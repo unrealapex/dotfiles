@@ -115,7 +115,8 @@ element normal urgent {
   foreground: @maroon;
 }
 
-element alternate normal {
+element alternate normal,
+element normal normal {
   text-color: @text;
   background-color: @base;
 }
@@ -138,11 +139,6 @@ element selected urgent {
   foreground: @base;
 }
 
-element normal normal {
-  text-color: @text;
-  background-color: @base;
-
-}
 
 vertb {
   expand: false;
