@@ -8,14 +8,14 @@ configuration {
 @import "colors.rasi"
 
 * {
-  font: "Source Code Pro 10";
+  font: "Source Code Pro 12";
 }
 
 window {
   location: center;
   anchor: center;
   transparency: "real";
-  padding: 10px;
+  padding: 12px;
   border: 0px;
   border-radius: 10px;
   color: @lavender;
@@ -74,7 +74,7 @@ listview {
 }
 
 element {
-  padding: 3px;
+  padding: 6px;
   vertical-align: 0.5;
   border-radius: 4px;
   background-color: @red;
