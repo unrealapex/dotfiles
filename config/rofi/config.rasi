@@ -1,3 +1,5 @@
+/* TODO: change font faces to look nicer */
+
 configuration {
   show-icons: true;
   disable-history: false;
@@ -14,6 +16,7 @@ configuration {
 window {
   location: center;
   anchor: center;
+  width: 30%;
   transparency: "real";
   padding: 10px;
   border: 0px;
