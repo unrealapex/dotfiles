@@ -11,6 +11,9 @@
             <item label="Electron 25"> <action name="Execute">
                 <execute>electron25</execute>
             </action> </item>
+            <item label="GDB"> <action name="Execute">
+                <execute>xterm -e gdb</execute>
+            </action> </item>
             <item label="Grapejuice"> <action name="Execute">
                 <execute>grapejuice-gui</execute>
             </action> </item>
@@ -20,11 +23,26 @@
             <item label="Python"> <action name="Execute">
                 <execute>xterm -e python</execute>
             </action> </item>
+            <item label="Python (v2.7)"> <action name="Execute">
+                <execute>xterm -e python2.7</execute>
+            </action> </item>
+            <item label="Qt Assistant"> <action name="Execute">
+                <execute>assistant</execute>
+            </action> </item>
+            <item label="Qt Designer"> <action name="Execute">
+                <execute>designer</execute>
+            </action> </item>
+            <item label="Qt Linguist"> <action name="Execute">
+                <execute>linguist</execute>
+            </action> </item>
+            <item label="Qt QDBusViewer"> <action name="Execute">
+                <execute>qdbusviewer</execute>
+            </action> </item>
             <item label="Roblox Studio"> <action name="Execute">
                 <execute>grapejuice studio</execute>
             </action> </item>
-            <item label="Visual Studio Code"> <action name="Execute">
-                <execute>code</execute>
+            <item label="Tclsh8.6"> <action name="Execute">
+                <execute>xterm -e tclsh8.6</execute>
             </action> </item>
         </menu>
         <menu id="2" label="Editors">
@@ -33,9 +51,6 @@
             </action> </item>
             <item label="Neovim"> <action name="Execute">
                 <execute>xterm -e nvim</execute>
-            </action> </item>
-            <item label="Text Editor"> <action name="Execute">
-                <execute>gnome-text-editor</execute>
             </action> </item>
             <item label="Vi"> <action name="Execute">
                 <execute>xterm -e vi</execute>
@@ -59,20 +74,26 @@
                 <item label="Rain"> <action name="Execute">
                     <execute>xterm -e rain</execute>
                 </action> </item>
+                <item label="Xclock (analog)"> <action name="Execute">
+                    <execute>xclock -analog</execute>
+                </action> </item>
+                <item label="Xclock (digital)"> <action name="Execute">
+                    <execute>xclock -digital -update 1</execute>
+                </action> </item>
             </menu>
             <menu id="10" label="Arcade">
                 <item label="PacMan"> <action name="Execute">
                     <execute>pacman</execute>
                 </action> </item>
             </menu>
+            <item label="Counter-Strike 2"> <action name="Execute">
+                <execute>steam steam://rungameid/730</execute>
+            </action> </item>
             <item label="Crankshaft(Krunker)"> <action name="Execute">
                 <execute>env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/4</execute>
             </action> </item>
             <item label="Genshin Impact"> <action name="Execute">
                 <execute>env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/5</execute>
-            </action> </item>
-            <item label="Krunker"> <action name="Execute">
-                <execute>env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/2</execute>
             </action> </item>
             <item label="Lutris"> <action name="Execute">
                 <execute>lutris</execute>
@@ -97,9 +118,6 @@
             </action> </item>
         </menu>
         <menu id="6" label="Graphics">
-            <item label="Document Scanner"> <action name="Execute">
-                <execute>simple-scan</execute>
-            </action> </item>
             <item label="Flameshot"> <action name="Execute">
                 <execute>flameshot</execute>
             </action> </item>
@@ -109,20 +127,17 @@
             <item label="GNU Image Manipulation Program"> <action name="Execute">
                 <execute>gimp-2.10</execute>
             </action> </item>
-            <item label="Image Viewer"> <action name="Execute">
-                <execute>eog</execute>
+            <item label="GraphicsMagick"> <action name="Execute">
+                <execute>gm display logo:</execute>
+            </action> </item>
+            <item label="Inkscape"> <action name="Execute">
+                <execute>inkscape</execute>
             </action> </item>
             <item label="Krita KDE Bitmap Graphics Editor"> <action name="Execute">
                 <execute>krita</execute>
             </action> </item>
             <item label="LibreOffice Draw"> <action name="Execute">
                 <execute>libreoffice --draw</execute>
-            </action> </item>
-            <item label="Photos"> <action name="Execute">
-                <execute>gnome-photos</execute>
-            </action> </item>
-            <item label="scanimage"> <action name="Execute">
-                <execute>xterm -e scanimage</execute>
             </action> </item>
             <item label="The GIMP"> <action name="Execute">
                 <execute>gimp</execute>
@@ -141,14 +156,14 @@
             <item label="Cheese"> <action name="Execute">
                 <execute>cheese</execute>
             </action> </item>
+            <item label="guvcview"> <action name="Execute">
+                <execute>guvcview</execute>
+            </action> </item>
             <item label="Kdenlive"> <action name="Execute">
                 <execute>kdenlive</execute>
             </action> </item>
             <item label="mpv Media Player"> <action name="Execute">
                 <execute>mpv --player-operation-mode=pseudo-gui</execute>
-            </action> </item>
-            <item label="Music"> <action name="Execute">
-                <execute>gnome-music</execute>
             </action> </item>
             <item label="OBS Studio"> <action name="Execute">
                 <execute>obs</execute>
@@ -162,11 +177,8 @@
             <item label="Qt V4L2 video capture utility"> <action name="Execute">
                 <execute>qvidcap</execute>
             </action> </item>
-            <item label="Spotify (Launcher)"> <action name="Execute">
-                <execute>spotify-launcher</execute>
-            </action> </item>
-            <item label="Videos"> <action name="Execute">
-                <execute>totem</execute>
+            <item label="Spotify"> <action name="Execute">
+                <execute>spotify</execute>
             </action> </item>
         </menu>
         <menu id="5" label="Network">
@@ -179,17 +191,11 @@
             <item label="Brave"> <action name="Execute">
                 <execute>brave</execute>
             </action> </item>
-            <item label="Connections"> <action name="Execute">
-                <execute>gnome-connections</execute>
-            </action> </item>
             <item label="Discord"> <action name="Execute">
                 <execute>discord</execute>
             </action> </item>
             <item label="FireFox"> <action name="Execute">
                 <execute>firefox</execute>
-            </action> </item>
-            <item label="GeForce NOW"> <action name="Execute">
-                <execute>/opt/geforcenow-electron/geforcenow-electron</execute>
             </action> </item>
             <item label="Google Chrome"> <action name="Execute">
                 <execute>google-chrome-stable</execute>
@@ -212,23 +218,17 @@
             <item label="Tor Browser Launcher Settings"> <action name="Execute">
                 <execute>torbrowser-launcher --settings</execute>
             </action> </item>
-            <item label="Web"> <action name="Execute">
-                <execute>epiphany</execute>
+            <item label="W3m"> <action name="Execute">
+                <execute>xterm -e w3m</execute>
+            </action> </item>
+            <item label="w3m"> <action name="Execute">
+                <execute>xterm -e w3m /usr/share/doc/w3m/MANUAL.html</execute>
             </action> </item>
             <item label="Zoom"> <action name="Execute">
                 <execute>zoom</execute>
             </action> </item>
         </menu>
         <menu id="3" label="Office">
-            <item label="Calendar"> <action name="Execute">
-                <execute>gnome-calendar</execute>
-            </action> </item>
-            <item label="Contacts"> <action name="Execute">
-                <execute>gnome-contacts</execute>
-            </action> </item>
-            <item label="Document Viewer"> <action name="Execute">
-                <execute>evince</execute>
-            </action> </item>
             <item label="LibreOffice Calc"> <action name="Execute">
                 <execute>libreoffice --calc</execute>
             </action> </item>
@@ -247,14 +247,11 @@
             <item label="Obsidian"> <action name="Execute">
                 <execute>obsidian</execute>
             </action> </item>
+            <item label="Zathura"> <action name="Execute">
+                <execute>zathura</execute>
+            </action> </item>
         </menu>
         <menu id="19" label="Shells">
-            <item label="Console"> <action name="Execute">
-                <execute>kgx</execute>
-            </action> </item>
-            <item label="Files"> <action name="Execute">
-                <execute>nautilus</execute>
-            </action> </item>
             <item label="GIT"> <action name="Execute">
                 <execute>xterm -e git</execute>
             </action> </item>
@@ -280,9 +277,6 @@
                     <item label="Bluetooth Manager"> <action name="Execute">
                         <execute>blueman-manager</execute>
                     </action> </item>
-                    <item label="Settings"> <action name="Execute">
-                        <execute>gnome-control-center</execute>
-                    </action> </item>
                     <item label="Themix/Oomox theme designer"> <action name="Execute">
                         <execute>oomox-gui</execute>
                     </action> </item>
@@ -304,6 +298,9 @@
                 <item label="Manage Printing"> <action name="Execute">
                     <execute>xdg-open http://localhost:631/</execute>
                 </action> </item>
+                <item label="Openbox Configuration Manager"> <action name="Execute">
+                    <execute>obconf</execute>
+                </action> </item>
                 <item label="Polychromatic"> <action name="Execute">
                     <execute>polychromatic-controller</execute>
                 </action> </item>
@@ -313,9 +310,6 @@
                 <item label="Radeon Profile"> <action name="Execute">
                     <execute>radeon-profile</execute>
                 </action> </item>
-                <item label="Rygel Preferences"> <action name="Execute">
-                    <execute>rygel-preferences</execute>
-                </action> </item>
                 <item label="Tint2 Settings"> <action name="Execute">
                     <execute>tint2conf</execute>
                 </action> </item>
@@ -323,23 +317,11 @@
             <item label="Avahi Zeroconf Browser"> <action name="Execute">
                 <execute>avahi-discover</execute>
             </action> </item>
-            <item label="Color Profile Viewer"> <action name="Execute">
-                <execute>gcm-viewer</execute>
+            <item label="conky"> <action name="Execute">
+                <execute>conky --daemonize --pause=1</execute>
             </action> </item>
-            <item label="dconf Editor"> <action name="Execute">
-                <execute>dconf-editor</execute>
-            </action> </item>
-            <item label="Disk Usage Analyzer"> <action name="Execute">
-                <execute>baobab</execute>
-            </action> </item>
-            <item label="GDM flexiserver"> <action name="Execute">
-                <execute>gdmflexiserver</execute>
-            </action> </item>
-            <item label="GDM flexiserver in Xnest"> <action name="Execute">
-                <execute>gdmflexiserver -n</execute>
-            </action> </item>
-            <item label="GNOME System Monitor"> <action name="Execute">
-                <execute>gnome-system-monitor</execute>
+            <item label="Conky"> <action name="Execute">
+                <execute>xterm -e conky</execute>
             </action> </item>
             <item label="Hardware Locality lstopo"> <action name="Execute">
                 <execute>lstopo</execute>
@@ -347,20 +329,17 @@
             <item label="Htop"> <action name="Execute">
                 <execute>xterm -e htop</execute>
             </action> </item>
+            <item label="jgmenu"> <action name="Execute">
+                <execute>jgmenu_run</execute>
+            </action> </item>
             <item label="KeePassXC"> <action name="Execute">
                 <execute>keepassxc</execute>
             </action> </item>
-            <item label="Logs"> <action name="Execute">
-                <execute>gnome-logs</execute>
+            <item label="OpenJDK Java 11 Console"> <action name="Execute">
+                <execute>/usr/lib/jvm/java-11-openjdk/bin/jconsole</execute>
             </action> </item>
-            <item label="OpenJDK Java 21 Console"> <action name="Execute">
-                <execute>jconsole</execute>
-            </action> </item>
-            <item label="OpenJDK Java 21 Shell"> <action name="Execute">
-                <execute>xterm -e jshell</execute>
-            </action> </item>
-            <item label="Parental Controls"> <action name="Execute">
-                <execute>malcontent-control</execute>
+            <item label="OpenJDK Java 11 Shell"> <action name="Execute">
+                <execute>xterm -e /usr/lib/jvm/java-11-openjdk/bin/jshell</execute>
             </action> </item>
             <item label="Pstree"> <action name="Execute">
                 <execute>xterm -e pstree.x11</execute>
@@ -370,9 +349,6 @@
             </action> </item>
             <item label="pstree"> <action name="Execute">
                 <execute>xterm -e /usr/bin/pstree.x11</execute>
-            </action> </item>
-            <item label="Software"> <action name="Execute">
-                <execute>gnome-software</execute>
             </action> </item>
             <item label="TeXconfig"> <action name="Execute">
                 <execute>xterm -e texconfig</execute>
@@ -400,12 +376,6 @@
             <item label="Calculator"> <action name="Execute">
                 <execute>gnome-calculator</execute>
             </action> </item>
-            <item label="Characters"> <action name="Execute">
-                <execute>gnome-characters</execute>
-            </action> </item>
-            <item label="Clocks"> <action name="Execute">
-                <execute>gnome-clocks</execute>
-            </action> </item>
             <item label="Console Matrix (Text)"> <action name="Execute">
                 <execute>xterm -e cmatrix</execute>
             </action> </item>
@@ -418,44 +388,38 @@
             <item label="Dc"> <action name="Execute">
                 <execute>xterm -e dc</execute>
             </action> </item>
-            <item label="Disks"> <action name="Execute">
-                <execute>gnome-disks</execute>
-            </action> </item>
             <item label="Endeavour"> <action name="Execute">
                 <execute>endeavour</execute>
             </action> </item>
-            <item label="Extensions"> <action name="Execute">
-                <execute>gnome-extensions-app --gapplication-service</execute>
+            <item label="Font Manager"> <action name="Execute">
+                <execute>font-manager</execute>
             </action> </item>
-            <item label="Fonts"> <action name="Execute">
-                <execute>gnome-font-viewer</execute>
-            </action> </item>
-            <item label="Help"> <action name="Execute">
-                <execute>yelp</execute>
+            <item label="Font Viewer"> <action name="Execute">
+                <execute>/usr/lib/font-manager/font-viewer</execute>
             </action> </item>
             <item label="Info"> <action name="Execute">
                 <execute>xterm -e info</execute>
             </action> </item>
-            <item label="Maps"> <action name="Execute">
-                <execute>gapplication launch org.gnome.Maps</execute>
+            <item label="Nemo"> <action name="Execute">
+                <execute>nemo</execute>
             </action> </item>
             <item label="picom"> <action name="Execute">
                 <execute>picom</execute>
             </action> </item>
+            <item label="SpeedCrunch"> <action name="Execute">
+                <execute>speedcrunch</execute>
+            </action> </item>
             <item label="TeXdoctk"> <action name="Execute">
                 <execute>texdoctk</execute>
             </action> </item>
-            <item label="Tour"> <action name="Execute">
-                <execute>gnome-tour</execute>
-            </action> </item>
-            <item label="Tweaks"> <action name="Execute">
-                <execute>gnome-tweaks</execute>
-            </action> </item>
-            <item label="Weather"> <action name="Execute">
-                <execute>gapplication launch org.gnome.Weather</execute>
-            </action> </item>
             <item label="Winetricks"> <action name="Execute">
                 <execute>winetricks --gui</execute>
+            </action> </item>
+            <item label="Xcalc"> <action name="Execute">
+                <execute>xcalc</execute>
+            </action> </item>
+            <item label="Xclock (digital)"> <action name="Execute">
+                <execute>xclock -digital</execute>
             </action> </item>
             <item label="Xev"> <action name="Execute">
                 <execute>xterm -e xev</execute>
@@ -470,33 +434,6 @@
             <item label="Reconfigure"> <action name="Reconfigure"/> </item>
             <separator/>
             <item label="Exit"> <action name="Exit"/> </item>
-        </menu>
-        <menu id="exit-menu" label="Exit">
-        <item label="Log Out">
-            <action name="Execute">
-            <command>openbox --exit</command>
-            </action>
-        </item>
-        <item label="Shutdown">
-            <action name="Execute">
-            <command>systemctl poweroff</command>
-            </action>
-        </item>
-        <item label="Restart">
-            <action name="Execute">
-                    <command>systemctl reboot</command>
-            </action>
-        </item>
-        <item label="Suspend">
-            <action name="Execute">
-                    <command>systemctl suspend</command>
-            </action>
-        </item>
-        <item label="Hibernate">
-            <action name="Execute">
-                    <command>systemctl hibernate</command>
-            </action>
-        </item>
         </menu>
     </menu>
 </openbox_menu>
