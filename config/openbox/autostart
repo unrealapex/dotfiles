@@ -19,8 +19,8 @@
 
 # monitor magic
 autorandr --change
-betterlockscreen --update ~/.dotfiles/fold.webp &
-feh --bg-fill ~/.dotfiles/fold.webp
+betterlockscreen --update ~/.dotfiles/sunset.jpg &
+feh --bg-fill ~/.dotfiles/sunset.jpg
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
