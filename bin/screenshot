@@ -5,10 +5,10 @@ cp $image_path $image_path.old
 
 case $1 in
 selection)
-        maim --select --quality 10 $image_path
+        maim --select --quality 10 $image_path || exit
         ;;
 full)
-        maim --quality 10 $image_path
+        maim --quality 10 $image_path || exit
         ;;
 *)
         notify-send "Screenshot: unknown argument given"
@@ -17,10 +17,6 @@ esac
 
 # TODO: notify-send action that shows image on right click(with kitty icat)
 # TODO: make sure image displayed in notification does not look distorted if it is large
-# TODO: compare files more efficiently
 
-# prevent notification and clipboard copying if a screenshot hasn't been taken
-if [ -f "$image_path" ] && ! cmp -s "$image_path" "$image_path.old"; then
-        xclip -selection clipboard -t image/png -i $image_path
-        notify-send --icon $image_path "Screenshot taken"
-fi
+xclip -selection clipboard -t image/png -i $image_path
+notify-send --icon $image_path "Screenshot taken"
