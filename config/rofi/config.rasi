@@ -15,7 +15,7 @@ window {
   location: center;
   anchor: center;
   transparency: "real";
-  padding: 12px;
+  padding: 10px;
   border: 0px;
   border-radius: 10px;
   color: @lavender;
@@ -48,7 +48,7 @@ inputbar {
   background-color: @surface0;
   border: 2px 2px 2px 2px;
   border-radius: 15px 15px 0px 0px;
-  border-color: @overlay1;
+  border-color: @base;
   font: "Source Code Pro 18";
 }
 
@@ -66,7 +66,7 @@ prompt {
 listview {
   padding: 8px;
   border-radius: 0px 0px 15px 15px;
-  border-color: @overlay1;
+  border-color: @base;
   border: 0px 2px 2px 2px;
   background-color: @base;
   dynamic: false;
@@ -102,7 +102,7 @@ element normal urgent {
 
 element alternate normal {
   text-color: @text;
-  background-color: @surface2;
+  background-color: @base;
 }
 
 element alternate active {
@@ -125,7 +125,7 @@ element selected urgent {
 
 element normal normal {
   text-color: @text;
-  background-color: @surface2;
+  background-color: @base;
 
 }
 
