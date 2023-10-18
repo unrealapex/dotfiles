@@ -3,6 +3,8 @@
 configuration {
   show-icons: true;
   disable-history: false;
+  display-drun: "";
+  drun-display-format: "{name}";
   click-to-exit: true;
   location: 0;
 }
@@ -55,6 +57,12 @@ inputbar {
   font: "Source Code Pro 18";
 }
 
+
+textbox-prompt-colon {
+    expand: false;
+    str: "";
+}
+
 entry,
 prompt,
 case-indicator {
@@ -63,7 +71,11 @@ case-indicator {
 }
 
 prompt {
-  margin: 0px 0.3em 0em 0em;
+  font: "Source Code Pro 14";
+}
+
+entry {
+  placeholder: "Run...";
 }
 
 listview {
