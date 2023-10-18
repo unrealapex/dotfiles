@@ -19,7 +19,7 @@ esac
 # TODO: make sure image displayed in notification does not look distorted if it is large
 
 # prevent notification and clipboard copying if a screenshot hasn't been taken
-if ! cmp -s "$image_path" "$image_path.old"; then
+if [ -f "$image_path" ] && ! cmp -s "$image_path" "$image_path.old"; then
         xclip -selection clipboard -t image/png -i $image_path
         notify-send --icon $image_path "Screenshot taken"
 fi
