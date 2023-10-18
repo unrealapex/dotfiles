@@ -17,6 +17,7 @@ esac
 
 # TODO: notify-send action that shows image on right click(with kitty icat)
 # TODO: make sure image displayed in notification does not look distorted if it is large
+# TODO: compare files more efficiently
 
 # prevent notification and clipboard copying if a screenshot hasn't been taken
 if [ -f "$image_path" ] && ! cmp -s "$image_path" "$image_path.old"; then
