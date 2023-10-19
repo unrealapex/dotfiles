@@ -55,7 +55,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>SF Pro Display</name>
+      <name>SF Pro Text</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Bold</weight>
@@ -64,7 +64,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>SF Pro Display</name>
+      <name>SF Pro Text</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Bold</weight>
@@ -91,7 +91,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>SF Pro Display</name>
+      <name>SF Pro Text</name>
       <size>9</size>
       <!-- font size in points -->
       <weight>Bold</weight>
@@ -100,7 +100,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>SF Pro Display</name>
+      <name>SF Pro Text</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Bold</weight>
@@ -353,7 +353,6 @@
         <command>screenshot selection</command>
       </action>
     </keybind>
-
     <keybind key="S-Print">
       <action name="Execute">
         <command>screenshot full</command>
