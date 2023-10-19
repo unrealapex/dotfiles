@@ -4,6 +4,7 @@ configuration {
   show-icons: true;
   disable-history: false;
   display-drun: "";
+  display-emoji: "";
   drun-display-format: "{name}";
   click-to-exit: true;
   location: 0;
