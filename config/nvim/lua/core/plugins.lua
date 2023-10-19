@@ -194,8 +194,6 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
-      show_current_context = true,
-      show_current_context_start = true,
       exclude = {
         filetypes = {
           "''",
