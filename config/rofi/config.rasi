@@ -49,10 +49,10 @@ message {
 
 inputbar {
   color: @mauve;
-  padding: 11px;
+  padding: 10px;
   background-color: @surface0;
   border: 2px 2px 2px 2px;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 15px;
   border-color: @base;
   font: "Source Code Pro 18";
 }
@@ -91,7 +91,7 @@ listview {
 element {
   padding: 6px;
   vertical-align: 0.5;
-  border-radius: 4px;
+  border-radius: 10px;
   background-color: @red;
   color: @red;
   font: inherit;
