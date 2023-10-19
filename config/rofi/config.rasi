@@ -58,7 +58,6 @@ inputbar {
   font: "Source Code Pro 18";
 }
 
-
 textbox-prompt-colon {
     expand: false;
     str: "";
