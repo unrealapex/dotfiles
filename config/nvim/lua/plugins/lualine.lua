@@ -1,4 +1,4 @@
-require("lualine").setup {
+require("lualine").setup({
   options = {
     icons_enabled = true,
     theme = "auto",
@@ -15,7 +15,7 @@ require("lualine").setup {
       statusline = 1000,
       tabline = 1000,
       winbar = 1000,
-    }
+    },
   },
   sections = {
     lualine_a = { "mode" },
@@ -27,9 +27,12 @@ require("lualine").setup {
         cond = require("noice").api.statusline.mode.has,
         color = "Float",
       },
-      "encoding", "fileformat", "filetype" },
+      "encoding",
+      "fileformat",
+      "filetype",
+    },
     lualine_y = { "progress" },
-    lualine_z = { "location" }
+    lualine_z = { "location" },
   },
   inactive_sections = {
     lualine_a = {},
@@ -37,10 +40,10 @@ require("lualine").setup {
     lualine_c = { "filename" },
     lualine_x = { "location" },
     lualine_y = {},
-    lualine_z = {}
+    lualine_z = {},
   },
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
-}
+  extensions = {},
+})

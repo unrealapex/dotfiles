@@ -12,20 +12,20 @@ require("mason-lspconfig").setup({
     "pyright",
     "sqlls",
     "tsserver",
-    "vimls"
-  }
+    "vimls",
+  },
 })
 
 -- FIXME: ensure these formatters are installed
-  --  black
-  --  clang-format
-  --  google-java-format
-  --  isort
-  --  jq
-  --  prettier
-  --  prettierd
-  --  shfmt
-  --  stylua
+--  black
+--  clang-format
+--  google-java-format
+--  isort
+--  jq
+--  prettier
+--  prettierd
+--  shfmt
+--  stylua
 
 -- Setup lspconfig.
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -78,14 +78,11 @@ require("mason-lspconfig").setup_handlers({
   end,
 })
 
-
 -- disable neovim lsp"s inline diagnostics and use lspsaga"s diagnostics ui instead
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = false
-  }
-)
-
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+  vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false,
+  })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do

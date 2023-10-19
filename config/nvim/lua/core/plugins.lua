@@ -26,7 +26,7 @@ return {
             return math.floor(vim.o.columns * 0.75)
           end,
         },
-      }
+      },
     },
     event = "VeryLazy",
     opts = {
@@ -34,14 +34,14 @@ return {
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
           ["vim.lsp.util.stylize_markdown"] = true,
-        }
+        },
       },
       presets = {
         bottom_search = true,
         command_palette = true,
         long_message_to_split = true,
-      }
-    }
+      },
+    },
   },
   -- better file explorer
   {
@@ -72,7 +72,7 @@ return {
           end
         end,
       })
-    end
+    end,
   },
   -- unix helpers
   {
@@ -95,7 +95,7 @@ return {
       "SudoWrite",
       "Wall",
       "W",
-    }
+    },
   },
   { "tpope/vim-rsi", event = { "InsertEnter", "CmdlineEnter" } },
   {
@@ -108,11 +108,11 @@ return {
       { "<A-h>", mode = "v" },
       { "<A-j>", mode = "v" },
       { "<A-k>", mode = "v" },
-      { "<A-l>", mode = "v" }
+      { "<A-l>", mode = "v" },
     },
     config = function()
       require("mini.move").setup()
-    end
+    end,
   },
   { "tpope/vim-unimpaired", keys = { "[", "]" } },
   -- better git integration
@@ -122,7 +122,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("plugins.gitsigns")
-    end
+    end,
   },
   -- status bar
   {
@@ -131,7 +131,7 @@ return {
     config = function()
       require("plugins.lualine")
     end,
-    dependencies = "nvim-tree/nvim-web-devicons"
+    dependencies = "nvim-tree/nvim-web-devicons",
   },
   -- conveniently run git commands from vim
   {
@@ -161,16 +161,22 @@ return {
       "GDelete",
       "GRemove",
       "GUnlink",
-      "GBrowse"
-    }
+      "GBrowse",
+    },
   },
   {
     "tpope/vim-surround",
-    keys = { "ds", "cs", "ys", { "sa", "<Plug>VSurround", mode = "v" }, { "gS", mode = "v" } },
+    keys = {
+      "ds",
+      "cs",
+      "ys",
+      { "sa", "<Plug>VSurround", mode = "v" },
+      { "gS", mode = "v" },
+    },
     config = function()
       -- remove vim-surround's visual mode mapping for S and use sa instead
       vim.keymap.del("x", "S")
-    end
+    end,
   },
   { "tpope/vim-repeat", event = "VeryLazy" },
   -- git commit browser
@@ -178,7 +184,7 @@ return {
     "junegunn/gv.vim",
     cond = vim.fn.executable("git") == 1,
     cmd = { "GV" },
-    dependencies = { "tpope/vim-fugitive" }
+    dependencies = { "tpope/vim-fugitive" },
   },
   -- commenter
   {
@@ -195,13 +201,18 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
       require("plugins.indent-blankline")
-    end
+    end,
   },
   -- zen mode
   {
     "folke/zen-mode.nvim",
     keys = {
-      { "<leader>z", function() require("zen-mode").toggle() end }
+      {
+        "<leader>z",
+        function()
+          require("zen-mode").toggle()
+        end,
+      },
     },
     cmd = { "ZenMode" },
     config = true,
@@ -211,8 +222,8 @@ return {
     "junegunn/rainbow_parentheses.vim",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      vim.cmd [[RainbowParentheses]]
-    end
+      vim.cmd([[RainbowParentheses]])
+    end,
   },
   -- turn off search highlighting automatically
   {
@@ -229,7 +240,7 @@ return {
       { "#", mode = "v" },
       "g*",
       "g#",
-    }
+    },
   },
   -- lsp and completion stuff
   {
@@ -237,7 +248,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("plugins.lsp")
-    end
+    end,
   },
   {
     "williamboman/mason.nvim",
@@ -246,7 +257,7 @@ return {
       "MasonInstall",
       "MasonUninstall",
       "MasonUninstallAll",
-      "MasonLog"
+      "MasonLog",
     },
     config = true,
     dependencies = {
@@ -255,9 +266,9 @@ return {
         dependencies = "neovim/nvim-lspconfig",
         opts = {
           automatic_installation = true,
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     "glepnir/lspsaga.nvim",
@@ -265,31 +276,49 @@ return {
     cmd = "Lspsaga",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
-      "nvim-treesitter/nvim-treesitter"
+      "nvim-treesitter/nvim-treesitter",
     },
     opts = {
       lightbulb = {
-        sign = false
-      }
+        sign = false,
+      },
     },
     keys = {
-      { "gh",         "<cmd>Lspsaga lsp_finder<CR>" },
+      { "gh", "<cmd>Lspsaga lsp_finder<CR>" },
       { "<leader>ca", mode = { "n", "v" }, "<cmd>Lspsaga code_action<CR>" },
       { "<leader>rn", "<cmd>Lspsaga rename<CR>" },
       { "<leader>Rn", "<cmd>Lspsaga rename ++project<CR>" },
-      { "gd",         "<cmd>Lspsaga goto_definition<CR>" },
-      { "gD",         "<cmd>Lspsaga peek_definition<CR>" },
-      { "gt",         "<cmd>Lspsaga goto_type_definition<CR>" },
-      { "gT",         "<cmd>Lspsaga peek_type_definition<CR>" },
-      { "gl",  "<cmd>Lspsaga show_line_diagnostics<CR>" },
-      { "[d",         "<cmd>Lspsaga diagnostic_jump_prev<CR>" },
-      { "]d",         "<cmd>Lspsaga diagnostic_jump_next<CR>" },
-      { "[E",         function() require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR }) end },
-      { "]E",         function() require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR }) end },
-      { "<leader>o",  "<cmd>Lspsaga outline<CR>" },
-      { "K",          "<cmd>Lspsaga hover_doc<CR>" },
-      { "<A-d>",      mode = { "n", "v" },                                                                                 "<cmd>Lspsaga term_toggle<CR>" }
-    }
+      { "gd", "<cmd>Lspsaga goto_definition<CR>" },
+      { "gD", "<cmd>Lspsaga peek_definition<CR>" },
+      { "gt", "<cmd>Lspsaga goto_type_definition<CR>" },
+      { "gT", "<cmd>Lspsaga peek_type_definition<CR>" },
+      { "gl", "<cmd>Lspsaga show_line_diagnostics<CR>" },
+      { "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>" },
+      { "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>" },
+      {
+        "[E",
+        function()
+          require("lspsaga.diagnostic").goto_prev({
+            severity = vim.diagnostic.severity.ERROR,
+          })
+        end,
+      },
+      {
+        "]E",
+        function()
+          require("lspsaga.diagnostic").goto_next({
+            severity = vim.diagnostic.severity.ERROR,
+          })
+        end,
+      },
+      { "<leader>o", "<cmd>Lspsaga outline<CR>" },
+      { "K", "<cmd>Lspsaga hover_doc<CR>" },
+      {
+        "<A-d>",
+        mode = { "n", "v" },
+        "<cmd>Lspsaga term_toggle<CR>",
+      },
+    },
   },
   {
     "hrsh7th/nvim-cmp",
@@ -300,34 +329,34 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
-      "nvim-tree/nvim-web-devicons"
-    }
+      "nvim-tree/nvim-web-devicons",
+    },
   },
   {
     "hrsh7th/cmp-cmdline",
     event = "CmdlineEnter",
-    dependencies = "hrsh7th/nvim-cmp"
+    dependencies = "hrsh7th/nvim-cmp",
   },
   {
     "hrsh7th/cmp-nvim-lua",
     ft = "lua",
-    dependencies = "hrsh7th/nvim-cmp"
+    dependencies = "hrsh7th/nvim-cmp",
   },
   {
     "hrsh7th/cmp-calc",
     event = { "InsertEnter" },
-    dependencies = "hrsh7th/nvim-cmp"
+    dependencies = "hrsh7th/nvim-cmp",
   },
   {
     "hrsh7th/cmp-emoji",
     keys = { ":", mode = "i" },
-    dependencies = "hrsh7th/nvim-cmp"
+    dependencies = "hrsh7th/nvim-cmp",
   },
   {
     "f3fora/cmp-spell",
     event = { "InsertEnter" },
     ft = { "markdown", "text", "html", "tex" },
-    dependencies = "hrsh7th/nvim-cmp"
+    dependencies = "hrsh7th/nvim-cmp",
   },
   {
     "L3MON4D3/LuaSnip",
@@ -340,23 +369,23 @@ return {
         "rafamadriz/friendly-snippets",
         config = function()
           require("luasnip/loaders/from_vscode").lazy_load()
-        end
+        end,
       },
-    }
+    },
   },
   {
     "folke/neodev.nvim",
     ft = "lua",
     config = function()
       require("neodev").setup()
-        vim.lsp.start({
-          name = "lua-language-server",
-          cmd = { "lua-language-server" },
-          before_init = require("neodev.lsp").before_init,
-          root_dir = vim.fn.getcwd(),
-          settings = { Lua = {} },
-        })
-    end
+      vim.lsp.start({
+        name = "lua-language-server",
+        cmd = { "lua-language-server" },
+        before_init = require("neodev.lsp").before_init,
+        root_dir = vim.fn.getcwd(),
+        settings = { Lua = {} },
+      })
+    end,
   },
   {
     "stevearc/conform.nvim",
@@ -373,14 +402,14 @@ return {
           formatters = { "isort", "black" },
           run_all_formatters = true,
         },
-        sh = {"shfmt"},
-        json = {"jq"},
-        java = {"google-java-format"},
-        c = {"clang-format"},
-        cs = {"clang-format"},
-        cpp = {"clang-format"}
-      }
-    }
+        sh = { "shfmt" },
+        json = { "jq" },
+        java = { "google-java-format" },
+        c = { "clang-format" },
+        cs = { "clang-format" },
+        cpp = { "clang-format" },
+      },
+    },
   },
   { "mfussenegger/nvim-jdtls", ft = "java" },
   {
@@ -390,14 +419,17 @@ return {
     dependencies = "nvim-tree/nvim-web-devicons",
     keys = {
       { "<leader>q", "<cmd>Trouble<CR>" },
-    }
+    },
   },
   -- improved syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
-    cond = (vim.fn.executable("git") == 1 or (vim.fn.executable("curl") == 1 and vim.fn.executable("tar") == 1)),
+    cond = (
+      vim.fn.executable("git") == 1
+      or (vim.fn.executable("curl") == 1 and vim.fn.executable("tar") == 1)
+    ),
     cmd = {
       "TSBufDisable",
       "TSBufEnable",
@@ -424,7 +456,7 @@ return {
     end,
     config = function()
       require("plugins.treesitter")
-    end
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
@@ -434,14 +466,14 @@ return {
         enable = true,
         mode = "cursor",
       })
-      vim.cmd [[TSContextEnable]]
+      vim.cmd([[TSContextEnable]])
     end,
-    dependencies = "nvim-treesitter/nvim-treesitter"
+    dependencies = "nvim-treesitter/nvim-treesitter",
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = { "BufReadPre", "BufNewFile" },
-    dependencies = "nvim-treesitter/nvim-treesitter"
+    dependencies = "nvim-treesitter/nvim-treesitter",
   },
   -- automatically close pairs
   {
@@ -452,7 +484,7 @@ return {
       { "{", mode = "i" },
       { "[", mode = "i" },
       { '"', mode = "i" },
-      { "'", mode = "i" }
+      { "'", mode = "i" },
     },
     config = true,
   },
@@ -462,26 +494,56 @@ return {
     cmd = "Alpha",
     init = function()
       if vim.fn.argc() == 0 then
-        vim.cmd [[
+        vim.cmd([[
         autocmd UIEnter * :Alpha
-        ]]
+        ]])
       end
     end,
     config = function()
       require("plugins.alpha")
     end,
-    dependencies = "nvim-tree/nvim-web-devicons"
+    dependencies = "nvim-tree/nvim-web-devicons",
   },
   -- fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
     keys = {
-      { "<leader>ff",       function() require("telescope.builtin").find_files() end },
-      { "<leader>fg",       function() require("telescope.builtin").live_grep() end },
-      { "<leader><leader>", function() require("telescope.builtin").buffers() end },
-      { "<leader>fh",       function() require("telescope.builtin").help_tags() end },
-      { "<leader>fd",       function() require("telescope.builtin").diagnostics() end },
-      { "<leader>fo",       function() require("telescope.builtin").oldfiles() end },
+      {
+        "<leader>ff",
+        function()
+          require("telescope.builtin").find_files()
+        end,
+      },
+      {
+        "<leader>fg",
+        function()
+          require("telescope.builtin").live_grep()
+        end,
+      },
+      {
+        "<leader><leader>",
+        function()
+          require("telescope.builtin").buffers()
+        end,
+      },
+      {
+        "<leader>fh",
+        function()
+          require("telescope.builtin").help_tags()
+        end,
+      },
+      {
+        "<leader>fd",
+        function()
+          require("telescope.builtin").diagnostics()
+        end,
+      },
+      {
+        "<leader>fo",
+        function()
+          require("telescope.builtin").oldfiles()
+        end,
+      },
     },
     cmd = { "Telescope" },
     dependencies = {
@@ -495,29 +557,29 @@ return {
         build = "make",
         config = function()
           require("telescope").load_extension("fzf")
-        end
-      }
+        end,
+      },
     },
     config = function()
       ---@diagnostic disable-next-line: different-requires
       require("plugins.telescope")
-    end
+    end,
   },
   -- improved movement
   {
     "ggandor/leap.nvim",
     keys = {
-      { "s",  mode = { "n", "x", "o" } },
-      { "S",  mode = { "n", "x", "o" } },
+      { "s", mode = { "n", "x", "o" } },
+      { "S", mode = { "n", "x", "o" } },
       { "gs", mode = { "n", "x", "o" } },
     },
     config = function()
       require("leap").set_default_keymaps()
-    end
+    end,
   },
   {
     "wellle/targets.vim",
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
   {
     "tpope/vim-sleuth",
@@ -565,27 +627,27 @@ return {
       },
     },
     config = function()
-      vim.cmd [[colorscheme catppuccin-mocha]]
-    end
+      vim.cmd([[colorscheme catppuccin-mocha]])
+    end,
   },
   -- markdown preview
   {
     "ellisonleao/glow.nvim",
     cond = vim.fn.executable("glow") == 1,
     ft = "markdown",
-    config = true
+    config = true,
   },
   {
     "norcalli/nvim-colorizer.lua",
-    ft = {"css", "html", "javascript", "sass"},
+    ft = { "css", "html", "javascript", "sass" },
     config = function()
       require("colorizer").setup({
         -- make sure that nvim-colorizer only attaches to these file types
-        'css';
-        'html';
-        'javascript';
-        'sass';
+        "css",
+        "html",
+        "javascript",
+        "sass",
       })
-    end
-  }
+    end,
+  },
 }

@@ -79,11 +79,10 @@ vim.opt.winbar = "%=%m %f"
 vim.opt.wrap = false
 
 -- syntax highlighting
-vim.cmd [[syntax on]]
+vim.cmd([[syntax on]])
 
 -- make gutter match background color
-vim.cmd [[highlight clear SignColumn]]
-
+vim.cmd([[highlight clear SignColumn]])
 
 --globals
 
@@ -94,9 +93,7 @@ vim.g.did_load_filetypes = 0
 -- set the mapleader to space
 vim.g.mapleader = " "
 
-
 vim.g["rainbow#pairs"] = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
-
 
 local prosed = false
 -- make writing in neovim more pleasant
@@ -119,7 +116,7 @@ function prose()
 
     prosed = true
     if vim.fn.exists(":ZenMode") == 2 then
-      vim.cmd [[ZenMode]]
+      vim.cmd([[ZenMode]])
     end
     vim.notify("Prose Mode Enabled")
   else
@@ -136,14 +133,13 @@ function prose()
     vim.keymap.del({ "n", "v" }, "^")
     prosed = false
     if vim.fn.exists(":ZenMode") == 2 then
-      vim.cmd [[ZenMode]]
+      vim.cmd([[ZenMode]])
     end
     vim.notify("Prose Mode Disabled")
   end
 end
 
 vim.api.nvim_create_user_command("Prose", prose, {})
-
 
 -- environment variables
 

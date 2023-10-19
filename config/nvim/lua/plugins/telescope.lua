@@ -1,4 +1,4 @@
-require("telescope").setup {
+require("telescope").setup({
   defaults = {
     mappings = {
       i = {
@@ -17,10 +17,14 @@ require("telescope").setup {
         ["<PageUp>"] = require("telescope.actions").results_scrolling_up,
         ["<PageDown>"] = require("telescope.actions").results_scrolling_down,
 
-        ["<Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_worse,
-        ["<S-Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_better,
-        ["<C-q>"] = require("telescope.actions").send_to_qflist + require("telescope.actions").open_qflist,
-        ["<M-q>"] = require("telescope.actions").send_selected_to_qflist + require("telescope.actions").open_qflist,
+        ["<Tab>"] = require("telescope.actions").toggle_selection
+          + require("telescope.actions").move_selection_worse,
+        ["<S-Tab>"] = require("telescope.actions").toggle_selection
+          + require("telescope.actions").move_selection_better,
+        ["<C-q>"] = require("telescope.actions").send_to_qflist
+          + require("telescope.actions").open_qflist,
+        ["<M-q>"] = require("telescope.actions").send_selected_to_qflist
+          + require("telescope.actions").open_qflist,
         ["<C-l>"] = require("telescope.actions").complete_tag,
         ["<C-_>"] = require("telescope.actions").which_key, -- keys from pressing <C-/>
       },
@@ -32,10 +36,14 @@ require("telescope").setup {
         ["<C-v>"] = require("telescope.actions").select_vertical,
         ["<C-t>"] = require("telescope.actions").select_tab,
 
-        ["<Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_worse,
-        ["<S-Tab>"] = require("telescope.actions").toggle_selection + require("telescope.actions").move_selection_better,
-        ["<C-q>"] = require("telescope.actions").send_to_qflist + require("telescope.actions").open_qflist,
-        ["<M-q>"] = require("telescope.actions").send_selected_to_qflist + require("telescope.actions").open_qflist,
+        ["<Tab>"] = require("telescope.actions").toggle_selection
+          + require("telescope.actions").move_selection_worse,
+        ["<S-Tab>"] = require("telescope.actions").toggle_selection
+          + require("telescope.actions").move_selection_better,
+        ["<C-q>"] = require("telescope.actions").send_to_qflist
+          + require("telescope.actions").open_qflist,
+        ["<M-q>"] = require("telescope.actions").send_selected_to_qflist
+          + require("telescope.actions").open_qflist,
 
         ["j"] = require("telescope.actions").move_selection_next,
         ["k"] = require("telescope.actions").move_selection_previous,
@@ -57,7 +65,7 @@ require("telescope").setup {
         ["?"] = require("telescope.actions").which_key,
       },
     },
-    file_ignore_patterns = { ".git/*" }
+    file_ignore_patterns = { ".git/*" },
   },
   pickers = {
     -- Default configuration for builtin pickers goes here:
@@ -68,13 +76,13 @@ require("telescope").setup {
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
     find_files = {
-      hidden = true
+      hidden = true,
     },
     live_grep = {
       additional_args = function(opts)
-        return {"--hidden"}
-      end
-    }
+        return { "--hidden" }
+      end,
+    },
   },
   extensions = {
     fzf = {
@@ -91,4 +99,4 @@ require("telescope").setup {
     -- }
     -- please take a look at the readme of the extension you want to configure
   },
-}
+})

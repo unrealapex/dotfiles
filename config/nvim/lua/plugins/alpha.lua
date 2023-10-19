@@ -25,8 +25,10 @@ local function footer()
   -- return fortune
   -- show number of plugins
   return (
-      require("lazy").stats().count ~= 1 and require("lazy").stats().count .. " plugins" or
-      require("lazy").stats().count .. " plugin")
+    require("lazy").stats().count ~= 1
+      and require("lazy").stats().count .. " plugins"
+    or require("lazy").stats().count .. " plugin"
+  )
 end
 
 dashboard.section.footer.val = footer()
