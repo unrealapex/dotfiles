@@ -193,34 +193,9 @@ return {
     main = "ibl",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {
-      exclude = {
-        filetypes = {
-          "''",
-          "TelescopePrompt",
-          "TelescopeResults",
-          "checkhealth",
-          "gitcommit",
-          "help",
-          "lspinfo",
-          "man",
-          "packer",
-          "NvimTree",
-          "Trouble",
-          "WhichKey",
-          "dashboard",
-          "help",
-          "lsp-installer",
-          "mason",
-          "neogitstatus",
-          "packer",
-          "sh",
-          "startify",
-          "text",
-        }
-      }
-
-    }
+    config = function()
+      require("plugins.indent-blankline")
+    end
   },
   -- zen mode
   {
