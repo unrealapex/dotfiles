@@ -61,7 +61,6 @@ inputbar {
 textbox-prompt-colon {
     expand: false;
     str: "";
-}
 
 entry,
 prompt,
