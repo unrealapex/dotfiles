@@ -1,13 +1,16 @@
 -- Check if we need to reload the file when it changed
-vim.api.nvim_create_autocmd({ "FocusGained", "CursorHold", "TermClose", "TermLeave" }, {
-  pattern = "*",
-  group = vim.api.nvim_create_augroup("auto_read", { clear = true }),
-  callback = function()
-    if vim.fn.getcmdwintype() == "" then
-      vim.cmd("checktime")
-    end
-  end,
-})
+vim.api.nvim_create_autocmd(
+  { "FocusGained", "CursorHold", "TermClose", "TermLeave" },
+  {
+    pattern = "*",
+    group = vim.api.nvim_create_augroup("auto_read", { clear = true }),
+    callback = function()
+      if vim.fn.getcmdwintype() == "" then
+        vim.cmd("checktime")
+      end
+    end,
+  }
+)
 
 -- create directories when needed, when saving a file
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -47,10 +50,14 @@ vim.api.nvim_create_autocmd("FileType", {
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
-    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+    vim.keymap.set(
+      "n",
+      "q",
+      "<cmd>close<cr>",
+      { buffer = event.buf, silent = true }
+    )
   end,
 })
-
 
 -- wrap and check for spell in text filetypes
 vim.api.nvim_create_autocmd("FileType", {
@@ -63,10 +70,10 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- show whitespaces as characters in visual mode
-vim.cmd [[
+vim.cmd([[
 augroup show_whitespace
   autocmd!
   autocmd ModeChanged *:[vV\x16]* :set listchars+=space:·
   autocmd Modechanged [vV\x16]*:* :set listchars-=space:·
 augroup END
-]]
+]])

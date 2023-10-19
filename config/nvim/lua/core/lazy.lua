@@ -16,7 +16,7 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup("core.plugins", {
   defaults = { lazy = true },
   change_detection = {
-    notify = false
+    notify = false,
   },
   performance = {
     rtp = {
@@ -48,8 +48,7 @@ require("lazy").setup("core.plugins", {
   },
   install = {
     colorscheme = { "tokyonight-night", "habamax" },
-  }
+  },
 })
-
 
 vim.keymap.set("n", "<leader>l", ":Lazy<CR>")

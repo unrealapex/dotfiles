@@ -6,36 +6,36 @@ require("gitsigns").setup({
       hl = "GitSignsAdd",
       text = "▎",
       numhl = "GitSignsAddNr",
-      linehl = "GitSignsAddLn"
+      linehl = "GitSignsAddLn",
     },
     change = {
       hl = "GitSignsChange",
       text = "▎",
       numhl = "GitSignsChangeNr",
-      linehl = "GitSignsChangeLn"
+      linehl = "GitSignsChangeLn",
     },
     delete = {
       hl = "GitSignsDelete",
       text = "󰐊",
       numhl = "GitSignsDeleteNr",
-      linehl = "GitSignsDeleteLn"
+      linehl = "GitSignsDeleteLn",
     },
     topdelete = {
       hl = "GitSignsDelete",
       text = "󰐊",
       numhl = "GitSignsDeleteNr",
-      linehl = "GitSignsDeleteLn"
+      linehl = "GitSignsDeleteLn",
     },
     changedelete = {
       hl = "GitSignsChange",
       text = "▎",
       numhl = "GitSignsChangeNr",
-      linehl = "GitSignsChangeLn"
+      linehl = "GitSignsChangeLn",
     },
   },
   signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-  numhl = false,     -- Toggle with `:Gitsigns toggle_numhl`
-  linehl = false,    -- Toggle with `:Gitsigns toggle_linehl`
+  numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
+  linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
   word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
   watch_gitdir = {
     interval = 1000,
@@ -44,14 +44,22 @@ require("gitsigns").setup({
   on_attach = function(bufnr)
     -- hunk navigation
     vim.keymap.set("n", "]c", function()
-      if vim.wo.diff then return "]c" end
-      vim.schedule(function() package.loaded.gitsigns.next_hunk() end)
+      if vim.wo.diff then
+        return "]c"
+      end
+      vim.schedule(function()
+        package.loaded.gitsigns.next_hunk()
+      end)
       return "<Ignore>"
     end, { expr = true })
 
     vim.keymap.set("n", "[c", function()
-      if vim.wo.diff then return "[c" end
-      vim.schedule(function() package.loaded.gitsigns.prev_hunk() end)
+      if vim.wo.diff then
+        return "[c"
+      end
+      vim.schedule(function()
+        package.loaded.gitsigns.prev_hunk()
+      end)
       return "<Ignore>"
     end, { expr = true })
 
@@ -68,12 +76,20 @@ require("gitsigns").setup({
     -- preview
     vim.keymap.set("n", "<leader>hp", package.loaded.gitsigns.preview_hunk)
     -- line blame
-    vim.keymap.set("n", "<leader>hb", function() package.loaded.gitsigns.blame_line { full = true } end)
+    vim.keymap.set("n", "<leader>hb", function()
+      package.loaded.gitsigns.blame_line({ full = true })
+    end)
     -- current line blame
-    vim.keymap.set("n", "<leader>tb", package.loaded.gitsigns.toggle_current_line_blame)
+    vim.keymap.set(
+      "n",
+      "<leader>tb",
+      package.loaded.gitsigns.toggle_current_line_blame
+    )
     -- diff
     vim.keymap.set("n", "<leader>hd", package.loaded.gitsigns.diffthis)
-    vim.keymap.set("n", "<leader>hD", function() package.loaded.gitsigns.diffthis("~") end)
+    vim.keymap.set("n", "<leader>hD", function()
+      package.loaded.gitsigns.diffthis("~")
+    end)
     -- show deleted lines
     vim.keymap.set("n", "<leader>td", package.loaded.gitsigns.toggle_deleted)
 
@@ -104,6 +120,6 @@ require("gitsigns").setup({
     col = 1,
   },
   yadm = {
-    enable = false
+    enable = false,
   },
 })

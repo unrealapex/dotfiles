@@ -1,7 +1,7 @@
 require("ibl").setup({
   scope = {
     enabled = true,
-    show_start = true
+    show_start = true,
   },
   exclude = {
     filetypes = {
@@ -26,6 +26,6 @@ require("ibl").setup({
       "sh",
       "startify",
       "text",
-    }
-  }
+    },
+  },
 })

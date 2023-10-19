@@ -6,11 +6,10 @@ vim.keymap.set("i", "<C-BS>", "<C-W>")
 vim.keymap.set("i", "<S-Tab>", "<C-d>")
 
 -- change directory
-vim.keymap.set('n', "<leader>cd", function()
-  vim.cmd(':cd ' .. vim.fn.expand("%:p:h"))
+vim.keymap.set("n", "<leader>cd", function()
+  vim.cmd(":cd " .. vim.fn.expand("%:p:h"))
   print(vim.fn.getcwd())
-end
-)
+end)
 
 -- vanilla buffer switcher
 -- vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
@@ -24,7 +23,7 @@ end, bufopts)
 -- find and replace on current selection
 -- snippet written by Bryan Kennedy and Peter Butkovic
 -- https://stackoverflow.com/a/6171215/14111707
-vim.cmd [[
+vim.cmd([[
 " Escape special characters in a string for exact matching.
 " This is useful to copying strings from the file to the search tool
 " Based on this - http://peterodding.com/code/vim/profile/autoload/xolox/escape.vim
@@ -63,7 +62,7 @@ endfunction
 
 " Start the find and replace command across the entire file
 vnoremap <C-r> <Esc>:%s/<c-r>=GetVisual()<cr>//g<left><left>
-]]
+]])
 
 -- buffer stuff
 -- create a new buffer
@@ -71,9 +70,9 @@ vim.keymap.set("n", "<leader>n", ":enew<CR>")
 
 -- switch tabs quickly
 vim.keymap.set("n", "<leader>1", "1gt<CR>")
-vim.keymap.set("n", '<leader>2', "2gt<CR>")
+vim.keymap.set("n", "<leader>2", "2gt<CR>")
 vim.keymap.set("n", "<leader>3", "3gt<CR>")
-vim.keymap.set("n", '<leader>4', "4gt<CR>")
+vim.keymap.set("n", "<leader>4", "4gt<CR>")
 vim.keymap.set("n", "<leader>5", "5gt<CR>")
 vim.keymap.set("n", "<leader>6", "6gt<CR>")
 vim.keymap.set("n", "<leader>7", "7gt<CR>")
@@ -95,4 +94,4 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
-vim.keymap.set("n", "gx", ":!xdg-open <c-r><c-a>", {silent=true})
+vim.keymap.set("n", "gx", ":!xdg-open <c-r><c-a>", { silent = true })
