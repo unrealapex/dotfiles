@@ -86,6 +86,7 @@ listview {
   border: 0px 2px 2px 2px;
   background-color: @base;
   dynamic: false;
+  scrollbar: false;
   lines: 10;
 }
 
