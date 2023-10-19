@@ -21,10 +21,11 @@ window {
   width: 45%;
   transparency: "real";
   padding: 10px;
-  border: 0px;
+  border: 2px;
   border-radius: 10px;
+  border-color: @mauve;
   color: @lavender;
-  background-color: @transparent;
+  background-color: @base;
   spacing: 0;
   children: [mainbox];
   orientation: horizontal;
