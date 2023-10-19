@@ -12,4 +12,3 @@ systemctl enable --now irqbalance.service
 systemctl enable cups.socket
 systemctl enable libvirtd
 systemctl enable betterlockscreen@$USER
-systemctl enable ly.service
