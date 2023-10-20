@@ -8,7 +8,7 @@ export TERMINAL="kitty"
 export TERMINAL_PROG="kitty"
 export BROWSER=/usr/bin/brave
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
+export MANROFFOPT="-c"
 # export MANGOHUD=1
 
 # set ibus as input method framework
