@@ -180,6 +180,7 @@ source = auto
 # Gradient mode, only hex defined colors are supported,
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
+# FIXME: change these colors to match colorscheme
  gradient = 1
  gradient_count = 8
  gradient_color_1 = '#59cc33'
