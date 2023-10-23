@@ -73,7 +73,7 @@ border_color_pressed = #000000 100
 #-------------------------------------
 # Panel
 panel_items = LTSC
-panel_size = 100% 40
+panel_size = 100% 50
 panel_margin = 0 0
 panel_padding = 2 0 2
 panel_background_id = 5
