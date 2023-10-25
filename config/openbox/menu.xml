@@ -11,9 +11,6 @@
             <item label="Electron 25"> <action name="Execute">
                 <execute>electron25</execute>
             </action> </item>
-            <item label="GDB"> <action name="Execute">
-                <execute>xterm -e gdb</execute>
-            </action> </item>
             <item label="Grapejuice"> <action name="Execute">
                 <execute>grapejuice-gui</execute>
             </action> </item>
@@ -165,6 +162,9 @@
             <item label="mpv Media Player"> <action name="Execute">
                 <execute>mpv --player-operation-mode=pseudo-gui</execute>
             </action> </item>
+            <item label="ncmpcpp"> <action name="Execute">
+                <execute>xterm -e ncmpcpp</execute>
+            </action> </item>
             <item label="OBS Studio"> <action name="Execute">
                 <execute>obs</execute>
             </action> </item>
@@ -200,8 +200,14 @@
             <item label="Google Chrome"> <action name="Execute">
                 <execute>google-chrome-stable</execute>
             </action> </item>
+            <item label="Irssi"> <action name="Execute">
+                <execute>xterm -e irssi</execute>
+            </action> </item>
             <item label="Lynx"> <action name="Execute">
                 <execute>xterm -e lynx</execute>
+            </action> </item>
+            <item label="qBittorrent"> <action name="Execute">
+                <execute>qbittorrent</execute>
             </action> </item>
             <item label="Remote Viewer"> <action name="Execute">
                 <execute>remote-viewer</execute>
@@ -335,11 +341,11 @@
             <item label="KeePassXC"> <action name="Execute">
                 <execute>keepassxc</execute>
             </action> </item>
-            <item label="OpenJDK Java 11 Console"> <action name="Execute">
-                <execute>/usr/lib/jvm/java-11-openjdk/bin/jconsole</execute>
+            <item label="OpenJDK Java 21 Console"> <action name="Execute">
+                <execute>jconsole</execute>
             </action> </item>
-            <item label="OpenJDK Java 11 Shell"> <action name="Execute">
-                <execute>xterm -e /usr/lib/jvm/java-11-openjdk/bin/jshell</execute>
+            <item label="OpenJDK Java 21 Shell"> <action name="Execute">
+                <execute>xterm -e jshell</execute>
             </action> </item>
             <item label="Pstree"> <action name="Execute">
                 <execute>xterm -e pstree.x11</execute>
@@ -373,9 +379,6 @@
             <item label="Bc"> <action name="Execute">
                 <execute>xterm -e bc</execute>
             </action> </item>
-            <item label="Calculator"> <action name="Execute">
-                <execute>gnome-calculator</execute>
-            </action> </item>
             <item label="Console Matrix (Text)"> <action name="Execute">
                 <execute>xterm -e cmatrix</execute>
             </action> </item>
@@ -399,9 +402,6 @@
             </action> </item>
             <item label="Info"> <action name="Execute">
                 <execute>xterm -e info</execute>
-            </action> </item>
-            <item label="Nemo"> <action name="Execute">
-                <execute>nemo</execute>
             </action> </item>
             <item label="picom"> <action name="Execute">
                 <execute>picom</execute>
