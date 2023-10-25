@@ -639,7 +639,7 @@ return {
   },
   {
     "norcalli/nvim-colorizer.lua",
-    ft = {"conf",  "css", "dosini", "html", "javascript", "sass" },
+    ft = { "conf", "css", "dosini", "html", "javascript", "sass" },
     config = function()
       require("colorizer").setup({
         -- make sure that nvim-colorizer only attaches to these file types
