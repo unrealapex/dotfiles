@@ -1,4 +1,4 @@
--- plugins
+
 return {
   {
     "folke/noice.nvim",
@@ -589,45 +589,11 @@ return {
   "nvim-tree/nvim-web-devicons",
   -- colorscheme
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {
-      integrations = {
-        alpha = true,
-        cmp = true,
-        gitsigns = true,
-        illuminate = true,
-        indent_blankline = { enabled = true },
-        lsp_trouble = true,
-        lsp_saga = true,
-        mason = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        leap = true,
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
-      },
-    },
     config = function()
-      vim.cmd([[colorscheme catppuccin-mocha]])
+      vim.cmd([[colorscheme tokyonight-night]])
     end,
   },
   -- markdown preview
