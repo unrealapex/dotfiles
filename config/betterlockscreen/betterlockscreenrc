@@ -1,4 +1,4 @@
-# ~/.config/betterlockscreen/betterlockscreenrc
+# ~/.config/betterlockscreenrc
 
 # default options
 display_on=0
@@ -13,29 +13,29 @@ wallpaper_cmd="feh --bg-fill"
 quiet=false
 
 # default theme
-loginbox=11111b66
-loginshadow=11111bff
+loginbox=00000066
+loginshadow=00000000
 locktext="Type password to unlock..."
 font="sans-serif"
-ringcolor=ffffffff
-insidecolor=11111bff
-separatorcolor=11111bff
-ringvercolor=ffffffff
-insidevercolor=11111bff
-ringwrongcolor=ffffffff
-insidewrongcolor=f38ba8ff
-timecolor=ffffffff
+ringcolor=ddddddff
+insidecolor=00000000
+separatorcolor=00000000
+ringvercolor=ddddddff
+insidevercolor=00000000
+ringwrongcolor=ddddddff
+insidewrongcolor=ed567aff
+timecolor=ddddddff
 time_format="%l:%M"
-greetercolor=ffffffff
-layoutcolor=ffffffff
-keyhlcolor=cba6f7ff
-bshlcolor=cba6f7ff
+greetercolor=ddddddff
+layoutcolor=ddddddff
+keyhlcolor=ee6ff8ff
+bshlcolor=ed567aff
 veriftext="Verifying..."
-verifcolor=ffffffff
+verifcolor=ddddddff
 wrongtext="Failure!"
-wrongcolor=f38ba8ff
-modifcolor=f38ba8ff
-bgcolor=11111bff
+wrongcolor=ed567aff
+modifcolor=ed567aff
+bgcolor=000000ff
 
 
 #
