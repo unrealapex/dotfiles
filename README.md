@@ -1,4 +1,4 @@
-# dotfiles 🌺
+# dotfiles 🌸
 
 ![screenshot of arch linux rice](rice.png)
 ```

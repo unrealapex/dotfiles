@@ -19,8 +19,8 @@
 
 # monitor magic
 autorandr --change
-betterlockscreen --update ~/.dotfiles/advection.webp &
-feh --bg-fill ~/.dotfiles/advection.webp
+betterlockscreen --update ~/.dotfiles/street.jpg &
+feh --bg-fill ~/.dotfiles/street.jpg
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
