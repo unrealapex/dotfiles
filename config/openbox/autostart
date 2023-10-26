@@ -33,7 +33,7 @@ feh --bg-fill ~/.dotfiles/fold.webp
 
 picom --daemon
 
-playerctld daemon &
+playerctld daemon
 
 # conky &
 
