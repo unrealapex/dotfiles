@@ -98,6 +98,9 @@
     # Defines color of the frame around the notification window.
     frame_color = "#ee6ff8"
 
+    # Defines color of the progress bar
+    highlight= "#ee6ff8"
+
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
