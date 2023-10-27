@@ -1,4 +1,3 @@
-
 return {
   {
     "folke/noice.nvim",
@@ -604,17 +603,19 @@ return {
     config = true,
   },
   {
-    "norcalli/nvim-colorizer.lua",
-    ft = { "conf", "css", "dosini", "html", "javascript", "sass" },
+    "NvChad/nvim-colorizer.lua",
+    ft = { "cfg", "conf", "css", "dosini", "html", "javascript", "sass" },
     config = function()
       require("colorizer").setup({
-        -- make sure that nvim-colorizer only attaches to these file types
-        "css",
-        "conf",
-        "dosini",
-        "html",
-        "javascript",
-        "sass",
+        filetypes = {
+          "cfg",
+          "conf",
+          "css",
+          "dosini",
+          "html",
+          "javascript",
+          "sass",
+        },
       })
     end,
   },
