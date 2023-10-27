@@ -1,16 +1,14 @@
 #!/bin/bash
 
-tweak(screenshot): save image by default
-# TODO: change date format, see  "man strftime"
-image_path=~/Pictures/$(date +%s).png
-cp $image_path /tmp/
+image_path=~/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
+cp "$image_path" /tmp/"$image_path".bak
 
 case $1 in
 selection)
-        maim --select --quality 10 $image_path || exit
+        maim --select --quality 10 "$image_path" || exit
         ;;
 full)
-        maim --quality 10 $image_path || exit
+        maim --quality 10 "$image_path" || exit
         ;;
 *)
         notify-send "Screenshot: unknown argument given"
@@ -20,5 +18,5 @@ esac
 # TODO: notify-send action that shows image on right click(with kitty icat)
 # TODO: make sure image displayed in notification does not look distorted if it is large
 
-xclip -selection clipboard -t image/png -i $image_path
-notify-send --icon $image_path "Screenshot taken"
+xclip -selection clipboard -t image/png -i "$image_path"
+notify-send --icon "$image_path" "Screenshot taken"
