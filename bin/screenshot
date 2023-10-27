@@ -1,7 +1,9 @@
 #!/bin/bash
 
-image_path=/tmp/screenshot.png
-cp $image_path $image_path.old
+tweak(screenshot): save image by default
+# TODO: change date format, see  "man strftime"
+image_path=~/Pictures/$(date +%s).png
+cp $image_path /tmp/
 
 case $1 in
 selection)
