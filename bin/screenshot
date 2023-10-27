@@ -12,6 +12,7 @@ full)
         ;;
 *)
         notify-send "Screenshot: unknown argument given"
+        exit
         ;;
 esac
 
