@@ -18,9 +18,7 @@
 
 
 # monitor magic
-autorandr --change
-betterlockscreen --update ~/.dotfiles/street.jpg &
-feh --bg-fill ~/.dotfiles/street.jpg
+(sleep 3 && autorandr --change) &
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
@@ -28,8 +26,7 @@ xautolock -time 10 -locker "idle-lock" &
 nm-applet --no-agent &
 cbatticon &
 
-# TODO: use a different wallpaper
-feh --bg-fill ~/.dotfiles/fold.webp
+feh --bg-fill ~/.dotfiles/street.jpg
 
 picom --daemon
 
