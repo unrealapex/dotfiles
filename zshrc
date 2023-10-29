@@ -84,7 +84,24 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -ap zsh/mapfile mapfile
 
-PROMPT='%F{green}@%n%f ➜ %F{blue}%B%~%b%f $ '
+function git_branch_name()
+{
+  branch=$(git --no-optional-locks symbolic-ref --short HEAD 2>/dev/null || git --no-optional-locks rev-parse --short HEAD 2>/dev/null)
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    # FIXME: see if you can handle prompt spacing more elegantly
+    # see Microsoft's implmention of their prompt in GitHub Codespaces
+    echo ' ('$branch')'
+  fi
+}
+
+# enable substitution in the prompt
+setopt prompt_subst
+
+# TODO: color branch section, cyan for paranthesis and red for branch name
+PROMPT='%F{green}@%n%f ➜ %F{blue}%B%~%b%f$(git_branch_name) $ '
 
 typeset -U path PATH
 path=(~/.local/bin $path)
