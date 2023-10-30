@@ -92,7 +92,7 @@ function git_branch_name()
     :
   else
     # FIXME: see if you can handle prompt spacing more elegantly
-    # see Microsoft's implmention of their prompt in GitHub Codespaces
+    # see Microsoft's implmention of the prompt they have in GitHub Codespaces
     echo ' %F{cyan}(%f%F{red}'$branch'%f%F{cyan})%f'
   fi
 }
