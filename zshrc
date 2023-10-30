@@ -93,14 +93,13 @@ function git_branch_name()
   else
     # FIXME: see if you can handle prompt spacing more elegantly
     # see Microsoft's implmention of their prompt in GitHub Codespaces
-    echo ' ('$branch')'
+    echo ' %F{cyan}(%f%F{red}'$branch'%f%F{cyan})%f'
   fi
 }
 
 # enable substitution in the prompt
 setopt prompt_subst
 
-# TODO: color branch section, cyan for paranthesis and red for branch name
 PROMPT='%F{green}@%n%f ➜ %F{blue}%B%~%b%f$(git_branch_name) $ '
 
 typeset -U path PATH
