@@ -44,7 +44,7 @@ super + o
 super + n
     berryc toggle_decorations
 
-super + Tab
+alt + Tab
     berryc cycle_focus
 
 super + q
