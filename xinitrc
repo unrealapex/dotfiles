@@ -58,4 +58,30 @@ fi
 xsetroot -cursor_name left_ptr
 # xrdb "$HOME"/.Xresources
 
-openbox-session
+# monitor magic
+(sleep 1 && autorandr --change) &
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
+xautolock -time 10 -locker "idle-lock" &
+
+# nm-applet --no-agent &
+# cbatticon &
+
+feh --bg-fill ~/.dotfiles/street.jpg &
+
+picom --daemon
+
+playerctld daemon
+
+# tint2 &
+polybar &
+
+ibus-daemon -rxR &
+
+discord --start-minimized --tray &
+
+
+evilwm
+
