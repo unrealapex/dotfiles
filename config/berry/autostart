@@ -16,7 +16,7 @@ berryc top_gap            5
 berryc focus_color         ee6ff8
 berryc unfocus_color       171717
 berryc inner_focus_color   171717
-berryc inner_unfocus_color 626262
+berryc inner_unfocus_color 171717
 berryc text_focus_color    dddddd
 berryc text_unfocus_color  777777
 
