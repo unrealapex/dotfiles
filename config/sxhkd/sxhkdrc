@@ -67,7 +67,7 @@ super + @period
         rofi -modi emoji -show emoji
 
 # TODO: add Pause as a keymap
-super + l
+super + shift + x
         betterlockscreen --lock
 
 XF86AudioRaiseVolume
