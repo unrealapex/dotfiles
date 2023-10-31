@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/berry/sxhkdrc &
 
 
 # monitor magic
