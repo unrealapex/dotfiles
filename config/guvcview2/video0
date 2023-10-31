@@ -40,10 +40,10 @@ fps_num=1
 fps_denom=25
 #audio device index (-1 - api default)
 audio_device=11
-#video fx mask
+#video fx mask 
 video_fx=0x0
-#audio fx mask
+#audio fx mask 
 audio_fx=0x0
-#OSD mask
+#OSD mask 
 osd_mask=0x0
 crosshair_color=0xff00
