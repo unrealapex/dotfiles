@@ -41,11 +41,9 @@ playerctld daemon
 
 # conky &
 
-tint2 &
 # terminate instances of polybar that are already running
-# killall -q polybar
-# polybar &
-# flameshot &
+killall -q polybar
+polybar &
 
 ibus-daemon -rxR &
 
