@@ -26,6 +26,17 @@ berryc draw_text   "true"
 berryc edge_lock   "true"
 berryc set_font    "Dina-9"
 
+berryc name_desktop 0 "1"
+berryc name_desktop 1 "2"
+berryc name_desktop 2 "3"
+berryc name_desktop 3 "4"
+berryc name_desktop 4 "5"
+berryc name_desktop 5 "6"
+berryc name_desktop 6 "7"
+berryc name_desktop 7 "8"
+berryc name_desktop 8 "9"
+berryc name_desktop 9 "10"
+
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
