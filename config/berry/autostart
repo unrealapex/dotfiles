@@ -37,6 +37,11 @@ berryc name_desktop 7 "8"
 berryc name_desktop 8 "9"
 berryc name_desktop 9 "10"
 
+berryc move_mask mod4
+berryc move_button 1
+berryc resize_mask mod4
+berryc resize_button 3
+
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
