@@ -13,8 +13,6 @@ bluez
 bluez-utils
 brave-bin
 bridge-utils
-bspwm
-catppuccin-gtk-theme-mocha
 cava
 cbatticon
 cbonsai
@@ -28,7 +26,6 @@ discord
 dkms
 dnsmasq
 dunst
-evilwm
 faudio
 feh
 fff
@@ -133,7 +130,6 @@ maim
 man-db
 man-pages
 mangohud
-menumaker
 mesa
 mesa-utils
 mpd
@@ -153,7 +149,6 @@ noto-fonts-emoji
 npm
 ntp
 nyancat
-obconf
 obs-studio
 obsidian
 ocl-icd
