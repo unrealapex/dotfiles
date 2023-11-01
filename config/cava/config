@@ -173,8 +173,8 @@ source = auto
 ; foreground = default
 
 # SDL and sdl_glsl only support hex code colors, these are the default:
-; background = '#111111'
-; foreground = '#33ffff'
+; background = '#171717'
+; foreground = '#ee6ff8'
 
 
 # Gradient mode, only hex defined colors are supported,
@@ -182,14 +182,14 @@ source = auto
 # You can define as many as 8 different colors. They range from bottom to top of screen
  gradient = 1
  gradient_count = 8
- gradient_color_1 = '#94e2d5'
- gradient_color_2 = '#89dceb'
- gradient_color_3 = '#74c7ec'
- gradient_color_4 = '#89b4fa'
- gradient_color_5 = '#cba6f7'
- gradient_color_6 = '#f5c2e7'
- gradient_color_7 = '#eba0ac'
- gradient_color_8 = '#f38ba8'
+ gradient_color_1 = '#383584'
+ gradient_color_2 = '#514dc1'
+ gradient_color_3 = '#7571f9'
+ gradient_color_4 = '#9498ff'
+ gradient_color_5 = '#ee6ff8'
+ gradient_color_6 = '#99519e'
+ gradient_color_7 = '#f793ff'
+ gradient_color_8 = '#C74665'
 
 
 
