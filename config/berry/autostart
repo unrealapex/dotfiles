@@ -29,7 +29,7 @@ berryc text_unfocus_color  "$text_dim"
 berryc smart_place "true"
 berryc draw_text   "false"
 berryc edge_lock   "true"
-berryc set_font    "Dina-9"
+berryc set_font    "SF Pro Text Bold-9"
 
 berryc name_desktop 0 "1"
 berryc name_desktop 1 "2"
