@@ -48,3 +48,8 @@ run in the `shell:` section of `install.conf.yaml` except for
 git credentials(name and email) should be stored in `~/.gitconfig_local`. this
 file is read by `~/.gitconfig`.
 
+window decorations are not functional since window management with berry is
+done through the keyboard, therefore, it is more functional and aesthetic to
+disable them. this can be done in most gui apps by enabling the "use system
+titlebars" option.
+
