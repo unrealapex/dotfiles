@@ -58,4 +58,5 @@ fi
 xsetroot -cursor_name left_ptr
 # xrdb "$HOME"/.Xresources
 
-openbox-session
+berry
+

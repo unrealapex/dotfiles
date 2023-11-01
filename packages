@@ -28,6 +28,7 @@ discord
 dkms
 dnsmasq
 dunst
+evilwm
 faudio
 feh
 fff
@@ -225,6 +226,9 @@ xdg-utils
 xdotool
 xf86-input-libinput
 xorg
+xorg-fonts-encodings
+xorg-fonts-misc
+xorg-fonts-type1
 xorg-twm
 xorg-xclock
 xorg-xinit

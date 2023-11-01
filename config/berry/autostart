@@ -1,0 +1,71 @@
+#!/bin/bash
+
+pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/berry/sxhkdrc &
+
+
+# monitor magic
+(sleep 3 && autorandr --change) &
+
+# Set decoration geometry
+berryc border_width       1
+berryc inner_border_width 0
+berryc title_height       0
+berryc top_gap            0
+
+primary=ee6ff8
+background=171717
+text=dddddd
+text_dim=777777
+
+# Set decoration colors
+berryc focus_color         "$primary"
+berryc unfocus_color       "$background"
+berryc inner_focus_color   "$background"
+berryc inner_unfocus_color "$background"
+berryc text_focus_color    "$text"
+berryc text_unfocus_color  "$text_dim"
+
+# Other options
+berryc smart_place "true"
+berryc draw_text   "false"
+berryc edge_lock   "true"
+berryc set_font    "Dina-9"
+
+berryc name_desktop 0 "1"
+berryc name_desktop 1 "2"
+berryc name_desktop 2 "3"
+berryc name_desktop 3 "4"
+berryc name_desktop 4 "5"
+berryc name_desktop 5 "6"
+berryc name_desktop 6 "7"
+berryc name_desktop 7 "8"
+berryc name_desktop 8 "9"
+berryc name_desktop 9 "10"
+
+berryc move_mask mod4
+berryc move_button 1
+berryc resize_mask mod4
+berryc resize_button 3
+
+
+xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
+xautolock -time 10 -locker "idle-lock" &
+
+nm-applet --no-agent &
+cbatticon &
+
+feh --bg-fill ~/.dotfiles/street.jpg
+
+picom --daemon
+
+playerctld daemon
+
+# conky &
+
+# terminate instances of polybar that are already running
+killall -q polybar
+polybar &
+
+ibus-daemon -rxR &
+
+discord --start-minimized --tray
