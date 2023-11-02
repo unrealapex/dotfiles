@@ -4,7 +4,7 @@ pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/berry/sxhkdrc &
 
 
 # monitor magic
-(sleep 3 && autorandr --change) &
+sleep 1; autorandr --change &
 
 # Set decoration geometry
 berryc border_width       1
