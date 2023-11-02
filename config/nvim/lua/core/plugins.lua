@@ -500,64 +500,51 @@ return {
   },
   -- fuzzy finder
   {
-    "nvim-telescope/telescope.nvim",
+    "ibhagwan/fzf-lua",
     keys = {
       {
         "<leader>ff",
         function()
-          require("telescope.builtin").find_files()
+          require("fzf-lua").files()
         end,
       },
       {
         "<leader>fg",
         function()
-          require("telescope.builtin").live_grep()
+          require("fzf-lua").live_grep()
         end,
       },
       {
         "<leader><leader>",
         function()
-          require("telescope.builtin").buffers()
+          require("fzf-lua").buffers()
         end,
       },
       {
         "<leader>fh",
         function()
-          require("telescope.builtin").help_tags()
+          require("fzf-lua").help_tags()
         end,
       },
       {
         "<leader>fd",
         function()
-          require("telescope.builtin").diagnostics()
+          require("fzf-lua").diagnostics_document()
         end,
       },
       {
         "<leader>fo",
         function()
-          require("telescope.builtin").oldfiles()
+          require("fzf-lua").oldfiles()
         end,
       },
     },
-    cmd = { "Telescope" },
+    cmd = { "FzfLua" },
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
-      {
-        -- increase telescope search speed
-        "nvim-telescope/telescope-fzf-native.nvim",
-        cond = vim.fn.executable("make") == 1,
-        build = "make",
-        config = function()
-          require("telescope").load_extension("fzf")
-        end,
-      },
+      "nvim-treesitter/nvim-treesitter",
     },
-    config = function()
-      ---@diagnostic disable-next-line: different-requires
-      require("plugins.telescope")
-    end,
+    config = true,
   },
   -- improved movement
   {
