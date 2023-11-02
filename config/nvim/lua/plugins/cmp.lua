@@ -73,7 +73,6 @@ cmp.setup({
     { name = "path" },
     { name = "cmdline" },
     { name = "calc" },
-    { name = "spell" },
     { name = "emoji" },
     { name = "luasnip" }, -- For luasnip users.
     -- { name = "ultisnips" }, -- For ultisnips users.
