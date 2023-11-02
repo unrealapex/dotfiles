@@ -50,6 +50,7 @@ return {
     init = function()
       -- check if a file argument supplied is a directory
       local argv_contains_dir = false
+      ---@diagnostic disable-next-line: unused-local
       for k, v in pairs(vim.fn.argv()) do
         if vim.fn.isdirectory(v) == 1 then
           argv_contains_dir = true
