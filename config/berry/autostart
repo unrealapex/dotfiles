@@ -68,4 +68,5 @@ polybar &
 
 ibus-daemon -rxR &
 
+keepassxc &
 discord --start-minimized --tray
