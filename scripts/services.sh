@@ -4,6 +4,7 @@ systemctl enable gdm.service
 systemctl --user enable mpd.socket
 systemctl --user disable pulseaudio.socket pulseaudio.service
 systemctl --user enable pipewire.socket pipewire-pulse.socket wireplumber.service
+systemctl enable avahi-daemon
 systemctl enable tlp.service
 systemctl mask systemd-rfkill.service
 systemctl mask systemd-rfkill.socket
