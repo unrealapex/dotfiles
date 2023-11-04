@@ -30,6 +30,8 @@
       path: themes/*
 
 - create:
+    - ~/.local/bin
+    - ~/.themes
     - ~/projects
     - ~/Downloads/git
     - ~/Pictures/Webcam/
