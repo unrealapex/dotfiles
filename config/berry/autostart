@@ -62,9 +62,8 @@ playerctld daemon
 
 # conky &
 
-# terminate instances of polybar that are already running
-killall -q polybar
-polybar &
+# polybar
+~/.config/polybar/launch.sh &
 
 ibus-daemon -rxR &
 
