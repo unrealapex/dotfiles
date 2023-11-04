@@ -41,7 +41,7 @@ feh --bg-fill ~/.dotfiles/fold.webp
 
 picom --daemon
 
-~/.config/polybar/launch.sh &
+bash ~/.config/polybar/launch.sh &
 
 flameshot &
 

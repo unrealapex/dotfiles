@@ -63,7 +63,7 @@ playerctld daemon
 # conky &
 
 # polybar
-~/.config/polybar/launch.sh &
+bash ~/.config/polybar/launch.sh &
 
 ibus-daemon -rxR &
 
