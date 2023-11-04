@@ -60,8 +60,6 @@ picom --daemon
 
 playerctld daemon
 
-# conky &
-
 # polybar
 bash ~/.config/polybar/launch.sh &
 
