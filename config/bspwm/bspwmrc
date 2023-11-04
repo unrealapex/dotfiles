@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # monitor magic
-autorandr --change &
+sleep 1; autorandr --change &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
@@ -33,16 +33,21 @@ bspc rule -a zoom state=floating center=on follow=on border=off
 bspc rule -a '*:*:Picture in picture' state=floating
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
-xautolock -time 10 -locker "betterlockscreen --lock" &
-
-cbatticon &
+xautolock -time 10 -locker "idle-lock" &
 
 nm-applet --no-agent &
+cbatticon &
 
-feh --bg-fill ~/.dotfiles/fold.webp
+feh --bg-fill ~/.dotfiles/street.jpg
 
 picom --daemon
 
+playerctld daemon
+
+# polybar
 bash ~/.config/polybar/launch.sh &
 
+ibus-daemon -rxR &
+
+keepassxc &
 discord --start-minimized --tray
