@@ -23,7 +23,7 @@ bspc rule -a firefox desktop='^2'
 bspc rule -a Google-chrome desktop='^2'
 bspc rule -a Brave-browser desktop='^2'
 bspc rule -a discord desktop='^3'
-bspc rule -a Steam desktop='^4'
+bspc rule -a Steam desktop='^4' state=floating
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
@@ -34,6 +34,8 @@ bspc rule -a '*:*:Picture in picture' state=floating
 
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "betterlockscreen --lock" &
+
+cbatticon &
 
 nm-applet --no-agent &
 
