@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.evilwmrc: evilwmrc
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.bash_profile: bash_profile
