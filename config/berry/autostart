@@ -61,7 +61,7 @@ picom --daemon
 playerctld daemon
 
 # polybar
-bash ~/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh &
 
 ibus-daemon -rxR &
 
