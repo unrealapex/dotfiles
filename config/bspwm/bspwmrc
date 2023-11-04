@@ -41,9 +41,8 @@ feh --bg-fill ~/.dotfiles/fold.webp
 
 picom --daemon
 
-# terminate instances of polybar that are already running
-killall -q polybar
-polybar &
+~/.config/polybar/launch.sh &
+
 flameshot &
 
 discord --start-minimized --tray
