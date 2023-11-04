@@ -43,6 +43,4 @@ picom --daemon
 
 bash ~/.config/polybar/launch.sh &
 
-flameshot &
-
 discord --start-minimized --tray
