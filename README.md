@@ -27,17 +27,17 @@ cd ~/.dotfiles
 this rice is not intended for use by others, however, you're welcome to if
 you wish. the information below might be of use to you.
 
-the install script runs scripts (for arch) defined in [scripts/](/scripts).
+the install script runs scripts (for arch) listed in [scripts/](/scripts).
 ```
 $ tree scripts
   scripts
     ├── bluetooth.sh       enable bluetooth
-    ├── firefox.sh         make firefox faster
+    ├── firefox.sh         make firefox more fast and secure
     ├── group.sh           add current user to appropriate groups
-    ├── kill-x.sh          bind ctrl + alt + backspace to kill x server
-    ├── microcode.sh       generate grub config for cpu microcode
+    ├── kill-x.sh          bind ctrl + alt + backspace to kill x
+    ├── microcode.sh       install microcode updates
     ├── no-mouse-accel.sh  disable mouse acceleration
-    ├── pacman.sh          install rice dependencies
+    ├── pacman.sh          optimize pacman and install rice packages
     ├── services.sh        set up services for rice and dependencies
     ├── tf2.sh             fix common issues running tf2
     └── zsh-rehash.sh      enable zsh rehash
@@ -47,7 +47,7 @@ you probably want to comment out every script that will
 run in the `shell:` section of `install.conf.yaml` except for
 `scripts/pacman.sh`.
 
-git credentials(name and email) should be stored in `~/.gitconfig_local`. this
+your git credentials(name and email) should be added in `~/.gitconfig_local`. this
 file is read by `~/.gitconfig`.
 
 window decorations are not functional since window management with berry is
