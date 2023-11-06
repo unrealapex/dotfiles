@@ -75,7 +75,7 @@ prompt {
 }
 
 entry {
-  placeholder: "Run...";
+  placeholder: "Search...";
 }
 
 listview {
