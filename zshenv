@@ -9,6 +9,7 @@ export TERMINAL_PROG="kitty"
 export BROWSER=/usr/bin/brave
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
+export LESS="-i"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#171717,bg:#171717,spinner:#ee6ff8,hl:#ecfd65 \
 --color=fg:#777777,header:#fffdf5,info:#7571f9,pointer:#dddddd  \
