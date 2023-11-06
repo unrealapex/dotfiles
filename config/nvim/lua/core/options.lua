@@ -55,7 +55,7 @@ vim.opt.shiftround = true
 vim.opt.showmode = false
 -- show typed command in status bar
 vim.opt.showcmd = true
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "auto:1-2"
 vim.opt.smartcase = true
 -- put new windows right of the current
 vim.opt.splitright = true
