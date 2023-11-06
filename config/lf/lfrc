@@ -8,4 +8,10 @@ set ignorecase true
 set scrolloff 10
 set autoquit true
 
+map d delete
+map . set hidden!
+map ~ cd ~
+map - jump-prev
+
+
 " vim: set filetype=vim
