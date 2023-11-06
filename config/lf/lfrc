@@ -14,4 +14,4 @@ map ~ cd ~
 map - jump-prev
 
 
-" vim: set filetype=vim
+# vim: set filetype=bash
