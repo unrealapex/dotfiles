@@ -35,6 +35,16 @@ return {
           ["vim.lsp.util.stylize_markdown"] = true,
         },
       },
+      routes = {
+        {
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "written",
+          },
+          opts = { skip = true },
+        },
+      },
       presets = {
         bottom_search = true,
         command_palette = true,
