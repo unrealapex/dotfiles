@@ -22,8 +22,8 @@ user_pref("general.smoothScroll.stopDecelerationWeighting", 1.0);
 user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this number to your liking
 
 // overrides
-user_pref("identity.fxaccounts.enabled", false);
-user_pref("browser.tabs.firefox-view", false);
+user_pref("identity.fxaccounts.enabled", true);
+user_pref("browser.tabs.firefox-view", true);
 user_pref("extensions.pocket.enabled", true);
 user_pref("browser.tabs.tabmanager.enabled", true);
 user_pref("privacy.userContext.ui.enabled", false);
