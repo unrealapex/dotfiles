@@ -8,10 +8,18 @@ set ignorecase true
 set scrolloff 10
 set autoquit true
 
+cmd open ${{
+    case $(file --mime-type -Lb $f) in
+        text/*) $EDITOR $fx;;
+        *) for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
 map d delete
 map . set hidden!
 map ~ cd ~
 map - jump-prev
+map <enter> open
 
 
 # vim: set filetype=bash
