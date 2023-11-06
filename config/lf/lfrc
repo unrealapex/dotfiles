@@ -7,3 +7,5 @@ set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set ignorecase true
 set scrolloff 10
 set autoquit true
+
+" vim: set filetype=vim
