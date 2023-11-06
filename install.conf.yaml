@@ -51,6 +51,7 @@
   - [bash scripts/bluetooh.sh, Enabling bluetooth]
   - [bash scripts/services.sh, Enabling services]
   - [bash scripts/groups.sh, Adding current user to needed groups]
+  - [bash scripts/firefox.sh, Hardening Firefox]
   - [bash scripts/gsettings.sh, Configuring GNOME settings]
   - [chsh -s $(which zsh), Making zsh the default shell]
   - [xdg-user-dirs-update, Creating default user directories]
