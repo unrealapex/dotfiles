@@ -1,3 +1,3 @@
 #!/bin/bash
-/usr/bin/brave "$@"
+/usr/bin/firefox "$@"
 exit 0
