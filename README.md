@@ -38,6 +38,7 @@ $ tree scripts
     ├── no-mouse-accel.sh  disable mouse acceleration
     ├── pacman.sh          install rice dependencies
     ├── services.sh        set up services for rice and dependencies
+    ├── tf2.sh             fix common issues running tf2
     └── zsh-rehash.sh      enable zsh rehash
 
 ```
