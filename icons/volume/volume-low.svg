@@ -22,18 +22,18 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="34.916667"
      inkscape:cx="11.98568"
-     inkscape:cy="12"
-     inkscape:window-width="1920"
-     inkscape:window-height="1042"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cy="12.01432"
+     inkscape:window-width="1240"
+     inkscape:window-height="1000"
+     inkscape:window-x="224"
+     inkscape:window-y="64"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1" />
   <path
      d="M7,9V15H11L16,20V4L11,9H7Z"
      id="path1" />
   <path
-     style="fill:#cdd6f4;stroke:#f9f9f9;stroke-width:0.0286396"
+     style="fill:#dddddd;stroke:#f9f9f9;stroke-width:0.0286396;fill-opacity:1"
      d="M 13.503233,17.470026 11.025558,14.99284 H 9.0139726 7.0023866 V 12 9.0071599 h 1.9941857 1.9941857 l 2.495075,-2.4837367 2.495074,-2.4837366 0.0073,3.9896274 c 0.004,2.194295 0.004,5.773488 0,7.953762 l -0.0073,3.964136 z"
      id="path2" />
 </svg>
