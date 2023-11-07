@@ -31,7 +31,7 @@ down)
 mute)
         pamixer -t
         if eval "$(pamixer --get-mute)"; then
-                dunstify -a "changevolume" -t 2000 -r 9993 -u low -i ~/.icons/icons/volume/volume-mute.svg "Muted"
+                dunstify -a "changevolume" -t 2000 -r 9993 -u low -i ~/.local/share/icons/volume/volume-mute.svg "Muted"
         else
                 send_notification up
         fi
