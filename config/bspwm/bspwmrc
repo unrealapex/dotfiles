@@ -48,7 +48,7 @@ playerctld daemon
 # polybar
 bash ~/.config/polybar/launch.sh &
 
-ibus-daemon -rxR &
+ibus-daemon --replace --xim --daemonize
 
 keepassxc &
 discord --start-minimized --tray
