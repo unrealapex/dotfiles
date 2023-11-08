@@ -32,7 +32,7 @@ user_pref("browser.search.suggest.enabled", true);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
 " >> user.js
 # ensure profiles directory is created
-sleep 10 && killall firefox &
+sleep 5 && killall firefox &
 firefox -headless &
 wait 
 # move user.js to default firefox profile
