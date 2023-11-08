@@ -27,6 +27,8 @@ user_pref("browser.tabs.firefox-view", true);
 user_pref("extensions.pocket.enabled", true);
 user_pref("browser.tabs.tabmanager.enabled", true);
 user_pref("privacy.userContext.ui.enabled", false);
+user_pref("browser.search.suggest.enabled", true);
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
 " >> user.js
 # ensure profiles directory is created
 sleep 10 && killall firefox &
