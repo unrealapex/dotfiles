@@ -32,7 +32,7 @@ the install script runs scripts (for arch) listed in [scripts/](/scripts).
 $ tree scripts
   scripts
     ├── bluetooth.sh       enable bluetooth
-    ├── firefox.sh         make firefox more fast and secure
+    ├── firefox.sh         generate firefox user.js file
     ├── group.sh           add current user to appropriate groups
     ├── kill-x.sh          bind ctrl + alt + backspace to kill x
     ├── microcode.sh       install microcode updates
