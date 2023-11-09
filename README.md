@@ -2,7 +2,7 @@
 
 ![screenshot of arch linux rice](rice.png)
 ```
-wm: berry
+wm: bspwm
 bar: polybar
 launcher: rofi
 terminal: kitty
