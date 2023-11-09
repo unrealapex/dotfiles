@@ -31,10 +31,13 @@ user_pref("privacy.userContext.ui.enabled", false);
 user_pref("browser.search.suggest.enabled", true);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
 " >> user.js
+
 # ensure profiles directory is created
-sleep 5 && killall firefox &
-firefox -headless &
-wait 
+if [ ! -d ~/.mozilla/ ]; then
+    sleep 5 && killall firefox &
+    firefox -headless &
+    wait
+fi
 # move user.js to default firefox profile
 mv user.js "$(find ~/.mozilla/firefox/ -type d -name "*.default-release")"
 
