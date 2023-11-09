@@ -139,10 +139,7 @@ alias crankshaft='gamemoderun ~/Downloads/crankshaft.AppImage &;disown'
 # chill study music with lofi girl
 alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
 
-f() {
-    fff "$@"
-    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
-}
+alias f='fff'
 
 alias -- -='cd -'
 alias 1='cd -1'
