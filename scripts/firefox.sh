@@ -33,7 +33,7 @@ user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
 " >> user.js
 
 # ensure profiles directory is created
-if [ ! -d ~/.mozilla/ ]; then
+if [ ! -d "~/.mozilla/" ]; then
     sleep 5 && killall firefox &
     firefox -headless &
     wait
