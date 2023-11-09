@@ -30,6 +30,7 @@ user_pref("browser.tabs.tabmanager.enabled", true);
 user_pref("privacy.userContext.ui.enabled", false);
 user_pref("browser.search.suggest.enabled", true);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
+user_pref("browser.toolbars.bookmarks.visibility", "always")
 ' >> user.js
 
 # ensure profiles directory is created
