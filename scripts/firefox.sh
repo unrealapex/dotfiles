@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# install betterfox's fastfox and smoothfox user.js and merge it into one file
+# fetch betterfox user.js
 curl -o user.js https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js
 
 # append smooth scroll settings and betterfox overrides to user.js
