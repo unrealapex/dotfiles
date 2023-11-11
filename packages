@@ -1,5 +1,3 @@
-zathura
-zathura-pdf-poppler
 adwaita-icon-theme
 alsa-lib
 alsa-plugins
@@ -241,5 +239,7 @@ xorg-xclock
 xorg-xinit
 xss-lock
 yt-dlp
+zathura
+zathura-pdf-poppler
 zoom
 zsh
