@@ -58,4 +58,4 @@ playerctld daemon
 ibus-daemon --replace --xim --daemonize
 
 keepassxc &
-discord --start-minimized --tray
+discord --start-minimized
