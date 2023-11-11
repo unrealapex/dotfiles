@@ -34,6 +34,7 @@ user_pref("browser.toolbars.bookmarks.visibility", "always")
 user_pref("findbar.highlightAll", true)
 user_pref("browser.safebrowsing.downloads.remote.enabled", true);
 user_pref("browser.contentblocking.category", "standard");
+user_pref("permissions.default.desktop-notification", 0);
 ' >> user.js
 
 # ensure profiles directory is created
