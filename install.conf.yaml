@@ -18,6 +18,7 @@
     ~/.zshrc: zshrc
     ~/.alsoftrc: alsoftrc
     ~/.drirc: drirc
+    ~/.w3m: w3m
     ~/.config:
       glob: true
       path: config/*
