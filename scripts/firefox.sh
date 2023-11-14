@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# ensure profiles directory is created
+if [ ! -d "~/.mozilla/" ]; then
+    sleep 5 && killall firefox &
+    firefox -headless &
+    wait
+fi
+
+profile_path=$(find ~/.mozilla/firefox/ -type d -name "*.default-release")
+
 # fetch betterfox user.js
 curl -o user.js https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js
 
@@ -38,12 +47,6 @@ user_pref("permissions.default.desktop-notification", 0);
 user_pref("permissions.default.geo", 0);
 ' >> user.js
 
-# ensure profiles directory is created
-if [ ! -d "~/.mozilla/" ]; then
-    sleep 5 && killall firefox &
-    firefox -headless &
-    wait
-fi
 # move user.js to default firefox profile
-mv user.js "$(find ~/.mozilla/firefox/ -type d -name "*.default-release")"
+mv user.js "$profile_path"
 
