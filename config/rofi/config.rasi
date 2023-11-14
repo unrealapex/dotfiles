@@ -71,7 +71,7 @@ case-indicator {
 }
 
 prompt {
-  font: "Source Code Pro 14";
+  font: "SFMono Nerd Font Mono 14";
 }
 
 entry {
