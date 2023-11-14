@@ -30,8 +30,8 @@ user_pref("browser.tabs.tabmanager.enabled", true);
 user_pref("privacy.userContext.ui.enabled", false);
 user_pref("browser.search.suggest.enabled", true);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
-user_pref("browser.toolbars.bookmarks.visibility", "always")
-user_pref("findbar.highlightAll", true)
+user_pref("browser.toolbars.bookmarks.visibility", "always");
+user_pref("findbar.highlightAll", true);
 user_pref("browser.safebrowsing.downloads.remote.enabled", true);
 user_pref("browser.contentblocking.category", "standard");
 user_pref("permissions.default.desktop-notification", 0);
