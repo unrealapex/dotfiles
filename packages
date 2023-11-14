@@ -113,6 +113,7 @@ lib32-sqlite
 lib32-v4l-utils
 lib32-vkd3d
 lib32-vulkan-icd-loader
+libadwaita
 libgcrypt
 libgpg-error
 libjpeg-turbo
