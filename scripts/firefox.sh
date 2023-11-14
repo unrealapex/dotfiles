@@ -45,6 +45,7 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", true);
 user_pref("browser.contentblocking.category", "standard");
 user_pref("permissions.default.desktop-notification", 0);
 user_pref("permissions.default.geo", 0);
+user_pref("devtools.toolbox.host", "right");
 ' >> user.js
 
 # move user.js to default firefox profile
