@@ -33,6 +33,7 @@ bspc rule -a Brave-browser desktop='^2'
 bspc rule -a discord desktop='^3'
 bspc rule -a obsidian desktop='^4'
 bspc rule -a steam desktop='^5' state=floating
+bspc rule -a Lutris desktop='^5' state=floating
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
