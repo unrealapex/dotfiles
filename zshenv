@@ -18,7 +18,7 @@ export FZF_DEFAULT_OPTS=" \
 
 # set ibus as input method framework
 export GTK_IM_MODULE=xim
-export QT_IM_MODULE=ibus
+export QT_IM_MODULE=xim
 export XMODIFIERS=@im=ibus
 export GLFW_IM_MODULE=ibus
 
