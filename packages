@@ -88,6 +88,7 @@ lib32-faudio
 lib32-gamemode
 lib32-giflib
 lib32-gnutls
+lib32-gperftools
 lib32-gst-plugins-base-libs
 lib32-gtk3
 lib32-libgcrypt
