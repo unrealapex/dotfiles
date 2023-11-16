@@ -102,6 +102,11 @@ setopt prompt_subst
 
 PROMPT='%F{green}@%n%f ➜ %F{blue}%B%~%b%f$(git_branch_name) $ '
 
+# show a prompt without unicode symbols if in a tty
+if [ x$DISPLAY = x ] ; then
+  PROMPT='%F{green}@%n%f -> %F{blue}%B%~%b%f$(git_branch_name) $ '
+fi
+
 typeset -U path PATH
 path=(~/.local/bin $path)
 export PATH
