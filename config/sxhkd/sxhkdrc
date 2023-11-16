@@ -120,11 +120,8 @@ super + {Left,Down,Up,Right}
   bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
-Print
-        screenshot selection
-
-shift + Print
-        screenshot full
+{_,shift + }Print
+        screenshot {full,selection}
 
 super + @period
         rofi -modi emoji -show emoji
@@ -132,29 +129,17 @@ super + @period
 super + shift + x
         betterlockscreen --lock
 
-XF86AudioRaiseVolume
-        volumewizard up
-
-XF86AudioLowerVolume
-        volumewizard down
+XF86Audio{Raise,Lower}Volume
+        volumewizard {up,down}
 
 XF86AudioMute
         volumewizard mute
 
-XF86AudioPlay
-  playerctl play-pause
+XF86Audio{Play,Next,Prev}
+  playerctl {play-pause,next,previous}
 
-XF86AudioNext
-  playerctl next
-
-XF86AudioPrev
-  playerctl previous
-
-XF86MonBrightnessUp
-  brightnessctl set +15%
-
-XF86MonBrightnessDown
-  brightnessctl set 15%-
+XF86MonBrightness{Up,Down}
+  brightnessctl set {+15%,15%-}
 
 XF86AudioMicMute
   pactl set-source-mute toggle
