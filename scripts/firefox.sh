@@ -46,6 +46,7 @@ user_pref("browser.contentblocking.category", "standard");
 user_pref("permissions.default.desktop-notification", 0);
 user_pref("permissions.default.geo", 0);
 user_pref("devtools.toolbox.host", "right");
+user_pref("privacy.history.custom", false);
 ' >> user.js
 
 # move user.js to default firefox profile
