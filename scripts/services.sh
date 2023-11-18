@@ -12,7 +12,7 @@ systemctl enable cups.socket
 systemctl enable libvirtd
 systemctl enable betterlockscreen@$USER
 systemctl enable --user syncthing.service
-
+systemctl enable cpupower.service
 # laptop services
 
 # systemctl enable tlp.service
