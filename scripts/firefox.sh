@@ -47,6 +47,8 @@ user_pref("permissions.default.desktop-notification", 0);
 user_pref("permissions.default.geo", 0);
 user_pref("devtools.toolbox.host", "right");
 user_pref("privacy.history.custom", false);
+user_pref("browser.eme.ui.enabled", false);
+user_pref("media.eme.enabled", false);
 ' >> user.js
 
 # move user.js to default firefox profile
