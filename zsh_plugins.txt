@@ -1,6 +1,5 @@
 # oh my zsh stuff
 # TODO: check if these plugins can be deferred
-ohmyzsh/ohmyzsh path:plugins/history-substring-search
 ohmyzsh/ohmyzsh path:plugins/safe-paste
 ohmyzsh/ohmyzsh path:plugins/sudo
 
