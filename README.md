@@ -1,6 +1,6 @@
 # dotfiles 🌸
 
-![screenshot of arch linux rice](rice.png)
+![screenshot of rice](rice.png)
 ```
 wm: bspwm
 bar: polybar
