@@ -2,7 +2,7 @@
 static char * right_active_xpm[] = {
 "1 21 2 1",
 " 	c None",
-".	c #484f55",
+".	c #bf4e6d",
 ".",
 ".",
 ".",
