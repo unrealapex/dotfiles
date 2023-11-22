@@ -121,7 +121,7 @@ super + {Left,Down,Up,Right}
 
 
 {_,shift + }Print
-        screenshot {full,selection}
+        screenshot {selection,full}
 
 super + @period
         rofi -modi emoji -show emoji
