@@ -50,8 +50,8 @@ run in the `shell:` section of `install.conf.yaml` except for
 your git credentials(name and email) should be added in `~/.gitconfig_local`. this
 file is read by `~/.gitconfig`.
 
-window decorations are not functional since window management with berry is
-done through the keyboard, therefore, it is more functional and aesthetic to
+window decorations are not functional since window management is primarily
+done through the keyboard, therefore, it is more logical to
 disable them. this can be done in most gui apps by enabling the "use system
 titlebars" option.
 
