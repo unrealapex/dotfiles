@@ -24,23 +24,23 @@ window {
   padding: 10px;
   border: 2px;
   border-radius: 10px;
-  border-color: @fuchsia;
+  border-color: @primary;
   background-color: @bg;
   spacing: 0;
-  children: [mainbox];
+  children: [primarybox];
   orientation: horizontal;
 }
 
-mainbox {
+primarybox {
   spacing: 0;
   children: [ inputbar, message, listview];
 }
 
 message {
-  border-color: @red;
+  border-color: @error;
   border: 0px 2px 2px 2px;
   padding: 5;
-  background-color: @brightGray;
+  background-color: #dddddd;
 }
 
 message {
@@ -49,9 +49,9 @@ message {
 }
 
 inputbar {
-  color: @fuchsia;
+  color: @primary;
   padding: 10px;
-  background-color: @darkGray;
+  background-color: @bg-alt;
   border: 2px 2px 2px 2px;
   border-radius: 15px;
   border-color: @bg;
@@ -93,8 +93,8 @@ element {
   padding: 6px;
   vertical-align: 0.5;
   border-radius: 10px;
-  background-color: @red;
-  color: @red;
+  background-color: @error;
+  color: @error;
   font: inherit;
 }
 
@@ -104,16 +104,16 @@ element-text {
 }
 
 element selected.normal {
-  background-color: @fuchsia;
+  background-color: @primary;
   text-color: @bg;
 }
 
 element normal active {
-  foreground: @indigo;
+  foreground: @secondary;
 }
 
 element normal urgent {
-  foreground: @dimFuchsia;
+  foreground: @alert;
 }
 
 element alternate normal,
@@ -123,20 +123,20 @@ element normal normal {
 }
 
 element alternate active {
-  foreground: @red;
+  foreground: @error;
 }
 
 element alternate urgent {
-  foreground: @dimFuchsia;
+  foreground: @alert;
 }
 
 element selected active {
-  background-color: @indigo;
+  background-color: @secondary;
   foreground: @bg;
 }
 
 element selected urgent {
-  background-color: @dimFuchsia;
+  background-color: @alert;
   foreground: @bg;
 }
 
@@ -163,23 +163,23 @@ button {
   padding: 6px;
   border: 2px 0px 2px 2px;
   border-radius: 4px 0px 0px 4px;
-  background-color: @darkGray;
-  border-color: @red;
-  color: @red;
+  background-color: @bg-alt;
+  border-color: @error;
+  color: @error;
   horizontal-align: 0.5;
 }
 
 button selected normal {
   color: @bg;
   border: 2px 0px 2px 2px;
-  background-color: @red;
-  border-color: @red;
+  background-color: @error;
+  border-color: @error;
 }
 
 error-message {
   expand: true;
-  background-color: @fuchsia;
-  border-color: @red;
+  background-color: @alert;
+  border-color: @error;
   border: 2px;
   padding: 1em;
 }

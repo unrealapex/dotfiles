@@ -1,46 +1,12 @@
 * {
-  fuchsia: #ee6ff8;
-  dimFuchsia: #99519E;
-  red: #ed567a;
-  indigo: #7571F9;
-  peach: #fab387;
-  yellow: #ECFD65;
-  green: #04B575;
-  text: #dddddd;
-  darkGray: #3C3C3C;
-  brightGray: #979797;
   bg: #171717;
+  bg-alt: #3C3C3C;
+  text: #dddddd;
+  primary: #ee6ff8;
+  secondary: #7571F9;
+  alert: #ECFD65;
+  error: #ed567a;
   transparent: rgba(0, 0, 0, 0);
-
-//   colorscheme extracted from glow
-//
-//
-//   normal          {Light: "#1A1A1A", Dark: "#dddddd"}
-// normalDim       {Light: "#A49FA5", Dark: "#777777"}
-// gray            {Light: "#909090", Dark: "#626262"}
-// midGray         {Light: "#B2B2B2", Dark: "#4A4A4A"}
-// darkGray        {Light: "#DDDADA", Dark: "#3C3C3C"}
-// brightGray      {Light: "#847A85", Dark: "#979797"}
-// dimBrightGray   {Light: "#C2B8C2", Dark: "#4D4D4D"}
-// indigo          {Light: "#5A56E0", Dark: "#7571F9"}
-// dimIndigo       {Light: "#9498FF", Dark: "#494690"}
-// subtleIndigo    {Light: "#7D79F6", Dark: "#514DC1"}
-// dimSubtleIndigo {Light: "#BBBDFF", Dark: "#383584"}
-// cream           {Light: "#FFFDF5", Dark: "#FFFDF5"}
-// yellowGreen     {Light: "#04B575", Dark: "#ECFD65"}
-// dullYellowGreen {Light: "#6BCB94", Dark: "#9BA92F"}
-// fuchsia         {Light: "#EE6FF8", Dark: "#EE6FF8"}
-// dimFuchsia      {Light: "#F1A8FF", Dark: "#99519E"}
-// dullFuchsia     {Dark: "#AD58B4", Light: "#F793FF"}
-// dimDullFuchsia  {Light: "#F6C9FF", Dark: "#6B3A6F"}
-//
-// green           Color("#04B575")
-// red             {Light: "#FF4672", Dark: "#ED567A"}
-// faintRed        {Light: "#FF6F91", Dark: "#C74665"}
-//
-// semiDimGreen {Light: "#35D79C", Dark: "#036B46"}
-// dimGreen     {Light: "#72D2B0", Dark: "#0B5137"}
-
-
 }
+
 /* vim: ft=sass
