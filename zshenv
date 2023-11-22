@@ -11,9 +11,9 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export LESS="-i"
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#171717,bg:#171717,spinner:#ee6ff8,hl:#ecfd65 \
---color=fg:#777777,header:#fffdf5,info:#7571f9,pointer:#dddddd  \
---color=marker:#ed567a,fg+:#dddddd,prompt:#ee6ff8,hl+:#ecfd65"
+--color=bg+:#000000,bg:#000000,spinner:#bf4e6d,hl:#c6a4a8 \
+--color=fg:#484f55,header:#e3d1d0,info:#e3d1d0,pointer:#e3e4e7  \
+--color=marker:#ed567a,fg+:#e3e4e7,prompt:#bf4e6d,hl+:#c6a4a8"
 # export MANGOHUD=1
 
 # set ibus as input method framework

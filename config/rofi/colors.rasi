@@ -1,11 +1,11 @@
 * {
-  bg: #171717;
-  bg-alt: #3C3C3C;
-  text: #dddddd;
-  primary: #ee6ff8;
-  secondary: #7571F9;
-  alert: #ECFD65;
-  error: #ed567a;
+  bg: #000000;
+  bg-alt: #222222;
+  text: #e3e4e7;
+  primary: #BF4E6D;
+  secondary: #c6a4a8;
+  alert: #e3d1d0;
+  error: #484f55;
   transparent: rgba(0, 0, 0, 0);
 }
 
