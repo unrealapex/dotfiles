@@ -10,7 +10,6 @@ shell: zsh
 editor: neovim
 font: san francisco
 notification daemon: dunst
-colorscheme: charm
 ```
 
 ### ✨ about ✨
