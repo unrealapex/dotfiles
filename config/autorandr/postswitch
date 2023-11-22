@@ -1,7 +1,7 @@
 #!/bin/bash
 notify-send "Autorandr: monitor change detected"
 
-wallpaper=~/.dotfiles/street.jpg
+wallpaper=~/.dotfiles/sakura.jpg
 
 feh --bg-fill "$wallpaper"
 betterlockscreen --update "$wallpaper"

@@ -40,7 +40,7 @@ message {
   border-color: @error;
   border: 0px 2px 2px 2px;
   padding: 5;
-  background-color: #dddddd;
+  background-color: #ffffff;
 }
 
 message {
