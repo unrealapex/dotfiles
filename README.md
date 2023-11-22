@@ -39,7 +39,7 @@ $ tree scripts
     ├── pacman.sh          optimize pacman and install rice packages
     ├── proton-ge.sh       install glorious eggroll's custom proton build
     ├── services.sh        set up services for rice and dependencies
-    ├── tf2.sh             fix common issues running tf2
+    ├── tf2.sh             fix common issues running tf2 on linux
     └── zsh-rehash.sh      enable zsh rehash
 
 ```
