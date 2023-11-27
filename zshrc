@@ -149,6 +149,25 @@ alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 
 
 alias f='fff'
 
+# bashbunni is awesome :D
+
+declare -A pomo_options
+pomo_options["work"]="60"
+pomo_options["break"]="20"
+
+pomodoro () {
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+  val=$1
+  echo $val | lolcat
+  timer ${pomo_options["$val"]}m
+  spd-say "'$val' session done"
+  fi
+}
+
+alias wo="pomodoro 'work'"
+alias br="pomodoro 'break'"
+
+
 alias -- -='cd -'
 alias 1='cd -1'
 alias 2='cd -2'
