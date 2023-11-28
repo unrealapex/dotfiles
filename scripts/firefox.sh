@@ -8,9 +8,10 @@ if [ ! -d "~/.mozilla/" ]; then
 fi
 
 profile_path=$(find ~/.mozilla/firefox/ -type d -name "*.default-release")
+temp_file="/tmp/user.js"
 
 # fetch betterfox user.js
-curl -o user.js https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js
+curl https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js --output "$temp_file"
 
 # append smooth scroll settings and betterfox overrides to user.js
 echo '
@@ -49,8 +50,8 @@ user_pref("devtools.toolbox.host", "right");
 user_pref("privacy.history.custom", false);
 user_pref("browser.eme.ui.enabled", false);
 user_pref("media.eme.enabled", false);
-' >> user.js
+' >> "$temp_file"
 
 # move user.js to default firefox profile
-mv user.js "$profile_path"
+mv "$temp_file" "$profile_path"
 
