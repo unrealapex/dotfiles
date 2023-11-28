@@ -144,9 +144,11 @@ man-pages
 mangohud
 mesa
 mesa-utils
+mpc
 mpd
 mpg123
 mpv
+ncmpcpp
 ncurses
 neofetch
 neovim
