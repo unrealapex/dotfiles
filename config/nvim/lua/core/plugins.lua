@@ -463,18 +463,6 @@ return {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter-context",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      require("treesitter-context").setup({
-        enable = true,
-        mode = "cursor",
-      })
-      vim.cmd([[TSContextEnable]])
-    end,
-    dependencies = "nvim-treesitter/nvim-treesitter",
-  },
-  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = "nvim-treesitter/nvim-treesitter",
