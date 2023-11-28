@@ -18,6 +18,11 @@ require("lazy").setup("core.plugins", {
   change_detection = {
     notify = false,
   },
+  ui = {
+    icons = {
+      loaded = "",
+    },
+  },
   performance = {
     rtp = {
       disabled_plugins = {
