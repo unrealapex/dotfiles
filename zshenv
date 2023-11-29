@@ -3,10 +3,10 @@
 #
 
 
-export EDITOR=/usr/bin/nvim
+export EDITOR="nvim"
 export TERMINAL="kitty"
 export TERMINAL_PROG="kitty"
-export BROWSER=/usr/bin/firefox
+export BROWSER="firefox"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export LESS="-i"
