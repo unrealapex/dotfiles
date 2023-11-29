@@ -55,3 +55,4 @@ done through the keyboard, therefore, it is more logical to
 disable them. this can be done in most gui apps by enabling the "use system
 titlebars" option.
 
+irssi credentials should be added in `~/.irssi/credentials`.

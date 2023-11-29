@@ -4,6 +4,16 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.local/bin
+    - ~/.irssi
+    - ~/.themes
+    - ~/projects
+    - ~/music
+    - ~/Downloads/git
+    - ~/Pictures/Webcam
+    - ~/Pictures/Screenshots
+
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
@@ -19,6 +29,8 @@
     ~/.alsoftrc: alsoftrc
     ~/.drirc: drirc
     ~/.w3m: w3m
+    ~/.irssi/config: irssi/config
+    ~/.irssi/default.theme: irssi/default.theme
     ~/.config:
       glob: true
       path: config/*
@@ -29,33 +41,26 @@
       glob: true
       path: themes/*
 
-- create:
-    - ~/.local/bin
-    - ~/.themes
-    - ~/projects
-    - ~/music
-    - ~/Downloads/git
-    - ~/Pictures/Webcam/
-    - ~/Pictures/Screenshots/
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
 - shell:
-    # scripts in scripts/ are for arch specific setup
-  -
-    command: bash scripts/pacman.sh
-    description: Installing packages
-    stdout: true
-    stderr: true
-  - [bash scripts/microcode.sh, Installing appropriate microcode]
-  - [bash scripts/zsh-rehash.sh, Setting up Zsh command rehashing]
-  - [bash scripts/no-mouse-accel.sh, Disabling mouse acceleration]
-  - [bash scripts/kill-x.sh, Enable killing of Xorg with traditional shortcut]
-  - [bash scripts/bluetooh.sh, Enabling bluetooth]
-  - [bash scripts/services.sh, Enabling services]
-  - [bash scripts/groups.sh, Adding current user to needed groups]
-  - [bash scripts/firefox.sh, Hardening Firefox]
-  - [bash scripts/gsettings.sh, Configuring GNOME settings]
-  - [chsh -s $(which zsh), Making zsh the default shell]
-  - [xdg-user-dirs-update, Creating default user directories]
-  - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
-  - [cp --no-clobber gitconfig_local ~/.gitconfig_local, Creating local gitconfig]
+      # scripts in scripts/ are for arch specific setup
+    -
+      command: bash scripts/pacman.sh
+      description: Installing packages
+      stdout: true
+      stderr: true
+    - [bash scripts/microcode.sh, Installing appropriate microcode]
+    - [bash scripts/zsh-rehash.sh, Setting up Zsh command rehashing]
+    - [bash scripts/no-mouse-accel.sh, Disabling mouse acceleration]
+    - [bash scripts/kill-x.sh, Enable killing of Xorg with traditional shortcut]
+    - [bash scripts/bluetooh.sh, Enabling bluetooth]
+    - [bash scripts/services.sh, Enabling services]
+    - [bash scripts/groups.sh, Adding current user to needed groups]
+    - [bash scripts/firefox.sh, Hardening Firefox]
+    - [bash scripts/gsettings.sh, Configuring GNOME settings]
+    - [chsh -s $(which zsh), Making zsh the default shell]
+    - [xdg-user-dirs-update, Creating default user directories]
+    - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
+    - [cp --no-clobber gitconfig_local ~/.gitconfig_local, Creating local gitconfig]
+    - [cp --no-clobber irssi/credentials ~/.irssi/credentials, Creating irc credentials file]
