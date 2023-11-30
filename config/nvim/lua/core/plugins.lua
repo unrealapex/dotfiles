@@ -283,6 +283,9 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
+      diagnostic = {
+        on_insert = false,
+      },
       lightbulb = {
         sign = false,
       },
