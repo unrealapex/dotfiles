@@ -35,7 +35,7 @@ vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.laststatus = 2
 vim.opt.list = true
-vim.opt.listchars = ""
+vim.opt.listchars = {leadmultispace = "│ "}
 vim.opt.magic = true
 -- show line numbers
 vim.opt.number = true
