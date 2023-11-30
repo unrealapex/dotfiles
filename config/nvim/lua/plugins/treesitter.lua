@@ -47,6 +47,15 @@ configs.setup({
     end,
   },
   indent = { enable = true, disable = { "yaml" } },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "+",
+      node_incremental = "+",
+      scope_incremental = false,
+      node_decremental = "_",
+    },
+  },
   textobjects = {
     select = {
       enable = true,
