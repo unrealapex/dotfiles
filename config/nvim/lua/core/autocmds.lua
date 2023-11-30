@@ -71,7 +71,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- adjust indent guide spacing for files with a shiftwidth that isn't two
 vim.api.nvim_create_autocmd("OptionSet", {
-  group = vim.api.nvim_create_augroup("indent_guide_shiftwidth", { clear = true }),
+  group = vim.api.nvim_create_augroup(
+    "indent_guide_shiftwidth",
+    { clear = true }
+  ),
   pattern = { "listchars", "tabstop", "filetype" },
   callback = function()
     if not vim.opt_local.shiftwidth:get() == 2 then
