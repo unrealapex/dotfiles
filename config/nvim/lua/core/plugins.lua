@@ -207,16 +207,6 @@ return {
     keys = { "gc", "gb", { "gc", mode = "v" }, { "gb", mode = "v" } },
     config = true,
   },
-  -- indent guides
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    event = { "BufReadPost", "BufNewFile" },
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = function()
-      require("plugins.indent-blankline")
-    end,
-  },
   -- zen mode
   {
     "folke/zen-mode.nvim",
