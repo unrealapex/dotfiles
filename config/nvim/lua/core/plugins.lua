@@ -175,18 +175,22 @@ return {
     },
   },
   {
-    "tpope/vim-surround",
-    keys = {
-      "ds",
-      "cs",
-      "ys",
-      { "sa", "<Plug>VSurround", mode = "v" },
-      { "gS", mode = "v" },
+    "kylechui/nvim-surround",
+
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    config = function()
-      -- remove vim-surround's visual mode mapping for S and use sa instead
-      vim.keymap.del("x", "S")
-    end,
+    event = "VeryLazy",
+    config = true,
+    -- FIXME: see if lazy loading by key will work without being buggy
+    -- keys = {
+    --   "ds",
+    --   "cs",
+    --   "ys",
+    --   { "sa", "<Plug>VSurround", mode = "v" },
+    --   { "gS", mode = "v" },
+    -- },
   },
   { "tpope/vim-repeat", event = "VeryLazy" },
   -- git commit browser
