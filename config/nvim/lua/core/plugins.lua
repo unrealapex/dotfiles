@@ -195,10 +195,20 @@ return {
   { "tpope/vim-repeat", event = "VeryLazy" },
   -- git commit browser
   {
-    "junegunn/gv.vim",
-    cond = vim.fn.executable("git") == 1,
-    cmd = { "GV" },
-    dependencies = { "tpope/vim-fugitive" },
+    "sindrets/diffview.nvim",
+    cond = vim.fn.executable("git") == 1 or vim.fn.executable("mercurial") == 1,
+    cmd = {
+      "DiffviewClose",
+      "DiffviewFileHistory",
+      "DiffviewFocusFiles",
+      "DiffviewLog",
+      "DiffviewOpen",
+      "DiffviewRefresh",
+      "DiffviewToggleFiles",
+    },
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
   },
   -- commenter
   {
