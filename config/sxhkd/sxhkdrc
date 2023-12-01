@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-        kitty
+        kitty --single-instance --instance-group wm
 
 # program launcher
 alt + @space
