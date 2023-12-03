@@ -57,6 +57,8 @@ zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Z}{a-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:functions' ignored-patterns '_*'
+# complete sudo commands
+zstyle ':completion::complete:*' gain-privileges 1
 # show hidden files in completion menu
 _comp_options+=(globdots)
 
