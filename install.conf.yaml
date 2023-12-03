@@ -55,7 +55,7 @@
     - [bash scripts/zsh-rehash.sh, Setting up Zsh command rehashing]
     - [bash scripts/no-mouse-accel.sh, Disabling mouse acceleration]
     - [bash scripts/kill-x.sh, Enable killing of Xorg with traditional shortcut]
-    - [bash scripts/bluetooh.sh, Enabling bluetooth]
+    - [bash scripts/bluetooth.sh, Enabling bluetooth]
     - [bash scripts/services.sh, Enabling services]
     - [bash scripts/groups.sh, Adding current user to needed groups]
     - [bash scripts/firefox.sh, Hardening Firefox]
