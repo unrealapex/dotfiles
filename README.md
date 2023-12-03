@@ -30,17 +30,17 @@ the install script runs scripts (for arch) listed in [scripts/](/scripts).
 ```
 $ tree scripts
   scripts
-    ├── bluetooth.sh       enable bluetooth
-    ├── firefox.sh         generate firefox user.js file
-    ├── group.sh           add current user to appropriate groups
-    ├── kill-x.sh          bind ctrl + alt + backspace to kill x
-    ├── microcode.sh       install microcode updates
-    ├── no-mouse-accel.sh  disable mouse acceleration
-    ├── pacman.sh          optimize pacman and install rice packages
-    ├── proton-ge.sh       install glorious eggroll's custom proton build
-    ├── services.sh        set up services for rice and dependencies
-    ├── tf2.sh             fix common issues running tf2 on linux
-    └── zsh-rehash.sh      enable zsh rehash
+    ├── bluetooth          enable bluetooth
+    ├── firefox            generate firefox user.js file
+    ├── group              add current user to appropriate groups
+    ├── kill-x             bind ctrl + alt + backspace to kill x
+    ├── microcode          install microcode updates
+    ├── no-mouse-accel     disable mouse acceleration
+    ├── pacman             optimize pacman and install rice packages
+    ├── proton-ge          install glorious eggroll's custom proton build
+    ├── services           set up services for rice and dependencies
+    ├── tf2                fix common issues running tf2 on linux
+    └── zsh-rehash         enable zsh rehash
 
 ```
 you probably want to comment out every script that will
