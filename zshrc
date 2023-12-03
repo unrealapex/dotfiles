@@ -145,7 +145,6 @@ alias paste='kitty +kitten clipboard --get-clipboard'
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
-alias crankshaft='gamemoderun ~/Downloads/crankshaft.AppImage &;disown'
 # chill study music with lofi girl
 alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
 alias irssi="irssi --config=<((cat ~/.irssi/credentials && cat ~/.irssi/config))"
