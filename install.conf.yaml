@@ -51,14 +51,14 @@
       description: Installing packages
       stdout: true
       stderr: true
-    - [bash scripts/microcode.sh, Installing appropriate microcode]
-    - [bash scripts/zsh-rehash.sh, Setting up Zsh command rehashing]
-    - [bash scripts/no-mouse-accel.sh, Disabling mouse acceleration]
-    - [bash scripts/kill-x.sh, Enable killing of Xorg with traditional shortcut]
-    - [bash scripts/bluetooth.sh, Enabling bluetooth]
-    - [bash scripts/services.sh, Enabling services]
-    - [bash scripts/groups.sh, Adding current user to needed groups]
-    - [bash scripts/firefox.sh, Hardening Firefox]
+    - [bash scripts/microcode, Installing appropriate microcode]
+    - [bash scripts/zsh-rehash, Setting up Zsh command rehashing]
+    - [bash scripts/no-mouse-accel, Disabling mouse acceleration]
+    - [bash scripts/kill-x, Enable killing of Xorg with traditional shortcut]
+    - [bash scripts/bluetooth, Enabling bluetooth]
+    - [bash scripts/services, Enabling services]
+    - [bash scripts/groups, Adding current user to needed groups]
+    - [bash scripts/firefox, Hardening Firefox]
     - [chsh -s $(which zsh), Making zsh the default shell]
     - [xdg-user-dirs-update, Creating default user directories]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
