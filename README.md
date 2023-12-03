@@ -45,7 +45,7 @@ $ tree scripts
 ```
 you probably want to comment out every script that will
 run in the `shell:` section of `install.conf.yaml` except for
-`scripts/pacman.sh`.
+`scripts/pacman`.
 
 your git credentials(name and email) should be added in `~/.gitconfig_local`. this
 file is read by `~/.gitconfig`.
