@@ -47,7 +47,7 @@
 - shell:
       # scripts in scripts/ are for arch specific setup
     -
-      command: bash scripts/pacman.sh
+      command: bash scripts/pacman
       description: Installing packages
       stdout: true
       stderr: true
