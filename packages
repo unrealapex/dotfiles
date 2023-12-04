@@ -196,6 +196,7 @@ qemu
 ripgrep
 rofi
 rofi-emoji
+rxvt-unicode
 shellcheck
 sl
 speedcrunch
@@ -223,6 +224,7 @@ ttf-jetbrains-mono-nerd
 ttf-ms-win11-auto
 tty-clock
 unzip
+urxvt-perls 
 v4l-utils
 vde2
 virt-manager
