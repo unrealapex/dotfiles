@@ -6,7 +6,7 @@
 
 
 # Menu
-menu.border.color: #000000
+menu.border.color: #ffffff
 
 menu.title.bg: Solid Flat
 menu.title.bg.color: #000000
@@ -121,7 +121,7 @@ osd.border.width: 2
 osd.hilight.bg: Solid Flat
 osd.hilight.bg.color: #bf4e6d
 osd.unhilight.bg: flat solid
-osd.unhilight.bg.color: #e3e4e7
+osd.unhilight.bg.color: #000000
 
 osd.button.unpressed.bg: flat border
 osd.button.unpressed.bg.color: #000000
@@ -132,8 +132,8 @@ osd.button.pressed.bg.color: #bf4e6d
 #osd.button.pressed.*.border.color: #e3d1d0
 
 osd.button.focused.bg: flat solid border
-osd.button.focused.bg.color: #000000
-#osd.button.focused.*.border.color: #e3e4e7
+osd.button.focused.bg.color: #ffffff
+#osd.button.focused.*.border.color: #000000
 
 osd.button.focused.box.color: #bf4e6d
 
