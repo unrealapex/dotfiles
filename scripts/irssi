@@ -2,19 +2,20 @@
 
 # create directories
 mkdir --parent ~/.irssi/scripts/autorun/ /tmp/irssi-scripts/
-autorun=~/.irssi/scripts/autorun/
-no_autorun=~/.irssi/scripts/
+scripts_dir=~/.irssi/scripts/
 tmp_dir=/tmp/irssi-scripts
 url="https://raw.githubusercontent.com/irssi/scripts.irssi.org/master/scripts/"
 scripts=(nickcolor emo)
 for script in "${scripts[@]}"; do
   curl "$url$script.pl" --output "$tmp_dir/$script.pl"
+  mv "$tmp_dir/$script.pl" "$scripts_dir"
   read -p "Would you like $script.pl to run automatically? [Y/n]: " confirm
   if [[ $confirm == [yY] || $confirm == [yY][eE][sS] || $confirm == "" ]]; then
     echo "$script.pl will run automatically"
-    mv "$tmp_dir/$script.pl" "$autorun"
+    ln -sf "$scripts_dir/$script.pl" "$scripts_dir/autorun"
   else
-    echo "$script.pl will run manually when called using scriptassist"
-    mv "$tmp_dir/$script.pl" "$no_autorun"
+    echo "$script.pl will run manually when called using scriptassist
+    run the script with /script load $script
+    "
   fi
 done
