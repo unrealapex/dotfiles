@@ -33,6 +33,7 @@ $ tree scripts
     ├── bluetooth          enable bluetooth
     ├── firefox            generate firefox user.js file
     ├── group              add current user to appropriate groups
+    ├── irssi              set up irssi scripts
     ├── kill-x             bind ctrl + alt + backspace to kill x
     ├── microcode          install microcode updates
     ├── no-mouse-accel     disable mouse acceleration

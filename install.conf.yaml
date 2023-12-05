@@ -60,6 +60,12 @@
     - [bash scripts/services, Enabling services]
     - [bash scripts/groups, Adding current user to needed groups]
     - [bash scripts/firefox, Hardening Firefox]
+    - 
+      command: bash scripts/irssi
+      description: Installing Irssi scripts
+      stdin: true
+      stdout: true
+      stderr: true
     - [chsh -s $(which zsh), Making zsh the default shell]
     - [xdg-user-dirs-update, Creating default user directories]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
