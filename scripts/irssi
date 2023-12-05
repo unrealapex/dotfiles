@@ -15,6 +15,7 @@ for script in "${scripts[@]}"; do
     ln -sf "$scripts_dir/$script.pl" "$scripts_dir/autorun"
   else
     echo "$script.pl will run manually when called using scriptassist
+
     run the script with /script load $script
     "
   fi
