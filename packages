@@ -181,6 +181,7 @@ pandoc-bin
 pastel
 pavucontrol
 perl-image-exiftool
+perl-lwp-protocol-https
 pfetch
 picom-git
 pipewire
