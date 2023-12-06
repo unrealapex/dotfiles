@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# upload a file to 0x0.st
+if [[ $# == 1 ]]; then
+  curl -F"file=@$1" https://0x0.st
+elif [[ $# -gt 1 ]]; then
+  echo "Multiple files given, confirm upload of each one"
+  for file in "$@"; do
+    read -p "Are you sure you want to upload $file to 0x0.st? [Y/n]: " confirm
+    if [[ $confirm == [yY] || $confirm == [yY][eE][sS] || $confirm == "" ]]; then
+      curl -F"file=@$file" https://0x0.st
+    else
+      echo "Aborted upload of $file"
+    fi
+  done
+else
+  echo "Invalid file arguments provided
+
+Usage: upload [FILE]...
+" >&2
+  exit 1
+fi
