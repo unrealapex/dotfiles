@@ -170,6 +170,29 @@ alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
 
 
+# upload a file to 0x0.st
+upload () {
+  if [[ $# == 1 ]] ; then
+    curl -F"file=@$1" https://0x0.st
+  elif [[ $# -gt 1 ]]; then
+    echo "Multiple files given, confirm upload of each one"
+    for file in "$@"; do
+      echo -n "Are you sure you want to upload $file to 0x0.st? [Y/n]: "
+      read confirm
+      if [[ $confirm == [yY] || $confirm == [yY][eE][sS] || $confirm == "" ]]; then
+        curl -F"file=@$file" https://0x0.st
+      else
+        echo "Not uploading $file"
+      fi
+    done
+  else
+    echo "Invalid file arguments provided
+    Usage: upload [FILE]...
+    " >&2
+    exit 1 
+  fi
+}
+
 alias -- -='cd -'
 alias 1='cd -1'
 alias 2='cd -2'
