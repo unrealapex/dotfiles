@@ -41,6 +41,7 @@ $ tree scripts
     ├── proton-ge          install glorious eggroll's custom proton build
     ├── services           set up services for rice and dependencies
     ├── tf2                fix common issues running tf2 on linux
+    ├── ufw                enable uncomplicated firewall
     └── zsh-rehash         enable zsh rehash
 
 ```
