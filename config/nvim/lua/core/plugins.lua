@@ -420,6 +420,11 @@ return {
         cs = { "clang-format" },
         cpp = { "clang-format" },
       },
+      formatters = {
+        shfmt = {
+          prepend_args = { "--indent", "2" },
+        },
+      },
     },
   },
   { "mfussenegger/nvim-jdtls", ft = "java" },
