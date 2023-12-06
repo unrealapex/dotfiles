@@ -182,7 +182,7 @@ upload () {
       if [[ $confirm == [yY] || $confirm == [yY][eE][sS] || $confirm == "" ]]; then
         curl -F"file=@$file" https://0x0.st
       else
-        echo "Not uploading $file"
+        echo "Aborted upload of $file"
       fi
     done
   else
