@@ -173,6 +173,7 @@ return {
       "GUnlink",
       "GBrowse",
     },
+    ft = { "fugitive" },
   },
   {
     "kylechui/nvim-surround",
