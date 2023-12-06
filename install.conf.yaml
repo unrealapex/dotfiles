@@ -30,6 +30,7 @@
     ~/.zshrc: zshrc
     ~/.alsoftrc: alsoftrc
     ~/.drirc: drirc
+    ~/.festivalrc: festivalrc
     ~/.w3m: w3m
     ~/.irssi/config: irssi/config
     ~/.irssi/default.theme: irssi/default.theme

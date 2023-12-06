@@ -64,5 +64,7 @@ playerctld daemon
 
 ibus-daemon --replace --xim --daemonize
 
+festival --server &
+
 keepassxc &
 discord --start-minimized
