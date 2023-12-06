@@ -66,6 +66,7 @@
       stdin: true
       stdout: true
       stderr: true
+    - [bash scripts/ufw, Configuring UFW]
     - [chsh -s $(which zsh), Making zsh the default shell]
     - [xdg-user-dirs-update, Creating default user directories]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
