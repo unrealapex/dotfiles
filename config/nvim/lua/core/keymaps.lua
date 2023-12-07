@@ -33,9 +33,9 @@ function get_visual()
 end
 
 vim.keymap.set("v", "<C-r>", function()
-  -- FIXME: make this monstrosity more understandable...
-  -- escape regex and line endings separately
-  local pattern = vim.fn.substitute(vim.fn.escape(table.concat(get_visual()), "^$.*\\/~[]"),'\n', '\\n', 'g')
+  local pattern = table.concat(get_visual())
+  -- escape regex and line endings
+  pattern = vim.fn.substitute(vim.fn.escape(pattern, "^$.*\\/~[]"),'\n', '\\n', 'g')
   -- send replace command to vim command line
   vim.api.nvim_input("<Esc>:%s/" .. pattern .. "//<Left>")
 end)
