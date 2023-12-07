@@ -24,10 +24,11 @@ end, bufopts)
 -- vimscript solution: https://stackoverflow.com/a/6171215/14111707
 
 -- get contents of visual selection
+-- handle unpack deprecation
+table.unpack = table.unpack or unpack
 function get_visual()
-  -- FIXME: unpack is deprecated
-  local _, ls, cs = unpack(vim.fn.getpos('v'))
-  local _, le, ce = unpack(vim.fn.getpos('.'))
+  local _, ls, cs = table.unpack(vim.fn.getpos('v'))
+  local _, le, ce = table.unpack(vim.fn.getpos('.'))
   return vim.api.nvim_buf_get_text(0, ls-1, cs-1, le-1, ce, {})
 end
 
