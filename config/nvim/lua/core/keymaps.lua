@@ -19,50 +19,25 @@ vim.keymap.set({ "n" }, "<space>cf", function()
   require("conform").format()
 end, bufopts)
 
--- TODO: write this in lua
 -- find and replace on current selection
--- snippet written by Bryan Kennedy and Peter Butkovic
--- https://stackoverflow.com/a/6171215/14111707
-vim.cmd([[
-" Escape special characters in a string for exact matching.
-" This is useful to copying strings from the file to the search tool
-" Based on this - http://peterodding.com/code/vim/profile/autoload/xolox/escape.vim
-function! EscapeString (string)
-  let string=a:string
-  " Escape regex characters
-  let string = escape(string, '^$.*\/~[]')
-  " Escape the line endings
-  let string = substitute(string, '\n', '\\n', 'g')
-  return string
-endfunction
+-- written in lua
+-- vimscript solution: https://stackoverflow.com/a/6171215/14111707
 
-" Get the current visual block for search and replaces
-" This function passed the visual block through a string escape function
-" Based on this - https://stackoverflow.com/questions/676600/vim-replace-selected-text/677918#677918
-function! GetVisual() range
-  " Save the current register and clipboard
-  let reg_save = getreg('"')
-  let regtype_save = getregtype('"')
-  let cb_save = &clipboard
-  set clipboard&
+-- get contents of visual selection
+function get_visual()
+  -- FIXME: unpack is deprecated
+  local _, ls, cs = unpack(vim.fn.getpos('v'))
+  local _, le, ce = unpack(vim.fn.getpos('.'))
+  return vim.api.nvim_buf_get_text(0, ls-1, cs-1, le-1, ce, {})
+end
 
-  " Put the current visual selection in the " register
-  normal! ""gvy
-  let selection = getreg('"')
-
-  " Put the saved registers and clipboards back
-  call setreg('"', reg_save, regtype_save)
-  let &clipboard = cb_save
-
-  "Escape any special characters in the selection
-  let escaped_selection = EscapeString(selection)
-
-  return escaped_selection
-endfunction
-
-" Start the find and replace command across the entire file
-vnoremap <C-r> <Esc>:%s/<c-r>=GetVisual()<cr>//g<left><left>
-]])
+vim.keymap.set("v", "<C-r>", function()
+  -- FIXME: make this monstrosity more understandable...
+  -- escape regex and line endings separately
+  local pattern = vim.fn.substitute(vim.fn.escape(table.concat(get_visual()), "^$.*\\/~[]"),'\n', '\\n', 'g')
+  -- send replace command to vim command line
+  vim.api.nvim_input("<Esc>:%s/" .. pattern .. "//<Left>")
+end)
 
 -- buffer stuff
 -- create a new buffer
