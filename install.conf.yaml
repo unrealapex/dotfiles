@@ -54,13 +54,13 @@
       stdout: true
       stderr: true
     - [bash scripts/microcode, Installing appropriate microcode]
-    - [bash scripts/zsh-rehash, Setting up Zsh command rehashing]
+    - [bash scripts/zsh-rehash, Setting up Z Shell command rehashing]
     - [bash scripts/no-mouse-accel, Disabling mouse acceleration]
-    - [bash scripts/kill-x, Enable killing of Xorg with traditional shortcut]
+    - [bash scripts/kill-x, Enabling killing of Xorg with traditional shortcut]
     - [bash scripts/bluetooth, Enabling bluetooth]
     - [bash scripts/services, Enabling services]
     - [bash scripts/groups, Adding current user to needed groups]
-    - [bash scripts/firefox, Hardening Firefox]
+    - [bash scripts/firefox, Generating Firefox configuration]
     - 
       command: bash scripts/irssi
       description: Installing Irssi scripts
