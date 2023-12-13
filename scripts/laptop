@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+yay -S --needed --noconfirm tlp cbatticon powertop
+
+systemctl enable tlp.service
+
