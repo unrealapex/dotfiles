@@ -1,3 +1,4 @@
+---@diagnostic disable: unused-local
 require("mason").setup({
   ui = {
     icons = {
