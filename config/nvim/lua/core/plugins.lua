@@ -300,6 +300,11 @@ return {
       lightbulb = {
         sign = false,
       },
+      rename = {
+        keys = {
+          quit = { "q", "<ESC>" },
+        },
+      },
     },
     keys = {
       { "gh", "<cmd>Lspsaga lsp_finder<CR>" },
