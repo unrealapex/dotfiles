@@ -172,7 +172,6 @@ ookla-speedtest-bin
 openal
 openbsd-netcat
 opencl-icd-loader
-openrazer-daemon
 osu-lazer
 otf-san-francisco
 otf-san-francisco-mono
@@ -191,7 +190,6 @@ pipewire-jack
 pipewire-pulse
 playerctl
 polybar
-polychromatic
 procps
 qemu
 ripgrep

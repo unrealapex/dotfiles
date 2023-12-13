@@ -1,0 +1,5 @@
+#!/bin/bash
+
+yay -S --needed --noconfirm openrazer-daemon polychromatic
+
+sudo gpasswd -a "$USER" plugdev
