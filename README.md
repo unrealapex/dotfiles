@@ -35,6 +35,7 @@ $ tree scripts
     ├── group              add current user to appropriate groups
     ├── irssi              set up irssi scripts
     ├── kill-x             bind ctrl + alt + backspace to kill x
+    ├── laptop             useful laptop stuff
     ├── microcode          install microcode updates
     ├── no-mouse-accel     disable mouse acceleration
     ├── pacman             optimize pacman and install rice packages

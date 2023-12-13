@@ -20,7 +20,6 @@ bridge-utils
 brightnessctl
 bspwm
 cava
-cbatticon
 cbonsai
 cheese
 cmake
@@ -215,7 +214,6 @@ tesseract-data-jpn
 texlive
 themix-full-git  
 timer-bin
-tlp
 tmux
 torbrowser-launcher
 trash-cli

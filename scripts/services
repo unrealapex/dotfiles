@@ -15,6 +15,3 @@ systemctl enable --user syncthing.service
 systemctl enable cpupower.service
 systemctl enable ufw.service
 systemctl disable iptables.service
-# laptop services
-
-# systemctl enable tlp.service
