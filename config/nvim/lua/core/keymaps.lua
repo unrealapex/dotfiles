@@ -1,3 +1,4 @@
+---@diagnostic disable: deprecated, lowercase-global
 -- keymaps
 
 -- delete previous word in insert mode

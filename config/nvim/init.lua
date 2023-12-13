@@ -1,3 +1,4 @@
+---@diagnostic disable: different-requires
 -- options
 require("core.options")
 -- autocommands
