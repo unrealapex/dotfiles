@@ -54,7 +54,7 @@ xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
 
 nm-applet --no-agent &
-pgrep -x cbatticon > /dev/null || cbatticon &
+# pgrep -x cbatticon > /dev/null || cbatticon &
 
 feh --bg-fill ~/.dotfiles/sakura.jpg
 picom --daemon
