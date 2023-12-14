@@ -562,7 +562,7 @@ return {
     },
     config = function()
       require("fzf-lua").setup({
-        hls = { border = "FloatBorder" },
+        "telescope",
       })
     end,
   },
