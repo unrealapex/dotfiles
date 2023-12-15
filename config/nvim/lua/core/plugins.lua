@@ -521,7 +521,13 @@ return {
       {
         "<leader>ff",
         function()
-          require("fzf-lua").files()
+          require("fzf-lua").fzf_exec("find -type f", {
+            fzf_opts = {
+              ["--preview"] = vim.fn.shellescape(
+                "if file --mime-type {} | grep -qF 'image/'; then kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 {}; else bat --color=always {}; fi"
+              ),
+            },
+          })
         end,
       },
       {
