@@ -60,7 +60,7 @@ super + c
         screenshot {selection,full}
 
 super + @period
-        rofi -modi emoji -show emoji
+        rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c
 
 super + shift + x
         betterlockscreen --lock
