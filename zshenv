@@ -23,6 +23,7 @@ export FFF_FAV7=~/projects
 export FFF_FAV8=~/.zshrc
 export FFF_FAV9=~/.xinitrc
 export FZF_DEFAULT_OPTS=" \
+--preview='if file --mime-type {} | grep -qF 'image/'; then kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 {}; else bat --color=always {}; fi'
 --color=bg+:#000000,bg:#000000,spinner:#bf4e6d,hl:#c6a4a8 \
 --color=fg:#484f55,header:#e3d1d0,info:#e3d1d0,pointer:#e3e4e7  \
 --color=marker:#ed567a,fg+:#e3e4e7,prompt:#bf4e6d,hl+:#c6a4a8"
