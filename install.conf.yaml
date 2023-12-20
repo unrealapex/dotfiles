@@ -68,5 +68,5 @@
     - [chsh -s $(which zsh), Making zsh the default shell]
     - [xdg-user-dirs-update, Creating default user directories]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
-    - [cp --no-clobber gitconfig_local ~/.gitconfig_local, Creating local gitconfig]
-    - [cp --no-clobber irssi_credentials ~/.config/irssi/credentials, Creating irc credentials file]
+    - [cp --no-clobber secrets/gitconfig_local ~/.gitconfig_local, Creating local gitconfig]
+    - [cp --no-clobber secrets/irssi_credentials ~/.config/irssi/credentials, Creating irc credentials file]
