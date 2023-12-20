@@ -1,4 +1,5 @@
 config/nvim/lazy-lock.json
 w3m/cookie
+config/irssi/credentials
 icons/hicolor
 config/ncmpcpp/error.log

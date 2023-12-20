@@ -28,12 +28,9 @@
     ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
-    ~/.alsoftrc: alsoftrc
     ~/.drirc: drirc
     ~/.festivalrc: festivalrc
     ~/.w3m: w3m
-    ~/.irssi/config: irssi/config
-    ~/.irssi/default.theme: irssi/default.theme
     ~/.config:
       glob: true
       path: config/*
@@ -72,4 +69,4 @@
     - [xdg-user-dirs-update, Creating default user directories]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
     - [cp --no-clobber gitconfig_local ~/.gitconfig_local, Creating local gitconfig]
-    - [cp --no-clobber irssi/credentials ~/.irssi/credentials, Creating irc credentials file]
+    - [cp --no-clobber irssi_credentials ~/.config/irssi/credentials, Creating irc credentials file]
