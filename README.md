@@ -51,12 +51,10 @@ you probably want to comment out every script that will
 run in the `shell:` section of `install.conf.yaml` except for
 `scripts/pacman`.
 
-your git credentials(name and email) should be added in `~/.gitconfig_local`. this
-file is read by `~/.gitconfig`.
 
 window decorations are not functional since window management is primarily
 done through the keyboard, therefore, it is more logical to
 disable them. this can be done in most gui apps by enabling the "use system
 titlebars" option.
 
-irssi credentials should be added in `~/.irssi/credentials`.
+secrets files for programs that have secrets(irssi, git) are in `secrets`.
