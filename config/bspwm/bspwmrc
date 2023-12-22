@@ -61,8 +61,8 @@ picom --daemon
 
 playerctld daemon
 
-# polybar
-~/.config/polybar/launch.sh
+bash ~/.dotfiles/lemon | lemonbar
+
 
 ibus-daemon --replace --xim --daemonize
 

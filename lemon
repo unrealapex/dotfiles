@@ -1,0 +1,39 @@
+#!/bin/bash
+
+workspace() {
+  WORKSPACE=$(($(xprop -root 32c '\t$0' _NET_CURRENT_DESKTOP | cut -f 2) + 1))
+  printf "$WORKSPACE"
+}
+
+clock() {
+  TIME=$(date +" %d/%m %H:%M:%S")
+  printf "$TIME"
+}
+
+cpu() {
+  CPU=$(top -bn1 | grep "Cpu(s)" |
+    sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |
+    awk '{print 100 - $1"%"}')
+  printf "$CPU"
+}
+
+ram() {
+  RAM=$()
+  printf "$RAM"
+}
+
+volume() {
+  VOLUME=$(pamixer --get-volume)
+  if eval "$(pamixer --get-mute)"; then
+    printf "muted"
+  else
+    printf "$VOLUME%%"
+  fi
+}
+
+while true; do
+  # TODO: make sure formatting is correct
+  BAR_INPUT="%{l}$(workspace) %{c}$(clock)% %{r}ram $(ram) cpu $(cpu) vol $(volume)%"
+  echo $BAR_INPUT
+  sleep 1
+done
