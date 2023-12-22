@@ -1,37 +1,25 @@
 #!/bin/bash
 
-send_notification() {
-        volume=$(pamixer --get-volume)
 
-        if ((volume <= 8)); then
-                dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.local/share/icons/volume/volume-low.svg "Volume: ${volume}%" -t 2000
-        elif ((volume >= 8 && volume <= 20)); then
-                dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.local/share/icons/volume/volume-medium.svg "Volume: ${volume}%" -t 2000
-        elif ((volume >= 90)); then
-                dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.local/share/icons/volume/volume-dangerous.svg "Volume: ${volume}%" -t 2000
-        else
-                dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.local/share/icons/volume/volume-high.svg "Volume: ${volume}%" -t 2000
-        fi
-
-        # dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i ~/.icons/icons/volume/volume-$1.svg "Volume: ${volume}%" -t 2000
-}
+volume=$(pamixer --get-volume)
 
 case $1 in
 up)
         # Set the volume on (if it was muted)
         pamixer -u
         pamixer -i 2 --allow-boost
-        send_notification "$1"
+        herbe "volume: $volume%"
+
         ;;
 down)
         pamixer -u
         pamixer -d 2 --allow-boost
-        send_notification "$1"
+        herbe "volume: $volume%"
         ;;
 mute)
         pamixer -t
         if eval "$(pamixer --get-mute)"; then
-                dunstify -a "changevolume" -t 2000 -r 9993 -u low -i ~/.local/share/icons/volume/volume-mute.svg "Muted"
+                herbe "muted"
         else
                 send_notification up
         fi
