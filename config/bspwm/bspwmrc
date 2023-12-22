@@ -61,8 +61,7 @@ picom --daemon
 
 playerctld daemon
 
-bash ~/.dotfiles/lemon | lemonbar
-
+bash ~/.dotfiles/lemon | lemonbar -F#e3e4e7 -B#000000
 
 ibus-daemon --replace --xim --daemonize
 
