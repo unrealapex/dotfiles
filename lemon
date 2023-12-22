@@ -33,7 +33,7 @@ volume() {
 
 while true; do
   # TODO: make sure formatting is correct
-  BAR_INPUT="%{l}$(workspace) %{c}$(clock)% %{r}ram $(ram) cpu $(cpu) vol $(volume)%"
+  BAR_INPUT="%{l}$(workspace) %{c}$(clock) %{r}ram $(ram) cpu $(cpu) vol $(volume)"
   echo $BAR_INPUT
   sleep 1
 done
