@@ -8,8 +8,9 @@ super + Return
 
 # program launcher
 alt + @space
-        rofi -show drun
-# make sxhkd reload its configuration files:
+# TODO: maybe change up nb and nf colors
+        dmenu_run -nb '#000000' -sf '#e3e4e7' -sb '#bf4e6d' -nf '#e3e4e7'
+        # make sxhkd reload its configuration files:
 super + Escape
         pkill -USR1 -x sxhkd
 
@@ -124,7 +125,7 @@ super + {Left,Down,Up,Right}
         screenshot {selection,full}
 
 super + @period
-        rofi -modi emoji -show emoji
+        emoji-picker
 
 super + shift + x
         betterlockscreen --lock
