@@ -34,6 +34,7 @@ dnsmasq
 dunst
 element-desktop
 faudio
+fd
 feh
 fff
 ffmpeg
@@ -210,7 +211,7 @@ tesseract
 tesseract-data-eng
 tesseract-data-jpn
 texlive
-themix-full-git  
+themix-full-git
 timer-bin
 tmux
 torbrowser-launcher
@@ -223,7 +224,7 @@ ttf-ms-win11-auto
 tty-clock
 ufw
 unzip
-urxvt-perls 
+urxvt-perls
 v4l-utils
 vde2
 virt-manager
