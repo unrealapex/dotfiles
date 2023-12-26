@@ -50,6 +50,7 @@
       description: Installing packages
       stdout: true
       stderr: true
+    - [bash scripts/herbe, Installing herbe]
     - [bash scripts/microcode, Installing appropriate microcode]
     - [bash scripts/zsh-rehash, Setting up Z Shell command rehashing]
     - [bash scripts/no-mouse-accel, Disabling mouse acceleration]
