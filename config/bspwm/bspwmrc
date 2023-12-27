@@ -58,7 +58,7 @@ picom --daemon
 
 playerctld daemon
 
-bash ~/.dotfiles/lemon | lemonbar -F#e3e4e7 -B#000000
+bash ~/.dotfiles/lemon | lemonbar -F#e3e4e7 -B#000000 &
 
 # TODO: find something less bloated than ibus
 # ibus-daemon --replace --xim --daemonize
