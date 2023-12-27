@@ -10,13 +10,14 @@ full)
         maim --quality 10 "$image_path" || exit
         ;;
 *)
-        notify-send "Screenshot: unknown argument given"
+        herbe "Screenshot: unknown argument given"
         exit
         ;;
 esac
 
-# TODO: notify-send action that shows image on right click(with kitty icat)
+# TODO: herbe action that shows image on right click(with kitty icat)
 # TODO: make sure image displayed in notification does not look distorted if it is large
 
 xclip -selection clipboard -t image/png -i "$image_path"
-notify-send --icon "$image_path" "Screenshot taken"
+
+herbe "Screenshot taken" && gimp "$image_path"
