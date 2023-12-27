@@ -27,18 +27,9 @@ ram() {
   printf "$RAM%%"
 }
 
-volume() {
-  VOLUME=$(pamixer --get-volume)
-  if eval "$(pamixer --get-mute)"; then
-    printf "muted"
-  else
-    printf "$VOLUME%%"
-  fi
-}
-
 while true; do
   # TODO: make sure formatting is correct
-  BAR_INPUT="%{l}%{F$main_color}$(workspace)%{F-} %{c}$(clock) %{r}%{F$main_color}ram%{F-} $(ram) %{F$main_color}cpu%{F-} $(cpu) %{F$main_color}vol%{F-} $(volume)"
+  BAR_INPUT="%{l}%{F$main_color}$(workspace)%{F-} %{c}$(clock) %{r}%{F$main_color}ram%{F-} $(ram) %{F$main_color}cpu%{F-} $(cpu) %{F$main_color}"
   echo $BAR_INPUT
   sleep 1
 done
