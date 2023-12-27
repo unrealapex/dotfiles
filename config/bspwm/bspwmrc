@@ -61,8 +61,7 @@ picom --daemon
 
 playerctld daemon
 
-# polybar
-~/.config/polybar/launch.sh
+bash ~/.dotfiles/lemon | lemonbar -F#e3e4e7 -B#000000
 
 ibus-daemon --replace --xim --daemonize
 
@@ -70,3 +69,5 @@ festival --server &
 
 keepassxc &
 discord --start-minimized
+
+tiramisu-daemon &

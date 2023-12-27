@@ -33,6 +33,7 @@ $ tree scripts
     ├── bluetooth          enable bluetooth
     ├── firefox            generate firefox user.js file
     ├── group              add current user to appropriate groups
+    ├── herbe              install herbe and apply patches
     ├── irssi              set up irssi scripts
     ├── kill-x             bind ctrl + alt + backspace to kill x
     ├── laptop             useful laptop stuff
