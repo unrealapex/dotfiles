@@ -53,9 +53,6 @@ bspc rule -a Element desktop='^3'
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
 
-nm-applet --no-agent &
-# pgrep -x cbatticon > /dev/null || cbatticon &
-
 feh --bg-fill ~/.dotfiles/sakura.jpg
 picom --daemon
 
@@ -63,11 +60,11 @@ playerctld daemon
 
 bash ~/.dotfiles/lemon | lemonbar -F#e3e4e7 -B#000000
 
-ibus-daemon --replace --xim --daemonize
+# TODO: find something less bloated than ibus
+# ibus-daemon --replace --xim --daemonize
 
 festival --server &
 
 keepassxc &
-discord --start-minimized
 
 tiramisu-daemon &
