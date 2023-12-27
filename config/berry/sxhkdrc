@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-        kitty
+        kitty --single-instance --instance-group wm
 
 # program launcher
 alt + @space
@@ -60,7 +60,7 @@ super + c
         screenshot {selection,full}
 
 super + @period
-        rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c
+        rofi -modi emoji -show emoji
 
 super + shift + x
         betterlockscreen --lock
