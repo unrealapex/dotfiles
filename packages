@@ -81,7 +81,6 @@ imagemagick
 inkscape
 innoextract
 irqbalance
-jdk-openjdk
 kdenlive
 keepassxc
 kitty
@@ -125,7 +124,6 @@ libgcrypt
 libgpg-error
 libjpeg-turbo
 libldap
-libnotify
 libpng
 libpulse
 libreoffice-fresh
@@ -155,7 +153,6 @@ ncurses
 neofetch
 neovim
 nerd-fonts-sf-mono
-network-manager-applet
 newsboat
 ninja
 nm-connection-editor
@@ -198,12 +195,9 @@ rofi
 rofi-emoji
 rxvt-unicode
 shellcheck
-sl
-speedcrunch
 spotify
 sqlite
 steam
-stow
 sxhkd
 syncthing
 system-config-printer
@@ -216,12 +210,9 @@ timer-bin
 tiramisu-git
 tmux
 torbrowser-launcher
-trash-cli
 tree
 ttf-font-awesome
-ttf-hack-nerd
-ttf-jetbrains-mono-nerd
-ttf-ms-win11-auto
+ttf-liberation
 tty-clock
 ufw
 unzip
