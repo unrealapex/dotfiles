@@ -1,0 +1,7 @@
+#!/bin/bash
+tiramisu -o "#summary;#body" | 
+  while read -r line; do
+    summary=$(cut -d ';' -f 1 <<< "$line")
+    body=$(cut -d ';' -f 2 <<< "$line")
+    herbe "$summary" "$body"
+done
