@@ -69,3 +69,5 @@ festival --server &
 
 keepassxc &
 discord --start-minimized
+
+tiramisu-daemon &
