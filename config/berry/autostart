@@ -51,7 +51,8 @@ berryc resize_button 3
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
 
-nm-applet --no-agent &
+nm-applet &
+
 pgrep -x cbatticon > /dev/null || cbatticon &
 
 feh --bg-fill ~/.dotfiles/sakura.jpg
@@ -63,6 +64,8 @@ playerctld daemon
 ~/.config/polybar/launch.sh
 
 ibus-daemon --replace --xim --daemonize
+
+festival --server &
 
 keepassxc &
 discord --start-minimized
