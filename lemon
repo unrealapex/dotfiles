@@ -1,0 +1,36 @@
+#!/bin/bash
+
+bg_color="#000000"
+fg_color="#e3e4e7"
+main_color="#bf4e6d"
+
+workspace() {
+  CURRENT_WORKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}')
+  TOTAL_WORKSPACES=$(xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}')
+  printf "$(($CURRENT_WORKSPACE + 1))/$TOTAL_WORKSPACES"
+}
+
+clock() {
+  TIME=$(date +" %d/%m %H:%M:%S")
+  printf "$TIME"
+}
+
+# FIXME: clean up formatting of cpu and ram data
+cpu() {
+  CPU=$(top -bn1 | grep "Cpu(s)" |
+    sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |
+    awk '{print 100 - $1}' |  awk  '{printf "%.0f\n", $1}')
+  printf "$CPU%%"
+}
+
+ram() {
+  RAM=$(free | grep Mem | awk '{print $3/$2 * 100.0}' | awk  '{printf "%.0f\n", $1}')
+  printf "$RAM%%"
+}
+
+while true; do
+  # TODO: make sure formatting is correct
+  BAR_INPUT="%{l}%{F$main_color}$(workspace)%{F-} %{c}$(clock) %{r}%{F$main_color}ram%{F-} $(ram) %{F$main_color}cpu%{F-} $(cpu) %{F$main_color}"
+  echo $BAR_INPUT
+  sleep 1
+done

@@ -86,6 +86,7 @@ kdenlive
 keepassxc
 kitty
 krita
+lemonbar-git
 lib32-alsa-lib
 lib32-alsa-plugins
 lib32-faudio
@@ -190,7 +191,6 @@ pipewire-audio
 pipewire-jack
 pipewire-pulse
 playerctl
-polybar
 procps
 qemu
 ripgrep
@@ -213,6 +213,7 @@ tesseract-data-jpn
 texlive
 themix-full-git
 timer-bin
+tiramisu-git
 tmux
 torbrowser-launcher
 trash-cli
