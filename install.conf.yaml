@@ -29,7 +29,6 @@
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.drirc: drirc
-    ~/.festivalrc: festivalrc
     ~/.w3m: w3m
     ~/.config:
       glob: true
