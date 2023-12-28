@@ -11,3 +11,5 @@ cd "$herbe_src" || exit
 git apply "$xresources_patch"
 
 sudo make install
+
+xrdb ~/.Xresources
