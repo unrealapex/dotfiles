@@ -5,6 +5,7 @@ fg_color="#e3e4e7"
 main_color="#bf4e6d"
 
 workspace() {
+  # TODO: polybar like workspaces
   CURRENT_WORKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}')
   TOTAL_WORKSPACES=$(xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}')
   printf "$(($CURRENT_WORKSPACE + 1))/$TOTAL_WORKSPACES"
