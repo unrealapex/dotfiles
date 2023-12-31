@@ -3,5 +3,7 @@ tiramisu -o "#summary;#body" |
   while read -r line; do
     summary=$(cut -d ';' -f 1 <<< "$line")
     body=$(cut -d ';' -f 2 <<< "$line")
+    # TODO: execute notification action
+    # https://github.com/Sweets/tiramisu/issues/29#issuecomment-913948410
     herbe "$summary" "$body"
 done
