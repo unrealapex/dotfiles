@@ -1,3 +1,12 @@
 #!/bin/bash
+
+# paths where desktop entries are located
+entry_locations=(~/.local/share/applications/ /usr/share/applications/)
+
+# TODO: perhaps get application name directly from the desktop entry
+
+# get application names
+application_names=$(find "${entry_locations[@]}" \( -type f -o -type l \) -name "*.desktop" -exec basename {} .desktop \;)
+
 # TODO: maybe change up nb and nf colors
-dmenu_run -nb '#000000' -sf '#e3e4e7' -sb '#bf4e6d' -nf '#e3e4e7'
+gtk-launch $(echo "$application_names" | dmenu -nb '#000000' -sf '#e3e4e7' -sb '#bf4e6d' -nf '#e3e4e7').desktop
