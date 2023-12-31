@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Give dmenu list of all unicode characters to copy.
+# Shows the selected character in dunst if running.
+
+grep -v "#" ~/.dotfiles/emojis | dmenu -i -fn SFMono\ Nerd\ Font\ Mono-10 -nb '#000000' -sf '#e3e4e7' -sb '#bf4e6d' -nf '#e3e4e7' | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
+
+pgrep -x dunst >/dev/null && notify-send "$(xclip -o -selection clipboard) copied to clipboard."

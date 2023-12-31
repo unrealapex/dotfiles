@@ -30,6 +30,7 @@ cups
 cups-pdf
 discord
 dkms
+dmenu
 dnsmasq
 dunst
 element-desktop
@@ -191,8 +192,6 @@ playerctl
 procps
 qemu
 ripgrep
-rofi
-rofi-emoji
 rxvt-unicode
 shellcheck
 spotify
