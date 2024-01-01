@@ -4,6 +4,7 @@
 entry_locations=(~/.local/share/applications/ /usr/share/applications/)
 
 # TODO: perhaps get application name directly from the desktop entry
+# TODO: sort by application popularity
 
 # get application names
 application_names=$(find "${entry_locations[@]}" \( -type f -o -type l \) -name "*.desktop" -exec basename {} .desktop \;)
