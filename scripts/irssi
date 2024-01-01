@@ -5,7 +5,7 @@ mkdir --parent ~/.config/irssi/scripts/autorun/ /tmp/irssi-scripts/
 scripts_dir=~/.config/irssi/scripts/
 tmp_dir=/tmp/irssi-scripts
 url="https://raw.githubusercontent.com/irssi/scripts.irssi.org/master/scripts/"
-scripts=(nickcolor emo)
+scripts=(nickcolor)
 for script in "${scripts[@]}"; do
   curl "$url$script.pl" --output "$tmp_dir/$script.pl"
   mv "$tmp_dir/$script.pl" "$scripts_dir"
