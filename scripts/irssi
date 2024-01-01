@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # create directories
-mkdir --parent ~/.irssi/scripts/autorun/ /tmp/irssi-scripts/
-scripts_dir=~/.irssi/scripts/
+mkdir --parent ~/.config/irssi/scripts/autorun/ /tmp/irssi-scripts/
+scripts_dir=~/.config/irssi/scripts/
 tmp_dir=/tmp/irssi-scripts
 url="https://raw.githubusercontent.com/irssi/scripts.irssi.org/master/scripts/"
 scripts=(nickcolor emo)
