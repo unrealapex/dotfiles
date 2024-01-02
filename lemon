@@ -2,13 +2,35 @@
 
 bg_color="#000000"
 fg_color="#e3e4e7"
+disabled_color="#777777"
 main_color="#bf4e6d"
 
 workspace() {
-  # TODO: polybar like workspaces
-  CURRENT_WORKSPACE=$(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}')
-  TOTAL_WORKSPACES=$(xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}')
-  printf "$(($CURRENT_WORKSPACE + 1))/$TOTAL_WORKSPACES"
+  # workspaces with windows open
+  OCCUPIED_WORKSPACES=($(wmctrl -l | awk '{print $2}' | sort -u))
+  # $OCCUPIED_WORKSPACES is zero based so make it one based
+  for ((i = 0; i < ${#OCCUPIED_WORKSPACES[@]}; i++)); do ((OCCUPIED_WORKSPACES[i]++)); done
+  # current workspace(also zero based)
+  CURRENT_WORKSPACES=$(($(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}') + 1))
+  # all wm defined workspaces(one based in case)
+  WORKSPACES=($(xprop -root _NET_DESKTOP_NAMES | awk '{$1=$2=""; print $0}' | sed -e 's/,//g' -e 's/\"//g' -e 's/^[[:space:]]*//'))
+  # color formatted workspaces
+  LEMONBAR_WORKSPACES=()
+
+  for i in "${WORKSPACES[@]}"; do
+    if [ "$i" -eq "$CURRENT_WORKSPACES" ]; then
+      LEMONBAR_WORKSPACES+=("%{F$main_color}")
+    elif [[ ${OCCUPIED_WORKSPACES[*]} =~ $i ]]; then
+      LEMONBAR_WORKSPACES+=("%{F$fg_color}")
+    else
+      LEMONBAR_WORKSPACES+=("%{F$disabled_color}")
+    fi
+
+    LEMONBAR_WORKSPACES+=("$i ")
+    LEMONBAR_WORKSPACES+=("%{F-}")
+  done
+
+  printf '%s\n' "${LEMONBAR_WORKSPACES[@]}"
 }
 
 clock() {
@@ -31,7 +53,7 @@ ram() {
 
 while true; do
   # TODO: make sure formatting is correct
-  BAR_INPUT="%{l}%{F$main_color}$(workspace)%{F-} %{c}$(clock) %{r}%{F$main_color}ram%{F-} $(ram) %{F$main_color}cpu%{F-} $(cpu) %{F$main_color}"
+  BAR_INPUT="%{l}$(workspace) %{c}$(clock) %{r}%{F$main_color}ram%{F-} $(ram) %{F$main_color}cpu%{F-} $(cpu) %{F$main_color}"
   echo $BAR_INPUT
   sleep 1
 done
