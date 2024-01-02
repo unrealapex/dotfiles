@@ -31,6 +31,7 @@ local kind_icons = {
   Event = "",
   Operator = "󰆕",
   TypeParameter = "",
+  Copilot = "",
 }
 
 cmp.setup({
@@ -72,6 +73,7 @@ cmp.setup({
     { name = "buffer" },
     { name = "path" },
     { name = "cmdline" },
+    { name = "copilot" },
     { name = "calc" },
     { name = "emoji" },
     { name = "luasnip" }, -- For luasnip users.
