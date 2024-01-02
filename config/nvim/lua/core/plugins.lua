@@ -1,4 +1,5 @@
 return {
+  -- nicer ui
   {
     "folke/noice.nvim",
     dependencies = {
@@ -107,7 +108,9 @@ return {
       "W",
     },
   },
+  -- rsi style mappings
   { "tpope/vim-rsi", event = { "InsertEnter", "CmdlineEnter" } },
+  -- move text
   {
     "echasnovski/mini.move",
     keys = {
@@ -124,6 +127,7 @@ return {
       require("mini.move").setup()
     end,
   },
+  -- unimpaired mappings
   { "tpope/vim-unimpaired", keys = { "[", "]" } },
   -- better git integration
   {
@@ -175,6 +179,7 @@ return {
     },
     ft = { "fugitive" },
   },
+  -- surround
   {
     "kylechui/nvim-surround",
 
@@ -193,6 +198,7 @@ return {
     --   { "gS", mode = "v" },
     -- },
   },
+  -- repeat plugin commands
   { "tpope/vim-repeat", event = "VeryLazy" },
   -- git commit browser
   {
@@ -420,6 +426,7 @@ return {
       })
     end,
   },
+  -- formatter
   {
     "stevearc/conform.nvim",
     opts = {
@@ -448,7 +455,9 @@ return {
       },
     },
   },
+  -- java lsp stuff
   { "mfussenegger/nvim-jdtls", ft = "java" },
+  -- lsp window
   {
     "folke/trouble.nvim",
     cmd = "Trouble",
@@ -593,10 +602,13 @@ return {
   --     require("leap").set_default_keymaps()
   --   end,
   -- },
+
+  -- additional text objects
   {
     "wellle/targets.vim",
     event = "VeryLazy",
   },
+  -- heuristically set buffer options 
   {
     "tpope/vim-sleuth",
     event = { "BufReadPre", "BufNewFile" },
@@ -626,6 +638,7 @@ return {
     ft = "markdown",
     config = true,
   },
+  -- color previews
   {
     "NvChad/nvim-colorizer.lua",
     ft = { "cfg", "conf", "css", "dosini", "html", "javascript", "sass" },
