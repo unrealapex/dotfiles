@@ -424,7 +424,6 @@ return {
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
-        -- FIXME: make sure that formatters uses spaces instead of tabs for formatting
         lua = { "stylua" },
         javascript = { "prettier_d", "prettier" },
         typescript = { "prettier_d", "prettier" },
