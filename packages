@@ -228,6 +228,7 @@ wget
 wine-mono
 wine-staging
 wireplumber
+wmctrl
 xautolock
 xclip
 xdg-user-dirs
