@@ -15,7 +15,6 @@ full)
         ;;
 esac
 
-# TODO: herbe action that shows image on right click(with kitty icat)
 # TODO: make sure image displayed in notification does not look distorted if it is large
 
 xclip -selection clipboard -t image/png -i "$image_path"
