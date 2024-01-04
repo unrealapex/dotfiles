@@ -2,6 +2,7 @@
 
 send_notification() {
   volume=$(pamixer --get-volume)
+  # TODO: update current notification
   pkill -SIGUSR1 herbe
   if eval "$(pamixer --get-mute)"; then
     herbe "volume: muted"
