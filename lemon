@@ -38,16 +38,15 @@ clock() {
   printf "$TIME"
 }
 
-# FIXME: clean up formatting of cpu and ram data
 cpu() {
   CPU=$(top -bn1 | grep "Cpu(s)" |
     sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |
-    awk '{print 100 - $1}' | awk '{printf "%.0f\n", $1}')
+    awk '{printf "%.0f\n", 100 - $1}')
   printf "$CPU%%"
 }
 
 ram() {
-  RAM=$(free | grep Mem | awk '{print $3/$2 * 100.0}' | awk '{printf "%.0f\n", $1}')
+  RAM=$(free | grep Mem | awk '{printf "%.0f\n", $3/$2 * 100.0}')
   printf "$RAM%%"
 }
 
