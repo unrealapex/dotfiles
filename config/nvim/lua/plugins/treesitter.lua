@@ -16,6 +16,7 @@ configs.setup({
     "html",
     "java",
     "javascript",
+    "jq",
     "jsdoc",
     "json",
     "jsonc",
