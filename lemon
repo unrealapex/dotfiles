@@ -51,8 +51,7 @@ ram() {
 }
 
 while true; do
-  # TODO: make sure formatting is correct
-  BAR_INPUT="%{l}$(workspace) %{c}$(clock) %{r}%{F$main_color}ram%{F-} $(ram) %{F$main_color}cpu%{F-} $(cpu) %{F$main_color}"
+  BAR_INPUT="%{l}$(workspace) %{c}$(clock) %{r}%{F$main_color}ram%{F-} $(ram) %{F$main_color}cpu%{F-} $(cpu)"
   echo $BAR_INPUT
   sleep 1
 done
