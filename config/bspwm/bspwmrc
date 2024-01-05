@@ -53,7 +53,7 @@ bspc rule -a Element desktop='^3'
 xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
 xautolock -time 10 -locker "idle-lock" &
 
-feh --bg-fill ~/.dotfiles/sakura.jpg
+feh --bg-fill "$WALLPAPER"
 picom --daemon
 
 playerctld daemon
