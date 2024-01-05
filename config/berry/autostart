@@ -55,7 +55,7 @@ nm-applet &
 
 pgrep -x cbatticon > /dev/null || cbatticon &
 
-feh --bg-fill ~/.dotfiles/sakura.jpg
+feh --bg-fill "$WALLPAPER"
 picom --daemon
 
 playerctld daemon

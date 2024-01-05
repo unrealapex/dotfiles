@@ -26,6 +26,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=bg+:-1,bg:-1,spinner:#bf4e6d,hl:#c6a4a8 \
 --color=fg:#484f55,header:#e3d1d0,info:#e3d1d0,pointer:#e3e4e7  \
 --color=marker:#ed567a,fg+:#e3e4e7,prompt:#bf4e6d,hl+:#c6a4a8"
+export WALLPAPER="~/.dotfiles/sakura.jpg"
 # export MANGOHUD=1
 
 # set ibus as input method framework
