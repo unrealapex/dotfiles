@@ -2,16 +2,13 @@
 
 herbe_src="$HOME/Downloads/git/herbe"
 xresources_patch="/tmp/11.diff"
-vertical_stacking_patch="/tmp/19.diff"
 
 curl https://patch-diff.githubusercontent.com/raw/dudik/herbe/pull/11.diff --output "$xresources_patch"
-curl https://patch-diff.githubusercontent.com/raw/dudik/herbe/pull/19.diff --output "$vertical_stacking_patch"
 git clone https://github.com/dudik/herbe "$herbe_src"
 
 cd "$herbe_src" || exit
 
 git apply "$xresources_patch"
-git apply --reject --whitespace=fix "$vertical_stacking_patch"
 
 sudo make install
 
