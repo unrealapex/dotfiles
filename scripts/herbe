@@ -16,3 +16,5 @@ git apply --reject --whitespace=fix "$vertical_stacking_patch"
 sudo make install
 
 xrdb ~/.Xresources
+
+cd -
