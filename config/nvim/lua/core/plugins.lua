@@ -641,7 +641,7 @@ return {
   -- color previews
   {
     "NvChad/nvim-colorizer.lua",
-    ft = { "cfg", "conf", "css", "dosini", "html", "javascript", "sass" },
+    ft = { "cfg", "conf", "css", "dosini", "html", "javascript", "sass", "sh", "zsh" },
     config = function()
       require("colorizer").setup({
         filetypes = {
@@ -652,6 +652,8 @@ return {
           "html",
           "javascript",
           "sass",
+          "sh",
+          "zsh",
         },
       })
     end,
