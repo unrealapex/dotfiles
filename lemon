@@ -34,7 +34,7 @@ workspace() {
 }
 
 clock() {
-  TIME=$(date +" %d/%m %H:%M:%S")
+  TIME=$(date +" %m/%d %H:%M:%S")
   printf "$TIME"
 }
 
