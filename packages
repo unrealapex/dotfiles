@@ -32,7 +32,6 @@ discord
 dkms
 dmenu
 dnsmasq
-dunst
 element-desktop
 faudio
 fd
@@ -60,7 +59,6 @@ github-cli
 glow
 gnu-free-fonts
 gnutls
-google-chrome
 gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
