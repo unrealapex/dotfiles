@@ -1,0 +1,7 @@
+bg_color="#000000"
+bg_alt_color="#222222"
+fg_color="#e3e4e7"
+disabled_color="#777777"
+main_color="#bf4e6d"
+
+# vim: set filetype=bash
