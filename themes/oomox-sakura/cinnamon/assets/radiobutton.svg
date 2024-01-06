@@ -27,7 +27,7 @@
          offset="0"
          id="stop4694" />
       <stop
-         style="stop-color:#e3e4e7;stop-opacity:1"
+         style="stop-color:#e5dbd9;stop-opacity:1"
          offset="1"
          id="stop4696" />
     </linearGradient>
@@ -82,13 +82,13 @@
      id="layer1"
      transform="translate(0,-1036.3622)">
     <circle
-       style="fill:url(#linearGradient4698);fill-opacity:1;stroke:#e3e4e7;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:url(#linearGradient4698);fill-opacity:1;stroke:#e5dbd9;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4690"
        cx="8"
        cy="1044.3622"
        r="7.5" />
     <circle
-       style="fill:#bf4e6d;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#612d32;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4741"
        cx="8"
        cy="1044.3622"
