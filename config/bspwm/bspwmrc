@@ -58,6 +58,7 @@ picom --daemon
 
 playerctld daemon
 
+killall lemonbar
 bash ~/.dotfiles/lemon | lemonbar -F#e3e4e7 -B#000000 &
 xdo above -t $(xdo id -n root) $(xdo id -n lemonbar)
 
