@@ -13,6 +13,16 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export LESS="-i"
+export FZF_CTRL_T_OPTS="
+  --preview 'if file --mime-type {} | grep -qF 'image/'; then
+      kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 {}
+    elif file --mime-type {} | grep -qF 'inode/'; then
+      tree -C {}
+    else
+      bat --color=always {}
+    fi'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 export FFF_FAV1=~/Downloads
 export FFF_FAV2=~/Documents
 export FFF_FAV3=~/music
