@@ -8,7 +8,7 @@ launcher: dmenu
 terminal: wezterm
 shell: zsh
 editor: neovim
-font: san francisco
+font: jetbrains mono
 notification daemon: dunst
 ```
 
