@@ -3,9 +3,9 @@
 ![screenshot of rice](rice.png)
 ```
 wm: bspwm
-bar: polybar
-launcher: rofi
-terminal: kitty
+bar: lemonbar
+launcher: dmenu
+terminal: wezterm
 shell: zsh
 editor: neovim
 font: san francisco
