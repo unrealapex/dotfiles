@@ -140,12 +140,12 @@ alias l='ls -CF'
 alias open='xdg-open > /dev/null 2>&1'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
-alias icat='kitty +kitten icat'
-alias connect="kitty +kitten ssh"
-alias theme="kitty +kitten themes --reload-in=all"
+alias icat='wezterm imgcat'
+# alias connect="kitty +kitten ssh"
+# alias theme="kitty +kitten themes --reload-in=all"
 # TODO: use a better method to manage clipboard, clipboard kitten is lacking
-alias clip='kitty +kitten clipboard'
-alias paste='kitty +kitten clipboard --get-clipboard'
+# alias clip='kitty +kitten clipboard'
+# alias paste='kitty +kitten clipboard --get-clipboard'
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'

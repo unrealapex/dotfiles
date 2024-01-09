@@ -209,6 +209,8 @@ tmux
 torbrowser-launcher
 tree
 ttf-font-awesome
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
 ttf-liberation
 tty-clock
 ufw
@@ -222,6 +224,7 @@ vkd3d
 vulkan-icd-loader
 w3m
 webp-pixbuf-loader
+wezterm
 wget
 wine-mono
 wine-staging
