@@ -13,6 +13,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export LESS="-i"
+# FIXME: image preview does not work properly
 export FZF_CTRL_T_OPTS="
   --preview 'if file --mime-type {} | grep -qF 'image/'; then
       kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 {}
