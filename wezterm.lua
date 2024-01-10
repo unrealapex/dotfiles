@@ -10,5 +10,7 @@ local config = wezterm.config_builder()
 -- For example, changing the color scheme:
 -- config.color_scheme = 'AdventureTime'
 
+-- transparency
+config.window_background_opacity = 0.95
 -- and finally, return the configuration to wezterm
 return config
