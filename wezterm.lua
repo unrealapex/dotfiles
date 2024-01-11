@@ -11,6 +11,6 @@ local config = wezterm.config_builder()
 -- config.color_scheme = 'AdventureTime'
 
 -- transparency
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.65
 -- and finally, return the configuration to wezterm
 return config
