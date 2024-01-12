@@ -39,7 +39,7 @@ vim.keymap.set("v", "<C-r>", function()
   pattern =
     vim.fn.substitute(vim.fn.escape(pattern, "^$.*\\/~[]"), "\n", "\\n", "g")
   -- send substitute command to vim command line
-  vim.api.nvim_input("<Esc>:%s/" .. pattern .. "//<Left>")
+  vim.api.nvim_input("<Esc>:%s/" .. pattern .. "//g<Left><Left>")
 end)
 
 -- buffer stuff
