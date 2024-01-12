@@ -20,7 +20,7 @@ workspace() {
 
   for i in "${WORKSPACES[@]}"; do
     if [ "$i" -eq "$CURRENT_WORKSPACES" ]; then
-      LEMONBAR_WORKSPACES+=("%{B$bg_alt_color}%{F$main_color}")
+      LEMONBAR_WORKSPACES+=("%{B$main_color}%{F$fg_color}")
       LEMONBAR_WORKSPACES+=("$i ")
       LEMONBAR_WORKSPACES+=("%{B-}%{F-}")
       continue
