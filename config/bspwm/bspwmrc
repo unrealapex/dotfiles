@@ -65,6 +65,6 @@ xdo above -t $(xdo id -n root) $(xdo id -n lemonbar)
 # TODO: find something less bloated than ibus
 # ibus-daemon --replace --xim --daemonize
 
-# keepassxc &
+keepassxc &
 
 tiramisu-daemon &
