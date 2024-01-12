@@ -1,6 +1,7 @@
 #!/bin/bash
 
 bg_color="#000000"
+bg_alt_color="#262626"
 fg_color="#e3e4e7"
 disabled_color="#777777"
 main_color="#bf4e6d"
@@ -19,7 +20,10 @@ workspace() {
 
   for i in "${WORKSPACES[@]}"; do
     if [ "$i" -eq "$CURRENT_WORKSPACES" ]; then
-      LEMONBAR_WORKSPACES+=("%{F$main_color}")
+      LEMONBAR_WORKSPACES+=("%{B$bg_alt_color}%{F$main_color}")
+      LEMONBAR_WORKSPACES+=("$i ")
+      LEMONBAR_WORKSPACES+=("%{B-}%{F-}")
+      continue
     elif [[ ${OCCUPIED_WORKSPACES[*]} =~ $i ]]; then
       LEMONBAR_WORKSPACES+=("%{F$fg_color}")
     else
