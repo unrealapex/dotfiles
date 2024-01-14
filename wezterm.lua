@@ -10,7 +10,6 @@ local config = wezterm.config_builder()
 -- config.color_scheme = 'AdventureTime'
 
 config.font = wezterm.font("Jetbrains Mono Nerd Font Mono")
--- transparency
 config.window_background_opacity = 0.65
 -- and finally, return the configuration to wezterm
 return config
