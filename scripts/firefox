@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ensure profiles directory is created
-if [ ! -d "~/.mozilla/" ]; then
+if [ ! -d "$HOME/.mozilla/" ]; then
     sleep 5 && killall firefox &
     firefox -headless &
     wait
