@@ -10,4 +10,4 @@ entry_locations=(~/.local/share/applications/ /usr/share/applications/)
 applications=$(find "${entry_locations[@]}" \( -type f -o -type l \) -name "*.desktop" -exec basename {} .desktop \; | sort)
 
 # TODO: maybe change up nb and nf colors
-gtk-launch "$(echo "$applications" | dmenu -fn SFMono\ Nerd\ Font\ Mono-10 -nb '#000000' -sf '#e3e4e7' -sb '#bf4e6d' -nf '#e3e4e7')"
+gtk-launch "$(echo "$applications" | dmenu -fn SFMono\ Nerd\ Font\ Mono-10 -nb '#0d0d0d' -sf '#d9d0d0' -sb '#bf2a45' -nf '#d9d0d0')"
