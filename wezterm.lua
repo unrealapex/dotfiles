@@ -9,6 +9,7 @@ local config = wezterm.config_builder()
 -- For example, changing the color scheme:
 -- config.color_scheme = 'AdventureTime'
 
+config.font = wezterm.font("Jetbrains Mono Nerd Font Mono")
 -- transparency
 config.window_background_opacity = 0.65
 config.warn_about_missing_glyphs = false
