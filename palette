@@ -4,6 +4,7 @@ fg_color="#d9d0d0"
 disabled_color="#777777"
 main_color="#bf2a45"
 
+# TODO: show color blocks
 echo "$bg_color $bg_alt_color $fg_color $disabled_color $main_color"
 
 # vim: set filetype=bash
