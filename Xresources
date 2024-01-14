@@ -72,9 +72,9 @@ URxvt.saveline: 2048
 URxvt.letterSpace: -1
 URxvt.geometry: 400x400
 
-herbe.background_color: #000000
-herbe.border_color: #e3e4e7
-herbe.font_color: #e3e4e7
+herbe.background_color: #0d0d0d
+herbe.border_color: #d9d0d0
+herbe.font_color: #d9d0d0
 herbe.font_pattern: monospace:size=10
 herbe.line_spacing: 5
 herbe.padding: 15

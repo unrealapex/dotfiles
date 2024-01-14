@@ -1,10 +1,10 @@
 #!/bin/bash
 
-bg_color="#000000"
+bg_color="#0d0d0d"
 bg_alt_color="#262626"
-fg_color="#e3e4e7"
+fg_color="#d9d0d0"
 disabled_color="#777777"
-main_color="#bf4e6d"
+main_color="#bf2a45"
 
 workspace() {
   # workspaces with windows open

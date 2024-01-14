@@ -33,10 +33,13 @@ export FFF_FAV6=~/.dotfiles
 export FFF_FAV7=~/projects
 export FFF_FAV8=~/.zshrc
 export FFF_FAV9=~/.xinitrc
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:-1,bg:-1,spinner:#bf4e6d,hl:#c6a4a8 \
+# --color=fg:#484f55,header:#e3d1d0,info:#e3d1d0,pointer:#e3e4e7  \
+# --color=marker:#ed567a,fg+:#e3e4e7,prompt:#bf4e6d,hl+:#c6a4a8"
+
 export FZF_DEFAULT_OPTS=" \
---color=bg+:-1,bg:-1,spinner:#bf4e6d,hl:#c6a4a8 \
---color=fg:#484f55,header:#e3d1d0,info:#e3d1d0,pointer:#e3e4e7  \
---color=marker:#ed567a,fg+:#e3e4e7,prompt:#bf4e6d,hl+:#c6a4a8"
+--color=bg+:-1,bg:-1"
 export WALLPAPER="$HOME/.dotfiles/sakura.png"
 # export MANGOHUD=1
 
