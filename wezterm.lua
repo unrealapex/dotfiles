@@ -12,5 +12,6 @@ local config = wezterm.config_builder()
 
 -- transparency
 config.window_background_opacity = 0.65
+config.warn_about_missing_glyphs = false
 -- and finally, return the configuration to wezterm
 return config
