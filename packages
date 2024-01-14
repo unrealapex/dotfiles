@@ -10,7 +10,6 @@ autorandr
 bash-completion
 bash-pipes
 bat
-berry-git
 betterlockscreen-git
 bibata-cursor-theme
 blueman
@@ -82,7 +81,6 @@ innoextract
 irqbalance
 kdenlive
 keepassxc
-kitty
 krita
 lemonbar-git
 lib32-alsa-lib
@@ -151,7 +149,6 @@ ncmpcpp
 ncurses
 neofetch
 neovim
-nerd-fonts-sf-mono
 newsboat
 ninja
 nm-connection-editor
@@ -171,8 +168,6 @@ openal
 openbsd-netcat
 opencl-icd-loader
 osu-lazer
-otf-san-francisco
-otf-san-francisco-mono
 pamixer
 pandoc-bin
 pastel
