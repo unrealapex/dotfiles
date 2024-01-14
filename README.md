@@ -9,7 +9,7 @@ terminal: wezterm
 shell: zsh
 editor: neovim
 font: jetbrains mono
-notification daemon: dunst
+notification daemon: tiramisu
 ```
 
 ### ✨ about ✨
