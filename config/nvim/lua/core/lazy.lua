@@ -52,7 +52,7 @@ require("lazy").setup("core.plugins", {
     },
   },
   install = {
-    colorscheme = { "tokyonight-night", "habamax" },
+    colorscheme = { vim.g.colors_name, "habamax" },
   },
 })
 
