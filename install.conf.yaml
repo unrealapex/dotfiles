@@ -15,7 +15,6 @@
     - ~/Pictures/Screenshots
 
 - link:
-    ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
