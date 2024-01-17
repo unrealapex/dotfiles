@@ -11,5 +11,6 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font("Jetbrains Mono Nerd Font Mono")
 config.window_background_opacity = 0.65
+config.enable_tab_bar = false
 -- and finally, return the configuration to wezterm
 return config
