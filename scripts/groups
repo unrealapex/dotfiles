@@ -2,3 +2,4 @@
 sudo gpasswd -a "$USER" sys
 sudo gpasswd -a "$USER" libvirt
 sudo gpasswd -a "$USER" mpd
+sudo gpasswd -a "$USER" video
