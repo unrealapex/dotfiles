@@ -3,10 +3,10 @@
 # fullscreen application
 # don't lock screen if an application is in fullscreen
 WINDOW=$(echo $(xwininfo -id $(xdotool getactivewindow) -stats |
-        grep -E '(Width|Height):' |
-        awk '{print $NF}') |
-        sed -e 's/ /x/')
+  grep -E '(Width|Height):' |
+  awk '{print $NF}') |
+  sed -e 's/ /x/')
 SCREEN=$(xdpyinfo | grep -m1 dimensions | awk '{print $2}')
-if [ ! "$WINDOW" = "$SCREEN"  ] && [ ! $(pgrep --exact -f "betterlockscreen" > /dev/null) ] ; then
-        betterlockscreen --lock
+if [ ! "$WINDOW" = "$SCREEN" ] && [ ! $(pgrep --exact -f "betterlockscreen" >/dev/null) ]; then
+  betterlockscreen --lock
 fi
