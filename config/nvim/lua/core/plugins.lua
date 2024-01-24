@@ -582,19 +582,6 @@ return {
       })
     end,
   },
-  -- improved movement
-  -- {
-  --   "ggandor/leap.nvim",
-  --   keys = {
-  --     { "s", mode = { "n", "x", "o" } },
-  --     { "S", mode = { "n", "x", "o" } },
-  --     { "gs", mode = { "n", "x", "o" } },
-  --   },
-  --   config = function()
-  --     require("leap").set_default_keymaps()
-  --   end,
-  -- },
-
   -- additional text objects
   {
     "wellle/targets.vim",
