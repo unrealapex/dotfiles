@@ -587,7 +587,7 @@ return {
     "wellle/targets.vim",
     event = "VeryLazy",
   },
-  -- heuristically set buffer options 
+  -- heuristically set buffer options
   {
     "tpope/vim-sleuth",
     event = { "BufReadPre", "BufNewFile" },
@@ -620,7 +620,17 @@ return {
   -- color previews
   {
     "NvChad/nvim-colorizer.lua",
-    ft = { "cfg", "conf", "css", "dosini", "html", "javascript", "sass", "sh", "zsh" },
+    ft = {
+      "cfg",
+      "conf",
+      "css",
+      "dosini",
+      "html",
+      "javascript",
+      "sass",
+      "sh",
+      "zsh",
+    },
     config = function()
       require("colorizer").setup({
         filetypes = {
