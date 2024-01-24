@@ -20,7 +20,7 @@ sudo sed -i '/# Color/s/^#//g' /etc/pacman.conf
 
 # allocate more cpu cores to make
 avail_cores=$(($(nproc) + 1))
-sudo sed -i "s/# MAKEFLAGS=\"-j4\"/MAKEFLAGS=\"-j"$avail_cores"\"/g" /etc/makepkg.conf
+sudo sed -iE "s/#MAKEFLAGS=\"-j[1-9]\"/MAKEFLAGS=\"-j"$avail_cores"\"/g" /etc/makepkg.conf
 
 sudo pacman -Syu --noconfirm
 
