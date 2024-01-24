@@ -6,7 +6,6 @@
 
 - create:
     - ~/.local/bin
-    - ~/.irssi
     - ~/.themes
     - ~/projects
     - ~/music
