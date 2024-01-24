@@ -1,29 +1,29 @@
 #!/bin/bash
-sudo pacman -Syu --noconfirm
-sudo pacman -S git --noconfirm --needed
+sudo pacman --sync --refresh --sysupgrade --noconfirm
+sudo pacman --sync git --noconfirm --needed
 
 # yay
 mkdir --parents ~/Downloads/git
 cd ~/Downloads/git
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
-yes | makepkg -si
+yes | makepkg --syncdeps --install
 
 cd ~/.dotfiles
 
 # enable multilib
-sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+sudo sed --in-place "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 # enable parallel downloads
-sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 20/g' /etc/pacman.conf
+sudo sed --in-place 's/#ParallelDownloads = 5/ParallelDownloads = 20/g' /etc/pacman.conf
 # enable colorful pacman output
-sudo sed -i '/# Color/s/^#//g' /etc/pacman.conf
+sudo sed --in-place '/# Color/s/^#//g' /etc/pacman.conf
 
 # allocate more cpu cores to make
 avail_cores=$(($(nproc) + 1))
-sudo sed -iE "s/#MAKEFLAGS=\"-j[1-9]\"/MAKEFLAGS=\"-j"$avail_cores"\"/g" /etc/makepkg.conf
+sudo sed -in-place --regexp-extended "s/#MAKEFLAGS=\"-j[1-9]\"/MAKEFLAGS=\"-j"$avail_cores"\"/g" /etc/makepkg.conf
 
-sudo pacman -Syu --noconfirm
+sudo pacman --sync --refresh --sysupgrade --noconfirm
 
 # install packages
-yay -S --noconfirm --needed - < packages
+yay --sync --noconfirm --needed - < packages
 
