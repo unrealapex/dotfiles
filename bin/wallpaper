@@ -1,4 +1,4 @@
 #!/bin/bash
 feh --bg-fill "$1"
 betterlockscreen --update "$1"
-herbe "Wallpaper updated"
+herbe "wallpaper: updated image"
