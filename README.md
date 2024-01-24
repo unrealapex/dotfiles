@@ -42,6 +42,7 @@ $ tree scripts
     ├── pacman             optimize pacman and install rice packages
     ├── proton-ge          install glorious eggroll's custom proton build
     ├── razer              control razer peripherals
+    ├── secrets            create secrets
     ├── services           set up services for rice and dependencies
     ├── tf2                fix common issues running tf2 on linux
     ├── ufw                enable uncomplicated firewall
