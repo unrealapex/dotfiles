@@ -189,14 +189,6 @@ return {
     },
     event = "VeryLazy",
     config = true,
-    -- FIXME: see if lazy loading by key will work without being buggy
-    -- keys = {
-    --   "ds",
-    --   "cs",
-    --   "ys",
-    --   { "sa", "<Plug>VSurround", mode = "v" },
-    --   { "gS", mode = "v" },
-    -- },
   },
   -- repeat plugin commands
   { "tpope/vim-repeat", event = "VeryLazy" },
