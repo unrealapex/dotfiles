@@ -421,6 +421,14 @@ return {
   -- formatter
   {
     "stevearc/conform.nvim",
+    keys = {
+      {
+        "<leader>cf",
+        function()
+          require("conform").format()
+        end,
+      },
+    },
     opts = {
       formatters_by_ft = {
         lua = { "stylua" },
