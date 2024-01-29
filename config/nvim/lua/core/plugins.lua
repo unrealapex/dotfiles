@@ -432,11 +432,11 @@ return {
     opts = {
       formatters_by_ft = {
         lua = { "stylua" },
-        javascript = { "prettier_d", "prettier" },
-        typescript = { "prettier_d", "prettier" },
-        html = { "prettier_d", "prettier" },
-        css = { "prettier_d", "prettier" },
-        markdown = { "prettier_d", "prettier" },
+        javascript = { "prettierd", "prettier" },
+        typescript = { "prettierd", "prettier" },
+        html = { "prettierd", "prettier" },
+        css = { "prettierd", "prettier" },
+        markdown = { "prettierd", "prettier" },
         python = {
           formatters = { "isort", "black" },
           run_all_formatters = true,
