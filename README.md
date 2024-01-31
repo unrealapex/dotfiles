@@ -1,6 +1,6 @@
 # dotfiles 🌸
 
-![screenshot of rice](rice.png)
+[![screenshot of rice](rice.png)](https://wallhaven.cc/w/gpmv73)
 ```
 wm: bspwm
 bar: lemonbar
