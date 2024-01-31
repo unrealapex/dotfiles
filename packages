@@ -142,6 +142,7 @@ man-pages
 mangohud
 mesa
 mesa-utils
+mimi-git
 mpc
 mpd
 mpg123
@@ -229,7 +230,6 @@ wmctrl
 xautolock
 xclip
 xdg-user-dirs
-xdg-utils
 xdo
 xdotool
 xf86-input-libinput
