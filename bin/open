@@ -5,7 +5,7 @@
 # TODO: handle html and ftp
 
 for file in "$@"; do
-  mime_type=$(file -bi "$(realpath "$file")")
+  mime_type=$(file --brief --mime "$(realpath "$file")")
   case $mime_type in
   audio/*)
     mpv --no-video "$file"
