@@ -1,0 +1,42 @@
+#!/bin/sh -e
+#
+# open file in application based on mime-type
+
+# TODO: handle html and ftp
+
+for file in "$@"; do
+  mime_type="$(file -bi $(realpath $file))"
+  case $mime_type in
+  audio/*)
+    mpv --no-video "$file"
+    ;;
+
+  video/*)
+    mpv "$file"
+    ;;
+
+  image/*)
+    feh "$file"
+    ;;
+
+  text/html* | text/xml*)
+    "${BROWSER:=lynx}" "$file"
+    ;;
+
+  application/pdf*)
+    zathura "$file"
+    ;;
+
+  inode/directory*)
+    fff "$file"
+    ;;
+
+  text/* | "")
+    "${EDITOR:=vi}" "$file"
+    ;;
+
+  *)
+    printf 'could not handle mime-type %s\n' "$mime_type"
+    ;;
+  esac
+done
