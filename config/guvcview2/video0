@@ -37,7 +37,7 @@ photo_sufix=1
 #fps numerator (def. 1)
 fps_num=1
 #fps denominator (def. 25)
-fps_denom=25
+fps_denom=60
 #audio device index (-1 - api default)
 audio_device=11
 #video fx mask 
