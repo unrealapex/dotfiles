@@ -22,12 +22,14 @@ audio_codec=mp2
 profile_name=default.gpfl
 #profile path
 profile_path=/home/aaron
+# TODO: change this
 #video name
 video_name=my_video.mkv
 #video path
 video_path=/home/aaron/Videos/Webcam/
 #video sufix flag
 video_sufix=1
+# TODO: change this
 #photo name
 photo_name=my_photo.jpg
 #photo path
