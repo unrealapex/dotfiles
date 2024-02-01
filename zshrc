@@ -136,8 +136,6 @@ fi
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
-
-alias open='xdg-open > /dev/null 2>&1'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 alias icat='wezterm imgcat'
