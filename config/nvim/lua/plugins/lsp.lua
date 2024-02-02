@@ -87,6 +87,18 @@ require("mason-lspconfig").setup_handlers({
   end,
 })
 
+require("mason-lspconfig").setup_handlers({
+    lspconfig["clangd"].setup({
+      on_attach = lsp_attach,
+      capabilities = lsp_capabilities,
+
+      cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
+      },
+    })
+})
+
 -- disable neovim lsp"s inline diagnostics and use lspsaga"s diagnostics ui instead
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
