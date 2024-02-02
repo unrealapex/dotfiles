@@ -50,22 +50,3 @@ bspc rule -a '*:*:Picture in picture' state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a hl2_linux desktop='^6' state=fullscreen
 bspc rule -a Element desktop='^3'
-
-xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
-xautolock -time 10 -locker "idle-lock" &
-
-feh --bg-fill "$WALLPAPER"
-picom --daemon
-
-playerctld daemon
-
-killall lemonbar
-bash lemon | lemonbar &
-xdo above -t $(xdo id -n root) $(xdo id -n lemonbar)
-
-# TODO: find something less bloated than ibus
-# ibus-daemon --replace --xim --daemonize
-
-keepassxc &
-
-tiramisu-daemon &
