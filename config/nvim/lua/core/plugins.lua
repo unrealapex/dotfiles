@@ -586,6 +586,7 @@ return {
   -- icons
   "nvim-tree/nvim-web-devicons",
   -- colorscheme
+  -- FIXME: fix transparency
   {
     "folke/tokyonight.nvim",
     lazy = false,
