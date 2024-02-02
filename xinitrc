@@ -58,24 +58,4 @@ fi
 xsetroot -cursor_name left_ptr
 # xrdb "$HOME"/.Xresources
 
-
-xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
-xautolock -time 10 -locker "idle-lock" &
-
-feh --bg-fill "$WALLPAPER"
-picom --daemon
-
-playerctld daemon
-
-killall lemonbar
-bash lemon | lemonbar &
-xdo above -t $(xdo id -n root) $(xdo id -n lemonbar)
-
-# TODO: find something less bloated than ibus
-# ibus-daemon --replace --xim --daemonize
-
-keepassxc &
-
-tiramisu-daemon &
-
 bspwm
