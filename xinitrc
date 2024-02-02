@@ -58,4 +58,9 @@ fi
 xsetroot -cursor_name left_ptr
 # xrdb "$HOME"/.Xresources
 
-bspwm
+while true; do
+    # Log stderror to a file 
+    dwm 2> ~/.dwm.log
+    # No error logging
+    #dwm >/dev/null 2>&1
+done
