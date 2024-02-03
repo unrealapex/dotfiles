@@ -21,6 +21,7 @@ HISTSIZE=1000
 SAVEHIST=2000
 setopt auto_cd
 setopt auto_pushd
+setopt menu_complete
 setopt nocorrectall
 setopt extended_glob
 setopt hist_ignore_all_dups
