@@ -6,3 +6,9 @@ config/tmux/plugins
 icons/hicolor
 config/ncmpcpp/error.log
 config/herbe/herbe
+*.orig
+*.rej
+config/dwm/drw.o
+config/dwm/dwm
+config/dwm/dwm.o
+config/dwm/util.o
