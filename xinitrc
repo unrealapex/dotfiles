@@ -78,7 +78,10 @@ keepassxc &
 
 tiramisu-daemon &
 
-
+while true; do
+   xsetroot -name "$( date +"%m/%d %I:%M %P" )"
+   sleep 1
+done &
 
 while true; do
     # Log stderror to a file 
