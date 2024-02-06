@@ -149,6 +149,11 @@ alias irssi="irssi --config=<((cat $XDG_CONFIG_HOME/irssi/credentials && cat $XD
 alias bc="bc --mathlib --quiet"
 
 open() {
+  if [[ "$*" -eq 0 ]]; then
+    echo "Usage: open [file|directory|protocol]"
+    return 1
+  fi
+
   for file in "$@"; do
     xdg-open $(realpath "$file" 2> /dev/null || echo "$file")
   done
