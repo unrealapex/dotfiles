@@ -150,7 +150,7 @@ alias bc="bc --mathlib --quiet"
 
 open() {
   for file in "$@"; do
-    xdg-open "$(realpath "$file")"
+    xdg-open $(realpath "$file" 2> /dev/null || echo "$file")
   done
 }
 
