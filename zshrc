@@ -148,6 +148,12 @@ alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 
 alias irssi="irssi --config=<((cat $XDG_CONFIG_HOME/irssi/credentials && cat $XDG_CONFIG_HOME/irssi/config)) --home="$XDG_DATA_HOME"/irssi"
 alias bc="bc --mathlib --quiet"
 
+open() {
+  for file in "$@"; do
+    xdg-open "$(realpath "$file")"
+  done
+}
+
 battery() {
   percent=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}')
   herbe "battery: $percent"
