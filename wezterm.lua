@@ -9,7 +9,12 @@ local config = wezterm.config_builder()
 -- For example, changing the color scheme:
 -- config.color_scheme = 'AdventureTime'
 
-config.font = wezterm.font("Jetbrains Mono Nerd Font Mono")
+config.font = wezterm.font_with_fallback({
+  -- <built-in>, BuiltIn
+  "Jetbrains Mono Nerd Font Mono",
+  "Segoe UI Emoji",
+})
+
 config.window_background_opacity = 0.65
 config.enable_tab_bar = false
 -- and finally, return the configuration to wezterm
