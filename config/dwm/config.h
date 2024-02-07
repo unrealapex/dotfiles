@@ -90,6 +90,7 @@ static const char *lockcmd[]  = { "betterlockscreen", "--lock", NULL };
 // FIXME: figure out c naming scheme
 static const char *screenshot_full_cmd[]  = { "screenshot", "full", NULL };
 static const char *screenshot_select_cmd[]  = { "screenshot", "selection", NULL };
+static const char *emoji_picker_cmd[]  = { "emoji-picker", NULL };
 static const char *volume_up_cmd[]  = { "volumewizard", "up", NULL };
 static const char *volume_down_cmd[]  = { "volumewizard", "down", NULL };
 static const char *volume_mute_cmd[]  = { "volumewizard", "mute", NULL };
@@ -122,10 +123,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_Left,  focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_Right, focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Left,  tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Right, tagmon,         {.i = +1 } },
 	// my own keybinds
 	// lock
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = lockcmd } },
@@ -145,6 +146,7 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_MonBrightnessDown, spawn,         {.v =  brightness_down_cmd } },
 	// mute mic
 	{ 0,                            XF86XK_AudioMicMute, spawn,         {.v = mic_mute_cmd } },
+	{ MODKEY,                       XK_period, spawn,       {.v = emoji_picker_cmd } },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
