@@ -2,8 +2,7 @@
 
 [![screenshot of rice](rice.png)](https://wallhaven.cc/w/gpmv73)
 ```
-wm: bspwm
-bar: lemonbar
+wm: dwm
 launcher: dmenu
 terminal: wezterm
 shell: zsh
