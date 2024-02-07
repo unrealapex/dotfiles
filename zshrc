@@ -149,7 +149,7 @@ alias irssi="irssi --config=<((cat $XDG_CONFIG_HOME/irssi/credentials && cat $XD
 alias bc="bc --mathlib --quiet"
 
 open() {
-  if [[ "$*" -eq 0 ]]; then
+  if [[ "$#" -eq 0 ]]; then
     echo "Usage: open [file|directory|protocol]"
     return 1
   fi
