@@ -54,6 +54,12 @@
       description: Building herbe  
       stdout: true
       stderr: true
+    # TODO: check if this builds correctly
+    - 
+      command: cd config/dwm; sudo make clean install; cd -
+      description: Building dwm
+      stdout: true
+      stderr: true
     - [bash scripts/microcode, Installing appropriate microcode]
     - [bash scripts/zsh-rehash, Setting up Z Shell command rehashing]
     - [bash scripts/no-mouse-accel, Disabling mouse acceleration]
