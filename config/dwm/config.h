@@ -11,7 +11,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 // TODO: use lemonbar instead of dwmblocks(anybar patch)
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
+static const char *fonts[]          = { "monospace:size=10", "Segoe UI Emoji:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 // static const char col_gray1[]       = "#222222";
 // static const char col_gray2[]       = "#444444";
