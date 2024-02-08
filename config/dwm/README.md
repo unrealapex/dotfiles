@@ -5,6 +5,7 @@
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [switchtotag](https://dwm.suckless.org/patches/switchtotag/)
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
+- [notitle](https://dwm.suckless.org/patches/notitle/)
 
 ### Install
 ```bash
