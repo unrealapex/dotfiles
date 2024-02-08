@@ -6,6 +6,7 @@
 - [switchtotag](https://dwm.suckless.org/patches/switchtotag/)
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
 - [notitle](https://dwm.suckless.org/patches/notitle/)
+- [moveresize](https://dwm.suckless.org/patches/moveresize/)
 
 ### Install
 ```bash
