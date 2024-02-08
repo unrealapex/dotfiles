@@ -53,6 +53,9 @@ static const Rule rules[] = {
 	{ "KeePassXC",NULL,       NULL,       0,            0,              1,             0,          0,         -1 },
 	{ "zoom",     NULL,       NULL,       0,            0,              1,             0,         -1,         -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       1,              0,             0,         -1,         -1 },
+	// NOTE: picture in picture is added to all tags
+	// TODO: set the window position to bottom right
+	{ "firefox",  "Toolkit",  "Picture-in-Picture", ~0,  0,              1,             0,         -1,         -1 },
 	{ "Google-chrome",  NULL, NULL,       1 << 1,       1,              0,             0,         -1,         -1 },
 	{ "Element",  NULL,       NULL,       1 << 2,       1,              1,             0,          0,         -1 },
 	{ "obsidian",  NULL,      NULL,       1 << 3,       1,              1,             0,          0,         -1 },
