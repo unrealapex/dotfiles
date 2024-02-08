@@ -8,6 +8,7 @@
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 // TODO: use lemonbar instead of dwmblocks(anybar patch)
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -42,19 +43,23 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     switchtotag    isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
-	{ "discord",  NULL,       NULL,       0,            0,             1,           -1 },
-	{ "KeePassXC",NULL,       NULL,       0,            0,             1,           -1 },
-	{ "zoom",     NULL,       NULL,       0,            0,             1,           -1 },
-	{ "firefox",  NULL,       NULL,       1 << 1,       1,             0,           -1 },
-	{ "Google-chrome",  NULL, NULL,       1 << 1,       1,             0,           -1 },
-	{ "Element",  NULL,       NULL,       1 << 2,       1,             1,           -1 },
-	{ "obsidian",  NULL,      NULL,       1 << 3,       1,             1,           -1 },
-	{ "steam",    NULL,       NULL,       1 << 4,       1,             1,           -1 },
-	{ "Lutris",    NULL,       NULL,      1 << 4,       1,             1,           -1 },
-	{ "Spotify",  NULL,       NULL,       1 << 8,       1,             0,           -1 },
-	{ "nuclear",  NULL,       NULL,       1 << 8,       1,             0,           -1 },
+	/* class      instance    title       tags mask     switchtotag     isfloating     isterminal  noswallow  monitor */
+	{ "Gimp",     NULL,       NULL,       0,            0,              1,             0,          0          -1 },
+	{ "st",       NULL,       NULL,       0,            0,              0,             1,          0,         -1 },
+	{ "wezterm",  NULL,       NULL,       0,            0,              0,             1,          0,         -1 },
+/* xev */
+	{ NULL,       NULL,       "Event Tester", 0,        0,              0,             0,          1,         -1 }, 
+	{ "discord",  NULL,       NULL,       0,            0,              1,             0,          0,         -1 },
+	{ "KeePassXC",NULL,       NULL,       0,            0,              1,             0,          0,         -1 },
+	{ "zoom",     NULL,       NULL,       0,            0,              1,             0,         -1,         -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       1,              0,             0,         -1,         -1 },
+	{ "Google-chrome",  NULL, NULL,       1 << 1,       1,              0,             0,         -1,         -1 },
+	{ "Element",  NULL,       NULL,       1 << 2,       1,              1,             0,          0,         -1 },
+	{ "obsidian",  NULL,      NULL,       1 << 3,       1,              1,             0,          0,         -1 },
+	{ "steam",    NULL,       NULL,       1 << 4,       1,              1,             0,          0,         -1 },
+	{ "Lutris",    NULL,       NULL,      1 << 4,       1,              1,             0,          0,         -1 },
+	{ "Spotify",  NULL,       NULL,       1 << 8,       1,              0,             0,          0,         -1 },
+	{ "nuclear",  NULL,       NULL,       1 << 8,       1,              0,             0,          0,         -1 },
 };
 
 /* layout(s) */
