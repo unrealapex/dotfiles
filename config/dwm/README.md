@@ -2,6 +2,7 @@
 
 ### Patches
 - [gaps](https://dwm.suckless.org/patches/gaps/)
+- [swallow](https://dwm.suckless.org/patches/swallow/)
 - [switchtotag](https://dwm.suckless.org/patches/switchtotag/)
 
 ### Install
