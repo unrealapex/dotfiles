@@ -206,12 +206,8 @@ function d () {
 compdef _dirs d
 
 function clear-screen-and-scrollback() {
-    echoti civis >"$TTY"
-    printf '%b' '\e[H\e[2J' >"$TTY"
-    zle .reset-prompt
-    zle -R
-    printf '%b' '\e[3J' >"$TTY"
-    echoti cnorm >"$TTY"
+  clear && printf '\e[3J'
+  zle && zle .reset-prompt && zle -R
 }
 
 zle -N clear-screen-and-scrollback
