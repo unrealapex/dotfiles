@@ -218,6 +218,23 @@ return {
       vim.cmd([[RainbowParentheses]])
     end,
   },
+  -- turn off search highlighting automatically
+  {
+    "romainl/vim-cool",
+    -- load vim-cool when doing a search
+    keys = {
+      "/",
+      "?",
+      "n",
+      "N",
+      "*",
+      "#",
+      { "*", mode = "v" },
+      { "#", mode = "v" },
+      "g*",
+      "g#",
+    },
+  },
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
