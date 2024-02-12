@@ -15,6 +15,7 @@ config.font = wezterm.font_with_fallback({
   "Segoe UI Emoji",
 })
 
+-- FIXME: fix ctrl + backspace
 config.window_background_opacity = 0.65
 config.enable_tab_bar = false
 -- and finally, return the configuration to wezterm
