@@ -19,7 +19,7 @@ config.keys = {
   {
     key = "Backspace",
     mods = "CTRL",
-    action = wezterm.action.SendKey { key = "Backspace", mods = "ALT",},
+    action = wezterm.action.SendKey({ key = "Backspace", mods = "ALT" }),
   },
 }
 config.window_background_opacity = 0.65
