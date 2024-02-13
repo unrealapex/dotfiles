@@ -7,6 +7,8 @@
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
 - [notitle](https://dwm.suckless.org/patches/notitle/)
 - [moveresize](https://dwm.suckless.org/patches/moveresize/)
+- [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/)
+
 
 ### Install
 ```bash
