@@ -8,6 +8,7 @@
 - [notitle](https://dwm.suckless.org/patches/notitle/)
 - [moveresize](https://dwm.suckless.org/patches/moveresize/)
 - [alwayscenter](https://dwm.suckless.org/patches/alwayscenter/)
+- [pertag](https://dwm.suckless.org/patches/pertag/)
 
 
 ### Install
