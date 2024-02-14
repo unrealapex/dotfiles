@@ -48,15 +48,13 @@
       description: Installing packages
       stdout: true
       stderr: true
-    # TODO: test if this builds correctly
     - 
-      command: cd config/herbe; sudo make clean install; cd -
+      command: git clone https://github.com/unrealapex/herbe ~/.config/herbe; cd ~/.config/herbe; sudo make clean install; cd -
       description: Building herbe  
       stdout: true
       stderr: true
-    # TODO: check if this builds correctly
     - 
-      command: cd config/dwm; sudo make clean install; cd -
+      command: git clone https://github.com/unrealapex/dwm ~/.config/dwm; cd ~/.config/dwm; sudo make clean install; cd -
       description: Building dwm
       stdout: true
       stderr: true
