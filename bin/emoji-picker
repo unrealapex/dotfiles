@@ -3,6 +3,6 @@
 # Give dmenu list of all unicode characters to copy.
 # Shows the selected character in dunst if running.
 
-grep -v "#" ~/.dotfiles/emojis | tr '[:upper:]' '[:lower:]' | dmenu -i -fn monospace-10 -fn Segoe\ UI\ Emoji-10 -nb '#0d0d0d' -sf '#d9d0d0' -sb '#bf2a45' -nf '#d9d0d0' | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
+grep -v "#" ~/.dotfiles/emojis | tr '[:upper:]' '[:lower:]' | dmenu -i -fn monospace-10 -fn Segoe\ UI\ Emoji-10 | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
 
 pgrep -x dunst >/dev/null && notify-send "$(xclip -o -selection clipboard) copied to clipboard."

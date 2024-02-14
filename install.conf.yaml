@@ -58,6 +58,11 @@
       description: Building dwm
       stdout: true
       stderr: true
+    - 
+      command: git clone https://github.com/unrealapex/dmenu ~/.config/dmenu; cd ~/.config/dmenu; sudo make clean install; cd -
+      description: Building dmenu
+      stdout: true
+      stderr: true
     - [bash scripts/microcode, Installing appropriate microcode]
     - [bash scripts/zsh-rehash, Setting up Z Shell command rehashing]
     - [bash scripts/no-mouse-accel, Disabling mouse acceleration]
