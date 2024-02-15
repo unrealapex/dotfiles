@@ -48,11 +48,6 @@
       stdout: true
       stderr: true
     - 
-      command: git clone https://github.com/unrealapex/herbe ~/.config/herbe; cd ~/.config/herbe; sudo make clean install; cd -
-      description: Building herbe  
-      stdout: true
-      stderr: true
-    - 
       command: git clone https://github.com/unrealapex/dwm ~/.config/dwm; cd ~/.config/dwm; sudo make clean install; cd -
       description: Building dwm
       stdout: true
@@ -60,6 +55,11 @@
     - 
       command: git clone https://github.com/unrealapex/dmenu ~/.config/dmenu; cd ~/.config/dmenu; sudo make clean install; cd -
       description: Building dmenu
+      stdout: true
+      stderr: true
+    - 
+      command: git clone https://github.com/unrealapex/herbe ~/.config/herbe; cd ~/.config/herbe; sudo make clean install; cd -
+      description: Building herbe  
       stdout: true
       stderr: true
     - [bash scripts/microcode, Installing appropriate microcode]
