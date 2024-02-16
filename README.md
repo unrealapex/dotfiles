@@ -4,7 +4,7 @@
 ```
 wm: dwm
 launcher: dmenu
-terminal: st
+terminal: wezterm
 shell: zsh
 editor: neovim
 font: jetbrains mono
