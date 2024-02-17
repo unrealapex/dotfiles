@@ -354,22 +354,6 @@ return {
     dependencies = "hrsh7th/nvim-cmp",
   },
   {
-    "zbirenbaum/copilot-cmp",
-    event = { "InsertEnter" },
-    config = true,
-    dependencies = {
-      "zbirenbaum/copilot.lua",
-      cmd = "Copilot",
-      cond = vim.fn.executable("node") == 1,
-      config = function()
-        require("copilot").setup({
-          suggestion = { enabled = false },
-          panel = { enabled = false },
-        })
-      end,
-    },
-  },
-  {
     "L3MON4D3/LuaSnip",
     event = "InsertEnter",
     config = function()
