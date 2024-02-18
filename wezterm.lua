@@ -21,6 +21,16 @@ config.keys = {
     mods = "CTRL",
     action = wezterm.action.SendKey({ key = "Backspace", mods = "ALT" }),
   },
+  {
+    key = "UpArrow",
+    mods = "SHIFT",
+    action = wezterm.action.ScrollByPage(-1),
+  },
+  {
+    key = "DownArrow",
+    mods = "SHIFT",
+    action = wezterm.action.ScrollByPage(1),
+  },
 }
 config.window_background_opacity = 0.65
 config.enable_tab_bar = false
