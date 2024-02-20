@@ -15,6 +15,7 @@ elif ! [[ $KITTY_WINDOW_ID ]] && ((FZF_PREVIEW_TOP + FZF_PREVIEW_LINES == $(stty
 fi
 
 # TODO: get wezterm imgcat working
+# TODO: show thumbnail for video files
 if file --mime-type "$1" | grep -qF 'image/'; then
   imgcat -W "${dim%%x*}" -H "${dim##*x}" "$1"
   echo
