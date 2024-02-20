@@ -16,6 +16,7 @@ fi
 
 # TODO: get wezterm imgcat working
 # TODO: show thumbnail for video files
+# https://github.com/LukeSmithxyz/voidrice/blob/master/.config/lf/scope
 if file --mime-type "$1" | grep -qF 'image/'; then
   imgcat -W "${dim%%x*}" -H "${dim##*x}" "$1"
   echo
