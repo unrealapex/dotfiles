@@ -15,13 +15,7 @@ export MANROFFOPT="-c"
 export LESS="-i"
 # NOTE: some quotation issue with --place is causing image preview to fail :/
 export FZF_CTRL_T_OPTS="
-  --preview 'if file --mime-type {} | grep -qF 'image/'; then
-      kitty icat --clear --transfer-mode=memory --stdin=no --place=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}@0x0 {}
-    elif file --mime-type {} | grep -qF 'inode/'; then
-      tree -C {}
-    else
-      bat --color=always {}
-    fi'
+  --preview 'fzf-preview {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 export FFF_FAV1=~/Downloads

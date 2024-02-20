@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]; then
+  >&2 echo "usage: fzf-preview FILENAME"
+  exit 1
+fi
+
+dim=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}
+if [[ $dim = x ]]; then
+  dim=$(stty size </dev/tty | awk '{print $2 "x" $1}')
+elif ! [[ $KITTY_WINDOW_ID ]] && ((FZF_PREVIEW_TOP + FZF_PREVIEW_LINES == $(stty size </dev/tty | awk '{print $1}'))); then
+  # Avoid scrolling issue when the Sixel image touches the bottom of the screen
+  # * https://github.com/junegunn/fzf/issues/2544
+  dim=${FZF_PREVIEW_COLUMNS}x$((FZF_PREVIEW_LINES - 1))
+fi
+
+# TODO: get wezterm imgcat working
+if file --mime-type "$1" | grep -qF 'image/'; then
+  imgcat -W "${dim%%x*}" -H "${dim##*x}" "$1"
+  echo
+elif file --mime-type "$1" | grep -qF 'inode/'; then
+  tree -C "$1"
+elif file --mime-type "$1" | grep -qF 'application/pdf'; then
+  # see if using a file is a better implementation than using a pipe
+  pdftoppm -png -singlefile "$1" | imgcat
+else
+  bat --color=always "$1"
+fi
