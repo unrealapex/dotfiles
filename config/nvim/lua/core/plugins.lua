@@ -252,6 +252,9 @@ return {
       "MasonUninstallAll",
       "MasonLog",
     },
+    keys = {
+      {"<leader>m", "<cmd>Mason<CR>"}
+    },
     config = true,
     dependencies = {
       {
