@@ -20,6 +20,7 @@ configs.setup({
     "jsdoc",
     "json",
     "jsonc",
+    "latex",
     "lua",
     "luadoc",
     "luap",
