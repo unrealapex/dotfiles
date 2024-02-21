@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd(
     group = vim.api.nvim_create_augroup("auto_read", { clear = true }),
     callback = function()
       if vim.fn.getcmdwintype() == "" then
-        vim.cmd("checktime")
+        vim.cmd.checktime()
       end
     end,
   }
