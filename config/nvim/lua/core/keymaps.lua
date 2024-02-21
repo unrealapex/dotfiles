@@ -12,6 +12,14 @@ vim.keymap.set("n", "<leader>cd", function()
   print(vim.fn.getcwd())
 end)
 
+-- lua implementation of neovim's <C-L> bind that also clears vim-notify notifications
+vim.keymap.set("n", "<C-l>", function()
+  vim.cmd.nohlsearch()
+  vim.cmd.diffupdate()
+  vim.cmd.mode()
+  vim.cmd.redraw()
+  require("notify").dismiss({ silent = true, pending = true })
+end)
 -- vanilla buffer switcher
 -- vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
 
