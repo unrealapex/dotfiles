@@ -8,7 +8,7 @@ vim.keymap.set("i", "<S-Tab>", "<C-d>")
 
 -- change directory
 vim.keymap.set("n", "<leader>cd", function()
-  vim.cmd(":cd " .. vim.fn.expand("%:p:h"))
+  vim.cmd.cd(vim.fn.expand("%:p:h"))
   print(vim.fn.getcwd())
 end)
 

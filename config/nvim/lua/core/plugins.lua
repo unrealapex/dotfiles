@@ -206,7 +206,7 @@ return {
     "junegunn/rainbow_parentheses.vim",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      vim.cmd([[RainbowParentheses]])
+      vim.cmd.RainbowParentheses()
     end,
   },
   -- turn off search highlighting automatically
@@ -486,9 +486,9 @@ return {
     cmd = "Alpha",
     init = function()
       if vim.fn.argc() == 0 then
-        vim.cmd([[
-        autocmd UIEnter * :Alpha
-        ]])
+        vim.api.nvim_create_autocmd("UIEnter", {
+          command = vim.cmd.Alpha(),
+        })
       end
     end,
     config = function()

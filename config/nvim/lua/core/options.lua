@@ -79,10 +79,10 @@ vim.opt.winbar = "%=%m %f"
 vim.opt.wrap = false
 
 -- syntax highlighting
-vim.cmd([[syntax on]])
+vim.cmd.syntax("on")
 
 -- make gutter match background color
-vim.cmd([[highlight clear SignColumn]])
+vim.cmd.highlight("clear SignColumn")
 
 --globals
 
@@ -115,8 +115,8 @@ function prose()
     vim.keymap.set({ "n", "v" }, "^", "g^")
 
     prosed = true
-    if vim.fn.exists(":ZenMode") == 2 then
-      vim.cmd([[ZenMode]])
+    if vim.fn.exists.ZenMode() == 2 then
+      vim.cmd.ZenMode()
     end
     vim.notify("Prose Mode Enabled")
   else
@@ -132,8 +132,8 @@ function prose()
     vim.keymap.del({ "n", "v" }, "$")
     vim.keymap.del({ "n", "v" }, "^")
     prosed = false
-    if vim.fn.exists(":ZenMode") == 2 then
-      vim.cmd([[ZenMode]])
+    if vim.fn.exists.ZenMode() == 2 then
+      vim.cmd.ZenMode()
     end
     vim.notify("Prose Mode Disabled")
   end
