@@ -71,7 +71,6 @@ cmp.setup({
     { name = "nvim_lua" },
     { name = "buffer" },
     { name = "path" },
-    { name = "cmdline" },
     { name = "calc" },
     { name = "emoji" },
     { name = "luasnip" }, -- For luasnip users.
