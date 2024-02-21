@@ -164,7 +164,7 @@ if vim.fn.has("unix") == 1 then
   vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/core/autocmds.lua"
 
   -- $LSP
-  vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
+  vim.env.LSP = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
 elseif vim.fn.has("win32") == 1 then
   -- $OPTIONS
   vim.env.OPTIONS = vim.fn.stdpath("config") .. "\\lua\\core\\options.lua"
@@ -182,6 +182,6 @@ elseif vim.fn.has("win32") == 1 then
   vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "\\lua\\core\\autocmds.lua"
 
   -- $LSP
-  vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "\\lua\\plugins\\lsp.lua"
+  vim.env.LSP = vim.fn.stdpath("config") .. "\\lua\\plugins\\lsp.lua"
 else
 end
