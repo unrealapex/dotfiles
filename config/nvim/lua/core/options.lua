@@ -42,7 +42,7 @@ vim.opt.number = true
 -- basic completion
 vim.opt.omnifunc = "syntaxcomplete#Complete"
 vim.opt.path:append(".,**")
-vim.opt.pumheight = 15
+vim.opt.pumheight = 12
 -- show relative line numbers
 vim.opt.relativenumber = true
 -- show cursor position in status bar
