@@ -64,17 +64,35 @@ require("gitsigns").setup({
     end, { expr = true })
 
     -- stage hunk
-    vim.keymap.set({ "n", "v" }, "<leader>hs", package.loaded.gitsigns.stage_buffer)
+    vim.keymap.set({ "n", "v" }, "<leader>hs", function()
+      package.loaded.gitsigns.stage_buffer()
+      vim.notify("staged hunk")
+    end)
     -- reset hunk
-    vim.keymap.set({ "n", "v" }, "<leader>hr", package.loaded.gitsigns.reset_hunk)
+    vim.keymap.set({ "n", "v" }, "<leader>hr", function()
+      package.loaded.gitsigns.reset_hunk()
+      vim.notify("reset hunk")
+    end)
     -- stage buffer
-    vim.keymap.set("n", "<leader>hS", package.loaded.gitsigns.stage_buffer)
+    vim.keymap.set("n", "<leader>hS", function()
+      package.loaded.gitsigns.stage_buffer()
+      vim.notify("staged buffer")
+    end)
     -- undo stage hunk
-    vim.keymap.set("n", "<leader>hu", package.loaded.gitsigns.undo_stage_hunk)
+    vim.keymap.set("n", "<leader>hu", function()
+      package.loaded.gitsigns.undo_stage_hunk()
+      vim.notify("undid stage hunk")
+    end)
     -- reset buffer
-    vim.keymap.set("n", "<leader>hR", package.loaded.gitsigns.reset_buffer)
+    vim.keymap.set("n", "<leader>hR", function()
+      package.loaded.gitsigns.reset_buffer()
+      vim.notify("reset buffer")
+    end)
     -- preview
-    vim.keymap.set("n", "<leader>hp", package.loaded.gitsigns.preview_hunk)
+    vim.keymap.set("n", "<leader>hp", function()
+      package.loaded.gitsigns.preview_hunk()
+      vim.notify("preview hunk")
+    end)
     -- line blame
     vim.keymap.set("n", "<leader>hb", function()
       package.loaded.gitsigns.blame_line({ full = true })
