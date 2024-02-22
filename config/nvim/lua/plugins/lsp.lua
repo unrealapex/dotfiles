@@ -109,6 +109,44 @@ require("mason-lspconfig").setup_handlers({
   }),
 })
 
+lspconfig.setup({
+  diagnostics = {
+    underline = true,
+    update_in_insert = false,
+    virtual_text = {
+      spacing = 4,
+      source = "if_many",
+      prefix = "●",
+    },
+  },
+  severity_sort = true,
+  inlay_hints = {
+    enabled = false,
+  },
+  servers = {
+    lua_ls = {
+      settings = {
+        Lua = {
+          workspace = {
+            checkThirdParty = false,
+          },
+          completion = {
+            callSnippet = "Replace",
+          },
+        },
+      },
+    },
+    clangd = {
+      settings = {
+        cmd = {
+          "clangd",
+          "--offset-encoding=utf-16",
+        },
+      },
+    },
+  },
+})
+
 -- diagnostic text highlight is given to the line number
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
