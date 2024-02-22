@@ -64,9 +64,9 @@ require("gitsigns").setup({
     end, { expr = true })
 
     -- stage hunk
-    vim.keymap.set({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>")
+    vim.keymap.set({ "n", "v" }, "<leader>hs", package.loaded.gitsigns.stage_buffer)
     -- reset hunk
-    vim.keymap.set({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<CR>")
+    vim.keymap.set({ "n", "v" }, "<leader>hr", package.loaded.gitsigns.reset_hunk)
     -- stage buffer
     vim.keymap.set("n", "<leader>hS", package.loaded.gitsigns.stage_buffer)
     -- undo stage hunk
