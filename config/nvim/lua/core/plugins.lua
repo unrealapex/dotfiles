@@ -24,6 +24,10 @@ return {
       require("plugins.noice")
     end,
   },
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
+  },
   -- better file explorer
   {
     "justinmk/vim-dirvish",
@@ -258,64 +262,6 @@ return {
     },
   },
   {
-    "glepnir/lspsaga.nvim",
-    event = "LspAttach",
-    cmd = "Lspsaga",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    opts = {
-      diagnostic = {
-        on_insert = false,
-      },
-      lightbulb = {
-        sign = false,
-      },
-      rename = {
-        keys = {
-          quit = { "q", "<ESC>" },
-        },
-      },
-    },
-    keys = {
-      { "gh", "<cmd>Lspsaga lsp_finder<CR>" },
-      { "<leader>ca", mode = { "n", "v" }, "<cmd>Lspsaga code_action<CR>" },
-      { "<leader>rn", "<cmd>Lspsaga rename<CR>" },
-      { "<leader>Rn", "<cmd>Lspsaga rename ++project<CR>" },
-      { "gd", "<cmd>Lspsaga goto_definition<CR>" },
-      { "gD", "<cmd>Lspsaga peek_definition<CR>" },
-      { "gt", "<cmd>Lspsaga goto_type_definition<CR>" },
-      { "gT", "<cmd>Lspsaga peek_type_definition<CR>" },
-      { "gl", "<cmd>Lspsaga show_line_diagnostics<CR>" },
-      { "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>" },
-      { "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>" },
-      {
-        "[E",
-        function()
-          require("lspsaga.diagnostic").goto_prev({
-            severity = vim.diagnostic.severity.ERROR,
-          })
-        end,
-      },
-      {
-        "]E",
-        function()
-          require("lspsaga.diagnostic").goto_next({
-            severity = vim.diagnostic.severity.ERROR,
-          })
-        end,
-      },
-      { "<leader>o", "<cmd>Lspsaga outline<CR>" },
-      { "K", "<cmd>Lspsaga hover_doc<CR>" },
-      {
-        "<A-d>",
-        mode = { "n", "v" },
-        "<cmd>Lspsaga term_toggle<CR>",
-      },
-    },
-  },
-  {
     "hrsh7th/nvim-cmp",
     config = function()
       require("plugins.cmp")
@@ -417,6 +363,12 @@ return {
   },
   -- java lsp stuff
   { "mfussenegger/nvim-jdtls", ft = "java" },
+
+  -- code action lightbulbs
+  {
+    "kosayoda/nvim-lightbulb",
+    config = true,
+  },
   -- lsp window
   {
     "folke/trouble.nvim",
