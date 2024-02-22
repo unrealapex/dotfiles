@@ -6,7 +6,7 @@ require("mason").setup({
       package_pending = "○",
       package_uninstalled = "○",
     },
-    border = "rounded"
+    border = "rounded",
   },
 })
 
@@ -89,15 +89,15 @@ require("mason-lspconfig").setup_handlers({
 })
 
 require("mason-lspconfig").setup_handlers({
-    lspconfig["clangd"].setup({
-      on_attach = lsp_attach,
-      capabilities = lsp_capabilities,
+  lspconfig["clangd"].setup({
+    on_attach = lsp_attach,
+    capabilities = lsp_capabilities,
 
-      cmd = {
-        "clangd",
-        "--offset-encoding=utf-16",
-      },
-    })
+    cmd = {
+      "clangd",
+      "--offset-encoding=utf-16",
+    },
+  }),
 })
 
 -- disable neovim lsp"s inline diagnostics and use lspsaga"s diagnostics ui instead

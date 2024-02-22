@@ -22,7 +22,7 @@ require("lazy").setup("core.plugins", {
     icons = {
       loaded = "",
     },
-    border = "rounded"
+    border = "rounded",
   },
   performance = {
     rtp = {
