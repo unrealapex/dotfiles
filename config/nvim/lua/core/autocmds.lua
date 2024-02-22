@@ -88,8 +88,7 @@ vim.api.nvim_create_autocmd("OptionSet", {
   end,
 })
 
--- show whitespaces as characters in visual mode
-
+-- render whitespace in visual mode
 local show_whitespace_group =
   vim.api.nvim_create_augroup("show_whitespace", { clear = true })
 
