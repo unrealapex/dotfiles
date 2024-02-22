@@ -244,7 +244,7 @@ return {
       "MasonLog",
     },
     keys = {
-      {"<leader>m", "<cmd>Mason<CR>"}
+      { "<leader>m", "<cmd>Mason<CR>" },
     },
     config = true,
     dependencies = {
