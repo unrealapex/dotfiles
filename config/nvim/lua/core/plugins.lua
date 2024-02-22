@@ -379,6 +379,7 @@ return {
   -- formatter
   {
     "stevearc/conform.nvim",
+    cmd = "ConformInfo",
     keys = {
       {
         "<leader>cf",
@@ -386,6 +387,7 @@ return {
           require("conform").format()
         end,
       },
+      mode = { "n", "v" },
     },
     opts = {
       formatters_by_ft = {
