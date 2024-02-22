@@ -89,10 +89,22 @@ vim.api.nvim_create_autocmd("OptionSet", {
 })
 
 -- show whitespaces as characters in visual mode
-vim.cmd([[
-augroup show_whitespace
-  autocmd!
-  autocmd ModeChanged *:[vV\x16]* :set listchars+=space:·
-  autocmd Modechanged [vV\x16]*:* :set listchars-=space:·
-augroup END
-]])
+
+local show_whitespace_group =
+  vim.api.nvim_create_augroup("show_whitespace", { clear = true })
+
+vim.api.nvim_create_autocmd("ModeChanged", {
+  group = show_whitespace_group,
+  pattern = { "*:[vV\x16]*" },
+  callback = function()
+    vim.opt.listchars:append({ space = "·" })
+  end,
+})
+
+vim.api.nvim_create_autocmd("ModeChanged", {
+  group = show_whitespace_group,
+  pattern = { "[vV\x16]*:*" },
+  callback = function()
+    vim.opt.listchars:remove({ "space" })
+  end,
+})
