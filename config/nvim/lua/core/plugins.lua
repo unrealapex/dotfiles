@@ -295,6 +295,12 @@ return {
     dependencies = "hrsh7th/nvim-cmp",
   },
   {
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+    -- TODO: change this to a better event
+    event = "InsertEnter",
+    dependencies = "hrsh7th/nvim-cmp",
+  },
+  {
     "hrsh7th/cmp-calc",
     event = { "InsertEnter" },
     dependencies = "hrsh7th/nvim-cmp",
