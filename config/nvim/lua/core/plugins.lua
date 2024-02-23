@@ -24,6 +24,8 @@ return {
       require("plugins.noice")
     end,
   },
+
+  -- FIXME: implement remote file editing with scp
   -- better file explorer
   {
     "justinmk/vim-dirvish",
@@ -568,7 +570,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
----@diagnostic disable-next-line: missing-fields
+      ---@diagnostic disable-next-line: missing-fields
       require("tokyonight").setup({
         transparent = true,
       })
