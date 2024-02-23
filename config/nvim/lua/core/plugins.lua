@@ -415,6 +415,7 @@ return {
     event = "LspAttach",
     config = function()
       require("nvim-lightbulb").setup({
+        -- TODO: maybe use your own autocmd
         autocmd = {
           enabled = true,
         },
