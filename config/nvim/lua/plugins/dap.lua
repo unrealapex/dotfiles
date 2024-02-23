@@ -134,10 +134,49 @@ end
 -- Install golang specific config
 -- require('dap-go').setup()
 
+dap.adapters.nlua = function(callback, conf)
+  local adapter = {
+    type = "server",
+    host = conf.host or "127.0.0.1",
+    port = conf.port or 8086,
+  }
+  if conf.start_neovim then
+    local dap_run = dap.run
+    dap.run = function(c)
+      adapter.port = c.port
+      adapter.host = c.host
+    end
+    require("osv").run_this()
+    dap.run = dap_run
+  end
+  callback(adapter)
+end
+dap.configurations.lua = {
+  {
+    type = "nlua",
+    request = "attach",
+    name = "Run this file",
+    start_neovim = {},
+  },
+  {
+    -- TODO: this doesn't work for some reason
+    type = "nlua",
+    request = "attach",
+    name = "Attach to running Neovim instance (port = 8086)",
+    port = 8086,
+  },
+}
+
 dap.adapters.bashdb = {
-  type = 'executable';
-  command = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/bash-debug-adapter';
-  name = 'bashdb';
+  type = "executable",
+  command = vim.fn.stdpath("data")
+    .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
+  name = "bashdb",
+}
+dap.adapters.python = {
+  type = "executable",
+  command = vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python",
+  args = { "-m", "debugpy.adapter" },
 }
 
 dap.adapters.java = function(callback)
@@ -145,8 +184,8 @@ dap.adapters.java = function(callback)
   -- Here a function needs to trigger the `vscode.java.startDebugSession` LSP command
   -- The response to the command must be the `port` used below
   callback({
-    type = 'server';
-    host = '127.0.0.1';
-    port = port;
+    type = "server",
+    host = "127.0.0.1",
+    port = port,
   })
 end
