@@ -1,6 +1,7 @@
 local dap = require("dap")
 local dapui = require("dapui")
 
+---@diagnostic disable-next-line: missing-fields
 require("mason-nvim-dap").setup({
   automatic_setup = true,
   handlers = {},
@@ -15,6 +16,7 @@ require("mason-nvim-dap").setup({
 -- Dap UI setup
 -- For more information, see |:help nvim-dap-ui|
 -- TODO: test this setup/possibly modify
+---@diagnostic disable-next-line: missing-fields
 dapui.setup({
   active = true,
   on_config_done = nil,
@@ -132,18 +134,3 @@ end
 -- Install golang specific config
 -- require('dap-go').setup()
 
-dap.configurations.lua = {
-  {
-    type = "nlua",
-    request = "attach",
-    name = "Attach to running Neovim instance",
-  },
-}
-
-dap.adapters.nlua = function(callback, config)
-  callback({
-    type = "server",
-    host = config.host or "127.0.0.1",
-    port = config.port or 8086,
-  })
-end
