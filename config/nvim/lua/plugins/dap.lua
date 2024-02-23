@@ -134,3 +134,9 @@ end
 -- Install golang specific config
 -- require('dap-go').setup()
 
+dap.adapters.bashdb = {
+  type = 'executable';
+  command = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/bash-debug-adapter';
+  name = 'bashdb';
+}
+
