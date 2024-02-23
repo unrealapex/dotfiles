@@ -1,30 +1,6 @@
 return {
   -- nicer ui
   {
-    "folke/noice.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-      {
-        "rcarriga/nvim-notify",
-        opts = {
-          timeout = 5000,
-          max_height = function()
-            return math.floor(vim.o.lines * 0.75)
-          end,
-          max_width = function()
-            return math.floor(vim.o.columns * 0.75)
-          end,
-        },
-      },
-    },
-    event = "VeryLazy",
-    config = function()
-      require("plugins.noice")
-    end,
-  },
-  {
     "stevearc/dressing.nvim",
     init = function()
       ---@diagnostic disable-next-line: duplicate-set-field
