@@ -596,6 +596,7 @@ return {
       "sh",
       "zsh",
     },
+    -- REFACTOR: get filetypes from ft
     config = function()
       require("colorizer").setup({
         filetypes = {
