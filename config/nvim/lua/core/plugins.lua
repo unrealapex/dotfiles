@@ -397,6 +397,7 @@ return {
         javascript = { "eslint_d" },
         lua = { "selene" },
         luau = { "selene" },
+        markdown = { "vale" },
         python = { "flake" },
         sh = { "shellcheck" },
         typescript = { "eslint_d" },
