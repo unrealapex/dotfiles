@@ -10,7 +10,7 @@ require("mason-nvim-dap").setup({
     "java-debug-adapter",
     "firefox-debug-adapter",
     "debugpy",
-    "codelldb",
+    "cpptools",
   },
 })
 
@@ -178,6 +178,12 @@ dap.adapters.python = {
   type = "executable",
   command = vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python",
   args = { "-m", "debugpy.adapter" },
+}
+
+dap.adapters.cppdbg = {
+  id = "cppdbg",
+  type = "executable",
+  command = vim.fn.stdpath("data") .. "/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7",
 }
 
 dap.adapters.java = function(callback)
