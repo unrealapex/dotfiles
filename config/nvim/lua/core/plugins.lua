@@ -70,7 +70,7 @@ return {
         end,
       })
     end,
-    dependencies = "bounceme/remote-viewer"
+    dependencies = "bounceme/remote-viewer",
   },
   -- unix helpers
   {
@@ -267,6 +267,12 @@ return {
       {
         "williamboman/mason-lspconfig.nvim",
         dependencies = "neovim/nvim-lspconfig",
+        opts = {
+          automatic_installation = true,
+        },
+      },
+      {
+        "jay-babu/mason-nvim-dap.nvim",
         opts = {
           automatic_installation = true,
         },
@@ -558,6 +564,166 @@ return {
       require("fzf-lua").setup({
         "telescope",
       })
+    end,
+  },
+  -- debugging
+  {
+    "mfussenegger/nvim-dap",
+    keys = {
+      {
+        "<F5>",
+        function()
+          require("dap").continue()
+        end,
+      },
+      {
+        "<leader>dc",
+        function()
+          require("dap").continue()
+        end,
+      },
+      {
+        "<F1>",
+        function()
+          require("dap").step_into()
+        end,
+      },
+      {
+        "<leader>di",
+        function()
+          require("dap").step_into()
+        end,
+      },
+      {
+        "<F2>",
+        function()
+          require("dap").step_over()
+        end,
+      },
+      {
+        "<leader>do",
+        function()
+          require("dap").step_over()
+        end,
+      },
+      {
+        "<F3>",
+        function()
+          require("dap").step_out()
+        end,
+      },
+      {
+        "<leader>dO",
+        function()
+          require("dap").step_out()
+        end,
+      },
+      {
+        "<leader>b",
+        function()
+          require("dap").toggle_breakpoint()
+        end,
+      },
+      {
+        "<leader>B",
+        function()
+          require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+        end,
+      },
+      {
+        "<leader>dw",
+        function()
+          require("dap.ui.widgets").hover()
+        end,
+      },
+      {
+        "<leader>dr",
+        function()
+          require("dap").repl.open()
+        end,
+      },
+      {
+        "<leader>dh",
+        function()
+          require("dap.ui.widgets").hover()
+        end,
+      },
+      {
+        "<leader>ds",
+        function()
+          require("dap.ui.widgets").scopes()
+        end,
+      },
+      {
+        "<leader>dp",
+        function()
+          require("dap").pause()
+        end,
+      },
+      {
+        "<leader>dr",
+        function()
+          require("dap").repl.toggle()
+        end,
+      },
+      {
+        "<leader>dq",
+        function()
+          require("dap").terminate()
+        end,
+      },
+      -- dap ui keymaps
+      {
+        "<leader>du",
+        function()
+          require("dapui").toggle()
+        end,
+      },
+      {
+        "<leader>de",
+        mode = { "n", "v" },
+        function()
+          require("dapui").eval()
+        end,
+      },
+      {
+        "<leader>dE",
+        function()
+          require("dapui").eval(vim.fn.input("[Expression] > "))
+        end,
+      },
+    },
+    cmd = {
+      "DapInstall",
+      "DapShowLog",
+      "DapStepOut",
+      "DapContinue",
+      "DapStepInto",
+      "DapStepOver",
+      "DapTerminate",
+      "DapUninstall",
+      "DapToggleRepl",
+      "DapSetLogLevel",
+      "DapRestartFrame",
+      "DapLoadLaunchJSON",
+      "DapToggleBreakpoint",
+    },
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      -- TODO: add more debug adapters
+      -- FIXME: make sure that debug adapters only load with their associated filetype
+      "jbyuki/one-small-step-for-vimkind",
+      {
+        "mfussenegger/nvim-dap-python",
+        config = function()
+          require("dap-python").setup(
+            vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python"
+          )
+        end,
+      },
+    },
+    config = function()
+      require("plugins.dap")
     end,
   },
   -- additional text objects
