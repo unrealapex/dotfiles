@@ -75,6 +75,11 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
+-- lua implementation of gx
+-- original gx map does not work without netrw, see :help netrw-gx
+-- i have netrw disabled because i use vim-dirvish as my file explorer instead
+-- unfortunately as a result some functionality that is dependant on it does
+-- not function
 vim.keymap.set("n", "gx", function()
   os.execute("xdg-open " .. vim.fn.expand("<cfile>"))
 end)
