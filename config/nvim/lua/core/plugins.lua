@@ -25,7 +25,6 @@ return {
     end,
   },
 
-  -- FIXME: implement remote file editing with scp
   -- better file explorer
   {
     "justinmk/vim-dirvish",
@@ -57,6 +56,7 @@ return {
         end,
       })
     end,
+    dependencies = "bounceme/remote-viewer"
   },
   -- unix helpers
   {
