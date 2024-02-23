@@ -70,7 +70,7 @@ return {
         end,
       })
     end,
-    dependencies = "bounceme/remote-viewer"
+    dependencies = "bounceme/remote-viewer",
   },
   -- unix helpers
   {
@@ -418,6 +418,7 @@ return {
         -- TODO: maybe use your own autocmd
         autocmd = {
           enabled = true,
+          updatetime = 10,
         },
         sign = {
           enabled = false,
