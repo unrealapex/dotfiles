@@ -75,4 +75,6 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
-vim.keymap.set("n", "gx", ":!xdg-open <c-r><c-a>", { silent = true })
+vim.keymap.set("n", "gx", function()
+  os.execute("xdg-open " .. vim.fn.expand("<cfile>"))
+end)
