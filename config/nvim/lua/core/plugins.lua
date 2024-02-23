@@ -389,28 +389,8 @@ return {
   {
     "mfussenegger/nvim-lint",
     event = { "BufReadPre", "BufNewFile" },
-    opts = {
-      events = { "BufWritePost", "BufReadPost", "InsertLeave" },
-      linters_by_ft = {
-        c = { "cpplint" },
-        cpp = { "cpplint" },
-        javascript = { "eslint_d" },
-        lua = { "selene" },
-        luau = { "selene" },
-        markdown = { "vale" },
-        python = { "flake" },
-        sh = { "shellcheck" },
-        typescript = { "eslint_d" },
-        vimscript = { "vint" },
-        zsh = { "shellcheck" },
-      },
-    },
-    config = function(_, opts)
-      vim.api.nvim_create_autocmd(opts.events, {
-        callback = function()
-          require("lint").try_lint()
-        end,
-      })
+    config = function()
+      require("plugins.lint")
     end,
   },
   -- java lsp stuff
