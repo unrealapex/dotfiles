@@ -21,6 +21,8 @@ require("lazy").setup("core.plugins", {
   ui = {
     icons = {
       loaded = "",
+      not_loaded = "",
+      task = " ",
     },
     border = "rounded",
   },
