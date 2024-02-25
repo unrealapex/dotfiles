@@ -236,7 +236,12 @@ return {
       "MasonLog",
     },
     keys = {
-      { "<leader>m", "<cmd>Mason<CR>" },
+      {
+        "<leader>m",
+        function()
+          vim.cmd.Mason()
+        end,
+      },
     },
     config = true,
     dependencies = {
@@ -399,7 +404,12 @@ return {
     config = true,
     dependencies = "nvim-tree/nvim-web-devicons",
     keys = {
-      { "<leader>q", "<cmd>Trouble<CR>" },
+      {
+        "<leader>q",
+        function()
+          vim.cmd.Trouble()
+        end,
+      },
     },
   },
   -- improved syntax highlighting
