@@ -32,6 +32,7 @@ config.keys = {
     action = wezterm.action.ScrollByPage(1),
   },
 }
+config.window_background_opacity = 0.8
 config.enable_tab_bar = false
 -- and finally, return the configuration to wezterm
 return config
