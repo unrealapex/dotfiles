@@ -1,6 +1,6 @@
 #!/bin/bash
 
-image_path=~/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
+image_path=$HOME/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 case $1 in
 selection)
