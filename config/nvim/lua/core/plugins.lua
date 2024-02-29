@@ -534,6 +534,7 @@ return {
 
     opts = {
       dir = vim.fn.stdpath("state") .. "/sessions/",
+      options = vim.opt.sessionoptions:get(),
     }
   },
   -- debugging
