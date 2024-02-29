@@ -514,6 +514,28 @@ return {
       })
     end,
   },
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    keys = {
+      {
+        "<leader>qs", function()
+          require("persistence").load()
+        end
+      },
+      {"<leader>ql", function()
+        require("persistence").load({ last = true })
+      end
+      },
+      {"<leader>qd", function ()
+        require("persistence").stop()
+      end}
+    },
+
+    opts = {
+      dir = vim.fn.stdpath("state") .. "/sessions/",
+    }
+  },
   -- debugging
   {
     "mfussenegger/nvim-dap",
