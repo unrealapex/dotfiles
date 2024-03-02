@@ -59,7 +59,7 @@ xsetroot -cursor_name left_ptr
 # xrdb "$HOME"/.Xresources
 
 
-xss-lock --transfer-sleep-lock -- "betterlockscreen --lock" --nofork &
+xss-lock --transfer-sleep-lock -- slock --nofork &
 xautolock -time 10 -locker "idle-lock" &
 
 feh --bg-fill "$WALLPAPER"
@@ -78,7 +78,7 @@ keepassxc &
 
 tiramisu-daemon &
 
-unclutter &
+unclutter --fork
 
 while true; do
    xsetroot -name "$( date +"%m/%d %I:%M %P" )"

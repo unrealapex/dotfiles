@@ -3,5 +3,4 @@ notify-send "Autorandr: monitor change detected"
 
 
 feh --bg-fill "$WALLPAPER"
-betterlockscreen --update "$WALLPAPER"
 
