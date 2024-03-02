@@ -78,6 +78,8 @@ keepassxc &
 
 tiramisu-daemon &
 
+unclutter &
+
 while true; do
    xsetroot -name "$( date +"%m/%d %I:%M %P" )"
    sleep 1
