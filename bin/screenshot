@@ -11,6 +11,7 @@ full)
         ;;
 *)
         herbe "screenshot: unknown argument given"
+        herbe "USAGE: screenshot [selection|main]"
         exit
         ;;
 esac
