@@ -30,6 +30,7 @@ devtools
 discord
 dkms
 dnsmasq
+dunst
 element-desktop
 faudio
 fd
@@ -120,6 +121,7 @@ libgcrypt
 libgpg-error
 libjpeg-turbo
 libldap
+libnotify
 libpng
 libpulse
 libreoffice-fresh
@@ -198,7 +200,6 @@ tesseract-data-jpn
 texlive
 themix-full-git
 timer-bin
-tiramisu-git
 tmux
 torbrowser-launcher
 tree

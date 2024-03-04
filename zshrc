@@ -167,7 +167,7 @@ open() {
 
 battery() {
   percent=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}')
-  herbe "battery: $percent"
+  notify-send "battery: $percent"
 }
 
 alias f='fff'

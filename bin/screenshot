@@ -10,12 +10,12 @@ full)
         maim --quality 10 "$image_path" || exit
         ;;
 *)
-        herbe "screenshot: unknown argument given"
-        herbe "USAGE: screenshot [selection|main]"
+        notify-send "screenshot: unknown argument given"
+        notify-send "USAGE: screenshot [selection|main]"
         exit
         ;;
 esac
 
 xclip -selection clipboard -t image/png -i "$image_path"
 
-herbe "screenshot: image saved" && gimp "$image_path"
+notify-send "screenshot: image saved"
