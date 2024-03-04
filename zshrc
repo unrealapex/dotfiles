@@ -118,7 +118,7 @@ if [ x$DISPLAY = x ] ; then
 fi
 
 typeset -U path PATH
-path=(~/.local/bin $path)
+path=(~/.local/bin ~/.local/share/nvim/mason/bin $path)
 export PATH
 
 source /usr/share/fzf/key-bindings.zsh
