@@ -76,8 +76,6 @@ playerctld daemon
 
 keepassxc &
 
-tiramisu-daemon &
-
 unclutter --fork
 
 while true; do

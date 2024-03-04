@@ -8,7 +8,7 @@ terminal: wezterm
 shell: zsh
 editor: neovim
 font: jetbrains mono
-notification daemon: tiramisu
+notifications: dunst
 ```
 
 ### ✨ about ✨
