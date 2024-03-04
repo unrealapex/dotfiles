@@ -1,4 +1,4 @@
----@diagnostic disable: different-requires
+---@diagnostic disable: different-requires, mixed_table
 return {
   -- nicer ui
   {
