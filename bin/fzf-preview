@@ -14,17 +14,18 @@ elif ! [[ $KITTY_WINDOW_ID ]] && ((FZF_PREVIEW_TOP + FZF_PREVIEW_LINES == $(stty
   dim=${FZF_PREVIEW_COLUMNS}x$((FZF_PREVIEW_LINES - 1))
 fi
 
-# TODO: get wezterm imgcat working
 # TODO: show thumbnail for video files
 # https://github.com/LukeSmithxyz/voidrice/blob/master/.config/lf/scope
 if file --mime-type "$1" | grep -qF 'image/'; then
-  imgcat -W "${dim%%x*}" -H "${dim##*x}" "$1"
+  # NOTE: wezterm's implementation of image protocol hangs so use this for now
+  # https://github.com/junegunn/fzf/issues/3646
+  chafa -f iterm -s "$dim" "$1"
   echo
 elif file --mime-type "$1" | grep -qF 'inode/'; then
   tree -C "$1"
 elif file --mime-type "$1" | grep -qF 'application/pdf'; then
-  # see if using a file is a better implementation than using a pipe
-  pdftoppm -png -singlefile "$1" | imgcat
+  pdftoppm -png -singlefile "$1" | chafa -f iterm 
+
 else
   bat --color=always "$1"
 fi
