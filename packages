@@ -15,10 +15,8 @@ bluez
 bluez-utils
 bridge-utils
 brightnessctl
-bspwm
 cava
 cbonsai
-cheese
 cmake
 cmatrix
 cowsay
@@ -81,7 +79,6 @@ irqbalance
 kdenlive
 keepassxc
 krita
-lemonbar-git
 lib32-alsa-lib
 lib32-alsa-plugins
 lib32-faudio
@@ -190,7 +187,6 @@ shellcheck
 spotify
 sqlite
 steam
-sxhkd
 syncthing
 system-config-printer
 tesseract
@@ -220,7 +216,6 @@ vkd3d
 vulkan-icd-loader
 w3m
 webp-pixbuf-loader
-wezterm
 wget
 wine-mono
 wine-staging
