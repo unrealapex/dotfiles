@@ -25,6 +25,19 @@ cd ~/.dotfiles
 this rice is not intended for use by others, however, you're welcome to if
 you wish. the information below might be of use to you.
 
+dotfiles directories
+```
+$ tree -d -L 1
+.
+├── bin          ~/.local/bin/
+├── config       ~/.config/
+├── dotbot       dotbot binary
+├── scripts      scripts for dotbot
+├── secrets      files containing secrets
+├── themes       gtk theme
+└── w3m          w3m config
+```
+
 the install script runs scripts (for arch) listed in [scripts/](/scripts).
 ```
 $ tree scripts
