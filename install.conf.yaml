@@ -18,7 +18,6 @@
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
-    ~/.local/share/icons: icons
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources
     ~/.wezterm.lua: wezterm.lua
