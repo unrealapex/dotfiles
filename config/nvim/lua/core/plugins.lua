@@ -731,7 +731,7 @@ return {
       require("tokyonight").setup({
         transparent = true,
       })
-      vim.cmd([[colorscheme tokyonight-night]])
+      vim.cmd.colorscheme("tokyonight-night")
     end,
   },
   -- markdown preview
