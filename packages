@@ -141,6 +141,7 @@ mesa-utils
 mimi-git
 mpc
 mpd
+mpd-mpris
 mpg123
 mpv
 ncmpcpp
