@@ -502,6 +502,12 @@ return {
           require("fzf-lua").oldfiles()
         end,
       },
+      {
+        "<leader>fs",
+        function ()
+          require("fzf-lua").lsp_document_symbols()
+        end
+      },
     },
     cmd = { "FzfLua" },
     dependencies = {
