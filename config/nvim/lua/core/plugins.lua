@@ -87,9 +87,7 @@ return {
       { "<A-k>", mode = "v" },
       { "<A-l>", mode = "v" },
     },
-    config = function()
-      require("mini.move").setup()
-    end,
+    config = true,
   },
   -- unimpaired mappings
   { "tpope/vim-unimpaired", keys = { "[", "]" } },
@@ -360,21 +358,19 @@ return {
   {
     "kosayoda/nvim-lightbulb",
     event = "LspAttach",
-    config = function()
-      require("nvim-lightbulb").setup({
-        -- TODO: maybe use your own autocmd
-        autocmd = {
-          enabled = true,
-          updatetime = 10,
-        },
-        sign = {
-          enabled = false,
-        },
-        virtual_text = {
-          enabled = true,
-        },
-      })
-    end,
+    opts = {
+      -- TODO: maybe use your own autocmd
+      autocmd = {
+        enabled = true,
+        updatetime = 10,
+      },
+      sign = {
+        enabled = false,
+      },
+      virtual_text = {
+        enabled = true,
+      },
+    }
   },
   -- lsp window
   {
