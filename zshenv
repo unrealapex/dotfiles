@@ -13,6 +13,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export LESS="-i"
+# NOTE: this doesn't work
+export FZF_DEFAULT_OPTS='--no-unicode'
 # NOTE: some quotation issue with --place is causing image preview to fail :/
 export FZF_CTRL_T_OPTS="
   --preview 'fzf-preview {}'
