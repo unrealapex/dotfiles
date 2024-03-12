@@ -80,5 +80,5 @@ vim.keymap.set("x", ">", ">gv")
 -- unfortunately as a result some functionality that is dependant on it does
 -- not function
 vim.keymap.set("n", "gx", function()
-  os.execute("xdg-open " .. vim.fn.expand("<cfile>"))
+  vim.fn.jobstart("xdg-open " .. vim.fn.expand("<cfile>"), { detach = true })
 end)
