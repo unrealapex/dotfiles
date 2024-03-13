@@ -6,6 +6,12 @@ set -o pipefail
 # Give dmenu list of all unicode characters to copy.
 # Shows the selected character in dunst if running.
 
-grep -v "#" ~/.dotfiles/emojis | tr '[:upper:]' '[:lower:]' | dmenu -i -fn monospace-10 -fn Segoe\ UI\ Emoji-10 | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard || exit
+grep -v "#" ~/.dotfiles/emojis \
+  | tr '[:upper:]' '[:lower:]' \
+  | dmenu -i -fn monospace-10 -fn Segoe\ UI\ Emoji-10 \
+  | awk '{print $1}' \
+  | tr -d '\n' \
+  | xclip -selection clipboard \
+  || exit
 
 notify-send "$(xclip -o -selection clipboard) copied to clipboard."
