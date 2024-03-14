@@ -442,22 +442,6 @@ return {
     },
     config = true,
   },
-  -- start screen
-  {
-    "goolord/alpha-nvim",
-    cmd = "Alpha",
-    init = function()
-      if vim.fn.argc() == 0 then
-        vim.api.nvim_create_autocmd("UIEnter", {
-          command = vim.cmd.Alpha(),
-        })
-      end
-    end,
-    config = function()
-      require("plugins.alpha")
-    end,
-    dependencies = "nvim-tree/nvim-web-devicons",
-  },
   -- fuzzy finder
   {
     "ibhagwan/fzf-lua",
