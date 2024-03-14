@@ -147,42 +147,20 @@ vim.api.nvim_create_user_command("Prose", prose, {})
 -- $CONFIG
 vim.env.CONFIG = vim.fn.stdpath("config")
 
--- handle os file path variations
-if vim.fn.has("unix") == 1 then
-  -- $OPTIONS
-  vim.env.OPTIONS = vim.fn.stdpath("config") .. "/lua/core/options.lua"
+-- $OPTIONS
+vim.env.OPTIONS = vim.fn.stdpath("config") .. "/lua/core/options.lua"
 
-  -- $LAZY
-  vim.env.LAZY = vim.fn.stdpath("config") .. "/lua/core/lazy.lua"
+-- $LAZY
+vim.env.LAZY = vim.fn.stdpath("config") .. "/lua/core/lazy.lua"
 
-  -- $PLUGINS
-  vim.env.PLUGINS = vim.fn.stdpath("config") .. "/lua/core/plugins.lua"
+-- $PLUGINS
+vim.env.PLUGINS = vim.fn.stdpath("config") .. "/lua/core/plugins.lua"
 
-  -- $KEYMAPS
-  vim.env.KEYMAPS = vim.fn.stdpath("config") .. "/lua/core/keymaps.lua"
+-- $KEYMAPS
+vim.env.KEYMAPS = vim.fn.stdpath("config") .. "/lua/core/keymaps.lua"
 
-  -- $AUTOCMDS
-  vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/core/autocmds.lua"
+-- $AUTOCMDS
+vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/core/autocmds.lua"
 
-  -- $LSP
-  vim.env.LSP = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
-elseif vim.fn.has("win32") == 1 then
-  -- $OPTIONS
-  vim.env.OPTIONS = vim.fn.stdpath("config") .. "\\lua\\core\\options.lua"
-
-  -- $LAZY
-  vim.env.LAZY = vim.fn.stdpath("config") .. "\\lua\\core\\lazy.lua"
-
-  -- $PLUGINS
-  vim.env.PLUGINS = vim.fn.stdpath("config") .. "\\lua\\core\\plugins.lua"
-
-  -- $KEYMAPS
-  vim.env.KEYMAPS = vim.fn.stdpath("config") .. "\\lua\\core\\keymaps.lua"
-
-  -- $AUTOCMDS
-  vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "\\lua\\core\\autocmds.lua"
-
-  -- $LSP
-  vim.env.LSP = vim.fn.stdpath("config") .. "\\lua\\plugins\\lsp.lua"
-else
-end
+-- $LSP
+vim.env.LSP = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
