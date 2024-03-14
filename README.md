@@ -34,8 +34,7 @@ $ tree -d -L 1
 ├── dotbot       dotbot binary
 ├── scripts      scripts for dotbot
 ├── secrets      files containing secrets
-├── themes       gtk theme
-└── w3m          w3m config
+└── themes       gtk theme
 ```
 
 the install script runs scripts (for arch) listed in [scripts/](/scripts).

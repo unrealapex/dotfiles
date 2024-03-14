@@ -27,7 +27,6 @@
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.drirc: drirc
-    ~/.w3m: w3m
     ~/.config:
       glob: true
       path: config/*

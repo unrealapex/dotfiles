@@ -1,5 +1,5 @@
 config/nvim/lazy-lock.json
-w3m/cookie
+config/w3m/cookie
 config/irssi/credentials
 config/irssi/scripts
 config/tmux/plugins
