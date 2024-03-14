@@ -494,11 +494,9 @@ return {
       "nvim-tree/nvim-web-devicons",
       "nvim-treesitter/nvim-treesitter",
     },
-    config = function()
-      require("fzf-lua").setup({
-        "telescope",
-      })
-    end,
+    opts = {
+      "telescope",
+    },
   },
   {
     "folke/persistence.nvim",
@@ -742,20 +740,18 @@ return {
       "zsh",
     },
     -- REFACTOR: get filetypes from ft
-    config = function()
-      require("colorizer").setup({
-        filetypes = {
-          "cfg",
-          "conf",
-          "css",
-          "dosini",
-          "html",
-          "javascript",
-          "sass",
-          "sh",
-          "zsh",
-        },
-      })
-    end,
+    opts = {
+      filetypes = {
+        "cfg",
+        "conf",
+        "css",
+        "dosini",
+        "html",
+        "javascript",
+        "sass",
+        "sh",
+        "zsh",
+      },
+    },
   },
 }
