@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>cd", function()
   vim.notify(vim.fn.getcwd())
 end)
 
--- lua implementation of neovim's <C-L> bind that also clears vim-notify notifications
+-- lua implementation of neovim's <C-L> bind
 vim.keymap.set("n", "<C-l>", function()
   vim.cmd.nohlsearch()
   vim.cmd.diffupdate()
