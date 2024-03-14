@@ -118,7 +118,7 @@ function prose()
     if vim.fn.exists("ZenMode") == 2 then
       vim.cmd.ZenMode()
     end
-    vim.notify("Prose Mode Enabled")
+    vim.notify("prose mode: enabled")
   else
     -- disable spellcheck and line wrapping
     vim.opt_local.spell = false
@@ -135,7 +135,7 @@ function prose()
     if vim.fn.exists("ZenMode") == 2 then
       vim.cmd.ZenMode()
     end
-    vim.notify("Prose Mode Disabled")
+    vim.notify("prose mode: disabled")
   end
 end
 
