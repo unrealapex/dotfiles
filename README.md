@@ -32,7 +32,7 @@ $ tree -d -L 1
 ├── bin          ~/.local/bin/
 ├── config       ~/.config/
 ├── dotbot       dotbot binary
-├── scripts      scripts for dotbot
+├── scripts      config scripts
 ├── secrets      files containing secrets
 └── themes       gtk theme
 ```
