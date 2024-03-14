@@ -490,6 +490,7 @@ return {
       },
     },
     cmd = { "FzfLua" },
+    cond = vim.fn.executable("fzf") == 1,
     dependencies = {
       "nvim-tree/nvim-web-devicons",
       "nvim-treesitter/nvim-treesitter",
