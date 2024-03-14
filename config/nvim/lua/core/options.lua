@@ -115,6 +115,7 @@ function prose()
     vim.keymap.set({ "n", "v" }, "^", "g^")
 
     prosed = true
+    -- FIXME: zen mode is not loaded when called here
     if vim.fn.exists("ZenMode") == 2 then
       vim.cmd.ZenMode()
     end
