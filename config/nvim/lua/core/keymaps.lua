@@ -12,13 +12,6 @@ vim.keymap.set("n", "<leader>cd", function()
   vim.notify(vim.fn.getcwd())
 end)
 
--- lua implementation of neovim's <C-L> bind
-vim.keymap.set("n", "<C-l>", function()
-  vim.cmd.nohlsearch()
-  vim.cmd.diffupdate()
-  vim.cmd.mode()
-  vim.cmd.redraw()
-end)
 -- vanilla buffer switcher
 -- vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
 
