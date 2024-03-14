@@ -496,6 +496,17 @@ return {
     },
     opts = {
       "telescope",
+      previewers = {
+        builtin = {
+          extensions = {
+            -- neovim terminal only supports `viu` block output
+            ["gif"] = { "chafa" },
+            ["jpg"] = { "chafa" },
+            ["png"] = { "chafa"},
+            ["webp"] = { "chafa" },
+          },
+        },
+      },
     },
   },
   {
