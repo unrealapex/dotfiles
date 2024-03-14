@@ -45,6 +45,7 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export GLFW_IM_MODULE=ibus
 
+export W3M_DIR="$XDG_CONFIG_HOME/w3m" 
 export WWW_HOME='https://lite.duckduckgo.com/lite'
 
 export PATH
