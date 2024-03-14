@@ -549,7 +549,6 @@ return {
         require("persistence").stop()
       end}
     },
-
     opts = {
       dir = vim.fn.stdpath("state") .. "/sessions/",
       options = vim.opt.sessionoptions:get(),
