@@ -115,7 +115,7 @@ function prose()
     vim.keymap.set({ "n", "v" }, "^", "g^")
 
     prosed = true
-    if vim.fn.exists.ZenMode() == 2 then
+    if vim.fn.exists("ZenMode") == 2 then
       vim.cmd.ZenMode()
     end
     vim.notify("Prose Mode Enabled")
@@ -132,7 +132,7 @@ function prose()
     vim.keymap.del({ "n", "v" }, "$")
     vim.keymap.del({ "n", "v" }, "^")
     prosed = false
-    if vim.fn.exists.ZenMode() == 2 then
+    if vim.fn.exists("ZenMode") == 2 then
       vim.cmd.ZenMode()
     end
     vim.notify("Prose Mode Disabled")
