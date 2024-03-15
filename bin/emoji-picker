@@ -6,7 +6,9 @@ set -o pipefail
 # Give dmenu list of all unicode characters to copy.
 # Shows the selected character in dunst if running.
 
-cat ~/projects/emoji-data/data/all_emojis.txt  | awk '{print $1, $6, $7}'| sed -E 's/([[:digit:]]*)\./\1\nnext line/' \
+emoji_file=$HOME/.local/share/emojis.json
+
+cat "$emoji_file" | jq --raw-output ' .[] | "\(.characters) \(.name)"' \
   | tr '[:upper:]' '[:lower:]' \
   | dmenu -fn monospace-10 -fn Noto\ Color\ Emoji-10 \
   | awk '{print $1}' \
