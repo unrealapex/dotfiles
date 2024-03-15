@@ -1,0 +1,14 @@
+#!/bin/bash
+
+tmp_dir="/tmp/emoji-data"
+emoji_file="$HOME/.local/share/emojis.json"
+
+git clone https://github.com/Mange/emoji-data "$tmp_dir"
+
+cd "$tmp_dir"
+make all
+
+# exit if build was not successfull
+cd data || exit
+
+cp all_emojis.json "$emoji_file"
