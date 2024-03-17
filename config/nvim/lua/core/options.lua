@@ -12,7 +12,6 @@ vim.opt.backupdir = vim.fn.stdpath("state") .. "/backup"
 vim.opt.clipboard = "unnamedplus"
 -- enter the current millennium
 vim.opt.compatible = false
-vim.opt.completeopt = "menu,menuone,noselect"
 -- enable cursor line
 vim.opt.cursorline = true
 -- store all swap files in one directory
