@@ -703,7 +703,10 @@ return {
       "DapToggleBreakpoint",
     },
     dependencies = {
-      "rcarriga/nvim-dap-ui",
+      {
+        "rcarriga/nvim-dap-ui",
+        dependencies = "nvim-neotest/nvim-nio",
+      },
       -- TODO: add more debug adapters
       {
         "jbyuki/one-small-step-for-vimkind",
