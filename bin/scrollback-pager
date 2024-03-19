@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# scrollback pager for simple terminal
-
-tmpfile=$(mktemp /tmp/st-edit.XXXXXX)
-trap  'rm "$tmpfile"' 0 1 15
-cat > "$tmpfile"
-# TODO: open this in the same st instance
-st -e "less" "$tmpfile"
