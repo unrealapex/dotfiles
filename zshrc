@@ -190,6 +190,8 @@ pomodoro () {
 alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
 
+alias cleanpatches="rm --force *.{orig,rej}"
+
 alias -- -='cd -'
 alias 1='cd -1'
 alias 2='cd -2'
