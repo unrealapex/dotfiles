@@ -729,19 +729,6 @@ return {
   },
   -- icons
   "nvim-tree/nvim-web-devicons",
-  -- colorscheme
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require("tokyonight").setup({
-        transparent = true,
-      })
-      vim.cmd.colorscheme("tokyonight-night")
-    end,
-  },
   -- markdown preview
   {
     "ellisonleao/glow.nvim",
