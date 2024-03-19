@@ -368,23 +368,23 @@ return {
   { "mfussenegger/nvim-jdtls", ft = "java" },
 
   -- code action lightbulbs
-  {
-    "kosayoda/nvim-lightbulb",
-    event = "LspAttach",
-    opts = {
-      -- TODO: maybe use your own autocmd
-      autocmd = {
-        enabled = true,
-        updatetime = 10,
-      },
-      sign = {
-        enabled = false,
-      },
-      virtual_text = {
-        enabled = true,
-      },
-    }
-  },
+  -- {
+  --   "kosayoda/nvim-lightbulb",
+  --   event = "LspAttach",
+  --   opts = {
+  --     -- TODO: maybe use your own autocmd
+  --     autocmd = {
+  --       enabled = true,
+  --       updatetime = 10,
+  --     },
+  --     sign = {
+  --       enabled = false,
+  --     },
+  --     virtual_text = {
+  --       enabled = true,
+  --     },
+  --   }
+  -- },
   -- lsp window
   {
     "folke/trouble.nvim",
