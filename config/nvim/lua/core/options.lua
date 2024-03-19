@@ -81,6 +81,8 @@ vim.cmd.syntax("on")
 
 -- make gutter match background color
 vim.cmd.highlight("clear SignColumn")
+vim.cmd.highlight('Pmenu ctermbg=Black ctermfg=White')
+vim.cmd.highlight('PmenuSel ctermbg=Magenta ctermfg=Black')
 
 --globals
 
