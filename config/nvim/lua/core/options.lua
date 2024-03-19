@@ -58,6 +58,7 @@ vim.opt.signcolumn = "auto:1-2"
 vim.opt.smartcase = true
 -- put new windows right of the current
 vim.opt.splitright = true
+-- TODO: show diagnostics
 vim.opt.statusline="%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
 -- set tabs to two spaces
 vim.opt.tabstop = 2
