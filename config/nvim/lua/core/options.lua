@@ -85,6 +85,9 @@ vim.cmd.highlight('Pmenu ctermbg=Black ctermfg=White')
 -- NOTE: this contrast could be better
 vim.cmd.highlight('PmenuSel ctermbg=Magenta ctermfg=Black')
 
+-- NOTE: this can be removed once neovim 0.1 is released
+vim.cmd.highlight('Comment ctermfg=DarkGrey')
+
 --globals
 
 -- enable filetype.lua
