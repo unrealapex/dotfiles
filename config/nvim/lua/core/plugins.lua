@@ -100,15 +100,6 @@ return {
       require("plugins.gitsigns")
     end,
   },
-  -- status bar
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("plugins.lualine")
-    end,
-    dependencies = "nvim-tree/nvim-web-devicons",
-  },
   -- conveniently run git commands from vim
   {
     "tpope/vim-fugitive",
