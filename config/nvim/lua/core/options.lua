@@ -51,13 +51,14 @@ vim.opt.scrolloff = 8
 -- indents to next multiple of 'shiftwidth'.
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
-vim.opt.showmode = false
+vim.opt.showmode = true
 -- show typed command in status bar
 vim.opt.showcmd = true
 vim.opt.signcolumn = "auto:1-2"
 vim.opt.smartcase = true
 -- put new windows right of the current
 vim.opt.splitright = true
+vim.opt.statusline="%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
 -- set tabs to two spaces
 vim.opt.tabstop = 2
 -- true color support
