@@ -186,8 +186,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'romainl/vim-cool'
 Plug 'junegunn/gv.vim'
 Plug 'wellle/context.vim'
-" status bar
-Plug 'vim-airline/vim-airline'
 " git integration
 Plug 'tpope/vim-fugitive'
 " Vim Surround
