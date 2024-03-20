@@ -84,6 +84,7 @@ vim.cmd.colorscheme("lunaperche")
 -- syntax highlighting
 vim.cmd.syntax("on")
 
+-- NOTE: highlights get overridden by themes, so maybe don't set this
 -- make gutter match background color
 vim.cmd.highlight("clear SignColumn")
 
