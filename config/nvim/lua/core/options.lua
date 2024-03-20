@@ -79,6 +79,8 @@ vim.opt.winbar = "%=%m %f"
 -- don't wrap lines
 vim.opt.wrap = false
 
+vim.cmd.colorscheme("lunaperche")
+
 -- syntax highlighting
 vim.cmd.syntax("on")
 
