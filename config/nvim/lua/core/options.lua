@@ -87,9 +87,6 @@ vim.cmd.syntax("on")
 -- make gutter match background color
 vim.cmd.highlight("clear SignColumn")
 
--- NOTE: this can be removed once neovim 0.1 is released
-vim.cmd.highlight('Comment ctermfg=DarkGrey')
-
 --globals
 
 -- enable filetype.lua
