@@ -62,6 +62,8 @@ vim.opt.splitright = true
 vim.opt.statusline="%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
 -- set tabs to two spaces
 vim.opt.tabstop = 2
+-- true color support
+vim.opt.termguicolors = true
 -- show file in titlebar
 vim.opt.title = true
 vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
