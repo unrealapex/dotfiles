@@ -242,12 +242,6 @@ return {
           automatic_installation = true,
         },
       },
-      {
-        "jay-babu/mason-nvim-dap.nvim",
-        opts = {
-          automatic_installation = true,
-        },
-      },
     },
   },
   {
@@ -703,6 +697,13 @@ return {
       "DapToggleBreakpoint",
     },
     dependencies = {
+      {
+        "jay-babu/mason-nvim-dap.nvim",
+        dependencies = "williamboman/mason.nvim",
+        opts = {
+          automatic_installation = true,
+        },
+      },
       {
         "rcarriga/nvim-dap-ui",
         dependencies = "nvim-neotest/nvim-nio",
