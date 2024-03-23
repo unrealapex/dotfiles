@@ -168,3 +168,9 @@ vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/core/autocmds.lua"
 
 -- $LSP
 vim.env.LSP = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
+
+if vim.fn.argc() == 0
+then
+  vim.cmd.intro()
+end
+
