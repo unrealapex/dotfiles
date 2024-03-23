@@ -24,6 +24,7 @@ setopt auto_pushd
 setopt extended_glob
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+setopt interactive_comments
 setopt menu_complete
 setopt nocorrectall
 setopt nonomatch
