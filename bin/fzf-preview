@@ -16,12 +16,12 @@ fi
 
 # TODO: show thumbnail for video files
 # https://github.com/LukeSmithxyz/voidrice/blob/master/.config/lf/scope
-if file --mime-type "$1" | grep -qF 'image/'; then
-  chafa -s "$dim" "$1"
+if file --mime-type "$1" | grep --quiet --fixed-strings 'image/'; then
+  chafa --size "$dim" "$1"
   echo
-elif file --mime-type "$1" | grep -qF 'inode/'; then
+elif file --mime-type "$1" | grep --quiet --fixed-strings 'inode/'; then
   tree -C "$1"
-elif file --mime-type "$1" | grep -qF 'application/pdf'; then
+elif file --mime-type "$1" | grep --quiet --fixed-strings 'application/pdf'; then
   pdftoppm -png -singlefile "$1" | chafa
 
 else
