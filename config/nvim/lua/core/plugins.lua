@@ -777,15 +777,11 @@ return {
   "nvim-tree/nvim-web-devicons",
   -- colorscheme
   {
-    "folke/tokyonight.nvim",
+    "RRethy/base16-nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require("tokyonight").setup({
-        transparent = true,
-      })
-      vim.cmd.colorscheme("tokyonight-night")
+      vim.cmd.colorscheme("base16-windows-95")
     end,
   },
   -- markdown preview
