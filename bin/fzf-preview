@@ -17,14 +17,12 @@ fi
 # TODO: show thumbnail for video files
 # https://github.com/LukeSmithxyz/voidrice/blob/master/.config/lf/scope
 if file --mime-type "$1" | grep -qF 'image/'; then
-  # NOTE: wezterm's implementation of image protocol hangs so use this for now
-  # https://github.com/junegunn/fzf/issues/3646
-  chafa -f iterm -s "$dim" "$1"
+  chafa -s "$dim" "$1"
   echo
 elif file --mime-type "$1" | grep -qF 'inode/'; then
   tree -C "$1"
 elif file --mime-type "$1" | grep -qF 'application/pdf'; then
-  pdftoppm -png -singlefile "$1" | chafa -f iterm 
+  pdftoppm -png -singlefile "$1" | chafa
 
 else
   bat --color=always "$1"
