@@ -16,7 +16,7 @@ my dotfiles for arch linux, managed using git and dotbot.
 
 ### 💿 install
 ```sh
-git clone https://github.com/unrealapex/dotfiles ~/.dotfiles
+git clone https://git.sr.ht/~unrealapex/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./install
 ```
