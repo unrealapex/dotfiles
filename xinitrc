@@ -76,8 +76,6 @@ playerctld daemon
 
 keepassxc &
 
-unclutter --fork
-
 while true; do
    xsetroot -name "$( date +"%m/%d %I:%M %P" )"
    sleep 1
