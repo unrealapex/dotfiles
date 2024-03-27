@@ -1,4 +1,4 @@
----@diagnostic disable: different-requires, mixed_table
+---@diagnostic disable: different-requires, mixed_table, undefined-field
 return {
   -- nicer ui
   {
