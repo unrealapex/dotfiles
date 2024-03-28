@@ -784,6 +784,16 @@ return {
       ---@diagnostic disable-next-line: missing-fields
       require("tokyonight").setup({
         transparent = true,
+        on_highlights = function(highlights, colors)
+          highlights.StatusLine = colors.Normal
+          highlights.StatusLineNC = colors.Normal
+          highlights.WinBar = {
+            bg = colors.none
+          }
+          highlights.WinBarNC = {
+            bg = colors.none
+          }
+        end,
       })
       vim.cmd.colorscheme("tokyonight-night")
     end,

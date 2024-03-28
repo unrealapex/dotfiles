@@ -146,7 +146,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
-alias icat='wezterm imgcat'
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
