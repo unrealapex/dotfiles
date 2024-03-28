@@ -213,6 +213,9 @@ function d () {
 }
 compdef _dirs d
 
+_zsh_cli_fg() { fg; }
+zle -N _zsh_cli_fg
+bindkey '^Z' _zsh_cli_fg
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
