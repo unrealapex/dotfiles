@@ -63,7 +63,8 @@ xss-lock --transfer-sleep-lock -- slock --nofork &
 xautolock -time 10 -locker "idle-lock" &
 
 feh --bg-fill "$WALLPAPER"
-picom --daemon
+
+xcompmgr -c &
 
 playerctld daemon
 

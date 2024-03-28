@@ -174,7 +174,6 @@ pavucontrol
 perl-image-exiftool
 perl-lwp-protocol-https
 pfetch
-picom-git
 pipewire
 pipewire-alsa
 pipewire-audio
@@ -224,6 +223,7 @@ wireplumber
 wmctrl
 xautolock
 xclip
+xcompmgr
 xdg-user-dirs
 xdo
 xdotool
