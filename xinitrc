@@ -64,8 +64,6 @@ xautolock -time 10 -locker "idle-lock" &
 
 feh --bg-fill "$WALLPAPER"
 
-xcompmgr -c &
-
 playerctld daemon
 
 # killall lemonbar
