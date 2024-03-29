@@ -66,10 +66,6 @@ feh --bg-fill "$WALLPAPER"
 
 playerctld daemon
 
-# killall lemonbar
-# bash lemon | lemonbar &
-# xdo above -t $(xdo id -n root) $(xdo id -n lemonbar)
-
 # TODO: find something less bloated than ibus
 # ibus-daemon --replace --xim --daemonize
 
@@ -83,6 +79,4 @@ done &
 while true; do
     # Log stderror to a file 
     dwm 2> /tmp/dwm.log
-    # No error logging
-    #dwm >/dev/null 2>&1
 done
