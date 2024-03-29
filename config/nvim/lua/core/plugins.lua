@@ -539,21 +539,6 @@ return {
       options = vim.opt.sessionoptions:get(),
     }
   },
-  {
-    "akinsho/toggleterm.nvim",
-    cmd = "ToggleTerm",
-    keys = {
-      {
-        "<C-`>", function()
-        vim.cmd.ToggleTerm()
-      end
-      }
-    },
-    opts = {
-  open_mapping = [[<c-`>]],
-  autochdir = true,
-    },
-  },
   -- debugging
   {
     "mfussenegger/nvim-dap",
