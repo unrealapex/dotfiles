@@ -12,7 +12,11 @@ notifications: dunst
 ```
 
 ### ✨ about ✨
-my dotfiles for arch linux, managed using git and dotbot.
+my dotfiles for arch linux, managed using git and dotbot. the main focus of
+this rice is to create a minimalistic linux system. eye candy is desired,
+however, minimalism and performance come first. a majority of the tools that i
+use with this rice follow the suckless software design philsophy. i believe
+that is a way of writing software that more people should adapt to.
 
 ### 💿 install
 ```sh
@@ -24,6 +28,9 @@ cd ~/.dotfiles
 ### 🗒️ notes
 this rice is not intended for use by others, however, you're welcome to if
 you wish. the information below might be of use to you.
+
+my builds of dwm, dmenu, slock, etc.. are stored in separate git repositories.
+dotbot is configured to build them.
 
 dotfiles directories
 ```
