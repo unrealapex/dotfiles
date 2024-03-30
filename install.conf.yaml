@@ -20,7 +20,6 @@
     ~/.gitconfig: gitconfig
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources
-    ~/.wezterm.lua: wezterm.lua
     ~/.lynxrc: lynxrc
     ~/.zprofile: zprofile
     ~/.zsh_plugins.txt: zsh_plugins.txt
