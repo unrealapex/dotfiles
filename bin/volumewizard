@@ -3,25 +3,25 @@
 send_notification() {
   volume=$(pamixer --get-volume)
   if eval "$(pamixer --get-mute)"; then
-    dunstify -r 9993 "volume: muted"
+    dunstify --replace 9993 "volume: muted"
   else
-    dunstify -r 9993 "volume: $volume%"
+    dunstify --replace 9993 "volume: $volume%"
   fi
 }
 
 case $1 in
 up)
   # Set the volume on (if it was muted)
-  pamixer -u
-  pamixer -i 2 --allow-boost
+  pamixer --umute
+  pamixer --increase 2 --allow-boost
 
   ;;
 down)
-  pamixer -u
-  pamixer -d 2 --allow-boost
+  pamixer --unmute
+  pamixer --decrease 2 --allow-boost
   ;;
 mute)
-  pamixer -t
+  pamixer --toggle-mute
   ;;
 esac
 
