@@ -26,7 +26,6 @@
     ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
-    ~/.drirc: drirc
     ~/.config:
       glob: true
       path: config/*
