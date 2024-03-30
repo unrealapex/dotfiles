@@ -13,12 +13,12 @@ case $1 in
 up)
   # Set the volume on (if it was muted)
   pamixer --umute
-  pamixer --increase 2 --allow-boost
+  pamixer --increase 2
 
   ;;
 down)
   pamixer --unmute
-  pamixer --decrease 2 --allow-boost
+  pamixer --decrease 2
   ;;
 mute)
   pamixer --toggle-mute
