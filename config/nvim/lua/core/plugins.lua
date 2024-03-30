@@ -73,7 +73,25 @@ return {
     },
   },
   -- rsi style mappings
-  { "tpope/vim-rsi", event = { "InsertEnter", "CmdlineEnter" } },
+  {
+    "tpope/vim-rsi",
+    keys = {
+      { "<C-a>", mode = {"c", "i"}},
+      { "<C-x><C-a>", mode = {"c", "i"}},
+      { "<C-b>", mode = {"c", "i"}},
+      { "<C-d>", mode = {"c", "i"}},
+      { "<C-e>", mode = {"c", "i"}},
+      { "<C-f>", mode = {"c", "i"}},
+      { "<C-g>", mode = {"c", "i"}},
+      { "<C-t>", mode = {"c", "i"}},
+      { "<M-BS>", mode = {"c", "i"}},
+      { "<M-b>", mode = {"c", "i"}},
+      { "<M-d>", mode = {"c", "i"}},
+      { "<M-f>", mode = {"c", "i"}},
+      { "<M-n>", mode = {"c", "i"}},
+      { "<C-p>", mode = {"c", "i"}},
+    }
+   },
   -- move text
   {
     "echasnovski/mini.move",
