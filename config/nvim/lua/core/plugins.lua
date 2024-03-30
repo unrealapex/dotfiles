@@ -255,11 +255,14 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     config = true,
   },
   -- repeat plugin commands
-  { "tpope/vim-repeat", event = "VeryLazy" },
+  {
+    "tpope/vim-repeat",
+    event = { "BufReadPost", "BufNewFile" },
+  },
   -- git commit browser
   {
     "sindrets/diffview.nvim",
@@ -828,7 +831,7 @@ return {
   --   { "a", mode = { "x", "o" } },
   --   { "i", mode = { "x", "o" } },
   -- },
-  event = "VeryLazy",
+  event = { "BufReadPost", "BufNewFile" },
   opts = function()
     local ai = require("mini.ai")
     return {
