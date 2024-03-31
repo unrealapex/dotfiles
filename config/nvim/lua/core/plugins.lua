@@ -109,7 +109,14 @@ return {
     config = true,
   },
   -- unimpaired mappings
-  { "tpope/vim-unimpaired", keys = { "[", "]" } },
+  {
+    "tpope/vim-unimpaired",
+    keys = {
+      { "[", mode = { "n", "v" } },
+      { "]", mode = { "n", "v" } },
+      "y",
+    },
+  },
   -- better git integration
   {
     "lewis6991/gitsigns.nvim",
