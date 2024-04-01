@@ -50,6 +50,11 @@
       stdout: true
       stderr: true
     - 
+      command: git clone https://github.com/unrealapex/st ~/.config/st; cd ~/.config/st; sudo make clean install; cd -
+      description: Building st
+      stdout: true
+      stderr: true
+    - 
       command: git clone https://github.com/unrealapex/dmenu ~/.config/dmenu; cd ~/.config/dmenu; sudo make clean install; cd -
       description: Building dmenu
       stdout: true
