@@ -1,3 +1,9 @@
 #!/bin/bash
-feh --bg-fill "$1"
+
+if [[ -n $1  ]]; then
+  feh --bg-fill "$1"
+else
+  feh --bg-fill "$WALLPAPER"
+fi
+
 notify-send "wallpaper: updated image"
