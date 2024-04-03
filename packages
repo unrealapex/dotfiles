@@ -161,7 +161,6 @@ opencl-icd-loader
 pamixer
 pandoc-bin
 pastel
-pavucontrol
 perl-image-exiftool
 pfetch
 pipewire
@@ -170,6 +169,7 @@ pipewire-audio
 pipewire-jack
 pipewire-pulse
 playerctl
+pulsemixer
 qemu
 ripgrep
 shellcheck
