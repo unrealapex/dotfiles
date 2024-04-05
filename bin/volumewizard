@@ -12,7 +12,7 @@ send_notification() {
 case $1 in
 up)
   # Set the volume on (if it was muted)
-  pamixer --umute
+  pamixer --unmute
   pamixer --increase 2
 
   ;;
