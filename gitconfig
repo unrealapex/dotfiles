@@ -4,7 +4,6 @@
  path = ~/.gitconfig_local
 [credential]
  credentialStore = cache
- helper = store
 [core]
  editor = nvim
  pager = delta
