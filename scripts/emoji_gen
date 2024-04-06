@@ -1,5 +1,5 @@
 #!/bin/bash
-# script requires ruby, bundler, and jq
+# NOTE: make sure you have ruby, bundler, and jq installed
 
 tmp_dir="/tmp/emoji-data"
 emoji_file="$HOME/.local/share/emojis.json"
