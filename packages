@@ -33,7 +33,6 @@ fff
 ffmpeg
 figlet
 firefox
-firejail
 font-manager
 foomatic-db
 foomatic-db-engine
@@ -48,7 +47,6 @@ giflib
 gimp
 git
 git-delta
-github-cli
 glow
 gnu-free-fonts
 gnutls
@@ -63,7 +61,6 @@ gstreamer-vaapi
 gutenprint
 guvcview
 htop
-hwinfo
 hyperfine
 ibus-mozc
 imagemagick
@@ -144,13 +141,11 @@ neofetch
 neovim
 newsboat
 ninja
-nm-connection-editor
 nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 npm
-ntp
 obs-studio
 obsidian
 ocl-icd
@@ -178,7 +173,6 @@ spotify
 sqlite
 steam
 syncthing
-system-config-printer
 tesseract
 tesseract-data-eng
 tesseract-data-jpn
@@ -188,14 +182,12 @@ timer-bin
 torbrowser-launcher
 tree
 ttf-font-awesome
-ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 ttf-liberation
 tty-clock
 ufw
 unclutter
 unzip
-urxvt-perls
 v4l-utils
 vde2
 virt-manager
@@ -203,7 +195,6 @@ virt-viewer
 vkd3d
 vulkan-icd-loader
 w3m
-webp-pixbuf-loader
 wget
 wine-mono
 wine-staging
@@ -215,9 +206,6 @@ xdo
 xdotool
 xf86-input-libinput
 xorg
-xorg-fonts-encodings
-xorg-fonts-misc
-xorg-fonts-type1
 xorg-xinit
 xss-lock
 yt-dlp
