@@ -94,28 +94,7 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -ap zsh/mapfile mapfile
 
-function git_branch_name()
-{
-  branch=$(git --no-optional-locks symbolic-ref --short HEAD 2>/dev/null || git --no-optional-locks rev-parse --short HEAD 2>/dev/null)
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    # FIXME: see if you can handle prompt spacing more elegantly
-    # see Microsoft's implmention of the prompt they have in GitHub Codespaces
-    echo ' %F{cyan}(%f%F{red}'$branch'%f%F{cyan})%f'
-  fi
-}
-
-# enable substitution in the prompt
-setopt prompt_subst
-
-PROMPT='%F{green}@%n%f ➜ %F{blue}%B%~%b%f$(git_branch_name) $ '
-
-# show a prompt without unicode symbols if in a tty
-if [ x$DISPLAY = x ] ; then
-  PROMPT='%F{green}@%n%f -> %F{blue}%B%~%b%f$(git_branch_name) $ '
-fi
+PROMPT='[%n@%m %1~]$ '
 
 typeset -U path PATH
 path=(~/.local/bin ~/.local/share/nvim/mason/bin $path)
