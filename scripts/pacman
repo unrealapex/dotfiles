@@ -19,7 +19,7 @@ sudo sed --in-place 's/#ParallelDownloads = 5/ParallelDownloads = 20/g' /etc/pac
 sudo sed --in-place '/# Color/s/^#//g' /etc/pacman.conf
 
 # allocate more cpu cores to make
-sudo sed -in-place --regexp-extended "s/#MAKEFLAGS=\"-j[1-9]\"/MAKEFLAGS=\"-j$(nproc)\"/g" /etc/makepkg.conf
+sudo sed -in-place --regexp-extended "s/#MAKEFLAGS=\"-j[1-9]\"/MAKEFLAGS=\"-j$(nproc) -l$(nproc)\"/g" /etc/makepkg.conf
 
 sudo pacman --sync --refresh --sysupgrade --noconfirm
 
