@@ -4,8 +4,8 @@
 
 
 export EDITOR="nvim"
-export TERMINAL="wezterm"
-export TERMINAL_PROG="wezterm"
+export TERMINAL="st"
+export TERMINAL_PROG="st"
 export BROWSER="firefox"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
