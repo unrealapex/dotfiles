@@ -10,9 +10,9 @@ export BROWSER="firefox"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col --no-backspaces --spaces | bat --language man --style=plain'"
 export MANROFFOPT="-c"
-export LESS="-i"
+export LESS="--ignore-case"
 # NOTE: this doesn't work
 export FZF_DEFAULT_OPTS='--no-unicode'
 # NOTE: some quotation issue with --place is causing image preview to fail :/
