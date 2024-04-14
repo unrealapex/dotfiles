@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# install packages
+packages=(
+  foomatic-db
+  foomatic-db-engine
+  foomatic-db-gutenprint-ppds
+  foomatic-db-nonfree
+  foomatic-db-nonfree-ppds
+  foomatic-db-ppds
+  gutenprint
+)
+
+
+yay --sync --noconfirm --needed "${packages[@]}"
+
+# setup 
+sudo systemctl enable cups.socket
+sudo gpasswd -a "$USER" sys
