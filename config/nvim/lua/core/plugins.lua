@@ -290,15 +290,22 @@ return {
       require("plugins.cmp")
     end,
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-path",
-      "saadparwaiz1/cmp_luasnip",
       "nvim-tree/nvim-web-devicons",
     },
   },
   {
     "hrsh7th/cmp-cmdline",
     event = "CmdlineEnter",
+    dependencies = "hrsh7th/nvim-cmp",
+  },
+  {
+    "hrsh7th/cmp-path",
+    event = { "CmdlineEnter", "InsertEnter" },
+    dependencies = "hrsh7th/nvim-cmp",
+  },
+  {
+    "hrsh7th/cmp-nvim-lsp",
+    event = "LspAttach",
     dependencies = "hrsh7th/nvim-cmp",
   },
   {
@@ -330,6 +337,7 @@ return {
     end,
     dependencies = {
       {
+        "saadparwaiz1/cmp_luasnip",
         "rafamadriz/friendly-snippets",
         config = function()
           require("luasnip/loaders/from_vscode").lazy_load()
