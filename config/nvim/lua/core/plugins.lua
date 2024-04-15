@@ -125,7 +125,7 @@ return {
       require("plugins.gitsigns")
     end,
     init = function ()
-      vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+      vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "DirChanged" }, {
         group = vim.api.nvim_create_augroup("load_gitsigns", { clear = true }),
         callback = function ()
           if os.execute("git rev-parse --show-toplevel 2> /dev/null") == 0 then
