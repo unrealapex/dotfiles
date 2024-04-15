@@ -128,6 +128,7 @@ return {
       vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "DirChanged" }, {
         group = vim.api.nvim_create_augroup("load_gitsigns", { clear = true }),
         callback = function ()
+          -- FIXME: handle edited files being in different working directory
           if os.execute("git rev-parse --show-toplevel 2> /dev/null") == 0 then
               require("lazy").load({ plugins = { "gitsigns.nvim" } })
           end
