@@ -402,9 +402,12 @@ return {
   {
     "mfussenegger/nvim-lint",
     init = function()
-      vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
+      vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave", "Filetype" }, {
         callback = function()
-          require("lint").try_lint()
+          -- FIXME: this condition does not work
+          if not vim.bo.filetype == "" then
+            require("lint").try_lint()
+          end
         end,
       })
     end,
