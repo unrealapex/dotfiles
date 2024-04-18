@@ -125,7 +125,7 @@ return {
       require("plugins.gitsigns")
     end,
     init = function ()
-      vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "DirChanged" }, {
+      vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
         group = vim.api.nvim_create_augroup("load_gitsigns", { clear = true }),
         callback = function ()
           -- FIXME: handle edited files being in different working directory
