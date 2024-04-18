@@ -143,11 +143,6 @@ open() {
   done
 }
 
-battery() {
-  percent=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}')
-  notify-send "battery: $percent"
-}
-
 alias f='fff'
 alias cleanpatches="rm --force *.{orig,rej}"
 
