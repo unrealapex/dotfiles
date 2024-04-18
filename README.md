@@ -49,6 +49,11 @@ the install script runs scripts (for arch) listed in [scripts/](/scripts).
 $ tree scripts
   scripts
     ├── bluetooth          enable bluetooth
+    ├── emoji_gen          generate emojis file for emoji picker
+    ├── extras             extra functionality that is not critical
+    │   ├── gaming         gaming packages and optimization
+    │   ├── ocr            packages to run object character recognition
+    │   └── printing       setup for printing
     ├── firefox            generate firefox user.js file
     ├── group              add current user to appropriate groups
     ├── irssi              set up irssi scripts
