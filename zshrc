@@ -144,8 +144,7 @@ open() {
 }
 
 alias f='fff'
-alias cleanpatches="rm --force *.{orig,rej}"
-
+alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
 alias 1='cd -1'
 alias 2='cd -2'
