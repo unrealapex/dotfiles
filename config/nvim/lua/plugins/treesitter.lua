@@ -31,6 +31,7 @@ configs.setup({
     "query",
     "r",
     "regex",
+    "rst",
     "sql",
     "toml",
     "tsx",
