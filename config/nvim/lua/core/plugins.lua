@@ -215,13 +215,13 @@ return {
   },
   -- FIXME: this plugin doesn't work with treesitter
   -- parentheses colorizer
-  {
-    "junegunn/rainbow_parentheses.vim",
-    event = { "BufReadPost", "BufNewFile" },
-    config = function()
-      vim.cmd.RainbowParentheses()
-    end,
-  },
+  -- {
+  --   "junegunn/rainbow_parentheses.vim",
+  --   event = { "BufReadPost", "BufNewFile" },
+  --   config = function()
+  --     vim.cmd.RainbowParentheses()
+  --   end,
+  -- },
   -- turn off search highlighting automatically
   {
     "romainl/vim-cool",
