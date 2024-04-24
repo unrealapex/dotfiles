@@ -77,22 +77,22 @@ return {
   {
     "tpope/vim-rsi",
     keys = {
-      { "<C-a>", mode = {"c", "i"}},
-      { "<C-x><C-a>", mode = {"c", "i"}},
-      { "<C-b>", mode = {"c", "i"}},
-      { "<C-d>", mode = {"c", "i"}},
-      { "<C-e>", mode = {"c", "i"}},
-      { "<C-f>", mode = {"c", "i"}},
-      { "<C-g>", mode = {"c", "i"}},
-      { "<C-t>", mode = {"c", "i"}},
-      { "<M-BS>", mode = {"c", "i"}},
-      { "<M-b>", mode = {"c", "i"}},
-      { "<M-d>", mode = {"c", "i"}},
-      { "<M-f>", mode = {"c", "i"}},
-      { "<M-n>", mode = {"c", "i"}},
-      { "<C-p>", mode = {"c", "i"}},
-    }
-   },
+      { "<C-a>", mode = { "c", "i" } },
+      { "<C-x><C-a>", mode = { "c", "i" } },
+      { "<C-b>", mode = { "c", "i" } },
+      { "<C-d>", mode = { "c", "i" } },
+      { "<C-e>", mode = { "c", "i" } },
+      { "<C-f>", mode = { "c", "i" } },
+      { "<C-g>", mode = { "c", "i" } },
+      { "<C-t>", mode = { "c", "i" } },
+      { "<M-BS>", mode = { "c", "i" } },
+      { "<M-b>", mode = { "c", "i" } },
+      { "<M-d>", mode = { "c", "i" } },
+      { "<M-f>", mode = { "c", "i" } },
+      { "<M-n>", mode = { "c", "i" } },
+      { "<C-p>", mode = { "c", "i" } },
+    },
+  },
   -- move text
   {
     "echasnovski/mini.move",
@@ -363,29 +363,29 @@ return {
         mode = { "n", "v" },
       },
     },
-      opts = {
-        -- TODO: make sure these formatters are installed
-        formatters_by_ft = {
-          lua = { "stylua" },
-          javascript = { "prettierd", "prettier" },
-          typescript = { "prettierd", "prettier" },
-          html = { "prettierd", "prettier" },
-          css = { "prettierd", "prettier" },
-          markdown = { "prettierd", "prettier" },
-          python = {
-            formatters = { "isort", "black" },
-            run_all_formatters = true,
-          },
-          sh = { "shfmt" },
-          json = { "jq" },
-          java = { "google-java-format" },
-          c = { "clang-format" },
-          cs = { "clang-format" },
-          cpp = { "clang-format" },
+    opts = {
+      -- TODO: make sure these formatters are installed
+      formatters_by_ft = {
+        lua = { "stylua" },
+        javascript = { "prettierd", "prettier" },
+        typescript = { "prettierd", "prettier" },
+        html = { "prettierd", "prettier" },
+        css = { "prettierd", "prettier" },
+        markdown = { "prettierd", "prettier" },
+        python = {
+          formatters = { "isort", "black" },
+          run_all_formatters = true,
         },
-        formatters = {
-          shfmt = {
-            prepend_args = { "--indent", "2" },
+        sh = { "shfmt" },
+        json = { "jq" },
+        java = { "google-java-format" },
+        c = { "clang-format" },
+        cs = { "clang-format" },
+        cpp = { "clang-format" },
+      },
+      formatters = {
+        shfmt = {
+          prepend_args = { "--indent", "2" },
         },
       },
     },
@@ -396,14 +396,17 @@ return {
     event = "LspAttach",
     config = function()
       require("plugins.lint")
-      vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
-        callback = function()
-          -- FIXME: this condition does not work
-          if not vim.bo.filetype == "" then
-            require("lint").try_lint()
-          end
-        end,
-      })
+      vim.api.nvim_create_autocmd(
+        { "BufWritePost", "BufReadPost", "InsertLeave" },
+        {
+          callback = function()
+            -- FIXME: this condition does not work
+            if not vim.bo.filetype == "" then
+              require("lint").try_lint()
+            end
+          end,
+        }
+      )
     end,
   },
   -- java lsp stuff
@@ -539,9 +542,9 @@ return {
       },
       {
         "<leader>fs",
-        function ()
+        function()
           require("fzf-lua").lsp_document_symbols()
-        end
+        end,
       },
     },
     cmd = { "FzfLua" },
@@ -558,7 +561,7 @@ return {
             -- neovim terminal only supports `viu` block output
             ["gif"] = { "chafa" },
             ["jpg"] = { "chafa" },
-            ["png"] = { "chafa"},
+            ["png"] = { "chafa" },
             ["webp"] = { "chafa" },
           },
         },
@@ -570,22 +573,28 @@ return {
     event = "BufReadPre",
     keys = {
       {
-        "<leader>qs", function()
+        "<leader>qs",
+        function()
           require("persistence").load()
-        end
+        end,
       },
-      {"<leader>ql", function()
-        require("persistence").load({ last = true })
-      end
+      {
+        "<leader>ql",
+        function()
+          require("persistence").load({ last = true })
+        end,
       },
-      {"<leader>qd", function ()
-        require("persistence").stop()
-      end}
+      {
+        "<leader>qd",
+        function()
+          require("persistence").stop()
+        end,
+      },
     },
     opts = {
       dir = vim.fn.stdpath("state") .. "/sessions/",
       options = vim.opt.sessionoptions:get(),
-    }
+    },
   },
   -- debugging
   {
@@ -755,51 +764,57 @@ return {
     end,
   },
   -- additional text objects
-{
-  "echasnovski/mini.ai",
-  -- keys = {
-  --   { "a", mode = { "x", "o" } },
-  --   { "i", mode = { "x", "o" } },
-  -- },
-  event = { "BufReadPost", "BufNewFile" },
-  opts = function()
-    local ai = require("mini.ai")
-    return {
-      n_lines = 500,
-      custom_textobjects = {
-        o = ai.gen_spec.treesitter({
-          a = { "@block.outer", "@conditional.outer", "@loop.outer" },
-          i = { "@block.inner", "@conditional.inner", "@loop.inner" },
-        }, {}),
-        f = ai.gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }, {}),
-        c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }, {}),
-        t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },
-        d = { "%f[%d]%d+" }, -- digits
-        e = { -- Word with case
-          {
-            "%u[%l%d]+%f[^%l%d]",
-            "%f[%S][%l%d]+%f[^%l%d]",
-            "%f[%P][%l%d]+%f[^%l%d]",
-            "^[%l%d]+%f[^%l%d]",
+  {
+    "echasnovski/mini.ai",
+    -- keys = {
+    --   { "a", mode = { "x", "o" } },
+    --   { "i", mode = { "x", "o" } },
+    -- },
+    event = { "BufReadPost", "BufNewFile" },
+    opts = function()
+      local ai = require("mini.ai")
+      return {
+        n_lines = 500,
+        custom_textobjects = {
+          o = ai.gen_spec.treesitter({
+            a = { "@block.outer", "@conditional.outer", "@loop.outer" },
+            i = { "@block.inner", "@conditional.inner", "@loop.inner" },
+          }, {}),
+          f = ai.gen_spec.treesitter(
+            { a = "@function.outer", i = "@function.inner" },
+            {}
+          ),
+          c = ai.gen_spec.treesitter(
+            { a = "@class.outer", i = "@class.inner" },
+            {}
+          ),
+          t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },
+          d = { "%f[%d]%d+" }, -- digits
+          e = { -- Word with case
+            {
+              "%u[%l%d]+%f[^%l%d]",
+              "%f[%S][%l%d]+%f[^%l%d]",
+              "%f[%P][%l%d]+%f[^%l%d]",
+              "^[%l%d]+%f[^%l%d]",
+            },
+            "^().*()$",
           },
-          "^().*()$",
+          g = function() -- Whole buffer, similar to `gg` and 'G' motion
+            local from = { line = 1, col = 1 }
+            local to = {
+              line = vim.fn.line("$"),
+              col = math.max(vim.fn.getline("$"):len(), 1),
+            }
+            return { from = from, to = to }
+          end,
+          u = ai.gen_spec.function_call(), -- u for "Usage"
+          U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }), -- without dot in function name
         },
-        g = function() -- Whole buffer, similar to `gg` and 'G' motion
-          local from = { line = 1, col = 1 }
-          local to = {
-            line = vim.fn.line("$"),
-            col = math.max(vim.fn.getline("$"):len(), 1),
-          }
-          return { from = from, to = to }
-        end,
-        u = ai.gen_spec.function_call(), -- u for "Usage"
-        U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }), -- without dot in function name
-      },
-    }
-  end,
-  config = function(_, opts)
-    require("mini.ai").setup(opts)
-  end,
+      }
+    end,
+    config = function(_, opts)
+      require("mini.ai").setup(opts)
+    end,
   },
   -- heuristically set buffer options
   {
@@ -821,10 +836,10 @@ return {
           highlights.StatusLine = colors.Normal
           highlights.StatusLineNC = colors.Normal
           highlights.WinBar = {
-            bg = colors.none
+            bg = colors.none,
           }
           highlights.WinBarNC = {
-            bg = colors.none
+            bg = colors.none,
           }
         end,
       })

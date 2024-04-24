@@ -1,6 +1,6 @@
 local jdtls_ok, jdtls = pcall(require, "jdtls")
 if not jdtls_ok then
-  vim.notify "JDTLS not found, install with `:MasonInstall jdtls`"
+  vim.notify("JDTLS not found, install with `:MasonInstall jdtls`")
   return
 end
 
@@ -8,12 +8,12 @@ end
 local JDTLS_LOCATION = vim.fn.stdpath("data") .. "/mason/packages/jdtls"
 
 -- Data directory - change it to your liking
-local HOME = os.getenv "HOME"
+local HOME = os.getenv("HOME")
 local WORKSPACE_PATH = HOME .. "/workspace/java/"
 
 -- Only for Linux and Mac
 local SYSTEM = "linux"
-if vim.fn.has "mac" == 1 then
+if vim.fn.has("mac") == 1 then
   SYSTEM = "mac"
 end
 
@@ -44,14 +44,16 @@ local config = {
     "--add-opens",
     "java.base/java.lang=ALL-UNNAMED",
     "-jar",
-    vim.fn.glob(JDTLS_LOCATION .. "/plugins/org.eclipse.equinox.launcher_*.jar"),
+    vim.fn.glob(
+      JDTLS_LOCATION .. "/plugins/org.eclipse.equinox.launcher_*.jar"
+    ),
     "-configuration",
     JDTLS_LOCATION .. "/config_" .. SYSTEM,
     "-data",
     workspace_dir,
   },
 
-  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  capabilities = require("cmp_nvim_lsp").default_capabilities(),
   root_dir = root_dir,
 
   -- Here you can configure eclipse.jdt.ls specific settings
@@ -80,7 +82,8 @@ local config = {
       format = {
         enabled = true,
         settings = {
-          url = vim.fn.stdpath "config" .. "/lang-servers/intellij-java-google-style.xml",
+          url = vim.fn.stdpath("config")
+            .. "/lang-servers/intellij-java-google-style.xml",
           profile = "GoogleStyle",
         },
       },

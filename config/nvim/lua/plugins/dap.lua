@@ -183,7 +183,8 @@ dap.adapters.python = {
 dap.adapters.cppdbg = {
   id = "cppdbg",
   type = "executable",
-  command = vim.fn.stdpath("data") .. "/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7",
+  command = vim.fn.stdpath("data")
+    .. "/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7",
 }
 
 dap.adapters.java = function(callback)
@@ -201,7 +202,8 @@ dap.adapters.firefox = {
   type = "executable",
   command = "node",
   args = {
-    os.getenv("HOME") .. "/mason/packages/vscode-firefox-debug/dist/adapter.bundle.js",
+    os.getenv("HOME")
+      .. "/mason/packages/vscode-firefox-debug/dist/adapter.bundle.js",
   },
 }
 

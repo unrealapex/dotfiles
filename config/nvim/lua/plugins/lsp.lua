@@ -111,22 +111,22 @@ require("mason-lspconfig").setup_handlers({
 
 -- diagnostic text highlight is given to the line number
 for _, diag in ipairs({ "Error", "Warn", "Info", "Hint" }) do
-    vim.fn.sign_define("DiagnosticSign" .. diag, {
-        text = "",
-        texthl = "DiagnosticSign" .. diag,
-        linehl = "",
-        numhl = "DiagnosticSign" .. diag,
-    })
+  vim.fn.sign_define("DiagnosticSign" .. diag, {
+    text = "",
+    texthl = "DiagnosticSign" .. diag,
+    linehl = "",
+    numhl = "DiagnosticSign" .. diag,
+  })
 end
 
 vim.diagnostic.config({
-    underline = true,
-    update_in_insert = false,
-    virtual_text = {
-      spacing = 4,
-      source = "if_many",
-      prefix = "●",
-  }
+  underline = true,
+  update_in_insert = false,
+  virtual_text = {
+    spacing = 4,
+    source = "if_many",
+    prefix = "●",
+  },
 })
 
 -- NOTE: maybe disable gutter signs entirely
