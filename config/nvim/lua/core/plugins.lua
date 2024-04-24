@@ -392,8 +392,10 @@ return {
   -- linting
   {
     "mfussenegger/nvim-lint",
-    init = function()
-      vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave", "Filetype" }, {
+    event = "LspAttach",
+    config = function()
+      require("plugins.lint")
+      vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
         callback = function()
           -- FIXME: this condition does not work
           if not vim.bo.filetype == "" then
@@ -401,9 +403,6 @@ return {
           end
         end,
       })
-    end,
-    config = function()
-      require("plugins.lint")
     end,
   },
   -- java lsp stuff
