@@ -240,7 +240,7 @@ return {
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    event = "LspAttach",
     config = function()
       require("plugins.lsp")
     end,
