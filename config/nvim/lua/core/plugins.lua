@@ -213,6 +213,7 @@ return {
     cmd = { "ZenMode" },
     config = true,
   },
+  -- FIXME: this plugin doesn't work with treesitter
   -- parentheses colorizer
   {
     "junegunn/rainbow_parentheses.vim",
