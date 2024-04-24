@@ -121,25 +121,14 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     cond = vim.fn.executable("git") == 1,
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("plugins.gitsigns")
     end,
-    init = function ()
-      vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
-        group = vim.api.nvim_create_augroup("load_gitsigns", { clear = true }),
-        callback = function ()
-          -- FIXME: handle edited files being in different working directory
-          if os.execute("git rev-parse --show-toplevel 2> /dev/null") == 0 then
-              require("lazy").load({ plugins = { "gitsigns.nvim" } })
-          end
-        end
-      })
-    end
   },
   -- conveniently run git commands from vim
   {
     "tpope/vim-fugitive",
-    dependencies = "lewis6991/gitsigns.nvim",
     cond = vim.fn.executable("git") == 1,
     cmd = {
       "G",
