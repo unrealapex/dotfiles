@@ -167,6 +167,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
+    -- FIXME: use a better event
     event = { "BufReadPost", "BufNewFile" },
     config = true,
   },
