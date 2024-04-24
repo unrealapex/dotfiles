@@ -360,8 +360,9 @@ return {
         function()
           require("conform").format()
         end,
+        mode = { "n", "v" },
       },
-      mode = { "n", "v" },
+    },
       opts = {
         formatters_by_ft = {
           lua = { "stylua" },
@@ -384,7 +385,6 @@ return {
         formatters = {
           shfmt = {
             prepend_args = { "--indent", "2" },
-          },
         },
       },
     },
