@@ -482,11 +482,6 @@ return {
       require("plugins.treesitter")
     end,
   },
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = "nvim-treesitter/nvim-treesitter",
-  },
   -- automatically close pairs
   {
     "windwp/nvim-autopairs",
