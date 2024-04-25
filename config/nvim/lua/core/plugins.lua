@@ -768,11 +768,10 @@ return {
   {
     "echasnovski/mini.ai",
     dependencies = "nvim-treesitter/nvim-treesitter-textobjects",
-    -- keys = {
-    --   { "a", mode = { "x", "o" } },
-    --   { "i", mode = { "x", "o" } },
-    -- },
-    event = { "BufReadPost", "BufNewFile" },
+    keys = {
+      { "a", mode = { "x", "o" } },
+      { "i", mode = { "x", "o" } },
+    },
     opts = function()
       local ai = require("mini.ai")
       return {
