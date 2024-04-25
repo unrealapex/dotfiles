@@ -162,13 +162,21 @@ return {
   -- surround
   {
     "kylechui/nvim-surround",
-
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    -- FIXME: use a better event
-    event = { "BufReadPost", "BufNewFile" },
+    keys = {
+      "ys",
+      "yS",
+      "ds",
+      "cs",
+      "cS",
+      { "S", mode = "v" },
+      { "gS", mode = "v" },
+      { "<C-g>s", mode = "i" },
+      { "<C-g>S", mode = "i" },
+    },
     config = true,
   },
   -- repeat plugin commands
@@ -762,6 +770,7 @@ return {
   -- additional text objects
   {
     "echasnovski/mini.ai",
+    dependencies = "nvim-treesitter/nvim-treesitter-textobjects",
     -- keys = {
     --   { "a", mode = { "x", "o" } },
     --   { "i", mode = { "x", "o" } },
