@@ -26,16 +26,28 @@ require("mason-lspconfig").setup({
   },
 })
 
--- FIXME: ensure these formatters are installed
---  black
---  clang-format
---  google-java-format
---  isort
---  jq
---  prettier
---  prettierd
---  shfmt
---  stylua
+local registry = require("mason-registry")
+
+local ensure_installed_formatters = {
+  "black",
+  "clang-format",
+  "google-java-format",
+  "isort",
+  "jq",
+  "prettier",
+  "prettierd",
+  "shfmt",
+  "stylua",
+}
+
+for _, pkg_name in ipairs(ensure_installed_formatters) do
+  local ok, pkg = pcall(registry.get_package, pkg_name)
+  if ok then
+    if not pkg:is_installed() then
+       pkg:install()
+    end
+  end
+end
 
 -- Setup lspconfig.
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
