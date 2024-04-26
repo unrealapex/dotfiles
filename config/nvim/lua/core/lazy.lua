@@ -30,6 +30,7 @@ require("lazy").setup("core.plugins", {
     rtp = {
       disabled_plugins = {
         "2html_plugin",
+        "tohtml",
         "getscript",
         "getscriptPlugin",
         "gzip",
@@ -51,6 +52,7 @@ require("lazy").setup("core.plugins", {
         "optwin",
         "bugreport",
         "ftplugin",
+        "tutor",
       },
     },
   },
