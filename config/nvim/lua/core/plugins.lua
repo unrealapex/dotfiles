@@ -287,6 +287,10 @@ return {
       {
         "williamboman/mason-lspconfig.nvim",
         dependencies = "neovim/nvim-lspconfig",
+        cmd = {
+          "LspInstall",
+          "LspUninstall",
+        },
         opts = {
           automatic_installation = true,
         },
