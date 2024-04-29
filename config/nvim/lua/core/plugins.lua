@@ -261,6 +261,7 @@ return {
       "LspRestart",
       "LspLog",
     },
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("plugins.lsp")
     end,
