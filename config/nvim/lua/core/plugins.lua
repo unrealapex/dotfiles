@@ -254,6 +254,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     event = "LspAttach",
+    cmd = {
+      "LspInfo",
+      "LspStart",
+      "LspStop",
+      "LspRestart",
+      "LspLog",
+    },
     config = function()
       require("plugins.lsp")
     end,
