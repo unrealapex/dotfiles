@@ -124,7 +124,7 @@ return {
     cond = vim.fn.executable("git") == 1,
     -- NOTE: loading this plugin is faster than checking if current buffer is
     -- under version control so just load on buffer events
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("plugins.gitsigns")
     end,
@@ -261,7 +261,7 @@ return {
       "LspRestart",
       "LspLog",
     },
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("plugins.lsp")
     end,
