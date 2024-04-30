@@ -144,6 +144,7 @@ xdotool
 xf86-input-libinput
 xorg
 xorg-xinit
+xorg-xkill
 xss-lock
 yt-dlp
 zathura
