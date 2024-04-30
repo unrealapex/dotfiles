@@ -192,8 +192,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 " Vim Commentary
 Plug 'tpope/vim-commentary'
-" indent guides
-Plug 'yggdroot/indentline'
 " Goyo
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 " colored parantheses
