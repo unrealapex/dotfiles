@@ -253,7 +253,7 @@ return {
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
-    event = "LspAttach",
+    event = { "BufReadPost", "BufNewFile" },
     cmd = {
       "LspInfo",
       "LspStart",
@@ -261,7 +261,6 @@ return {
       "LspRestart",
       "LspLog",
     },
-    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("plugins.lsp")
     end,
