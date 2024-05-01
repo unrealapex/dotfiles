@@ -124,7 +124,7 @@ return {
     cond = vim.fn.executable("git") == 1,
     -- NOTE: loading this plugin is faster than checking if current buffer is
     -- under version control so just load on buffer events
-    event = { "BufReadPost", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     config = function()
       require("plugins.gitsigns")
     end,
@@ -184,7 +184,7 @@ return {
   -- repeat plugin commands
   {
     "tpope/vim-repeat",
-    event = { "BufReadPost", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile", "BufWritePre" },
   },
   -- git commit browser
   {
@@ -253,7 +253,7 @@ return {
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     cmd = {
       "LspInfo",
       "LspStart",
@@ -476,7 +476,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     cond = (
       vim.fn.executable("git") == 1
       or (vim.fn.executable("curl") == 1 and vim.fn.executable("tar") == 1)
