@@ -312,6 +312,11 @@ return {
     dependencies = "hrsh7th/nvim-cmp",
   },
   {
+    "hrsh7th/cmp-buffer",
+    event = { "CmdlineEnter", "InsertEnter" },
+    dependencies = "hrsh7th/nvim-cmp",
+  },
+  {
     "hrsh7th/cmp-path",
     event = { "CmdlineEnter", "InsertEnter" },
     dependencies = "hrsh7th/nvim-cmp",
