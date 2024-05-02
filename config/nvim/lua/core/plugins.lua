@@ -348,17 +348,20 @@ return {
     dependencies = "hrsh7th/nvim-cmp",
   },
   {
-    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip",
     event = "InsertEnter",
-    config = function()
-      require("luasnip")
-    end,
     dependencies = {
+      "hrsh7th/nvim-cmp",
       {
-        "saadparwaiz1/cmp_luasnip",
-        "rafamadriz/friendly-snippets",
+        "L3MON4D3/LuaSnip",
+        dependencies = {
+          "rafamadriz/friendly-snippets",
+          config = function()
+            require("luasnip/loaders/from_vscode").lazy_load()
+          end,
+        },
         config = function()
-          require("luasnip/loaders/from_vscode").lazy_load()
+          require("luasnip")
         end,
       },
     },
