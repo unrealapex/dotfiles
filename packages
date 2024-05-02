@@ -26,7 +26,16 @@ dkms
 dnsmasq
 dunst
 element-desktop
+<<<<<<< Updated upstream
 faudio
+||||||| Stash base
+=======
+fcitx5
+fcitx5-configtool
+fcitx5-gtk
+fcitx5-mozc-ut
+fcitx5-qt
+>>>>>>> Stashed changes
 fd
 feh
 fff
@@ -62,7 +71,6 @@ gutenprint
 guvcview
 htop
 hyperfine
-ibus-mozc
 imagemagick
 inkscape
 innoextract
