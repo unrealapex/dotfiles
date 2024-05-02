@@ -90,7 +90,7 @@ vim.cmd.highlight("clear SignColumn")
 -- set the mapleader to space
 vim.g.mapleader = " "
 
-vim.g["rainbow#pairs"] = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
+-- vim.g["rainbow#pairs"] = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
 
 local prosed = false
 -- make writing in neovim more pleasant
