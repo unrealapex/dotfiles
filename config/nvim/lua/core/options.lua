@@ -87,10 +87,6 @@ vim.cmd.highlight("clear SignColumn")
 
 --globals
 
--- enable filetype.lua
-vim.g.do_filetype_lua = 1
-vim.g.did_load_filetypes = 0
-
 -- set the mapleader to space
 vim.g.mapleader = " "
 
