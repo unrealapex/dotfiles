@@ -1,0 +1,22 @@
+#!/bin/bash
+# whole pipeline fails if one process has an exit code that is non zero
+set -o pipefail
+
+$(command -v fcitx5) || exit
+
+input_methods=$(grep "Name=" ~/.config/fcitx5/profile | cut -d "=" -f2) || exit
+
+# TODO: make sure this is evaluated correctly
+if [[ $(fcitx5-remote --check) == 1 ]]; then
+  fcitx5 -d
+fi
+
+fcitx5-remote -s $(echo "$input_methods" | dmenu) || exit
+
+current_method=$(dbus-send --session --print-reply \
+  --dest=org.fcitx.Fcitx5 \
+  /controller \
+  org.fcitx.Fcitx.Controller1.CurrentInputMethod \
+  | grep -Po '(?<=")[^"]+')
+
+notify-send "ime: switched to $current_method"

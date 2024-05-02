@@ -31,11 +31,10 @@ export FFF_FAV9=~/.xinitrc
 export WALLPAPER="$HOME/.dotfiles/sakura.png"
 # export MANGOHUD=1
 
-# set ibus as input method framework
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export GLFW_IM_MODULE=ibus
+# set fcitx as input method framework
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 export W3M_DIR="$XDG_CONFIG_HOME/w3m" 
 export WWW_HOME='https://lite.duckduckgo.com/lite'

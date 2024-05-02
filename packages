@@ -24,6 +24,12 @@ dkms
 dnsmasq
 dunst
 element-desktop
+faudio
+fcitx5
+fcitx5-configtool
+fcitx5-gtk
+fcitx5-mozc-ut
+fcitx5-qt
 fd
 feh
 fff
@@ -49,7 +55,6 @@ gstreamer-vaapi
 guvcview
 htop
 hyperfine
-ibus-mozc
 imagemagick
 inkscape
 irssi
