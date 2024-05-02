@@ -39,7 +39,7 @@ fps_num=1
 #fps denominator (def. 25)
 fps_denom=60
 #audio device index (-1 - api default)
-audio_device=11
+audio_device=10
 #video fx mask 
 video_fx=0x0
 #audio fx mask 
