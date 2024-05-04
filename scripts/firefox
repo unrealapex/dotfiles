@@ -48,6 +48,7 @@ user_pref("privacy.history.custom", false);
 user_pref("browser.eme.ui.enabled", false);
 user_pref("media.eme.enabled", false);
 user_pref("ui.key.menuAccessKeyFocuses", false);
+user_pref("ui.prefersReducedMotion", 1);
 ' >> "$temp_file"
 
 # move user.js to default firefox profile
