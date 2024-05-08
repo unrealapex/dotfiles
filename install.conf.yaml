@@ -43,6 +43,7 @@
       description: Installing packages
       stdout: true
       stderr: true
+    - [xdg-user-dirs-update, Creating default user directories]
     - 
       command: git clone https://git.sr.ht/~unrealapex/dwm ~/.config/dwm; cd ~/.config/dwm; sudo make clean install; cd -
       description: Building dwm
@@ -80,5 +81,4 @@
     - [bash scripts/secrets, Creating secrets files]
     - [bash scripts/ufw, Configuring UFW]
     - [chsh -s $(which zsh), Making zsh the default shell]
-    - [xdg-user-dirs-update, Creating default user directories]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
