@@ -13,6 +13,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export MANPAGER="sh -c 'col --no-backspaces --spaces | bat --language man --style=plain'"
 export MANROFFOPT="-c"
 export LESS="--ignore-case"
+# make less more friendly for non-text input files, see lesspipe(1)
+export LESSOPEN="|lesspipe %s"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
 # NOTE: some quotation issue with --place is causing image preview to fail :/
 export FZF_CTRL_T_OPTS="
