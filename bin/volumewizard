@@ -1,27 +1,27 @@
 #!/bin/bash
 
 send_notification() {
-  volume=$(pamixer --get-volume)
-  if eval "$(pamixer --get-mute)"; then
+  volume=$(amixer get Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')
+  if $(amixer get Master | grep -q off); then
     dunstify --replace 9993 "volume: muted"
   else
-    dunstify --replace 9993 "volume: $volume%"
+    dunstify --replace 9993 "volume: $volume"
   fi
 }
 
 case $1 in
 up)
   # Set the volume on (if it was muted)
-  pamixer --unmute
-  pamixer --increase 2
+  amixer set Master unmute
+  amixer set Master 2%+
 
   ;;
 down)
-  pamixer --unmute
-  pamixer --decrease 2
+  amixer set Master unmute
+  amixer set Master 2%-
   ;;
 mute)
-  pamixer --toggle-mute
+  amixer set Master toggle
   ;;
 esac
 
