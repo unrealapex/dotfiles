@@ -1,0 +1,29 @@
+#!/bin/bash
+
+send_notification() {
+  volume=$(amixer get Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')
+  if "$(amixer get Master | grep -q off)"; then
+    dunstify --replace 9993 "volume: muted"
+  else
+    dunstify --replace 9993 "volume: $volume"
+  fi
+}
+
+case $1 in
+up)
+  # Set the volume on (if it was muted)
+  amixer set Master unmute
+  amixer set Master 2%+
+
+  ;;
+down)
+  amixer set Master unmute
+  amixer set Master 2%-
+  ;;
+mute)
+  # amixer set Master toggle
+  notify-send "foo"
+  ;;
+esac
+
+send_notification

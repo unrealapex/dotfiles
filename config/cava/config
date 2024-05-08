@@ -71,7 +71,7 @@ framerate = 60
 ; method = pulse
 ; source = auto
 
-method = pipewire
+method = alsa
 source = auto
 
 ; method = alsa

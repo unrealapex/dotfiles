@@ -46,7 +46,6 @@ git-delta
 glow
 gnu-free-fonts
 gst-libav
-gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
@@ -66,8 +65,6 @@ lib32-mesa
 lib32-ncurses
 lib32-ocl-icd
 lib32-opencl-icd-loader
-lib32-pipewire
-lib32-pipewire-jack
 lib32-vulkan-icd-loader
 libadwaita
 libnotify
@@ -112,11 +109,6 @@ pandoc-bin
 pastel
 perl-image-exiftool
 pfetch
-pipewire
-pipewire-alsa
-pipewire-audio
-pipewire-jack
-pipewire-pulse
 playerctl
 pulsemixer
 qemu
