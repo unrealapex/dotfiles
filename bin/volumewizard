@@ -1,27 +1,28 @@
 #!/bin/bash
 
 send_notification() {
-  volume=$(amixer get Master | grep 'Left:' | awk -F'[][]' '{ print $2 }')
+  volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
+  # FIXME: get this using wpctl
   if $(amixer get Master | grep -q off); then
     dunstify --replace 9993 "volume: muted"
   else
-    dunstify --replace 9993 "volume: $volume"
+    dunstify --replace 9993 "volume: $volume%"
   fi
 }
 
 case $1 in
 up)
   # Set the volume on (if it was muted)
-  amixer set Master unmute
-  amixer set Master 2%+
+  wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
 
   ;;
 down)
-  amixer set Master unmute
-  amixer set Master 2%-
+  wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
   ;;
 mute)
-  amixer set Master toggle
+  wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
   ;;
 esac
 
