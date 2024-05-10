@@ -59,7 +59,7 @@ xsetroot -cursor_name left_ptr
 # xrdb "$HOME"/.Xresources
 
 
-xss-lock --transfer-sleep-lock -- slock --nofork &
+xss-lock --transfer-sleep-lock -- slock &
 xautolock -time 10 -locker "idle-lock" &
 
 feh --bg-fill "$WALLPAPER"
