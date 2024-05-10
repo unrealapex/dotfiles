@@ -65,6 +65,8 @@ xss-lock --transfer-sleep-lock -- slock &
 
 feh --bg-fill "$WALLPAPER"
 
+gentoo-pipewire-launcher &
+
 playerctld daemon
 
 # TODO: find something less bloated than ibus
