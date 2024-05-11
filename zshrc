@@ -136,8 +136,8 @@ open() {
     return 1
   fi
 
-  for file in "$@"; do
-    xdg-open $(realpath "$file" 2> /dev/null || echo "$file")
+  for uri in "$@"; do
+    xdg-open $(realpath "$uri" 2> /dev/null || echo "$uri")
   done
 }
 
