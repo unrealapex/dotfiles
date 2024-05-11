@@ -130,6 +130,7 @@ alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 
 alias irssi="irssi --config=<((cat $XDG_CONFIG_HOME/irssi/credentials && cat $XDG_CONFIG_HOME/irssi/config)) --home="$XDG_DATA_HOME"/irssi"
 alias bc="bc --mathlib --quiet"
 
+# wrapper for xdg-open to open multiple uris
 open() {
   if [[ "$#" -eq 0 ]]; then
     echo "Usage: open [file|directory|protocol]"
