@@ -138,7 +138,7 @@ open() {
   fi
 
   for uri in "$@"; do
-    xdg-open $(realpath "$uri" 2> /dev/null || echo "$uri")
+    xdg-open $uri
   done
 }
 
