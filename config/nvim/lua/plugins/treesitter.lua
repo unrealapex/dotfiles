@@ -27,6 +27,7 @@ configs.setup({
     "luap",
     "markdown",
     "markdown_inline",
+    "perl",
     "python",
     "query",
     "r",
