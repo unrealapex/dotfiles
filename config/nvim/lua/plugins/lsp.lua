@@ -13,24 +13,7 @@ require("mason").setup({
 require("mason-lspconfig").setup({
   ensure_installed = {
     "bashls",
-    "clangd",
-    "cssls",
-    "html",
-    "jdtls",
-    "jsonls",
-    "lua_ls",
-    "pyright",
-    "sqlls",
-    "tsserver",
-    "vimls",
-  },
-})
-
-local registry = require("mason-registry")
-
-local ensure_installed_formatters = {
-  "black",
-  "clang-format",
+    "clang-format",
   "google-java-format",
   "isort",
   "jq",
@@ -44,7 +27,7 @@ for _, pkg_name in ipairs(ensure_installed_formatters) do
   local ok, pkg = pcall(registry.get_package, pkg_name)
   if ok then
     if not pkg:is_installed() then
-       pkg:install()
+      pkg:install()
     end
   end
 end
@@ -118,6 +101,10 @@ require("mason-lspconfig").setup_handlers({
       "clangd",
       "--offset-encoding=utf-16",
     },
+  }),
+
+  lspconfig["bashls"].setup({
+    filetypes = { "sh", "zsh" },
   }),
 })
 
