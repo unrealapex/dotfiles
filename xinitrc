@@ -69,9 +69,6 @@ gentoo-pipewire-launcher &
 
 playerctld daemon
 
-# TODO: find something less bloated than ibus
-# ibus-daemon --replace --xim --daemonize
-
 keepassxc &
 
 unclutter --fork
@@ -83,5 +80,5 @@ done &
 
 while true; do
     # Log stderror to a file 
-    dwm 2> /tmp/dwm.log
+ dbus-launch --exit-with-session   dwm 2> /tmp/dwm.log
 done
