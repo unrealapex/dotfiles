@@ -32,7 +32,7 @@
       path: bin/*
     ~/.themes:
       glob: true
-      path: themes/*
+      path: gtk/*
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
