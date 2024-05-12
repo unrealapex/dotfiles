@@ -2,8 +2,7 @@
 
 send_notification() {
   volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
-  # FIXME: get this using wpctl
-  if $(amixer get Master | grep -q off); then
+  if $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "MUTED"); then
     dunstify --replace 9993 "volume: muted"
   else
     dunstify --replace 9993 "volume: $volume%"
