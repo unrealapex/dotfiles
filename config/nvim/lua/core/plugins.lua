@@ -394,7 +394,6 @@ return {
       },
     },
     opts = {
-      -- TODO: make sure these formatters are installed
       formatters_by_ft = {
         lua = { "stylua" },
         javascript = { "prettierd", "prettier" },
