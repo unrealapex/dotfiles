@@ -13,7 +13,23 @@ require("mason").setup({
 require("mason-lspconfig").setup({
   ensure_installed = {
     "bashls",
-    "clang-format",
+    "clangd",
+    "cssls",
+    "html",
+    "jdtls",
+    "jsonls",
+    "lua_ls",
+    "pyright",
+    "sqlls",
+    "tsserver",
+    "vimls",
+  },
+})
+
+
+local ensure_installed_formatters = {
+  "black",
+  "clang-format",
   "google-java-format",
   "isort",
   "jq",
