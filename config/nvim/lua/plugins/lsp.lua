@@ -40,7 +40,7 @@ local ensure_installed_formatters = {
 }
 
 for _, pkg_name in ipairs(ensure_installed_formatters) do
-  local ok, pkg = pcall(registry.get_package, pkg_name)
+  local ok, pkg = pcall(require("mason-registry").get_package, pkg_name)
   if ok then
     if not pkg:is_installed() then
       pkg:install()
