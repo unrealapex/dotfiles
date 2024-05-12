@@ -56,8 +56,6 @@ gentoo-pipewire-launcher &
 
 playerctld daemon
 
-keepassxc &
-
 unclutter --fork
 
 while true; do
