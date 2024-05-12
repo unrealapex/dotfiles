@@ -1,4 +1,4 @@
-#Guvcview 2.0.8 config file
+#Guvcview 2.1.0 config file
 
 #video input width
 width=640
@@ -39,11 +39,14 @@ fps_num=1
 #fps denominator (def. 25)
 fps_denom=60
 #audio device index (-1 - api default)
-audio_device=10
+audio_device=3
 #video fx mask 
 video_fx=0x0
+#fx binary filter treshold (0x0 to 0xff): default=0x7f (50%)
+fx_bin_treshold=0x7f
 #audio fx mask 
 audio_fx=0x0
 #OSD mask 
 osd_mask=0x0
 crosshair_color=0xff00
+crosshair_size=24
