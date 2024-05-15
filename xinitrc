@@ -58,6 +58,8 @@ playerctld daemon
 
 unclutter --fork
 
+picom --daemon
+
 while true; do
   xsetroot -name "$(date +"%m/%d %I:%M %P")"
   sleep 1
