@@ -202,13 +202,6 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
   },
-  -- commenter
-  {
-    "numToStr/Comment.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    keys = { "gc", "gb", { "gc", mode = "v" }, { "gb", mode = "v" } },
-    config = true,
-  },
   -- zen mode
   {
     "folke/zen-mode.nvim",
