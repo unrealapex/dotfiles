@@ -17,4 +17,5 @@ jq --raw-output ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
   | xclip -selection clipboard \
   || exit
 
+# FIXME: make notification consistent with notification text from other scripts
 notify-send "$(xclip -o -selection clipboard) copied to clipboard."
