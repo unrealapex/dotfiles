@@ -52,6 +52,8 @@ xss-lock --transfer-sleep-lock -- slock &
 
 feh --bg-fill "$WALLPAPER"
 
+eval "$(dbus-launch --sh-syntax --exit-with-session)"
+
 gentoo-pipewire-launcher &
 
 playerctld daemon
@@ -67,5 +69,5 @@ done &
 
 while true; do
   # Log stderror to a file
-  dbus-launch --exit-with-session dwm 2>/tmp/dwm.log
+  dwm 2>/tmp/dwm.log
 done
