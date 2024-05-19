@@ -13,7 +13,7 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 
 -- load lazy
-require("lazy").setup("plugins.plugins", {
+require("lazy").setup("plugins", {
   defaults = { lazy = true },
   change_detection = {
     notify = false,
