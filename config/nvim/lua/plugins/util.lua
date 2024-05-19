@@ -6,7 +6,7 @@ return {
     "tpope/vim-sleuth",
     event = { "BufReadPre", "BufNewFile" },
   },
-{
+  {
     "folke/persistence.nvim",
     event = "BufReadPre",
     keys = {

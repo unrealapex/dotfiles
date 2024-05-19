@@ -266,7 +266,11 @@ return {
             package.loaded.gitsigns.diffthis("~")
           end)
           -- show deleted lines
-          vim.keymap.set("n", "<leader>td", package.loaded.gitsigns.toggle_deleted)
+          vim.keymap.set(
+            "n",
+            "<leader>td",
+            package.loaded.gitsigns.toggle_deleted
+          )
 
           -- in hunk text object
           vim.keymap.set({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")

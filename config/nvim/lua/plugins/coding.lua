@@ -75,8 +75,8 @@ return {
           -- { name = "ultisnips" }, -- For ultisnips users.
           -- { name = "snippy" }, -- For snippy users.
         }, {
-            { name = "buffer" },
-          }),
+          { name = "buffer" },
+        }),
       })
 
       -- Set configuration for specific filetype.
@@ -84,8 +84,8 @@ return {
         sources = cmp.config.sources({
           { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
         }, {
-            { name = "buffer" },
-          }),
+          { name = "buffer" },
+        }),
       })
 
       -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
@@ -102,8 +102,8 @@ return {
         sources = cmp.config.sources({
           { name = "path" },
         }, {
-            { name = "cmdline" },
-          }),
+          { name = "cmdline" },
+        }),
       })
     end,
     dependencies = {

@@ -2,7 +2,7 @@
 
 return {
   -- linting
-{
+  {
     "mfussenegger/nvim-lint",
     event = "LspAttach",
     opts = {
@@ -32,5 +32,5 @@ return {
         }
       )
     end,
-  }
+  },
 }

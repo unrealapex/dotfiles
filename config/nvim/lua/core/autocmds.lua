@@ -79,7 +79,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-
 -- render whitespace in visual mode
 local show_whitespace_group =
   vim.api.nvim_create_augroup("show_whitespace", { clear = true })

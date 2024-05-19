@@ -282,7 +282,12 @@ return {
 
       vim.fn.sign_define(
         "DapBreakpoint",
-        { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" }
+        {
+          text = "",
+          texthl = "DiagnosticSignError",
+          linehl = "",
+          numhl = "",
+        }
       )
       vim.fn.sign_define(
         "DapStopped",
@@ -343,7 +348,8 @@ return {
       }
       dap.adapters.python = {
         type = "executable",
-        command = vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python",
+        command = vim.fn.stdpath("data")
+          .. "/mason/packages/debugpy/venv/bin/python",
         args = { "-m", "debugpy.adapter" },
       }
 
