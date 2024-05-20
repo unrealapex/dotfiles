@@ -6,10 +6,7 @@ $(command -v fcitx5) || exit
 
 input_methods=$(grep "Name=" ~/.config/fcitx5/profile | cut -d "=" -f2) || exit
 
-# TODO: make sure this is evaluated correctly
-if [[ $(fcitx5-remote --check) == 1 ]]; then
-  fcitx5 -d
-fi
+fcitx5-remote --check || fcitx5 -d
 
 fcitx5-remote -s $(echo "$input_methods" | dmenu) || exit
 
