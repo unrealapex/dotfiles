@@ -122,8 +122,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
-# clean up orphaned packages
-alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 # chill study music with lofi girl
 alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
