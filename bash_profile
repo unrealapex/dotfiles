@@ -4,10 +4,10 @@
 
 
 # default programs
-export EDITOR=/usr/bin/nvim
-export TERMINAL="kitty"
-export TERMINAL_PROG="kitty"
-export BROWSER=/usr/bin/firefox
+export EDITOR="nvim"
+export TERMINAL="st"
+export TERMINAL_PROG="st"
+export BROWSER="firefox"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
