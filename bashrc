@@ -91,9 +91,6 @@ alias l='ls -CF'
 
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
-alias icat='kitty +kitten icat'
-alias connect="kitty +kitten ssh"
-alias theme="kitty +kitten themes --reload-in=all"
 # clean up orphaned packages
 alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
