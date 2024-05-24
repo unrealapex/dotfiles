@@ -3,8 +3,8 @@
 # NOTE: make sure perl-lwp-protocol-https is installed or scripts won't load
 
 # create directories
-mkdir --parent ~/.config/irssi/scripts/autorun/ /tmp/irssi-scripts/
-scripts_dir=~/.config/irssi/scripts/
+mkdir --parent ~/.local/share/irssi/scripts/autorun/ /tmp/irssi-scripts/
+scripts_dir=~/.local/share/irssi/scripts/
 tmp_dir=/tmp/irssi-scripts
 url="https://raw.githubusercontent.com/irssi/scripts.irssi.org/master/scripts/"
 scripts=(nickcolor)
