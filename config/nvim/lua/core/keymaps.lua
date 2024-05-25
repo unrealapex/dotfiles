@@ -66,9 +66,3 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 -- don't lose selection when shifting text
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
-
--- NOTE: original gx map does not work without netrw, see :help netrw-gx
--- lua implementation of gx
-vim.keymap.set("n", "gx", function()
-  vim.fn.jobstart("xdg-open " .. vim.fn.expand("<cfile>"), { detach = true })
-end)

@@ -42,8 +42,6 @@ require("lazy").setup("plugins", {
         "tar",
         "tarPlugin",
         "rrhelper",
-        "vimball",
-        "vimballPlugin",
         "zip",
         "zipPlugin",
         "rplugin",
