@@ -139,8 +139,6 @@ return {
           },
         },
       })
-      -- hack to make rainbow_parentheses work with treesitter
-      vim.api.nvim_set_hl(0, "@punctuation.bracket", { link = "" })
     end,
   },
 }
