@@ -174,3 +174,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias ...='../..'
 alias ....='../../..'
 alias .....='../../../..'
+
+# export NVM_DIR="$HOME/.config/nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
