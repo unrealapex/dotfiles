@@ -1,6 +1,0 @@
-#!/bin/bash
-notify-send "autorandr: monitor change detected"
-
-
-feh --bg-fill "$WALLPAPER"
-
