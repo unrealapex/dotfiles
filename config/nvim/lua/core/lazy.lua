@@ -24,7 +24,6 @@ require("lazy").setup("plugins", {
       not_loaded = "",
       task = " ",
     },
-    border = "rounded",
   },
   performance = {
     rtp = {
