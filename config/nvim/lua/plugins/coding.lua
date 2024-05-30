@@ -171,14 +171,6 @@ return {
     },
   },
 
-  -- commenter
-  {
-    "numToStr/Comment.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    keys = { "gc", "gb", { "gc", mode = "v" }, { "gb", mode = "v" } },
-    config = true,
-  },
-
   -- automatically close pairs
   {
     "windwp/nvim-autopairs",
