@@ -65,7 +65,6 @@
       stdout: true
       stderr: true
     - [bash scripts/microcode, Installing appropriate microcode]
-    - [bash scripts/zsh-rehash, Setting up Z Shell command rehashing]
     - [bash scripts/no-mouse-accel, Disabling mouse acceleration]
     - [bash scripts/kill-x, Enabling killing of Xorg with traditional shortcut]
     - [bash scripts/bluetooth, Enabling bluetooth]
