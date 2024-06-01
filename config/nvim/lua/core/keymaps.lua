@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>cd", function()
 end)
 
 -- vanilla buffer switcher
--- vim.keymap.set('n', '<leader>b', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
+-- vim.keymap.set('n', '<leader><leader>', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
 
 -- find and replace on current selection
 -- written in lua
