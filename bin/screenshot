@@ -10,8 +10,7 @@ full)
         maim --quality 10 "$image_path" || exit
         ;;
 *)
-        notify-send "screenshot: unknown argument given"
-        notify-send "USAGE: screenshot [selection|main]"
+        echo "USAGE: screenshot [selection|main]"
         exit
         ;;
 esac
