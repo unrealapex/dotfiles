@@ -54,7 +54,7 @@ require("lazy").setup("plugins", {
     },
   },
   install = {
-    colorscheme = { vim.g.colors_name, "habamax" },
+    colorscheme = { vim.g.colors_name, "default" },
   },
 })
 
