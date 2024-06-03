@@ -81,7 +81,9 @@ vim.opt.wrap = false
 -- syntax highlighting
 vim.cmd.syntax("on")
 
-vim.cmd.highlight("Normal ctermbg=NONE guibg=NONE")
+-- NOTE: highlights get overridden by themes, so maybe don't set this
+-- make gutter match background color
+vim.cmd.highlight("clear SignColumn")
 
 --globals
 
