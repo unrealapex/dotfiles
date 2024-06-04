@@ -23,6 +23,9 @@ down)
 mute)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
   ;;
+*)
+  echo "volumewizard [up|down|mute]"
+  ;;
 esac
 
 send_notification
