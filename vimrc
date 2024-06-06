@@ -184,7 +184,6 @@ Plug 'tpope/vim-unimpaired'
 " show git changes in gutter
 Plug 'airblade/vim-gitgutter'
 Plug 'romainl/vim-cool'
-Plug 'junegunn/gv.vim'
 Plug 'wellle/context.vim'
 " git integration
 Plug 'tpope/vim-fugitive'
@@ -202,17 +201,9 @@ Plug 'tpope/vim-repeat'
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" better movement
-Plug 'easymotion/vim-easymotion'
-Plug 'mattn/emmet-vim', {'for': ['html', 'css']}
 " icons
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
-" enable IndentLine
-let g:indentLine_enabled = 1
-
-nmap s <Plug>(easymotion-s2)
 
 " enable RainbowParentheses
 augroup rainbow_parens
@@ -238,7 +229,6 @@ let g:coc_global_extensions = [
 \  'coc-tsserver',
 \  'coc-css',
 \  'coc-json',
-\  'coc-highlight',
 \  'coc-snippets',
 \  'coc-lightbulb',
 \  'coc-calc',
@@ -273,10 +263,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-
-" highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
 nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
