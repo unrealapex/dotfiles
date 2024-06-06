@@ -16,7 +16,6 @@ export LESS="--ignore-case"
 # make less more friendly for non-text input files, see lesspipe(1)
 export LESSOPEN="|lesspipe %s"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
-# NOTE: some quotation issue with --place is causing image preview to fail :/
 export FZF_CTRL_T_OPTS="
   --preview 'fzf-preview {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
