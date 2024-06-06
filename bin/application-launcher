@@ -3,7 +3,6 @@
 # paths where desktop entries are located
 entry_locations=(~/.local/share/applications/ /usr/share/applications/)
 
-# TODO: perhaps get application name directly from the desktop entry
 # TODO: sort by application popularity
 
 # get application names
