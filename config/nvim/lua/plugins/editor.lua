@@ -322,12 +322,4 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
   },
-
-  -- markdown preview
-  {
-    "ellisonleao/glow.nvim",
-    cond = vim.fn.executable("glow") == 1,
-    cmd = "Glow",
-    config = true,
-  },
 }
