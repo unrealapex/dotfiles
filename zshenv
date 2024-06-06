@@ -38,7 +38,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks 
-export W3M_DIR="$XDG_CONFIG_HOME/w3m" 
 export WWW_HOME='https://lite.duckduckgo.com/lite'
 
 export PATH
