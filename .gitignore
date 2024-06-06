@@ -3,4 +3,4 @@ config/irssi/scripts
 config/tmux/plugins
 config/ncmpcpp/error.log
 config/elinks/globhist
-config/git/gitconfig_local
+config/git/gitconfig.local
