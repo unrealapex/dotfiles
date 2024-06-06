@@ -1,4 +1,3 @@
-colorscheme elflord
 " automatic indentation
 set autoindent
 " reread file if it has been modified outside of Vim
@@ -52,7 +51,7 @@ set signcolumn=yes
 set smartcase
 " set tabs to two spaces
 set tabstop=2
-set termguicolors
+ set termguicolors
 " show file in titlebar
 set title
 " set updatetime to 200 milliseconds
