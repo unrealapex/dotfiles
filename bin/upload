@@ -6,6 +6,7 @@ if [ $# = 1 ]; then
 elif [ $# -gt 1 ]; then
   echo "files being uploaded: $*"
   for i in $(seq 5 -1 1); do
+    # TODO: add color for number
     printf "%b" "uploading files in $i \r"
     sleep 1
   done
