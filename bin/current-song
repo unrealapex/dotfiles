@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # get the currently playing song and convert it to lowercase
 song=$(playerctl -f '{{artist}} - {{title}}' metadata | awk '{print tolower($0)}')

@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-if [[ -n $1  ]]; then
+if [ -n "$1"  ]; then
   feh --bg-fill "$1"
 else
   feh --bg-fill "$WALLPAPER"

@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 
-if [[ $# -gt 0 || -t 1 ]] ; then
-  if [[ $# -gt 0 ]] ; then
+if [ $# -gt 0 ] || [ -t 1 ] ; then
+  if [ $# -gt 0 ] ; then
     # TODO: specific data format with -target so file contents aren't just
     # copied
     xclip -selection clipboard "$@"
   else 
     xclip -selection clipboard 
   fi
-elif [[ $# -eq 0 ]]; then
+elif [ $# -eq 0 ]; then
   xclip -selection clipboard -o
 else
   echo "echo \"text\" | clipboard" 1>&2 
