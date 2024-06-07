@@ -6,7 +6,7 @@ emoji_file="$HOME/.local/share/emojis.json"
 
 git clone --filter=blob:none https://github.com/Mange/emoji-data "$tmp_dir"
 
-cd "$tmp_dir"
+cd "$tmp_dir" || exit
 make setup || sudo bundle install
 make all
 
