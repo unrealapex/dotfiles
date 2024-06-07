@@ -13,7 +13,7 @@ elif [ $# -gt 1 ]; then
       curl -F"file=@$file" https://0x0.st
   done
 else
-  echo "Invalid file arguments provided
+  printf "%b" "\033[1mupload\033[m: upload file to 0x0.st
 
 Usage: upload [FILE]...
 " >&2

@@ -10,7 +10,11 @@ full)
         maim --quality 10 "$image_path" || exit
         ;;
 *)
-        echo "USAGE: screenshot [selection|main]"
+
+  printf "%b" "\033[1mscreenshot\033[m: wrapper for maim
+
+Usage: screenshot [selection|main]
+" >&2
         exit
         ;;
 esac
