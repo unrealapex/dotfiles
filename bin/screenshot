@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 image_path=$HOME/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 

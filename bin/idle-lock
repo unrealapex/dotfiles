@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # TODO: prevent locking only if a video specifically is playing rather than any
 # fullscreen application
 # don't lock screen if an application is in fullscreen
@@ -7,6 +7,6 @@ WINDOW=$(echo $(xwininfo -id $(xdotool getactivewindow) -stats |
   awk '{print $NF}') |
   sed -e 's/ /x/')
 SCREEN=$(xdpyinfo | grep -m1 dimensions | awk '{print $2}')
-if [[ ! "$WINDOW" == "$SCREEN" ]] && [[ ! $(pgrep --exact -f "slock" >/dev/null) ]]; then
+if [ ! "$WINDOW" = "$SCREEN" ] && [ ! $(pgrep --exact -f "slock" >/dev/null) ]; then
   slock
 fi
