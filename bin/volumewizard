@@ -24,7 +24,10 @@ mute)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
   ;;
 *)
-  echo "volumewizard [up|down|mute]"
+  printf "%b" "\033[1mvolumewizard\033[m: volume control wrapper for wpctl
+
+Usage: volumewizard [up|down|mute]
+" >&2
   ;;
 esac
 
