@@ -46,6 +46,7 @@ fi
 xsetroot -cursor_name left_ptr
 # xrdb "$HOME"/.Xresources
 
+xset b off
 xset +dpms
 xset s 600
 xss-lock --transfer-sleep-lock -- slock &
