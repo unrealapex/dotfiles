@@ -7,10 +7,6 @@ return {
     build = ":TSUpdate",
     -- FIXME: handle errors when loading neovim with argments
     event = { "BufReadPost", "BufNewFile", "BufWritePre" },
-    cond = (
-      vim.fn.executable("git") == 1
-      or (vim.fn.executable("curl") == 1 and vim.fn.executable("tar") == 1)
-    ),
     cmd = {
       "TSBufDisable",
       "TSBufEnable",
