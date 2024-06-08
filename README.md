@@ -55,7 +55,6 @@ $ tree scripts
     ├── irssi              set up irssi scripts
     ├── kill-x             bind ctrl + alt + backspace to kill x
     ├── microcode          install microcode updates
-    ├── no-mouse-accel     disable mouse acceleration
     ├── proton-ge          install glorious eggroll's custom proton build
     ├── secrets            create secrets
     ├── tf2                fix common issues running tf2 on linux
