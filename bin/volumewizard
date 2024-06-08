@@ -28,6 +28,7 @@ mute)
 
 Usage: volumewizard [up|down|mute]
 " >&2
+  exit
   ;;
 esac
 
