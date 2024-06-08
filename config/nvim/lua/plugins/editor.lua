@@ -132,7 +132,6 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
-      "telescope",
       previewers = {
         builtin = {
           extensions = {
