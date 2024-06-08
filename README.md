@@ -72,7 +72,7 @@ titlebars" option.
 
 secrets files for programs that have secrets(irssi, git) are in `secrets`.
 
-color palette
+color palette 🌈
 ```json
 {
 
