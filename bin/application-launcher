@@ -3,6 +3,6 @@
 # TODO: sort by application popularity
 
 # get application names
-applications=$(find ~/.local/share/applications /usr/share/applications -type f,l -name "*.desktop" -exec basename {} .desktop \; | sort)
+applications=$(find ~/.local/share/applications /usr/share/applications -type f,l -name "*.desktop" -exec basename {} .desktop \;)
 
-gtk-launch "$(echo "$applications" | dmenu)"
+gtk-launch "$(echo "$applications" | sort | dmenu)"
