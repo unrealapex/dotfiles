@@ -14,7 +14,7 @@ notifications: dunst
 ### ✨ about ✨
 my dotfiles for gentoo, managed using git and dotbot. the main focus of
 this rice is to create a minimalistic linux system. eye candy is desired,
-however, minimalism and performance come first. a majority of the tools that i
+however, minimalism and performance come first. a majority of the tools i
 use with this rice follow the suckless software design philsophy. i believe
 that is a way of writing software that more people should adapt to.
 
@@ -26,7 +26,7 @@ cd ~/.dotfiles
 ```
 
 ### 🗒️ notes
-this rice is not intended for use by others, however, you're welcome to if
+this rice isn't intended for use by others, however, you're welcome to if
 you wish. the information below might be of use to you.
 
 my builds of dwm, dmenu, slock, etc.. are stored in separate git repositories.
@@ -64,10 +64,9 @@ $ tree scripts
 
 **extras**
 
-window decorations are not functional since window management is primarily
-done through the keyboard, therefore, it is more logical to
-disable them. this can be done in most gui apps by enabling the "use system
-titlebars" option.
+window decorations aren't functional since window management is done through
+the keyboard, therefore, it's more logical to disable them. this can be done in
+most gui apps by enabling the "use system titlebars" option.
 
 secrets files for programs that have secrets(irssi, git) are in `secrets`.
 
