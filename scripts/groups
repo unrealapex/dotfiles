@@ -1,5 +1,0 @@
-#!/bin/bash
-sudo gpasswd --add "$USER" sys
-sudo gpasswd --add "$USER" libvirt
-sudo gpasswd --add "$USER" mpd
-sudo gpasswd --add "$USER" video

@@ -61,7 +61,6 @@
     - [bash scripts/no-mouse-accel, Disabling mouse acceleration]
     - [bash scripts/kill-x, Enabling killing of Xorg with traditional shortcut]
     - [bash scripts/bluetooth, Enabling bluetooth]
-    - [bash scripts/groups, Adding current user to needed groups]
     - [bash scripts/firefox, Generating Firefox configuration]
     - 
       command: bash scripts/irssi
