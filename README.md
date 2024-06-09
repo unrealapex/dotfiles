@@ -51,10 +51,8 @@ $ tree scripts
     ├── bluetooth          enable bluetooth
     ├── emoji_gen          generate emojis file for emoji picker
     ├── firefox            generate firefox user.js file
-    ├── group              add current user to appropriate groups
     ├── irssi              set up irssi scripts
     ├── kill-x             bind ctrl + alt + backspace to kill x
-    ├── microcode          install microcode updates
     ├── proton-ge          install glorious eggroll's custom proton build
     ├── secrets            create secrets
     ├── tf2                fix common issues running tf2 on linux
