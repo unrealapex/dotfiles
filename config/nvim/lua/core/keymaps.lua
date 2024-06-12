@@ -29,6 +29,7 @@ function get_visual()
 end
 
 vim.keymap.set("v", "<C-r>", function()
+  -- FIXME: use vim.region()
   local pattern = table.concat(get_visual())
   -- escape regex and line endings
   pattern =
