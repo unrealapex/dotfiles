@@ -84,25 +84,24 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
-
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
-# clean up orphaned packages
-alias cleanpackages='yay -Rsn $(yay -Qdtq)'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
-alias crankshaft='gamemoderun ~/Downloads/crankshaft.AppImage &;disown'
 # chill study music with lofi girl
 alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
-alias f="fff"
+alias irssi="irssi --config=<((cat $XDG_CONFIG_HOME/irssi/credentials && cat $XDG_CONFIG_HOME/irssi/config)) --home="$XDG_DATA_HOME"/irssi"
+alias bc="bc --mathlib --quiet"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../..'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
