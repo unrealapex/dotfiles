@@ -83,7 +83,7 @@ zmodload -ap zsh/mapfile mapfile
 PROMPT='[%n@%m %1~]$ '
 
 typeset -U path PATH
-path=(~/.local/bin ~/.local/share/nvim/mason/bin $path)
+path=(~/.local/bin ~/.cargo/bin ~/.local/share/nvim/mason/bin $path)
 export PATH
 
 [[ -f /usr/share/fzf/key-bindings.zsh ]] && source /usr/share/fzf/key-bindings.zsh
