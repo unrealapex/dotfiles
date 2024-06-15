@@ -68,6 +68,8 @@ while true; do
   sleep 1
 done &
 
+# TODO: change xrandr stuff here
+
 while true; do
   # Log stderror to a file
   dwm 2>/tmp/dwm.log
