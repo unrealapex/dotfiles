@@ -42,8 +42,6 @@ fi
 # xterm -geometry 80x20+494-0 &
 # exec xterm -geometry 80x66+0+0 -name login
 
-# xrdb "$HOME"/.Xresources
-
 xset b off
 xset +dpms
 xset s 600
