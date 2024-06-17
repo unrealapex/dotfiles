@@ -68,7 +68,12 @@ while true; do
   sleep 1
 done &
 
-# TODO: change xrandr stuff here
+if [ $(xrandr --query | grep --count "HDMI-1 connected") -eq 1 ]; then
+  xrandr --output HDMI-1 --auto
+  xrandr --output eDP-1 --off
+else
+  xrandr --output eDP-1 --auto
+fi
 
 while true; do
   # Log stderror to a file
