@@ -47,8 +47,6 @@ xset +dpms
 xset s 600
 xss-lock --transfer-sleep-lock -- slock &
 
-feh --bg-fill "$WALLPAPER"
-
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
 gentoo-pipewire-launcher &
@@ -70,6 +68,8 @@ if [ $(xrandr --query | grep --count "HDMI-1 connected") -eq 1 ]; then
 else
   xrandr --output eDP-1 --auto
 fi
+
+feh --bg-fill "$WALLPAPER"
 
 while true; do
   # Log stderror to a file
