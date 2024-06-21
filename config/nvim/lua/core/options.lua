@@ -25,6 +25,7 @@ vim.opt.foldenable = false
 vim.opt.foldmethod = "indent"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.opt.grepprg = "rg --vimgrep"
+vim.opt.guicursor = ""
 -- allow hidden buffers
 vim.opt.hidden = true
 vim.opt.history = 500
