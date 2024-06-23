@@ -1,5 +1,7 @@
 #!/bin/sh
 
+bold="\033[1m"
+reset="\033[m"
 image_path=$HOME/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 case $1 in
@@ -11,7 +13,7 @@ full)
         ;;
 *)
 
-  printf "%b" "\033[1mscreenshot\033[m: wrapper for maim
+  printf "%b" "${bold}screenshot${reset}: wrapper for maim
 
 Usage: screenshot [selection|main]
 " >&2

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+bold="\033[1m"
+reset="\033[m"
+
 send_notification() {
   volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
   if $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "MUTED"); then
@@ -24,7 +27,7 @@ mute)
   wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
   ;;
 *)
-  printf "%b" "\033[1mvolumewizard\033[m: volume control wrapper for wpctl
+  printf "%b" "${bold}volumewizard${reset}: volume control wrapper for wpctl
 
 Usage: volumewizard [up|down|mute]
 " >&2
