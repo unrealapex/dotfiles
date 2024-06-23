@@ -61,7 +61,6 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Z}{a-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-fpath=(/usr/local/share/zsh-completions $fpath)
 zstyle ':completion:*:functions' ignored-patterns '_*'
 # complete sudo commands
 zstyle ':completion::complete:*' gain-privileges 1
