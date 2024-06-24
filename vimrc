@@ -197,8 +197,6 @@ Plug 'junegunn/rainbow_parentheses.vim'
 " code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-repeat'
-" fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " icons
 Plug 'ryanoasis/vim-devicons'
