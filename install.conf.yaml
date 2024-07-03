@@ -19,10 +19,7 @@
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources
     ~/.lynxrc: lynxrc
-    ~/.zprofile: zprofile
-    ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshenv: zshenv
-    ~/.zshrc: zshrc
     ~/.config:
       glob: true
       path: config/*

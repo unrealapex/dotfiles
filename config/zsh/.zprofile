@@ -3,7 +3,7 @@
 #
 
 
-[[ -f ~/.zshrc ]] && . ~/.zshrc
+[[ -f $ZDOTDIR/.zshrc ]] && . $ZDOTDIR/.zshrc
 
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg)"
 

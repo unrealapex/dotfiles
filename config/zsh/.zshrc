@@ -3,11 +3,12 @@
 #
 
 # bootstrap antidote
-[ -d ~/.antidote ] || git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote
+antidote=$HOME/.config/antidote
+[ -d "$antidote" ] || git clone --depth=1 https://github.com/mattmc3/antidote.git "$antidote"
 
 
 # source antidote
-source ~/.antidote/antidote.zsh
+source "$antidote"/antidote.zsh
 
 # initialize plugins statically with ~/.zsh_plugins.txt
 antidote load
@@ -16,7 +17,7 @@ antidote load
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-HISTFILE=~/.histfile
+HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=1000
 SAVEHIST=2000
 setopt auto_pushd
@@ -49,8 +50,11 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
+# Completion files: Use XDG dirs
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
+
 autoload -Uz compinit promptinit
-compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 promptinit
 
 autoload edit-command-line
@@ -64,6 +68,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Z}{a-z}' 'r:|
 zstyle ':completion:*:functions' ignored-patterns '_*'
 # complete sudo commands
 zstyle ':completion::complete:*' gain-privileges 1
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 # show hidden files in completion menu
 _comp_options+=(globdots)
 

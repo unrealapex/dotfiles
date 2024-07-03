@@ -3,6 +3,7 @@
 #
 
 
+export ZDOTDIR=$HOME/.config/zsh
 export EDITOR="nvim"
 export TERMINAL="st"
 export TERMINAL_PROG="st"
