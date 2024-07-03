@@ -18,7 +18,6 @@
     ~/.bashrc: bashrc
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources
-    ~/.lynxrc: lynxrc
     ~/.zshenv: zshenv
     ~/.config:
       glob: true
