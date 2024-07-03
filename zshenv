@@ -45,7 +45,4 @@ export XMODIFIERS=@im=fcitx
 export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks 
 export WWW_HOME='https://lite.duckduckgo.com/lite'
 
-typeset -U path PATH
-path=(~/.local/bin ~/.cargo/bin ~/.local/share/nvim/mason/bin $path)
-
 export PATH
