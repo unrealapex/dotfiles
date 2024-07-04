@@ -5,4 +5,8 @@
 # get application names
 applications=$(find ~/.local/share/applications /usr/share/applications -type f,l -name "*.desktop" -exec basename {} .desktop \;)
 
-gtk-launch "$(echo "$applications" | sort | dmenu)"
+if [ $# -gt 0 ]; then
+  gtk-launch "$(echo "$applications" | sort | dmenu "$@")"
+else
+  gtk-launch "$(echo "$applications" | sort | dmenu)"
+fi
