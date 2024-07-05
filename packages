@@ -28,6 +28,10 @@ git
 git-delta
 glow
 gnu-free-fonts
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
 htop
 hyperfine
 imagemagick
@@ -41,6 +45,7 @@ libnotify
 libreoffice
 links
 lua
+lynx
 maim
 man-db
 man-pages
@@ -56,7 +61,8 @@ neovim
 newsboat
 ninja
 nodejs
-noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
 npm
 obs-studio
 obsidian
@@ -68,6 +74,7 @@ perl-image-exiftool
 pfetch
 pipewire
 playerctl
+pulsemixer
 qemu
 ripgrep
 shellcheck
@@ -82,6 +89,7 @@ tty-clock
 ufw
 unclutter
 unzip
+vde2
 virt-manager
 virt-viewer
 vulkan-icd-loader
@@ -93,6 +101,7 @@ xclip
 xdg-user-dirs
 xdo
 xdotool
+xf86-input-libinput
 xorg
 xorg-xinit
 xorg-xkill
