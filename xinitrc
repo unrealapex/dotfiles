@@ -53,7 +53,7 @@ gentoo-pipewire-launcher &
 
 playerctld daemon
 
-xcompmgr -C &
+picom -b
 
 unclutter --fork
 
