@@ -12,7 +12,6 @@ set -o pipefail
 
 emoji_file=$HOME/.local/share/emojis.json
 
-# TODO: force dmenu item width
 jq --raw-output ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
   | tr '[:upper:]' '[:lower:]' \
   | dmenu \
