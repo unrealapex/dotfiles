@@ -62,6 +62,9 @@
       stdin: true
       stdout: true
       stderr: true
-    - [bash scripts/secrets, Creating secrets files]
+    - [cp --no-clobber ~/.dotfiles/secrets/gitconfig.local
+    ~/.config/git/gitconfig.local; cp --no-clobber
+    ~/.dotfiles/secrets/irssi_credentials ~/.config/irssi/credentials, Creating
+    secrets files]
     - [chsh -s $(which zsh), Making zsh the default shell]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
