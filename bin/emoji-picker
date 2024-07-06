@@ -4,6 +4,9 @@
 # whole pipeline fails if one process has an exit code that is non zero
 set -o pipefail
 
+# NOTE: make sure that you have an emoji font patched into dmenu or fonts will
+# display as tofu
+
 # Give dmenu list of all unicode characters to copy.
 # Shows the selected character in dunst if running.
 
