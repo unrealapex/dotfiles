@@ -54,7 +54,6 @@
       stdout: true
       stderr: true
     - [bash scripts/kill-x, Enabling killing of Xorg with traditional shortcut]
-    - [bash scripts/firefox, Generating Firefox configuration]
     - 
       command: bash scripts/irssi
       description: Installing Irssi scripts
