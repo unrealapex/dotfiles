@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # NOTE: make sure you have ruby, bundler, and jq installed
 
 tmp_dir="/tmp/emoji-data"

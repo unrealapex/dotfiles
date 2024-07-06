@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # ensure profiles directory is created
 if [ ! -d "$HOME/.mozilla/" ]; then

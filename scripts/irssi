@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # NOTE: make sure perl-lwp-protocol-https is installed or scripts won't load
 
@@ -11,14 +11,5 @@ scripts=(nickcolor)
 for script in "${scripts[@]}"; do
   curl "$url$script.pl" --output "$tmp_dir/$script.pl"
   mv "$tmp_dir/$script.pl" "$scripts_dir"
-  read -p "Would you like $script.pl to run automatically? [Y/n]: " confirm
-  if [[ $confirm == [yY] || $confirm == [yY][eE][sS] || $confirm == "" ]]; then
-    echo "$script.pl will run automatically"
-    ln -sf "$scripts_dir/$script.pl" "$scripts_dir/autorun"
-  else
-    echo "$script.pl will run manually when called using scriptassist
-
-    run the script with /script load $script
-    "
-  fi
+  ln -sf "$scripts_dir/$script.pl" "$scripts_dir/autorun"
 done
