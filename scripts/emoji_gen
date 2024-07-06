@@ -1,5 +1,10 @@
 #!/bin/sh
-# NOTE: make sure you have ruby, bundler, and jq installed
+
+if [ ! "$(command -v bundler)" ] || [ ! "$(command -v jq)" ]; then
+  echo "ruby or jq is not installed, aborting" >&2 
+  exit
+fi
+
 
 tmp_dir="/tmp/emoji-data"
 emoji_file="$HOME/.local/share/emojis.json"
