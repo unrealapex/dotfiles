@@ -55,7 +55,6 @@
       stdout: true
       stderr: true
     - [bash scripts/kill-x, Enabling killing of Xorg with traditional shortcut]
-    - [bash scripts/bluetooth, Enabling bluetooth]
     - [bash scripts/firefox, Generating Firefox configuration]
     - 
       command: bash scripts/irssi
@@ -64,6 +63,5 @@
       stdout: true
       stderr: true
     - [bash scripts/secrets, Creating secrets files]
-    - [bash scripts/ufw, Configuring UFW]
     - [chsh -s $(which zsh), Making zsh the default shell]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
