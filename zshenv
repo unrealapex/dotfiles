@@ -45,5 +45,7 @@ export XMODIFIERS=@im=fcitx
 
 export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks 
 export WWW_HOME='https://lite.duckduckgo.com/lite'
+# st supports true color
+export COLORTERM=truecolor
 
 export PATH
