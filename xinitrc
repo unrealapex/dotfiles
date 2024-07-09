@@ -44,7 +44,7 @@ fi
 
 xset b off
 xset +dpms
-xset s 600
+xset s 600 5
 xss-lock --transfer-sleep-lock -- slock &
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
