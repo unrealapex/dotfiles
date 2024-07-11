@@ -8,6 +8,7 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export TERMINAL_PROG="st"
 export BROWSER="firefox"
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 

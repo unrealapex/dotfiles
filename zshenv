@@ -43,9 +43,25 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks 
 export WWW_HOME='https://lite.duckduckgo.com/lite'
 # st supports true color
 export COLORTERM=truecolor
+
+# xdg compliance
+export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundle
+export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundle/config
+export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundle
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export WINEPREFIX="$XDG_DATA_HOME"/wine
+export RANDFILE="$XDG_RUNTIME_DIR"/rnd
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
 
 export PATH

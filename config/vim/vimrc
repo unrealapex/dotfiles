@@ -148,7 +148,7 @@ vnoremap <C-r> <Esc>:%s/<c-r>=GetVisual()<cr>//g<left><left>
 
 
 " vim plug
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+let data_dir = '~/.config/vim/'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   :echo "Installing Vim Plug"
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -156,7 +156,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   :echo "Vim Plug installed"
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/vim/plug')
 " file explorer
 Plug 'justinmk/vim-dirvish'
 Plug 'tpope/vim-eunuch', {'on': [

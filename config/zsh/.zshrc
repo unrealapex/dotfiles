@@ -117,6 +117,10 @@ alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
 alias irssi="irssi --config=<((cat $XDG_CONFIG_HOME/irssi/credentials && cat $XDG_CONFIG_HOME/irssi/config)) --home="$XDG_DATA_HOME"/irssi"
 alias bc="bc --mathlib --quiet"
+alias pidgin="pidgin --config="$XDG_DATA_HOME"/purple"
+alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc"
+alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
+alias dosbox="dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf"
 
 # wrapper for xdg-open to open multiple uris
 open() {

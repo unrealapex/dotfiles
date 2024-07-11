@@ -5,3 +5,5 @@ config/ncmpcpp/error.log
 config/elinks/globhist
 config/git/gitconfig.local
 config/zsh/.zsh_plugins.zsh
+config/vim/autoload
+config/vim/plug

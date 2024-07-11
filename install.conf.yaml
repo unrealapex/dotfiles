@@ -6,18 +6,15 @@
 
 - create:
     - ~/.local/bin
-    - ~/.themes
+    - ~/.local/share/themes
     - ~/projects
     - ~/Downloads/git
     - ~/Pictures/Webcam
     - ~/Pictures/Screenshots
 
 - link:
-    ~/.vimrc: vimrc
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
-    ~/.xinitrc: xinitrc
-    ~/.Xresources: Xresources
     ~/.zshenv: zshenv
     ~/.config:
       glob: true
@@ -25,7 +22,7 @@
     ~/.local/bin:
       glob: true
       path: bin/*
-    ~/.themes:
+    ~/.local/share/themes:
       glob: true
       path: gtk/*
 
