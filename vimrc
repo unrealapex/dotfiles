@@ -183,7 +183,6 @@ Plug 'tpope/vim-unimpaired'
 " show git changes in gutter
 Plug 'airblade/vim-gitgutter'
 Plug 'romainl/vim-cool'
-Plug 'wellle/context.vim'
 " git integration
 Plug 'tpope/vim-fugitive'
 " Vim Surround
