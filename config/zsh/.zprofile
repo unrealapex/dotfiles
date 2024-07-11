@@ -5,6 +5,7 @@
 
 [[ -f $ZDOTDIR/.zshrc ]] && . $ZDOTDIR/.zshrc
 
+# FIXME: xdg compliance
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg)"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
