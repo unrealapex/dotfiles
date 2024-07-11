@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# TODO: sort by application popularity
-
 # get application names
 applications=$(find ~/.local/share/applications /usr/share/applications -type f,l -name "*.desktop" -exec basename {} .desktop \;)
 
