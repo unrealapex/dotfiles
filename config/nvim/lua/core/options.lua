@@ -82,6 +82,10 @@ vim.opt.wrap = false
 -- syntax highlighting
 vim.cmd.syntax("on")
 
+-- colorscheme
+vim.cmd.colorscheme("wildcharm")
+vim.cmd.highlight({"normal", "guibg=NONE"})
+
 --globals
 
 -- set the mapleader to space
