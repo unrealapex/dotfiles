@@ -20,8 +20,8 @@ that is a way of writing software that more people should adapt to.
 
 ### 💿 install
 ```sh
-git clone https://git.sr.ht/~unrealapex/dotfiles ~/.dotfiles
-cd ~/.dotfiles
+git clone https://git.sr.ht/~unrealapex/dotfiles ~/dotfiles
+cd ~/dotfiles
 ./install
 ```
 

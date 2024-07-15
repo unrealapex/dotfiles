@@ -57,8 +57,8 @@
       stdin: true
       stdout: true
       stderr: true
-    - [cp --no-clobber ~/.dotfiles/secrets/gitconfig.local
+    - [cp --no-clobber ~/dotfiles/secrets/gitconfig.local
     ~/.config/git/gitconfig.local; cp --no-clobber
-    ~/.dotfiles/secrets/irssi_credentials ~/.config/irssi/credentials, Creating
+    ~/dotfiles/secrets/irssi_credentials ~/.config/irssi/credentials, Creating
     secrets files]
     - [nvim --headless "+Lazy! sync" +qa, Installing Neovim plugins]
