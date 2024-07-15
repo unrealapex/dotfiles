@@ -2,7 +2,7 @@
 
 return {
   -- icons
-  "nvim-tree/nvim-web-devicons",
+  "echasnovski/mini.icons",
   -- nicer ui
   {
     "stevearc/dressing.nvim",

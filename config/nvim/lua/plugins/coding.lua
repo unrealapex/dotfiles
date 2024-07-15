@@ -107,7 +107,7 @@ return {
       })
     end,
     dependencies = {
-      "nvim-tree/nvim-web-devicons",
+      "echasnovski/mini.icons",
     },
   },
   {
@@ -173,16 +173,24 @@ return {
 
   -- automatically close pairs
   {
-    "windwp/nvim-autopairs",
-    -- load when starting bracket delimiter is pressed
+    "echasnovski/mini.pairs",
+    -- load when bracket delimiter is pressed
     keys = {
-      { "(", mode = "i" },
-      { "{", mode = "i" },
-      { "[", mode = "i" },
-      { '"', mode = "i" },
-      { "'", mode = "i" },
+      { "(", mode = {"i", "c"} },
+      { "{", mode = {"i", "c"} },
+      { "[", mode = {"i", "c"} },
+      { ")", mode = {"i", "c"} },
+      { "}", mode = {"i", "c"} },
+      { "]", mode = {"i", "c"} },
+      { '"', mode = "i", "c"},
+      { "'", mode = "i", "c"},
+      { "`", mode = "i", "c" },
     },
-    config = true,
+    opts = {
+      modes = {
+        command = true,
+      },
+    },
   },
 
   -- additional text objects
