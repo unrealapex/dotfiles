@@ -93,8 +93,6 @@ return {
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         local bufopts = { noremap = true, silent = true, buffer = bufnr }
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
         vim.keymap.set("n", "gI", vim.lsp.buf.implementation, bufopts)
         vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
         vim.keymap.set(
@@ -113,13 +111,6 @@ return {
           print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end, bufopts)
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, bufopts)
-        vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
-        vim.keymap.set({ "n", "v" }, "<space>ca", function()
-          vim.lsp.buf.code_action({
-            context = { only = { "quickfix", "refactor", "source" } },
-          })
-        end, bufopts)
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
       end
 
       local lspconfig = require("lspconfig")
