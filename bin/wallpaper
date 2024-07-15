@@ -5,5 +5,3 @@ if [ -n "$1"  ]; then
 else
   feh --bg-fill "$WALLPAPER"
 fi
-
-notify-send "wallpaper: updated image"
