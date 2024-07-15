@@ -12,7 +12,7 @@ set -o pipefail
 
 emoji_file=$HOME/.local/share/emojis.json
 
-jq --raw-output ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
+jq -r ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
   | tr '[:upper:]' '[:lower:]' \
   | dmenu \
   | awk '{print $1}' \

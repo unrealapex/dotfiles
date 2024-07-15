@@ -9,7 +9,7 @@ tmp_dir=/tmp/irssi-scripts
 url="https://raw.githubusercontent.com/irssi/scripts.irssi.org/master/scripts/"
 scripts=(nickcolor)
 for script in "${scripts[@]}"; do
-  curl "$url$script.pl" --output "$tmp_dir/$script.pl"
+  curl "$url$script.pl" -o "$tmp_dir/$script.pl"
   mv "$tmp_dir/$script.pl" "$scripts_dir"
   ln -sf "$scripts_dir/$script.pl" "$scripts_dir/autorun"
 done

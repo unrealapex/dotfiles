@@ -6,10 +6,10 @@ image_path=$HOME/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-
 
 case $1 in
 selection)
-        maim --select --quality 10 "$image_path" || exit
+        maim -s -m 10 "$image_path" || exit
         ;;
 full)
-        maim --quality 10 "$image_path" || exit
+        maim -m 10 "$image_path" || exit
         ;;
 *)
 

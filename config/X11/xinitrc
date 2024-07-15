@@ -45,7 +45,7 @@ fi
 xset b off
 xset +dpms
 xset s 300 5
-xss-lock --transfer-sleep-lock -- slock &
+xss-lock -l -- slock &
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
@@ -55,14 +55,14 @@ playerctld daemon
 
 xcompmgr &
 
-unclutter --fork
+unclutter -b
 
 while true; do
   xsetroot -name "$(date +"%m/%d %I:%M %P")"
   sleep 1
 done &
 
-if [ $(xrandr --query | grep --count "HDMI-1 connected") -eq 1 ]; then
+if [ $(xrandr -q | grep -c "HDMI-1 connected") -eq 1 ]; then
   xrandr --output HDMI-1 --auto
   xrandr --output eDP-1 --off
 else
