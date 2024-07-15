@@ -2,6 +2,7 @@
 # ~/.config/zsh/zshrc
 #
 
+
 # bootstrap antidote
 antidote=$HOME/.config/antidote
 [ -d "$antidote" ] || git clone --depth=1 https://github.com/mattmc3/antidote.git "$antidote"
