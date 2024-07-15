@@ -1,5 +1,5 @@
 #
-# ~/.zprofile
+# ~/.config/zsh/zprofile
 #
 
 

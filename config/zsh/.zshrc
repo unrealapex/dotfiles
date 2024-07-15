@@ -1,5 +1,5 @@
 #
-# ~/.zshrc
+# ~/.config/zsh/zshrc
 #
 
 # bootstrap antidote
