@@ -1,16 +1,15 @@
 #!/bin/sh
 
-if [ $# -gt 0 ] || [ -t 1 ] ; then
-  if [ $# -gt 0 ] ; then
-    # TODO: specific data format with -target so file contents aren't just
-    # copied
-    xclip -selection clipboard "$@"
-  else 
-    xclip -selection clipboard 
+if [ $# -gt 0 ] && [ $# -lt 2 ] || [ -p /dev/stdout ]; then
+  if [ $# = 1 ]; then
+    xsel -ib <"$1"
+    exit
+  elif [ -p /dev/stdout ]; then
+    xsel -ib
+    exit
   fi
 elif [ $# -eq 0 ]; then
-  xclip -selection clipboard -o
+  xsel -ob
 else
-  echo "echo \"text\" | clipboard" 1>&2 
+  echo "echo \"text\" | clipboard" 1>&2
 fi
-
