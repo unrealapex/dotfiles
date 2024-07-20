@@ -131,7 +131,7 @@ open() {
   fi
 
   for uri in "$@"; do
-    xdg-open $uri
+    xdg-open "$uri"
   done
 }
 
