@@ -20,7 +20,7 @@ elif [ $# -gt 1 ]; then
 else
   printf "%b" "${bold}upload${reset}: upload files to 0x0.st
 
-Usage: upload [FILE]...
+${bold}Usage${reset}: upload [FILE]...
 " >&2
   exit 1
 fi

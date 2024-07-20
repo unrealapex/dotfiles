@@ -29,7 +29,7 @@ mute)
 *)
   printf "%b" "${bold}volumewizard${reset}: volume control wrapper for wpctl
 
-Usage: volumewizard [up|down|mute]
+${bold}Usage${reset}: volumewizard [up|down|mute]
 " >&2
   exit
   ;;
