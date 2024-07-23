@@ -171,19 +171,20 @@ return {
 
   -- automatically close pairs
   {
-    "echasnovski/mini.pairs",
+    "windwp/nvim-autopairs",
     -- load when bracket delimiter is pressed
     keys = {
-      { "(", mode = "i"},
-      { "{", mode = "i"},
-      { "[", mode = "i"},
-      { ")", mode = "i"},
-      { "}", mode = "i"},
-      { "]", mode = "i"},
-      { '"', mode = "i"},
-      { "'", mode = "i"},
-      { "`", mode = "i"},
+      { "(", mode = "i" },
+      { "{", mode = "i" },
+      { "[", mode = "i" },
+      { ")", mode = "i" },
+      { "}", mode = "i" },
+      { "]", mode = "i" },
+      { '"', mode = "i" },
+      { "'", mode = "i" },
+      { "`", mode = "i" },
     },
+    config = true,
   },
 
   -- additional text objects
