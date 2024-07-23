@@ -174,20 +174,15 @@ return {
     "echasnovski/mini.pairs",
     -- load when bracket delimiter is pressed
     keys = {
-      { "(", mode = {"i", "c"} },
-      { "{", mode = {"i", "c"} },
-      { "[", mode = {"i", "c"} },
-      { ")", mode = {"i", "c"} },
-      { "}", mode = {"i", "c"} },
-      { "]", mode = {"i", "c"} },
-      { '"', mode = "i", "c"},
-      { "'", mode = "i", "c"},
-      { "`", mode = "i", "c" },
-    },
-    opts = {
-      modes = {
-        command = true,
-      },
+      { "(", mode = "i"},
+      { "{", mode = "i"},
+      { "[", mode = "i"},
+      { ")", mode = "i"},
+      { "}", mode = "i"},
+      { "]", mode = "i"},
+      { '"', mode = "i"},
+      { "'", mode = "i"},
+      { "`", mode = "i"},
     },
   },
 
