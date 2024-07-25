@@ -16,6 +16,9 @@
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.zshenv: zshenv
+    ~/.gnupg/:
+      glob: true
+      path: gnupg/*
     ~/.config:
       glob: true
       path: config/*
