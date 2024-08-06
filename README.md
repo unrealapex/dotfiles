@@ -7,7 +7,7 @@ launcher: dmenu
 terminal: st
 shell: zsh
 editor: neovim
-font: liberation mono
+font: luxi mono
 notifications: dunst
 ```
 
