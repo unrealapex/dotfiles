@@ -28,16 +28,6 @@ function get_visual()
   return vim.api.nvim_buf_get_text(0, ls - 1, cs - 1, le - 1, ce, {})
 end
 
-vim.keymap.set("v", "<C-r>", function()
-  -- FIXME: use vim.region()
-  local pattern = table.concat(get_visual())
-  -- escape regex and line endings
-  pattern =
-    vim.fn.substitute(vim.fn.escape(pattern, "^$.*\\/~[]"), "\n", "\\n", "g")
-  -- send substitute command to vim command line
-  vim.api.nvim_input("<Esc>:%s/" .. pattern .. "//g<Left><Left>")
-end)
-
 -- buffer stuff
 -- create a new buffer
 vim.keymap.set("n", "<leader>n", ":enew<CR>")
