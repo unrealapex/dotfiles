@@ -63,7 +63,7 @@ while true; do
 done &
 
 if [ $(xrandr -q | grep -c "HDMI-1 connected") -eq 1 ]; then
-  xrandr --output HDMI-1 --auto
+  xrandr --output HDMI-1 --mode 1920x1080 -r 71
   xrandr --output eDP-1 --off
 else
   xrandr --output eDP-1 --auto
