@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ ! $(command -v dmenu) ] || [ ! $(command -v xclip) ]; then
+  echo "ensure dmenu and xclip are installed" 1>&2
+  exit
+fi
+
 # FIXME: figure out posix alternative to pipefail
 # whole pipeline fails if one process has an exit code that is non zero
 set -o pipefail
