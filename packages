@@ -13,7 +13,6 @@ cpupower
 discord
 dnsmasq
 dunst
-element-desktop
 fcitx5
 feh
 fff
@@ -28,6 +27,7 @@ git
 git-delta
 glow
 gnu-free-fonts
+gomuks
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
@@ -59,7 +59,6 @@ ncmpcpp
 neofetch
 neovim
 newsboat
-ninja
 nodejs
 noto-fonts-cjk
 noto-fonts-emoji
@@ -71,18 +70,17 @@ openbsd-netcat
 pandoc-bin
 pastel
 perl-image-exiftool
-pfetch
 pipewire
 playerctl
 pulsemixer
 qemu
 ripgrep
 shellcheck
-spotify
 syncthing
 texlive
 themix
 tor
+torque
 tree
 ttf-liberation
 tty-clock
@@ -95,7 +93,6 @@ virt-viewer
 vulkan-icd-loader
 wget
 wireplumber
-xautolock
 xbacklight
 xclip
 xdg-user-dirs
