@@ -122,6 +122,7 @@ alias pidgin="pidgin --config="$XDG_DATA_HOME"/purple"
 alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc"
 alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
 alias dosbox="dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf"
+alias abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook"
 alias musicdl="yt-dlp -x --audio-format wav --audio-quality 10"
 
 # wrapper for xdg-open to open multiple uris

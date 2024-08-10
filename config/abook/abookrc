@@ -1,0 +1,6 @@
+set mutt_command=neomutt
+set address_style=us
+# TODO: consider disabling color
+set use_colors=true
+
+# set filetype=rc
