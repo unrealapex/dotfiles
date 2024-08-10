@@ -135,8 +135,7 @@ return {
   },
   {
     "hrsh7th/cmp-nvim-lsp-signature-help",
-    -- TODO: change this to a better event
-    event = "InsertEnter",
+    key = { "Tab", "i" },
     dependencies = "hrsh7th/nvim-cmp",
   },
   {
