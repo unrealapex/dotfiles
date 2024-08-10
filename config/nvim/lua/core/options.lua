@@ -10,8 +10,6 @@ vim.opt.cindent = true
 vim.opt.cinoptions = "(0"
 -- sync with system clipboard
 vim.opt.clipboard = "unnamedplus"
--- enter the current millennium
-vim.opt.compatible = false
 -- enable cursor line
 vim.opt.cursorline = true
 -- store all swap files in one directory
