@@ -14,8 +14,6 @@ elif ! [ $KITTY_WINDOW_ID ] && [ $((FZF_PREVIEW_TOP + FZF_PREVIEW_LINES == $(stt
   dim=${FZF_PREVIEW_COLUMNS}x$((FZF_PREVIEW_LINES - 1))
 fi
 
-# TODO: show thumbnail for video files
-# https://github.com/LukeSmithxyz/voidrice/blob/master/.config/lf/scope
 if file --mime-type "$1" | grep --quiet --fixed-strings 'image/'; then
   chafa --size "$dim" "$1"
   echo
