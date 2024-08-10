@@ -79,26 +79,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- render whitespace in visual mode
-local show_whitespace_group =
-  vim.api.nvim_create_augroup("show_whitespace", { clear = true })
-
-vim.api.nvim_create_autocmd("ModeChanged", {
-  group = show_whitespace_group,
-  pattern = { "*:[vV\x16]*" },
-  callback = function()
-    vim.opt.listchars:append({ space = "·" })
-  end,
-})
-
-vim.api.nvim_create_autocmd("ModeChanged", {
-  group = show_whitespace_group,
-  pattern = { "[vV\x16]*:*" },
-  callback = function()
-    vim.opt.listchars:remove({ "space" })
-  end,
-})
-
 vim.api.nvim_create_autocmd("CursorMoved", {
   group = vim.api.nvim_create_augroup("clear_search", { clear = true }),
   callback = function()
