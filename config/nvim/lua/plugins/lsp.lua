@@ -4,6 +4,14 @@ return {
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
+    init = function ()
+      -- NOTE: assume at least one of argv is a file
+      -- NOTE: assume lsp is not supposed to be lazy loaded
+      if vim.fn.argc() >= 1
+        then
+        vim.cmd.LspStart()
+      end
+    end,
     event = "FileType",
     cmd = {
       "LspInfo",
