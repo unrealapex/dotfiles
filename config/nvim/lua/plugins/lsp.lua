@@ -4,8 +4,7 @@ return {
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
-    -- FIXME: using event makes lsp not attach to buffers
-    event = { "BufReadPost", "BufNewFile", "BufWritePre" },
+    event = "FileType",
     cmd = {
       "LspInfo",
       "LspStart",
