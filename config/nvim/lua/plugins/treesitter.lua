@@ -5,7 +5,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    -- FIXME: handle errors when loading neovim with argments
     event = { "BufReadPost", "BufNewFile", "BufWritePre" },
     cmd = {
       "TSBufDisable",
