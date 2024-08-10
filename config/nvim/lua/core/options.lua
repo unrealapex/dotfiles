@@ -1,5 +1,3 @@
--- automatic indentation
-vim.opt.autoindent = true
 -- reread file if it has been modified outside of Vim
 vim.opt.autoread = true
 -- set window background to dark
@@ -8,6 +6,8 @@ vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 -- store all backup files in one directory
 vim.opt.backupdir = vim.fn.stdpath("state") .. "/backup"
+vim.opt.cindent = true
+vim.opt.cinoptions = "(0"
 -- sync with system clipboard
 vim.opt.clipboard = "unnamedplus"
 -- enter the current millennium
@@ -50,19 +50,20 @@ vim.opt.ruler = true
 -- 8 lines above or below cursor when scrolling
 vim.opt.scrolloff = 8
 -- indents to next multiple of 'shiftwidth'.
-vim.opt.shiftwidth = 2
-vim.opt.shiftround = true
+vim.opt.shiftwidth = 4
+-- vim.opt.shiftround = true
 vim.opt.showmode = true
 -- show typed command in status bar
 vim.opt.showcmd = true
 vim.opt.signcolumn = "auto:1-2"
 vim.opt.smartcase = true
+vim.opt.softtabstop = 4
 -- put new windows right of the current
 vim.opt.splitright = true
 -- TODO: show diagnostics
 vim.opt.statusline = "%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
 -- set tabs to two spaces
-vim.opt.tabstop = 2
+-- vim.opt.tabstop = 2
 -- true color support
 vim.opt.termguicolors = true
 -- show file in titlebar
