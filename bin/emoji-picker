@@ -5,10 +5,6 @@ if [ ! $(command -v dmenu) ] || [ ! $(command -v xclip) ]; then
   exit
 fi
 
-# FIXME: figure out posix alternative to pipefail
-# whole pipeline fails if one process has an exit code that is non zero
-set -o pipefail
-
 # NOTE: make sure that you have an emoji font patched into dmenu or fonts will
 # display as tofu
 
@@ -17,12 +13,14 @@ set -o pipefail
 
 emoji_file=$HOME/.local/share/emojis.json
 
-jq -r ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
+emoji=$(jq -r ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
   | tr '[:upper:]' '[:lower:]' \
   | dmenu \
   | awk '{print $1}' \
-  | tr -d '\n' \
-  | xclip -selection clipboard \
-  || exit
+  | tr -d '\n')
 
-notify-send "emoji: $(xclip -o -selection clipboard) copied"
+
+if [ ! "$emoji" = "" ]; then
+  echo "$emoji" | xclip -selection clipboard
+  notify-send "emoji: $(xclip -o -selection clipboard) copied"
+fi
