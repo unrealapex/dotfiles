@@ -29,7 +29,7 @@ make
 this rice isn't intended for use by others, however, you're welcome to if
 you wish. the information below might be of use to you.
 
-my builds of dwm, dmenu, slock, etc.. are stored in separate git repositories.
+my builds of dwm, dmenu, slock, etc... are stored in separate git repositories.
 make is configured to build them.
 
 dotfiles directories
