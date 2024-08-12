@@ -38,25 +38,20 @@ $ tree -d -L 1
 .
 ├── bin          ~/.local/bin/
 ├── config       ~/.config/
+├── gnupg        ~/.gnupg/
+├── gtk          gtk theme
 ├── scripts      config scripts
-├── secrets      files containing secrets
-└── themes       gtk theme
+└── secrets      files containing secrets
 ```
 
 additional scripts in [scripts/](/scripts).
 ```
 $ tree scripts
   scripts
-    ├── bluetooth          enable bluetooth
     ├── emoji_gen          generate emojis file for emoji picker
     ├── firefox            generate firefox user.js file
     ├── irssi              set up irssi scripts
-    ├── kill-x             bind ctrl + alt + backspace to kill x
-    ├── proton-ge          install glorious eggroll's custom proton build
-    ├── secrets            create secrets
-    ├── tf2                fix common issues running tf2 on linux
-    └── ufw                enable uncomplicated firewall
-
+    └── kill-x             bind ctrl + alt + backspace to kill x
 ```
 
 **extras**
