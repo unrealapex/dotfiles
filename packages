@@ -14,7 +14,6 @@ discord
 dnsmasq
 dunst
 fcitx5
-hsetroot
 fff
 ffmpeg
 figlet
@@ -32,6 +31,7 @@ gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
+hsetroot
 htop
 hyperfine
 imagemagick
@@ -64,8 +64,8 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 nsxiv
-obs-studio
 obsidian
+obs-studio
 ocl-icd
 openbsd-netcat
 pandoc-bin
