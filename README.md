@@ -44,6 +44,8 @@ $ tree -d -L 1
 └── secrets      files containing secrets
 ```
 
+**extras**
+
 additional scripts in [scripts/](/scripts).
 ```
 $ tree scripts
@@ -53,8 +55,6 @@ $ tree scripts
     ├── irssi              set up irssi scripts
     └── kill-x             bind ctrl + alt + backspace to kill x
 ```
-
-**extras**
 
 window decorations aren't functional since window management is done through
 the keyboard, therefore, it's more logical to disable them. this can be done in
