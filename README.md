@@ -22,7 +22,7 @@ that is a way of writing software that more people should adapt to.
 ```sh
 git clone https://git.sr.ht/~unrealapex/dotfiles ~/dotfiles
 cd ~/dotfiles
-./install
+make
 ```
 
 ### 🗒️ notes
@@ -38,7 +38,6 @@ $ tree -d -L 1
 .
 ├── bin          ~/.local/bin/
 ├── config       ~/.config/
-├── dotbot       dotbot binary
 ├── scripts      config scripts
 ├── secrets      files containing secrets
 └── themes       gtk theme
