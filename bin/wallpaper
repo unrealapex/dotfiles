@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ -n "$1"  ]; then
-  feh --no-fehbg --bg-fill "$1"
-else
-  feh --no-fehbg --bg-fill "$WALLPAPER"
-fi
