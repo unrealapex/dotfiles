@@ -124,6 +124,7 @@ alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
 alias dosbox="dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf"
 alias abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook"
 alias musicdl="yt-dlp -x --audio-format flac --audio-quality 10"
+alias sxiv="nsxiv"
 
 # wrapper for xdg-open to open multiple uris
 open() {
