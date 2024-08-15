@@ -50,8 +50,12 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 /usr/local/bin/slock: ~/.config/slock/slock
 	sudo $(MAKE) -C ~/.config/slock clean install
 
-secrets:
+secrets: ~/.config/git/gitconfig.local ~/.config/irssi/credentials
+
+~/.config/git/gitconfig.local:
 	cp --no-clobber ~/dotfiles/secrets/gitconfig.local ~/.config/git/gitconfig.local
+
+~/.config/irssi/credentials:
 	cp --no-clobber ~/dotfiles/secrets/irssi_credentials ~/.config/irssi/credentials
 
 done:
