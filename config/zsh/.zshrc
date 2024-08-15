@@ -149,7 +149,7 @@ alias 8='cd -8'
 alias 9='cd -9'
 
 
-function d () {
+d () {
   if [[ -n $1 ]]; then
     dirs "$@"
   else
