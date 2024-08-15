@@ -18,37 +18,37 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	git clone https://git.sr.ht/~unrealapex/dwm ~/.config/dwm
 
 ~/.config/dwm/dwm: $(wildcard ~/.config/dwm/*.h) $(wildcard ~/.config/dwm/*.c) | ~/.config/dwm
-	$(MAKE) -C ~/.config/dwm
+	$(MAKE) -C ~/.config/dwm install
 
 /usr/local/bin/dwm: ~/.config/dwm/dwm
-	sudo $(MAKE) -C ~/.config/dwm install
+	sudo $(MAKE) -C ~/.config/dwm clean install
 
 ~/.config/st:
 	git clone https://git.sr.ht/~unrealapex/st ~/.config/st
 
 ~/.config/st/st: $(wildcard ~/.config/st/*.h) $(wildcard ~/.config/st/*.c) | ~/.config/st
-	$(MAKE) -C ~/.config/st
+	$(MAKE) -C ~/.config/st install
 
 /usr/local/bin/st: ~/.config/st/st
-	sudo $(MAKE) -C ~/.config/st install
+	sudo $(MAKE) -C ~/.config/st clean install
 
 ~/.config/dmenu:
 	git clone https://git.sr.ht/~unrealapex/dmenu ~/.config/dmenu
 
 ~/.config/dmenu/dmenu: $(wildcard ~/.config/dmenu/*.h) $(wildcard ~/.config/dmenu/*.c) | ~/.config/dmenu
-	$(MAKE) -C ~/.config/dmenu
+	$(MAKE) -C ~/.config/dmenu install
 
 /usr/local/bin/dmenu: ~/.config/dmenu/dmenu
-	sudo $(MAKE) -C ~/.config/dmenu install
+	sudo $(MAKE) -C ~/.config/dmenu clean install
 
 ~/.config/slock:
 	git clone https://git.sr.ht/~unrealapex/slock ~/.config/slock
 
 ~/.config/slock/slock: $(wildcard ~/.config/slock/*.h) $(wildcard ~/.config/slock/*.c) | ~/.config/slock
-	$(MAKE) -C ~/.config/slock
+	$(MAKE) -C ~/.config/slock install
 
 /usr/local/bin/slock: ~/.config/slock/slock
-	sudo $(MAKE) -C ~/.config/slock install
+	sudo $(MAKE) -C ~/.config/slock clean install
 
 secrets:
 	cp --no-clobber ~/dotfiles/secrets/gitconfig.local ~/.config/git/gitconfig.local
