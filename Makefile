@@ -1,9 +1,9 @@
-all: create_dirs link build secrets done
+all: link build secrets done
 
 create_dirs:
 	mkdir -p  ~/.local/{bin,share/themes} ~/projects ~/Downloads/git ~/Pictures/{Webcam,Screenshots}
 
-link:
+link: create_dirs
 	ln -srf ~/dotfiles/bash_profile ~/.bash_profile
 	ln -srf ~/dotfiles/bashrc ~/.bashrc
 	ln -srf ~/dotfiles/zshenv ~/.zshenv
