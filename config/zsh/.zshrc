@@ -76,9 +76,6 @@ _comp_options+=(globdots)
 # disable highlighting of pasted text
 zle_highlight+=(paste:none)
 
-
-zshcache_time="$(date +%s%N)"
-
 # Autoload zsh modules when they are referenced
 zmodload -a zsh/stat stat
 zmodload -a zsh/zpty zpty
