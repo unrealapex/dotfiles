@@ -21,7 +21,7 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/dwm
 
 /usr/local/bin/dwm: ~/.config/dwm/dwm
-	sudo make -C ~/.config/dwm install
+	sudo $(MAKE) -C ~/.config/dwm install
 
 ~/.config/st:
 	git clone https://git.sr.ht/~unrealapex/st ~/.config/st
@@ -30,7 +30,7 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/st
 
 /usr/local/bin/st: ~/.config/st/st
-	sudo make -C ~/.config/st install
+	sudo $(MAKE) -C ~/.config/st install
 
 ~/.config/dmenu:
 	git clone https://git.sr.ht/~unrealapex/dmenu ~/.config/dmenu
@@ -39,7 +39,7 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/dmenu
 
 /usr/local/bin/dmenu: ~/.config/dmenu/dmenu
-	sudo make -C ~/.config/dmenu install
+	sudo $(MAKE) -C ~/.config/dmenu install
 
 ~/.config/slock:
 	git clone https://git.sr.ht/~unrealapex/slock ~/.config/slock
@@ -48,7 +48,7 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/slock
 
 /usr/local/bin/slock: ~/.config/slock/slock
-	sudo make -C ~/.config/slock install
+	sudo $(MAKE) -C ~/.config/slock install
 
 secrets:
 	cp --no-clobber ~/dotfiles/secrets/gitconfig.local ~/.config/git/gitconfig.local
