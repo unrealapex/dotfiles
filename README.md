@@ -32,18 +32,6 @@ you wish. the information below might be of use to you.
 my builds of dwm, dmenu, slock, etc... are stored in separate git repositories.
 make is configured to build them.
 
-dotfiles directories
-```
-$ tree -d -L 1
-.
-├── bin          ~/.local/bin/
-├── config       ~/.config/
-├── gnupg        ~/.gnupg/
-├── gtk          gtk theme
-├── scripts      config scripts
-└── secrets      files containing secrets
-```
-
 **extras**
 
 additional scripts in [scripts/](/scripts).
