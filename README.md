@@ -12,12 +12,11 @@ notifications: dunst
 ```
 
 ### ✨ about ✨
-my dotfiles for gentoo, managed using git and make. the main focus of
-this rice is to create a minimalistic linux system. eye candy is desired,
-however, minimalism and performance come first. a majority of the tools i
-use with this rice follow the [suckless
+my dotfiles for gentoo, managed using git and make. my intent is to keep my
+dotfiles as minimal as possible and to follow the [suckless
 philsophy](https://suckless.org/philosophy/). i, like the suckless developers
-believe writing quality software is important.
+believe writing quality software is important and strive to set an example with
+my dotfiles.
 
 ### 💿 install
 ```sh
@@ -27,11 +26,12 @@ make
 ```
 
 ### 🗒️ notes
-this rice isn't intended for use by others, however, you're welcome to if
-you wish. the information below might be of use to you.
+this rice isn't intended for use by other people, but i don't mind if you do.
+for documentation's sake, this section of the readme has useful information
+below about my dotfiles.
 
 my builds of dwm, dmenu, slock, and dmenu are stored in separate git
-repositories. make is configured to build them.
+repositories. my makefile has a target to build them.
 
 **extras**
 
@@ -45,9 +45,8 @@ $ tree scripts
     └── kill-x             bind ctrl + alt + backspace to kill x
 ```
 
-window decorations aren't functional since window management is done through
-the keyboard, therefore, it's more logical to disable them. this can be done in
-most gui apps by enabling the "use system titlebars" option.
+window decorations should be turned off for gui apps that have the option. this
+can be done in most apps by enabling the "use system titlebars" option.
 
 skeleton files for programs that have secrets(irssi, git) are in `secrets`.
 
