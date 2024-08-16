@@ -15,8 +15,9 @@ notifications: dunst
 my dotfiles for gentoo, managed using git and make. the main focus of
 this rice is to create a minimalistic linux system. eye candy is desired,
 however, minimalism and performance come first. a majority of the tools i
-use with this rice follow the suckless philsophy. i, like the suckless
-developers believe writing quality software is important.
+use with this rice follow the [suckless
+philsophy](https://suckless.org/philosophy/). i, like the suckless developers
+believe writing quality software is important.
 
 ### 💿 install
 ```sh
