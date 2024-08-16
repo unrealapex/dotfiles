@@ -15,8 +15,8 @@ notifications: dunst
 my dotfiles for gentoo, managed using git and make. the main focus of
 this rice is to create a minimalistic linux system. eye candy is desired,
 however, minimalism and performance come first. a majority of the tools i
-use with this rice follow the suckless software design philsophy. i believe
-that is a way of writing software that more people should adapt to.
+use with this rice follow the suckless philsophy. i, like the suckless
+developers believe writing quality software is important.
 
 ### 💿 install
 ```sh
@@ -29,8 +29,8 @@ make
 this rice isn't intended for use by others, however, you're welcome to if
 you wish. the information below might be of use to you.
 
-my builds of dwm, dmenu, slock, etc... are stored in separate git repositories.
-make is configured to build them.
+my builds of dwm, dmenu, slock, and dmenu are stored in separate git
+repositories. make is configured to build them.
 
 **extras**
 
@@ -48,7 +48,7 @@ window decorations aren't functional since window management is done through
 the keyboard, therefore, it's more logical to disable them. this can be done in
 most gui apps by enabling the "use system titlebars" option.
 
-secrets files for programs that have secrets(irssi, git) are in `secrets`.
+skeleton files for programs that have secrets(irssi, git) are in `secrets`.
 
 🌈 color palette
 ```json
