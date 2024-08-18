@@ -56,8 +56,10 @@ mpc
 mpd
 mpd-mpris
 mpv
+mw
 ncmpcpp
 neofetch
+neomutt
 neovim
 newsboat
 nodejs
@@ -72,6 +74,7 @@ openbsd-netcat
 pandoc-bin
 pastel
 perl-image-exiftool
+pinentry
 pipewire
 playerctl
 pulsemixer
@@ -79,6 +82,7 @@ qemu
 ripgrep
 shellcheck
 syncthing
+texlive
 texlive
 themix
 tor
@@ -94,6 +98,7 @@ virt-manager
 virt-viewer
 vulkan-icd-loader
 wget
+wine-staging
 wireplumber
 xbacklight
 xclip
