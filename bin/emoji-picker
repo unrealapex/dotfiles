@@ -14,6 +14,7 @@ fi
 
 emoji_file=$HOME/.local/share/emojis.json
 
+# TODO: use 5th keyword or last keyword
 emoji=$(jq -r ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
   | tr '[:upper:]' '[:lower:]' \
   | dmenu \
