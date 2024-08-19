@@ -4,13 +4,13 @@ create_dirs:
 	mkdir -p  ~/.local/bin ~/.local/share/themes ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
-	ln -srf ~/dotfiles/bash_profile ~/.bash_profile
-	ln -srf ~/dotfiles/bashrc ~/.bashrc
-	ln -srf ~/dotfiles/zshenv ~/.zshenv
-	ln -srf ~/dotfiles/config/* ~/.config/
-	ln -srf ~/dotfiles/gnupg/* ~/.gnupg/
-	ln -srf ~/dotfiles/bin/* ~/.local/bin/
-	ln -srf ~/dotfiles/gtk/* ~/.local/share/themes
+	ln -sf $(shell pwd)/bash_profile ~/.bash_profile
+	ln -sf $(shell pwd)/bashrc ~/.bashrc
+	ln -sf $(shell pwd)/zshenv ~/.zshenv
+	ln -sf $(shell pwd)/config/* ~/.config/
+	ln -sf $(shell pwd)/gnupg/* ~/.gnupg/
+	ln -sf $(shell pwd)/bin/* ~/.local/bin/
+	ln -sf $(shell pwd)/gtk/* ~/.local/share/themes
 
 build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
 
