@@ -12,7 +12,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
-export MANPAGER="sh -c 'col --no-backspaces --spaces | bat --language man --style=plain'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export LESS="--ignore-case --RAW-CONTROL-CHARS"
 # make less more friendly for non-text input files, see lesspipe(1)

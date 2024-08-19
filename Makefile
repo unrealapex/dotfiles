@@ -4,13 +4,12 @@ create_dirs:
 	mkdir -p  ~/.local/bin ~/.local/share/themes ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
-	ln -sf $(shell pwd)/bash_profile ~/.bash_profile
-	ln -sf $(shell pwd)/bashrc ~/.bashrc
-	ln -sf $(shell pwd)/zshenv ~/.zshenv
-	ln -sf $(shell pwd)/config/* ~/.config/
-	ln -sf $(shell pwd)/gnupg/* ~/.gnupg/
-	ln -sf $(shell pwd)/bin/* ~/.local/bin/
-	ln -sf $(shell pwd)/gtk/* ~/.local/share/themes
+	ln -sf ~/dotfiles/bash_profile ~/.bash_profile
+	ln -sf ~/dotfiles/bashrc ~/.bashrc
+	ln -sf ~/dotfiles/zshenv ~/.zshenv
+	ln -sf ~/dotfiles/config/* ~/.config/
+	ln -sf ~/dotfiles/bin/* ~/.local/bin/
+	ln -sf ~/dotfiles/gtk/* ~/.local/share/themes
 
 build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
 
@@ -53,10 +52,10 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 secrets: ~/.config/git/gitconfig.local ~/.config/irssi/credentials
 
 ~/.config/git/gitconfig.local:
-	cp --no-clobber ~/dotfiles/secrets/gitconfig.local ~/.config/git/gitconfig.local
+	cp -n ~/dotfiles/secrets/gitconfig.local ~/.config/git/gitconfig.local
 
 ~/.config/irssi/credentials:
-	cp --no-clobber ~/dotfiles/secrets/irssi_credentials ~/.config/irssi/credentials
+	cp -n ~/dotfiles/secrets/irssi_credentials ~/.config/irssi/credentials
 
 done:
 	@echo "Makefile targets completed!"
