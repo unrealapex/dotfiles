@@ -88,8 +88,8 @@ typeset -U path PATH
 path=(~/.local/bin ~/.cargo/bin ~/.local/share/nvim/mason/bin $path)
 export PATH
 
-[[ -f /usr/share/fzf/key-bindings.zsh ]] && source /usr/share/fzf/key-bindings.zsh
-[[ -f /usr/share/fzf/completion.zsh ]] && source /usr/share/fzf/completion.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
 
 # enable color support of ls and also add handy aliases
