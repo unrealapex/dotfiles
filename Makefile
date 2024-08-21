@@ -9,6 +9,7 @@ link: create_dirs
 	ln -sf ~/dotfiles/zshenv ~/.zshenv
 	ln -sf ~/dotfiles/config/* ~/.config/
 	ln -sf ~/dotfiles/bin/* ~/.local/bin/
+	ln -sf ~/dotfiles/gnupg/* ~/.gnupg/
 	ln -sf ~/dotfiles/gtk/* ~/.local/share/themes
 
 build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
