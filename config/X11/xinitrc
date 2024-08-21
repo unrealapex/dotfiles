@@ -58,7 +58,7 @@ xcompmgr &
 unclutter -b
 
 while true; do
-  xsetroot -name "$(date +"%m/%d %I:%M %P")"
+  xsetroot -name "$(date +"%m/%d %I:%M %p")"
   sleep 1
 done &
 
