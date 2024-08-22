@@ -4,8 +4,6 @@ create_dirs:
 	mkdir -p  ~/.local/bin ~/.local/share/themes ~/.local/share/abook ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
-	ln -sf ~/dotfiles/bash_profile ~/.bash_profile
-	ln -sf ~/dotfiles/bashrc ~/.bashrc
 	ln -sf ~/dotfiles/zshenv ~/.zshenv
 	ln -sf ~/dotfiles/config/* ~/.config/
 	ln -sf ~/dotfiles/bin/* ~/.local/bin/
