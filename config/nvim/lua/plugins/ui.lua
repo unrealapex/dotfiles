@@ -1,8 +1,6 @@
 ---@diagnostic disable: different-requires, mixed_table, undefined-field
 
 return {
-  -- icons
-  "echasnovski/mini.icons",
   -- nicer ui
   {
     "stevearc/dressing.nvim",

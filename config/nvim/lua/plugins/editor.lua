@@ -128,10 +128,21 @@ return {
     cmd = { "FzfLua" },
     cond = vim.fn.executable("fzf") == 1,
     dependencies = {
-      "echasnovski/mini.icons",
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
+     -- FIXME: figure out if there's an easier way to disable icons
+      files = {
+          file_icons = false,
+      },
+      git = {
+          files = {
+              file_icons = false,
+          },
+      },
+      status = {
+          file_icons = false,
+      },
       previewers = {
         builtin = {
           extensions = {

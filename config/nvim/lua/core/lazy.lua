@@ -20,9 +20,19 @@ require("lazy").setup("plugins", {
   },
   ui = {
     icons = {
-      loaded = "",
-      not_loaded = "",
-      task = " ",
+      cmd = "[cmd]",
+      config = "[config]",
+      event = "[event]",
+      ft = "[ft]",
+      init = "[init]",
+      keys = "[keys]",
+      plugin = "[plugin]",
+      runtime = "[runtime]",
+      require = "[require]",
+      source = "[source]",
+      start = "[start]",
+      task = "[task]",
+      -- lazy = "[lazy]",
     },
   },
   performance = {
