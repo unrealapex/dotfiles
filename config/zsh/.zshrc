@@ -82,7 +82,7 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -ap zsh/mapfile mapfile
 
-PROMPT='[%n@%m %1~]$ '
+PROMPT='%n@%m:%1~ $ '
 
 typeset -U path PATH
 path=(~/.local/bin ~/.local/share/cargo/bin ~/.local/share/nvim/mason/bin $path)
