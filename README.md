@@ -51,12 +51,10 @@ can be done in most apps by enabling the "use system titlebars" option.
 skeleton files for programs that have secrets(irssi, git) are in `secrets`.
 
 🌈 color palette
-```json
-{
-  "bg_color": "#0d0d0d",
-  "bg_alt_color": "#262626",
-  "fg_color": "#d9d0d0",
-  "disabled_color": "#777777",
-  "main_color": "#bf2a45"
+```css
+* {
+  --bg-color:"#0d0d0d";
+  --fg-color: "#d9d0d0";
+  --main-color: "#bf2a45";
 }
 ```
