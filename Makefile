@@ -1,7 +1,7 @@
 all: link build secrets done
 
 create_dirs:
-	mkdir -p  ~/.local/bin ~/.local/share/themes ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
+	mkdir -p  ~/.local/bin ~/.local/share/themes ~/.local/share/abook ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
 	ln -sf ~/dotfiles/bash_profile ~/.bash_profile
