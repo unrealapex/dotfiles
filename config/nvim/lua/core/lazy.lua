@@ -20,7 +20,7 @@ require("lazy").setup("plugins", {
   },
   ui = {
     icons = {
-      cmd = "⌘",
+      cmd = "👾",
       config = "🛠",
       event = "📅",
       ft = "📂",
