@@ -170,19 +170,19 @@ return {
       require("gitsigns").setup({
         signs = {
           add = {
-            text = "▎",
+            text = "+",
           },
           change = {
-            text = "▎",
+            text = "~",
           },
           delete = {
-            text = "󰐊",
+            text = "-",
           },
           topdelete = {
-            text = "󰐊",
+            text = "-",
           },
           changedelete = {
-            text = "▎",
+            text = "~",
           },
         },
         signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
