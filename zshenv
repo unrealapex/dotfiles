@@ -48,7 +48,6 @@ export WWW_HOME='https://lite.duckduckgo.com/lite'
 export COLORTERM=truecolor
 
 # xdg compliance
-export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
