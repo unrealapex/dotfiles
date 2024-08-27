@@ -19,7 +19,9 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/dwm install
 
 /usr/local/bin/dwm: ~/.config/dwm/dwm
-	sudo $(MAKE) -C ~/.config/dwm clean install
+	$(MAKE) -C ~/.config/dwm clean install
+
+dwm: /usr/local/bin/dwm
 
 ~/.config/st:
 	git clone https://git.sr.ht/~unrealapex/st ~/.config/st
@@ -28,7 +30,9 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/st install
 
 /usr/local/bin/st: ~/.config/st/st
-	sudo $(MAKE) -C ~/.config/st clean install
+	$(MAKE) -C ~/.config/st clean install
+
+st: /usr/local/bin/st
 
 ~/.config/dmenu:
 	git clone https://git.sr.ht/~unrealapex/dmenu ~/.config/dmenu
@@ -37,7 +41,9 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/dmenu install
 
 /usr/local/bin/dmenu: ~/.config/dmenu/dmenu
-	sudo $(MAKE) -C ~/.config/dmenu clean install
+	$(MAKE) -C ~/.config/dmenu clean install
+
+dmenu: /usr/local/bin/dmenu
 
 ~/.config/slock:
 	git clone https://git.sr.ht/~unrealapex/slock ~/.config/slock
@@ -46,7 +52,9 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 	$(MAKE) -C ~/.config/slock install
 
 /usr/local/bin/slock: ~/.config/slock/slock
-	sudo $(MAKE) -C ~/.config/slock clean install
+	$(MAKE) -C ~/.config/slock clean install
+
+slock: /usr/local/bin/slock
 
 secrets: ~/.config/git/gitconfig.local ~/.config/irssi/credentials
 
