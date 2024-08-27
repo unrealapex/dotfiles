@@ -62,5 +62,6 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export RANDFILE="$XDG_RUNTIME_DIR"/rnd
 export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
+export LYNX_CFG="$XDG_CONFIG_HOME"/lynx.cfg
 
 export PATH
