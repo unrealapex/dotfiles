@@ -44,7 +44,6 @@ keepassxc
 krita
 libnotify
 libreoffice
-links
 lua
 lynx
 maim
@@ -68,8 +67,6 @@ noto-fonts-emoji
 npm
 nsxiv
 obs-studio
-obsidian
-ocl-icd
 openbsd-netcat
 pandoc-bin
 pastel
@@ -84,7 +81,6 @@ shellcheck
 syncthing
 texlive
 texlive
-themix
 tor
 torque
 tree
@@ -96,7 +92,6 @@ unzip
 vde2
 virt-manager
 virt-viewer
-vulkan-icd-loader
 wget
 wine-staging
 wireplumber
