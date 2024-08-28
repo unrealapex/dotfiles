@@ -121,7 +121,7 @@ alias sxiv="nsxiv"
 
 # wrapper for xdg-open to open multiple uris
 open() {
-  if [[ "$#" -eq 0 ]]; then
+  if [ "$#" -eq 0 ]; then
     echo "Usage: open [file|directory|protocol]"
     return 1
   fi
@@ -146,7 +146,7 @@ alias 9='cd -9'
 
 
 d () {
-  if [[ -n $1 ]]; then
+  if [ -n $1 ]; then
     dirs "$@"
   else
     dirs -v | head -n 10
