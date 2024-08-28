@@ -16,7 +16,10 @@ antidote load
 
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=1000
