@@ -53,7 +53,7 @@ skeleton files for programs that have secrets(irssi, git) are in `secrets`.
 🌈 color palette
 ```css
 * {
-  --bg-color:"darkgray";
+  --bg-color: "darkgray";
   --fg-color: "white";
   --main-color: "maroon";
 }
