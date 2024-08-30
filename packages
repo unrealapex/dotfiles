@@ -51,12 +51,8 @@ man-db
 man-pages
 mesa
 mesa-utils
-mpc
-mpd
-mpd-mpris
 mpv
 mutt-wizard
-ncmpcpp
 neofetch
 neomutt
 neovim
@@ -64,8 +60,8 @@ newsboat
 nodejs
 noto-fonts-cjk
 noto-fonts-emoji
-npm
 nsxiv
+oath-toolkit
 obs-studio
 openbsd-netcat
 pandoc-bin
