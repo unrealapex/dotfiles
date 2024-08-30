@@ -1,6 +1,7 @@
 all: link build secrets done
 
 create_dirs:
+	xdg-user-dirs-update
 	mkdir -p  ~/.local/bin ~/.local/share/themes ~/.local/share/abook ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
