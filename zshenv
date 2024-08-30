@@ -58,7 +58,8 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundle
 export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundle/config
 export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundle
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+# FIXME: prevent this from breaking ebuilds
+# export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export RANDFILE="$XDG_RUNTIME_DIR"/rnd
 export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
