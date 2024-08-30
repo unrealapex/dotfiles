@@ -67,5 +67,5 @@ secrets: ~/.config/git/config.local ~/.config/irssi/config.local
 done:
 	@echo "Makefile targets completed!"
 
-.PHONY: all secrets
+.PHONY: all create_dirs link build dwm st dmenu slock done
 
