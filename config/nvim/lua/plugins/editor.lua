@@ -182,7 +182,7 @@ return {
             text = "-",
           },
           changedelete = {
-            text = "~",
+            text = "-",
           },
         },
         signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
