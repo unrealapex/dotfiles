@@ -12,6 +12,9 @@ link: create_dirs
 	ln -sf ~/dotfiles/gnupg/* ~/.gnupg/
 	ln -sf ~/dotfiles/gtk/* ~/.local/share/themes
 
+clean:
+	find -L ~ -maxdepth 1 -type l -delete
+
 build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
 
 ~/.config/dwm:
@@ -69,5 +72,5 @@ secrets: ~/.config/git/config.local ~/.config/irssi/config.local
 done:
 	@echo "Makefile targets completed!"
 
-.PHONY: all create_dirs link build dwm st dmenu slock done
+.PHONY: all create_dirs link clean build dwm st dmenu slock done
 
