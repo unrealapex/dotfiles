@@ -40,7 +40,7 @@ return {
           "html",
           "jdtls",
           "jsonls",
-          "lua-language-server",
+          "lua_ls",
           "pyright",
           "sqlls",
           "tsserver",
