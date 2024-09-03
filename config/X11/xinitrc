@@ -63,7 +63,7 @@ else
   xrandr --output eDP-1 --auto
 fi
 
-hsetroot -solid "#404040"
+hsetroot -full "$WALLPAPER"
 
 while true; do
   # Log stderror to a file
