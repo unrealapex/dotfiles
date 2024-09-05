@@ -15,7 +15,7 @@ full)
 
   printf "%b" "${bold}screenshot${reset}: wrapper for maim
 
-${bold}Usage${reset}: screenshot [select|main]
+${bold}Usage${reset}: screenshot [select|full]
 " >&2
         exit
         ;;
