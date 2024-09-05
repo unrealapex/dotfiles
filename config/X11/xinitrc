@@ -58,11 +58,11 @@ while true; do
   sleep 1
 done &
 
-if [ $(xrandr -q | grep -c "HDMI-1 connected") -eq 1 ]; then
-  xrandr --output HDMI-1 --mode 1920x1080 -r 71
-  xrandr --output eDP-1 --off
+if [ $(xrandr -q | grep -c "HDMI1 connected") -eq 1 ]; then
+  xrandr --output HDMI1 --mode 1920x1080 -r 71
+  xrandr --output eDP1 --off
 else
-  xrandr --output eDP-1 --auto
+  xrandr --output eDP1 --auto
 fi
 
 hsetroot -full "$WALLPAPER"
