@@ -5,7 +5,7 @@ reset="\033[m"
 image_path=$HOME/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 case $1 in
-selection)
+select)
         maim -s -m 10 "$image_path" || exit
         ;;
 full)
@@ -15,7 +15,7 @@ full)
 
   printf "%b" "${bold}screenshot${reset}: wrapper for maim
 
-${bold}Usage${reset}: screenshot [selection|main]
+${bold}Usage${reset}: screenshot [select|main]
 " >&2
         exit
         ;;
