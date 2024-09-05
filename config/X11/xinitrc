@@ -45,6 +45,8 @@ eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
 gentoo-pipewire-launcher &
 
+mpd
+
 playerctld daemon
 
 xcompmgr &
