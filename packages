@@ -28,6 +28,7 @@ git-delta
 glow
 gnu-free-fonts
 gomuks
+graphicsmagick
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
@@ -46,7 +47,6 @@ libnotify
 libreoffice
 lua
 lynx
-maim
 man-db
 man-pages
 mesa

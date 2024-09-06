@@ -1,19 +1,24 @@
 #!/bin/sh
 
+if [ ! "$(command -v gm)"  ]; then
+  echo "graphicsmagick is not installed" 1>&2
+  exit
+fi
+
 bold="\033[1m"
 reset="\033[m"
 image_path=$HOME/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 case $1 in
 select)
-        maim -s -m 10 "$image_path" || exit
+        gm import -frame -quality 0  "$image_path"
         ;;
 full)
-        maim -m 10 "$image_path" || exit
+        gm import -window root -frame -quality 0  "$image_path"
         ;;
 *)
 
-  printf "%b" "${bold}screenshot${reset}: wrapper for maim
+  printf "%b" "${bold}screenshot${reset}: wrapper for import
 
 ${bold}Usage${reset}: screenshot [select|full]
 " >&2
