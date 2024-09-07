@@ -47,6 +47,9 @@ export WWW_HOME='https://lite.duckduckgo.com/lite'
 # st supports true color
 export COLORTERM=truecolor
 
+export PASSWORD_STORE_CLIP_TIME=15
+export PASSWORD_STORE_GENERATED_LENGTH=50
+
 # xdg compliance
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
