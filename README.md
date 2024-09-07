@@ -1,4 +1,4 @@
-# dotfiles 🌸
+# 🌺 dotfiles
 
 [![screenshot of rice](rice.png)](https://wallhaven.cc/w/gpmv73)
 ```
