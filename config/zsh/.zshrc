@@ -100,9 +100,9 @@ if [ $(command -v dircolors) ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -ahlF'
+alias ll='ls -ahl'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -C'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
