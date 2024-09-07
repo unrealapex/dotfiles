@@ -7,13 +7,13 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # merge in defaults and keymaps
 
-if [ -f $sysresources ]; then
+if [ -f "$sysresources" ]; then
 
   xrdb -merge $sysresources
 
 fi
 
-if [ -f $sysmodmap ]; then
+if [ -f "$sysmodmap" ]; then
   xmodmap $sysmodmap
 fi
 
@@ -38,7 +38,7 @@ fi
 
 xset b off
 xset +dpms
-xset s 300 30
+xset s 300 60
 xss-lock -l -- slock &
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
@@ -58,7 +58,7 @@ while true; do
   sleep 1
 done &
 
-if [ $(xrandr -q | grep -c "HDMI1 connected") -eq 1 ]; then
+if [ "$(xrandr -q | grep -c "HDMI1 connected")" -eq 1 ]; then
   xrandr --output HDMI1 --mode 1920x1080 -r 71
   xrandr --output eDP1 --off
 else
