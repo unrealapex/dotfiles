@@ -103,6 +103,7 @@ fi
 alias ll='ls -ahl'
 alias la='ls -A'
 alias l='ls -C'
+alias sudo='doas'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
