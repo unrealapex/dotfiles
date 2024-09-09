@@ -76,7 +76,7 @@ return {
   },
   {
     "hrsh7th/cmp-buffer",
-    event = { "CmdlineEnter", "InsertEnter" },
+    event = "InsertEnter",
     dependencies = "hrsh7th/nvim-cmp",
   },
   {
