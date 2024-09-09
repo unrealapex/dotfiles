@@ -62,7 +62,7 @@ vim.opt.wrap = false
 vim.cmd.syntax("on")
 
 -- colorscheme
-vim.cmd.colorscheme("wildcharm")
+vim.cmd.colorscheme("sorbet")
 vim.cmd.highlight({"normal", "guibg=NONE"})
 
 --globals
