@@ -1,7 +1,15 @@
 #!/bin/sh
 
+red="\033[1;31m"
+fg_reset="\033[0m"
+
+error() {
+  printf "%b\n" "${red}$1${fg_reset}" 1>&2
+}
+
+
 if [ ! "$(command -v gm)"  ]; then
-  echo "graphicsmagick is not installed" 1>&2
+  error "graphicsmagick is not installed"
   exit
 fi
 

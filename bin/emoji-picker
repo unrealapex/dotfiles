@@ -1,13 +1,19 @@
 #!/bin/sh
 
+red="\033[1;31m"
+fg_reset="\033[0m"
+
+error() {
+  printf "%b\n" "${red}$1${fg_reset}"  2>&1
+}
 
 if [ ! "$(command -v dmenu)" ] || [ ! "$(command -v xclip)" ]; then
   if [ ! "$(command -v dmenu)" ] && [ ! "$(command -v xclip)" ]; then
-    echo "dmenu and xclip not found"
+    error "dmenu and xclip not found"
   elif  [ ! "$(command -v dmenu)" ]; then
-    echo "dmenu not found"
+    error "dmenu not found"
   elif [ ! "$(command -v xclip)" ]; then
-    echo "xclip not found"
+    error "xclip not found"
   fi
   exit
 fi

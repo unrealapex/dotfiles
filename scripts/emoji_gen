@@ -1,13 +1,19 @@
 #!/bin/sh
 
+red="\033[1;31m"
+fg_reset="\033[0m"
+
+error() {
+  printf "%b\n" "${red}$1${fg_reset}" 1>&2
+}
 
 if [ ! "$(command -v bundler)" ] || [ ! "$(command -v jq)" ]; then
   if [ ! "$(command -v bundler)" ] && [ ! "$(command -v jq)" ]; then
-    echo "error: bundler and jq not found"
+    error "error: bundler and jq not found"
   elif  [ ! "$(command -v bundler)" ]; then
-    echo "error: bundler not found"
+    error "error: bundler not found"
   elif [ ! "$(command -v jq)" ]; then
-    echo "error: jq not found"
+    error "error: jq not found"
   fi
   exit
 fi
@@ -27,7 +33,7 @@ if [ "$(command -v doas)" ]; then
 elif [ "$(command -v sudo)" ]; then
   make setup || sudo bundle install
 else
-  echo "Neither doas or sudo were found. Please install either of them to proceed."
+  error "Neither doas or sudo were found. Please install either of them to proceed."
 fi
 
 
