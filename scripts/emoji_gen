@@ -34,6 +34,7 @@ elif [ "$(command -v sudo)" ]; then
   make setup || sudo bundle install
 else
   error "Neither doas or sudo were found. Please install either of them to proceed."
+  exit
 fi
 
 
