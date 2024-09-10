@@ -25,7 +25,7 @@ fi
 # Shows the selected character in notification daemon if running.
 # Character is copied to system clipboard using xclip.
 
-emoji_file=$HOME/.local/share/emojis.json
+emoji_file=$HOME/.local/share/unicode/all_emojis.json
 
 if [ ! -f "$emoji_file" ]; then
   error "emoji file not found, please install it using the emoji-gen script
