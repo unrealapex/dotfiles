@@ -20,7 +20,7 @@ fi
 
 
 tmp_dir=$(mktemp -d)
-emoji_file="$HOME/.local/share/emojis.json"
+emoji_file="$HOME"/.local/share/emojis.json
 
 git clone --filter=blob:none https://github.com/Mange/emoji-data "$tmp_dir"
 
