@@ -12,7 +12,18 @@ emoji_file="$HOME/.local/share/emojis.json"
 git clone --filter=blob:none https://github.com/Mange/emoji-data "$tmp_dir"
 
 cd "$tmp_dir" || exit
-make setup || sudo bundle install
+
+# determine whether to use doas or sudo
+if [ "$(command -v doas)" ]; then
+  make setup || doas bundle install
+
+elif [ "$(command -v sudo)" ]; then
+  make setup || sudo bundle install
+else
+  echo "Neither doas or sudo were found. Please install either of them to proceed."
+fi
+
+
 make all
 
 # exit if build was not successfull
