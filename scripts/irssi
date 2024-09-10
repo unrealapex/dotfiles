@@ -5,7 +5,7 @@
 # create directories
 mkdir --parent ~/.local/share/irssi/scripts/autorun/ /tmp/irssi-scripts/
 scripts_dir=~/.local/share/irssi/scripts/
-tmp_dir=/tmp/irssi-scripts
+tmp_dir=$(mktemp -d)
 url="https://raw.githubusercontent.com/irssi/scripts.irssi.org/master/scripts/"
 scripts=(nickcolor)
 for script in "${scripts[@]}"; do

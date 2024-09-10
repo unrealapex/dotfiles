@@ -8,7 +8,7 @@ if [ ! -d "$HOME/.mozilla/" ]; then
 fi
 
 profile_path=$(find ~/.mozilla/firefox/ -type d -name "*.default-release")
-temp_file="/tmp/user.js"
+temp_file=$(mktemp)
 
 # fetch betterfox user.js
 curl https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js --output "$temp_file"
