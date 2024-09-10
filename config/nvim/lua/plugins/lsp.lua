@@ -43,7 +43,7 @@ return {
           "lua_ls",
           "pyright",
           "sqlls",
-          "tsserver",
+          "ts_ls",
           "vimls",
         },
       })
