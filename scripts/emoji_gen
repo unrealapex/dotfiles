@@ -1,7 +1,14 @@
 #!/bin/sh
 
+
 if [ ! "$(command -v bundler)" ] || [ ! "$(command -v jq)" ]; then
-  echo "ruby or jq is not installed, aborting" >&2 
+  if [ ! "$(command -v bundler)" ] && [ ! "$(command -v jq)" ]; then
+    echo "error: bundler and jq not found"
+  elif  [ ! "$(command -v bundler)" ]; then
+    echo "error: bundler not found"
+  elif [ ! "$(command -v jq)" ]; then
+    echo "error: jq not found"
+  fi
   exit
 fi
 
