@@ -27,6 +27,12 @@ fi
 
 emoji_file=$HOME/.local/share/emojis.json
 
+if [ ! -f "$emoji_file" ]; then
+  error "emoji file not found, please install it using the emoji-gen script
+  or build manually from https://github.com/Mange/emoji-data"
+  exit
+fi
+
 # TODO: use 5th keyword or last keyword
 emoji=$(jq -r ' .[] | "\(.characters) \(.en_tts_description)"' "$emoji_file" \
   | tr '[:upper:]' '[:lower:]' \
