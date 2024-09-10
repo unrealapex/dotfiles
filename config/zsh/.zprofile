@@ -3,7 +3,7 @@
 #
 
 
-[[ -f $ZDOTDIR/.zshrc ]] && . $ZDOTDIR/.zshrc
+[ -f $ZDOTDIR/.zshrc ] && . $ZDOTDIR/.zshrc
 
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
