@@ -1,7 +1,7 @@
 directory: ~/Music            # The default library root directory.
 library: ~/Music/library.db   # The default library database file to use.
 
-plugins: convert chroma badfiles bareasc duplicates edit fromfilename fuzzy lyrics
+plugins: convert chroma badfiles bareasc duplicates edit fromfilename fuzzy lyrics missing
 
 convert:
     format: flac
