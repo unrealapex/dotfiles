@@ -5,12 +5,11 @@ create_dirs:
 	mkdir -p  ~/.local/share/themes ~/.local/share/abook ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
-	# TODO: figure out if you can use relative paths
-	ln -sf ~/dotfiles/zshenv ~/.zshenv
-	ln -sf ~/dotfiles/config/* ~/.config/
-	ln -sf ~/dotfiles/bin/* /usr/local/bin/
-	ln -sf ~/dotfiles/gnupg/* ~/.gnupg/
-	ln -sf ~/dotfiles/gtk/* ~/.local/share/themes
+	ln -sf $(realpath zshenv) ~/.zshenv
+	ln -sf $(realpath config)/* ~/.config/
+	ln -sf $(realpath bin)/* /usr/local/bin/
+	ln -sf $(realpath gnupg)/* ~/.gnupg/
+	ln -sf $(realpath gtk)/* ~/.local/share/themes
 
 clean:
 	find -L ~ -maxdepth 1 -type l -delete
