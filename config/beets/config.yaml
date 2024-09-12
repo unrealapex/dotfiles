@@ -11,7 +11,7 @@ convert:
 import:
     write: yes
     move: yes
-    copy: no
+    copy: yes
 match:
     strong_rec_thresh: 0.05
     preferred:
