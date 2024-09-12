@@ -1,7 +1,13 @@
 #!/bin/sh
 
-bold="\033[1m"
-reset="\033[m"
+if [ ! "$NO_COLOR" = 1 ]; then
+  bold="\033[1m"
+  reset="\033[m"
+else
+  bold=""
+  reset=""
+fi
+
 
 send_notification() {
   volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')

@@ -1,9 +1,17 @@
 #!/bin/sh
 
-bold="\033[1m"
-reset="\033[m"
-fg_red="\033[1;31m"
-fg_reset="\033[0m"
+if [ ! "$NO_COLOR" = 1 ]; then
+  bold="\033[1m"
+  reset="\033[m"
+  fg_red="\033[1;31m"
+  fg_reset="\033[0m"
+else
+  bold=""
+  reset=""
+  fg_red=""
+  fg_reset=""
+fi
+
 
 # upload a file to 0x0.st
 if [ $# = 1 ]; then

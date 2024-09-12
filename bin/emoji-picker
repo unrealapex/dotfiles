@@ -1,7 +1,12 @@
 #!/bin/sh
 
-red="\033[1;31m"
-fg_reset="\033[0m"
+if [ ! "$NO_COLOR" = 1 ]; then
+  red="\033[1;31m"
+  fg_reset="\033[0m"
+else
+  red=""
+  fg_reset=""
+fi
 
 error() {
   printf "%b\n" "${red}$1${fg_reset}"  2>&1
@@ -45,3 +50,5 @@ if [ ! "$emoji" = "" ]; then
   echo "$emoji" | xclip -selection clipboard
   notify-send "emoji: $emoji copied"
 fi
+
+error foo
