@@ -5,3 +5,7 @@ plugins: convert chroma badfiles bareasc duplicates edit
 
 convert:
     format: flac
+match:
+    strong_rec_thresh: 0.05
+    preferred:
+        countries: ['US', 'GB|UK']
