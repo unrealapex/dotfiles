@@ -4,7 +4,10 @@ library: ~/Music/library.db   # The default library database file to use.
 plugins: convert chroma badfiles bareasc duplicates edit
 
 convert:
+    auto: yes
     format: flac
+    dest: ~/Music
+    delete_originals: true
 import:
     write: yes
     move: yes
