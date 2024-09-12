@@ -1,7 +1,7 @@
 directory: ~/Music            # The default library root directory.
 library: ~/Music/library.db   # The default library database file to use.
 
-plugins: convert chroma badfiles bareasc duplicates edit
+plugins: convert chroma badfiles bareasc duplicates edit random
 
 convert:
     auto: yes
