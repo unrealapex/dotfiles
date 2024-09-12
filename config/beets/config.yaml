@@ -5,6 +5,10 @@ plugins: convert chroma badfiles bareasc duplicates edit
 
 convert:
     format: flac
+import:
+    write: yes
+    move: yes
+    copy: no
 match:
     strong_rec_thresh: 0.05
     preferred:
