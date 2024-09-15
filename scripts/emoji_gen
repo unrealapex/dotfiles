@@ -14,12 +14,12 @@ error() {
   printf "%b\n" "${red}$1${fg_reset}" 1>&2
 }
 
-if [ ! "$(command -v bundler)" ] || [ ! "$(command -v jq)" ]; then
-  if [ ! "$(command -v bundler)" ] && [ ! "$(command -v jq)" ]; then
+if ! command -v bundler > /dev/null || ! command -v jq; then
+  if  ! command -v bundler && ! command -v jq; then
     error "bundler and jq not found"
-  elif  [ ! "$(command -v bundler)" ]; then
+  elif  ! command -v bundler; then
     error "bundler not found"
-  elif [ ! "$(command -v jq)" ]; then
+  elif ! command -v jq; then
     error "jq not found"
   fi
   exit
@@ -34,10 +34,10 @@ git clone --filter=blob:none https://github.com/Mange/emoji-data "$tmp_dir"
 cd "$tmp_dir" || exit
 
 # determine whether to use doas or sudo
-if [ "$(command -v doas)" ]; then
+if command -v doas; then
   make setup || doas bundle install
 
-elif [ "$(command -v sudo)" ]; then
+elif command -v sudo; then
   make setup || sudo bundle install
 else
   error "Neither doas or sudo were found. Please install either of them to proceed."

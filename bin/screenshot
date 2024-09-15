@@ -13,7 +13,7 @@ error() {
 }
 
 
-if [ ! "$(command -v gm)"  ]; then
+if ! command -v gm; then
   error "graphicsmagick is not installed"
   exit
 fi
