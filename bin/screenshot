@@ -41,4 +41,4 @@ esac
 
 xclip -selection clipboard -t image/png -i "$image_path"
 
-notify-send "screenshot: image saved"
+herbe "screenshot: image saved"

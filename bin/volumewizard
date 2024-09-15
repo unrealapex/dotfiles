@@ -23,9 +23,9 @@ fi
 send_notification() {
   volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
   if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "MUTED"; then
-    dunstify -r 9993 "volume: muted"
+    env HERBE_ID=/9993 herbe "volume: muted"
   else
-    dunstify -r 9993 "volume: $volume%"
+    env HERBE_ID=/9993 herbe "volume: $volume%"
   fi
 }
 
