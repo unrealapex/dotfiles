@@ -35,7 +35,7 @@ export FFF_FAV6=~/dotfiles
 export FFF_FAV7=~/projects
 export FFF_FAV8=~/.zshrc
 export FFF_FAV9=~/.xinitrc
-export WALLPAPER="$HOME/dotfiles/sakura.png"
+export WALLPAPER="$HOME/dotfiles/sakura.xpm"
 # export MANGOHUD=1
 
 # set fcitx as input method framework
