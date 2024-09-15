@@ -8,6 +8,17 @@ else
   reset=""
 fi
 
+if ! command -v wpctl > /dev/null || ! command -v herbe; then
+  if  ! command -v wpctl && ! command -v herbe; then
+    error "wireplumber and herbe not found"
+  elif  ! command -v wpctl; then
+    error "wireplumber not found"
+  elif ! command -v herbe; then
+    error "wireplumber not found"
+  fi
+  exit
+fi
+
 
 send_notification() {
   volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
