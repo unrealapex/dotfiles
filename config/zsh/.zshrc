@@ -109,7 +109,7 @@ alias uwu='echo uwu'
 alias freeram='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 # chill study music with lofi girl
 alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
-alias irssi="irssi --config=<((cat $XDG_CONFIG_HOME/irssi/config.local $XDG_CONFIG_HOME/irssi/config)) --home="$XDG_DATA_HOME"/irssi"
+alias irssi="irssi --config=<(cat $XDG_CONFIG_HOME/irssi/config.local $XDG_CONFIG_HOME/irssi/config) --home="$XDG_DATA_HOME"/irssi"
 alias bc="bc --mathlib --quiet"
 alias pidgin="pidgin --config="$XDG_DATA_HOME"/purple"
 alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc"
