@@ -1,7 +1,6 @@
 #
-# ~/.zshenv
+# ~/.zprofile
 #
-
 
 export ZDOTDIR=$HOME/.config/zsh
 export EDITOR="nvim"
@@ -71,3 +70,10 @@ export NVM_DIR="$HOME/.config/nvm"
 export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
+
+
+[ -f $ZDOTDIR/.zshrc ] && . $ZDOTDIR/.zshrc
+
+eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
+
+[ -t 0 ] && [ "$(tty)" = "/dev/tty1" ] && [ ! "$DISPLAY" ] && exec startx

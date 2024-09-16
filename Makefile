@@ -5,7 +5,7 @@ create_dirs:
 	mkdir -p  ~/.local/share/themes ~/.local/share/abook ~/projects ~/Downloads/git ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
-	ln -sf $(realpath zshenv) ~/.zshenv
+	ln -sf $(realpath zprofile) ~/.zprofile
 	ln -sf $(realpath config)/* ~/.config/
 	ln -sf $(realpath bin)/* /usr/local/bin/
 	ln -sf $(realpath gnupg)/* ~/.gnupg/
