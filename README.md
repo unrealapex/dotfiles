@@ -7,7 +7,7 @@ launcher: dmenu
 terminal: st
 shell: zsh
 editor: neovim
-notifications: dunst
+notifications: herbe
 ```
 
 ### ✨ about ✨
