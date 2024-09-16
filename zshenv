@@ -71,7 +71,3 @@ export NVM_DIR="$HOME/.config/nvm"
 export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
-typeset -U path PATH
-path+=(~/.local/bin ~/.local/share/cargo/bin ~/.local/share/nvim/mason/bin)
-
-export PATH
