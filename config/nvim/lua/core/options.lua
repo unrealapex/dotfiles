@@ -2,8 +2,6 @@ vim.opt.autoread = true
 vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 vim.opt.backupdir = vim.fn.stdpath("state") .. "/backup"
-vim.opt.cindent = true
-vim.opt.cinoptions = "(0"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
 -- store all swap files in one directory
@@ -36,12 +34,10 @@ vim.opt.pumheight = 12
 vim.opt.relativenumber = true
 vim.opt.ruler = true
 vim.opt.scrolloff = 8
-vim.opt.shiftwidth = 4
 vim.opt.showmode = true
 vim.opt.showcmd = true
 vim.opt.signcolumn = "auto:1-2"
 vim.opt.smartcase = true
-vim.opt.softtabstop = 4
 vim.opt.splitright = true
 -- TODO: show diagnostics
 vim.opt.statusline = "%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
