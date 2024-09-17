@@ -1,11 +1,6 @@
 ---@diagnostic disable: deprecated, lowercase-global
 -- keymaps
 
--- delete previous word in insert mode
-vim.keymap.set("i", "<C-BS>", "<C-W>")
--- unindent in insert mode
-vim.keymap.set("i", "<S-Tab>", "<C-d>")
-
 -- change directory
 vim.keymap.set("n", "<leader>cd", function()
   vim.cmd.cd(vim.fn.expand("%:p:h"))
