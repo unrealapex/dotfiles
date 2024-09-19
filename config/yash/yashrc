@@ -3,8 +3,8 @@
 #
 
 
-# PROMPT='%n@%m:%1~ $ '
-
+# TODO: only add useful settings
+. --autoload --no-alias initialization/common
 
 PATH="$PATH:~/.local/bin:~/.local/share/cargo/bin:~/.local/share/nvim/mason/bin"
 export PATH
