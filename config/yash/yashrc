@@ -9,6 +9,10 @@
 PATH="$PATH:~/.local/bin:~/.local/share/cargo/bin:~/.local/share/nvim/mason/bin"
 export PATH
 
+bindkey --emacs '\^L' clear-and-redraw-all
+bindkey --vi-insert '\^L' clear-and-redraw-all
+bindkey --vi-command '\^L' clear-and-redraw-all
+
 
 # enable color support of ls and also add handy aliases
 if [ $(command -v dircolors) ]; then
