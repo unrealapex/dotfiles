@@ -1,0 +1,66 @@
+#
+# ~/.config/yash/yashrc
+#
+
+
+# PROMPT='%n@%m:%1~ $ '
+
+
+PATH="$PATH:~/.local/bin:~/.local/share/cargo/bin:~/.local/share/nvim/mason/bin"
+export PATH
+
+
+# enable color support of ls and also add handy aliases
+if [ $(command -v dircolors) ]; then
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -ahl'
+alias la='ls -A'
+alias l='ls -C'
+alias sudo='doas'
+alias pls='sudo $(history -p !!)'
+alias uwu='echo uwu'
+# chill study music with lofi girl
+alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
+alias irssi="irssi --config=<(cat $XDG_CONFIG_HOME/irssi/config.local $XDG_CONFIG_HOME/irssi/config) --home="$XDG_DATA_HOME"/irssi"
+alias bc="bc --mathlib --quiet"
+alias pidgin="pidgin --config="$XDG_DATA_HOME"/purple"
+alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc"
+alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
+alias dosbox="dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf"
+alias abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook"
+alias musicdl="yt-dlp -x --audio-format flac --audio-quality 10"
+alias sxiv="nsxiv"
+alias mutt="neomutt"
+
+# wrapper for xdg-open to open multiple uris
+open() {
+  if [ "$#" -eq 0 ]; then
+    echo "Usage: open [file|directory|protocol]"
+    return 1
+  fi
+
+  for uri in "$@"; do
+    xdg-open "$uri"
+  done
+}
+
+alias f='fff'
+alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
+alias -- -='cd -'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../..'
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
