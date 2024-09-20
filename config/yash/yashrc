@@ -9,6 +9,9 @@
 
 set -o emacs
 
+HISTFILE="$XDG_STATE_HOME"/yash/history
+HISTSIZE=2000
+
 # TODO: add vi style completion bindings
 
 PATH="$PATH:~/.local/bin:~/.local/share/cargo/bin:~/.local/share/nvim/mason/bin"
