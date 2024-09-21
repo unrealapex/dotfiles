@@ -9,6 +9,7 @@ esac
 # TODO: only add useful settings
 . --autoload --no-alias initialization/common
 
+YASH_PS1='${LOGNAME}@${HOSTNAME}:${${${PWD:/~/\~}##*/}:-$PWD} $ '
 
 set -o emacs
 set --brace-expand
