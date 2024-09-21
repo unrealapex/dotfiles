@@ -2,6 +2,9 @@
 # ~/.config/yash/yashrc
 #
 
+case $- in (*m*)
+  trap - TSTP TTIN TTOU
+esac
 
 # TODO: only add useful settings
 . --autoload --no-alias initialization/common
