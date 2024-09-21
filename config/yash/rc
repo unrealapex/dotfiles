@@ -13,6 +13,7 @@ esac
 set -o emacs
 set --brace-expand
 set --extended-glob
+set --hist-space
 
 HISTFILE="$XDG_STATE_HOME"/yash/history
 HISTSIZE=2000
