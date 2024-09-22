@@ -75,3 +75,5 @@ eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RU
 
 [ -t 0 ] && setterm --bfreq=0
 exec startx
+
+# vim: set filetype=sh
