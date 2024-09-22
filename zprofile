@@ -66,7 +66,7 @@ export WINEPREFIX="$XDG_DATA_HOME"/wine
 export RANDFILE="$XDG_RUNTIME_DIR"/rnd
 export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
 export LYNX_CFG="$XDG_CONFIG_HOME"/lynx/lynx.cfg
-export NVM_DIR="$HOME/.config/nvm"
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
