@@ -5,7 +5,7 @@
 wm: dwm
 launcher: dmenu
 terminal: st
-shell: zsh
+shell: yash
 editor: neovim
 notifications: herbe
 ```
