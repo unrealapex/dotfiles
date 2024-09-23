@@ -4,6 +4,7 @@ return {
   -- formatter
   {
     "stevearc/conform.nvim",
+    dependencies = "neovim/nvim-lspconfig",
     cmd = "ConformInfo",
     keys = {
       {
