@@ -53,7 +53,7 @@ local config = {
     workspace_dir,
   },
 
-  capabilities = require("cmp_nvim_lsp").default_capabilities(),
+  capabilities = {},
   root_dir = root_dir,
 
   -- Here you can configure eclipse.jdt.ls specific settings
