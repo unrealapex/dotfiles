@@ -15,7 +15,7 @@ return {
 
   -- automatically close pairs
   {
-    "windwp/nvim-autopairs",
+    "echasnovski/mini.pairs",
     -- load when bracket delimiter is pressed
     keys = {
       { "(", mode = "i" },
@@ -28,7 +28,12 @@ return {
       { "'", mode = "i" },
       { "`", mode = "i" },
     },
-    config = true,
+    opts = {
+      skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+      skip_ts = { "string" },
+      skip_unbalanced = true,
+      markdown = true,
+    },
   },
 
   -- additional text objects
