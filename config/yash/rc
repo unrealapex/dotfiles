@@ -29,6 +29,9 @@ bindkey --emacs '\^L' clear-and-redraw-all
 bindkey --vi-insert '\^L' clear-and-redraw-all
 bindkey --vi-command '\^L' clear-and-redraw-all
 
+bindkey --emacs '\^[[1;5D' backward-emacsword
+bindkey --emacs '\^[[1;5C' forward-emacsword
+
 
 # enable color support of ls and also add handy aliases
 if [ $(command -v dircolors) ]; then
