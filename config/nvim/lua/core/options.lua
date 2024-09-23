@@ -132,3 +132,7 @@ vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/core/autocmds.lua"
 
 -- $LSP
 vim.env.LSP = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
+
+-- $FTPLUGIN
+vim.env.FTPLUGIN = vim.fn.stdpath("config") .. "/after/ftplugin/"
+
