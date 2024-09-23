@@ -150,3 +150,4 @@ require("jdtls.setup").add_commands()
 
 vim.bo.shiftwidth = 2
 vim.bo.tabstop = 2
+vim.bo.formatprg = "google-java-format"
