@@ -71,9 +71,8 @@ export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
-# [ -t 0 ] && [ "$(tty)" = "/dev/tty1" ] && [ ! "$DISPLAY" ] && exec startx
-
 [ -t 0 ] && setterm --bfreq=0
-exec startx
+[ -t 0 ] && [ "$(tty)" = "/dev/tty1" ] && [ ! "$DISPLAY" ] && exec startx
+# exec startx
 
 # vim: set filetype=sh
