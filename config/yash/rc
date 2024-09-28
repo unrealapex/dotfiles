@@ -49,15 +49,15 @@ alias sudo='doas'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 # chill study music with lofi girl
-alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
-alias irssi="irssi --config=<(cat $XDG_CONFIG_HOME/irssi/config.local $XDG_CONFIG_HOME/irssi/config) --home="$XDG_DATA_HOME"/irssi"
-alias bc="bc --mathlib --quiet"
-alias pidgin="pidgin --config="$XDG_DATA_HOME"/purple"
-alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc"
-alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
-alias dosbox="dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf"
-alias abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook"
-alias musicdl="yt-dlp -x --audio-format flac --audio-quality 10"
+alias studymusic='mpv https://www.youtube.com/watch?v=jfKfPfyJRdk > /dev/null 2>&1 &;disown'
+alias irssi='irssi --config=<(cat "$XDG_CONFIG_HOME"/irssi/config.local "$XDG_CONFIG_HOME"/irssi/config) --home="$XDG_DATA_HOME"/irssi'
+alias bc='bc --mathlib --quiet'
+alias pidgin='pidgin --config="$XDG_DATA_HOME"/purple'
+alias mbsync='mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+alias dosbox='dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf'
+alias abook='abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook'
+alias musicdl='yt-dlp -x --audio-format flac --audio-quality 10'
 alias ci='git commit'
 alias co='git checkout'
 alias di='git diff'
