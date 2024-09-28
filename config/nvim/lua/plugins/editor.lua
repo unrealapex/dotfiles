@@ -111,7 +111,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
-      "max-perf",
+      "fzf-vim",
      },
   },
 
