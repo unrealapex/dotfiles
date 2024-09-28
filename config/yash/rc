@@ -22,7 +22,7 @@ HISTSIZE=2000
 
 # TODO: add vi style completion bindings
 
-PATH="$PATH:~/.local/bin:~/.local/share/cargo/bin:~/.local/share/nvim/mason/bin"
+PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin:$HOME/.local/share/nvim/mason/bin"
 export PATH
 
 bindkey --emacs '\^L' clear-and-redraw-all
