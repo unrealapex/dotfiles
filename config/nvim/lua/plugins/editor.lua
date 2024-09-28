@@ -111,30 +111,8 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
-     -- FIXME: figure out if there's an easier way to disable icons
-      files = {
-          file_icons = false,
-      },
-      git = {
-          files = {
-              file_icons = false,
-          },
-      },
-      status = {
-          file_icons = false,
-      },
-      previewers = {
-        builtin = {
-          extensions = {
-            -- neovim terminal only supports `viu` block output
-            ["gif"] = { "chafa" },
-            ["jpg"] = { "chafa" },
-            ["png"] = { "chafa" },
-            ["webp"] = { "chafa" },
-          },
-        },
-      },
-    },
+      "max-perf",
+     },
   },
 
   -- better git integration
