@@ -4,9 +4,8 @@ ani-cli
 anki
 asciinema
 bat
-blueman
-bluez
-bluez-utils
+bc
+beets
 bridge-utils
 cowsay
 cpupower
@@ -41,7 +40,6 @@ inkscape
 irssi
 jq
 kdenlive
-keepassxc
 krita
 libreoffice
 lua
@@ -68,8 +66,9 @@ oath-toolkit
 obs-studio
 openbsd-netcat
 pandoc-bin
+pass
+pass-otp
 pastel
-perl-image-exiftool
 pinentry
 pipewire
 playerctl
@@ -95,7 +94,6 @@ wireplumber
 xbacklight
 xclip
 xdg-user-dirs
-xdo
 xdotool
 xf86-input-libinput
 xorg
