@@ -13,29 +13,6 @@ return {
     end,
   },
 
-  -- automatically close pairs
-  {
-    "echasnovski/mini.pairs",
-    -- load when bracket delimiter is pressed
-    keys = {
-      { "(", mode = "i" },
-      { "{", mode = "i" },
-      { "[", mode = "i" },
-      { ")", mode = "i" },
-      { "}", mode = "i" },
-      { "]", mode = "i" },
-      { '"', mode = "i" },
-      { "'", mode = "i" },
-      { "`", mode = "i" },
-    },
-    opts = {
-      skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-      skip_ts = { "string" },
-      skip_unbalanced = true,
-      markdown = true,
-    },
-  },
-
   -- additional text objects
   {
     "echasnovski/mini.ai",
