@@ -41,6 +41,7 @@ vim.opt.smartcase = true
 vim.opt.splitright = true
 -- TODO: show diagnostics
 vim.opt.statusline = "%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
+vim.opt.tabstop = 4
 -- true color support
 vim.opt.termguicolors = true
 vim.opt.title = true
