@@ -3,6 +3,10 @@ library: ~/Music/library.db   # The default library database file to use.
 
 plugins: convert badfiles bareasc duplicates edit random lyrics fromfilename info
 
+import:
+    copy: no
+    move: yes
+
 convert:
     auto: yes
     format: flac
