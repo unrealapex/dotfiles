@@ -196,8 +196,6 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf.vim'
-" icons
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " enable RainbowParentheses
