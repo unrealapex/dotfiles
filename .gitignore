@@ -6,3 +6,11 @@ config/zsh/.zsh_plugins.zsh
 config/vim/autoload
 config/vim/plug
 config/beets/state.pickle
+config/cmus/autosave
+config/cmus/cache
+config/cmus/cmusfm.conf
+config/cmus/cmusfm.socket
+config/cmus/command-history
+config/cmus/lib.pl
+config/cmus/playlists
+config/cmus/search-history
