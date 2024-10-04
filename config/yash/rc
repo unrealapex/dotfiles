@@ -68,6 +68,7 @@ alias up='git pull'
 alias br='git branch'
 alias sxiv="nsxiv"
 alias mutt="neomutt"
+alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 
 # wrapper for xdg-open to open multiple uris
 open() {
