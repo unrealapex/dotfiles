@@ -26,3 +26,12 @@
  gpgsign = true
 [tag]
  gpgsign = true
+[alias]
+ ci = commit
+ st = status
+ co = checkout
+ br = branch
+ di = diff
+ up = pull
+ undo=reset --soft HEAD^
+
