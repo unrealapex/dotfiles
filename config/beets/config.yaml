@@ -16,4 +16,5 @@ match:
     strong_rec_thresh: 0.05
     preferred:
         countries: ['US', 'GB|UK']
-
+zero:
+    auto: no
