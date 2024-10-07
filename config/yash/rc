@@ -6,14 +6,13 @@ case $- in (*m*)
   trap - TSTP TTIN TTOU
 esac
 
-# TODO: only add useful settings
-. --autoload --no-alias initialization/common
-
-YASH_PS1='${LOGNAME}@${HOSTNAME}:${${${PWD:/~/\~}##*/}:-$PWD} $ '
+YASH_PS1='$(logname)@$(uname -n):${${${PWD:/~/\~}##*/}:-$PWD} $ '
 
 set -o emacs
 set --brace-expand
 set --extended-glob
+set --no-unset
+set --no-clobber
 set --hist-space
 set --le-predict
 
@@ -33,6 +32,12 @@ bindkey --emacs '\^[[1;5D' backward-emacsword
 bindkey --emacs '\^[[1;5C' forward-emacsword
 
 
+# avoid removing/overwriting existing files by accident
+cp() if [ -t 0 ]; then command cp -i "$@"; else command cp "$@"; fi
+mv() if [ -t 0 ]; then command mv -i "$@"; else command mv "$@"; fi
+rm() if [ -t 0 ]; then command rm -i "$@"; else command rm "$@"; fi
+
+
 # enable color support of ls and also add handy aliases
 if command -v dircolors > /dev/null; then
     alias ls='ls --color=auto'
@@ -46,6 +51,7 @@ fi
 alias ll='ls -ahl'
 alias la='ls -A'
 alias l='ls -C'
+alias vi='nvim'
 alias sudo='doas'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
