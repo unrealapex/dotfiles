@@ -224,8 +224,6 @@ let g:coc_global_extensions = [
 \  'coc-json',
 \  'coc-snippets',
 \  'coc-lightbulb',
-\  'coc-calc',
-\  'coc-emoji',
 \ ]
 
 " CoC keybindings
