@@ -6,6 +6,7 @@ plugins: convert badfiles bareasc duplicates edit random lyrics fromfilename inf
 import:
     copy: no
     move: yes
+    languages: en kr jp cn
 
 convert:
     auto: yes
