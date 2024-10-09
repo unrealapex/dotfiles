@@ -1,7 +1,7 @@
 directory: ~/Music            # The default library root directory.
 library: ~/Music/library.db   # The default library database file to use.
 
-plugins: convert badfiles bareasc duplicates edit random fromfilename info missing zero
+plugins: convert badfiles bareasc duplicates edit random fromfilename info missing
 
 import:
     copy: no
