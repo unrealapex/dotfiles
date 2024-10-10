@@ -1,11 +1,6 @@
 ---@diagnostic disable: different-requires, mixed_table, undefined-field
 
 return {
-  -- heuristically set buffer options
-  {
-    "tpope/vim-sleuth",
-    event = { "BufReadPre", "BufNewFile" },
-  },
   {
     "folke/persistence.nvim",
     event = "BufReadPre",
