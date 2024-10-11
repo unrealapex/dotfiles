@@ -215,6 +215,7 @@ return {
             threshold = vim.log.levels.INFO,
           },
           config = {
+            icons = { expanded = "", collapsed = "", circular = "" },
             mappings = {
               -- Use a table to apply multiple mappings
               expand = { "<CR>", "<2-LeftMouse>" },
@@ -251,6 +252,16 @@ return {
               enabled = true,
               -- Display controls in this element
               element = "repl",
+              icons = {
+                pause = "",
+                play = "",
+                step_into = "",
+                step_over = "",
+                step_out = "",
+                step_back = "",
+                run_last = "",
+                terminate = "",
+              },
             },
             floating = {
               max_height = 0.9,
