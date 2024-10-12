@@ -1,4 +1,4 @@
----@diagnostic disable: different-requires, mixed_table, undefined-field
+---@diagnostic disable: different-requires, mixed_table, undefined-field missing-fields
 
 return {
   -- improved syntax highlighting
@@ -26,7 +26,6 @@ return {
       "TSUpdateSync",
     },
     config = function()
-      ---@diagnostic disable: missing-fields
       -- treesitter stuff
       local configs = require("nvim-treesitter.configs")
       configs.setup({
