@@ -31,6 +31,11 @@ bindkey --vi-command '\^L' clear-and-redraw-all
 bindkey --emacs '\^[[1;5D' backward-emacsword
 bindkey --emacs '\^[[1;5C' forward-emacsword
 
+# bindkey --emacs 'h' complete-prev-column
+# bindkey --emacs 'j' complete-next-candidate
+# bindkey --emacs 'k' complete-prev-candidate
+# bindkey --emacs 'l' complete-next-column
+
 
 # avoid removing/overwriting existing files by accident
 cp() if [ -t 0 ]; then command cp -i "$@"; else command cp "$@"; fi
@@ -67,6 +72,7 @@ alias musicdl='yt-dlp -x --audio-format flac --audio-quality 10'
 alias sxiv="nsxiv"
 alias mutt="neomutt"
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
+alias batstatus="cat /sys/class/power_supply/BAT0/capacity"
 
 # wrapper for xdg-open to open multiple uris
 open() {
