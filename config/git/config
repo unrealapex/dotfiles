@@ -35,4 +35,5 @@
  up = pull
  undo=reset --soft HEAD^
  s = !git rev-list --all | xargs git grep -F
+	l = log -1 HEAD --stat
 
