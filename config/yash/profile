@@ -18,11 +18,7 @@ export MANROFFOPT="-c"
 export LESS="--ignore-case --RAW-CONTROL-CHARS"
 # make less more friendly for non-text input files, see lesspipe(1)
 export LESSOPEN="|lesspipe %s"
-export FZF_DEFAULT_OPTS="--no-unicode \
---color=fg:#c0caf5,bg:-1,hl:#ff9e64 \
---color=fg+:#c0caf5,bg+:-1,hl+:#ff9e64 \
---color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
---color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
 export FFF_FAV1=~/Downloads
 export FFF_FAV2=~/Documents
 export FFF_FAV3=~/Music
