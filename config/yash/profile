@@ -16,8 +16,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-c"
 export LESS="--ignore-case --RAW-CONTROL-CHARS"
-# make less more friendly for non-text input files, see lesspipe(1)
-export LESSOPEN="|lesspipe %s"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
 export FFF_FAV1="~/Downloads"
 export FFF_FAV2="~/Documents"
