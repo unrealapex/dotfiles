@@ -108,7 +108,6 @@ return {
     cmd = { "FzfLua" },
     cond = vim.fn.executable("fzf") == 1,
     dependencies = {
-      "echasnovski/mini.icons",
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
