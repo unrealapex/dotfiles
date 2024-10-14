@@ -40,7 +40,6 @@ $ tree scripts
   scripts
     ├── emoji_gen          generate emojis file for emoji picker
     ├── firefox            generate firefox user.js file
-    ├── irssi              set up irssi scripts
     └── kill-x             bind ctrl + alt + backspace to kill x
 ```
 
