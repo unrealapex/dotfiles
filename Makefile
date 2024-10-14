@@ -9,6 +9,7 @@ link: create_dirs
 	ln -sf $(realpath config)/* ~/.config/
 	ln -sf $(realpath bin)/* /usr/local/bin/
 	ln -sf $(realpath gnupg)/* ~/.gnupg/
+	ln -sf $(realpath share/applications)/* ~/.local/share/applications
 	ln -sf $(realpath gtk)/* ~/.local/share/themes
 
 clean:
