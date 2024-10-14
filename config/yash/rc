@@ -53,7 +53,7 @@ if command -v dircolors > /dev/null; then
 fi
 
 # some more ls aliases
-alias ll='ls -ahl'
+alias ll='ls -Ahl1'
 alias la='ls -A'
 alias l='ls -C'
 alias j='jobs -l'
