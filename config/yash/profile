@@ -3,6 +3,7 @@
 #
 
 export EDITOR="nvim"
+export VISUAL="nvimpager"
 export TERMINAL="st"
 export TERMINAL_PROG="st"
 export BROWSER="firefox"
