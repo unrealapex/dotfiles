@@ -10,7 +10,7 @@ link: create_dirs
 	ln -sf $(realpath bin)/* /usr/local/bin/
 	ln -sf $(realpath gnupg)/* ~/.gnupg/
 	ln -sf $(realpath share/applications)/* ~/.local/share/applications
-	ln -sf $(realpath gtk)/* ~/.local/share/themes
+	ln -sf $(realpath share/themes)/* ~/.local/share/themes
 
 clean:
 	find -L "$HOME" -maxdepth 1 -type l -delete
