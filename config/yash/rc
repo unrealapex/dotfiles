@@ -44,6 +44,7 @@ rm() if [ -t 0 ]; then command rm -i "$@"; else command rm "$@"; fi
 
 
 # enable color support of ls and also add handy aliases
+# FIXME: make this not depend on dircolors
 if command -v dircolors > /dev/null; then
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
