@@ -5,12 +5,12 @@ return {
   {
     "echasnovski/mini.completion",
     event = "InsertEnter",
-    config = function()
-      require("mini.completion").setup()
-      -- workaround for completion to attach to current buffer
-      -- FIXME: maybe file a bug for this
-      vim.cmd.edit()
-    end,
+    opts = {
+      lsp_completion = {
+        source_func = 'omnifunc',
+        auto_setup = false
+      },
+    },
   },
 
   -- additional text objects
