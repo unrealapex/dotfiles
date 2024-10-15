@@ -78,9 +78,9 @@ alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/commo
 alias bat="cat /sys/class/power_supply/BAT0/capacity"
 
 # wrapper for xdg-open to open multiple uris
-open() {
+o() {
   if [ "$#" -eq 0 ]; then
-    echo "Usage: open [file|directory|protocol]"
+    echo "Usage: o [file|directory|protocol]"
     return 1
   fi
 
