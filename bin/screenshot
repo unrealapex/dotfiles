@@ -24,10 +24,10 @@ image_path=$HOME/Pictures/Screenshots/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-
 
 case $1 in
 select)
-        gm import -frame -quality 0  "$image_path"
+        gm import -silent -frame -quality 0  "$image_path"
         ;;
 full)
-        gm import -window root -frame -quality 0  "$image_path"
+        gm import -silent -window root -frame -quality 0  "$image_path"
         ;;
 *)
 
