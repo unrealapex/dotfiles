@@ -63,6 +63,7 @@ alias vi='nvim'
 alias view='nvimpager --noplugins'
 alias less='VISUAL=nvimpager less'
 alias sudo='doas'
+alias diff='diff -u'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 # chill study music with lofi girl
