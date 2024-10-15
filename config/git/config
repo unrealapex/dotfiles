@@ -6,14 +6,11 @@
  credentialStore = cache
 [core]
  editor = nvim
- pager = delta
+ pager = 'less'
 [pull]
  rebase = false
 [interactive]
- diffFilter = delta --color-only
-[delta]
- navigate = true    # use n and N to move between diff sections
- light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+ diffFilter = 'diff-highlight | less'
 [merge]
  conflictstyle = diff3
 [diff]
@@ -36,4 +33,5 @@
  undo=reset --soft HEAD^
  s = !git rev-list --all | xargs git grep -F
 	l = log -1 HEAD --stat
+ diff = diff --color-words
 
