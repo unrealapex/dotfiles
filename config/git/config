@@ -1,37 +1,37 @@
 [user]
- # These values are set in ~/.config/git/config.local
+	# These values are set in ~/.config/git/config.local
 [include]
- path = ~/.config/git/config.local
+	 path = ~/.config/git/config.local
 [credential]
- credentialStore = cache
+	credentialStore = cache
 [core]
- editor = nvim
- pager = 'less'
+	editor = nvim
+	pager = 'less'
 [pull]
- rebase = false
+	rebase = false
 [interactive]
- diffFilter = 'diff-highlight | less'
+	diffFilter = 'diff-highlight | less'
 [merge]
- conflictstyle = diff3
+	conflictstyle = diff3
 [diff]
- colorMoved = default
+	colorMoved = default
 [push]
- autoSetupRemote = true
+	autoSetupRemote = true
 [gpg]
- format = ssh
+	format = ssh
 [commit]
- gpgsign = true
+	gpgsign = true
 [tag]
- gpgsign = true
+	gpgsign = true
 [alias]
- ci = commit
- st = status
- co = checkout
- br = branch
- di = diff
- up = pull
- undo=reset --soft HEAD^
- s = !git rev-list --all | xargs git grep -F
+	ci = commit
+	st = status
+	co = checkout
+	br = branch
+	di = diff
+	up = pull
+	undo=reset --soft HEAD^
+	s = !git rev-list --all | xargs git grep -F
 	l = log -1 HEAD --stat
- diff = diff --color-words
+	diff = diff --color-words
 
