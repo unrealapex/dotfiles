@@ -6,7 +6,7 @@
 	credentialStore = cache
 [core]
 	editor = nvim
-	pager = 'less'
+	pager = less -FX
 [pull]
 	rebase = false
 [interactive]
