@@ -11,8 +11,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
-# TODO: make these colors pretty
-MANPAGER="less -R --use-color -Dd+r -Du+b"
+MANPAGER="nvimpager +Man!"
 export MANROFFOPT="-c"
 export LESS="--ignore-case --RAW-CONTROL-CHARS"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
