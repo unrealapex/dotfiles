@@ -1,7 +1,5 @@
 *.local
-config/irssi/scripts
 config/tmux/plugins
-config/ncmpcpp/error.log
 config/zsh/.zsh_plugins.zsh
 config/vim/autoload
 config/vim/plug
