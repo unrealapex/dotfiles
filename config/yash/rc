@@ -62,7 +62,6 @@ alias vi='nvim'
 alias view='nvimpager --noplugins'
 alias less='VISUAL=nvimpager less'
 alias sudo='doas'
-alias diff='diff -u'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
 # chill study music with lofi girl
@@ -78,6 +77,11 @@ alias sxiv="nsxiv"
 alias mutt="neomutt"
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/capacity"
+
+# FIXME: use muted green and red colors
+diff() {
+  command diff -u "$@" | sed 's/^-/\x1b[1;31m-/;s/^+/\x1b[1;32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
+}
 
 # wrapper for xdg-open to open multiple uris
 o() {
