@@ -9,8 +9,6 @@
 	pager = less -FX
 [pull]
 	rebase = false
-[interactive]
-	diffFilter = 'diff-highlight | less'
 [merge]
 	conflictstyle = diff3
 [diff]
