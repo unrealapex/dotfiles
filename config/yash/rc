@@ -79,10 +79,9 @@ alias mutt="neomutt"
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/capacity"
 
-# FIXME: use muted green and red colors
 diff() {
  if [ -t 0 ]; then 
-  command diff -u "$@" | sed 's/^-/\x1b[1;31m-/;s/^+/\x1b[1;32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
+  command diff -u "$@" | sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
  else
    command diff -u "$@"
  fi
