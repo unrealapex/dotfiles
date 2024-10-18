@@ -13,4 +13,5 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win) -- luacheck: no unused a
     vis:command('set tabwidth 4')
 	vis:command('set ignorecase')
 	vis:command('set escdelay 1')
+	vis:command('set cursorline')
 end)
