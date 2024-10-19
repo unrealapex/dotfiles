@@ -71,6 +71,7 @@ pulsemixer
 qemu
 ripgrep
 shellcheck
+source-highlight
 symbols-nerd-font
 syncthing
 texlive
