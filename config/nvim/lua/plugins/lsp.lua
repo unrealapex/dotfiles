@@ -234,6 +234,4 @@ return {
     },
   },
 
-  -- java lsp stuff
-  { "mfussenegger/nvim-jdtls", ft = "java" },
 }
