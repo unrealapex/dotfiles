@@ -2,7 +2,7 @@
 # ~/.config/yash/yash_profile
 #
 
-export EDITOR="nvim"
+export EDITOR="vis"
 export TERMINAL="st"
 export TERMINAL_PROG="st"
 export BROWSER="firefox"
