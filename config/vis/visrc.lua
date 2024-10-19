@@ -56,4 +56,5 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win) -- luacheck: no unused a
 	vis:command('set ignorecase')
 	vis:command('set escdelay 1')
 	vis:command('set cursorline')
+	vis:map(vis.modes.NORMAL, '=', require('plugins/vis-format').apply)
 end)
