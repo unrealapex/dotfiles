@@ -33,35 +33,4 @@ return {
     cmd = { "ZenMode" },
     config = true,
   },
-  -- color previews
-  {
-    "NvChad/nvim-colorizer.lua",
-    ft = {
-      "cfg",
-      "conf",
-      "css",
-      "dosini",
-      "html",
-      "javascript",
-      "json",
-      "sass",
-      "sh",
-      "zsh",
-    },
-    -- REFACTOR: get filetypes from ft
-    opts = {
-      filetypes = {
-        "cfg",
-        "conf",
-        "css",
-        "dosini",
-        "html",
-        "javascript",
-        "json",
-        "sass",
-        "sh",
-        "zsh",
-      },
-    },
-  },
 }
