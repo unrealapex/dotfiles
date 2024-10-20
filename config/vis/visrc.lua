@@ -43,6 +43,8 @@ shebangs = {
  require("plugins/vis-yank-highlight")
 
 
+ require("plugins/vis-lspc").menu_cmd = "vis-menu"
+
 vis.events.subscribe(vis.events.INIT, function()
 end)
 
