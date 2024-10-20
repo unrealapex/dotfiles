@@ -76,6 +76,9 @@ return {
         require("lspconfig").bashls.setup({
           on_attach = lsp_attach,
         })
+        require("lspconfig").lua_ls.setup({
+          on_attach = lsp_attach,
+        })
         require("lspconfig").vimls.setup({
           on_attach = lsp_attach,
         })
