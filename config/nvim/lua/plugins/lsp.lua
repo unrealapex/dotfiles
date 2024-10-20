@@ -1,4 +1,4 @@
----@diagnostic disable: different-requires, mixed_table, undefined-field
+---@diagnostic disable: different-requires, mixed_table, undefined-field, unused-local
 
 return {
   -- lsp and completion stuff
@@ -13,54 +13,6 @@ return {
       "LspLog",
     },
     config = function()
-      ---@diagnostic disable: unused-local
-      require("mason").setup({
-        ui = {
-          icons = {
-            package_installed = "",
-            package_pending = "",
-            package_uninstalled = "",
-          },
-        },
-      })
-
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "bashls",
-          "clangd",
-          "cssls",
-          "html",
-          "jdtls",
-          "jsonls",
-          "lua_ls",
-          "pyright",
-          "sqlls",
-          "ts_ls",
-          "vimls",
-        },
-      })
-
-      local ensure_installed_formatters = {
-        "black",
-        "clang-format",
-        "google-java-format",
-        "isort",
-        "jq",
-        "prettier",
-        "prettierd",
-        "shfmt",
-        "stylua",
-      }
-
-      for _, pkg_name in ipairs(ensure_installed_formatters) do
-        local ok, pkg = pcall(require("mason-registry").get_package, pkg_name)
-        if ok then
-          if not pkg:is_installed() then
-            pkg:install()
-          end
-        end
-      end
-
       -- Setup lspconfig.
       local lsp_capabilities = {}
 
@@ -121,31 +73,40 @@ return {
         vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
       end
 
-      local lspconfig = require("lspconfig")
-      require("mason-lspconfig").setup_handlers({
-        function(server_name)
-          lspconfig[server_name].setup({
-            on_attach = lsp_attach,
-            capabilities = lsp_capabilities,
-          })
-        end,
-      })
-
-      require("mason-lspconfig").setup_handlers({
-        lspconfig["clangd"].setup({
+        require("lspconfig").bashls.setup({
           on_attach = lsp_attach,
-          capabilities = lsp_capabilities,
+        })
+        require("lspconfig").vimls.setup({
+          on_attach = lsp_attach,
+        })
+        require("lspconfig").cssls.setup({
+          on_attach = lsp_attach,
+        })
+        require("lspconfig").html.setup({
+          on_attach = lsp_attach,
+        })
+        require("lspconfig").bashls.setup({
+          on_attach = lsp_attach,
+        })
+        require("lspconfig").pyright.setup({
+          on_attach = lsp_attach,
+        })
+        require("lspconfig").ts_ls.setup({
+          on_attach = lsp_attach,
+        })
+
+        require("lspconfig").clangd.setup({
+          on_attach = lsp_attach,
 
           cmd = {
             "clangd",
             "--offset-encoding=utf-16",
           },
-        }),
+          })
 
-        lspconfig["bashls"].setup({
+        require("lspconfig").bashls.setup({
           filetypes = { "sh", "zsh" },
-        }),
-      })
+        })
 
       -- diagnostic text highlight is given to the line number
       for _, diag in ipairs({ "Error", "Warn", "Info", "Hint" }) do
@@ -170,38 +131,6 @@ return {
       -- NOTE: maybe disable gutter signs entirely
       -- vim.diagnostic.config({signs = false})
     end,
-  },
-  {
-    "williamboman/mason.nvim",
-    cmd = {
-      "Mason",
-      "MasonInstall",
-      "MasonUninstall",
-      "MasonUninstallAll",
-      "MasonLog",
-    },
-    keys = {
-      {
-        "<leader>m",
-        function()
-          vim.cmd.Mason()
-        end,
-      },
-    },
-    config = true,
-    dependencies = {
-      {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = "neovim/nvim-lspconfig",
-        cmd = {
-          "LspInstall",
-          "LspUninstall",
-        },
-        opts = {
-          automatic_installation = true,
-        },
-      },
-    },
   },
   {
     "folke/neodev.nvim",
