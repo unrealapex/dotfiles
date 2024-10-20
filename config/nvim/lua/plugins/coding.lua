@@ -83,36 +83,32 @@ return {
 
   -- surround
   {
-    "kylechui/nvim-surround",
+    "echasnovski/mini.surround",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
     keys = {
-      "ys",
-      "yS",
+      {"ys", mode = {"n", "v"}},
       "ds",
+      "sf",
+      "sF",
       "cs",
-      "cS",
-      { "S", mode = "v" },
-      { "gS", mode = "v" },
-      { "<C-g>s", mode = "i" },
-      { "<C-g>S", mode = "i" },
+      "sn",
+      "sh",
     },
     opts = {
-      surrounds = {
-        ["("] = {
-          add = { "(", ")" },
-        },
-        ["{"] = {
-          add = { "{", " }" },
-        },
-        ["["] = {
-          add = { "[ ", " ]" },
-        },
-        ["<"] = {
-          add = { "< ", " >" },
-        },
+      mappings = {
+        add = 'ys', -- Add surrounding in Normal and Visual modes
+        delete = 'ds', -- Delete surrounding
+        find = 'sf', -- Find surrounding (to the right)
+        find_left = 'sF', -- Find surrounding (to the left)
+        highlight = 'sh', -- Highlight surrounding
+        replace = 'cs', -- Replace surrounding
+        update_n_lines = 'sn', -- Update `n_lines`
+
+        suffix_last = 'l', -- Suffix to search with "prev" method
+        suffix_next = 'n', -- Suffix to search with "next" method
       },
     },
   },
