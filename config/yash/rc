@@ -99,7 +99,20 @@ o() {
   done
 }
 
-alias f='fff'
+f() {
+  find . -type f | fzf -m
+}
+
+t() {
+  file=$(find . -type f | fzf -m)
+  [ -n "$file" ] && $EDITOR $file
+}
+
+c() {
+  dir=$(find . -type d | fzf)
+  [ -n "$dir" ] && cd "$dir"
+}
+
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
 
