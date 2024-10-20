@@ -217,21 +217,4 @@ return {
       })
     end,
   },
-
-  -- lsp window
-  {
-    "folke/trouble.nvim",
-    cmd = "Trouble",
-    config = true,
-    dependencies = "echasnovski/mini.icons",
-    keys = {
-      {
-        "<leader>q",
-        function()
-          vim.cmd.Trouble()
-        end,
-      },
-    },
-  },
-
 }
