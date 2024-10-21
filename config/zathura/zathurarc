@@ -1,3 +1,4 @@
 set selection-clipboard clipboard
+# TODO: rice colors
 
 # vim: set filetype=conf
