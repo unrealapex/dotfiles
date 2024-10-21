@@ -8,6 +8,7 @@ config/cmus/autosave
 config/cmus/cache
 config/cmus/cmusfm.conf
 config/cmus/cmusfm.socket
+config/cmus/cmusfm.cache
 config/cmus/command-history
 config/cmus/lib.pl
 config/cmus/playlists
