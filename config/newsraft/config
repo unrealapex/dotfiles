@@ -1,0 +1,4 @@
+bind m exec mpv "%l"
+bind f exec nsxiv "%l"
+
+# vim: set filetype=conf
