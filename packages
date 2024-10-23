@@ -13,6 +13,7 @@ cpupower
 dash
 discord
 dnsmasq
+dunst
 fcitx5
 fff
 ffmpeg
@@ -40,6 +41,7 @@ inkscape
 jq
 kdenlive
 krita
+libnotify
 libreoffice
 lua
 lynx

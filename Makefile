@@ -15,7 +15,7 @@ link: create_dirs
 clean:
 	find -L "$HOME" -maxdepth 1 -type l -delete
 
-build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/herbe /usr/local/bin/slock
+build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
 
 ~/.config/dwm:
 	git clone https://git.sr.ht/~unrealapex/dwm ~/.config/dwm
@@ -50,17 +50,6 @@ st: /usr/local/bin/st
 
 dmenu: /usr/local/bin/dmenu
 
-~/.config/herbe:
-	git clone https://git.sr.ht/~unrealapex/herbe ~/.config/herbe
-
-~/.config/herbe/herbe: $(wildcard ~/.config/herbe/*.h) $(wildcard ~/.config/herbe/*.c) | ~/.config/herbe
-	$(MAKE) -C ~/.config/herbe install
-
-/usr/local/bin/herbe: ~/.config/herbe/herbe
-	$(MAKE) -C ~/.config/herbe clean install
-
-herbe: /usr/local/bin/herbe
-
 ~/.config/slock:
 	git clone https://git.sr.ht/~unrealapex/slock ~/.config/slock
 
@@ -83,5 +72,5 @@ secrets: ~/.config/git/config.local ~/.config/irssi/config.local
 done:
 	@echo "Makefile targets completed!"
 
-.PHONY: all create_dirs link clean build dwm st dmenu herbe slock done
+.PHONY: all create_dirs link clean build dwm st dmenu slock done
 
