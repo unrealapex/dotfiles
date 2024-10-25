@@ -61,13 +61,10 @@ dmenu: /usr/local/bin/dmenu
 
 slock: /usr/local/bin/slock
 
-secrets: ~/.config/git/config.local ~/.config/irssi/config.local
+secrets: ~/.config/git/config.local
 
 ~/.config/git/config.local:
 	cp -n ~/dotfiles/secrets/git.local ~/.config/git/config.local
-
-~/.config/irssi/config.local:
-	cp -n ~/dotfiles/secrets/irssi.local ~/.config/irssi/config.local
 
 done:
 	@echo "Makefile targets completed!"
