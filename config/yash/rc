@@ -38,9 +38,9 @@ bindkey --emacs '\^[[1;5C' forward-emacsword
 
 
 # avoid removing/overwriting existing files by accident
-cp() if [ -t 0 ]; then command cp -i "$@"; else command cp "$@"; fi
-mv() if [ -t 0 ]; then command mv -i "$@"; else command mv "$@"; fi
-rm() if [ -t 0 ]; then command rm -i "$@"; else command rm "$@"; fi
+cp() if [ -t 0 ]; then command cp -iv "$@"; else command cp "$@"; fi
+mv() if [ -t 0 ]; then command mv -iv "$@"; else command mv "$@"; fi
+rm() if [ -t 0 ]; then command rm -iv "$@"; else command rm "$@"; fi
 
 
 # enable color support of ls and also add handy aliases
