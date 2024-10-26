@@ -102,6 +102,7 @@ o() {
 alias f='fff'
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
+alias glow='pandoc $@ -t ansi'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
