@@ -56,6 +56,7 @@ vis.events.subscribe(
     vis:command("set ignorecase")
     vis:command("set escdelay 1")
     vis:command("set cursorline")
+    vis:command("set showtabs")
     vis:map(vis.modes.NORMAL, "=", require("plugins/vis-format").apply)
   end
 )
