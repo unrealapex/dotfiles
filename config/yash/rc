@@ -80,11 +80,15 @@ alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/commo
 alias bat="cat /sys/class/power_supply/BAT0/capacity"
 
 diff() {
- if [ -t 0 ]; then 
-  command diff -u "$@" | sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
- else
-   command diff -u "$@"
- fi
+  if [ -t 0 ]; then
+    if command -v diff-so-fancy >/dev/null; then
+      command diff -u "$@" | diff-so-fancy
+    else
+      command diff -u "$@" | sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
+	fi
+  else
+    command diff -u "$@"
+  fi
 }
 
 # wrapper for xdg-open to open multiple uris
