@@ -52,7 +52,6 @@ vis.events.subscribe(
     vis:command("set number")
     vis:command("set relativenumbers")
     vis:command("set autoindent")
-    vis:command("set expandtab")
     vis:command("set tabwidth 4")
     vis:command("set ignorecase")
     vis:command("set escdelay 1")
