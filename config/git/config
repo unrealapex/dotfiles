@@ -5,7 +5,9 @@
 [credential]
 	credentialStore = cache
 [core]
-	pager = less -FX
+	pager =  diff-so-fancy | less -RFX
+[interactive]
+	diffFilter = diff-so-fancy --patch
 [pull]
 	rebase = false
 [merge]
