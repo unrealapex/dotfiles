@@ -1,4 +1,5 @@
 set selection-clipboard clipboard
+set database sqlite
 # TODO: rice colors
 
 # vim: set filetype=conf
