@@ -101,6 +101,22 @@ o() {
   done
 }
 
+cd() {
+  if [ "$#" -ne 0 ]; then
+    command pushd --remove-duplicates --default-directory="$HOME" "$@"
+  else
+   command cd
+  fi
+}
+
+d() {
+  if [ $(dirs -v | wc -l) -gt 1 ]; then
+    cd "$(dirs -v |  fzf | awk '{print $1}')"
+  else 
+    dirs -v
+  fi
+}
+
 alias f='fff'
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
