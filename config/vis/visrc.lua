@@ -23,6 +23,7 @@ local plugins = {
   { "https://repo.or.cz/vis-surround" },
   { "https://git.cepl.eu/cgit/vis/vis-jump" },
   { "https://git.cepl.eu/cgit/vis/vis-yank-highlight" },
+  { "https://github.com/jocap/vis-filetype-settings" },
 }
 
 plug.init(plugins, true)
@@ -40,8 +41,16 @@ require("plugins/vis-shebang")
 require("plugins/vis-surround")
 require("plugins/vis-jump")
 require("plugins/vis-yank-highlight")
+require('plugins/vis-filetype-settings')
 
 require("plugins/vis-lspc").menu_cmd = "vis-menu"
+
+settings = {
+    bash  = {"set expandtab on", "set tabwidth 2"},
+    sh = {"set expandtab on", "set tabwidth 2"},
+    lua = {"set expandtab on", "set tabwidth 2"},
+    markdown = {"set expandtab on", "set tabwidth 4"},
+}
 
 vis.events.subscribe(vis.events.INIT, function() end)
 
