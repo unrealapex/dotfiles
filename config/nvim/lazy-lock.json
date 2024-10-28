@@ -14,7 +14,6 @@
   "nvim-treesitter": { "branch": "master", "commit": "3ba21f96a434facb306f9fbe2f2e106859b28ba4" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "0d79d169fcd45a8da464727ac893044728f121d4" },
   "remote-viewer": { "branch": "master", "commit": "7b8ffc05e2b1fd56571f7ac77bc36e7901c9326b" },
-  "vim-dirvish": { "branch": "master", "commit": "2ddd8ee63d6066ae910b29285d9786cbd0226657" },
   "vim-repeat": { "branch": "master", "commit": "65846025c15494983dafe5e3b46c8f88ab2e9635" },
   "zen-mode.nvim": { "branch": "main", "commit": "29b292bdc58b76a6c8f294c961a8bf92c5a6ebd6" }
 }

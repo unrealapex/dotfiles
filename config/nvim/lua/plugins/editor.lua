@@ -1,39 +1,6 @@
 ---@diagnostic disable: different-requires, mixed_table, undefined-field
 
 return {
-  -- better file explorer
-  {
-    "justinmk/vim-dirvish",
-    keys = "-",
-    cmd = "Dirvish",
-    init = function()
-      -- check if a file argument supplied is a directory
-      local argv_contains_dir = false
-      ---@diagnostic disable-next-line: unused-local
-      for k, v in pairs(vim.fn.argv()) do
-        if vim.fn.isdirectory(v) == 1 then
-          argv_contains_dir = true
-        end
-      end
-      if vim.fn.argc() >= 1 and argv_contains_dir then
-        require("lazy").load({ plugins = { "vim-dirvish" } })
-      end
-      -- load dirvish when a directory is opened
-      vim.api.nvim_create_autocmd("BufNew", {
-        callback = function()
-          if require("lazy.core.config").plugins["vim-dirvish"]._.loaded then
-            return true
-          end
-
-          if vim.fn.isdirectory(vim.fn.expand("<afile>")) == 1 then
-            require("lazy").load({ plugins = { "vim-dirvish" } })
-            return true
-          end
-        end,
-      })
-    end,
-    dependencies = "bounceme/remote-viewer",
-  },
   -- fuzzy finder
   {
     "ibhagwan/fzf-lua",
