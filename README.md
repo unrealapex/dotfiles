@@ -2,9 +2,9 @@
 
 [![screenshot of rice](rice.png)](https://wallhaven.cc/w/gpmv73)
 ```
-wm: dwm
-launcher: dmenu
-terminal: st
+wm: dwl
+launcher: mew
+terminal: foot
 shell: yash
 editor: vis
 notifications: dunst
@@ -29,7 +29,7 @@ this rice isn't intended for use by other people, but i don't mind if you do.
 for documentation's sake, this section of the readme has useful information
 below about my dotfiles.
 
-my builds of dwm, st, dmenu, and slock are stored in separate git
+my builds of dwl, mew, and wlock are stored in separate git
 repositories. my makefile has a target to build them.
 
 **extras**

@@ -5,7 +5,7 @@
 export EDITOR="vis"
 export TERMINAL="st"
 export TERMINAL_PROG="st"
-export BROWSER="firefox"
+export BROWSER="lynx"
 export PAGER="less"
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -60,10 +60,20 @@ export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
+export MOZ_ENABLE_WAYLAND=1
+export GDK_BACKEND="wayland"
+
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
 [ -t 0 ] && setterm --bfreq=0
-[ -t 0 ] && [ "$(tty)" = "/dev/tty1" ] && [ ! "$DISPLAY" ] && exec startx
-# exec startx
+
+if [ -t 0 ] && [ "$(tty)" = "/dev/tty1" ]; then
+    printf 'start wayland? '
+    read answer
+    if [ "$answer" != "${answer#[Yy]}" ]; then
+      eval $(dbus-launch  --exit-with-session --sh-syntax)
+      exec status |  dwl
+   fi
+fi
 
 # vim: set filetype=sh
