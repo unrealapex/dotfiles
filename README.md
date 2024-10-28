@@ -34,15 +34,6 @@ repositories. my makefile has a target to build them.
 
 **extras**
 
-additional scripts in [scripts/](/scripts).
-```
-$ tree scripts
-  scripts
-    ├── emoji_gen          generate emojis file for emoji picker
-    ├── firefox            generate firefox user.js file
-    └── kill-x             bind ctrl + alt + backspace to kill x
-```
-
 window decorations should be turned off for gui apps that have the option. this
 can be done in most apps by enabling the "use system titlebars" option.
 
