@@ -9,9 +9,9 @@ require("plugins/complete-word")
 -- external plugins
 local plug = require("plugins/vis-plug")
 if os.getenv("XDG_DATA_HOME") then
-  plug.path(os.getenv("XDG_DATA_HOME") .. "/vis/plugins")
+  plug.path(os.getenv("XDG_DATA_HOME") .. "/vis")
 else
-  plug.path("~/.local/share/vis/plugins")
+  plug.path("~/.local/share/vis")
 end
 
 local plugins = {
