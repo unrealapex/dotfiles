@@ -3,6 +3,7 @@ alsa-utils
 ani-cli
 anki
 asciinema
+bash-language-server
 bc
 beets
 bridge-utils
@@ -43,6 +44,7 @@ krita
 libnotify
 libreoffice
 lua
+lua-language-server
 lynx
 man-db
 man-pages
@@ -86,6 +88,7 @@ unzip
 vde2
 virt-manager
 virt-viewer
+vscode-langservers-extracted
 wget
 wgetpaste
 wine-staging
