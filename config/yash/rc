@@ -76,6 +76,7 @@ alias sxiv="nsxiv"
 alias mutt="neomutt"
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/capacity"
+alias weather="curl wttr.in"
 
 diff() {
   if [ -t 0 ]; then
