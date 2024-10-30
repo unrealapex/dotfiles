@@ -77,6 +77,7 @@ alias mutt="neomutt"
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/capacity"
 alias weather="curl wttr.in"
+alias d='dirs -v'
 
 diff() {
   if [ -t 0 ]; then
@@ -107,14 +108,6 @@ cd() {
     command pushd --remove-duplicates --default-directory="$HOME" "$@"
   else
    command cd
-  fi
-}
-
-d() {
-  if [ $(dirs -v | wc -l) -gt 1 ]; then
-    cd "$(dirs -v |  fzf | awk '{print $1}')"
-  else 
-    dirs -v
   fi
 }
 
