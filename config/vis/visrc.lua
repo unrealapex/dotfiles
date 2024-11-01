@@ -7,6 +7,23 @@ require("plugins/complete-filename")
 require("plugins/complete-word")
 
 -- external plugins
+
+-- bootstrap vis-plug
+local visplugpath = os.getenv("XDG_CONFIG_HOME") .. "/vis/vis-plug"
+local file_exists = function(path)
+        local file = io.open(path)
+        if not file then return false end
+        file:close()
+        return true
+end
+
+
+if not file_exists(visplugpath)
+then
+  print("vis-plug not found, installing...")
+  os.execute("git clone --filter=blob:none https://github.com/erf/vis-plug " .. visplugpath)
+end
+
 local plug = require("vis-plug")
 if os.getenv("XDG_DATA_HOME") then
   plug.path(os.getenv("XDG_DATA_HOME") .. "/vis")
