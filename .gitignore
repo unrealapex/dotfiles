@@ -13,4 +13,4 @@ config/cmus/command-history
 config/cmus/lib.pl
 config/cmus/playlists
 config/cmus/search-history
-config/vis/plugins
+config/vis/vis-plug
