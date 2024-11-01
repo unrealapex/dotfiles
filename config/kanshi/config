@@ -1,0 +1,8 @@
+profile dock {
+	output eDP-1 disable
+	output HDMI-A-1 enable
+}
+
+profile mobile {
+	output eDP-1 enable
+}
