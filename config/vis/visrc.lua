@@ -25,11 +25,6 @@ then
 end
 
 local plug = require("vis-plug")
-if os.getenv("XDG_DATA_HOME") then
-  plug.path(os.getenv("XDG_DATA_HOME") .. "/vis")
-else
-  plug.path("~/.local/share/vis")
-end
 
 local plugins = {
   { "https://github.com/milhnl/vis-format" },
