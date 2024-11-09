@@ -2,7 +2,7 @@
 # ~/.config/yash/yash_profile
 #
 
-export EDITOR="vis"
+export EDITOR="vi"
 export TERMINAL="foot"
 export TERMINAL_PROG="foot"
 export BROWSER="lynx"
