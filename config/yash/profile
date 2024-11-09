@@ -3,8 +3,8 @@
 #
 
 export EDITOR="vis"
-export TERMINAL="st"
-export TERMINAL_PROG="st"
+export TERMINAL="foot"
+export TERMINAL_PROG="foot"
 export BROWSER="lynx"
 export PAGER="less"
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
