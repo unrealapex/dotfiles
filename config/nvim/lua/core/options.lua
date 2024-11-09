@@ -22,7 +22,7 @@ vim.opt.history = 500
 vim.opt.ignorecase = true
 -- incremental search
 vim.opt.incsearch = true
-vim.opt.laststatus = 2
+vim.opt.laststatus = 1
 vim.opt.list = true
 vim.opt.listchars = nil
 vim.opt.magic = true
@@ -59,7 +59,7 @@ vim.opt.wrap = false
 vim.cmd.syntax("on")
 
 -- colorscheme
-vim.cmd.colorscheme("sorbet")
+vim.cmd.colorscheme("quiet")
 vim.cmd.highlight({"normal", "guibg=NONE"})
 
 --globals
