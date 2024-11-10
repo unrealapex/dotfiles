@@ -18,7 +18,7 @@ export LESS="--ignore-case --RAW-CONTROL-CHARS"
 export LESSOPEN="|lesspipe %s"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
 export FZF_CTRL_T_OPTS="
-  --preview 'fzf-preview {}'
+  --preview 'cat {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 export FFF_FAV1=~/Downloads
