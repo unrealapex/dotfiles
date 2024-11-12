@@ -4,7 +4,7 @@
 
 
 # bootstrap antidote
-antidote="$XDG_CONFIG_HOME/antidote"
+antidote="$XDG_DATA_HOME/antidote"
 [ -d "$antidote" ] || git clone --depth=1 https://github.com/mattmc3/antidote.git "$antidote"
 
 
