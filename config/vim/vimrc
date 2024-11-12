@@ -84,7 +84,7 @@ vnoremap <silent> <A-k> :m '<-2<CR>gv=gv
 
 " buffer stuff
 " switch buffers easily
-nnoremap <leader>b :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
+nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <Leader>n :enew<CR>
 nnoremap <Leader>q :bd<CR>
 
