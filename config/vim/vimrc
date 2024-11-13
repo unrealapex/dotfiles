@@ -54,6 +54,8 @@ set tabstop=2
 set termguicolors
 " show file in titlebar
 set title
+set ttimeout
+set ttimeoutlen=5
 " set updatetime to 200 milliseconds
 set updatetime=200
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
