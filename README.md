@@ -6,7 +6,7 @@ wm: dwl
 launcher: mew
 terminal: foot
 shell: yash
-editor: vis
+editor: nextvi
 notifications: dunst
 ```
 
