@@ -116,6 +116,25 @@ alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
 alias glow='pandoc -f commonmark_x $@ -t ansi'
 
+# simple markdown planner
+# 
+# ~/aarons-space/tasks.md
+# =====
+# # aaron's space
+# ### today
+# 
+# - [ ] one
+# - [ ] two
+# 
+# ### later
+#
+# - [ ] one
+# - [ ] two
+
+# planner aliases
+alias today='cat ~/aarons-space/tasks.md | head -n $(($(grep -n "### \`later\`" ~/aarons-space/tasks.md | cut -f1 -d:) - 1))'
+alias later='cat ~/aarons-space/tasks.md | tail -n $(($(wc -l ~/aarons-space/tasks.md | awk "{print \$1}") - $(grep -n "### \`later\`" ~/aarons-space/tasks.md | cut -f1 -d:) + 1))'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
