@@ -103,12 +103,6 @@ xnoremap # y?\V<C-R>"<CR>
 nnoremap & :&&<CR>
 
 
-" efficient editing in insert mode
-" map ctrl + backspace to delete the previous word in insert mode
-imap <C-BS> <C-W>
-" map shift + tab to unindent
-inoremap <S-Tab> <C-d>
-
 " Escape special characters in a string for exact matching.
 " This is useful to copying strings from the file to the search tool
 " Based on this - http://peterodding.com/code/vim/profile/autoload/xolox/escape.vim
