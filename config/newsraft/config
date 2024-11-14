@@ -1,5 +1,5 @@
 bind m exec mpv "%l"
-bind f exec imv "%l"
+bind f exec nsxiv "%l"
 bind O exec firefox "%l"
 
 # vim: set filetype=conf
