@@ -116,26 +116,6 @@ endif
 call plug#begin('~/.config/vim/plug')
 " file explorer
 Plug 'justinmk/vim-dirvish'
-Plug 'tpope/vim-eunuch', {'on': [
-\  'Remove',
-\  'Unlink',
-\  'Delete',
-\  'Copy',
-\  'Duplicate',
-\  'Move',
-\  'Rename',
-\  'Chmod',
-\  'Mkdir',
-\  'Cfind',
-\  'Lfind',
-\  'Clocate',
-\  'Llocate',
-\  'SudoEdit',
-\  'SudoWrite',
-\  'Wall',
-\  'W',
-\  ]
-\ }
 Plug 'tpope/vim-unimpaired'
 " show git changes in gutter
 Plug 'airblade/vim-gitgutter'
