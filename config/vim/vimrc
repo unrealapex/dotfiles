@@ -130,7 +130,6 @@ Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 " colored parantheses
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-repeat'
-Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " enable RainbowParentheses
@@ -142,9 +141,6 @@ augroup end
 " FZF configurations
 
 " open FZF file search when ctrl + p is pressed
-nnoremap <leader>ff :Files<CR>
-" open FZF ripgrep search when ctrl + t is pressed
-nnoremap <leader>fg :Rg<CR>
-
+nnoremap <leader>ff :FZF<CR>
 
 nnoremap <leader>z :Goyo<CR>
