@@ -35,8 +35,6 @@ gentoo-pipewire-launcher &
 
 playerctld daemon
 
-xcompmgr &
-
 unclutter -b
 
 while true; do
