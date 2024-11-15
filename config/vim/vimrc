@@ -65,6 +65,7 @@ set wildmode=longest:full,full
 " don't wrap lines
 set nowrap
 
+colorscheme quiet
 highlight clear SignColumn
 
 " keybindings
