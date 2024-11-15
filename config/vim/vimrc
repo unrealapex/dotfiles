@@ -128,8 +128,6 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 " colored parantheses
 Plug 'junegunn/rainbow_parentheses.vim'
-" code completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'} | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf.vim'
 call plug#end()
@@ -140,97 +138,6 @@ augroup rainbow_parens
   autocmd VimEnter * RainbowParentheses
 augroup end
 
-" plugin configs
-
-" CoC configurations
-
-" CoC Extensions
-let g:coc_global_extensions = [
-\  'coc-vimlsp',
-\  'coc-sumneko-lua',
-\  'coc-sh',
-\  'coc-pyright',
-\  'coc-clangd',
-\  'coc-java',
-\  'coc-sql',
-\  'coc-html',
-\  'coc-html-css-support',
-\  'coc-tsserver',
-\  'coc-css',
-\  'coc-json',
-\  'coc-snippets',
-\  'coc-lightbulb',
-\ ]
-
-" CoC keybindings
-
-" map tab to accept completion
-inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
-
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" gd - go to definition of word under cursor
-nmap <silent> gd <Plug>(coc-definition)<CR>
-nmap <silent> gy <Plug>(coc-type-definition)<CR>
-
-" gi - go to implementation
-nmap <silent> gi <Plug>(coc-implementation)<CR>
-
-" gr - find references
-nmap <silent> gr <Plug>(coc-references)<CR>
-
-" gh - get hint on whatever's under the cursor
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-nnoremap <silent> gh :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if &filetype == 'vim'
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
-nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
-
-" list errors
-nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<cr>
-
-" list commands available in tsserver (and others)
-nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
-
-" restart when tsserver gets wonky
-nnoremap <silent> <leader>cR  :<C-u>CocRestart<CR>
-
-" view all errors
-nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<CR>
-
-" manage extensions
-nnoremap <silent> <leader>cx  :<C-u>CocList extensions<cr>
-
-" rename the current word in the cursor
-nmap <leader>rn  <Plug>(coc-rename)<CR>
-nmap <F2> <Plug>(coc-rename)<CR>
-nmap <leader>cf  <Plug>(coc-format-selected)<CR>
-vmap <leader>cf  <Plug>(coc-format-selected)<CR>
-
-" run code actions
-vmap <leader>ca  <Plug>(coc-codeaction-selected)<CR>
-nmap <leader>ca  <Plug>(coc-codeaction-selected)<CR>
-
-
-nnoremap <silent><nowait><expr> <C-d> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-nnoremap <silent><nowait><expr> <C-u> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-inoremap <silent><nowait><expr> <C-d> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-inoremap <silent><nowait><expr> <C-u> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-vnoremap <silent><nowait><expr> <C-d> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-vnoremap <silent><nowait><expr> <C-u> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-
-nnoremap [d <Plug>(coc-diagnostic-prev)<CR>
-nnoremap ]d <Plug>(coc-diagnostic-next)<CR>
-
-
 " FZF configurations
 
 " open FZF file search when ctrl + p is pressed
@@ -240,7 +147,3 @@ nnoremap <leader>fg :Rg<CR>
 
 
 nnoremap <leader>z :Goyo<CR>
-
-
-" disable coc warning
-let g:coc_disable_startup_warning = 1
