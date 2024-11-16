@@ -1,70 +1,78 @@
-" automatic indentation
 set autoindent
-" reread file if it has been modified outside of Vim
 set autoread
-" set window background to dark
 set background=dark
-" more powerful backspacing
 set backspace=indent,eol,start
-" enter the current millennium
-set nocompatible
+set backupdir=$XDG_DATA_HOME/vim/backup
+set belloff=all
+set clipboard=unnamedplus
+set complete-=i
 set completeopt=menu,menuone,noselect
-" enable cursor line
 set cursorline
-" disable annoying error bell
-set noerrorbells
+set directory=$XDG_DATA_HOME/vim/swap
 set expandtab
 set fo+=jpor
-" enable folding
-set nofoldenable
+set foldenable
 set foldmethod=indent
-" allow hidden buffers
+set formatoptions=jcroqlnt
+set grepformat="%f:%l:%c:%m"
+set grepprg=rg\ --vimgrep
+set guicursor=""
 set hidden
-set history=500
-" ignore case unless explicitly stated
+set history=10000
 set ignorecase
-" incremental search
 set incsearch
-set laststatus=2
+set laststatus=1
 set list
 set listchars=
 set magic
-" show line numbers
+set nocompatible
+set nofoldenable
+set novisualbell
+set nowrap
 set number
-" basic completion
 set omnifunc=syntaxcomplete#Complete
-set path+=.,**
-set pumheight=15
-" show relative line numbers
+set path+=.,,
+set pumheight=12
 set relativenumber
-set rtp+=~/.local/share/vim/
-" show cursor position in status bar
+set rtp+=$XDG_DATA_HOME/vim
 set ruler
-" 8 lines above or below cursor when scrolling
 set scrolloff=8
-" indents to next multiple of 'shiftwidth'.
-set shiftwidth=2
-set shiftround
-set noshowmode
-" show typed command in status bar
 set showcmd
-set signcolumn=yes
+set showmode
+set signcolumn="1"
 set smartcase
-" set tabs to two spaces
-set tabstop=2
-set termguicolors
-" show file in titlebar
+set splitright
+" TODO: see if you really want to set this(use terminal colors)
+" colorcolumn is non-existent with this enabled
+" set t_Co=16
+set tabpagemax=50
+set tabstop=4
+set tags="./tags;,tags"
 set title
 set ttimeout
 set ttimeoutlen=5
-" set updatetime to 200 milliseconds
+set undodir=$XDG_DATA_HOME/vim/undo
+set undofile
+set undolevels=500
 set updatetime=200
+set viewoptions="unix,slash"
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
-set novisualbell
+set wildoptions=pum,tagfile
 set wildmenu
 set wildmode=longest:full,full
-" don't wrap lines
-set nowrap
+
+" create paths for directories set
+if !isdirectory(&backupdir)
+  call mkdir(&backupdir, "p", 0700)
+endif
+
+if !isdirectory(&directory)
+  call mkdir(&directory, "p", 0700)
+endif
+
+if !isdirectory(&undodir)
+  call mkdir(&undodir, "p", 0700)
+endif
 
 colorscheme quiet
 highlight clear SignColumn
