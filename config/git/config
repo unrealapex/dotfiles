@@ -47,3 +47,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+
+# vim: set filetype=gitconfig
