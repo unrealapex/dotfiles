@@ -49,5 +49,6 @@
 	whitespace = red reverse
 [blame]
 	date = relative
+	coloring = highlightRecent
 
 # vim: set filetype=gitconfig
