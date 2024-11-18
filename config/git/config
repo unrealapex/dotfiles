@@ -47,5 +47,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[blame]
+	date = relative
 
 # vim: set filetype=gitconfig
