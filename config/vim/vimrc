@@ -22,8 +22,6 @@ set history=10000
 set ignorecase
 set incsearch
 set laststatus=1
-set list
-set listchars=
 set magic
 set nocompatible
 set nofoldenable
