@@ -55,6 +55,7 @@ man-pages
 mesa
 mesa-utils
 mpv
+mupdf
 mutt-wizard
 neofetch
 neomutt
@@ -108,5 +109,3 @@ xorg-xkill
 xss-lock
 yash
 yt-dlp
-zathura
-zathura-pdf-poppler
