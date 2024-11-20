@@ -15,6 +15,7 @@ set foldenable
 set foldmethod=indent
 set formatoptions=jcroqlnt
 set grepformat="%f:%l:%c:%m"
+" TODO: set errorformat
 set grepprg=rg\ --vimgrep
 set guicursor=""
 set hidden
