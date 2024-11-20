@@ -209,3 +209,5 @@ nnoremap <C-Right> :vertical resize -2<CR>
 " don't lose selection when shifting text
 xnoremap < <gv
 xnoremap > >gv
+
+nnoremap gx :silent !xdg-open <cfile><CR>
