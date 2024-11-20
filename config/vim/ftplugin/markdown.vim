@@ -1,2 +1,2 @@
 setlocal expandtab
-setlocal formatprg=prettierd
+setlocal formatprg=prettier\ --stdin-filepath\ %
