@@ -29,7 +29,6 @@ gamemode
 gimp
 git
 gnu-free-fonts
-gomuks
 graphicsmagick
 gst-plugins-bad
 gst-plugins-base
@@ -39,10 +38,8 @@ gst-plugins-ugly
 hsetroot
 htop
 hyperfine
-imagemagick
 inkscape
 jq
-kanshi
 kdenlive
 krita
 libnotify
@@ -61,7 +58,6 @@ neofetch
 neomutt
 neovim
 newsraft
-nodejs
 noto-fonts-cjk
 noto-fonts-emoji
 nsxiv
