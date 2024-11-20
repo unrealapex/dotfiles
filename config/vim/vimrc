@@ -9,7 +9,6 @@ set complete-=i
 set completeopt=menu,menuone,noselect
 set cursorline
 set directory=$XDG_DATA_HOME/vim/swap
-set expandtab
 set fo+=jpor
 set foldenable
 set foldmethod=indent

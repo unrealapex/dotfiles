@@ -1,3 +1,4 @@
+setlocal expandtab
 setlocal formatprg=stylua
 setlocal shiftwidth=2
 setlocal softtabstop=2
