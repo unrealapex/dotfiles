@@ -1,2 +1,2 @@
 setlocal expandtab
-setlocal formatprg=prettier\ --stdin-filepath\ %
+setlocal formatprg=prettier\ --prose-wrap\ always\ --stdin-filepath\ %
