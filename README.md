@@ -6,7 +6,7 @@ wm: dwm
 launcher: dmenu
 terminal: st
 shell: yash
-editor: nextvi
+editor: vim
 notifications: dunst
 ```
 
