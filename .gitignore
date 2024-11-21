@@ -14,3 +14,5 @@ config/cmus/lib.pl
 config/cmus/playlists
 config/cmus/search-history
 config/vis/vis-plug
+config/crankshaft
+!config/crankshaft/config/settings.json
