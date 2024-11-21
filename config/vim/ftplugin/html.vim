@@ -1,1 +1,1 @@
-setlocal formatprg="prettier --stdin-filepath %"
+setlocal formatprg="prettier --write --stdin-filepath %"
