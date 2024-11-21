@@ -1,3 +1,6 @@
 setlocal shiftwidth=2
 setlocal tabstop=2
-setlocal formatprg=google-java-format
+if executable("google-java-format")
+		setlocal formatprg=google-java-format
+endif
+

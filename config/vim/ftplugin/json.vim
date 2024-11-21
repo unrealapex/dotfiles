@@ -1,1 +1,4 @@
-setlocal formatprg=jq
+if executable("jq")
+		setlocal formatprg=jq
+endif
+

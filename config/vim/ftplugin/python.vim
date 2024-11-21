@@ -1,1 +1,3 @@
-setlocal formatprg=black
+if executable("black")
+		setlocal formatprg=black
+endif
