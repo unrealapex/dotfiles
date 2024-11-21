@@ -42,7 +42,7 @@ while true; do
   sleep 1
 done &
 
-redshift
+redshift &
 
 if [ "$(xrandr -q | grep -c "HDMI1 connected")" -eq 1 ]; then
   xrandr --output HDMI1 --mode 1920x1080 -r 71
