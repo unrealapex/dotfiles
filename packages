@@ -73,6 +73,7 @@ pipewire
 playerctl
 pulsemixer
 qemu
+redshift
 ripgrep
 shellcheck
 source-highlight
