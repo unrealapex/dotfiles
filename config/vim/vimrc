@@ -211,3 +211,8 @@ xnoremap < <gv
 xnoremap > >gv
 
 nnoremap gx :silent !xdg-open <cfile><CR>
+
+omap ih <Plug>(GitGutterTextObjectInnerPending)
+omap ah <Plug>(GitGutterTextObjectOuterPending)
+xmap ih <Plug>(GitGutterTextObjectInnerVisual)
+xmap ah <Plug>(GitGutterTextObjectOuterVisual)
