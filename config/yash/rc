@@ -146,7 +146,7 @@ c() {
 
 t() {
   files=$(fzf -m --reverse --walker=file,dir,follow,hidden --scheme=path --height=40%)
-  [ -n "$files" ] && "$EDITOR" "$files"
+  [ -n "$files" ] && "$VISUAL" "$files"
 }
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

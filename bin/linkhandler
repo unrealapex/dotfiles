@@ -22,7 +22,7 @@ case "$url" in
 	*mp3|*flac|*opus|*mp3?source*)
 		qndl "$url" 'curl -LO'  >/dev/null 2>&1 ;;
 	*)
-		[ -f "$url" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$url" >/dev/null 2>&1 || setsid -f "$BROWSER" "$url" >/dev/null 2>&1
+		[ -f "$url" ] && setsid -f "$TERMINAL" -e "$VISUAL" "$url" >/dev/null 2>&1 || setsid -f "$BROWSER" "$url" >/dev/null 2>&1
 esac
 
 exit 0

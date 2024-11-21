@@ -2,7 +2,9 @@
 # ~/.config/yash/yash_profile
 #
 
-export EDITOR="vi"
+export VISUAL="vi"
+export EDITOR="ed"
+export FCEDIT=$VISUAL
 export TERMINAL="st"
 export TERMINAL_PROG="st"
 export BROWSER="lynx"
