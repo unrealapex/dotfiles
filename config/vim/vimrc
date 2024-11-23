@@ -156,7 +156,7 @@ call plug#end()
 " enable RainbowParentheses
 augroup rainbow_parens
   autocmd!
-  autocmd VimEnter * RainbowParentheses
+  autocmd BufReadPost * RainbowParentheses
 augroup end
 
 " FZF configurations
