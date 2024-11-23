@@ -148,7 +148,7 @@ Plug 'tpope/vim-commentary'
 " Goyo
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 " colored parantheses
-Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'junegunn/rainbow_parentheses.vim', {'on': 'RainbowParentheses'}
 Plug 'tpope/vim-repeat'
 Plug 'wellle/targets.vim'
 call plug#end()
