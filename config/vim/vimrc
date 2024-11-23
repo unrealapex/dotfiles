@@ -23,7 +23,6 @@ set ignorecase
 set incsearch
 set laststatus=1
 set magic
-set nocompatible
 set nofoldenable
 set novisualbell
 set nowrap
