@@ -106,18 +106,6 @@ let g:netrw_nogx = 1
 " change map leader to space
 let mapleader=" "
 
-" line/selection movement binds
-" alt + k to move a line or selection up,
-" alt + j to move a line or selection down
-" amazing vim hack taken from the wiki:
-" https://vim.fandom.com/wiki/Moving_lines_up_or_down#:~:text=In%20normal%20mode%20or%20in,to%20move%20the%20block%20up.
-nnoremap <silent> <A-j> :m .+1<CR>==
-nnoremap <silent> <A-k> :m .-2<CR>==
-inoremap <silent> <A-j> <Esc>:m .+1<CR>==gi
-inoremap <silent> <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <silent> <A-j> :m '>+1<CR>gv=gv
-vnoremap <silent> <A-k> :m '<-2<CR>gv=gv
-
 " buffer stuff
 " switch buffers easily
 nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
