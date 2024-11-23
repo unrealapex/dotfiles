@@ -40,9 +40,6 @@ set showmode
 set signcolumn="1"
 set smartcase
 set splitright
-" TODO: see if you really want to set this(use terminal colors)
-" colorcolumn is non-existent with this enabled
-" set t_Co=16
 set tabpagemax=50
 set tabstop=4
 set tags="./tags;,tags"
