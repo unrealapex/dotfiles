@@ -44,11 +44,14 @@ done &
 
 redshift &
 
-if [ "$(xrandr -q | grep -c "HDMI1 connected")" -eq 1 ]; then
-  xrandr --output HDMI1 --mode 1920x1080 -r 71
-  xrandr --output eDP1 --off
+mon1=HDMI1
+mon2=eDP1
+
+if [ "$(xrandr -q | grep -c "$mon1 connected")" -eq 1 ]; then
+  xrandr --output $mon1 --mode 1920x1080 -r 71
+  xrandr --output $mon2 --off
 else
-  xrandr --output eDP1 --auto
+  xrandr --output $mon2 --auto
 fi
 
 hsetroot -full "$WALLPAPER"
