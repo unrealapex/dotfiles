@@ -18,6 +18,7 @@ set --le-predict
 
 HISTFILE="$XDG_STATE_HOME"/yash/history
 HISTSIZE=2000
+HISTRMDUP=1
 
 # TODO: add vi style completion bindings
 PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin"
