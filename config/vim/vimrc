@@ -68,6 +68,8 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, "p", 0700)
 endif
 
+" FIXME: make sure viminfo directory is created
+
 colorscheme quiet
 highlight clear SignColumn
 
