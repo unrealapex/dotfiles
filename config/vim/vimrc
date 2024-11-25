@@ -69,7 +69,6 @@ endif
 
 " FIXME: make sure viminfo directory is created
 
-colorscheme quiet
 highlight clear SignColumn
 
 " disable Python 2 support.
