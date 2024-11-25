@@ -55,6 +55,8 @@ set wildmenu
 set wildmode=longest:full,full
 set wildoptions=pum,tagfile
 
+syntax on
+
 " create paths for directories set
 if !isdirectory(&backupdir)
   call mkdir(&backupdir, "p", 0700)
