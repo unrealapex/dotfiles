@@ -142,8 +142,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.local/share/vim/plug')
-" file explorer
-Plug 'justinmk/vim-dirvish'
 Plug 'tpope/vim-unimpaired'
 " show git changes in gutter
 Plug 'airblade/vim-gitgutter'
