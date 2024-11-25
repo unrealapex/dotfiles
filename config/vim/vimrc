@@ -126,6 +126,7 @@ xnoremap # y?\V<C-R>"<CR>
 nnoremap & :&&<CR>
 
 
+packadd comment
 
 " vim plug
 let data_dir = '~/.local/share/vim/'
@@ -145,8 +146,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'romainl/vim-cool'
 " Vim Surround
 Plug 'tpope/vim-surround'
-" Vim Commentary
-Plug 'tpope/vim-commentary'
 " Goyo
 Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 " colored parantheses
