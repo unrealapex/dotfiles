@@ -151,4 +151,4 @@ t() {
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# vim: set filetype=sh
+# vim: filetype=sh

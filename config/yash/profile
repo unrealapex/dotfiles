@@ -70,4 +70,4 @@ eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RU
 [ -t 0 ] && [ "$(tty)" = "/dev/tty1" ] && [ ! "$DISPLAY" ] && exec startx
 # exec startx
 
-# vim: set filetype=sh
+# vim: filetype=sh

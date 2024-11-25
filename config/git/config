@@ -50,4 +50,4 @@
 	date = relative
 	coloring = highlightRecent
 
-# vim: set filetype=gitconfig
+# vim: filetype=gitconfig
