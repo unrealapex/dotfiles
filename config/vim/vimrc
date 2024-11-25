@@ -145,8 +145,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'romainl/vim-cool'
 " Vim Surround
 Plug 'tpope/vim-surround'
-" Goyo
-Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
 " colored parantheses
 Plug 'junegunn/rainbow_parentheses.vim', {'on': 'RainbowParentheses'}
 Plug 'tpope/vim-repeat'
@@ -163,8 +161,6 @@ augroup end
 
 " open FZF file search when ctrl + p is pressed
 nnoremap <leader>ff :FZF<CR>
-
-nnoremap <leader>z :Goyo<CR>
 
 " create a new buffer
 nnoremap <leader>n :enew<CR>
