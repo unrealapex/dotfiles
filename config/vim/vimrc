@@ -33,6 +33,7 @@ set relativenumber
 set rtp+=$XDG_DATA_HOME/vim
 set ruler
 set scrolloff=8
+set shortmess=ltToOCF
 set showcmd
 set showmode
 set signcolumn="1"
