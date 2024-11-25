@@ -4,7 +4,6 @@ set background=dark
 set backspace=indent,eol,start
 set backupdir=$XDG_DATA_HOME/vim/backup
 set belloff=all
-set clipboard=unnamedplus
 set complete-=i
 set completeopt=menu,menuone,noselect
 set cursorline
