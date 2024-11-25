@@ -18,6 +18,7 @@ set grepprg="rg --vimgrep"
 set guicursor=""
 set hidden
 set history=10000
+set hlsearch
 set ignorecase
 set incsearch
 set laststatus=1
