@@ -129,6 +129,7 @@ nnoremap & :&&<CR>
 
 
 packadd comment
+packadd matchit
 
 " vim plug
 let data_dir = '~/.local/share/vim/'
