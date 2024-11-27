@@ -58,6 +58,7 @@ set wildmode=longest:full,full
 set wildoptions=pum,tagfile
 
 syntax on
+filetype plugin indent on
 
 " create paths for directories set
 if !isdirectory(&backupdir)
