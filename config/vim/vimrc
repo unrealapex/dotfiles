@@ -28,6 +28,7 @@ set novisualbell
 set nowrap
 set number
 set omnifunc=syntaxcomplete#Complete
+set packpath^=$XDG_DATA_HOME/vim
 set path+=.,,
 set pumheight=12
 set relativenumber
@@ -133,27 +134,37 @@ packadd comment
 packadd matchit
 packadd editorconfig
 
-" vim plug
-let data_dir = '~/.local/share/vim/'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  :echo "Installing Vim Plug"
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-  :echo "Vim Plug installed"
-endif
+function! PackInit() abort
+  packadd minpac
 
-call plug#begin('~/.local/share/vim/plug')
-Plug 'tpope/vim-unimpaired'
-" show git changes in gutter
-Plug 'airblade/vim-gitgutter'
-Plug 'romainl/vim-cool'
-" Vim Surround
-Plug 'tpope/vim-surround'
-" colored parantheses
-Plug 'junegunn/rainbow_parentheses.vim', {'on': 'RainbowParentheses'}
-Plug 'tpope/vim-repeat'
-Plug 'wellle/targets.vim'
-call plug#end()
+  " bootstrap minpac
+  if !exists('g:loaded_minpac')
+		  let out = system('git clone https://github.com/k-takata/minpac ' .. $XDG_DATA_HOME .. '/vim/pack/minpac/opt/minpac')
+		  if v:shell_error
+				  echo 'Error cloning minpac: ' .. out
+				  return
+		  endif
+		  packadd minpac
+  endif
+
+  call minpac#init()
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+  call minpac#add('tpope/vim-unimpaired')
+  " show git changes in gutter
+  call minpac#add('airblade/vim-gitgutter')
+  call minpac#add('romainl/vim-cool')
+  " Vim Surround
+  call minpac#add('tpope/vim-surround')
+  " colored parantheses
+  call minpac#add('junegunn/rainbow_parentheses.vim')
+  call minpac#add('tpope/vim-repeat')
+  call minpac#add('wellle/targets.vim')
+endfunction
+
+command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
+command! PackClean  source $MYVIMRC | call PackInit() | call minpac#clean()
+command! PackStatus packadd minpac | call minpac#status()
+
 
 " enable RainbowParentheses
 augroup rainbow_parens
