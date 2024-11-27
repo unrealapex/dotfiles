@@ -57,8 +57,6 @@ vim.opt.wrap = false
 -- syntax highlighting
 vim.cmd.syntax("on")
 
--- colorscheme
-vim.cmd.colorscheme("quiet")
 vim.cmd.highlight({"normal", "guibg=NONE"})
 
 --globals
