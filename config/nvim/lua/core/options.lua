@@ -42,8 +42,7 @@ vim.opt.splitright = true
 -- TODO: show diagnostics
 vim.opt.statusline = "%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
 vim.opt.tabstop = 4
--- true color support
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 vim.opt.title = true
 vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
 -- persistent undo tree
