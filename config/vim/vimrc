@@ -159,19 +159,13 @@ command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
 command! PackClean  source $MYVIMRC | call PackInit() | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
 
-
-" enable RainbowParentheses
 augroup rainbow_parens
 		autocmd!
 		autocmd BufReadPost * RainbowParentheses
 augroup end
 
-" FZF configurations
-
-" open FZF file search when ctrl + p is pressed
 nnoremap <leader>ff :FZF<CR>
 
-" create a new buffer
 nnoremap <leader>n :enew<CR>
 
 " switch tabs quickly
@@ -185,9 +179,7 @@ nnoremap <leader>7 7gt<CR>
 nnoremap <leader>8 8gt<CR>
 nnoremap <leader>9 9gt<CR>
 
-" open a tab
 nnoremap <leader>t :tabnew<CR>
-" close a tab
 nnoremap <leader>x :tabclose<CR>
 
 " Resize splits with ctrl + arrows
