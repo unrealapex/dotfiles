@@ -138,7 +138,8 @@ function! PackInit() abort
 
 		" bootstrap minpac
 		if !exists('g:loaded_minpac')
-				let out = system('git clone https://github.com/k-takata/minpac ' .. $XDG_DATA_HOME .. '/vim/pack/minpac/opt/minpac')
+				let out = system('git clone https://github.com/k-takata/minpac '
+						\ .. $XDG_DATA_HOME .. '/vim/pack/minpac/opt/minpac')
 				if v:shell_error
 						echo 'Error cloning minpac: ' .. out
 						return
