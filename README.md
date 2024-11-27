@@ -11,11 +11,9 @@ notifications: dunst
 ```
 
 ### ✨ about ✨
-my dotfiles for gentoo, managed using git and make. my intent is to keep my
-dotfiles as minimal as possible and to follow the [suckless
-philsophy](https://suckless.org/philosophy/). i, like the suckless developers
-believe writing quality software is important and strive to set an example with
-my dotfiles.
+these are my dotfiles. version control is done with git. make is used to symlin
+k everything and compile my builds of suckless programs. i strive to use tools
+which align well with the unix philosophy.
 
 ### 💿 install
 ```sh
@@ -24,22 +22,13 @@ cd ~/dotfiles
 make
 ```
 
-### 🗒️ notes
-this rice isn't intended for use by other people, but i don't mind if you do.
-for documentation's sake, this section of the readme has useful information
-below about my dotfiles.
-
-my builds of dwm, st, dmenu, and slock are stored in separate git
-repositories. my makefile has a target to build them.
-
-**extras**
-
+### 🗒️ extras
 window decorations should be turned off for gui apps that have the option. this
 can be done in most apps by enabling the "use system titlebars" option.
 
 skeleton files for programs that have secrets(git) are in `secrets`.
 
-🌈 color palette
+🌈 x11 color palette
 ```css
 * {
   --bg-color: "darkgray";
