@@ -62,15 +62,15 @@ filetype plugin indent on
 
 " create paths for directories set
 if !isdirectory(&backupdir)
-  call mkdir(&backupdir, "p", 0700)
+		call mkdir(&backupdir, "p", 0700)
 endif
 
 if !isdirectory(&directory)
-  call mkdir(&directory, "p", 0700)
+		call mkdir(&directory, "p", 0700)
 endif
 
 if !isdirectory(&undodir)
-  call mkdir(&undodir, "p", 0700)
+		call mkdir(&undodir, "p", 0700)
 endif
 
 " FIXME: make sure viminfo directory is created
@@ -117,11 +117,7 @@ let mapleader=" "
 nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <Leader>n :enew<CR>
 nnoremap <Leader>q :bd<CR>
-
-
 nnoremap <leader>cd :cd %:p:h <Bar> echo getcwd()<CR>
-
-
 nnoremap Y y$
 nnoremap <C-L> <Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>
 inoremap <C-U> <C-G>u<C-U>
@@ -136,27 +132,27 @@ packadd matchit
 packadd editorconfig
 
 function! PackInit() abort
-  packadd minpac
+		packadd minpac
 
-  " bootstrap minpac
-  if !exists('g:loaded_minpac')
-		  let out = system('git clone https://github.com/k-takata/minpac ' .. $XDG_DATA_HOME .. '/vim/pack/minpac/opt/minpac')
-		  if v:shell_error
-				  echo 'Error cloning minpac: ' .. out
-				  return
-		  endif
-		  packadd minpac
-  endif
+		" bootstrap minpac
+		if !exists('g:loaded_minpac')
+				let out = system('git clone https://github.com/k-takata/minpac ' .. $XDG_DATA_HOME .. '/vim/pack/minpac/opt/minpac')
+				if v:shell_error
+						echo 'Error cloning minpac: ' .. out
+						return
+				endif
+				packadd minpac
+		endif
 
-  call minpac#init()
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
-  call minpac#add('tpope/vim-unimpaired')
-  call minpac#add('airblade/vim-gitgutter')
-  call minpac#add('romainl/vim-cool')
-  call minpac#add('tpope/vim-surround')
-  call minpac#add('junegunn/rainbow_parentheses.vim')
-  call minpac#add('tpope/vim-repeat')
-  call minpac#add('wellle/targets.vim')
+		call minpac#init()
+		call minpac#add('k-takata/minpac', {'type': 'opt'})
+		call minpac#add('tpope/vim-unimpaired')
+		call minpac#add('airblade/vim-gitgutter')
+		call minpac#add('romainl/vim-cool')
+		call minpac#add('tpope/vim-surround')
+		call minpac#add('junegunn/rainbow_parentheses.vim')
+		call minpac#add('tpope/vim-repeat')
+		call minpac#add('wellle/targets.vim')
 endfunction
 
 command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
@@ -166,8 +162,8 @@ command! PackStatus packadd minpac | call minpac#status()
 
 " enable RainbowParentheses
 augroup rainbow_parens
-  autocmd!
-  autocmd BufReadPost * RainbowParentheses
+		autocmd!
+		autocmd BufReadPost * RainbowParentheses
 augroup end
 
 " FZF configurations
