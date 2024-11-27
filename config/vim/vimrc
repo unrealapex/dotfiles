@@ -115,8 +115,8 @@ let mapleader=" "
 " buffer stuff
 " switch buffers easily
 nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
-nnoremap <Leader>n :enew<CR>
-nnoremap <Leader>q :bd<CR>
+nnoremap <leader>n :enew<CR>
+nnoremap <leader>q :bd<CR>
 nnoremap <leader>cd :cd %:p:h <Bar> echo getcwd()<CR>
 nnoremap Y y$
 nnoremap <C-L> <Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>
