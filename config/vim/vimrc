@@ -185,7 +185,7 @@ nnoremap <leader>9 9gt<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>x :tabclose<CR>
 
-" Resize splits with ctrl + arrows
+" resize splits with ctrl + arrows
 nnoremap <C-Up> :resize -2<CR>
 nnoremap <C-Down> :resize +2<CR>
 nnoremap <C-Left> :vertical resize +2<CR>
