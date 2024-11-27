@@ -150,12 +150,9 @@ function! PackInit() abort
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
   call minpac#add('tpope/vim-unimpaired')
-  " show git changes in gutter
   call minpac#add('airblade/vim-gitgutter')
   call minpac#add('romainl/vim-cool')
-  " Vim Surround
   call minpac#add('tpope/vim-surround')
-  " colored parantheses
   call minpac#add('junegunn/rainbow_parentheses.vim')
   call minpac#add('tpope/vim-repeat')
   call minpac#add('wellle/targets.vim')
