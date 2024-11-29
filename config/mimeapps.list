@@ -7,8 +7,8 @@
 text/x-shellscript=text.desktop;
 x-scheme-handler/mailto=mail.desktop;
 text/plain=text.desktop;
-application/postscript=pdf.desktop;
-application/pdf=pdf.desktop;
+application/postscript=mupdf.desktop;
+application/pdf=mupdf.desktop;
 image/png=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
