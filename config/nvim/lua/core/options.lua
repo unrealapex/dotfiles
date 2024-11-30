@@ -23,8 +23,6 @@ vim.opt.ignorecase = true
 -- incremental search
 vim.opt.incsearch = true
 vim.opt.laststatus = 1
-vim.opt.list = true
-vim.opt.listchars = nil
 vim.opt.magic = true
 vim.opt.number = true
 -- basic completion
