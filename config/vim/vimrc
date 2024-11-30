@@ -106,6 +106,7 @@ let g:loaded_vimballPlugin = 1
 let g:loaded_zip = 1
 let g:loaded_zipPlugin = 1
 let g:netrw_nogx = 1
+
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#completion_delay = 100
 
