@@ -131,8 +131,6 @@ return {
         },
       })
 
-      -- NOTE: maybe disable gutter signs entirely
-      -- vim.diagnostic.config({signs = false})
     end,
   },
   {
