@@ -73,8 +73,6 @@ if !isdirectory(&undodir)
 		call mkdir(&undodir, "p", 0700)
 endif
 
-" FIXME: make sure viminfo directory is created
-
 highlight clear SignColumn
 
 " redundant if vim is compiled without these features
