@@ -20,7 +20,6 @@ HISTFILE="$XDG_STATE_HOME"/yash/history
 HISTSIZE=2000
 HISTRMDUP=1
 
-# TODO: add vi style completion bindings
 PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin"
 export PATH
 
@@ -31,6 +30,7 @@ bindkey --vi-command '\^L' clear-and-redraw-all
 bindkey --emacs '\^[[1;5D' backward-emacsword
 bindkey --emacs '\^[[1;5C' forward-emacsword
 
+# TODO: add vi style completion bindings
 # bindkey --emacs 'h' complete-prev-column
 # bindkey --emacs 'j' complete-next-candidate
 # bindkey --emacs 'k' complete-prev-candidate
