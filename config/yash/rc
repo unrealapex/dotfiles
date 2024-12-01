@@ -104,7 +104,7 @@ o() {
 }
 
 cd() {
-  if [ "$#" -ne 0 ]; then
+  if [ -t 0 ] && [ "$#" -ne 0 ]; then
     command pushd --remove-duplicates --default-directory="$HOME" "$@"
   else
    command cd
