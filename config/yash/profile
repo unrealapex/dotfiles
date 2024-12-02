@@ -37,7 +37,7 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-export WWW_HOME='https://lite.duckduckgo.com/lite'
+export WWW_HOME='https://baresearch.org'
 # st supports true color
 export COLORTERM=truecolor
 
