@@ -1,5 +1,5 @@
 #
-# ~/.config/yash/yash_profile
+# ~/.config/yash/profile
 #
 
 export VISUAL="vi"

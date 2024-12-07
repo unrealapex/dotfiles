@@ -1,5 +1,5 @@
 #
-# ~/.config/yash/yashrc
+# ~/.config/yash/rc
 #
 
 case $- in (*m*)
