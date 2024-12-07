@@ -52,6 +52,52 @@ if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
     alias tree='tree -C'
 fi
 
+PROMPT_COMMAND=()
+: ${LOGNAME:=$(logname)} ${HOSTNAME:=$(uname -n)}
+
+# find escape sequence to change terminal window title
+case "$TERM" in
+  (xterm|xterm[+-]*|gnome|gnome[+-]*|putty|putty[+-]*|cygwin)
+    _tsl='\033];' _fsl='\a' ;;
+  (*)
+    _tsl=$( (tput tsl 0; echo) 2>/dev/null |
+    sed -e 's;\\;\\\\;g' -e 's;;\\033;g' -e 's;;\\a;g' -e 's;%;%%;g')
+    _fsl=$( (tput fsl  ; echo) 2>/dev/null |
+    sed -e 's;\\;\\\\;g' -e 's;;\\033;g' -e 's;;\\a;g' -e 's;%;%%;g') ;;
+esac
+
+# if terminal window title can be changed...
+if [ "$_tsl" ] && [ "$_fsl" ]; then
+
+  # set terminal window title on each prompt
+  _set_term_title()
+  if [ -t 2 ]; then
+    printf "$_tsl"'%s@%s:%s'"$_fsl" "${LOGNAME}" "${HOSTNAME%%.*}" \
+      "${${PWD:/$HOME/\~}/#$HOME\//\~\/}" >&2
+  fi
+  PROMPT_COMMAND=("$PROMPT_COMMAND" '_set_term_title')
+
+  # reset window title when changing host or user
+  ssh() {
+    if [ -t 2 ]; then printf "$_tsl"'ssh %s'"$_fsl" "$*" >&2; fi
+    command ssh "$@"
+  }
+  su() {
+    if [ -t 2 ]; then printf "$_tsl"'su %s'"$_fsl" "$*" >&2; fi
+    command su "$@"
+  }
+  sudo() {
+    if [ -t 2 ]; then printf "$_tsl"'sudo %s'"$_fsl" "$*" >&2; fi
+    command sudo "$@"
+  }
+  doas() {
+    if [ -t 2 ]; then printf "$_tsl"'doas %s'"$_fsl" "$*" >&2; fi
+    command doas "$@"
+  }
+
+fi
+
+
 # some more ls aliases
 alias ll='ls -Ahl1'
 alias la='ls -A'
