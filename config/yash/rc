@@ -16,7 +16,7 @@ set --le-predict
 
 # define some basic variables if missing
 : ${LOGNAME:=$(logname)} ${HOSTNAME:=$(uname -n)}
-YASH_PS1='$(logname)@$(uname -n):${${${PWD:/~/\~}##*/}:-$PWD} $ '
+YASH_PS1='${LOGNAME}@${HOSTNAME}:${${${PWD:/~/\~}##*/}:-$PWD} $ ' 
 PROMPT_COMMAND=()
 
 HISTFILE="$XDG_STATE_HOME"/yash/history
