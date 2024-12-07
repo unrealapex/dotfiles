@@ -15,6 +15,7 @@ set --hist-space
 set --le-predict
 
 # define some basic variables if missing
+# TODO: maybe define these in profile
 : ${LOGNAME:=$(logname)} ${HOSTNAME:=$(uname -n)}
 YASH_PS1='${LOGNAME}@${HOSTNAME}:${${${PWD:/~/\~}##*/}:-$PWD} $ ' 
 PROMPT_COMMAND=()
