@@ -113,21 +113,6 @@ let g:mucomplete#completion_delay = 100
 " change map leader to space
 let mapleader=" "
 
-" buffer stuff
-" switch buffers easily
-nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
-nnoremap <leader>n :enew<CR>
-nnoremap <leader>q :bd<CR>
-nnoremap <leader>cd :cd %:p:h <Bar> echo getcwd()<CR>
-nnoremap Y y$
-nnoremap <C-L> <Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>
-inoremap <C-U> <C-G>u<C-U>
-inoremap <C-W> <C-G>u<C-W>
-xnoremap * y/\V<C-R>"<CR>
-xnoremap # y?\V<C-R>"<CR>
-nnoremap & :&&<CR>
-
-
 packadd comment
 packadd matchit
 packadd editorconfig
@@ -166,6 +151,20 @@ augroup rainbow_parens
 		autocmd!
 		autocmd BufReadPost * RainbowParentheses
 augroup end
+
+" buffer stuff
+" switch buffers easily
+nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
+nnoremap <leader>n :enew<CR>
+nnoremap <leader>q :bd<CR>
+nnoremap <leader>cd :cd %:p:h <Bar> echo getcwd()<CR>
+nnoremap Y y$
+nnoremap <C-L> <Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>
+inoremap <C-U> <C-G>u<C-U>
+inoremap <C-W> <C-G>u<C-W>
+xnoremap * y/\V<C-R>"<CR>
+xnoremap # y?\V<C-R>"<CR>
+nnoremap & :&&<CR>
 
 nnoremap <leader>ff :FZF<CR>
 
