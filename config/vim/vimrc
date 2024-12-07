@@ -152,8 +152,6 @@ augroup rainbow_parens
 		autocmd BufReadPost * RainbowParentheses
 augroup end
 
-" buffer stuff
-" switch buffers easily
 nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <leader>n :enew<CR>
 nnoremap <leader>q :bd<CR>
