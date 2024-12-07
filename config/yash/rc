@@ -6,8 +6,6 @@ case $- in (*m*)
   trap - TSTP TTIN TTOU
 esac
 
-YASH_PS1='$(logname)@$(uname -n):${${${PWD:/~/\~}##*/}:-$PWD} $ '
-
 set -o emacs
 set --brace-expand
 set --extended-glob
@@ -16,6 +14,7 @@ set --no-clobber
 set --hist-space
 set --le-predict
 
+YASH_PS1='$(logname)@$(uname -n):${${${PWD:/~/\~}##*/}:-$PWD} $ '
 HISTFILE="$XDG_STATE_HOME"/yash/history
 HISTSIZE=2000
 HISTRMDUP=1
