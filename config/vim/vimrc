@@ -164,6 +164,7 @@ xnoremap * y/\V<C-R>"<CR>
 xnoremap # y?\V<C-R>"<CR>
 nnoremap & :&&<CR>
 
+" fzf.vim must be in runtimepath
 nnoremap <leader>ff :FZF<CR>
 
 nnoremap <leader>n :enew<CR>
