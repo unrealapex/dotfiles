@@ -9,10 +9,10 @@ esac
 set -o emacs
 set --brace-expand
 set --extended-glob
-set --no-unset
-set --no-clobber
 set --hist-space
 set --le-predict
+set --no-clobber
+set --no-unset
 
 # define some basic variables if missing
 # TODO: maybe define these in profile
