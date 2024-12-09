@@ -105,7 +105,7 @@ alias la='ls -A'
 alias l='ls -C'
 alias j='jobs -l'
 alias h='fc -l'
-alias r='fc -l | fzf | cut -f 2- - | sh'
+alias r='fc -l | fzy | cut -f 2- - | sh'
 alias less='VISUAL=vimpager less'
 alias sudo='doas'
 alias pls='sudo $(history -p !!)'
@@ -187,12 +187,12 @@ alias later='cat ~/aarons-space/tasks.md | tail -n $(($(wc -l ~/aarons-space/tas
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-  dir=$(fzf --reverse --walker=dir,follow,hidden --scheme=path --height=40%)
+  dir=$(find . -type d | fzy)
   [ -d "$dir" ] && cd "$dir"
 }
 
 t() {
-  files=$(fzf -m --reverse --walker=file,dir,follow,hidden --scheme=path --height=40%)
+  files=$(find . -type f | fzy)
   [ -n "$files" ] && "$VISUAL" "$files"
 }
 

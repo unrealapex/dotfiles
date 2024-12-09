@@ -152,6 +152,20 @@ augroup rainbow_parens
 		autocmd BufReadPost * RainbowParentheses
 augroup end
 
+function! FzyCommand(choice_command, vim_command)
+  try
+    let output = system(a:choice_command . " | fzy ")
+  catch /Vim:Interrupt/
+    " Swallow errors from ^C, allow redraw! below
+  endtry
+  redraw!
+  if v:shell_error == 0 && !empty(output)
+    exec a:vim_command . ' ' . output
+  endif
+endfunction
+
+nnoremap <leader>ff :call FzyCommand("find . -type f", ":e")<cr>
+
 nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <leader>n :enew<CR>
 nnoremap <leader>q :bd<CR>
@@ -163,9 +177,6 @@ inoremap <C-W> <C-G>u<C-W>
 xnoremap * y/\V<C-R>"<CR>
 xnoremap # y?\V<C-R>"<CR>
 nnoremap & :&&<CR>
-
-" fzf.vim must be in runtimepath
-nnoremap <leader>ff :FZF<CR>
 
 nnoremap <leader>n :enew<CR>
 
