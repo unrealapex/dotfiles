@@ -192,6 +192,10 @@ c() {
 }
 
 t() {
+  fd -t f -t d | fzy
+}
+
+ff() {
   files=$(fd | fzy)
   [ -n "$files" ] && "$VISUAL" "$files"
 }
