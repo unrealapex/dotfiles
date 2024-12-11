@@ -123,6 +123,8 @@ alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/commo
 alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
 alias weather="curl wttr.in"
 alias d='dirs -v'
+# handle programs that incorrectly read EDITOR instead of VISUAL
+alias neomutt="EDITOR=$VISUAL neomutt"
 
 diff() {
   if [ -t 0 ]; then

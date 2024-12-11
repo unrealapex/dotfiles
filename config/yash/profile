@@ -3,9 +3,7 @@
 #
 
 export VISUAL="vi"
-# most applications should read VISUAL instead of EDITOR but set EDITOR to
-# VISUAL as a fallback
-export EDITOR=$VISUAL
+export EDITOR="ed"
 export FCEDIT=$VISUAL
 export TERMINAL="st"
 export TERMINAL_PROG="st"
