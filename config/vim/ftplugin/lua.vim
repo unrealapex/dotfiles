@@ -4,5 +4,5 @@ setlocal softtabstop=2
 setlocal tabstop=2
 
 if executable("stylua")
-		setlocal formatprg=stylua
+		setlocal formatprg=stylua\ %
 endif
