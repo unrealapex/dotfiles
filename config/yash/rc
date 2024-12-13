@@ -49,11 +49,11 @@ rm() if [ -t 0 ]; then command rm -iv "$@"; else command rm "$@"; fi
 
 # enable color support of ls and also add handy aliases
 if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-    alias tree='tree -C'
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+  alias tree='tree -C'
 fi
 
 # find escape sequence to change terminal window title
@@ -62,10 +62,10 @@ case "$TERM" in
     _tsl='\033];' _fsl='\a' ;;
   (*)
     _tsl=$( (tput tsl 0; echo) 2>/dev/null |
-    sed -e 's;\\;\\\\;g' -e 's;;\\033;g' -e 's;;\\a;g' -e 's;%;%%;g')
-    _fsl=$( (tput fsl  ; echo) 2>/dev/null |
-    sed -e 's;\\;\\\\;g' -e 's;;\\033;g' -e 's;;\\a;g' -e 's;%;%%;g') ;;
-esac
+      sed -e 's;\\;\\\\;g' -e 's;;\\033;g' -e 's;;\\a;g' -e 's;%;%%;g')
+          _fsl=$( (tput fsl  ; echo) 2>/dev/null |
+            sed -e 's;\\;\\\\;g' -e 's;;\\033;g' -e 's;;\\a;g' -e 's;%;%%;g') ;;
+          esac
 
 # if terminal window title can be changed...
 if [ "$_tsl" ] && [ "$_fsl" ]; then
@@ -132,7 +132,7 @@ diff() {
       command diff -u "$@" | diff-so-fancy
     else
       command diff -u "$@" | sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
-	fi
+    fi
   else
     command diff -u "$@"
   fi
@@ -154,7 +154,7 @@ cd() {
   if [ -t 0 ] && [ "$#" -ne 0 ]; then
     command pushd --remove-duplicates --default-directory="$HOME" "$@"
   else
-   command cd
+    command cd
   fi
 }
 
