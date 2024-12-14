@@ -1,4 +1,4 @@
-bind m exec ffplay "%l"
+bind m exec mpv "%l"
 bind f exec nsxiv "%l"
 bind O exec xdg-open "%l"
 
