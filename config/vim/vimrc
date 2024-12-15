@@ -1,3 +1,7 @@
+" compile time features
+"
+" +clipboard +eval +extra_search +folding +job +keymap +packages
+" +profile +reltime +signs +syntax +timers  +viminfo 
 set autoindent
 set autoread
 set background=dark
