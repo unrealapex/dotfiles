@@ -64,7 +64,7 @@ return {
     cond = vim.fn.executable("git") == 1,
     -- NOTE: loading this plugin is faster than checking if current buffer is
     -- under version control so just load on buffer events
-    event = { "BufReadPost", "BufNewFile" },
+    event = "FileType",
     config = function()
       -- Gitsigns mappings
 

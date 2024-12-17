@@ -4,7 +4,7 @@ return {
   -- lsp and completion stuff
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPost", "BufNewFile" },
+    event = "FileType",
     cmd = {
       "LspInfo",
       "LspStart",
