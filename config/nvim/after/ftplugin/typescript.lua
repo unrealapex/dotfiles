@@ -1,1 +1,1 @@
-vim.bo.formatprg = "prettierd"
+vim.cmd.runtime("ftplugin/javascript.lua")
