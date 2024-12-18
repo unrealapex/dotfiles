@@ -7,7 +7,6 @@
   "mini.ai": { "branch": "main", "commit": "ebb04799794a7f94628153991e6334c3304961b8" },
   "mini.bracketed": { "branch": "main", "commit": "daf2bff8172bc84bfb934f765275618f5e7844a8" },
   "mini.completion": { "branch": "main", "commit": "6eb9546685c4e1c4af2365b87166d4afa39d8a1b" },
-  "mini.icons": { "branch": "main", "commit": "44c0160526f7ae17ca8e8eab9ab235d047fcf7a6" },
   "mini.surround": { "branch": "main", "commit": "aa5e245829dd12d8ff0c96ef11da28681d6049aa" },
   "nvim-lspconfig": { "branch": "master", "commit": "9f2c279cf9abe584f03bfeb37c6658d68e3ff49d" },
   "nvim-treesitter": { "branch": "master", "commit": "102bc74e093ef54aab57a368db15befeb9ba9d58" },
