@@ -2,61 +2,61 @@
 
 return {
   -- fuzzy finder
-  {
-    "ibhagwan/fzf-lua",
-    keys = {
-      {
-        "<leader>ff",
-        function()
-          require("fzf-lua").files()
-        end,
-      },
-      {
-        "<leader>fg",
-        function()
-          require("fzf-lua").live_grep()
-        end,
-      },
-      {
-        "<leader><leader>",
-        function()
-          require("fzf-lua").buffers()
-        end,
-      },
-      {
-        "<leader>fh",
-        function()
-          require("fzf-lua").help_tags()
-        end,
-      },
-      {
-        "<leader>fd",
-        function()
-          require("fzf-lua").diagnostics_document()
-        end,
-      },
-      {
-        "<leader>fo",
-        function()
-          require("fzf-lua").oldfiles()
-        end,
-      },
-      {
-        "<leader>fs",
-        function()
-          require("fzf-lua").lsp_document_symbols()
-        end,
-      },
-    },
-    cmd = { "FzfLua" },
-    cond = vim.fn.executable("fzf") == 1,
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    },
-    opts = {
-      "fzf-vim",
-     },
-  },
+  -- {
+  --   "ibhagwan/fzf-lua",
+  --   keys = {
+  --     {
+  --       "<leader>ff",
+  --       function()
+  --         require("fzf-lua").files()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>fg",
+  --       function()
+  --         require("fzf-lua").live_grep()
+  --       end,
+  --     },
+  --     {
+  --       "<leader><leader>",
+  --       function()
+  --         require("fzf-lua").buffers()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>fh",
+  --       function()
+  --         require("fzf-lua").help_tags()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>fd",
+  --       function()
+  --         require("fzf-lua").diagnostics_document()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>fo",
+  --       function()
+  --         require("fzf-lua").oldfiles()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>fs",
+  --       function()
+  --         require("fzf-lua").lsp_document_symbols()
+  --       end,
+  --     },
+  --   },
+  --   cmd = { "FzfLua" },
+  --   cond = vim.fn.executable("fzf") == 1,
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --   },
+  --   opts = {
+  --     "fzf-vim",
+  --    },
+  -- },
 
   -- better git integration
   {
