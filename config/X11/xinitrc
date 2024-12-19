@@ -48,7 +48,8 @@ mon1=HDMI1
 mon2=eDP1
 
 if [ "$(xrandr -q | grep -c "$mon1 connected")" -eq 1 ]; then
-  xrandr --output $mon1 --mode 1920x1080 -r 71
+  # TODO: set refresh rate
+  xrandr --output $mon1 --mode 2560x1440
   xrandr --output $mon2 --off
 else
   xrandr --output $mon2 --auto
