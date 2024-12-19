@@ -1,5 +1,4 @@
 *.local
-config/tmux/plugins
 config/zsh/.zsh_plugins.zsh
 config/vim/autoload
 config/vim/plug
