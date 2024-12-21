@@ -44,7 +44,6 @@ shebangs = {
   ["#!/bin/sh"] = "bash",
 }
 
--- TODO: lazy load this
 require("plugins/vis-format")
 require("plugins/vis-commentary")
 require("plugins/vis-lspc")
