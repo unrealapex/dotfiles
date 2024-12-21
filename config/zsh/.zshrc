@@ -91,42 +91,64 @@ typeset -U path PATH
 path+=(~/.local/bin ~/.local/share/cargo/bin ~/.local/share/nvim/mason/bin)
 export PATH
 
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+# avoid removing/overwriting existing files by accident
+cp() if [ -t 0 ]; then cp -iv "$@"; else cp "$@"; fi
+mv() if [ -t 0 ]; then mv -iv "$@"; else mv "$@"; fi
+rm() if [ -t 0 ]; then rm -iv "$@"; else rm "$@"; fi
 
 
 # enable color support of ls and also add handy aliases
-if [ $(command -v dircolors) ]; then
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+  alias tree='tree -C'
 fi
 
+
 # some more ls aliases
-alias ll='ls -ahl'
+alias ll='ls -Ahl1'
 alias la='ls -A'
 alias l='ls -C'
+alias j='jobs -l'
+alias h='fc -l'
+alias r='fc -l | fzy | cut -f 2- - | sh'
 alias sudo='doas'
 alias pls='sudo $(history -p !!)'
 alias uwu='echo uwu'
-# chill study music with lofi girl
-alias studymusic="mpv 'https://www.youtube.com/watch?v=jfKfPfyJRdk' > /dev/null 2>&1 &;disown"
-alias irssi="irssi --config=<(cat $XDG_CONFIG_HOME/irssi/config.local $XDG_CONFIG_HOME/irssi/config) --home="$XDG_DATA_HOME"/irssi"
-alias bc="bc --mathlib --quiet"
-alias pidgin="pidgin --config="$XDG_DATA_HOME"/purple"
-alias mbsync="mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc"
-alias wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
-alias dosbox="dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf"
-alias abook="abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook"
-alias musicdl="yt-dlp -x --audio-format flac --audio-quality 10"
+alias bc='bc --mathlib --quiet'
+alias pidgin='pidgin --config="$XDG_DATA_HOME"/purple'
+alias mbsync='mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+alias dosbox='dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf'
+alias abook='abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook'
+alias ytflac='yt-dlp -x --audio-format flac --audio-quality 10'
 alias sxiv="nsxiv"
 alias mutt="neomutt"
+alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
+alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
+alias weather="curl wttr.in"
+alias d='dirs -v'
+# handle programs that incorrectly read EDITOR instead of VISUAL
+alias neomutt="EDITOR=$VISUAL neomutt"
+
+diff() {
+  if [ -t 0 ]; then
+    if command -v diff-so-fancy >/dev/null; then
+      diff -u "$@" | diff-so-fancy
+    else
+      diff -u "$@" | sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
+    fi
+  else
+    diff -u "$@"
+  fi
+}
 
 # wrapper for xdg-open to open multiple uris
-open() {
+o() {
   if [ "$#" -eq 0 ]; then
-    echo "Usage: open [file|directory|protocol]"
+    echo "Usage: o [file|directory|protocol]"
     return 1
   fi
 
@@ -135,39 +157,31 @@ open() {
   done
 }
 
+
 alias f='fff'
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
-alias 1='cd -1'
-alias 2='cd -2'
-alias 3='cd -3'
-alias 4='cd -4'
-alias 5='cd -5'
-alias 6='cd -6'
-alias 7='cd -7'
-alias 8='cd -8'
-alias 9='cd -9'
+alias glow='pandoc -f commonmark_x $@ -t ansi'
 
-
-d () {
-  if [ -n $1 ]; then
-    dirs "$@"
-  else
-    dirs -v | head -n 10
-  fi
-}
-compdef _dirs d
-
-_zsh_cli_fg() { fg; }
-zle -N _zsh_cli_fg
-bindkey '^Z' _zsh_cli_fg
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias ...='../..'
-alias ....='../../..'
-alias .....='../../../..'
+c() {
+  dir=$(fd -H -t d | fzy)
+  [ -d "$dir" ] && cd "$dir"
+}
+
+t() {
+  fd -H -t f -t d | fzy
+}
+
+ff() {
+  files=$(fd -H | fzy)
+  [ -n "$files" ] && "$VISUAL" "$files"
+}
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# vim: filetype=sh
