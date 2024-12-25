@@ -20,8 +20,6 @@ which align well with the unix philosophy.
 💿 install
 ----------
 
-    git clone https://git.sr.ht/~unrealapex/dotfiles ~/dotfiles
-    cd ~/dotfiles
     make
 
 
