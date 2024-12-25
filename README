@@ -5,16 +5,16 @@
     launcher: dmenu
     terminal: st
     shell: yash
-    editor: vim
+    editor: vi
     notifications: dunst
 
 
 ✨ about ✨
 -----------
 
-these are my dotfiles. version control is done with git. make is used to symlin
-k everything and compile my builds of suckless programs. i strive to use tools
-which align well with the unix philosophy.
+these are my dotfiles. version control is done with git. make is used to
+symlink everything and compile my builds of suckless programs. i strive to use
+tools which align well with the unix philosophy.
 
 
 💿 install
