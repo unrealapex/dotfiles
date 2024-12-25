@@ -17,7 +17,7 @@ clean:
 build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
 
 ~/.config/dwm:
-	git clone https://git.sr.ht/~unrealapex/dwm ~/.config/dwm
+	git clone https://codeberg.org/unrealapex/dwm ~/.config/dwm
 
 ~/.config/dwm/dwm: $(wildcard ~/.config/dwm/*.h) $(wildcard ~/.config/dwm/*.c) | ~/.config/dwm
 	$(MAKE) -C ~/.config/dwm install
@@ -28,7 +28,7 @@ build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/
 dwm: /usr/local/bin/dwm
 
 ~/.config/st:
-	git clone https://git.sr.ht/~unrealapex/st ~/.config/st
+	git clone https://codeberg.org/unrealapex/st ~/.config/st
 
 ~/.config/st/st: $(wildcard ~/.config/st/*.h) $(wildcard ~/.config/st/*.c) | ~/.config/st
 	$(MAKE) -C ~/.config/st install
@@ -39,7 +39,7 @@ dwm: /usr/local/bin/dwm
 st: /usr/local/bin/st
 
 ~/.config/dmenu:
-	git clone https://git.sr.ht/~unrealapex/dmenu ~/.config/dmenu
+	git clone https://codeberg.org/unrealapex/dmenu ~/.config/dmenu
 
 ~/.config/dmenu/dmenu: $(wildcard ~/.config/dmenu/*.h) $(wildcard ~/.config/dmenu/*.c) | ~/.config/dmenu
 	$(MAKE) -C ~/.config/dmenu install
@@ -50,7 +50,7 @@ st: /usr/local/bin/st
 dmenu: /usr/local/bin/dmenu
 
 ~/.config/slock:
-	git clone https://git.sr.ht/~unrealapex/slock ~/.config/slock
+	git clone https://codeberg.org/unrealapex/slock ~/.config/slock
 
 ~/.config/slock/slock: $(wildcard ~/.config/slock/*.h) $(wildcard ~/.config/slock/*.c) | ~/.config/slock
 	$(MAKE) -C ~/.config/slock install
