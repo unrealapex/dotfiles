@@ -12,7 +12,7 @@ link: create_dirs
 	ln -sf $(realpath share/themes)/* ~/.local/share/themes
 
 clean:
-	find -L "$HOME" -maxdepth 1 -type l -delete
+	find -L $$HOME -maxdepth 1 -type l -delete
 
 build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
 
