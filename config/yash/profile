@@ -36,8 +36,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 export WWW_HOME='https://lite.duckduckgo.com/lite'
-# st supports true color
-export COLORTERM=truecolor
 
 export PASSWORD_STORE_CLIP_TIME=15
 export PASSWORD_STORE_GENERATED_LENGTH=50
