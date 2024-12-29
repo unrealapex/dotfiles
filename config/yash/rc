@@ -131,17 +131,6 @@ diff() {
   fi
 }
 
-# wrapper for xdg-open to open multiple uris
-o() {
-  if [ "$#" -eq 0 ]; then
-    echo "Usage: o [file|directory|protocol]"
-    return 1
-  fi
-
-  for uri in "$@"; do
-    xdg-open "$uri"
-  done
-}
 
 cd() {
   if [ -t 0 ] && [ "$#" -ne 0 ]; then
