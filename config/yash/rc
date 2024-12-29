@@ -169,16 +169,16 @@ alias later='cat ~/aarons-space/tasks.md | tail -n $(($(wc -l ~/aarons-space/tas
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-  dir=$(fd -t d | fzy)
+  dir=$(fd -H -t d | fzy)
   [ -d "$dir" ] && cd "$dir"
 }
 
 t() {
-  fd -t f -t d | fzy
+  fd -H -t f -t d | fzy
 }
 
 ff() {
-  files=$(fd | fzy)
+  files=$(fd -H | fzy)
   [ -n "$files" ] && "$VISUAL" "$files"
 }
 
