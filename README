@@ -5,7 +5,7 @@
     launcher: dmenu
     terminal: st
     shell: yash
-    editor: vi
+    editor: vis
     notifications: dunst
 
 
