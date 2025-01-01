@@ -29,7 +29,7 @@ local plug = require("vis-plug")
 local plugins = {
   { "https://github.com/milhnl/vis-format" },
   { "https://github.com/lutobler/vis-commentary" },
-  { "https://gitlab.com/muhq/vis-lspc" },
+  { "https://gitlab.com/muhq/vis-lspc", alias = "lspc" },
   { "https://github.com/lutobler/vis-modelines" },
   { "https://github.com/e-zk/vis-shebang" },
   { "https://repo.or.cz/vis-surround" },
@@ -44,17 +44,7 @@ shebangs = {
   ["#!/bin/sh"] = "bash",
 }
 
-require("plugins/vis-format")
-require("plugins/vis-commentary")
-require("plugins/vis-lspc")
-require("plugins/vis-modelines")
-require("plugins/vis-shebang")
-require("plugins/vis-surround")
-require("plugins/vis-jump")
-require("plugins/vis-yank-highlight")
-require('plugins/vis-filetype-settings')
-
-require("plugins/vis-lspc").menu_cmd = "vis-menu"
+plug.plugins.lspc.menu_cmd = "vis-menu"
 
 settings = {
     bash  = {"set expandtab on", "set tabwidth 2"},
