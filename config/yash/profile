@@ -61,6 +61,11 @@ export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export ASPELL_CONF="per-conf $XDG_CONFIG_HOME/aspell/aspell.conf; personal $XDG_DATA_HOME/aspell/en.pws; repl $XDG_DATA_HOME/aspell/en.prepl"
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundle
+export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundle/config
+export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundle
+export MINETEST_USER_PATH="$XDG_DATA_HOME"/minetest
 
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
