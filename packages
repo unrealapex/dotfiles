@@ -40,12 +40,8 @@ gst-plugins-ugly
 hsetroot
 htop
 hyperfine
-inkscape
 jq
-kdenlive
-krita
 libnotify
-libreoffice
 lua
 lua-language-server
 lynx
@@ -59,13 +55,11 @@ mupdf
 mutt-wizard
 fastfetch
 neomutt
-neovim
 newsraft
 noto-fonts-cjk
 noto-fonts-emoji
 nsxiv
 oath-toolkit
-obs-studio
 openbsd-netcat
 pandoc-bin
 pass
