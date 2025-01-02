@@ -31,7 +31,7 @@ xss-lock -l -- slock &
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
-gentoo-pipewire-launcher &
+command -v gentoo-pipewire-launcher > /dev/null && gentoo-pipewire-launcher restart &
 
 playerctld daemon
 
