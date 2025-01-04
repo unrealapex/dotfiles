@@ -1,4 +1,4 @@
 set status_display_program=cmusfm
-colorscheme night
+colorscheme cherry
 set continue=true
 fset flac=filename="*.flac"
