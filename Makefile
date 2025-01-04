@@ -9,7 +9,7 @@ create_dirs:
 link: create_dirs
 	ln -sf $(realpath config)/* ~/.config/
 	ln -sf $(realpath bin)/* $$HOME/.local/bin
-	ln -sf $(realpath gnupg)/* ~/.gnupg/
+	ln -sf $(realpath gnupg)/* ~/.gnupg
 	ln -sf $(realpath share/applications)/* ~/.local/share/applications
 	ln -sf $(realpath share/themes)/* ~/.local/share/themes
 
