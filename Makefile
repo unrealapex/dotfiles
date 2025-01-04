@@ -4,7 +4,7 @@ ROOT := $(shell command -v doas || command -v sudo)
 
 create_dirs:
 	xdg-user-dirs-update
-	mkdir -p ~/.local/bin ~/.local/share/themes ~/.local/share/abook ~/projects ~/Pictures/Webcam ~/Pictures/Screenshots
+	mkdir -p ~/.local/bin ~/.local/share/applications ~/.local/share/themes ~/.local/share/abook ~/projects ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
 	ln -sf $(realpath config)/* ~/.config/
