@@ -67,5 +67,22 @@ vis.events.subscribe(
     vis:command("set escdelay 1")
     vis:command("set cursorline")
     vis:map(vis.modes.NORMAL, "=", require("plugins/vis-format").apply)
+
+    vis:map(vis.modes.NORMAL, "]d", function()
+        vis:command("lspc-next-diagnostic")
+    end)
+    
+    vis:map(vis.modes.NORMAL, "[d", function()
+        vis:command("lspc-prev-diagnostic")
+    end)
+
+    vis:map(vis.modes.NORMAL, "gh", function()
+        vis:command("lspc-hover")
+    end)
+
+    vis:map(vis.modes.NORMAL, "=", function()
+        vis:command("lspc-format")
+    end)
+
   end
 )
