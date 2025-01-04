@@ -110,6 +110,7 @@ alias abook='abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DA
 alias ytflac='yt-dlp -x --audio-format flac --audio-quality 10'
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
+alias cam="mpv av://v4l2:/dev/video0"
 alias weather="curl wttr.in"
 alias d='dirs -v'
 # handle programs that incorrectly read EDITOR instead of VISUAL
