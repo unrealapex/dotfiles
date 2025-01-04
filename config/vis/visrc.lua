@@ -48,7 +48,8 @@ plug.plugins.lspc.menu_cmd = "vis-menu"
 
 settings = {
     bash  = {"set expandtab on", "set tabwidth 2"},
-    sh = {"set expandtab on", "set tabwidth 2"},
+    -- vis does not have an sh filetype
+    -- sh = {"set expandtab on", "set tabwidth 2"},
     lua = {"set expandtab on", "set tabwidth 2"},
     markdown = {"set expandtab on", "set tabwidth 4"},
 }
