@@ -18,6 +18,7 @@ diff-so-fancy
 dnsmasq
 dunst
 espeak-ng
+fastfetch
 fcitx5
 fcron
 fd
@@ -53,7 +54,6 @@ mpv
 mpv-mpris
 mupdf
 mutt-wizard
-fastfetch
 neomutt
 newsraft
 noto-fonts-cjk
