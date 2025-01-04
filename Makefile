@@ -2,8 +2,10 @@ all: link build secrets done
 
 ROOT := $(shell command -v doas || command -v sudo)
 
-create_dirs:
-	xdg-user-dirs-update
+xdg-user-dirs:
+	mkdir -p $$HOME/Desktop $$HOME/Documents $$HOME/Downloads $$HOME/Music $$HOME/Pictures $$HOME/Public $$HOME/Templates $$HOME/Videos
+
+create_dirs: xdg-user-dirs
 	mkdir -p ~/.local/bin ~/.local/share/applications ~/.local/share/themes ~/.local/share/abook ~/projects ~/Pictures/Webcam ~/Pictures/Screenshots
 
 link: create_dirs
