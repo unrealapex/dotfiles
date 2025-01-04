@@ -25,6 +25,10 @@ HISTRMDUP=1
 PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin"
 export PATH
 
+bindkey --emacs '\^L' clear-and-redraw-all
+bindkey --vi-insert '\^L' clear-and-redraw-all
+bindkey --vi-command '\^L' clear-and-redraw-all
+
 bindkey --emacs '\^[[1;5D' backward-emacsword
 bindkey --emacs '\^[[1;5C' forward-emacsword
 
