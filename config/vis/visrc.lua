@@ -54,6 +54,19 @@ settings = {
     markdown = {"set expandtab on", "set tabwidth 4"},
 }
 
+-- TODO: add = operator for formatting
+
+vis:operator_new("gq", function(file, range, pos)
+  local status, out, err = vis:pipe(file, range, "fmt")
+  if not status then
+    vis:info(err)
+  else
+    file:delete(range)
+    file:insert(range.start, out)
+  end
+  return range.start -- new cursor location
+end, "Formating operator, filter range through fmt(1)")
+
 vis.events.subscribe(vis.events.INIT, function() end)
 
 vis.events.subscribe(
