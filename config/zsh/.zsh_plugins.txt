@@ -1,0 +1,8 @@
+# oh my zsh stuff
+# TODO: check if these plugins can be deferred
+ohmyzsh/ohmyzsh path:plugins/sudo
+
+# regular plugins
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-history-substring-search kind:defer

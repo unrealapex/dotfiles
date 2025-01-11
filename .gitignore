@@ -1,4 +1,5 @@
 *.local
+config/zsh/.zsh_plugins.zsh
 config/vim/autoload
 config/vim/plug
 config/beets/state.pickle
