@@ -1,6 +1,5 @@
 adwaita-icon-theme
 alsa-utils
-ani-cli
 anki
 asciinema
 aspell
@@ -13,7 +12,6 @@ catgirl
 clang
 cmus
 cowsay
-cpupower
 dash
 diff-so-fancy
 dnsmasq
@@ -47,7 +45,6 @@ libnotify
 lua
 lua-language-server
 lynx
-man-db
 man-pages
 mesa
 mesa-utils
@@ -76,7 +73,6 @@ ripgrep
 shellcheck
 source-highlight
 sx
-syncthing
 texlive
 tor
 transmission
