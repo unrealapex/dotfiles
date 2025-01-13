@@ -66,9 +66,7 @@ settings = {
     end,
 }
 
--- TODO: add = operator for formatting
-
-vis:operator_new("gq", function(file, range, pos)
+vis:operator_new("=", function(file, range, pos)
   local status, out, err = vis:pipe(file, range, "fmt")
   if not status then
     vis:info(err)
@@ -92,7 +90,6 @@ vis.events.subscribe(
     vis:command("set ignorecase")
     vis:command("set escdelay 1")
     vis:command("set cursorline")
-    vis:map(vis.modes.NORMAL, "=", require("plugins/vis-format").apply)
 
     vis:map(vis.modes.NORMAL, "]d", function()
         vis:command("lspc-next-diagnostic")
@@ -106,7 +103,7 @@ vis.events.subscribe(
         vis:command("lspc-hover")
     end)
 
-    vis:map(vis.modes.NORMAL, "=", function()
+    vis:map(vis.modes.NORMAL, "gq", function()
         vis:command("lspc-format")
     end)
 
