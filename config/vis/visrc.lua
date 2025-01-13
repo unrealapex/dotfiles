@@ -47,11 +47,23 @@ shebangs = {
 plug.plugins.lspc.menu_cmd = "vis-menu"
 
 settings = {
-    bash  = {"set expandtab on", "set tabwidth 2"},
+    bash  = function()
+	    vis:command("set expandtab on")
+	    vis:command("set tabwidth 2")
+    end,
     -- vis does not have an sh filetype
-    -- sh = {"set expandtab on", "set tabwidth 2"},
-    lua = {"set expandtab on", "set tabwidth 2"},
-    markdown = {"set expandtab on", "set tabwidth 4"},
+    -- sh = function()
+	    -- vis:command("set expandtab on")
+	    -- vis:command("set tabwidth 2")
+    -- end,
+    lua = function()
+	    vis:command("set expandtab on")
+	    vis:command("set tabwidth 2")
+    end,
+    markdown = function()
+	    vis:command("set expandtab on")
+	    vis:command("set tabwidth 4")
+    end,
 }
 
 -- TODO: add = operator for formatting
