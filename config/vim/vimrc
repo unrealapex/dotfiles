@@ -136,15 +136,15 @@ function! PackInit() abort
 		endif
 
 		call minpac#init()
-		call minpac#add('k-takata/minpac', {'type': 'opt'})
-		call minpac#add('tpope/vim-unimpaired')
-		call minpac#add('airblade/vim-gitgutter')
-		call minpac#add('romainl/vim-cool')
-		call minpac#add('tpope/vim-surround')
-		call minpac#add('junegunn/rainbow_parentheses.vim')
-		call minpac#add('tpope/vim-repeat')
-		call minpac#add('wellle/targets.vim')
-		call minpac#add('lifepillar/vim-mucomplete')
+		call minpac#add('https://github.com/k-takata/minpac', {'type': 'opt'})
+		call minpac#add('https://github.com/tpope/vim-unimpaired')
+		call minpac#add('https://github.com/airblade/vim-gitgutter')
+		call minpac#add('https://github.com/romainl/vim-cool')
+		call minpac#add('https://github.com/tpope/vim-surround')
+		call minpac#add('https://github.com/junegunn/rainbow_parentheses.vim')
+		call minpac#add('https://github.com/tpope/vim-repeat')
+		call minpac#add('https://github.com/wellle/targets.vim')
+		call minpac#add('https://github.com/lifepillar/vim-mucomplete')
 endfunction
 
 command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
