@@ -35,7 +35,7 @@ local plugins = {
   { "https://repo.or.cz/vis-surround" },
   { "https://git.cepl.eu/cgit/vis/vis-jump" },
   { "https://git.cepl.eu/cgit/vis/vis-yank-highlight" },
-  { "https://github.com/jocap/vis-filetype-settings" },
+  { "https://codeberg.org/unrealapex/vis-filetype-settings" },
 }
 
 plug.init(plugins, true)
