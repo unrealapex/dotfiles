@@ -33,8 +33,8 @@ local plugins = {
   { "https://github.com/lutobler/vis-modelines" },
   { "https://github.com/e-zk/vis-shebang" },
   { "https://repo.or.cz/vis-surround" },
-  { "https://git.cepl.eu/cgit/vis/vis-jump" },
-  { "https://git.cepl.eu/cgit/vis/vis-yank-highlight" },
+  -- { "https://git.cepl.eu/cgit/vis/vis-jump" },
+  -- { "https://git.cepl.eu/cgit/vis/vis-yank-highlight" },
   { "https://codeberg.org/unrealapex/vis-filetype-settings" },
 }
 
