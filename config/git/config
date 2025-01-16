@@ -31,7 +31,7 @@
 	up = pull
 	undo=reset --soft HEAD^
 	s = !git rev-list --all | xargs git grep -F
-	l = log -1 HEAD --stat
+	l = log -1 HEAD --stat --patch
 	diff = diff --color-words
 [color "diff-highlight"]
 	oldNormal = red bold
