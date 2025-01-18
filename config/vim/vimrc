@@ -112,6 +112,8 @@ let g:netrw_nogx = 1
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#completion_delay = 100
 
+let g:highlightedyank_highlight_duration = 150
+
 " keybindings
 
 " change map leader to space
@@ -145,6 +147,7 @@ function! PackInit() abort
 		call minpac#add('https://github.com/tpope/vim-repeat')
 		call minpac#add('https://github.com/wellle/targets.vim')
 		call minpac#add('https://github.com/lifepillar/vim-mucomplete')
+		call minpac#add('https://github.com/machakann/vim-highlightedyank')
 endfunction
 
 command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
