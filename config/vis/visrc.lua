@@ -47,11 +47,6 @@ settings = {
 	    vis:command("set expandtab on")
 	    vis:command("set tabwidth 2")
     end,
-    -- vis does not have an sh filetype
-    -- sh = function()
-	    -- vis:command("set expandtab on")
-	    -- vis:command("set tabwidth 2")
-    -- end,
     lua = function()
 	    vis:command("set expandtab on")
 	    vis:command("set tabwidth 2")
