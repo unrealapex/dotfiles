@@ -24,7 +24,6 @@ fd
 fff
 ffmpeg
 figlet
-firefox
 fortune-mod
 fzy
 gamemode
@@ -42,6 +41,7 @@ htop
 hyperfine
 jq
 libnotify
+librewolf
 lua
 lua-language-server
 lynx
