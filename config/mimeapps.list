@@ -15,5 +15,6 @@ image/gif=img.desktop;
 video/x-matroska=video.desktop
 video/mp4=video.desktop
 inode/directory=file.desktop
+text/html=librewolf-bin.desktop
 x-scheme-handler/http=librewolf-bin.desktop
 x-scheme-handler/https=librewolf-bin.desktop
