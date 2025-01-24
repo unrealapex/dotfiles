@@ -3,6 +3,7 @@ https://lemmy.ml/feeds/front/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OD
 https://lemmy.ml/feeds/local.xml?sort=Active "Lemmy Local"
 https://lemmy.ml/feeds/all.xml?sort=Active "Lemmy All"
 @ news
+https://apnews.com/index.rss "ap news"
 https://www.eff.org/rss/updates.xml "eff"
 https://www.404media.co/rss "404media"
 https://news.ycombinator.com/rss "hackernews"
