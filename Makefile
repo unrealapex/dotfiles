@@ -21,7 +21,7 @@ link: create_dirs
 	ln -sf $(realpath share/themes)/* $(XDG_DATA_HOME)/themes
 
 clean:
-	find -L $(HOME) -maxdepth 0 -type l -delete
+	find $(XDG_CONFIG_HOME) $(HOME)/.local/bin $(HOME)/.gnupg $(XDG_DATA_HOME)/themes -type l -delete
 
 build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
 
