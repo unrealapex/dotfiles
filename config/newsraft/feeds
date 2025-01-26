@@ -4,7 +4,7 @@ https://lemmy.ml/feeds/local.xml?sort=Active "Lemmy Local"
 https://lemmy.ml/feeds/all.xml?sort=Active "Lemmy All"
 @ news
 https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15837362 "cnbc"
-https://apnews.com/index.rss "ap news"
+https://news.google.com/rss/search?q=when:24h+allinurl:apnews.com "ap news"
 https://www.eff.org/rss/updates.xml "eff"
 https://www.404media.co/rss "404media"
 https://news.ycombinator.com/rss "hackernews"
