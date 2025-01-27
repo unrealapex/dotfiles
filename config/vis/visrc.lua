@@ -35,6 +35,7 @@ local plugins = {
   -- { "https://git.cepl.eu/cgit/vis/vis-jump" },
   -- { "https://git.cepl.eu/cgit/vis/vis-yank-highlight" },
   { "https://codeberg.org/unrealapex/vis-filetype-settings" },
+  { "https://repo.or.cz/vis-quickfix" },
 }
 
 plug.init(plugins, true)
