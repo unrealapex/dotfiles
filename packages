@@ -29,7 +29,6 @@ fzy
 gamemode
 gimp
 git
-gnu-free-fonts
 graphicsmagick
 gst-plugins-bad
 gst-plugins-base
@@ -72,13 +71,11 @@ qemu
 redshift
 ripgrep
 shellcheck
-source-highlight
 sx
 texlive
 tor
 transmission
 tree
-ttf-liberation
 ufw
 unclutter
 unzip
