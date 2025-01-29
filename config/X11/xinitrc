@@ -44,12 +44,13 @@ done &
 
 redshift &
 
-mon1=HDMI1
-mon2=eDP1
+mon1=HDMI-1
+mon2=eDP-1
+rate=144.00
 
 if [ "$(xrandr -q | grep -c "$mon1 connected")" -eq 1 ]; then
   # TODO: set refresh rate
-  xrandr --output $mon1 --mode 2560x1440
+  xrandr --output $mon1 --mode 2560x1440 --rate $rate
   xrandr --output $mon2 --off
 else
   xrandr --output $mon2 --auto
