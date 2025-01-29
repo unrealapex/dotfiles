@@ -5,8 +5,8 @@
 export VISUAL="vis"
 export EDITOR="ed"
 export FCEDIT=$VISUAL
-export TERMINAL="st"
-export TERMINAL_PROG="st"
+export TERMINAL="foot"
+export TERMINAL_PROG="foot"
 export BROWSER="lynx"
 export PAGER="less"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -66,10 +66,20 @@ export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundle/config
 export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundle
 export MINETEST_USER_PATH="$XDG_DATA_HOME"/minetest
 
+export MOZ_ENABLE_WAYLAND=1
+export GDK_BACKEND="wayland"
+
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
 [ -t 0 ] && setterm --bfreq=0
-# NOTE: this does not work on bsd
-[ -t 0 ] && [ "$(tty)" = "/dev/tty1" ] && [ ! "$DISPLAY" ] && exec sx $XINITRC
+
+if [ -t 0 ] && [ "$(tty)" = "/dev/tty1" ]; then
+    printf 'start wayland? '
+    read answer
+    if [ "$answer" != "${answer#[Yy]}" ]; then
+      eval $(dbus-launch  --exit-with-session --sh-syntax)
+      exec status |  dwl
+   fi
+fi
 
 # vim: filetype=sh

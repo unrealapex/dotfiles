@@ -23,51 +23,40 @@ link: create_dirs
 clean:
 	find $(XDG_CONFIG_HOME) $(HOME)/.local/bin $(HOME)/.gnupg $(XDG_DATA_HOME)/themes -type l -delete
 
-build: /usr/local/bin/dwm /usr/local/bin/st /usr/local/bin/dmenu /usr/local/bin/slock
+build: /usr/local/bin/dwl /usr/local/bin/mew /usr/local/bin/wlock
 
-$(XDG_CONFIG_HOME)/dwm:
-	git clone https://codeberg.org/unrealapex/dwm $(XDG_CONFIG_HOME)/dwm
+$(XDG_CONFIG_HOME)/dwl:
+	git clone https://codeberg.org/unrealapex/dwl $(XDG_CONFIG_HOME)/dwl
 
-$(XDG_CONFIG_HOME)/dwm/dwm: $(wildcard $(XDG_CONFIG_HOME)/dwm/*.h) $(wildcard $(XDG_CONFIG_HOME)/dwm/*.c) | $(XDG_CONFIG_HOME)/dwm
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/dwm install
+$(XDG_CONFIG_HOME)/dwl/dwl: $(wildcard $(XDG_CONFIG_HOME)/dwl/*.h) $(wildcard $(XDG_CONFIG_HOME)/dwl/*.c) | $(XDG_CONFIG_HOME)/dwl
+	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/dwl install
 
-/usr/local/bin/dwm: $(XDG_CONFIG_HOME)/dwm/dwm
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/dwm clean install
+/usr/local/bin/dwl: $(XDG_CONFIG_HOME)/dwl/dwl
+	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/dwl clean install
 
-dwm: /usr/local/bin/dwm
+dwl: /usr/local/bin/dwl
 
-$(XDG_CONFIG_HOME)/st:
-	git clone https://codeberg.org/unrealapex/st $(XDG_CONFIG_HOME)/st
+$(XDG_CONFIG_HOME)/mew:
+	git clone https://codeberg.org/unrealapex/mew $(XDG_CONFIG_HOME)/mew
 
-$(XDG_CONFIG_HOME)/st/st: $(wildcard $(XDG_CONFIG_HOME)/st/*.h) $(wildcard $(XDG_CONFIG_HOME)/st/*.c) | $(XDG_CONFIG_HOME)/st
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/st install
+$(XDG_CONFIG_HOME)/mew/mew: $(wildcard $(XDG_CONFIG_HOME)/mew/*.h) $(wildcard $(XDG_CONFIG_HOME)/mew/*.c) | $(XDG_CONFIG_HOME)/mew
+	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/mew install
 
-/usr/local/bin/st: $(XDG_CONFIG_HOME)/st/st
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/st clean install
+/usr/local/bin/mew: $(XDG_CONFIG_HOME)/mew/mew
+	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/mew clean install
 
-st: /usr/local/bin/st
+mew: /usr/local/bin/mew
 
-$(XDG_CONFIG_HOME)/dmenu:
-	git clone https://codeberg.org/unrealapex/dmenu $(XDG_CONFIG_HOME)/dmenu
+$(XDG_CONFIG_HOME)/wlock:
+	git clone https://codeberg.org/unrealapex/wlock $(XDG_CONFIG_HOME)/wlock
 
-$(XDG_CONFIG_HOME)/dmenu/dmenu: $(wildcard $(XDG_CONFIG_HOME)/dmenu/*.h) $(wildcard $(XDG_CONFIG_HOME)/dmenu/*.c) | $(XDG_CONFIG_HOME)/dmenu
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/dmenu install
+$(XDG_CONFIG_HOME)/wlock/wlock: $(wildcard $(XDG_CONFIG_HOME)/wlock/*.h) $(wildcard $(XDG_CONFIG_HOME)/wlock/*.c) | $(XDG_CONFIG_HOME)/wlock
+	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/wlock install
 
-/usr/local/bin/dmenu: $(XDG_CONFIG_HOME)/dmenu/dmenu
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/dmenu clean install
+/usr/local/bin/wlock: $(XDG_CONFIG_HOME)/wlock/wlock
+	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/wlock clean install
 
-dmenu: /usr/local/bin/dmenu
-
-$(XDG_CONFIG_HOME)/slock:
-	git clone https://codeberg.org/unrealapex/slock $(XDG_CONFIG_HOME)/slock
-
-$(XDG_CONFIG_HOME)/slock/slock: $(wildcard $(XDG_CONFIG_HOME)/slock/*.h) $(wildcard $(XDG_CONFIG_HOME)/slock/*.c) | $(XDG_CONFIG_HOME)/slock
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/slock install
-
-/usr/local/bin/slock: $(XDG_CONFIG_HOME)/slock/slock
-	$(ROOTCOMMAND) $(MAKE) -C $(XDG_CONFIG_HOME)/slock clean install
-
-slock: /usr/local/bin/slock
+wlock: /usr/local/bin/wlock
 
 secrets: $(XDG_CONFIG_HOME)/git/config.local
 
@@ -77,5 +66,5 @@ $(XDG_CONFIG_HOME)/git/config.local:
 done:
 	@echo "Makefile targets completed!"
 
-.PHONY: all create_dirs link clean build dwm st dmenu slock done
+.PHONY: all create_dirs link clean build dwl mew wlock done
 

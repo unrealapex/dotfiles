@@ -1,9 +1,9 @@
 🌺 dotfiles
 ===========
 
-    wm: dwm
-    launcher: dmenu
-    terminal: st
+    wm: dwl
+    launcher: mew
+    terminal: foot
     shell: yash
     editor: vis
     notifications: dunst
