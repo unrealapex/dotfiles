@@ -71,15 +71,12 @@ export GDK_BACKEND="wayland"
 
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
-[ -t 0 ] && setterm --bfreq=0
-
 if [ -t 0 ] && [ "$(tty)" = "/dev/tty1" ]; then
-    printf 'start wayland? '
-    read answer
-    if [ "$answer" != "${answer#[Yy]}" ]; then
-      eval $(dbus-launch  --exit-with-session --sh-syntax)
-      exec status |  dwl
-   fi
+#     printf 'start wayland? '
+#     read answer
+#     if [ "$answer" != "${answer#[Yy]}" ]; then
+      status |  dwl
+#   fi
 fi
 
 # vim: filetype=sh
