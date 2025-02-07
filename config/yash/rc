@@ -22,8 +22,8 @@ HISTFILE="$XDG_STATE_HOME"/yash/history
 HISTSIZE=2000
 HISTRMDUP=1
 
-# FIXME: patch this
-! [ -d $XDG_STATE_HOME/yash ] && mkdir -p $XDG_STATE_HOME/yash
+# create HISTFILE parent directory if missing
+! [ -d "${HISTFILE%/*}" ] && mkdir -p "${HISTFILE%/*}"
 
 PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin"
 export PATH
