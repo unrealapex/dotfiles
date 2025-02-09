@@ -15,7 +15,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 export MANROFFOPT="-c"
 export MANPAGER=$PAGER
-export LESS="--ignore-case --RAW-CONTROL-CHARS"
+export LESS="--ignore-case --RAW-CONTROL-CHARS --no-init"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
 export FFF_FAV1="$HOME/Downloads"
 export FFF_FAV2="$HOME/Documents"
