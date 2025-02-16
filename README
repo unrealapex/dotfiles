@@ -33,7 +33,7 @@ skeleton files for programs that have secrets(git) are in `secrets`.
 
 ^.. _wallpaper_link_ https://wallhaven.cc/w/gpmv73
 
-x11 color palette
+color palette
     * {
       --bg-color: "darkgray";
       --fg-color: "white";
