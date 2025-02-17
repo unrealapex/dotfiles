@@ -11,7 +11,6 @@ bridge-utils
 catgirl
 clang
 cmus
-cowsay
 dash
 diff-so-fancy
 dnsmasq
@@ -25,7 +24,6 @@ fff
 ffmpeg
 figlet
 foot
-fortune-mod
 fzy
 gamemode
 gimp
@@ -35,7 +33,6 @@ grim
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
-gst-plugins-libav
 gst-plugins-ugly
 htop
 hyperfine
@@ -48,7 +45,6 @@ lua-language-server
 lynx
 man-pages
 mesa
-mesa-utils
 mozc
 mpv
 mpv-mpris
@@ -81,7 +77,6 @@ vde2
 vim
 virt-manager
 virt-viewer
-vis
 vscode-langservers-extracted
 wayland
 wbg
