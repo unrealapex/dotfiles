@@ -1,0 +1,17 @@
+set number
+set autoindent
+set noflash
+set ruler
+set showmode
+set escapetime=2
+set extended
+set searchincr
+set cedit=
+set filec=\	
+set wrapscan
+set iclower
+set windowname
+set path=.
+set shiftwidth=4
+set tabstop=4
+set wrapmargin=4
