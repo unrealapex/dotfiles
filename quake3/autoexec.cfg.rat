@@ -1,0 +1,56 @@
+# my config <3
+seta name "^6blossom"
+seta model "ayumi/ayumi"
+bind PAUSE "pause"
+bind INS "unpause"
+bind v "taunt flame"
+bind f "+ping"
+bind q "weapon 5"
+bind e "weapon 6"
+bind r "weapon 7"
+bind z "weapon 8"
+bind MOUSE2 "+moveup"
+bind SHIFT "+zoom"
+bind END "kill"
+
+seta cg_drawCrosshair "9"
+
+seta cg_fov "120"
+seta cg_zoomAnim "0"
+seta cg_rgSound "1"
+# seta cg_rocketStyle "2"
+seta cg_ratStatusbar "0"
+
+seta com_maxfps "250"
+
+seta cg_drawSpeed "1"
+seta cg_drawStatus "1"
+
+seta cg_drawFPS "1"
+seta cg_drawFollowPosition "1"
+seta cg_drawFriend "1"
+seta cg_drawGun "0"
+seta cg_weaponBarStyle 1
+# seta cg_weaponBarStyle 8
+
+seta r_fullscreen "1"
+seta r_dynamiclight "0"
+
+seta cg_teamColor "pink"
+seta cg_enemyColor "green"
+
+seta cg_crosshairColorBlue "0.825000"
+seta cg_crosshairColorGreen "0.450000"
+seta cg_crosshairColorRed "1.0"
+seta cg_crosshairHealth "0"
+seta cg_crosshairHit "0"
+seta cg_crosshairHitColor "H0 1.0 1.0"
+seta cg_crosshairHitStyle "2"
+seta cg_hitsound "1"
+
+seta ui_browserGameType "0"
+seta ui_browserMaster "1"
+seta ui_browserOnlyHumans "0"
+seta ui_browserShowEmpty "0"
+seta ui_browserShowFull "0"
+seta ui_browserSortKey "4"
