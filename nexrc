@@ -3,7 +3,7 @@ set autoindent
 set noflash
 set ruler
 set showmode
-set escapetime=2
+set escapetime=1
 set extended
 set searchincr
 set cedit=
