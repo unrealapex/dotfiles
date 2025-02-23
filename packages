@@ -89,6 +89,7 @@ wl-clipboard
 wl-roots
 wlr-randr
 xf86-input-libinput
+xorg-xkill
 yash
 yt-dlp
 zathura
