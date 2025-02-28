@@ -13,7 +13,10 @@
 [merge]
 	conflictstyle = diff3
 [diff]
-	colorMoved = default
+        algorithm = histogram
+	folorMoved = default
+	mnemonicPrefix = true
+	renames = true
 [push]
 	autoSetupRemote = true
 [gpg]
