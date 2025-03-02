@@ -110,7 +110,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias j='jobs -l'
 alias h='fc -l'
-alias r='fc -l | fzy | cut -f 2- - | sh'
+alias r='fc -l | fnf | cut -f 2- - | sh'
 alias sudo='doas'
 alias bc='bc --mathlib --quiet'
 alias pidgin='pidgin --config="$XDG_DATA_HOME"/purple'
@@ -178,16 +178,16 @@ alias later='cat ~/aarons-space/tasks.md | tail -n $(($(wc -l ~/aarons-space/tas
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-  dir=$(fd -H -t d | fzy)
+  dir=$(fd -H -t d | fnf)
   [ -d "$dir" ] && cd "$dir"
 }
 
 t() {
-  fd -H -t f -t d | fzy
+  fd -H -t f -t d | fnf
 }
 
 ff() {
-  files=$(fd -H | fzy)
+  files=$(fd -H | fnf)
   [ -n "$files" ] && "$VISUAL" "$files"
 }
 
