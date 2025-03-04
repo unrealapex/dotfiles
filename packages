@@ -14,7 +14,6 @@ cmus
 dash
 diff-so-fancy
 dnsmasq
-dunst
 espeak-ng
 fastfetch
 fcitx5
@@ -44,6 +43,7 @@ librewolf
 lua
 lua-language-server
 lynx
+mako
 man-pages
 mesa
 mozc

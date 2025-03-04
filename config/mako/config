@@ -1,0 +1,16 @@
+background-color=#0d0d0dff
+text-color=#d9d0d0ff
+border-color=#b03060ff
+border-size=4
+width=450
+height=200
+padding=12
+layer=overlay
+default-timeout=12000
+outer-margin=20
+icons=0
+# max-visible=1
+
+[app-name=wp-vol]
+history=0
+default-timeout=1200
