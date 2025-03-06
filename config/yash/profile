@@ -72,12 +72,43 @@ DVTM_TERM=dvtm-256color
 
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
-if [ -t 0 ] && [ "$(tty)" = "/dev/tty1" ]; then
-#     printf 'start wayland? '
-#     read answer
-#     if [ "$answer" != "${answer#[Yy]}" ]; then
+isfirsttty() {
+  [ -t 0 ] || return 1
+  if [ "$(uname -s)" = "Linux" ] && [ "$(tty)" = "/dev/tty1" ]; then
+    return 0
+  # bsd ttys start from 0 instead of 1
+  elif [ "$(uname -s)" = "FreeBSD" ] && [ "$(tty)" = "/dev/ttyv0" ] ; then
+    return 0
+  elif [ "$(uname -s)" = "OpenBSD" ] && [ "$(tty)" = "/dev/ttyC0" ] ; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+
+if isfirsttty; then
+  printf 'start:\n1: wayland\n2: dvtm\n0: console\nWhich do you want to select? (press 0 to enter the console) [0-2]: '
+  read answer
+
+  case "$answer" in
+    1)
       status |  dwl
-#   fi
+      ;;
+    2)
+      doas gpm -m /dev/input/mice -t imps2
+      dvtm-status
+      ;;
+    0)
+      :
+      ;;
+    "")
+      :
+      ;;
+    *)
+      printf "%s\n" "no valid option selected, entering console"
+      ;;
+  esac
 fi
 
 # vim: filetype=sh
