@@ -47,6 +47,7 @@ set splitright
 set tabpagemax=50
 set tabstop=4
 set tags=./tags,tags;
+set textwidth=73
 set title
 set ttimeout
 set ttimeoutlen=5
