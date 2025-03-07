@@ -35,7 +35,6 @@ set omnifunc=syntaxcomplete#Complete
 set packpath^=$XDG_DATA_HOME/vim
 set path+=.,,
 set pumheight=12
-set relativenumber
 set rtp+=$XDG_DATA_HOME/vim
 set ruler
 set scrolloff=8
