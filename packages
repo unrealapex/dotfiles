@@ -4,7 +4,6 @@ anki
 asciinema
 aspell
 aspell-en
-bash-language-server
 bc
 beets
 bridge-utils
@@ -43,7 +42,6 @@ kanshi
 libnotify
 librewolf
 lua
-lua-language-server
 lynx
 mako
 man-pages
