@@ -26,6 +26,7 @@
 	verbose = true
 [tag]
 	gpgsign = true
+	sort = version:refname
 [alias]
 	ci = commit
 	st = status
