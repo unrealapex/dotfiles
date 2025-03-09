@@ -17,6 +17,7 @@
 	folorMoved = default
 	mnemonicPrefix = true
 	renames = true
+	colorMoved = plain
 [push]
 	autoSetupRemote = true
 [gpg]
