@@ -62,5 +62,9 @@
 	prune = true
 	pruneTags = true
 	all = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
 
 # vim: filetype=gitconfig
