@@ -20,6 +20,7 @@
 	colorMoved = plain
 [push]
 	autoSetupRemote = true
+	followTags = true
 [gpg]
 	format = ssh
 [commit]
