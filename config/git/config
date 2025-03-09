@@ -56,5 +56,7 @@
 [blame]
 	date = relative
 	coloring = highlightRecent
+[column]
+	ui = auto
 
 # vim: filetype=gitconfig
