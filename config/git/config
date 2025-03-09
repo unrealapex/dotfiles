@@ -9,7 +9,7 @@
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [pull]
-	rebase = false
+	rebase = true
 [merge]
 	conflictstyle = diff3
 [diff]
