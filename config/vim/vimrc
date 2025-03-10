@@ -148,6 +148,7 @@ function! PackInit() abort
 		call minpac#add('https://github.com/wellle/targets.vim')
 		call minpac#add('https://github.com/lifepillar/vim-mucomplete')
 		call minpac#add('https://github.com/machakann/vim-highlightedyank')
+		call minpac#add('https://github.com/ludovicchabant/vim-gutentags')
 endfunction
 
 command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
