@@ -5,7 +5,7 @@
     launcher: mew
     terminal: foot
     shell: yash
-    editor: vi
+    editor: vim
     notifications: mako
 
 
