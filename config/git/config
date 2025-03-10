@@ -6,6 +6,7 @@
 	credentialStore = cache
 [core]
 	pager =  diff-so-fancy | less -RFX
+	excludesfile = ~/.config/git/gitignore
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [pull]
