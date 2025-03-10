@@ -154,10 +154,7 @@ command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
 command! PackClean  source $MYVIMRC | call PackInit() | call minpac#clean()
 command! PackStatus packadd minpac | call minpac#status()
 
-augroup rainbow_parens
-		autocmd!
-       autocmd Syntax * RainbowParentheses
-augroup end
+autocmd Syntax * RainbowParentheses
 
 function! FzyCommand(choice_command, vim_command)
   try
