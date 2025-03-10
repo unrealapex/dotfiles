@@ -156,7 +156,7 @@ command! PackStatus packadd minpac | call minpac#status()
 
 augroup rainbow_parens
 		autocmd!
-		autocmd BufReadPost * RainbowParentheses
+       autocmd Syntax * RainbowParentheses
 augroup end
 
 function! FzyCommand(choice_command, vim_command)
