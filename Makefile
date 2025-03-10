@@ -11,11 +11,10 @@ xdg-user-dirs:
 	mkdir -p $(HOME)/Desktop $(HOME)/Documents $(HOME)/Downloads $(HOME)/Music $(HOME)/Pictures $(HOME)/Public $(HOME)/Templates $(HOME)/Videos
 
 create_dirs: xdg-user-dirs
-	mkdir -p $(HOME)/.local/bin $(XDG_DATA_HOME)/applications $(XDG_DATA_HOME)/themes $(XDG_DATA_HOME)/abook $(HOME)/projects $(HOME)/Pictures/Webcam $(HOME)/Pictures/Screenshots
+	mkdir -p $(XDG_DATA_HOME)/applications $(XDG_DATA_HOME)/themes $(XDG_DATA_HOME)/abook $(HOME)/projects $(HOME)/Pictures/Webcam $(HOME)/Pictures/Screenshots
 
 link: create_dirs
 	ln -sf $(realpath config)/* $(XDG_CONFIG_HOME)
-	ln -sf $(realpath bin)/* $(HOME)/.local/bin
 	ln -sf $(realpath gnupg)/* $(HOME)/.gnupg
 	ln -sf $(realpath share/applications)/* $(XDG_DATA_HOME)/applications
 	ln -sf $(realpath share/themes)/* $(XDG_DATA_HOME)/themes
