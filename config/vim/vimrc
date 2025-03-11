@@ -114,6 +114,8 @@ let g:mucomplete#completion_delay = 100
 
 let g:highlightedyank_highlight_duration = 150
 
+let g:gutentags_cache_dir = expand('$XDG_DATA_HOME') . '/vim/tags'
+
 " keybindings
 
 " change map leader to space
