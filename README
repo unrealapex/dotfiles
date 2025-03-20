@@ -29,7 +29,7 @@ tools which align well with the unix philosophy.
 window decorations should be turned off for gui apps that have the option. this
 can be done in most apps by enabling the "use system titlebars" option.
 
-skeleton files for programs that have secrets(git) are in `secrets`.
+skeleton files for programs that have secrets(git) are in 'secrets'.
 
 ^.. _wallpaper_link_ https://wallhaven.cc/w/gpmv73
 
