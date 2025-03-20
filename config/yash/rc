@@ -35,13 +35,6 @@ bindkey --vi-command '\^L' clear-and-redraw-all
 bindkey --emacs '\^[[1;5D' backward-emacsword
 bindkey --emacs '\^[[1;5C' forward-emacsword
 
-# TODO: add vi style completion bindings
-# bindkey --emacs 'h' complete-prev-column
-# bindkey --emacs 'j' complete-next-candidate
-# bindkey --emacs 'k' complete-prev-candidate
-# bindkey --emacs 'l' complete-next-column
-
-
 # avoid removing/overwriting existing files by accident
 cp() if [ -t 0 ]; then command cp -iv "$@"; else command cp "$@"; fi
 mv() if [ -t 0 ]; then command mv -iv "$@"; else command mv "$@"; fi
