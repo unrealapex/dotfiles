@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=File Manager
-Exec=/usr/local/bin/st -e fff %u
+Exec=/usr/bin/foot fff %u
