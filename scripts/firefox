@@ -39,5 +39,4 @@ user_pref("general.smoothScroll", false);
 ' >> "$temp_file"
 
 # move user.js to default firefox profile
-mv "$temp_file" "$profile_path"
-
+cp "$temp_file" "$profile_path"/user.js
