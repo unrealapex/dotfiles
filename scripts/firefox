@@ -7,7 +7,8 @@ if [ ! -d "$HOME/.mozilla/" ]; then
     wait
 fi
 
-profile_path=$(find ~/.mozilla/firefox/ -type d -name "*.default-release")
+default_profile=$(grep "Default=.*\.default*" "$HOME/.mozilla/firefox/profiles.ini" | cut -d"=" -f2)
+profile_path=$(find ~/.mozilla/firefox/ -type d -name $default_profile)
 temp_file=$(mktemp)
 
 # fetch betterfox user.js
