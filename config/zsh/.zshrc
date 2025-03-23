@@ -99,38 +99,38 @@ rm() if [ -t 0 ]; then rm -iv "$@"; else rm "$@"; fi
 
 # enable color support of ls and also add handy aliases
 if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
-  alias ls='ls --color=auto'
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
+  alias ls='ls -G'
+  alias grep='grep -G'
+  alias fgrep='fgrep -G'
+  alias egrep='egrep -G'
   alias tree='tree -C'
+  alias ip='ip -color=auto'
 fi
 
 
 # some more ls aliases
 alias ll='ls -Ahl1'
 alias la='ls -A'
-alias l='ls -C'
+alias l='ls -CF'
 alias j='jobs -l'
 alias h='fc -l'
+alias r='fc -l | fnf | cut -f 2- - | sh'
 alias sudo='doas'
-alias pls='sudo $(history -p !!)'
-alias uwu='echo uwu'
 alias bc='bc --mathlib --quiet'
 alias pidgin='pidgin --config="$XDG_DATA_HOME"/purple'
 alias mbsync='mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias dosbox='dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf'
 alias abook='abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook'
-alias ytflac='yt-dlp -x --audio-format flac --audio-quality 10'
-alias sxiv="nsxiv"
-alias mutt="neomutt"
+alias ytflac='yt-dlp -xq --audio-format flac --audio-quality 10'
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
+alias cam="mpv av://v4l2:/dev/video0"
 alias weather="curl wttr.in"
 alias d='dirs -v'
 # handle programs that incorrectly read EDITOR instead of VISUAL
 alias neomutt="EDITOR=$VISUAL neomutt"
+alias pass="EDITOR=$VISUAL pass"
 
 diff() {
   if [ -t 0 ]; then
@@ -168,16 +168,16 @@ alias glow='pandoc -f commonmark_x $@ -t ansi'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-  dir=$(fd -H -t d | fzy)
+  dir=$(fd -H -t d | fnf)
   [ -d "$dir" ] && cd "$dir"
 }
 
 t() {
-  fd -H -t f -t d | fzy
+  fd -H -t f -t d | fnf
 }
 
 ff() {
-  files=$(fd -H | fzy)
+  files=$(fd -H | fnf)
   [ -n "$files" ] && "$VISUAL" "$files"
 }
 
