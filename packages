@@ -11,7 +11,6 @@ catgirl
 clang
 cmus
 ctags
-dash
 diff-so-fancy
 dnsmasq
 espeak-ng
@@ -68,7 +67,6 @@ qemu
 ripgrep
 shellcheck
 slurp
-texlive
 tor
 transmission
 tree
@@ -78,7 +76,6 @@ vde2
 vim
 virt-manager
 virt-viewer
-vscode-langservers-extracted
 wayland
 wbg
 wget
