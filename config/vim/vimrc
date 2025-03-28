@@ -153,6 +153,7 @@ function! PackInit() abort
 		call minpac#add('https://github.com/lifepillar/vim-mucomplete')
 		call minpac#add('https://github.com/machakann/vim-highlightedyank')
 		call minpac#add('https://github.com/ludovicchabant/vim-gutentags')
+		call minpac#add('https://github.com/preservim/tagbar')
 		call minpac#add('https://github.com/dense-analysis/ale')
 endfunction
 
@@ -164,6 +165,8 @@ autocmd Syntax * RainbowParentheses
 
 nnoremap <silent> [d <Plug>(ale_previous_wrap)
 nnoremap <silent> ]d <Plug>(ale_next_wrap)
+
+nnoremap <leader>o :TagbarToggle<CR>
 
 function! FzyCommand(choice_command, vim_command)
   try
