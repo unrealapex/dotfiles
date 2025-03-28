@@ -31,6 +31,7 @@ set nofoldenable
 set novisualbell
 set nowrap
 set number
+set numberwidth=8
 set omnifunc=syntaxcomplete#Complete
 set packpath^=$XDG_DATA_HOME/vim
 set path+=.,,
