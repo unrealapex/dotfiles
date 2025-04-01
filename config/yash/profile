@@ -103,7 +103,7 @@ if isfirsttty; then
       :
       ;;
     "")
-      :
+      status |  dwl
       ;;
     *)
       printf "%s\n" "no valid option selected, entering console"
