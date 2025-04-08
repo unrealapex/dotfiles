@@ -62,7 +62,7 @@ wlock: /usr/local/bin/wlock
 secrets: $(XDG_CONFIG_HOME)/git/config.local
 
 $(XDG_CONFIG_HOME)/git/config.local:
-	cp -n $(HOME)/dotfiles/secrets/git.local $(XDG_CONFIG_HOME)/git/config.local
+	cp -n $(HOME)/dotfiles/secrets/gitconfig.local $(XDG_CONFIG_HOME)/git/config.local
 
 done:
 	@echo "Makefile targets completed!"
