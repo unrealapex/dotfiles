@@ -9,7 +9,4 @@ config/cmus/command-history
 config/cmus/lib.pl
 config/cmus/playlists
 config/cmus/search-history
-config/vim/autoload
-config/vim/plug
-config/vis/vis-plug
 config/zsh/.zsh_plugins.zsh
