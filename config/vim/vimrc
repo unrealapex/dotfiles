@@ -155,6 +155,7 @@ function! PackInit() abort
 		call minpac#add('https://github.com/ludovicchabant/vim-gutentags')
 		call minpac#add('https://github.com/preservim/tagbar')
 		call minpac#add('https://github.com/dense-analysis/ale')
+		" TODO: configure snippets with omnicomplete
 endfunction
 
 command! PackUpdate source $MYVIMRC | call PackInit() | call minpac#update()
