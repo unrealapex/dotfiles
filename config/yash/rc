@@ -146,7 +146,9 @@ alias f='fff'
 # FIXME: this doesn't work for some reason
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
-alias glow='pandoc -f commonmark_x $@ -t ansi'
+glow() {
+	smu "$1" | lynx -stdin -dump
+}
 
 # simple markdown planner
 # 
