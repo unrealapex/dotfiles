@@ -25,6 +25,7 @@ vim.opt.incsearch = true
 vim.opt.laststatus = 1
 vim.opt.magic = true
 vim.opt.number = true
+vim.opt.numberwidth = 8
 -- basic completion
 vim.opt.omnifunc = "syntaxcomplete#Complete"
 vim.opt.path:append(".,**")
