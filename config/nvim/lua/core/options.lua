@@ -30,7 +30,6 @@ vim.opt.numberwidth = 8
 vim.opt.omnifunc = "syntaxcomplete#Complete"
 vim.opt.path:append(".,**")
 vim.opt.pumheight = 12
-vim.opt.relativenumber = true
 vim.opt.ruler = true
 vim.opt.scrolloff = 8
 vim.opt.showmode = true
