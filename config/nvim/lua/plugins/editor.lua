@@ -163,4 +163,12 @@ return {
       })
     end,
   },
+  {
+    "stevearc/aerial.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    config = true,
+    keys = {
+      { "<leader>o", "<cmd>AerialToggle<cr>", desc = "Aerial (Symbols)" },
+    },
+  },
 }
