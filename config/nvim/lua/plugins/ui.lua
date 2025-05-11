@@ -17,6 +17,11 @@ return {
       end
     end,
   },
+  -- icons
+  {
+    "nvim-tree/nvim-web-devicons",
+    config = true,
+  },
   -- zen mode
   {
     "folke/zen-mode.nvim",
