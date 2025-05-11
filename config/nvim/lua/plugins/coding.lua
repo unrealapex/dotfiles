@@ -4,6 +4,8 @@ return {
 
   {
     "echasnovski/mini.completion",
+    -- TODO: configure devicons with mini.completion
+    -- dependencies = "nvim-tree/nvim-web-devicons",
     event = "InsertEnter",
     opts = {
       lsp_completion = {
