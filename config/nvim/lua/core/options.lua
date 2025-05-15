@@ -55,7 +55,8 @@ vim.opt.wrap = false
 
 -- syntax highlighting
 vim.cmd.syntax("on")
-
+vim.cmd.colorscheme("vim")
+vim.cmd.highlight({"clear", "SignColumn"})
 vim.cmd.highlight({"normal", "guibg=NONE"})
 
 --globals

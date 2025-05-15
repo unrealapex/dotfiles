@@ -63,3 +63,9 @@ vim.api.nvim_create_autocmd("CursorMoved", {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  group = vim.api.nvim_create_augroup("colorscheme_tweak", { clear = true }),
+  callback = function()
+  end,
+})
