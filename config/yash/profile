@@ -70,6 +70,7 @@ export GDK_BACKEND="wayland"
 
 DVTM_TERM=dvtm-256color
 
+# TODO: figure out why keychain isn't automatically managing keys
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
 ly() {
