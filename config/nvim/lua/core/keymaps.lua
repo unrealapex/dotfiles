@@ -7,22 +7,6 @@ vim.keymap.set("n", "<leader>cd", function()
   vim.notify(vim.fn.getcwd())
 end)
 
--- vanilla buffer switcher
--- vim.keymap.set('n', '<leader><leader>', ':set nomore <Bar> echo "Open buffers:" <Bar> :buffers <Bar> :set more <CR>:b<Space>')
-
--- find and replace on current selection
--- written in lua
--- vimscript solution: https://stackoverflow.com/a/6171215/14111707
-
--- get contents of visual selection
--- handle unpack deprecation
-table.unpack = table.unpack or unpack
-function get_visual()
-  local _, ls, cs = table.unpack(vim.fn.getpos("v"))
-  local _, le, ce = table.unpack(vim.fn.getpos("."))
-  return vim.api.nvim_buf_get_text(0, ls - 1, cs - 1, le - 1, ce, {})
-end
-
 -- buffer stuff
 -- create a new buffer
 vim.keymap.set("n", "<leader>n", ":enew<CR>")
