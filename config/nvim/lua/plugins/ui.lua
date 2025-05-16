@@ -20,6 +20,8 @@ return {
   -- icons
   {
     "nvim-tree/nvim-web-devicons",
+    -- disable icons if in the console
+    cond = vim.env.DISPLAY ~= nil,
     config = true,
   },
   -- zen mode
