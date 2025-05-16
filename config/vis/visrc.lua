@@ -76,7 +76,6 @@ vis.events.subscribe(
   function(win) -- luacheck: no unused args
     -- Your per window configuration options e.g.
     vis:command("set number")
-    vis:command("set relativenumbers")
     vis:command("set autoindent")
     vis:command("set tabwidth 4")
     vis:command("set ignorecase")
