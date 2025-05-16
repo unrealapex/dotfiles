@@ -4,13 +4,11 @@ vim.opt.backspace = "indent,eol,start"
 vim.opt.backupdir = vim.fn.stdpath("state") .. "/backup"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
--- store all swap files in one directory
 vim.opt.directory = vim.fn.stdpath("state") .. "/swap"
 -- disable annoying error bell
 vim.opt.errorbells = false
 vim.opt.expandtab = true
 vim.opt.formatoptions = "jcroqlnt"
--- enable folding
 vim.opt.foldenable = false
 vim.opt.foldmethod = "indent"
 vim.opt.grepformat = "%f:%l:%c:%m"
@@ -18,15 +16,12 @@ vim.opt.grepprg = "rg --vimgrep"
 vim.opt.guicursor = ""
 vim.opt.hidden = true
 vim.opt.history = 500
--- ignore case unless explicitly stated
 vim.opt.ignorecase = true
--- incremental search
 vim.opt.incsearch = true
 vim.opt.laststatus = 1
 vim.opt.magic = true
 vim.opt.number = true
 vim.opt.numberwidth = 8
--- basic completion
 vim.opt.omnifunc = "syntaxcomplete#Complete"
 vim.opt.path:append(".,**")
 vim.opt.pumheight = 12
@@ -43,7 +38,6 @@ vim.opt.tabstop = 4
 vim.opt.termguicolors = false
 vim.opt.textwidth = 73
 vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
--- persistent undo tree
 vim.opt.undofile = true
 vim.opt.undolevels = 500
 vim.opt.updatetime = 200
@@ -52,7 +46,6 @@ vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
 vim.opt.wrap = false
 
--- syntax highlighting
 vim.cmd.syntax("on")
 vim.cmd.colorscheme("vim")
 vim.cmd.highlight({"clear", "SignColumn"})
