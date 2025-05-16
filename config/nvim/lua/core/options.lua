@@ -42,7 +42,6 @@ vim.opt.statusline = "%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
 vim.opt.tabstop = 4
 vim.opt.termguicolors = false
 vim.opt.textwidth = 73
-vim.opt.title = true
 vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
 -- persistent undo tree
 vim.opt.undofile = true
