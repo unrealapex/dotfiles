@@ -121,8 +121,8 @@ alias d='dirs -v'
 alias neomutt="EDITOR=$VISUAL neomutt"
 alias pass="EDITOR=$VISUAL pass"
 
-[ $(command -v vim) ] && alias vi='vim'
-[ $(command -v nvim) ] && alias vi='nvim'
+[ $(command -v vim) ] && VISUAL=vim && alias vi='vim'
+[ $(command -v nvim) ] && VISUAL=nvim && alias vi='nvim'
 
 diff() {
   if [ -t 0 ]; then
