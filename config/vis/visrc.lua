@@ -38,6 +38,7 @@ local plugins = {
   { "https://repo.or.cz/vis-quickfix" },
 }
 
+plug.path(os.getenv('XDG_DATA_HOME') .. "/vis-plug")
 plug.init(plugins, true)
 
 
