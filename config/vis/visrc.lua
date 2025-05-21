@@ -46,15 +46,12 @@ plug.plugins.lspc.menu_cmd = "vis-menu"
 
 settings = {
     bash  = function()
-	    vis:command("set expandtab on")
 	    vis:command("set tabwidth 2")
     end,
     lua = function()
-	    vis:command("set expandtab on")
 	    vis:command("set tabwidth 2")
     end,
     markdown = function()
-	    vis:command("set expandtab on")
 	    vis:command("set tabwidth 4")
     end,
 }
@@ -79,6 +76,7 @@ vis.events.subscribe(
     vis:command("set autoindent")
     vis:command("set cursorline")
     vis:command("set escdelay 1")
+    vis:command("set expandtab on")
     vis:command("set ignorecase")
     vis:command("set number")
     vis:command("set tabwidth 4")
