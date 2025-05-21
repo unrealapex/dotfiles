@@ -74,7 +74,7 @@ DVTM_TERM=dvtm-256color
 eval "$(keychain --eval --ignore-missing --nogui --agents ssh,gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
 ly() {
-  [ -z $DISPLAY ] || return 1
+  [ -n "$DISPLAY" ] && return 1
   printf 'start:\n1: wayland\n2: dvtm\n0: console\nWhich do you want to select? (press 0 to enter the console) [0-2]: '
   read answer
 
