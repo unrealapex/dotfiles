@@ -2,7 +2,8 @@
 # ~/.config/yash/profile
 #
 
-export VISUAL="vi"
+# vis is named vise on BSD systems due to naming conflicts with another command
+export VISUAL="vise"
 export EDITOR="ed"
 export FCEDIT=$VISUAL
 export TERMINAL="foot"

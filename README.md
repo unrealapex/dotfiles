@@ -5,7 +5,7 @@ wm: dwl
 launcher: mew
 terminal: foot
 shell: yash
-editor: vi
+editor: vis
 notifications: mako
 ```
 
