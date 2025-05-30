@@ -85,6 +85,8 @@ ly() {
       ;;
     2)
       doas gpm -m /dev/input/mice -t imps2
+      # disable very loud console beep
+      doas rmmod pcspkr
       dvtm-status
       ;;
     0)
