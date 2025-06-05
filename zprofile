@@ -4,7 +4,7 @@
 
 export ZDOTDIR=$HOME/.config/zsh
 
-export VISUAL="vim"
+export VISUAL="vise"
 export EDITOR="ed"
 export FCEDIT=$VISUAL
 export TERMINAL="foot"
