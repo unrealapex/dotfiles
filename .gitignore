@@ -10,3 +10,4 @@ config/cmus/lib.pl
 config/cmus/playlists
 config/cmus/search-history
 config/zsh/.zsh_plugins.zsh
+config/vis/vis-plug
