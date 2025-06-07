@@ -19,7 +19,6 @@ link: create_dirs
 	ln -sf $(realpath share/applications)/* $(XDG_DATA_HOME)/applications
 	ln -sf $(realpath share/themes)/* $(XDG_DATA_HOME)/themes
 	ln -sf $(realpath .)/nexrc $(HOME)/.nexrc
-	ln -sf $(realpath .)/zprofile $(HOME)/.zprofile
 
 clean:
 	find $(XDG_CONFIG_HOME) $(HOME)/.local/bin $(HOME)/.gnupg $(XDG_DATA_HOME)/themes -type l -delete
