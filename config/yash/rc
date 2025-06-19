@@ -145,7 +145,7 @@ alias f='fff'
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
 glow() {
-	smu "$1" | lynx -stdin -dump
+	smu "$1" | lynx -stdin
 }
 
 # simple markdown planner
