@@ -32,8 +32,8 @@ local plugins = {
   { "https://gitlab.com/muhq/vis-lspc", alias = "lspc" },
   { "https://github.com/lutobler/vis-modelines" },
   { "https://repo.or.cz/vis-surround" },
-  -- { "https://git.cepl.eu/cgit/vis/vis-jump" },
-  -- { "https://git.cepl.eu/cgit/vis/vis-yank-highlight" },
+  { "https://git.sr.ht/~mcepl/vis-jump" },
+  -- { "https://git.sr.ht/~mcepl/vis-yank-highlight" },
   { "https://codeberg.org/unrealapex/vis-filetype-settings" },
   { "https://repo.or.cz/vis-quickfix" },
 }
