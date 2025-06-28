@@ -6,6 +6,7 @@ bash-language-server
 bc
 beets
 brightnessctl
+catgirl
 clangd
 cmus
 diff-so-fancy
@@ -50,7 +51,6 @@ pinentry
 playerctl
 pulsemixer
 ripgrep
-senpai
 shellcheck
 slurp
 tor
