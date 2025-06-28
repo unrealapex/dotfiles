@@ -1,11 +1,15 @@
 .POSIX:
 
-all: link build secrets done
+
+# handle XDG_CONFIG_HOME and XDG_DATA_HOME not being set
+XDG_CONFIG_HOME ?= ~/.config
+XDG_DATA_HOME ?= ~/.local/share
+
 
 ROOTCOMMAND := $(shell command -v doas || command -v sudo)
 
+all: link build secrets done
 
-# TODO: handle XDG_CONFIG_HOME and XDG_DATA_HOME not being set
 
 xdg-user-dirs:
 	mkdir -p $(HOME)/Desktop $(HOME)/Documents $(HOME)/Downloads $(HOME)/Music $(HOME)/Pictures $(HOME)/Public $(HOME)/Templates $(HOME)/Videos
