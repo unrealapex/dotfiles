@@ -14,11 +14,11 @@ create_dirs: xdg-user-dirs
 	mkdir -p $(XDG_DATA_HOME)/applications $(XDG_DATA_HOME)/themes $(XDG_DATA_HOME)/abook $(HOME)/projects $(HOME)/Pictures/Webcam $(HOME)/Pictures/Screenshots
 
 link: create_dirs
-	ln -sf $(realpath config)/* $(XDG_CONFIG_HOME)
-	ln -sf $(realpath gnupg)/* $(HOME)/.gnupg
-	ln -sf $(realpath share/applications)/* $(XDG_DATA_HOME)/applications
-	ln -sf $(realpath share/themes)/* $(XDG_DATA_HOME)/themes
-	ln -sf $(realpath .)/nexrc $(HOME)/.nexrc
+	ln -sf $(PWD)/config/* $(XDG_CONFIG_HOME)
+	ln -sf $(PWD)/gnupg/* $(HOME)/.gnupg
+	ln -sf $(PWD)/share/applications/* $(XDG_DATA_HOME)/applications
+	ln -sf $(PWD)/share/themes/* $(XDG_DATA_HOME)/themes
+	ln -sf $(PWD)/nexrc $(HOME)/.nexrc
 
 clean:
 	find $(XDG_CONFIG_HOME) $(HOME)/.local/bin $(HOME)/.gnupg $(XDG_DATA_HOME)/themes -type l -delete
