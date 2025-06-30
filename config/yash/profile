@@ -84,7 +84,6 @@ ly() {
       status |  dwl
       ;;
     2)
-      doas gpm -m /dev/input/mice -t imps2
       # disable very loud console beep only on linux
       if [ "$(uname)" = "Linux" ] && lsmod | grep pcspkr; then
           doas rmmod pcspkr
