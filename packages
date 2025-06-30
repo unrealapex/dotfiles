@@ -47,7 +47,7 @@ nsxiv
 oath-toolkit
 pass
 pass-otp
-pinentry
+pinentry-curses
 playerctl
 pulsemixer
 ripgrep
