@@ -80,7 +80,7 @@ ly() {
   read answer
 
   case "$answer" in
-    1)
+    1|"")
       status |  dwl
       ;;
     2)
@@ -90,14 +90,8 @@ ly() {
       fi
       dvtm-status
       ;;
-    0)
-      :
-      ;;
-    "")
-      status |  dwl
-      ;;
-    *)
-      printf "%s\n" "no valid option selected, entering console"
+    *|0)
+      printf "%s\n" "entering console"
       ;;
   esac
 }
