@@ -88,7 +88,8 @@ ly() {
       if [ "$(uname)" = "Linux" ] && lsmod | grep pcspkr; then
           doas rmmod pcspkr
       fi
-      dvtm-status
+      # TODO: maybe think of a better name for the session
+      abduco -A my-session dvtm-status
       ;;
     *|0)
       printf "%s\n" "entering console"
