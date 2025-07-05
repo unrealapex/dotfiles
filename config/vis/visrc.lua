@@ -92,10 +92,5 @@ vis.events.subscribe(
     vis:map(vis.modes.NORMAL, "gh", function()
         vis:command("lspc-hover")
     end)
-
-    vis:map(vis.modes.NORMAL, "gq", function()
-        vis:command("lspc-format")
-    end)
-
   end
 )
