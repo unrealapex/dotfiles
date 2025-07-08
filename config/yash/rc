@@ -166,11 +166,11 @@ c() {
 }
 
 t() {
-  fd -H -t f -t d | fnf
+  fd -H -t f -t d | fnf -m
 }
 
 ff() {
-  files=$(fd -H | fnf)
+  files=$(fd -H | fnf -m)
   [ -n "$files" ] && "$VISUAL" "$files"
 }
 
