@@ -79,7 +79,6 @@ vis.events.subscribe(
     vis:command("set expandtab on")
     vis:command("set ignorecase")
     vis:command("set number")
-    vis:command("set tabwidth 4")
 
     vis:map(vis.modes.NORMAL, "]d", function()
         vis:command("lspc-next-diagnostic")
