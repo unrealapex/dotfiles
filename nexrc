@@ -9,7 +9,6 @@ set number
 set path=.
 set ruler
 set searchincr
-set shiftwidth=4
 set showmode
 set tabstop=4
 set windowname
