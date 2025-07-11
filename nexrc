@@ -10,7 +10,6 @@ set path=.
 set ruler
 set searchincr
 set showmode
-set tabstop=4
 set windowname
 set wrapmargin=4
 set wrapscan
