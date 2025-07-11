@@ -10,6 +10,5 @@ set path=.
 set ruler
 set searchincr
 set showmode
-set windowname
 set wrapmargin=4
 set wrapscan
