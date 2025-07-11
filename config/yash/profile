@@ -7,7 +7,6 @@ export VISUAL=$(command -v vise || command -v vis || command -v nvi || command -
 export EDITOR="ed"
 export FCEDIT=$VISUAL
 export TERMINAL="foot"
-export TERMINAL_PROG="foot"
 export BROWSER="lynx"
 export PAGER="less"
 export XDG_CONFIG_HOME="$HOME/.config"
