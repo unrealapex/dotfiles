@@ -144,7 +144,7 @@ alias f='fff'
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
 glow() {
-	smu "$1" | lynx -stdin
+  [ -f "$1" ] && smu "$1" | lynx -stdin
 }
 
 # Add an "alert" alias for long running commands.  Use like so:
