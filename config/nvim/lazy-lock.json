@@ -1,12 +1,12 @@
 {
   "aerial.nvim": { "branch": "master", "commit": "5c0df1679bf7c814c924dc6646cc5291daca8363" },
-  "gitsigns.nvim": { "branch": "main", "commit": "362fe61f9f19e9bceff178792780df5cce118a7d" },
+  "gitsigns.nvim": { "branch": "main", "commit": "4666d040b60d1dc0e474ccd9a3fd3c4d67b4767c" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c" },
-  "mini.ai": { "branch": "main", "commit": "d172ada7b0281044a06cb9a625a862553c457b6f" },
+  "mini.ai": { "branch": "main", "commit": "96cd250fdea1fec929a62c7432de73e0f59788cd" },
   "mini.bracketed": { "branch": "main", "commit": "a54a2a180dc40f4d85875eeafacbdf991d042a36" },
   "mini.surround": { "branch": "main", "commit": "1a2b59c77a0c4713a5bd8972da322f842f4821b1" },
-  "nvim-lspconfig": { "branch": "master", "commit": "7fac9025a967a4d0846660f751cd392fac6bb788" },
+  "nvim-lspconfig": { "branch": "master", "commit": "d005da998edad401524504d03c7a88a56d125224" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "89ebe73cd2836db80a22d9748999ace0241917a5" }
 }
