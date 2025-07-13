@@ -111,26 +111,16 @@ return {
           filetypes = { "sh", "zsh" },
         })
 
-      -- diagnostic text highlight is given to the line number
-      for _, diag in ipairs({ "Error", "Warn", "Info", "Hint" }) do
-        vim.fn.sign_define("DiagnosticSign" .. diag, {
-          text = "",
-          texthl = "DiagnosticSign" .. diag,
-          linehl = "",
-          numhl = "DiagnosticSign" .. diag,
+        vim.diagnostic.config({
+          underline = true,
+          update_in_insert = false,
+          virtual_text = {
+            spacing = 4,
+            source = "if_many",
+            prefix = "●",
+          },
+          signs = false
         })
-      end
-
-      vim.diagnostic.config({
-        underline = true,
-        update_in_insert = false,
-        virtual_text = {
-          spacing = 4,
-          source = "if_many",
-          prefix = "●",
-        },
-      })
-
     end,
   },
   {
