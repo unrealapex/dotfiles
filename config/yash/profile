@@ -5,7 +5,7 @@
 # vis is named vise on BSD systems due to naming conflicts with another command
 export VISUAL=$(command -v vise || command -v vis || command -v nvi || command -v vi)
 export EDITOR="ed"
-export FCEDIT=$VISUAL
+export FCEDIT="$VISUAL"
 export TERMINAL="foot"
 export BROWSER="lynx"
 export PAGER="less"
@@ -14,7 +14,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 export MANROFFOPT="-c"
-export MANPAGER=$PAGER
+export MANPAGER="$PAGER"
 export LESS="--ignore-case --RAW-CONTROL-CHARS --no-init"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
 export FFF_FAV1="$HOME/Downloads"
@@ -56,16 +56,17 @@ export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export ASPELL_CONF="per-conf $XDG_CONFIG_HOME/aspell/aspell.conf; personal $XDG_DATA_HOME/aspell/en.pws; repl $XDG_DATA_HOME/aspell/en.prepl"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
-export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundle
-export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundle/config
-export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundle
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle/config
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
 export MINETEST_USER_PATH="$XDG_DATA_HOME"/minetest
-export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
-export PYTHONPYCACHEPREFIX=$XDG_CACHE_HOME/python
-export PYTHONUSERBASE=$XDG_DATA_HOME/python
+export PYTHON_HISTORY="$XDG_STATE_HOME"/python_history
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME"/python
+export PYTHONUSERBASE="$XDG_DATA_HOME"/python
 
 export MOZ_ENABLE_WAYLAND=1
 export GDK_BACKEND="wayland"
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 DVTM_TERM=dvtm-256color
 
