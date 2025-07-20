@@ -22,7 +22,7 @@ link: create_dirs
 	ln -sf $(PWD)/gnupg/* $(HOME)/.gnupg
 	ln -sf $(PWD)/share/applications/* $(XDG_DATA_HOME)/applications
 	ln -sf $(PWD)/share/themes/* $(XDG_DATA_HOME)/themes
-	ln -sf $(PWD)/nexrc $(HOME)/.nexrc
+	ln -sf $(PWD)/exrc $(HOME)/.exrc
 
 clean:
 	find $(XDG_CONFIG_HOME) $(HOME)/.local/bin $(HOME)/.gnupg $(XDG_DATA_HOME)/themes -type l -delete
