@@ -1,13 +1,6 @@
 -- load standard vis module, providing parts of the Lua API
 require("vis")
 
--- built in plugins
-require("plugins/filetype")
-require("plugins/complete-filename")
-require("plugins/complete-word")
-
--- external plugins
-
 -- bootstrap vis-plug
 local visplugpath = os.getenv("XDG_CONFIG_HOME") .. "/vis/vis-plug"
 local file_exists = function(path)
