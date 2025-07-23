@@ -5,5 +5,5 @@ vim.bo.tabstop = 2
 
 -- FIXME: stylua does not work well with gq formatting
 if vim.fn.executable("stylua") then
-		vim.bo.formatprg = "stylua %"
+	vim.bo.formatprg = "stylua %"
 end

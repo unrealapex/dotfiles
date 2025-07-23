@@ -3,8 +3,8 @@
 
 -- change directory
 vim.keymap.set("n", "<leader>cd", function()
-  vim.cmd.cd(vim.fn.expand("%:p:h"))
-  vim.notify(vim.fn.getcwd())
+	vim.cmd.cd(vim.fn.expand("%:p:h"))
+	vim.notify(vim.fn.getcwd())
 end)
 
 -- buffer stuff

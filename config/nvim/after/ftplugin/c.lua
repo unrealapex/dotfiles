@@ -8,6 +8,5 @@ vim.bo.tabstop = 4
 -- setlocal path+=/usr/include/**,/usr/local/include/**"
 
 if vim.fn.executable("clang-format") then
-  vim.bo.formatprg = "clang-format"
+	vim.bo.formatprg = "clang-format"
 end
-

@@ -48,8 +48,8 @@ vim.opt.wrap = false
 
 vim.cmd.syntax("on")
 vim.cmd.colorscheme("vim")
-vim.cmd.highlight({"clear", "SignColumn"})
-vim.cmd.highlight({"normal", "guibg=NONE"})
+vim.cmd.highlight({ "clear", "SignColumn" })
+vim.cmd.highlight({ "normal", "guibg=NONE" })
 
 --globals
 
@@ -62,40 +62,40 @@ local prosed = false
 -- make writing in neovim more pleasant
 ---@diagnostic disable-next-line: lowercase-global
 function prose()
-  -- make sure zen-mode.nvim is installed
-  -- toggle prose mode
-  if not prosed then
-    -- enable spellcheck and line wrapping
-    vim.opt_local.spell = true
-    vim.opt_local.spelllang = "en_us"
-    vim.opt_local.wrap = true
+	-- make sure zen-mode.nvim is installed
+	-- toggle prose mode
+	if not prosed then
+		-- enable spellcheck and line wrapping
+		vim.opt_local.spell = true
+		vim.opt_local.spelllang = "en_us"
+		vim.opt_local.wrap = true
 
-    -- normal and visual mode mappings
-    vim.keymap.set({ "n", "v" }, "j", "gj")
-    vim.keymap.set({ "n", "v" }, "k", "gk")
-    vim.keymap.set({ "n", "v" }, "0", "g0")
-    vim.keymap.set({ "n", "v" }, "$", "g$")
-    vim.keymap.set({ "n", "v" }, "^", "g^")
+		-- normal and visual mode mappings
+		vim.keymap.set({ "n", "v" }, "j", "gj")
+		vim.keymap.set({ "n", "v" }, "k", "gk")
+		vim.keymap.set({ "n", "v" }, "0", "g0")
+		vim.keymap.set({ "n", "v" }, "$", "g$")
+		vim.keymap.set({ "n", "v" }, "^", "g^")
 
-    prosed = true
-    pcall(vim.cmd.ZenMode())
-    vim.notify("prose mode: enabled")
-  else
-    -- disable spellcheck and line wrapping
-    vim.opt_local.spell = false
-    vim.opt_local.spelllang = nil
-    vim.opt_local.wrap = false
+		prosed = true
+		pcall(vim.cmd.ZenMode())
+		vim.notify("prose mode: enabled")
+	else
+		-- disable spellcheck and line wrapping
+		vim.opt_local.spell = false
+		vim.opt_local.spelllang = nil
+		vim.opt_local.wrap = false
 
-    -- reset normal and visual mode mappings
-    vim.keymap.del({ "n", "v" }, "j")
-    vim.keymap.del({ "n", "v" }, "k")
-    vim.keymap.del({ "n", "v" }, "0")
-    vim.keymap.del({ "n", "v" }, "$")
-    vim.keymap.del({ "n", "v" }, "^")
-    prosed = false
-    pcall(vim.cmd.ZenMode())
-    vim.notify("prose mode: disabled")
-  end
+		-- reset normal and visual mode mappings
+		vim.keymap.del({ "n", "v" }, "j")
+		vim.keymap.del({ "n", "v" }, "k")
+		vim.keymap.del({ "n", "v" }, "0")
+		vim.keymap.del({ "n", "v" }, "$")
+		vim.keymap.del({ "n", "v" }, "^")
+		prosed = false
+		pcall(vim.cmd.ZenMode())
+		vim.notify("prose mode: disabled")
+	end
 end
 
 vim.api.nvim_create_user_command("Prose", prose, {})
@@ -125,4 +125,3 @@ vim.env.LSP = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
 
 -- $FTPLUGIN
 vim.env.FTPLUGIN = vim.fn.stdpath("config") .. "/after/ftplugin"
-
