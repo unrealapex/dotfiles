@@ -27,6 +27,7 @@ local plugins = {
 	{ "https://repo.or.cz/vis-surround" },
 	{ "https://git.sr.ht/~mcepl/vis-jump" },
 	-- { "https://git.sr.ht/~mcepl/vis-yank-highlight" },
+  { "https://codeberg.org/unrealapex/vis-filetype-settings" },
 	{ "https://repo.or.cz/vis-quickfix" },
 }
 
@@ -34,6 +35,18 @@ plug.path(os.getenv("XDG_DATA_HOME") .. "/vis-plug")
 plug.init(plugins, true)
 
 plug.plugins.lspc.menu_cmd = "vis-menu"
+
+settings = {
+    bash  = function()
+	    vis:command("set tabwidth 2")
+    end,
+    lua = function()
+	    vis:command("set tabwidth 2")
+    end,
+    markdown = function()
+	    vis:command("set tabwidth 4")
+    end,
+}
 
 vis:operator_new("=", function(file, range, pos)
 	local status, out, err = vis:pipe(file, range, "fmt")
