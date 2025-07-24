@@ -32,9 +32,8 @@ vim.opt.showcmd = true
 vim.opt.signcolumn = "auto:1-2"
 vim.opt.smartcase = true
 vim.opt.splitright = true
--- TODO: show diagnostics
 vim.opt.statusline = "%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
-vim.opt.tabstop = 4
+vim.opt.tabstop = 8
 vim.opt.termguicolors = false
 vim.opt.textwidth = 73
 vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
