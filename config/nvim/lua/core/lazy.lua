@@ -50,7 +50,7 @@ require("lazy").setup("plugins", {
 		},
 	},
 	install = {
-		colorscheme = { vim.g.colors_name, "vim" },
+		colorscheme = { "vim" },
 	},
 })
 
