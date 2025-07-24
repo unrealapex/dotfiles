@@ -65,22 +65,9 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win) -- luacheck: no unused a
 	vis:command("set ignorecase")
 	vis:command("set number")
 
-	vis:map(vis.modes.NORMAL, "]d", function()
-		vis:command("lspc-next-diagnostic")
-	end)
-
-	vis:map(vis.modes.NORMAL, "[d", function()
-		vis:command("lspc-prev-diagnostic")
-	end)
-
-	vis:map(vis.modes.NORMAL, "gh", function()
-		vis:command("lspc-hover")
-	end)
-
-	vis:map(vis.modes.NORMAL, "n", function()
-		vis:feedkeys("<vis-motion-search-repeat>")
-	end)
-	vis:map(vis.modes.NORMAL, "N", function()
-		vis:feedkeys("<vis-motion-search-repeat-reverse>")
-	end)
+	vis:map(vis.modes.NORMAL, "]d", ":lspc-next-diagnostic<Enter>")
+	vis:map(vis.modes.NORMAL, "[d", ":lspc-prev-diagnostic<Enter>")
+	vis:map(vis.modes.NORMAL, "gh", ":lspc-hover<Enter>")
+	vis:map(vis.modes.NORMAL, "n", "<vis-motion-search-repeat>")
+	vis:map(vis.modes.NORMAL, "N", "<vis-motion-search-repeat-reverse>")
 end)
