@@ -37,14 +37,10 @@ plug.init(plugins, true)
 plug.plugins.lspc.menu_cmd = "vis-menu"
 
 settings = {
-	bash = function()
-		vis:command("set tabwidth 2")
-	end,
-	lua = function()
-		vis:command("set tabwidth 2")
-	end,
-	markdown = function()
-		vis:command("set tabwidth 4")
+	man = function()
+		vis:map(vis.modes.NORMAL, "q", function()
+			vis:command("q")
+		end)
 	end,
 }
 
