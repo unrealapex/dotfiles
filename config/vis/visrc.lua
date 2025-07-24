@@ -76,4 +76,11 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win) -- luacheck: no unused a
 	vis:map(vis.modes.NORMAL, "gh", function()
 		vis:command("lspc-hover")
 	end)
+
+	vis:map(vis.modes.NORMAL, "n", function()
+	    vis:feedkeys('<vis-motion-search-repeat>')
+	end)
+	vis:map(vis.modes.NORMAL, "N", function()
+	    vis:feedkeys('<vis-motion-search-repeat-reverse>')
+	end)
 end)
