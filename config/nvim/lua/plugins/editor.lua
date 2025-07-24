@@ -9,8 +9,6 @@ return {
 		-- under version control so just load on buffer events
 		event = "FileType",
 		config = function()
-			-- Gitsigns mappings
-
 			require("gitsigns").setup({
 				signs = {
 					add = {
