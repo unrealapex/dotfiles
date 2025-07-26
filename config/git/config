@@ -31,12 +31,6 @@
 	gpgsign = true
 	sort = version:refname
 [alias]
-	ci = commit
-	st = status
-	co = checkout
-	br = branch
-	di = diff
-	up = pull
 	undo=reset --soft HEAD^
 	s = !git rev-list --all | xargs git grep -F
 	last = log -1 HEAD --stat --patch

@@ -115,6 +115,15 @@ alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
 alias cam="mpv av://v4l2:/dev/video0"
 alias weather="curl wttr.in"
 alias d='dirs -v'
+
+alias ci='git commit'
+alias co='git checkout'
+alias di='git diff'
+alias log='git l'
+alias st='git status'
+alias up='git pull'
+alias br='git branch'
+
 # handle programs that incorrectly read EDITOR instead of VISUAL
 alias pass="EDITOR=$VISUAL pass"
 
