@@ -31,6 +31,7 @@ gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
 hyperfine
+ibm-plex-mono
 jq
 kanshi
 lua
