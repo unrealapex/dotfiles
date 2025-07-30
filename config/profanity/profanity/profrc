@@ -1,0 +1,12 @@
+[logging]
+chlog=true
+grlog=true
+maxsize=1048580
+rotate=true
+shared=true
+
+[ui]
+history=true
+
+[notifications]
+message=true

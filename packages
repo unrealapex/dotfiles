@@ -53,6 +53,7 @@ pass
 pass-otp
 pinentry-curses
 playerctl
+profanity
 pulsemixer
 ripgrep
 shellcheck
