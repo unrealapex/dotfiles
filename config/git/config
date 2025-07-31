@@ -5,10 +5,11 @@
 [credential]
 	credentialStore = cache
 [core]
-	pager =  diff-so-fancy | less -RFX
+	pager =  diff-highlight | less -RFX
 	excludesfile = ~/.config/git/gitignore
+	whitespace = trailing-space
 [interactive]
-	diffFilter = diff-so-fancy --patch
+	diffFilter = diff-highlight
 [pull]
 	rebase = true
 [merge]
@@ -34,7 +35,6 @@
 	undo=reset --soft HEAD^
 	s = !git rev-list --all | xargs git grep -F
 	last = log -1 HEAD --stat --patch
-        l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen(%cr)' --abbrev-commit
 	diff = diff --color-words
 
 [color "diff-highlight"]
