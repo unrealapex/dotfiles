@@ -8,7 +8,7 @@ XDG_DATA_HOME ?= ~/.local/share
 
 ROOTCOMMAND := $(shell command -v doas || command -v sudo)
 
-all: link build secrets done
+all: link build vis-plugins secrets done
 
 
 xdg-user-dirs:
@@ -62,6 +62,10 @@ $(XDG_CONFIG_HOME)/wlock/wlock: $(wildcard $(XDG_CONFIG_HOME)/wlock/*.h) $(wildc
 
 wlock: /usr/local/bin/wlock
 
+vis-plugins:
+	git submodule init
+	git submodule update
+
 secrets: $(XDG_CONFIG_HOME)/git/config.local
 
 $(XDG_CONFIG_HOME)/git/config.local:
@@ -70,5 +74,5 @@ $(XDG_CONFIG_HOME)/git/config.local:
 done:
 	@echo "Makefile targets completed!"
 
-.PHONY: all create_dirs link clean build dwl mew wlock done
+.PHONY: all create_dirs link clean build dwl mew wlock vis-plugins done
 

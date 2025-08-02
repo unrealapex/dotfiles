@@ -1,0 +1,24 @@
+[submodule "config/vis/plugins/vis-lspc"]
+	path = config/vis/plugins/vis-lspc
+	url = https://gitlab.com/muhq/vis-lspc
+[submodule "config/vis/plugins/vis-commentary"]
+	path = config/vis/plugins/vis-commentary
+	url = https://github.com/lutobler/vis-commentary
+[submodule "config/vis/plugins/vis-modelines"]
+	path = config/vis/plugins/vis-modelines
+	url = https://github.com/lutobler/vis-modelines
+[submodule "config/vis/plugins/vis-surround"]
+	path = config/vis/plugins/vis-surround
+	url = https://repo.or.cz/vis-surround
+[submodule "config/vis/plugins/vis-jump"]
+	path = config/vis/plugins/vis-jump
+	url = https://git.sr.ht/~mcepl/vis-jump
+[submodule "config/vis/plugins/vis-filetype-settings"]
+	path = config/vis/plugins/vis-filetype-settings
+	url = https://codeberg.org/unrealapex/vis-filetype-settings
+[submodule "config/vis/plugins/vis-quickfix"]
+	path = config/vis/plugins/vis-quickfix
+	url = https://repo.or.cz/vis-quickfix
+[submodule "config/vis/plugins/vis-format"]
+	path = config/vis/plugins/vis-format
+	url = https://github.com/milhnl/vis-format

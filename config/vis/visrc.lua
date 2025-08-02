@@ -1,40 +1,16 @@
 -- load standard vis module, providing parts of the Lua API
 require("vis")
 
--- bootstrap vis-plug
-local visplugpath = os.getenv("XDG_CONFIG_HOME") .. "/vis/vis-plug"
-local file_exists = function(path)
-	local file = io.open(path)
-	if not file then
-		return false
-	end
-	file:close()
-	return true
-end
+require("plugins/vis-format")
+require("plugins/vis-commentary")
+require("plugins/vis-lspc")
+require("plugins/vis-modelines")
+require("plugins/vis-surround")
+require("plugins/vis-jump")
+require("plugins/vis-filetype-settings")
+require("plugins/vis-quickfix")
 
-if not file_exists(visplugpath) then
-	print("vis-plug not found, installing...")
-	os.execute("git clone --filter=blob:none https://github.com/erf/vis-plug " .. visplugpath)
-end
-
-local plug = require("vis-plug")
-
-local plugins = {
-	{ "https://github.com/milhnl/vis-format" },
-	{ "https://github.com/lutobler/vis-commentary" },
-	{ "https://gitlab.com/muhq/vis-lspc", alias = "lspc" },
-	{ "https://github.com/lutobler/vis-modelines" },
-	{ "https://repo.or.cz/vis-surround" },
-	{ "https://git.sr.ht/~mcepl/vis-jump" },
-	-- { "https://git.sr.ht/~mcepl/vis-yank-highlight" },
-	{ "https://codeberg.org/unrealapex/vis-filetype-settings" },
-	{ "https://repo.or.cz/vis-quickfix" },
-}
-
-plug.path(os.getenv("XDG_DATA_HOME") .. "/vis-plug")
-plug.init(plugins, true)
-
-plug.plugins.lspc.menu_cmd = "vis-menu"
+require("plugins/vis-lspc").menu_cmd = "vis-menu"
 
 settings = {
 	man = function()
