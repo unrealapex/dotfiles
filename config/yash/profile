@@ -2,7 +2,6 @@
 # ~/.config/yash/profile
 #
 
-# vis is named vise on BSD systems due to naming conflicts with another command
 export VISUAL=$(command -v vise || command -v vis)
 export EDITOR="ed"
 export FCEDIT="$VISUAL"
