@@ -98,7 +98,7 @@ fi
 # some more ls aliases
 alias ll='ls -Ahl1'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -C'
 alias j='jobs -l'
 alias h='fc -l'
 alias r='fc -l | fnf | cut -f 2- - | sh'
