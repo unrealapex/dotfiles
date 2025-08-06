@@ -161,15 +161,7 @@ glow() {
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-	if [ "$#" -gt 0 ]; then
-		valid_paths=()
-		for arg in "$@"; do
-			[ -d "$arg" ] && array --insert valid_paths -1 "$arg"
-		done
-		dir=$(fd -H -t d . "$valid_paths" | fnf)
-	else
-		dir=$(fd -H -t d | fnf)
-	fi
+	dir=$(fd -H -t d | fnf)
 	[ -d "$dir" ] && cd "$dir"
 }
 
