@@ -22,3 +22,6 @@
 [submodule "config/vis/plugins/vis-format"]
 	path = config/vis/plugins/vis-format
 	url = https://github.com/milhnl/vis-format
+[submodule "config/vis/plugins/vis-lockfiles"]
+	path = config/vis/plugins/vis-lockfiles
+	url = https://gitlab.com/muhq/vis-lockfiles
