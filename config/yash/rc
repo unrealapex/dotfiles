@@ -12,6 +12,7 @@ set --extended-glob
 set --hist-space
 set --le-predict
 set --no-unset
+set +o le-prompt-sp
 
 # define some basic variables if missing
 : ${LOGNAME:=$(logname)} ${HOSTNAME:=$(uname -n)}
