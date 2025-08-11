@@ -11,14 +11,13 @@ notifications: mako
 
 ### about
 
-these are my dotfiles. version control is done with git. make is used to
-symlink everything and compile my builds of suckless programs. i strive to use
+these are my dotfiles. version control is done with git. i strive to use
 tools which align well with the unix philosophy.
 
 # install
 
 ```
-make
+./make.sh install
 ```
 
 ### extras
