@@ -14,6 +14,7 @@ clangd
 cmus
 diff-so-fancy
 doasedit
+elinks
 espeak-ng
 fastfetch
 fcitx5
@@ -36,9 +37,9 @@ hyperfine
 ibm-plex-mono
 jq
 kanshi
+lowdown
 lua
 lua-language-server
-lynx
 mako
 man-pages
 mozc
