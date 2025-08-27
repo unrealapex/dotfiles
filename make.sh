@@ -45,7 +45,7 @@ secrets() {
 }
 
 finished() {
-	echo "Makefile targets completed!"
+	echo "$0: finished"
 }
 
 help() {
