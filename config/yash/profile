@@ -74,23 +74,15 @@ eval "$(keychain --eval --ignore-missing --nogui --ssh-allow-gpg --dir "$XDG_RUN
 
 ly() {
   [ -n "$DISPLAY" ] && return 1
-  printf 'start:\n1: wayland\n2: dvtm\n0: console\nWhich do you want to select? (press 0 to enter the console) [0-2]: '
+  printf 'start wayland?: '
   read answer
 
   case "$answer" in
-    1|"")
+    y|yes|"")
       status |  dwl
       ;;
-    2)
-      # disable very loud console beep only on linux
-      if [ "$(uname)" = "Linux" ] && lsmod | grep pcspkr; then
-          doas rmmod pcspkr
-      fi
-      # TODO: maybe think of a better name for the session
-      abduco -A my-session dvtm-status
-      ;;
     *|0)
-      printf "%s\n" "entering console"
+	    :
       ;;
   esac
 }
