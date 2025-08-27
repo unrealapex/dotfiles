@@ -54,7 +54,7 @@ help() {
 
 main() {
 	case "$1" in
-		install)
+		install|all)
 			install
 			;;
 		xdg_user_dirs)
