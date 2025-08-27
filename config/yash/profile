@@ -78,9 +78,9 @@ ly() {
   read answer
 
   case "$answer" in
-    y|yes|"")
-      status |  dwl
-      ;;
+	y|yes|"")
+		status |  dwl
+	;;
     *|0)
 	    :
       ;;
@@ -89,7 +89,7 @@ ly() {
 
 # handle tty output of linux and bsd terminals
 if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" = "/dev/ttyv0" ]  || [ "$(tty)" = "/dev/ttyC0" ]; then
-  ly
+	ly
 fi
 
 # vim: filetype=sh
