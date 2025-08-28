@@ -41,7 +41,7 @@ install_vis_plugins() {
 
 secrets() {
 	secrets_file="$config_home"/git/config.local
-	 [ ! -f "$secrets_file" ] && cp -n "$HOME"/dotfiles/secrets/gitconfig.local "$secrets_file"
+	[ ! -f "$secrets_file" ] && cp -n secrets/gitconfig.local "$secrets_file"
 }
 
 finished() {
