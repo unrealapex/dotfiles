@@ -79,7 +79,7 @@ ly() {
 
   case "$answer" in
 	y|yes|"")
-		status |  dwl
+		river
 	;;
     *|0)
 	    :
