@@ -146,7 +146,6 @@ cd() {
   fi
 }
 
-alias f='fff'
 # FIXME: this doesn't work for some reason
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
@@ -169,7 +168,7 @@ t() {
 
 ff() {
   files=$(fd -H | fnf -m)
-  [ -n "$files" ] && "$VISUAL" "$files"
+  [ -n "$files" ] && "$VISUAL" $files
 }
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
