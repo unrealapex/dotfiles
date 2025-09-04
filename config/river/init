@@ -129,6 +129,8 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
     
     riverctl map $mode None Print spawn 'screenshot full'
+    riverctl map normal Super+Shift P spawn 'screenshot full'
+    riverctl map normal Super P spawn 'screenshot select'
 
     # Control screen backlight brightness with brightnessctl (https://github.com/Hummer12007/brightnessctl)
     riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl set +10%'
