@@ -3,10 +3,10 @@
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super+Shift Return spawn foot
 
-# Super+Q to close the focused view
+# Super+Shift+C to close the focused view
 riverctl map normal Super+Shift C close
 
-# Super+Shift+E to exit river
+# Super+Shift+Q to exit river
 riverctl map normal Super+Shift Q exit
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
