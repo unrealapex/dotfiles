@@ -113,7 +113,9 @@ riverctl map passthrough Super F11 enter-mode normal
 riverctl map normal Alt Space spawn "mew-run-desktop"
 riverctl map normal Super Period spawn "mew-emoji"
 riverctl map normal Alt Tab focus-previous-tags
-riverctl map normal Super+Shift X spawn "wlock -c 000000 -a 0d0d0d -i 000000 -f 770000"
+
+lockcmd="wlock -c 000000 -a 0d0d0d -i 000000 -f 770000"
+riverctl map normal Super+Shift X spawn "${lockcmd}"
 
 # Various media key mapping examples for both normal and locked mode which do
 # not have a modifier
@@ -171,5 +173,5 @@ riverctl spawn kanshi
 riverctl spawn "status | dam"
 riverctl spawn "wbg /home/erin/dotfiles/sakura.png"
 riverctl spawn "playerctld daemon"
-riverctl spawn "widle -t 300 wlock -c 000000 -a 0d0d0d -i 000000 -f 770000"
+riverctl spawn "widle -t 300 ${lockcmd}"
 riverctl spawn "dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"
