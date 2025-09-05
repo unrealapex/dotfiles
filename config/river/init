@@ -113,6 +113,7 @@ riverctl map passthrough Super F11 enter-mode normal
 riverctl map normal Alt Space spawn "mew-run-desktop"
 riverctl map normal Super Period spawn "mew-emoji"
 riverctl map normal Alt Tab focus-previous-tags
+riverctl map normal Super+Shift X spawn "wlock -c 000000 -a 0d0d0d -i 000000 -f 770000"
 
 # Various media key mapping examples for both normal and locked mode which do
 # not have a modifier
