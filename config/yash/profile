@@ -74,7 +74,7 @@ eval "$(keychain --eval --ignore-missing --nogui --ssh-allow-gpg --dir "$XDG_RUN
 
 ly() {
   [ -n "$DISPLAY" ] && return 1
-  printf 'start wayland?: '
+  printf 'start wayland? [Y/n]: '
   read answer
 
   case "$answer" in
