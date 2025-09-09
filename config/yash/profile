@@ -78,7 +78,7 @@ ly() {
   read answer
 
   case "$answer" in
-	y|yes|"")
+	[Yy]*|"")
 		river
 	;;
     *|0)
