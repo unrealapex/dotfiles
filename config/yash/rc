@@ -154,16 +154,16 @@ glow() {
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-	dir=$(fd -H -t d | fnf)
+	dir=$(fd -t d | fnf -p "cd into > ")
 	[ -d "$dir" ] && cd "$dir"
 }
 
 t() {
-  fd -H -t f -t d | fnf -m
+  fd -H -t f -t d | fnf -m -p "select files > "
 }
 
-ff() {
-  files=$(fd -H | fnf -m)
+f() {
+  files=$(fd -H | fnf -m -p "open files in editor > ")
   [ -n "$files" ] && "$VISUAL" $files
 }
 
