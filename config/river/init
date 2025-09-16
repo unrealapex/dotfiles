@@ -87,6 +87,9 @@ all_tags=$(((1 << 32) - 1))
 riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
+# FIXME: this doesn't work
+riverctl rule-add -title "Picture-in-Picture" tags $all_tags
+
 # Super+Space to toggle float
 riverctl map normal Super Space toggle-float
 
@@ -163,6 +166,9 @@ riverctl rule-add -app-id "openarena.x86_64" fullscreen
 riverctl rule-add -app-id "quake3e.x64" tags 6
 riverctl rule-add -app-id "quake3e.x64" fullscreen
 riverctl rule-add -app-id "nuclear" tags 9
+riverctl rule-add -title "Picture-in-Picture" float
+# riverctl rule-add -title "Picture-in-Picture" csd
+riverctl rule-add -title "Picture-in-Picture" position 99999999 99999999
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
