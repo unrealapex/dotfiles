@@ -1,0 +1,45 @@
+#!/bin/sh
+
+bold="\033[1m"
+reset="\033[m"
+
+
+send_notification() {
+  volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+  if echo $volume | grep -q "MUTED"; then
+    notify-send -a "wp-vol" "volume: muted"
+  else
+    notify-send -a "wp-vol" "volume: $(echo ${volume} | tr -dc '0-9' | sed 's/^0\{1,2\}//')%"
+  fi
+}
+
+case $1 in
+  up|down)
+    # unmute volume
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+    case $1 in
+      up)
+        wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 2%+
+        break
+        ;;
+      down)
+        wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 2%-
+        break
+        ;;
+    esac
+    break
+    ;;
+  mute)
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    break
+    ;;
+  *)
+    printf "%b" "${bold}volumewizard${reset}: volume control wrapper for wpctl
+
+    ${bold}Usage${reset}: volumewizard [up|down|mute]
+    " >&2
+    break
+    ;;
+esac
+
+send_notification

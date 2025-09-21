@@ -1,0 +1,45 @@
+#!/bin/sh
+
+red="\033[1;31m"
+fg_reset="\033[0m"
+
+error() {
+  printf "%b\n" "${red}$1${fg_reset}" 1>&2
+}
+
+
+utils="grim slurp wl-copy"
+IFS=" "
+for util in $utils; do
+    ! command -v $util && error "$util not found"
+done
+
+bold="\033[1m"
+reset="\033[m"
+image_dir=$HOME/Pictures/Screenshots
+image_path=$image_dir/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
+
+! [ -d $image_dir ] && mkdir -p $image_dir
+
+case $1 in
+  select)
+    slurp | grim -g - "$image_path" || exit
+    ;;
+  full)
+    grim  "$image_path"
+    ;;
+  *)
+
+    printf "%b" "${bold}screenshot${reset}: wrapper for grim
+
+    ${bold}Usage${reset}: screenshot [select|full]
+    " >&2
+    exit
+    ;;
+esac
+
+wl-copy < "$image_path"
+
+printf "%s\n" "screenshot saved to $image_path"
+
+notify-send "screenshot: image saved"
