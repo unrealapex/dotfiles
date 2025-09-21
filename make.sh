@@ -38,7 +38,7 @@ clean() {
 
 install_vis_plugins() {
 	git submodule init
-	git submodule update
+	git submodule update --recursive
 }
 
 secrets() {
