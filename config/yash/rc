@@ -47,6 +47,7 @@ if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
   alias grep='grep -G'
   alias fgrep='fgrep -G'
   alias egrep='egrep -G'
+  alias diff='diff --color=auto'
   alias tree='tree -C'
   alias ip='ip -color=auto'
 fi
@@ -121,19 +122,6 @@ alias br='git branch'
 
 # handle programs that incorrectly read EDITOR instead of VISUAL
 alias pass="EDITOR=$VISUAL pass"
-
-diff() {
-  if [ -t 0 ]; then
-    if command -v diff-so-fancy >/dev/null; then
-      command diff -u "$@" | diff-so-fancy
-    else
-      command diff -u "$@" | sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[1;34m@/;s/$/\x1b[0m/'
-    fi
-  else
-    command diff -u "$@"
-  fi
-}
-
 
 cd() {
   if [ -t 0 ] && [ "$#" -ne 0 ]; then
