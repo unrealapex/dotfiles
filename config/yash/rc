@@ -43,13 +43,13 @@ rm() if [ -t 0 ]; then command rm -iv "$@"; else command rm "$@"; fi
 
 # enable color support of ls and also add handy aliases
 if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
-  alias ls='ls -G'
-  alias grep='grep -G'
-  alias fgrep='fgrep -G'
-  alias egrep='egrep -G'
-  alias diff='diff --color=auto'
-  alias tree='tree -C'
-  alias ip='ip -color=auto'
+  ls() { command ls -G "$@"; }
+  grep() { command grep -G "$@"; }
+  fgrep() { command fgrep -G "$@"; }
+  egrep() { command egrep -G "$@"; }
+  diff() { command diff --color=auto "$@"; }
+  tree() { command tree -C "$@"; }
+  ip() { command ip -color=auto "$@"; }
 fi
 
 # find escape sequence to change terminal window title
