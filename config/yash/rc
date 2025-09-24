@@ -111,6 +111,7 @@ alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
 alias cam="mpv av://v4l2:/dev/video0"
 alias weather="curl wttr.in"
 alias d='dirs -v'
+alias diff='diff -u'
 
 alias ci='git commit'
 alias co='git checkout'
