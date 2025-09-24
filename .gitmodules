@@ -25,3 +25,6 @@
 [submodule "config/vis/plugins/vis-lockfiles"]
 	path = config/vis/plugins/vis-lockfiles
 	url = https://gitlab.com/muhq/vis-lockfiles
+[submodule "config/vis/plugins/vis-ins-completion"]
+	path = config/vis/plugins/vis-ins-completion
+	url = https://github.com/jpaulogg/vis-ins-completion
