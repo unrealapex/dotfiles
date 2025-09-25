@@ -114,6 +114,7 @@ alias d='dirs -v'
 alias diff='diff -u'
 alias -g L='| $PAGER'
 alias -g N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
+alias -g T='$(fd -H -t f -t d | fnf -m -p "select files > ")'
 
 alias ci='git commit'
 alias co='git checkout'
@@ -150,8 +151,6 @@ c() {
 	[ -d "$dir" ] && cd "$dir"
 }
 
-t() {
-  fd -H -t f -t d | fnf -m -p "select files > "
 }
 
 f() {
