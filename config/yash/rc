@@ -112,6 +112,8 @@ alias cam="mpv av://v4l2:/dev/video0"
 alias weather="curl wttr.in"
 alias d='dirs -v'
 alias diff='diff -u'
+alias -g L='| $PAGER'
+alias -g N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
 
 alias ci='git commit'
 alias co='git checkout'
