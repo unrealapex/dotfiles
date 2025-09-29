@@ -156,6 +156,13 @@ c() {
 f() {
   files=$(fd -H | fnf -m -p "open files in editor > ")
   [ -n "$files" ] && "$VISUAL" $files
+mktd() {
+	dir=$(mktemp -d)
+	if [ -d "$dir" ]; then
+		cd "$dir"
+	else
+		echo "failed"
+	fi
 }
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
