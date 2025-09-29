@@ -41,7 +41,8 @@ vim.opt.updatetime = 200
 vim.opt.visualbell = false
 vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.wrapmargin = 73
 
 vim.cmd.syntax("on")
 vim.cmd.colorscheme("vim")
