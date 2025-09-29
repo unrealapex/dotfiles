@@ -16,11 +16,6 @@ return {
 			-- Setup lspconfig.
 			local lsp_capabilities = {}
 
-			-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-			-- require("lspconfig")["<YOUR_LSP_SERVER>"].setup {
-			--   capabilities = capabilities
-			-- }
-
 			-- lspconfig mappings.
 			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
 			local opts = { noremap = true, silent = true }
@@ -63,43 +58,29 @@ return {
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 			end
 
-			require("lspconfig").bashls.setup({
-				on_attach = lsp_attach,
-			})
-			require("lspconfig").lua_ls.setup({
-				on_attach = lsp_attach,
-			})
-			require("lspconfig").vimls.setup({
-				on_attach = lsp_attach,
-			})
-			require("lspconfig").cssls.setup({
-				on_attach = lsp_attach,
-			})
-			require("lspconfig").html.setup({
-				on_attach = lsp_attach,
-			})
-			require("lspconfig").bashls.setup({
-				on_attach = lsp_attach,
-			})
-			require("lspconfig").pyright.setup({
-				on_attach = lsp_attach,
-			})
-			require("lspconfig").ts_ls.setup({
+			vim.lsp.config("*", {
 				on_attach = lsp_attach,
 			})
 
-			require("lspconfig").clangd.setup({
-				on_attach = lsp_attach,
-
+			vim.lsp.config("clangd", {
 				cmd = {
 					"clangd",
 					"--offset-encoding=utf-16",
 				},
 			})
 
-			require("lspconfig").bashls.setup({
+			vim.lsp.config("bashls", {
 				filetypes = { "sh", "zsh" },
 			})
+
+			vim.lsp.enable("bashls")
+			vim.lsp.enable("clangd")
+			vim.lsp.enable("cssls")
+			vim.lsp.enable("html")
+			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("pyright")
+			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("vimls")
 
 			vim.diagnostic.config({
 				underline = true,
