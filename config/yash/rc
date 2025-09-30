@@ -100,6 +100,7 @@ alias h='fc -l'
 alias r='history | fnf | cut -f 2- - | sh'
 alias sudo='doas'
 alias bc='bc --mathlib --quiet'
+# xdg aliases
 alias pidgin='pidgin --config="$XDG_DATA_HOME"/purple'
 alias mbsync='mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
