@@ -109,7 +109,7 @@ alias abook='abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DA
 alias ytflac='yt-dlp -xq --audio-format flac --audio-quality 10'
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
-alias cam="mpv av://v4l2:/dev/video0"
+alias cam="mpv av://v4l2:/dev/video0 --screenshot-dir=~/Pictures/Webcam --screenshot-template='Photo from %tY-%tm-%td %tH-%tM-%tS' --screenshot-jpeg-quality=100"
 alias weather="curl wttr.in"
 alias d='dirs -v'
 alias diff='diff -u'
