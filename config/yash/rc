@@ -113,6 +113,7 @@ alias cam="mpv av://v4l2:/dev/video0 --screenshot-dir=~/Pictures/Webcam --screen
 alias weather="curl wttr.in"
 alias d='dirs -v'
 alias diff='diff -u'
+alias f='fff'
 alias -g L='| $PAGER'
 alias -g N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
 alias -g T='$(fd -H -t f -t d | fnf -m -p "select files > ")'
@@ -152,11 +153,11 @@ c() {
 	[ -d "$dir" ] && cd "$dir"
 }
 
+ff() {
+  files=$(fd -H -t f | fnf -m -p "open files in editor > ")
+  [ -n "$files" ] && "$VISUAL" $files
 }
 
-f() {
-  files=$(fd -H | fnf -m -p "open files in editor > ")
-  [ -n "$files" ] && "$VISUAL" $files
 mktd() {
 	dir=$(mktemp -d)
 	if [ -d "$dir" ]; then
