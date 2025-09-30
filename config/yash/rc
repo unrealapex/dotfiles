@@ -27,7 +27,7 @@ HISTRMDUP=1
 # create HISTFILE parent directory if missing
 ! [ -d "${HISTFILE%/*}" ] && mkdir -p "${HISTFILE%/*}"
 
-PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin"
+PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin:/usr/local/lib/surfraw"
 export PATH
 
 bindkey --emacs '\^L' clear-and-redraw-all
