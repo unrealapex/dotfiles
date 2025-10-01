@@ -20,25 +20,20 @@ case $1 in
     case $1 in
       up)
         wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 2%+
-        break
         ;;
       down)
         wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 2%-
-        break
         ;;
     esac
-    break
     ;;
   mute)
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    break
     ;;
   *)
     printf "%b" "${bold}volumewizard${reset}: volume control wrapper for wpctl
 
     ${bold}Usage${reset}: volumewizard [up|down|mute]
     " >&2
-    break
     ;;
 esac
 
