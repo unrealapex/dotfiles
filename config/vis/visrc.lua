@@ -33,6 +33,11 @@ vis:operator_new("=", function(file, range, pos)
 	return range.start -- new cursor location
 end, "Formating operator, filter range through fmt(1)")
 
+vis:command_register("sh", function()
+	vis:command("!" .. vis.options.shell)
+	return true;
+end, "Spawn shell")
+
 vis.events.subscribe(vis.events.INIT, function() end)
 
 vis.events.subscribe(vis.events.WIN_OPEN, function(win) -- luacheck: no unused args
