@@ -2,6 +2,7 @@
 
 bold="\033[1m"
 reset="\033[m"
+sink=@DEFAULT_AUDIO_SINK@
 
 notify() {
 	notify-send \
@@ -11,7 +12,7 @@ notify() {
 }
 
 send_notification() {
-	volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+	volume=$(wpctl get-volume "$sink")
 	if echo $volume | grep -q "MUTED"; then
 		notify "volume: muted"
 	else
@@ -22,18 +23,18 @@ send_notification() {
 case $1 in
 	up|down)
 		# unmute volume
-		wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
+		wpctl set-mute "$sink" 0
 		case $1 in
 			up)
-				wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 2%+
+				wpctl set-volume --limit 1.0 "$sink" 2%+
 				;;
 			down)
-				wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 2%-
+				wpctl set-volume --limit 1.0 "$sink" 2%-
 				;;
 		esac
 		;;
 	mute)
-		wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+		wpctl set-mute "$sink" toggle
 		;;
 	*)
 		printf "%b\n%b\n" "${bold}volumewizard${reset}: volume control wrapper for wpctl" \
