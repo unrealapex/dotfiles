@@ -8,7 +8,7 @@ notify() {
 		--hint=string:x-dunst-stack-tag:wp-vol \
 		--hint=string:synchronous:wp-vol \
 		"$@"
-	}
+}
 
 send_notification() {
 	volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
