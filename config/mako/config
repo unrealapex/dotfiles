@@ -13,3 +13,5 @@ icons=0
 [app-name=wp-vol]
 history=0
 default-timeout=1200
+
+# vim: set filetype=ini
