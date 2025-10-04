@@ -6,7 +6,7 @@ case $- in (*m*)
   trap - TSTP TTIN TTOU
 esac
 
-set -o emacs
+set -o vi
 set --brace-expand
 set --extended-glob
 set --hist-space
@@ -30,10 +30,9 @@ HISTRMDUP=1
 PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin:/usr/local/lib/surfraw"
 export PATH
 
-bindkey --emacs '\^L' clear-and-redraw-all
+bindkey --vi-command '\^L' clear-and-redraw-all
+bindkey --vi-insert '\^L' clear-and-redraw-all
 
-bindkey --emacs '\^[[1;5D' backward-emacsword
-bindkey --emacs '\^[[1;5C' forward-emacsword
 
 # avoid removing/overwriting existing files by accident
 cp() if [ -t 0 ]; then command cp -iv "$@"; else command cp "$@"; fi
