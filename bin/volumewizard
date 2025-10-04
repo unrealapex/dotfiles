@@ -30,10 +30,8 @@ case $1 in
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     ;;
   *)
-    printf "%b" "${bold}volumewizard${reset}: volume control wrapper for wpctl
-
-    ${bold}Usage${reset}: volumewizard [up|down|mute]
-    " >&2
+    printf "%b\n%b\n" "${bold}volumewizard${reset}: volume control wrapper for wpctl" \
+    "${bold}Usage${reset}: volumewizard [up|down|mute]" >&2
     ;;
 esac
 
