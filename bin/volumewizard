@@ -3,13 +3,19 @@
 bold="\033[1m"
 reset="\033[m"
 
+notify() {
+	notify-send \
+		--hint=string:x-dunst-stack-tag:wp-vol \
+		--hint=string:synchronous:wp-vol \
+		"$@"
+	}
 
 send_notification() {
 	volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
 	if echo $volume | grep -q "MUTED"; then
-		notify-send -a "wp-vol" "volume: muted"
+		notify "volume: muted"
 	else
-		notify-send -a "wp-vol" "volume: $(echo ${volume} | tr -dc '0-9' | sed 's/^0\{1,2\}//')%"
+		notify "volume: $(echo ${volume} | tr -dc '0-9' | sed 's/^0\{1,2\}//')%"
 	fi
 }
 

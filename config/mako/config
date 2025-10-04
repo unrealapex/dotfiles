@@ -9,7 +9,6 @@ layer=overlay
 default-timeout=12000
 outer-margin=20
 icons=0
-# max-visible=1
 
 [app-name=wp-vol]
 history=0
