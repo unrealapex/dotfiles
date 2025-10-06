@@ -22,7 +22,7 @@ PROMPT_COMMAND=()
 
 HISTFILE="$XDG_STATE_HOME"/yash/history
 HISTSIZE=2000
-HISTRMDUP=1
+HISTRMDUP=$HISTSIZE
 
 # create HISTFILE parent directory if missing
 ! [ -d "${HISTFILE%/*}" ] && mkdir -p "${HISTFILE%/*}"
