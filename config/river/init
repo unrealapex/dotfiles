@@ -155,17 +155,17 @@ riverctl rule-add -app-id "*" ssd
 riverctl rule-add -app-id "gimp" float
 riverctl rule-add -app-id "zoom" float
 riverctl rule-add -app-id "zenity" float
-riverctl rule-add -app-id "Firefox" tags 2
-riverctl rule-add -app-id "chromium" tags 2
-riverctl rule-add -app-id "vesktop" tags 3
-riverctl rule-add -app-id "steam" tags 5
-riverctl rule-add -app-id "heroic" tags 5
+riverctl rule-add -app-id "Firefox" tags "$((1 << 1))"
+riverctl rule-add -app-id "chromium" tags "$((1 << 1))"
+riverctl rule-add -app-id "vesktop" tags "$((1 << 2))"
+riverctl rule-add -app-id "steam" tags "$((1 << 4))"
+riverctl rule-add -app-id "heroic" tags "$((1 << 4))"
 riverctl rule-add -app-id "heroic" float
-riverctl rule-add -app-id "openarena.x86_64" tags 6
+riverctl rule-add -app-id "openarena.x86_64" tags "$((1 << 5))"
 riverctl rule-add -app-id "openarena.x86_64" fullscreen
-riverctl rule-add -app-id "quake3e.x64" tags 6
+riverctl rule-add -app-id "quake3e.x64" tags "$((1 << 5))"
 riverctl rule-add -app-id "quake3e.x64" fullscreen
-riverctl rule-add -app-id "nuclear" tags 9
+riverctl rule-add -app-id "nuclear" tags "$((1 << 8))"
 riverctl rule-add -title "Picture-in-Picture" float
 # riverctl rule-add -title "Picture-in-Picture" csd
 riverctl rule-add -title "Picture-in-Picture" position 99999999 99999999
