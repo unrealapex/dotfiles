@@ -165,6 +165,7 @@ riverctl rule-add -app-id "openarena.x86_64" tags "$((1 << 5))"
 riverctl rule-add -app-id "openarena.x86_64" fullscreen
 riverctl rule-add -app-id "quake3e.x64" tags "$((1 << 5))"
 riverctl rule-add -app-id "quake3e.x64" fullscreen
+riverctl rule-add -app-id "tf_linux64" tags "$((1 << 5))"
 riverctl rule-add -app-id "nuclear" tags "$((1 << 8))"
 riverctl rule-add -title "Picture-in-Picture" float
 # riverctl rule-add -title "Picture-in-Picture" csd
