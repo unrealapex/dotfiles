@@ -51,7 +51,7 @@ finished() {
 }
 
 help() {
-	printf "make.sh install\nmake.sh [xdg_user_dirs|create_dirs|link|clean|install_vis_plugins|secrets]\n"
+	printf "%s\n%s\n" "make.sh install" "make.sh [xdg_user_dirs|create_dirs|link|clean|install_vis_plugins|secrets]"
 }
 
 main() {
