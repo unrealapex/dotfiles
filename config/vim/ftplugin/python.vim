@@ -1,4 +1,4 @@
 if executable("black")
-		" TODO: make this work on ranges instead of the whole file
+		" NOTE: this only works on the whole file instead of ranges 
 		setlocal formatprg=black\ -q\ -\ <\ %
 endif
