@@ -4,5 +4,5 @@ setlocal softtabstop=2
 setlocal tabstop=2
 
 if executable("shfmt")
-		setlocal formatprg=shfmt\ --indent\ 2
+		setlocal formatprg=shfmt
 endif
