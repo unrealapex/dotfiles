@@ -45,7 +45,6 @@ man-pages
 mozc
 mpv
 mpv-mpris
-mupdf
 newsraft
 noto-fonts-cjk
 noto-fonts-emoji
@@ -80,3 +79,4 @@ wlr-randr
 xorg-xkill
 yash
 yt-dlp
+zathura
