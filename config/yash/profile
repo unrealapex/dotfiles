@@ -2,7 +2,7 @@
 # ~/.config/yash/profile
 #
 
-export VISUAL=$(command -v vise || command -v vis)
+export VISUAL=$(command -v nvim || command -v vim || command -v nvi || command -v vi)
 export EDITOR="ed"
 export FCEDIT="$VISUAL"
 export TERMINAL="foot"

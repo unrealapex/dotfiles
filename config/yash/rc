@@ -98,6 +98,7 @@ alias j='jobs -l'
 alias h='fc -l'
 alias r='history | fnf | cut -f 2- - | sh'
 alias sudo='doas'
+alias vi="$VISUAL"
 alias bc='bc --mathlib --quiet'
 # xdg aliases
 alias pidgin='pidgin --config="$XDG_DATA_HOME"/purple'
