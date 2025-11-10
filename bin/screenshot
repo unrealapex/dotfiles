@@ -21,7 +21,7 @@ image_path=$image_dir/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 ! [ -d $image_dir ] && mkdir -p $image_dir
 
-case $1 in
+case $(printf "select\nfull" | mew) in
   select)
     slurp | grim -g - "$image_path" || exit
     ;;
@@ -29,12 +29,7 @@ case $1 in
     grim "$image_path"
     ;;
   *)
-
-    printf "%b" "${bold}screenshot${reset}: wrapper for grim
-
-    ${bold}Usage${reset}: screenshot [select|full]
-    " >&2
-    exit
+    exit 1
     ;;
 esac
 
