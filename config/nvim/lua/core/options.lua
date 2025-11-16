@@ -49,7 +49,7 @@ vim.cmd.colorscheme("vim")
 vim.cmd.highlight({ "clear", "SignColumn" })
 vim.cmd.highlight({ "normal", "guibg=NONE" })
 
---globals
+-- globals
 
 -- set the mapleader to space
 vim.g.mapleader = " "
