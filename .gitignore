@@ -1,5 +1,6 @@
 *.local
 config/beets/state.pickle
+config/beets/spotify_token.json
 config/cmus/autosave
 config/cmus/cache
 config/cmus/cmusfm.cache
