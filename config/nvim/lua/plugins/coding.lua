@@ -82,18 +82,6 @@ return {
 	},
 
 	-- unimpaired mappings
-	{
-		"echasnovski/mini.bracketed",
-		keys = {
-			{ "[", mode = { "n", "v" } },
-			{ "]", mode = { "n", "v" } },
-			-- NOTE: lazy loading a large number of keymaps causes input latency for said keymap's mode
-			"y",
-		},
-		config = function()
-			require("mini.bracketed").setup()
-		end,
-	},
 
 	-- surround
 	{
