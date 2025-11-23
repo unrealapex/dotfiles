@@ -159,10 +159,12 @@ riverctl rule-add -app-id "Firefox" tags "$((1 << 1))"
 riverctl rule-add -app-id "chromium" tags "$((1 << 1))"
 riverctl rule-add -app-id "vesktop" tags "$((1 << 2))"
 riverctl rule-add -app-id "steam" tags "$((1 << 4))"
+riverctl rule-add -app-id "org.prismlauncher.PrismLauncher" tags "$((1 << 4))"
 riverctl rule-add -app-id "heroic" tags "$((1 << 4))"
 riverctl rule-add -app-id "heroic" float
 riverctl rule-add -app-id "openarena.x86_64" tags "$((1 << 5))"
 riverctl rule-add -app-id "openarena.x86_64" fullscreen
+riverctl rule-add -title "Minecraft*" tags "$((1 << 5))"
 riverctl rule-add -app-id "quake3e.x64" tags "$((1 << 5))"
 riverctl rule-add -app-id "quake3e.x64" fullscreen
 riverctl rule-add -app-id "tf_linux64" tags "$((1 << 5))"
