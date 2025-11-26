@@ -38,6 +38,7 @@ imv
 jq
 kanshi
 lowdown
+lswt
 lua
 lua-language-server
 mako
@@ -63,6 +64,7 @@ shfmt
 slurp
 stylua
 surfraw
+tesseract
 tor
 transmission
 tree
@@ -82,4 +84,3 @@ xorg-xkill
 yash
 yt-dlp
 zathura
-tesseract
