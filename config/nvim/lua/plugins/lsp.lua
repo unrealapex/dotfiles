@@ -31,13 +31,13 @@ return {
 
 			-- Use an on_attach function to only map the following keys
 			-- after the language server attaches to the current buffer
-			local lsp_attach = function(client, bufnr)
+			local lsp_attach = function(args)
 				-- Enable completion triggered by <c-x><c-o>
-				vim.bo[bufnr].omnifunc = "v:lua.MiniCompletion.completefunc_lsp"
+        vim.bo[args.buf].omnifunc = 'v:lua.MiniCompletion.completefunc_lsp'
 
 				-- Mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
-				local bufopts = { noremap = true, silent = true, buffer = bufnr }
+				local bufopts = { noremap = true, silent = true, buffer = args.buf }
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
@@ -58,9 +58,7 @@ return {
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 			end
 
-			vim.lsp.config("*", {
-				on_attach = lsp_attach,
-			})
+      vim.api.nvim_create_autocmd('LspAttach', { callback = lsp_attach })
 
 			vim.lsp.config("clangd", {
 				cmd = {
