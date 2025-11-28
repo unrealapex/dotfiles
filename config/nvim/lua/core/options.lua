@@ -47,13 +47,6 @@ vim.opt.wrapmargin = 73
 vim.cmd.syntax("on")
 vim.cmd.colorscheme("vim")
 
--- globals
-
--- set the mapleader to space
-vim.g.mapleader = " "
-
--- vim.g["rainbow#pairs"] = { { "(", ")" }, { "[", "]" }, { "{", "}" } }
-
 -- environment variables
 
 -- $CONFIG
