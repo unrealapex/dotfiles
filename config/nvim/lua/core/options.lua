@@ -60,22 +60,22 @@ vim.g.mapleader = " "
 vim.env.CONFIG = vim.fn.stdpath("config")
 
 -- $OPTIONS
-vim.env.OPTIONS = vim.fn.stdpath("config") .. "/lua/core/options.lua"
+vim.env.OPTIONS = vim.env.CONFIG .. "/lua/core/options.lua"
 
 -- $LAZY
-vim.env.LAZY = vim.fn.stdpath("config") .. "/lua/core/lazy.lua"
+vim.env.LAZY = vim.env.CONFIG .. "/lua/core/lazy.lua"
 
 -- $PLUGINS
-vim.env.PLUGINS = vim.fn.stdpath("config") .. "/lua/plugins"
+vim.env.PLUGINS = vim.env.CONFIG .. "/lua/plugins"
 
 -- $KEYMAPS
-vim.env.KEYMAPS = vim.fn.stdpath("config") .. "/lua/core/keymaps.lua"
+vim.env.KEYMAPS = vim.env.CONFIG .. "/lua/core/keymaps.lua"
 
 -- $AUTOCMDS
-vim.env.AUTOCMDS = vim.fn.stdpath("config") .. "/lua/core/autocmds.lua"
+vim.env.AUTOCMDS = vim.env.CONFIG .. "/lua/core/autocmds.lua"
 
 -- $LSP
-vim.env.LSP = vim.fn.stdpath("config") .. "/lua/plugins/lsp.lua"
+vim.env.LSP = vim.env.CONFIG .. "/lua/plugins/lsp.lua"
 
 -- $FTPLUGIN
-vim.env.FTPLUGIN = vim.fn.stdpath("config") .. "/after/ftplugin"
+vim.env.FTPLUGIN = vim.env.CONFIG .. "/after/ftplugin"
