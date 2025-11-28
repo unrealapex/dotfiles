@@ -105,7 +105,7 @@ alias mbsync='mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 alias dosbox='dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf'
 alias abook='abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile "$XDG_DATA_HOME"/abook/addressbook'
-alias ytflac='yt-dlp -xq --audio-format flac --audio-quality 10'
+alias ytflac='yt-dlp -x --progress --newline --audio-format flac --audio-quality 10'
 alias vkquake='gamemoderun vkquake -basedir ~/.local/share/Steam/steamapps/common/Quake'
 alias bat="cat /sys/class/power_supply/BAT0/{capacity,status}"
 alias cam="mpv av://v4l2:/dev/video0 --screenshot-dir=~/Pictures/Webcam --screenshot-template='Photo from %tY-%tm-%td %tH-%tM-%tS' --screenshot-jpeg-quality=100"
