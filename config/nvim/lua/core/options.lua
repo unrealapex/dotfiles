@@ -46,8 +46,6 @@ vim.opt.wrapmargin = 73
 
 vim.cmd.syntax("on")
 vim.cmd.colorscheme("vim")
-vim.cmd.highlight({ "clear", "SignColumn" })
-vim.cmd.highlight({ "normal", "guibg=NONE" })
 
 -- globals
 

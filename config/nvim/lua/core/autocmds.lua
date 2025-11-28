@@ -63,5 +63,8 @@ vim.api.nvim_create_autocmd("CursorMoved", {
 
 vim.api.nvim_create_autocmd("ColorScheme", {
 	group = vim.api.nvim_create_augroup("colorscheme_tweak", { clear = true }),
-	callback = function() end,
+	callback = function() 
+    vim.cmd.highlight({ "clear", "SignColumn" })
+    vim.cmd.highlight({ "normal", "guibg=NONE" })
+  end,
 })
