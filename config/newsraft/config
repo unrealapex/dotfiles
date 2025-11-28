@@ -1,5 +1,5 @@
 bind m exec mpv "%l"
-bind f exec nsxiv "%l"
+bind f exec imv "%l"
 bind O exec xdg-open "%l"
 
 # vim: filetype=conf
