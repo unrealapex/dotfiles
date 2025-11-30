@@ -47,7 +47,6 @@ set smartcase
 set splitright
 set tabpagemax=50
 set tabstop=4
-set tags=./tags,tags;
 set textwidth=73
 set title
 set ttimeout
@@ -60,7 +59,7 @@ set viewoptions="unix,slash"
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 set wildmenu
 set wildmode=longest:full,full
-set wildoptions=pum,tagfile
+set wildoptions=pum
 
 syntax on
 filetype plugin indent on
@@ -115,7 +114,6 @@ let g:mucomplete#completion_delay = 100
 
 let g:highlightedyank_highlight_duration = 150
 
-let g:gutentags_cache_dir = expand('$XDG_DATA_HOME') . '/vim/tags'
 let g:ale_disable_lsp = 1
 
 " keybindings
@@ -152,8 +150,6 @@ function! PackInit() abort
 		call minpac#add('https://github.com/wellle/targets.vim')
 		call minpac#add('https://github.com/lifepillar/vim-mucomplete')
 		call minpac#add('https://github.com/machakann/vim-highlightedyank')
-		call minpac#add('https://github.com/ludovicchabant/vim-gutentags')
-		call minpac#add('https://github.com/preservim/tagbar')
 		call minpac#add('https://github.com/dense-analysis/ale')
 		" TODO: configure snippets with omnicomplete
 endfunction
@@ -166,8 +162,6 @@ autocmd Syntax * RainbowParentheses
 
 nnoremap <silent> [d <Plug>(ale_previous_wrap)
 nnoremap <silent> ]d <Plug>(ale_next_wrap)
-
-nnoremap <leader>o :TagbarToggle<CR>
 
 function! FzyCommand(choice_command, vim_command)
   try
