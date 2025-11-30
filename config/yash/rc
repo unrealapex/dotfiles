@@ -27,7 +27,7 @@ HISTRMDUP=$HISTSIZE
 # create HISTFILE parent directory if missing
 ! [ -d "${HISTFILE%/*}" ] && mkdir -p "${HISTFILE%/*}"
 
-PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/cargo/bin:/usr/local/lib/surfraw"
+PATH="$HOME/.local/bin:$HOME/.local/share/cargo/bin:/usr/local/lib/surfraw:$PATH"
 export PATH
 
 bindkey --vi-command '\^L' clear-and-redraw-all
