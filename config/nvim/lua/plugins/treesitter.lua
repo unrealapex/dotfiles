@@ -4,6 +4,7 @@ return {
 	-- improved syntax highlighting
 	{
 		"nvim-treesitter/nvim-treesitter",
+    branch = 'master',
     lazy = false,
 		build = ":TSUpdate",
 		config = function()
