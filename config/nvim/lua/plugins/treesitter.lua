@@ -4,27 +4,8 @@ return {
 	-- improved syntax highlighting
 	{
 		"nvim-treesitter/nvim-treesitter",
+    lazy = false,
 		build = ":TSUpdate",
-		event = { "BufReadPost", "BufNewFile" },
-		cmd = {
-			"TSBufDisable",
-			"TSBufEnable",
-			"TSBufToggle",
-			"TSConfigInfo",
-			"TSDisable",
-			"TSEditQuery",
-			"TSEditQueryUserAfter",
-			"TSEnable",
-			"TSInstall",
-			"TSInstallFromGrammar",
-			"TSInstallInfo",
-			"TSInstallSync",
-			"TSModuleInfo",
-			"TSToggle",
-			"TSUninstall",
-			"TSUpdate",
-			"TSUpdateSync",
-		},
 		config = function()
 			local configs = require("nvim-treesitter.configs")
 			configs.setup({
