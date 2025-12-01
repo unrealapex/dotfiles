@@ -68,6 +68,15 @@ tesseract
 tor
 transmission
 tree
+tree-sitter-bash
+tree-sitter-c
+tree-sitter-cli
+tree-sitter-lua
+tree-sitter-markdown
+tree-sitter-markdown-doc
+tree-sitter-python
+tree-sitter-query
+tree-sitter-vimdoc
 unicode-emoji
 unzip
 wbg
