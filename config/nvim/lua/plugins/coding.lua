@@ -84,5 +84,5 @@ return {
     "unrealapex/prose.nvim",
     cmd = "Prose",
     opts = {},
-  }
+  },
 }
