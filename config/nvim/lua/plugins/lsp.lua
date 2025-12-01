@@ -17,8 +17,6 @@ return {
 			local lsp_capabilities = {}
       vim.api.nvim_create_autocmd('LspAttach', { callback = function(args)
 				local bufopts = { noremap = true, silent = true, buffer = args.buf }
-				-- Enable completion triggered by <c-x><c-o>
-        vim.bo[args.buf].omnifunc = 'v:lua.MiniCompletion.completefunc_lsp'
         vim.keymap.set("n", "[d", function()
           vim.diagnostic.goto_prev({ float = false })
         end, bufopts)
@@ -44,7 +42,12 @@ return {
 				end, bufopts)
         vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        vim.lsp.completion.enable(true, client.id, args.buf)
 
+        vim.keymap.set('i', '<c-space>', function()
+          vim.lsp.completion.get()
+        end)
       end
       })
 

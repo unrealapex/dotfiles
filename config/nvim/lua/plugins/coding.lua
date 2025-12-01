@@ -1,17 +1,6 @@
 ---@diagnostic disable: different-requires, mixed_table, undefined-field
 
 return {
-	{
-		"echasnovski/mini.completion",
-		event = "InsertEnter",
-		opts = {
-			-- disable completion unless triggered manually
-			delay = { completion = 100000000, info = 100, signature = 50 },
-			lsp_completion = {
-				source_func = "omnifunc",
-			},
-		},
-	},
 	-- additional text objects
 	{
 		"echasnovski/mini.ai",
@@ -57,27 +46,6 @@ return {
 		end,
 		config = function(_, opts)
 			require("mini.ai").setup(opts)
-		end,
-	},
-
-	-- snippets
-	{
-		"echasnovski/mini.snippets",
-		dependencies = "rafamadriz/friendly-snippets",
-		event = "InsertEnter",
-		setup = function()
-			local gen_loader = require("mini.snippets").gen_loader
-			require("mini.snippets").setup({
-				snippets = {
-					-- Load custom file with global snippets first
-					-- gen_loader.from_file('~/.config/nvim/snippets/global.json'),
-
-					-- Load snippets based on current language by reading files from
-					-- "snippets/" subdirectories from 'runtimepath' directories.
-					-- NOTE: sometimes snippets don't load for some reason
-					gen_loader.from_lang(),
-				},
-			})
 		end,
 	},
 
