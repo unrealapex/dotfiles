@@ -49,8 +49,6 @@ return {
 		end,
 	},
 
-	-- unimpaired mappings
-
 	-- surround
 	{
 		"echasnovski/mini.surround",
