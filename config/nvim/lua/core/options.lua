@@ -1,5 +1,6 @@
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
+vim.opt.complete:append("f")
 vim.opt.expandtab = true
 vim.opt.formatoptions:append("roln")
 vim.opt.foldenable = false
