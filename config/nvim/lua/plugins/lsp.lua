@@ -15,29 +15,17 @@ return {
 		config = function()
 			-- Setup lspconfig.
 			local lsp_capabilities = {}
-
-			-- lspconfig mappings.
-			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
-			local opts = { noremap = true, silent = true }
-			-- redundtant with inline diagnostics but keeping anyways
-			vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
-			vim.keymap.set("n", "[d", function()
-				vim.diagnostic.goto_prev({ float = false })
-			end, opts)
-			vim.keymap.set("n", "]d", function()
-				vim.diagnostic.goto_next({ float = false })
-			end, opts)
-			vim.keymap.set("n", "<space>;", vim.diagnostic.setloclist, opts)
-
-			-- Use an on_attach function to only map the following keys
-			-- after the language server attaches to the current buffer
-			local lsp_attach = function(args)
+      vim.api.nvim_create_autocmd('LspAttach', { callback = function(args)
+				local bufopts = { noremap = true, silent = true, buffer = args.buf }
 				-- Enable completion triggered by <c-x><c-o>
         vim.bo[args.buf].omnifunc = 'v:lua.MiniCompletion.completefunc_lsp'
-
-				-- Mappings.
-				-- See `:help vim.lsp.*` for documentation on any of the below functions
-				local bufopts = { noremap = true, silent = true, buffer = args.buf }
+        vim.keymap.set("n", "[d", function()
+          vim.diagnostic.goto_prev({ float = false })
+        end, bufopts)
+        vim.keymap.set("n", "]d", function()
+          vim.diagnostic.goto_next({ float = false })
+        end, bufopts)
+        vim.keymap.set("n", "<space>;", vim.diagnostic.setloclist, bufopts)
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
@@ -55,10 +43,11 @@ return {
 						context = { only = { "quickfix", "refactor", "source" } },
 					})
 				end, bufopts)
-				vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-			end
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
 
-      vim.api.nvim_create_autocmd('LspAttach', { callback = lsp_attach })
+
+      end
+      })
 
 			vim.lsp.config("clangd", {
 				cmd = {
