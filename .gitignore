@@ -12,3 +12,4 @@ config/cmus/playlists
 config/cmus/search-history
 config/cmus/cache.tmp
 config/zsh/.zsh_plugins.zsh
+config/aerc/accounts.conf
