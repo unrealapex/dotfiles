@@ -12,15 +12,15 @@ install() {
 }
 
 xdg_user_dirs() {
-	mkdir -p "$HOME"/Desktop "$HOME"/Documents "$HOME"/Downloads \ 
-	"$HOME"/Music "$HOME"/Pictures "$HOME"/Public "$HOME"/Templates \ 
+	mkdir -p "$HOME"/Desktop "$HOME"/Documents "$HOME"/Downloads \
+	"$HOME"/Music "$HOME"/Pictures "$HOME"/Public "$HOME"/Templates \
 	"$HOME"/Videos "$bin_dir"
 }
 
 create_dirs() {
 	xdg_user_dirs
 	mkdir -p "$data_home"/applications "$data_home"/themes \
-		"$data_home"/abook "$HOME"/projects "$HOME"/Pictures/Webcam \ 
+		"$data_home"/abook "$HOME"/projects "$HOME"/Pictures/Webcam \
 	"$HOME"/Pictures/Screenshots "$bin_dir"
 }
 
