@@ -90,7 +90,7 @@ fi
 
 
 # some more ls aliases
-alias ll='ls -Ahl1'
+alias ll='ls -Ahl'
 alias la='ls -A'
 alias l='ls -CF'
 alias j='jobs -l'
