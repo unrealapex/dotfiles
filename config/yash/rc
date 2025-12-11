@@ -21,7 +21,7 @@ YASH_PS1S='\fo.'
 PROMPT_COMMAND=()
 
 HISTFILE="$XDG_STATE_HOME"/yash/history
-HISTSIZE=2000
+HISTSIZE=5000
 HISTRMDUP=$HISTSIZE
 
 # create HISTFILE parent directory if missing
