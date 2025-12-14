@@ -89,10 +89,10 @@ if [ "$_tsl" ] && [ "$_fsl" ]; then
 fi
 
 
-# some more ls aliases
-alias ll='ls -Ahl'
-alias la='ls -A'
-alias l='ls -CF'
+# re-definition hack
+ll() { ls -Ahl; }
+la() { ls -A; }
+l() { ls -CF; }
 alias j='jobs -l'
 alias h='fc -l'
 alias r='history | fnf | cut -f 2- - | sh'
