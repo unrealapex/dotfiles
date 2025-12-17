@@ -179,7 +179,7 @@ riverctl default-layout rivertile
 rivertile -view-padding 4 -outer-padding 4 &
 
 riverctl spawn kanshi
-riverctl spawn "status | dam"
+riverctl spawn "while date +'%m/%d %I:%M %p'; do sleep 1; done | dam"
 riverctl spawn "wbg /home/erin/dotfiles/sakura.png"
 riverctl spawn "playerctld daemon"
 riverctl spawn "widle -t 300 ${lockcmd}"

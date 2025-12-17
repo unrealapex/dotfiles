@@ -1,7 +1,0 @@
-#!/bin/sh
-
-while true; do
-	date +"%m/%d %I:%M %p"
-	sleep 1
-done
-
