@@ -2,4 +2,5 @@ bind m exec mpv "%l"
 bind f exec imv "%l"
 bind O exec xdg-open "%l"
 
+list-entry-date-format "%b %d, %Y"
 # vim: filetype=conf
