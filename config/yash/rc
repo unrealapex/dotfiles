@@ -121,7 +121,7 @@ alias ci='git commit'
 alias co='git checkout'
 alias di='git diff'
 alias log='git log'
-alias st='git status'
+alias st='git status --short --branch --show-stash'
 alias up='git pull'
 alias br='git branch'
 
