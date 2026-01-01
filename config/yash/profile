@@ -13,7 +13,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 export MANROFFOPT="-c"
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANPAGER='nvim +Man!'
 export LESS="--ignore-case --RAW-CONTROL-CHARS --no-init"
 export FZF_DEFAULT_OPTS='--no-unicode --color=bg+:-1,bg:-1'
 export FFF_FAV1="$HOME/Downloads"

@@ -48,7 +48,6 @@ require("lazy").setup("plugins", {
 				"tutor",
 				"osc52",
 				"fzf",
-				"man",
 			},
 		},
 	},
