@@ -18,6 +18,7 @@ set +o le-prompt-sp
 : ${LOGNAME:=$(logname)} ${HOSTNAME:=$(uname -n)}
 YASH_PS1='${LOGNAME}@${HOSTNAME}:${${${PWD:/~/\~}##*/}:-$PWD} $ ' 
 YASH_PS1S='\fo.'
+PS1P='\fkt'
 PROMPT_COMMAND=()
 
 HISTFILE="$XDG_STATE_HOME"/yash/history
