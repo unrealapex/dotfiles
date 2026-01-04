@@ -4,7 +4,6 @@
 " +profile +reltime +signs +syntax +timers  +viminfo 
 set autoindent
 set autoread
-set background=dark
 set backspace=indent,eol,start
 set backupdir=$XDG_DATA_HOME/vim/backup
 set belloff=all
