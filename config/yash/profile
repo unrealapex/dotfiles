@@ -24,7 +24,7 @@ export FFF_FAV5="$HOME/Videos"
 export FFF_FAV6="$HOME/dotfiles"
 export FFF_FAV7="$HOME/projects"
 export FFF_FAV8="$HOME/.config/yash/rc"
-export FFF_FAV9="$HOME/.xinitrc"
+export FFF_FAV9="$HOME/erins-space"
 export MAKEFLAGS="-j$(nproc) -l$(($(nproc) + 1))"
 
 # set fcitx as input method framework
