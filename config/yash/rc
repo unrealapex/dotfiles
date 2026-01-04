@@ -116,7 +116,7 @@ alias diff='diff -u'
 alias f='fff'
 alias -g L='| $PAGER'
 alias -g N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
-alias -g T='$(fd -H -t f -t d | fnf -m -p "select files > ")'
+alias -g T='$(fd -H -t f -t d -c always | fnf -m -p "select files > ")'
 
 alias ci='git commit'
 alias co='git checkout'
@@ -149,12 +149,12 @@ glow() {
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-	dir=$(fd -H -t d | fnf -p "cd into > ")
+	dir=$(fd -H -t d -c always | fnf -p "cd into > ")
 	[ -d "$dir" ] && cd "$dir"
 }
 
 ff() {
-  files=$(fd -H -t f | fnf -m -p "open files in editor > ")
+  files=$(fd -H -t f -c always | fnf -m -p "open files in editor > ")
   [ -n "$files" ] && "$VISUAL" $files
 }
 
