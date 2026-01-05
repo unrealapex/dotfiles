@@ -6,7 +6,6 @@ bin_dir=~/.local/bin
 
 install() {
 	link
-	install_vis_plugins
 	secrets
 	finished
 }
@@ -37,11 +36,6 @@ link() {
 clean() {
 	find "$config_home" "$HOME"/.local/bin "$HOME"/.gnupg \ 
 	"$data_home"/themes -type l -delete
-}
-
-install_vis_plugins() {
-	git submodule init
-	git submodule update --recursive
 }
 
 secrets() {
