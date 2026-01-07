@@ -33,7 +33,6 @@ gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
 hyperfine
-ibm-plex-mono
 imv
 jq
 kanshi
@@ -65,6 +64,7 @@ shfmt
 slurp
 stylua
 surfraw
+terminus
 tesseract
 tor
 transmission
