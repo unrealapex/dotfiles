@@ -72,18 +72,18 @@ DVTM_TERM=dvtm-256color
 eval "$(keychain --eval --ignore-missing --nogui --ssh-allow-gpg --dir "$XDG_RUNTIME_DIR" --absolute)"
 
 ly() {
-  [ -n "${DISPLAY-}" ] && return 1
-  printf 'start wayland? [Y/n]: '
-  read answer
+	[ -n "${DISPLAY-}" ] && return 1
+	printf 'start wayland? [Y/n]: '
+	read answer
 
-  case "$answer" in
-	[Yy]*|"")
-		river
-	;;
-    *|0)
-	    :
-      ;;
-  esac
+	case "$answer" in
+		[Yy]*|"")
+			river
+			;;
+		*|0)
+			:
+			;;
+	esac
 }
 
 # handle tty output of linux and bsd terminals
