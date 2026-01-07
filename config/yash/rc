@@ -35,10 +35,10 @@ bindkey --vi-command '\^L' clear-and-redraw-all
 bindkey --vi-insert '\^L' clear-and-redraw-all
 
 
-# avoid removing/overwriting existing files by accident
-cp() if [ -t 0 ]; then command cp -iv "$@"; else command cp "$@"; fi
-mv() if [ -t 0 ]; then command mv -iv "$@"; else command mv "$@"; fi
-rm() if [ -t 0 ]; then command rm -iv "$@"; else command rm "$@"; fi
+# -i flag avoids removing/overwriting existing files by accident
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
 
 
 # enable color support of ls and also add handy aliases
@@ -129,13 +129,7 @@ alias br='git branch'
 # handle programs that incorrectly read EDITOR instead of VISUAL
 alias pass="EDITOR=$VISUAL pass"
 
-cd() {
-  if [ -t 0 ] && [ "$#" -ne 0 ]; then
-    command pushd --remove-duplicates --default-directory="$HOME" "$@"
-  else
-    command cd
-  fi
-}
+alias cd='pushd --remove-duplicates --default-directory=$HOME'
 
 # FIXME: this doesn't work for some reason
 alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
