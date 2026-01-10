@@ -121,7 +121,8 @@ alias -g T='$(fd --type f --type d --color=always | fnf -m -p "select files > ")
 alias ci='git commit'
 alias co='git checkout'
 alias di='git diff'
-alias log='git log'
+# NOTE: no new line appended when using --stat
+alias log='git log --pretty="%C(auto)%h — %an (%cr)%n%n%w(0,4,4)%s%n%w(0,4,4)%b"'
 alias st='git status --short --branch --show-stash'
 alias up='git pull'
 alias br='git branch'
