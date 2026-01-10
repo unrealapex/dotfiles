@@ -12,7 +12,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
-export MANROFFOPT="-c"
 export MANPAGER='nvim +Man!'
 export LESS="--ignore-case --RAW-CONTROL-CHARS --no-init"
 export FFF_FAV1="$HOME/Downloads"
