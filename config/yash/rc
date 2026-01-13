@@ -150,6 +150,11 @@ ff() {
   [ -n "$files" ] && "$VISUAL" $files
 }
 
+mktouch() {
+	dir=$(dirname "$1")
+	[ ! -d "$dir" ] && mkdir -p "$dir" && touch "$1"
+}
+
 mktd() {
 	dir=$(mktemp -d)
 	[ -d "$dir" ] && cd "$dir" || exit 1
