@@ -14,6 +14,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 export MANPAGER='nvim +Man!'
 export LESS="--ignore-case --RAW-CONTROL-CHARS --no-init"
+export LESSOPEN="|lesspipe.sh %s"
 export FFF_FAV1="$HOME/Downloads"
 export FFF_FAV2="$HOME/Documents"
 export FFF_FAV3="$HOME/Music"
