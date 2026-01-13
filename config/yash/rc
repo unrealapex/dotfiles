@@ -128,10 +128,8 @@ alias br='git branch'
 alias pass="EDITOR=$VISUAL pass"
 
 alias cd='pushd --remove-duplicates --default-directory=$HOME'
-
-# FIXME: this doesn't work for some reason
-alias cleanpatches='find -type f \( -name "*.orig" -o -name "*.rej" \) -delete'
 alias -- -='cd -'
+
 glow() {
   [ -f "$1" ] && lowdown -Tterm "$1" | less
 }
