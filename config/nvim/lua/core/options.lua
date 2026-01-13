@@ -16,6 +16,7 @@ vim.opt.pumheight = 12
 vim.opt.scrolloff = 8
 vim.opt.smartcase = true
 vim.opt.splitright = true
+vim.opt.termguicolors = false
 vim.opt.textwidth = 73
 vim.opt.undofile = true
 vim.opt.updatetime = 200
