@@ -155,6 +155,10 @@ mktouch() {
 	[ ! -d "$dir" ] && mkdir -p "$dir" && touch "$1"
 }
 
+mkcd() {
+	mkdir -p "$1" && cd "$1" && pwd
+}
+
 mktd() {
 	dir=$(mktemp -d)
 	[ -d "$dir" ] && cd "$dir" || exit 1
