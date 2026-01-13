@@ -34,13 +34,6 @@ export PATH
 bindkey --vi-command '\^L' clear-and-redraw-all
 bindkey --vi-insert '\^L' clear-and-redraw-all
 
-
-# -i flag avoids removing/overwriting existing files by accident
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias rm='rm -iv'
-
-
 # enable color support of ls and also add handy aliases
 if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
   ls() { command ls -G "$@"; }
@@ -94,6 +87,10 @@ fi
 ll() { ls -Ahl; }
 la() { ls -A; }
 l() { ls -CF; }
+# -i flag avoids removing/overwriting existing files by accident
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
 alias j='jobs -l'
 alias h='fc -l'
 alias r='history | fnf | cut -f 2- - | sh'
