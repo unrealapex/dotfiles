@@ -21,5 +21,3 @@ vim.opt.textwidth = 73
 vim.opt.undofile = true
 vim.opt.updatetime = 200
 vim.opt.wrapmargin = 73
-
-vim.cmd.colorscheme("vim")
