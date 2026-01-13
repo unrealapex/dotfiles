@@ -152,11 +152,7 @@ ff() {
 
 mktd() {
 	dir=$(mktemp -d)
-	if [ -d "$dir" ]; then
-		cd "$dir"
-	else
-		echo "failed"
-	fi
+	[ -d "$dir" ] && cd "$dir" || exit 1
 }
 
 # vim: filetype=sh
