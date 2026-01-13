@@ -36,9 +36,6 @@ require("lazy").setup("plugins", {
 			},
 		},
 	},
-	install = {
-		colorscheme = { "vim" },
-	},
 })
 
 vim.keymap.set("n", "<leader>l", ":Lazy<CR>")
