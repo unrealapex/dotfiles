@@ -8,6 +8,7 @@
 	pager =  diff-highlight | less -RFX
 	excludesfile = ~/.config/git/gitignore
 	whitespace = trailing-space
+        hooksPath = ~/.config/git/hooks
 [interactive]
 	diffFilter = diff-highlight
 [pull]
