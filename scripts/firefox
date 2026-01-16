@@ -1,14 +1,15 @@
 #!/bin/sh
 
 # ensure profiles directory is created
-if [ ! -d "$HOME/.mozilla/" ]; then
+mozilla_dir="$HOME/.mozilla/"
+if [ ! -d  ]; then
     sleep 5 && killall firefox &
     firefox -headless &
     wait
 fi
 
 default_profile=$(grep "Default=.*\.default*" "$HOME/.mozilla/firefox/profiles.ini" | cut -d"=" -f2)
-profile_path=$(find ~/.mozilla/firefox/ -type d -name $default_profile)
+profile_path=$(find $mozilla_dir/firefox/ -type d -name $default_profile)
 temp_file=$(mktemp)
 
 # fetch betterfox user.js
