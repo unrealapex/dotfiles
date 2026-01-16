@@ -12,16 +12,16 @@ install() {
 
 xdg_user_dirs() {
 	mkdir -p "$HOME"/Desktop "$HOME"/Documents "$HOME"/Downloads \
-	"$HOME"/Music "$HOME"/Pictures "$HOME"/Public "$HOME"/Templates \
-	"$HOME"/Videos "$bin_dir"
-}
+		"$HOME"/Music "$HOME"/Pictures "$HOME"/Public "$HOME"/Templates \
+		"$HOME"/Videos "$bin_dir"
+	}
 
 create_dirs() {
 	xdg_user_dirs
 	mkdir -p "$data_home"/applications "$data_home"/themes \
 		"$data_home"/abook "$HOME"/projects "$HOME"/Pictures/Webcam \
-	"$HOME"/Pictures/Screenshots "$bin_dir"
-}
+		"$HOME"/Pictures/Screenshots "$bin_dir"
+	}
 
 link() {
 	create_dirs
@@ -35,14 +35,14 @@ link() {
 
 clean() {
 	find "$config_home" "$HOME"/.local/bin "$HOME"/.gnupg \ 
-	"$data_home"/themes -type l -delete
-}
+		"$data_home"/themes -type l -delete
+	}
 
 secrets() {
 	secrets_file="$config_home"/git/config.local
 	[ ! -f "$secrets_file" ] && cp -n secrets/gitconfig.local \
 		"$secrets_file"
-}
+	}
 
 finished() {
 	echo "$0: finished"
@@ -50,33 +50,33 @@ finished() {
 
 help() {
 	printf "%s\n%s\n" \
-	"make.sh install" \
-	"make.sh [xdg_user_dirs|create_dirs|link|clean|secrets]"
-}
+		"make.sh install" \
+		"make.sh [xdg_user_dirs|create_dirs|link|clean|secrets]"
+	}
 
 main() {
 	case "$1" in
-	install | all)
-		install
-		;;
-	xdg_user_dirs)
-		xdg_user_dirs
-		;;
-	create_dirs)
-		create_dirs
-		;;
-	link)
-		link
-		;;
-	clean)
-		clean
-		;;
-	secrets)
-		secrets
-		;;
-	*)
-		help
-		;;
+		install | all)
+			install
+			;;
+		xdg_user_dirs)
+			xdg_user_dirs
+			;;
+		create_dirs)
+			create_dirs
+			;;
+		link)
+			link
+			;;
+		clean)
+			clean
+			;;
+		secrets)
+			secrets
+			;;
+		*)
+			help
+			;;
 	esac
 }
 
