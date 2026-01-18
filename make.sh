@@ -35,7 +35,7 @@ link() {
 }
 
 clean() {
-	find "$config_home" "$HOME"/.local/bin "$HOME"/.gnupg \ 
+	find "$config_home" "$HOME"/.local/bin "$HOME"/.gnupg \
 		"$data_home"/themes -type l -delete
 	}
 
