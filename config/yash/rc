@@ -41,7 +41,6 @@ if [ "${COLORTERM-}" = "truecolor" ] || [ "${COLORTERM-}" = "24bit" ] || \
   grep() { command grep --color=auto "$@"; }
   fgrep() { command fgrep --color=auto "$@"; }
   egrep() { command egrep --color=auto "$@"; }
-  diff() { command diff --color=auto "$@"; }
   tree() { command tree -C "$@"; }
 fi
 
