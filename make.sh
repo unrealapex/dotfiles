@@ -31,6 +31,7 @@ link() {
 	ln -sf "$PWD"/share/themes/* "$data_home"/themes
 	ln -sf "$PWD"/bin/* "$bin_dir"
 	ln -sf "$PWD"/exrc "$HOME"/.exrc
+	ln -sf "$PWD"/sakura.png "$HOME"/Pictures/sakura.png
 }
 
 clean() {
