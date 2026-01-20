@@ -1,5 +1,5 @@
 set autoindent
-set cedit=
+set cedit=
 set escapetime=1
 set extended
 set filec=\	
