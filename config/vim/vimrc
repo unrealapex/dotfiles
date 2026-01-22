@@ -55,7 +55,7 @@ set undofile
 set undolevels=500
 set updatetime=200
 set viewoptions="unix,slash"
-set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set viminfofile=$XDG_STATE_HOME/vim/viminfo
 set wildmenu
 set wildmode=longest:full,full
 set wildoptions=pum
