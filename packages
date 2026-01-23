@@ -66,6 +66,7 @@ shfmt
 slurp
 stylua
 surfraw
+swayidle
 terminus
 tesseract
 tor
@@ -85,7 +86,6 @@ unzip
 wbg
 wev
 wget2
-widle
 wine-staging
 wireplumber
 wl-clipboard
