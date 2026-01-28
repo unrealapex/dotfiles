@@ -97,7 +97,6 @@ alias sudo='doas'
 alias vi="$VISUAL"
 # -R option is specified for POSIX vi
 alias view="$VISUAL -R"
-alias bc='bc --mathlib --quiet'
 # xdg aliases
 alias pidgin='pidgin --config="$XDG_DATA_HOME"/purple'
 alias mbsync='mbsync -c "$XDG_CONFIG_HOME"/isync/mbsyncrc'
