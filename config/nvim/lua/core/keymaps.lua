@@ -36,3 +36,5 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 -- don't lose selection when shifting text
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
+
+vim.keymap.set("n", "<leader>f", ":FZF<CR>")
