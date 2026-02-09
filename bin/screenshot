@@ -13,6 +13,7 @@ IFS=" "
 for util in $utils; do
 	! command -v $util && error "$util not found"
 done
+IFS=
 
 bold="\033[1m"
 reset="\033[m"
