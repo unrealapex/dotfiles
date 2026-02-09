@@ -21,12 +21,22 @@ image_path=$image_dir/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 ! [ -d $image_dir ] && mkdir -p $image_dir
 
+intent() {
+	printf "copy\nsave" | mew
+}
+
 case $1 in
 	select)
-		slurp | grim -g - "$image_path" || exit
+		region=$(slurp)
+		[ $? != 0 ] && exit 1
+		answer=$(intent)
+		[ $answer = "copy" ] && echo $region | grim -g - - | wl-copy -t  image/png
+		[ $answer = "save" ] && echo $region | grim -g - "$image_path"
 		;;
 	full)
-		grim "$image_path"
+		answer=$(intent)
+		[ $answer = "copy" ] && grim - | wl-copy -t  image/png
+		[ $answer = "save" ] && grim "$image_path"
 		;;
 	*)
 
@@ -38,8 +48,3 @@ case $1 in
 		;;
 esac
 
-wl-copy < "$image_path"
-
-printf "%s\n" "screenshot saved to $image_path"
-
-notify-send "screenshot: image saved"
