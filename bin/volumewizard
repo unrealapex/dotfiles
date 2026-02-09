@@ -9,7 +9,7 @@ notify() {
 		--hint=string:x-dunst-stack-tag:wp-vol \
 		--hint=string:synchronous:wp-vol \
 		"$@"
-}
+	}
 
 send_notification() {
 	volume=$(wpctl get-volume "$sink")
@@ -38,7 +38,7 @@ case $1 in
 		;;
 	*)
 		printf "%b\n%b\n" "${bold}volumewizard${reset}: volume control wrapper for wpctl" \
-		"${bold}Usage${reset}: volumewizard [up|down|mute]" >&2
+			"${bold}Usage${reset}: volumewizard [up|down|mute]" >&2
 		;;
 esac
 

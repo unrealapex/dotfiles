@@ -19,6 +19,6 @@ elif [ $# -gt 1 ]; then
 	done
 else
 	printf "%b\n%b" "${bold}upload${reset}: upload files to 0x0.st" \
-	"${bold}Usage${reset}: upload [FILE]..." >&2
+		"${bold}Usage${reset}: upload [FILE]..." >&2
 	exit 1
 fi
