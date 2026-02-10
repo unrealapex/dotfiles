@@ -18,7 +18,7 @@ IFS=
 bold="\033[1m"
 reset="\033[m"
 image_dir=$HOME/Pictures/Screenshots
-image_path="$image_dir/Screenshot from $(date +%Y-%m-%d %H-%M-%S).png"
+image_path=$image_dir/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 ! [ -d $image_dir ] && mkdir -p $image_dir
 
