@@ -10,7 +10,6 @@ require("plugins/vis-jump")
 require("plugins/vis-filetype-settings")
 require("plugins/vis-quickfix")
 require("plugins/vis-lockfiles")
-require("plugins/vis-ins-completion")
 
 require("plugins/vis-lspc").menu_cmd = "vis-menu"
 
