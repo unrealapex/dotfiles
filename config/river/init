@@ -180,7 +180,7 @@ rivertile -view-padding 4 -outer-padding 4 &
 
 riverctl spawn kanshi
 riverctl spawn "while date +'%Y-%m-%d %I:%M %p'; do sleep 1; done | dam"
-riverctl spawn "wbg /home/erin/Pictures/sakura.png"
+riverctl spawn "wbg ~/Pictures/sakura.png"
 riverctl spawn "playerctld daemon"
 riverctl spawn "swayidle -w  timeout 300 ${lockcmd}  timeout 600 'swaymsg "output * power off"'  resume 'swaymsg "output * power on"'  before-sleep ${lockcmd}"
 riverctl spawn "dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots"
