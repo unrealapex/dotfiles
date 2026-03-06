@@ -158,6 +158,7 @@ riverctl rule-add -app-id "zenity" float
 riverctl rule-add -app-id "Firefox" tags "$((1 << 1))"
 riverctl rule-add -app-id "chromium" tags "$((1 << 1))"
 riverctl rule-add -app-id "vesktop" tags "$((1 << 2))"
+riverctl rule-add -app-id "org.gajim.Gajim" tags "$((1 << 2))"
 riverctl rule-add -app-id "steam" tags "$((1 << 4))"
 riverctl rule-add -app-id "org.prismlauncher.PrismLauncher" tags "$((1 << 4))"
 riverctl rule-add -app-id "heroic" tags "$((1 << 4))"
