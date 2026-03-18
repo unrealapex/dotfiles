@@ -6,7 +6,7 @@ bar: dam
 launcher: mew
 terminal: foot
 shell: yash
-editor: vis
+editor: vi
 notifications: mako
 ```
 
