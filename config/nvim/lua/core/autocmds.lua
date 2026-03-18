@@ -64,3 +64,13 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.cmd.startinsert()
   end,
 })
+
+-- detect filetype if file is written with a shebang
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "*",
+    callback = function()
+        if vim.bo.filetype == "" then
+            vim.cmd("filetype detect")
+        end
+    end,
+})
