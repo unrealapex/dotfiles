@@ -163,6 +163,7 @@ riverctl rule-add -app-id "steam" tags "$((1 << 4))"
 riverctl rule-add -app-id "org.prismlauncher.PrismLauncher" tags "$((1 << 4))"
 riverctl rule-add -app-id "heroic" tags "$((1 << 4))"
 riverctl rule-add -app-id "openarena.x86_64" tags "$((1 << 5))"
+riverctl rule-add -app-id "DUSK.x86_64" tags "$((1 << 5))"
 riverctl rule-add -app-id "openarena.x86_64" fullscreen
 riverctl rule-add -title "Minecraft*" tags "$((1 << 5))"
 riverctl rule-add -app-id "quake3e.x64" tags "$((1 << 5))"
