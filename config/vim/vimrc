@@ -162,19 +162,7 @@ autocmd Syntax * RainbowParentheses
 nnoremap <silent> [d <Plug>(ale_previous_wrap)
 nnoremap <silent> ]d <Plug>(ale_next_wrap)
 
-function! FzyCommand(choice_command, vim_command)
-  try
-    let output = system(a:choice_command . " | fnf ")
-  catch /Vim:Interrupt/
-    " Swallow errors from ^C, allow redraw! below
-  endtry
-  redraw!
-  if v:shell_error == 0 && !empty(output)
-    exec a:vim_command . ' ' . output
-  endif
-endfunction
-
-nnoremap <leader>ff :call FzyCommand("fd", ":e")<cr>
+nnoremap <leader>f :FZF<cr>
 
 nnoremap <leader><leader> :set nomore <Bar> echo ":buffers" <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <leader>n :enew<CR>
