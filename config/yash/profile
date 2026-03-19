@@ -8,6 +8,8 @@ export FCEDIT="$VISUAL"
 export TERMINAL="foot"
 export BROWSER="elinks"
 export PAGER="less"
+PATH="$HOME/.local/bin:$HOME/.local/share/cargo/bin:/usr/local/lib/surfraw:$PATH"
+export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
