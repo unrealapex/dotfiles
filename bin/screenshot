@@ -40,6 +40,13 @@ esac
 
 [ $? != 0 ] && exit 1
 answer=$(printf "copy\nsave" | mew)
-[ $answer = "copy" ] &&  wl-copy < "$tmp_file"
-[ $answer = "save" ] && cp "$tmp_file" "$image_path"
-
+case "$answer" in
+	"copy")
+		wl-copy < "$tmp_file"
+		;;
+	"save")
+		cp "$tmp_file" "$image_path"
+		;;
+	*)
+		;;
+esac
