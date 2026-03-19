@@ -41,10 +41,8 @@ case $1 in
 		;;
 	*)
 
-		printf "%b" "${bold}screenshot${reset}: wrapper for grim
-
-		${bold}Usage${reset}: screenshot [select|full]
-		" >&2
+		printf "%b\n%b\n" "${bold}screenshot${reset}: wrapper for grim"\
+			"${bold}Usage${reset}: screenshot [select|full]" >&2
 		exit
 		;;
 esac
