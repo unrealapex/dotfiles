@@ -1,12 +1,6 @@
 ---@diagnostic disable: deprecated, lowercase-global
 -- keymaps
 
--- change directory
-vim.keymap.set("n", "<leader>cd", function()
-	vim.cmd.cd(vim.fn.expand("%:p:h"))
-	vim.notify(vim.fn.getcwd())
-end)
-
 -- buffer stuff
 -- create a new buffer
 vim.keymap.set("n", "<leader>n", ":enew<CR>")
