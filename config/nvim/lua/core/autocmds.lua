@@ -50,14 +50,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-	group = vim.api.nvim_create_augroup("colorscheme_tweak", { clear = true }),
-	callback = function() 
-    vim.cmd.highlight({ "clear", "SignColumn" })
-    vim.cmd.highlight({ "normal", "guibg=NONE" })
-  end,
-})
-
 -- start terminal in insert mode
 vim.api.nvim_create_autocmd("TermOpen", {
 	callback = function()
