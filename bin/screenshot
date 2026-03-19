@@ -17,27 +17,18 @@ IFS=
 
 bold="\033[1m"
 reset="\033[m"
+tmp_file=$(mktemp)
 image_dir=$HOME/Pictures/Screenshots
 image_path=$image_dir/Screenshot\ from\ $(date +%Y-%m-%d\ %H-%M-%S).png
 
 ! [ -d $image_dir ] && mkdir -p $image_dir
 
-intent() {
-	printf "copy\nsave" | mew
-}
-
 case $1 in
 	select)
-		region=$(slurp)
-		[ $? != 0 ] && exit 1
-		answer=$(intent)
-		[ $answer = "copy" ] && echo $region | grim -g - - | wl-copy -t  image/png
-		[ $answer = "save" ] && echo $region | grim -g - "$image_path"
+		slurp | grim -g - "$tmp_file"
 		;;
 	full)
-		answer=$(intent)
-		[ $answer = "copy" ] && grim - | wl-copy -t  image/png
-		[ $answer = "save" ] && grim "$image_path"
+		grim "$tmp_file"
 		;;
 	*)
 
@@ -46,4 +37,9 @@ case $1 in
 		exit
 		;;
 esac
+
+[ $? != 0 ] && exit 1
+answer=$(printf "copy\nsave" | mew)
+[ $answer = "copy" ] &&  wl-copy < "$tmp_file"
+[ $answer = "save" ] && cp "$tmp_file" "$image_path"
 
