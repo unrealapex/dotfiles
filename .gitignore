@@ -1,4 +1,5 @@
 *.local
+!secrets/*.local
 config/beets/state.pickle
 config/beets/spotify_token.json
 config/cmus/autosave
