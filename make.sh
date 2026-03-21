@@ -40,9 +40,12 @@ clean() {
 }
 
 secrets() {
-	secrets_file="$config_home"/git/config.local
-	[ ! -f "$secrets_file" ] && cp -n secrets/gitconfig.local \
-		"$secrets_file"
+	secret_gitconfig="$config_home"/git/config.local
+	secret_msmtpconfig="$config_home"/msmtp/config
+	[ ! -f "$secret_gitconfig" ] && cp -n secrets/gitconfig.local \
+		"$secret_gitconfig"
+	[ ! -f "$secret_msmtpconfig" ] && cp -n secrets/msmtp.config.local \
+		"$secret_msmtpconfig"
 }
 
 finished() {
