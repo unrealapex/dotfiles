@@ -64,5 +64,7 @@
 	autoSquash = true
 	autoStash = true
 	updateRefs = true
+[sendemail]
+	annotate = yes
 
 # vim: filetype=gitconfig
