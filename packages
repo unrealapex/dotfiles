@@ -4,6 +4,7 @@ anki
 bash-language-server
 bc
 beets
+bfs
 bluetui
 bluez
 brightnessctl
@@ -16,7 +17,6 @@ elinks
 espeak-ng
 fastfetch
 fcitx5
-fd
 fff
 ffmpeg
 figlet
