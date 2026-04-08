@@ -112,7 +112,7 @@ alias diff='diff -u'
 alias f='fff'
 alias -g L='| $PAGER'
 alias -g N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
-alias -g T='$(fzf --walker=file,dir,hidden --reverse -m --prompt="select files > ")'
+alias -g T='$(fzf --walker=file,dir,hidden --reverse -m --prompt="select files > " --height=40%)'
 
 alias ci='git commit'
 alias co='git checkout'
@@ -137,12 +137,12 @@ glow() {
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 c() {
-	dir=$(fzf --walker=dir --reverse --prompt="cd into > ")
+	dir=$(fzf --walker=dir --reverse --prompt="cd into > " --height=40%)
 	[ -d "$dir" ] && cd "$dir"
 }
 
 ff() {
-  files=$(fzf --walker=file,hidden --reverse -m --prompt="open files in editor > ")
+  files=$(fzf --walker=file,hidden --reverse -m --prompt="open files in editor > " --height=40%)
   [ -n "$files" ] && "$VISUAL" $files
 }
 
