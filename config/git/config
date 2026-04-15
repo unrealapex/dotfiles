@@ -1,14 +1,14 @@
 [user]
 	# These values are set in ~/.config/git/config.local
 [include]
-	 path = ~/.config/git/config.local
+	path = ~/.config/git/config.local
 [credential]
 	credentialStore = cache
 [core]
 	pager =  diff-highlight | less -RFX
 	excludesfile = ~/.config/git/gitignore
 	whitespace = trailing-space
-        hooksPath = ~/.config/git/hooks
+	hooksPath = ~/.config/git/hooks
 [interactive]
 	diffFilter = diff-highlight
 [pull]
@@ -16,7 +16,7 @@
 [merge]
 	conflictstyle = diff3
 [diff]
-        algorithm = histogram
+	algorithm = histogram
 	folorMoved = default
 	mnemonicPrefix = true
 	renames = true
