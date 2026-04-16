@@ -2,7 +2,6 @@
 
 ```
 wm: river
-bar: dam
 launcher: mew
 terminal: foot
 shell: yash
