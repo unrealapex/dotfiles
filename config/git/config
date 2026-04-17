@@ -1,6 +1,5 @@
-[user]
-	# These values are set in ~/.config/git/config.local
 [include]
+	# secret user variables
 	path = ~/.config/git/config.local
 [credential]
 	credentialStore = cache
