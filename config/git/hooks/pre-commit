@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if git commit -v --dry-run | grep -i "NOCOMMIT"; then
+	echo "NOCOMMITs found! Aborting commit!"
+	exit 1
+fi
