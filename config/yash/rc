@@ -142,7 +142,7 @@ c() {
 }
 
 ff() {
-  files=$(fzf --walker=file,hidden --reverse -m --prompt="open files in editor > " --preview='cat {}' --height=40%)
+  files=$(fzf --walker=file,hidden --reverse -m --prompt="open files in $VISUAL> " --preview='cat {}' --height=40%)
   [ -n "$files" ] && "$VISUAL" $files
 }
 
