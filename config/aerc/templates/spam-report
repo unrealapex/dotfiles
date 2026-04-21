@@ -1,0 +1,6 @@
+To: spam.report@disroot.org
+From: {{.From}}
+Subject: [SPAM!!!]{{.SubjectBase}}
+
+Forwarded spam from {{.OriginalFrom | names | join ", "}} on {{dateFormat .OriginalDate "Mon Jan 2, 2006 at 3:04 PM"}}:
+{{.OriginalText}}

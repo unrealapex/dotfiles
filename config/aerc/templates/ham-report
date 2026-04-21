@@ -1,0 +1,6 @@
+To: ham.report@disroot.org
+From: {{.From}}
+Subject: [HAM!!!]{{.SubjectBase}}
+
+Forwarded ham from {{.OriginalFrom | names | join ", "}} on {{dateFormat .OriginalDate "Mon Jan 2, 2006 at 3:04 PM"}}:
+{{.OriginalText}}
