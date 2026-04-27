@@ -151,7 +151,7 @@ riverctl border-color-unfocused 0x0d0d0d
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
 
-riverctl rule-add -app-id "*" ssd
+riverctl rule-add ssd
 riverctl rule-add -app-id "gimp" float
 riverctl rule-add -app-id "zoom" float
 riverctl rule-add -app-id "zenity" float
