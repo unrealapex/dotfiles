@@ -109,7 +109,7 @@ alias cam="mpv av://v4l2:/dev/video0 --screenshot-dir=~/Pictures/Webcam --screen
 alias weather="curl wttr.in"
 alias d='dirs -v'
 alias diff='diff -u'
-alias f='fff'
+alias f='dfm'
 alias -g L='| $PAGER'
 alias -g N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
 alias -g T='$(fzf --walker=file,dir,hidden --reverse -m --prompt="select files > " --height=40%)'
