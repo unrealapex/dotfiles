@@ -15,4 +15,9 @@ icons=0
 history=0
 default-timeout=1200
 
+[summary="screencast: capturing"]
+default-timeout=0
+history=0
+on-button-left=none
+
 # vim: set filetype=ini

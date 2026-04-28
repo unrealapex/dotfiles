@@ -1,8 +1,7 @@
 [screencast]
 output_name=DP-1
 max_fps=60
-; TODO: make start notification stay on screen until screenshare is stopped
-exec_before=notify-send screenshare:\ started
-exec_after=notify-send screenshare:\ stopped
+exec_before=notify-send --hint=string:x-dunst-stack-tag:screencast --hint=string:synchronous:screencast  screencast:\ capturing
+exec_after=notify-send --hint=string:x-dunst-stack-tag:screencast --hint=string:synchronous:screencast  screencast:\ stopped
 chooser_type=dmenu
 chooser_cmd=mew
